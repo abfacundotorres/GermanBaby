@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
 import { getUnit } from "@/lib/curriculum";
+import { TEXT_CATEGORIES } from "@/lib/mistakes";
 
 const Body = z.object({
   unitId: z.string(),
@@ -16,6 +17,13 @@ const Turn = z.object({
     hasErrors: z.boolean(),
     corrected: z.string().describe("El último mensaje del alumno, corregido. Igual al original si no hay errores."),
     explanation: z.string().describe("En español, breve. Vacío si no hay errores."),
+    errors: z.array(
+      z.object({
+        category: z.enum(TEXT_CATEGORIES),
+        fragment: z.string().describe("Fragmento exacto con error, tal como lo escribió el alumno."),
+        fix: z.string(),
+      }),
+    ).describe("Un elemento por error; vacío si no hay errores."),
   }),
   reply_de: z.string().describe("Respuesta del personaje en alemán A1: máximo 2 frases cortas, termina con una pregunta cuando tenga sentido."),
   reply_es: z.string().describe("Traducción al español de reply_de."),

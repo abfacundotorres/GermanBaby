@@ -4,7 +4,7 @@ import { use, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getUnit } from "@/lib/curriculum";
 import { assessPronunciation, SpeechNotConfigured, speak, type PronunciationResult } from "@/lib/speech";
-import { addXp, grantAchievement, update, useProgress } from "@/lib/progress";
+import { addXp, grantAchievement, logMistakes, update, useProgress } from "@/lib/progress";
 import { PronunciationReport } from "@/components/PronunciationReport";
 import { AchievementToast } from "@/components/LessonPlayer";
 import type { ChatTurn } from "@/app/api/chat/route";
@@ -65,6 +65,21 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
         return [...copy, { role: "assistant", text: turn.reply_de, es: turn.reply_es, suggestions: turn.suggestions }];
       });
       void speak(turn.reply_de, { voice }).catch(() => {});
+      if (turn.correction.hasErrors) {
+        const errs = turn.correction.errors.length
+          ? turn.correction.errors
+          : [{ category: "gramática" as const, fragment: clean, fix: turn.correction.corrected }];
+        logMistakes(
+          errs.map((e) => ({
+            source: "chat" as const,
+            category: e.category,
+            wrong: e.fragment,
+            right: e.fix,
+            explanation: turn.correction.explanation,
+            prompt: `Charla: ${unit.chat.title}`,
+          })),
+        );
+      }
       const unlocked = addXp(turn.correction.hasErrors ? 4 : 8);
       const userTurns = history.filter((m) => m.role === "user").length;
       if (userTurns === 3) {

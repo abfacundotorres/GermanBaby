@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { UNITS, lessonKey } from "@/lib/curriculum";
-import { ACHIEVEMENTS, dueItems, isUnlocked, levelFor, useProgress, xpForLevel } from "@/lib/progress";
+import { ACHIEVEMENTS, dueItems, isUnlocked, levelFor, openMistakes, useProgress, xpForLevel } from "@/lib/progress";
 
 export default function Home() {
   const p = useProgress();
   const due = dueItems(p).length;
+  const mistakes = openMistakes(p).length;
   const level = levelFor(p.xp);
   const from = xpForLevel(level);
   const to = xpForLevel(level + 1);
@@ -32,6 +33,16 @@ export default function Home() {
           <b>Repaso del día</b>
           <div className="muted small">
             {due ? `${due} palabra${due > 1 ? "s" : ""} para repasar` : "No tenés repasos pendientes. ¡Bien!"}
+          </div>
+        </div>
+      </Link>
+
+      <Link href="/practice" className="lesson-node" style={{ marginTop: 10 }}>
+        <div className="node-dot">🎯</div>
+        <div style={{ flex: 1 }}>
+          <b>Mis errores</b>
+          <div className="muted small">
+            {mistakes ? `${mistakes} error${mistakes > 1 ? "es" : ""} para practicar` : "Acá vas a ver tus errores para practicarlos."}
           </div>
         </div>
       </Link>

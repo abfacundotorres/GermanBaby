@@ -34,6 +34,7 @@ export default function ReviewPage() {
     <LessonPlayer
       steps={steps}
       title="Repaso"
+      source="review"
       onStepResult={(step, ok) => {
         if ("vocab" in step && step.vocab) reviewItem(step.vocab.de, ok);
       }}

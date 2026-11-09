@@ -2,6 +2,8 @@
 // genera ejercicios automáticos de opción múltiple y escucha) y ejercicios
 // escritos a mano (armar frases, hablar, traducir, dictado).
 
+import { UNITS_A1_PART2 } from "./content/a1-part2";
+
 export type Vocab = {
   de: string;
   es: string;
@@ -37,7 +39,7 @@ export type Unit = {
   };
 };
 
-export const UNITS: Unit[] = [
+const UNITS_A1_PART1: Unit[] = [
   {
     id: "hallo",
     title: "¡Hallo!",
@@ -260,6 +262,8 @@ export const UNITS: Unit[] = [
     },
   },
 ];
+
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2];
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { isGraded, type Step } from "@/lib/session";
-import { ACHIEVEMENTS, addXp } from "@/lib/progress";
-import { Build, Choice, Dictation, Intro, Listen, Speak, Write, type Outcome } from "./Exercises";
+import { ACHIEVEMENTS, addXp, logMistakes, markVocabWeak, resolveMistakes, reviewItem, type Mistake } from "@/lib/progress";
+import { Build, Choice, Dictation, Intro, Listen, Quiz, Speak, Write, type Outcome } from "./Exercises";
 
 export function Confetti() {
   const colors = ["#e8a317", "#d6453d", "#2e9e5b", "#3b82f6", "#a855f7"];
@@ -43,11 +43,13 @@ export type FinishInfo = { accuracy: number; xp: number; results: { step: Step; 
 export function LessonPlayer({
   steps: initial,
   title,
+  source = "lesson",
   onFinish,
   onStepResult,
 }: {
   steps: Step[];
   title: string;
+  source?: Mistake["source"];
   onFinish: (info: FinishInfo) => { extraXp?: number; stars?: number; achievements?: string[] };
   onStepResult?: (step: Step, ok: boolean) => void;
 }) {
@@ -64,6 +66,17 @@ export function LessonPlayer({
   const step = queue[index];
   const gradedTotal = initial.filter(isGraded).length;
   const progress = summary ? 1 : index / queue.length;
+
+  const recordMistake = (s: Step, o: Outcome) => {
+    if ("vocab" in s && s.vocab && o.status === "bad") markVocabWeak(s.vocab.de);
+    // Un ejercicio repetido que se vuelve a fallar no se duplica en el registro.
+    if (s.mistakeId) return;
+    const prompt = "es" in s ? s.es : "question" in s ? s.question : "vocab" in s && s.vocab ? s.vocab.es : undefined;
+    const items = o.mistakes?.length
+      ? o.mistakes
+      : [{ category: o.category ?? "vocabulario", wrong: o.answer ?? "", right: o.expected ?? "" }];
+    logMistakes(items.map((m, i) => ({ ...m, source, prompt, step: i === 0 ? s : undefined })));
+  };
 
   const handleResult = (o: Outcome) => {
     if (outcome) return;
@@ -94,6 +107,9 @@ export function LessonPlayer({
     if (firstTry && o.status !== "skip") {
       setResults((r) => [...r, { step, ok: o.status !== "bad" }]);
       onStepResult?.(step, o.status === "ok");
+      if (step.fromReview && "vocab" in step && step.vocab) reviewItem(step.vocab.de, o.status === "ok");
+      if (step.mistakeId && o.status === "ok") resolveMistakes(step.mistakeId.split(","));
+      if (o.status === "bad" || o.status === "almost") recordMistake(step, o);
     }
   };
 
@@ -160,6 +176,7 @@ export function LessonPlayer({
     case "dictation": body = <Dictation key={key} step={step} {...props} />; break;
     case "write": body = <Write key={key} step={step} {...props} />; break;
     case "speak": body = <Speak key={key} step={step} {...props} />; break;
+    case "quiz": body = <Quiz key={key} step={step} {...props} />; break;
   }
 
   const fbClass = outcome ? ({ ok: "ok", almost: "almost", bad: "bad", skip: "almost" } as const)[outcome.status] : "";

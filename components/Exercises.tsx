@@ -8,9 +8,21 @@ import { recordPronunciation } from "@/lib/progress";
 import { AudioButtons } from "./Audio";
 import { PronunciationReport } from "./PronunciationReport";
 import type { CorrectionResult } from "@/app/api/correct/route";
+import type { MistakeCategory, MistakeInput } from "@/lib/mistakes";
 
 export type Status = "ok" | "almost" | "bad" | "skip";
-export type Outcome = { status: Status; title?: string; detail?: ReactNode; bonusXp?: number; achievement?: string };
+export type Outcome = {
+  status: Status;
+  title?: string;
+  detail?: ReactNode;
+  bonusXp?: number;
+  achievement?: string;
+  // Para el registro de errores:
+  answer?: string;
+  expected?: string;
+  category?: MistakeCategory;
+  mistakes?: MistakeInput[];
+};
 type Props<S> = { step: S; locked: boolean; onResult: (o: Outcome) => void };
 
 type StepOf<K extends Step["kind"]> = Extract<Step, { kind: K }>;
@@ -62,7 +74,11 @@ export function Choice({ step, locked, onResult }: Props<StepOf<"choice">>) {
         options={step.options}
         answer={answer}
         locked={locked}
-        onPick={(o) => onResult(o === answer ? { status: "ok" } : { status: "bad", detail: <>Correcto: <b>{answer}</b></> })}
+        onPick={(o) =>
+          onResult(o === answer
+            ? { status: "ok" }
+            : { status: "bad", detail: <>Correcto: <b>{answer}</b></>, answer: o, expected: answer, category: "vocabulario" })
+        }
       />
     </div>
   );
@@ -80,7 +96,7 @@ export function Listen({ step, locked, onResult }: Props<StepOf<"listen">>) {
         onPick={(o) =>
           onResult(o === step.vocab.de
             ? { status: "ok", detail: <>«{step.vocab.de}» = {step.vocab.es}</> }
-            : { status: "bad", detail: <>Era <b>{step.vocab.de}</b> ({step.vocab.es})</> })
+            : { status: "bad", detail: <>Era <b>{step.vocab.de}</b> ({step.vocab.es})</>, answer: o, expected: step.vocab.de, category: "comprensión auditiva" })
         }
       />
     </div>
@@ -94,7 +110,9 @@ export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
   const sentence = chosen.map((i) => bank[i].t).join(" ");
   const check = () => {
     const v = compareLocal(sentence, step.answer);
-    onResult(v === "correct" ? { status: "ok" } : { status: "bad", detail: <>Correcto: <b>{step.answer}</b></> });
+    onResult(v === "correct"
+      ? { status: "ok" }
+      : { status: "bad", detail: <>Correcto: <b>{step.answer}</b></>, answer: sentence, expected: step.answer, category: "orden de palabras" });
   };
   return (
     <div className="stack">
@@ -150,8 +168,8 @@ export function Dictation({ step, locked, onResult }: Props<StepOf<"dictation">>
   const check = () => {
     const v = compareLocal(value, step.de);
     if (v === "correct") onResult({ status: "ok", detail: <>«{step.de}» = {step.es}</> });
-    else if (v === "almost") onResult({ status: "almost", title: "¡Casi!", detail: <>Se escribe: <b>{step.de}</b></> });
-    else onResult({ status: "bad", detail: <>Era: <b>{step.de}</b> ({step.es})</> });
+    else if (v === "almost") onResult({ status: "almost", title: "¡Casi!", detail: <>Se escribe: <b>{step.de}</b></>, answer: value, expected: step.de, category: "ortografía" });
+    else onResult({ status: "bad", detail: <>Era: <b>{step.de}</b> ({step.es})</>, answer: value, expected: step.de, category: "comprensión auditiva" });
   };
   return (
     <div className="stack">
@@ -212,6 +230,10 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
         status,
         title: r.verdict === "correct" ? "¡Correcto!" : r.verdict === "almost" ? "¡Casi!" : "Revisemos",
         detail: <CorrectionDetail r={r} answer={answer} />,
+        answer,
+        expected: r.corrected || step.references[0],
+        category: "significado",
+        mistakes: r.errors.map((e) => ({ category: e.category, wrong: e.fragment, right: e.fix, explanation: e.explanation })),
       });
     } catch (e) {
       // Sin IA: comparación local contra las respuestas modelo.
@@ -225,6 +247,9 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
             <span className="small muted">(Corrección sin IA: {(e as Error).message})</span>
           </>
         ),
+        answer,
+        expected: step.references[0],
+        category: status === "almost" ? "ortografía" : "gramática",
       });
     } finally {
       setLoading(false);
@@ -316,12 +341,39 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
         <div className="row" style={{ justifyContent: "center" }}>
           <span className="muted small">Necesitás {PASS_SCORE} para aprobar. Escuchá de nuevo y probá otra vez.</span>
           {attempts >= 2 && (
-            <button className="btn" onClick={() => onResult({ status: "almost", title: "Seguí practicando", detail: <>Último puntaje: {result.pronScore}/100. Esta frase vuelve en el repaso.</> })}>
+            <button className="btn" onClick={() => onResult({
+              status: "almost",
+              title: "Seguí practicando",
+              detail: <>Último puntaje: {result.pronScore}/100. La anoto en «Mis errores» para practicarla.</>,
+              category: "pronunciación",
+              answer: result.words.filter((w) => w.score < PASS_SCORE).map((w) => `${w.word} (${w.score})`).join(", ") || result.recognized,
+              expected: step.de,
+            })}>
               Seguir
             </button>
           )}
         </div>
       )}
+    </div>
+  );
+}
+
+// ---------------- Pregunta con explicación (generada por IA) ----------------
+export function Quiz({ step, locked, onResult }: Props<StepOf<"quiz">>) {
+  return (
+    <div className="stack">
+      <div className="prompt-label">Elegí la opción correcta</div>
+      <div className="h2">{step.question}</div>
+      <Options
+        options={step.options}
+        answer={step.answer}
+        locked={locked}
+        onPick={(o) =>
+          onResult(o === step.answer
+            ? { status: "ok", detail: step.explanation }
+            : { status: "bad", detail: <>Correcto: <b>{step.answer}</b>. {step.explanation}</>, answer: o, expected: step.answer, category: step.category, mistakes: [{ category: step.category, wrong: o, right: step.answer, explanation: step.explanation }] })
+        }
+      />
     </div>
   );
 }

@@ -4,8 +4,19 @@
 
 import { useSyncExternalStore } from "react";
 import { LESSON_ORDER } from "./curriculum";
+import type { MistakeInput } from "./mistakes";
+import type { Step } from "./session";
 
 export type SrsItem = { box: number; due: string }; // due = YYYY-MM-DD
+
+export type Mistake = MistakeInput & {
+  id: string;
+  at: string; // ISO
+  source: "lesson" | "review" | "practice" | "chat";
+  prompt?: string; // consigna en español, si la hay
+  step?: Step; // ejercicio original, para repetirlo
+  resolved?: boolean;
+};
 
 export type Progress = {
   xp: number;
@@ -17,6 +28,7 @@ export type Progress = {
   achievements: string[];
   stats: { bestPron: number; chats: number; spoken: number };
   voice: string;
+  mistakes: Mistake[];
 };
 
 const KEY = "germanbaby.progress.v1";
@@ -38,6 +50,7 @@ const DEFAULT: Progress = {
   achievements: [],
   stats: { bestPron: 0, chats: 0, spoken: 0 },
   voice: "de-DE-KatjaNeural",
+  mistakes: [],
 };
 
 let cache: Progress | null = null;
@@ -200,4 +213,49 @@ export function reviewItem(de: string, correct: boolean) {
 export function currentStreak(p: Progress) {
   const t = today();
   return p.streak.lastDate === t || p.streak.lastDate === addDays(t, -1) ? p.streak.count : 0;
+}
+
+// ---------- Registro de errores ----------
+
+const MAX_MISTAKES = 150;
+
+export function logMistakes(items: Omit<Mistake, "id" | "at">[]) {
+  if (!items.length) return;
+  update((p) => {
+    const at = new Date().toISOString();
+    const fresh = items.map((m) => ({ ...m, id: crypto.randomUUID(), at }));
+    p.mistakes = [...fresh, ...p.mistakes].slice(0, MAX_MISTAKES);
+    return p;
+  });
+}
+
+export function resolveMistakes(ids: string[]) {
+  if (!ids.length) return;
+  update((p) => {
+    p.mistakes = p.mistakes.map((m) => (ids.includes(m.id) ? { ...m, resolved: true } : m));
+    return p;
+  });
+}
+
+/** Errores pendientes de las últimas dos semanas, lo más reciente primero. */
+export function openMistakes(p: Progress, days = 14) {
+  const since = Date.now() - days * 86400_000;
+  return p.mistakes.filter((m) => !m.resolved && Date.parse(m.at) >= since);
+}
+
+/** Una palabra fallada vuelve a la caja 1 y se repasa hoy. */
+export function markVocabWeak(de: string) {
+  update((p) => {
+    p.srs[de] = { box: 1, due: today() };
+    return p;
+  });
+}
+
+/** true solo en el navegador, una vez leído localStorage (evita parpadeos al hidratar). */
+export function useHydrated() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 }

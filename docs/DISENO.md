@@ -51,6 +51,7 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 | Traducción libre | Producción escrita | Claude: gramática, artículo/género, orden, vocabulario, ortografía y significado |
 | Decilo en voz alta | Pronunciación | Azure: puntaje total y por palabra y fonema, más consejos |
 | Charla de rol | Interacción | Claude (gramática y sentido en contexto) + Azure en modo libre |
+| Pregunta con explicación | Gramática dirigida | Local (opciones y explicación generadas por Claude en «Mis errores») |
 
 ## 5. Gamificación
 
@@ -63,26 +64,38 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 
 ## 6. Currículo
 
-MVP (A1.1), con 3 unidades de 3 lecciones más una charla cada una:
+8 unidades de A1, con 3 lecciones y una charla de rol cada una:
 
 1. **¡Hallo!**: saludos, presentarse (`heißen`, `kommen aus`, du/Sie), «¿cómo andás?».
 2. **Números**: 1-10, la edad (`Ich bin … Jahre alt`; en alemán se *es* de una edad).
 3. **En el café**: sustantivos con artículo (der/die/das), pedir (`Ich möchte einen/ein/eine`), pagar.
+4. **La familia**: vocabulario, `mein/meine`, `haben` con `einen/eine/keine`.
+5. **¿Qué hacés?**: presente regular (ich/du/er/wir/ihr), `gern`, `sein` y `haben`.
+6. **Días y horas**: días, la hora (`halb vier`), planes y el verbo en segundo lugar.
+7. **En el mercado**: 11-100, cantidades, precios.
+8. **Mi día**: rutina, verbos separables (`aufstehen`, `einkaufen`), `zuerst/dann/danach`.
 
-Hoja de ruta A1 (siguientes unidades): familia (posesivos) · días y horas · verbos regulares en presente · la casa · compras y precios hasta 100 · ubicarse en la ciudad (preposiciones con dativo) · rutina (verbos separables) · pasado (Perfekt básico).
+Hoja de ruta (próximas unidades): la casa · la ciudad y las preposiciones con dativo · comida y gustos (`mögen`, `essen`) · modales (`können`, `müssen`) · pasado básico (Perfekt) · preparación para el examen A1.
 
-El contenido vive en `lib/curriculum.ts`. Agregar una lección es agregar datos, no código.
+El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
 ## 7. Costos estimados (uso personal)
 
 - **Azure Speech:** el nivel gratuito F0 incluye unas 5 h de reconocimiento por mes (la evaluación de pronunciación cuenta como reconocimiento) y 0,5 M de caracteres de TTS neural. Una persona practicando 20 min por día no debería pasarse. Verificalo en la página de precios de Azure, porque cambia.
 - **Claude:** una corrección son ~1-2 k tokens de entrada y ~300 de salida, unos centavos de dólar con Opus 5.5 a esfuerzo bajo. Con `CLAUDE_MODEL=claude-haiku-5-5` el costo baja mucho, a cambio de explicaciones menos finas.
 
-## 8. Próximos pasos
+## 8. Errores y práctica dirigida
 
-1. **Más contenido A1** (unidades 4-11) y un placement test opcional.
-2. **Mezcla de repaso dentro de las lecciones** (incluir 2-3 palabras vencidas de unidades anteriores).
-3. **Errores frecuentes del usuario:** guardar las categorías de error que devuelve Claude y generar ejercicios dirigidos.
-4. **Pronunciación:** comparar contra pares mínimos (Hölle/Hülle/Helle) y un gráfico de evolución del puntaje.
-5. **Multiusuario:** reemplazar `lib/progress.ts` por Supabase (auth + tabla `progress` JSON) y desplegar en Vercel.
-6. **PWA** para usarla en el celular sin conexión (excepto voz e IA).
+Cada error de una lección, del repaso o de una charla se guarda en el navegador (máximo 150) con su categoría: gramática, artículo/género, orden de palabras, vocabulario, ortografía, significado, pronunciación o comprensión auditiva. En «Mis errores» se ven agrupados por categoría y hay dos formas de practicarlos:
+
+- **Repetir lo que fallé:** vuelve a mostrar los mismos ejercicios, sin IA. Acertar uno lo marca como resuelto.
+- **Práctica personalizada:** `/api/practice` le manda a Claude los errores recientes y el vocabulario ya estudiado. Claude detecta uno o dos patrones y arma 3 ejercicios de cada tipo (armar frase, traducir y pregunta con explicación) con frases nuevas. Si se termina con 80 % o más de acierto, los errores enviados se marcan como resueltos.
+
+Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores, y una palabra que fallás vuelve a la caja 1 del repaso espaciado.
+
+## 9. Próximos pasos
+
+1. **Más contenido A1** (ver hoja de ruta de §6) y un test de nivel opcional.
+2. **Pronunciación:** comparar contra pares mínimos (Hölle/Hülle/Helle) y un gráfico de evolución del puntaje.
+3. **Multiusuario:** reemplazar `lib/progress.ts` por Supabase (auth + tabla `progress` JSON) y desplegar en Vercel.
+4. **PWA** para usarla en el celular sin conexión (excepto voz e IA).

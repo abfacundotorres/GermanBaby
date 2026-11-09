@@ -1,11 +1,17 @@
 import { ALL_VOCAB, type HandExercise, type Lesson, type Vocab } from "./curriculum";
 import { shuffle } from "./text";
 
-export type Step =
+import type { MistakeCategory } from "./mistakes";
+
+type BaseStep =
   | { kind: "intro"; vocab: Vocab }
   | { kind: "choice"; vocab: Vocab; direction: "de-es" | "es-de"; options: string[] }
   | { kind: "listen"; vocab: Vocab; options: string[] }
+  | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory }
   | (HandExercise & { vocab?: Vocab });
+
+/** fromReview: palabra vencida intercalada en una lección. mistakeId: repetición de un error. */
+export type Step = BaseStep & { fromReview?: boolean; mistakeId?: string };
 
 export const isGraded = (s: Step) => s.kind !== "intro";
 
@@ -22,8 +28,11 @@ const choice = (v: Vocab, pool: Vocab[]): Step => {
 
 const listen = (v: Vocab, pool: Vocab[]): Step => ({ kind: "listen", vocab: v, options: distractors(v, pool, "de") });
 
-/** Lección: tarjetas nuevas intercaladas con práctica y después ejercicios mixtos. */
-export function buildLessonSession(lesson: Lesson, unitVocab: Vocab[]): Step[] {
+/**
+ * Lección: tarjetas nuevas intercaladas con práctica, después ejercicios mixtos
+ * y hasta 2 palabras vencidas de lecciones anteriores.
+ */
+export function buildLessonSession(lesson: Lesson, unitVocab: Vocab[], dueVocab: Vocab[] = []): Step[] {
   const pool = unitVocab.length >= 4 ? unitVocab : ALL_VOCAB;
   const steps: Step[] = [];
   lesson.vocab.forEach((v, i) => {
@@ -34,6 +43,7 @@ export function buildLessonSession(lesson: Lesson, unitVocab: Vocab[]): Step[] {
   const mixed = shuffle([
     ...lesson.exercises,
     ...shuffle(lesson.vocab).slice(0, 3).map((v) => listen(v, pool)),
+    ...dueVocab.slice(0, 2).map((v): Step => ({ ...choice(v, ALL_VOCAB), fromReview: true })),
   ]);
   return [...steps, ...mixed];
 }
