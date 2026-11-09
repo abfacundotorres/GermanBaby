@@ -35,6 +35,7 @@ export type AiUsage = {
 };
 
 export type Progress = {
+  updatedAt: number; // ms desde 1970; la sincronización decide qué copia es más nueva
   xp: number;
   aiDailyLimit: number; // llamadas a IA por día: 0 = sin IA, -1 = sin límite
   aiMonthlyBudget: number; // USD por mes: 0 = sin tope
@@ -70,6 +71,7 @@ const freshAi = (): AiUsage => ({
 const freshDaily = (): Daily => ({ date: today(), xp: 0, lessons: 0, correct: 0, claimed: [] });
 
 const DEFAULT: Progress = {
+  updatedAt: 0,
   xp: 0,
   aiDailyLimit: 60,
   aiMonthlyBudget: 3,
@@ -126,7 +128,15 @@ function load(): Progress {
 
 export const getProgress = load;
 
+/** Para la sincronización: avisa de cada cambio y permite reemplazar el progreso entero. */
+export function subscribeProgress(cb: () => void) {
+  listeners.add(cb);
+  return () => { listeners.delete(cb); };
+}
+export const replaceProgress = (p: Progress) => save(normalize(p));
+
 function save(p: Progress) {
+  p.updatedAt = Date.now();
   cache = p;
   try {
     localStorage.setItem(KEY, JSON.stringify(p));

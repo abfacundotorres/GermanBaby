@@ -35,9 +35,18 @@ La app se publica en Vercel, que es gratis para uso personal, y después la abr�
 
 La primera vez te pide el código de acceso. El micrófono funciona porque Vercel usa HTTPS.
 
+### 4. Guardar el progreso en la nube (recomendado)
+Sin esto, tu progreso vive solo en el navegador del celular y Safari puede borrarlo si no abrís la app por una semana.
+1. En Vercel, abrí tu proyecto, andá a la pestaña **Storage** y creá una base **Upstash Redis** (el plan gratuito alcanza). Conectala al proyecto: Vercel agrega solo las variables de entorno.
+2. Si te pide los nombres, la app lee `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN`, o también `KV_REST_API_URL` y `KV_REST_API_TOKEN`. Si Vercel usó otros nombres, creá estas a mano con los valores «REST» de la base.
+3. Hacé un nuevo deploy (*Deployments → Redeploy*) para que tome las variables.
+4. Abrí la app y mirá *Perfil → Sincronización*: tiene que decir «Guardado en la nube». Desde ahí el avance se guarda solo y se recupera en otro dispositivo (con el mismo código de acceso).
+
+La clave donde se guarda tu progreso se deriva de tu código de acceso. Si lo cambiás, empezás con un progreso nuevo en la nube. Nota: esta función se probó con un servicio falso, no con Upstash real, y los pasos de Vercel están escritos de memoria; si algún nombre no coincide, avisame.
+
 ### Importante
 - **Sin `ACCESS_CODE`, la publicada rechaza todas las llamadas a Claude y Azure** (devuelve un error 503). Es a propósito, para que nadie gaste tu saldo.
-- **El progreso vive en el navegador del celular.** Si borrás los datos del sitio, o abrís la app desde otro navegador, empezás de cero. En *Perfil → Copia de seguridad* podés copiar tu progreso a tus notas y restaurarlo.
+- **Sin la nube del paso 4, el progreso vive solo en el navegador del celular.** Si borrás los datos del sitio o abrís la app desde otro navegador, empezás de cero. En *Perfil → Copia de seguridad* podés copiar tu progreso a tus notas y restaurarlo.
 - **Cuidá el gasto de Claude**, que es lo único que cuesta (con Haiku, menos de USD 1 por mes):
   - Cargá saldo prepago y **dejá apagada la recarga automática**: cuando se acaba, la API deja de responder y no te cobra de más.
   - En *Perfil → Uso de IA y gasto* ves cuánto gastaste y elegís un límite diario y un tope mensual. Al llegar a uno, la app sigue funcionando sin IA.

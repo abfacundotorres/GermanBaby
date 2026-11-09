@@ -28,6 +28,7 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 ```
 
 - **Las claves nunca llegan al navegador.** Azure entrega un token de corta duración. Claude solo se llama desde el servidor.
+- **Sincronización:** el progreso se guarda en Upstash Redis por `/api/sync`, con clave derivada del código de acceso (sin cuentas). El cliente baja y fusiona al abrir (`lib/merge.ts`) y sube 3 s después de cada cambio. Nunca sube antes de bajar ni sube un progreso vacío, y el servidor rechaza con 409 una escritura hecha sobre una versión vieja; el cliente fusiona y reintenta. Lo que solo crece (XP, lecciones, logros, errores) se une; gemas y ajustes los decide la copia más nueva.
 - **Acceso:** `proxy.ts` (el antiguo middleware de Next) exige una cookie derivada de `ACCESS_CODE` en todas las páginas y rutas API. Publicada sin ese código, las rutas API responden 503. En local se puede omitir.
 - **Camino rápido sin IA:** si la respuesta escrita coincide con una respuesta modelo (sin contar mayúsculas ni puntuación), no se llama a Claude. Dictados, opción múltiple y armado de frases se corrigen localmente.
 - **Degradación:** sin Azure, el audio usa la voz del navegador y los ejercicios de hablar se pueden saltear. Sin Claude, la traducción se corrige localmente contra las respuestas modelo.
@@ -127,7 +128,7 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 1. **Probar con claves y un celular real.** Nada de Claude ni de Azure se probó contra los servicios reales. Hay que verificar en particular:
    - Qué devuelve Azure para alemán: no pude confirmar que `de-DE` soporte puntaje por fonema (alfabeto IPA) ni evaluación de prosodia. Si no los soporta, el detalle por sonido queda vacío y los consejos se eligen por las letras de la palabra.
    - Que el audio se reproduzca solo al abrir un ejercicio en iPhone. Safari puede bloquear audio que no nace de un toque.
-2. **Guardar el progreso fuera del celular.** Hoy vive en `localStorage`. Safari puede borrar los datos de sitios que no se abren en 7 días (las apps instaladas en la pantalla de inicio están exentas). Propuesta: un pequeño almacenamiento en la nube (Upstash o Vercel KV) atado al código de acceso, sin cuentas.
+2. ~~Guardar el progreso fuera del celular.~~ Hecho (ver §2): sincronización con Upstash Redis. Falta probarla con un Upstash real; hasta ahora se probó con un servicio falso. Limitaciones conocidas: «Borrar progreso» en un dispositivo no borra la copia de otro que ya la tiene, y dos dispositivos usados a la vez pueden perder las gemas del que guardó primero.
 3. **Guardar el audio ya generado** (por voz, texto y velocidad) en el dispositivo: ahorra caracteres de Azure y la espera de cada reproducción.
 4. **Limitar los intentos de `/login`:** hoy se pueden hacer decenas por segundo. Mientras tanto, el código de acceso debe ser largo (16 caracteres o más).
 5. **Más lecciones de gramática explícita** (casos, preposiciones, modales) y un test de nivel para no obligar a empezar siempre desde cero.

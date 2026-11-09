@@ -6,6 +6,7 @@ import {
   resetProgress, setSetting, useHydrated, useProgress, xpForLevel,
 } from "@/lib/progress";
 import { speak } from "@/lib/speech";
+import { syncNow, useSyncStatus } from "@/lib/sync";
 import { sfx } from "@/lib/sfx";
 import Mascot from "@/components/Mascot";
 
@@ -16,6 +17,10 @@ const VOICES = [
   ["de-DE-KillianNeural", "Killian (hombre)"],
 ];
 const DAY = ["D", "L", "M", "M", "J", "V", "S"];
+const ago = (t: number) => {
+  const s = Math.max(0, Math.round((Date.now() - t) / 1000));
+  return s < 10 ? "recién" : s < 60 ? `hace ${s} s` : s < 3600 ? `hace ${Math.round(s / 60)} min` : `hace ${Math.round(s / 3600)} h`;
+};
 const usd = (n: number) => `USD ${(n < 0.1 ? n.toFixed(3) : n.toFixed(2)).replace(".", ",")}`;
 const LIMITS: [number, string][] = [[0, "Sin IA"], [20, "20 por día"], [40, "40 por día"], [60, "60 por día"], [100, "100 por día"], [200, "200 por día"], [-1, "Sin límite"]];
 const BUDGETS: [number, string][] = [[0, "Sin tope"], [1, "USD 1"], [3, "USD 3"], [5, "USD 5"], [10, "USD 10"], [20, "USD 20"]];
@@ -26,6 +31,7 @@ export default function Perfil() {
   const [msg, setMsg] = useState<string | null>(null);
   const [backup, setBackup] = useState("");
   const [confirmReset, setConfirmReset] = useState(false);
+  const sync = useSyncStatus();
 
   if (!hydrated) return <main className="container" />;
 
@@ -182,6 +188,25 @@ export default function Perfil() {
         </div>
       </section>
 
+      <section className="card stack" style={{ gap: 8 }}>
+        <div className="h2" style={{ margin: 0 }}>☁️ Sincronización</div>
+        {sync.state === "unconfigured" ? (
+          <div className="notice small">
+            La nube no está configurada: tu progreso vive solo en este celular y puede perderse. Para activarla seguí el paso «Guardar el progreso en la nube» del README.
+          </div>
+        ) : (
+          <>
+            <div className="small">
+              {sync.state === "ok" && sync.at ? <>✅ Guardado en la nube · {ago(sync.at)}</> : null}
+              {sync.state === "syncing" || sync.state === "starting" ? <>⏳ Sincronizando…</> : null}
+              {sync.state === "offline" ? <>⚠️ Sin conexión con la nube. Se reintenta solo cuando hagas algo.{sync.at ? ` Último guardado: ${ago(sync.at)}.` : ""}</> : null}
+            </div>
+            <div className="muted small">Tu avance se guarda solo y se recupera en otro dispositivo, o si el navegador borra los datos del sitio. Entrás con el mismo código de acceso.</div>
+            <button className="btn btn-block" onClick={() => void syncNow()} disabled={sync.state === "syncing"}>🔄 Sincronizar ahora</button>
+          </>
+        )}
+      </section>
+
       <section className="card stack">
         <div className="h2" style={{ margin: 0 }}>Copia de seguridad</div>
         <div className="muted small">
@@ -201,7 +226,7 @@ export default function Perfil() {
             <b>¿Borrar todo el progreso?</b>
             <div className="muted small">No se puede deshacer.</div>
             <div className="grid2">
-              <button className="btn btn-bad" onClick={() => { resetProgress(); setConfirmReset(false); note("Progreso borrado."); }}>Sí, borrar</button>
+              <button className="btn btn-bad" onClick={() => { resetProgress(); void syncNow({ allowPristine: true }); setConfirmReset(false); note("Progreso borrado."); }}>Sí, borrar</button>
               <button className="btn" onClick={() => setConfirmReset(false)}>Cancelar</button>
             </div>
           </div>

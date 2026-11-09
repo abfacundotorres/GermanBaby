@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 import BottomNav from "@/components/BottomNav";
+import SyncManager from "@/components/SyncManager";
 
 export const metadata: Metadata = {
   title: "GermanBaby: alemán desde cero",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <SyncManager />
         <TopBar />
         {children}
         <BottomNav />
