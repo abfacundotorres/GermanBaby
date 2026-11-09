@@ -6,6 +6,7 @@ import type { Step } from "@/lib/session";
 import { shuffle } from "@/lib/text";
 import { CATEGORY_EMOJI, type MistakeCategory } from "@/lib/mistakes";
 import { openMistakes, resolveMistakes, useHydrated, useProgress, type Mistake } from "@/lib/progress";
+import { callAi } from "@/lib/ai";
 import { LessonPlayer } from "@/components/LessonPlayer";
 import type { PracticeResult } from "@/app/api/practice/route";
 
@@ -64,17 +65,10 @@ export default function PracticePage() {
     setError(null);
     const sent = open.slice(0, 20);
     try {
-      const res = await fetch("/api/practice", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          mistakes: sent.map(({ category, wrong, right, explanation, prompt }) => ({ category, wrong, right, explanation, prompt })),
-          studied: Object.keys(p.lessons),
-        }),
+      const r = await callAi<PracticeResult>("/api/practice", {
+        mistakes: sent.map(({ category, wrong, right, explanation, prompt }) => ({ category, wrong, right, explanation, prompt })),
+        studied: Object.keys(p.lessons),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-      const r = data as PracticeResult;
       const steps: Step[] = shuffle([
         ...r.build.map((b): Step => ({ kind: "build", ...b })),
         ...r.write.map((w): Step => ({ kind: "write", ...w })),

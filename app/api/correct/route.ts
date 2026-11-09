@@ -45,7 +45,7 @@ export async function POST(req: Request) {
   }
   const { es, references, answer, hint } = parsed.data;
   try {
-    const result = await structured({
+    const { output, usage } = await structured({
       schema: Correction,
       system: SYSTEM,
       messages: [
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
         },
       ],
     });
-    return Response.json(result);
+    return Response.json({ ...output, _usage: usage });
   } catch (err) {
     return errorResponse(err);
   }

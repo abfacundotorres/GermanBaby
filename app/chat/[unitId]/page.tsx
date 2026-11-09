@@ -4,7 +4,8 @@ import { use, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getUnit } from "@/lib/curriculum";
 import { assessPronunciation, SpeechNotConfigured, speak, type PronunciationResult } from "@/lib/speech";
-import { addXp, grantAchievement, logMistakes, update, useProgress } from "@/lib/progress";
+import { addXp, aiAllowance, grantAchievement, logMistakes, update, useProgress } from "@/lib/progress";
+import { callAi } from "@/lib/ai";
 import { PronunciationReport } from "@/components/PronunciationReport";
 import { AchievementToast } from "@/components/LessonPlayer";
 import type { ChatTurn } from "@/app/api/chat/route";
@@ -16,7 +17,9 @@ type Msg =
 export default function ChatPage({ params }: { params: Promise<{ unitId: string }> }) {
   const { unitId } = use(params);
   const unit = getUnit(unitId);
-  const { voice } = useProgress();
+  const prog = useProgress();
+  const { voice } = prog;
+  const ai = aiAllowance(prog);
   const [msgs, setMsgs] = useState<Msg[]>(() =>
     unit ? [{ role: "assistant", text: unit.chat.opener, es: unit.chat.openerEs }] : [],
   );
@@ -50,14 +53,7 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
     setMsgs(history);
     setLoading(true);
     try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ unitId, history: history.map((m) => ({ role: m.role, text: m.text })) }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-      const turn = data as ChatTurn;
+      const turn = await callAi<ChatTurn>("/api/chat", { unitId, history: history.map((m) => ({ role: m.role, text: m.text })) });
       setMsgs((m) => {
         const copy = [...m];
         const last = copy[copy.length - 1];
@@ -121,6 +117,10 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
           <label className="small muted">
             <input type="checkbox" checked={showEs} onChange={(e) => setShowEs(e.target.checked)} /> Mostrar traducción
           </label>
+          <div className="small muted">
+            IA hoy: {ai.callsToday}{ai.limit > 0 ? `/${ai.limit}` : ai.limit < 0 ? " (sin límite)" : " (desactivada)"}
+            {!ai.allowed && <> · <Link href="/perfil" style={{ textDecoration: "underline" }}>subir límite</Link></>}
+          </div>
         </div>
       </div>
 

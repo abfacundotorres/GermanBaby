@@ -6,6 +6,7 @@ import { useSyncExternalStore } from "react";
 import { LESSON_ORDER } from "./curriculum";
 import type { MistakeInput } from "./mistakes";
 import type { Step } from "./session";
+import { costUsd } from "./pricing";
 
 export type SrsItem = { box: number; due: string }; // due = YYYY-MM-DD
 
@@ -20,8 +21,24 @@ export type Mistake = MistakeInput & {
 
 export type Daily = { date: string; xp: number; lessons: number; correct: number; claimed: string[] };
 
+/** Uso de IA (Claude): del día y del mes, con costo estimado a precios de lista. */
+export type AiUsage = {
+  date: string;
+  calls: number;
+  month: string; // YYYY-MM
+  monthCalls: number;
+  monthIn: number;
+  monthOut: number;
+  monthCost: number; // USD
+  unpriced: boolean; // hubo llamadas de un modelo sin precio conocido
+  model: string | null;
+};
+
 export type Progress = {
   xp: number;
+  aiDailyLimit: number; // llamadas a IA por día: 0 = sin IA, -1 = sin límite
+  aiMonthlyBudget: number; // USD por mes: 0 = sin tope
+  ai: AiUsage;
   gems: number;
   freezes: number; // congeladores de racha (máx. 2)
   history: Record<string, number>; // XP por día (últimos 30)
@@ -46,10 +63,17 @@ const addDays = (date: string, n: number) => {
   return d.toLocaleDateString("sv-SE");
 };
 
+const freshAi = (): AiUsage => ({
+  date: today(), calls: 0, month: today().slice(0, 7), monthCalls: 0, monthIn: 0, monthOut: 0, monthCost: 0, unpriced: false, model: null,
+});
+
 const freshDaily = (): Daily => ({ date: today(), xp: 0, lessons: 0, correct: 0, claimed: [] });
 
 const DEFAULT: Progress = {
   xp: 0,
+  aiDailyLimit: 60,
+  aiMonthlyBudget: 3,
+  ai: freshAi(),
   gems: 0,
   freezes: 0,
   history: {},
@@ -68,6 +92,15 @@ const DEFAULT: Progress = {
 let cache: Progress | null = null;
 const listeners = new Set<() => void>();
 
+/** Reinicia el contador del día o del mes cuando cambia la fecha. */
+function rollAi(a: AiUsage) {
+  const t = today();
+  if (a.date !== t) { a.date = t; a.calls = 0; }
+  if (a.month !== t.slice(0, 7)) {
+    a.month = t.slice(0, 7); a.monthCalls = 0; a.monthIn = 0; a.monthOut = 0; a.monthCost = 0; a.unpriced = false;
+  }
+}
+
 /** Completa campos que falten (datos de versiones anteriores) y reinicia lo diario. */
 function normalize(raw: Partial<Progress>): Progress {
   const p = { ...structuredClone(DEFAULT), ...raw } as Progress;
@@ -75,6 +108,8 @@ function normalize(raw: Partial<Progress>): Progress {
   p.daily = { ...freshDaily(), ...raw.daily };
   p.daily.claimed ??= [];
   if (p.daily.date !== today()) p.daily = freshDaily();
+  p.ai = { ...freshAi(), ...raw.ai };
+  rollAi(p.ai);
   return p;
 }
 
@@ -374,7 +409,7 @@ export function buyFreeze(): "ok" | "poor" | "max" {
 
 // ---------- Ajustes y copia de seguridad ----------
 
-export function setSetting<K extends "sound" | "voice" | "dailyGoal">(key: K, value: Progress[K]) {
+export function setSetting<K extends "sound" | "voice" | "dailyGoal" | "aiDailyLimit" | "aiMonthlyBudget">(key: K, value: Progress[K]) {
   update((p) => {
     p[key] = value;
     return p;
@@ -404,5 +439,37 @@ export function lastDays(p: Progress, n = 7) {
   return Array.from({ length: n }, (_, i) => {
     const date = addDays(t, i - (n - 1));
     return { date, xp: p.history[date] ?? 0 };
+  });
+}
+
+// ---------- Uso de IA: contador y topes ----------
+
+export function aiAllowance(p: Progress) {
+  const t = today();
+  const callsToday = p.ai.date === t ? p.ai.calls : 0;
+  const monthCost = p.ai.month === t.slice(0, 7) ? p.ai.monthCost : 0;
+  const limit = p.aiDailyLimit;
+  let reason: string | null = null;
+  if (limit === 0) reason = "La IA está desactivada (modo sin IA). Podés activarla en Perfil.";
+  else if (limit > 0 && callsToday >= limit) reason = `Llegaste al límite diario de IA (${limit} usos). Se renueva mañana, o lo subís en Perfil.`;
+  else if (p.aiMonthlyBudget > 0 && monthCost >= p.aiMonthlyBudget) reason = `Llegaste al tope mensual de gasto (USD ${p.aiMonthlyBudget}). Lo subís en Perfil.`;
+  return { allowed: reason === null, reason, callsToday, limit, monthCost, budget: p.aiMonthlyBudget };
+}
+
+/** Registra una llamada a IA y, si hay datos de tokens, su costo estimado. */
+export function recordAi(usage: { input: number; output: number; model: string } | null) {
+  update((p) => {
+    rollAi(p.ai);
+    p.ai.calls += 1;
+    p.ai.monthCalls += 1;
+    if (usage) {
+      p.ai.monthIn += usage.input;
+      p.ai.monthOut += usage.output;
+      p.ai.model = usage.model;
+      const c = costUsd(usage.model, usage.input, usage.output);
+      if (c === null) p.ai.unpriced = true;
+      else p.ai.monthCost += c;
+    }
+    return p;
   });
 }

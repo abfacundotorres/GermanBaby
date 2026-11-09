@@ -6,6 +6,7 @@ import { compareLocal, shuffle, tiles } from "@/lib/text";
 import { assessPronunciation, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
 import { recordPronunciation } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
+import { callAi } from "@/lib/ai";
 import { AudioButtons } from "./Audio";
 import { PronunciationReport } from "./PronunciationReport";
 import type { CorrectionResult } from "@/app/api/correct/route";
@@ -218,14 +219,7 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
     }
     setLoading(true);
     try {
-      const res = await fetch("/api/correct", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ es: step.es, references: step.references, answer, hint: step.hint }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw Object.assign(new Error(data.error), { status: res.status });
-      const r = data as CorrectionResult;
+      const r = await callAi<CorrectionResult>("/api/correct", { es: step.es, references: step.references, answer, hint: step.hint });
       const status: Status = r.verdict === "correct" ? "ok" : r.verdict === "almost" ? "almost" : "bad";
       onResult({
         status,

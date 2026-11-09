@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import {
-  ACHIEVEMENTS, FREEZE_COST, MAX_FREEZES, buyFreeze, currentStreak, exportProgress, importProgress, lastDays, levelFor,
+  aiAllowance, ACHIEVEMENTS, FREEZE_COST, MAX_FREEZES, buyFreeze, currentStreak, exportProgress, importProgress, lastDays, levelFor,
   resetProgress, setSetting, useHydrated, useProgress, xpForLevel,
 } from "@/lib/progress";
 import { speak } from "@/lib/speech";
@@ -16,6 +16,9 @@ const VOICES = [
   ["de-DE-KillianNeural", "Killian (hombre)"],
 ];
 const DAY = ["D", "L", "M", "M", "J", "V", "S"];
+const usd = (n: number) => `USD ${(n < 0.1 ? n.toFixed(3) : n.toFixed(2)).replace(".", ",")}`;
+const LIMITS: [number, string][] = [[0, "Sin IA"], [20, "20 por día"], [40, "40 por día"], [60, "60 por día"], [100, "100 por día"], [200, "200 por día"], [-1, "Sin límite"]];
+const BUDGETS: [number, string][] = [[0, "Sin tope"], [1, "USD 1"], [3, "USD 3"], [5, "USD 5"], [10, "USD 10"], [20, "USD 20"]];
 
 export default function Perfil() {
   const hydrated = useHydrated();
@@ -32,6 +35,9 @@ export default function Perfil() {
   const week = lastDays(p, 7);
   const maxXp = Math.max(...week.map((d) => d.xp), p.dailyGoal);
   const lessonsDone = Object.keys(p.lessons).length;
+  const ai = aiAllowance(p);
+  const monthNow = new Date().toLocaleDateString("sv-SE").slice(0, 7);
+  const m = p.ai.month === monthNow ? p.ai : { monthCalls: 0, monthIn: 0, monthOut: 0, monthCost: 0, unpriced: false, model: p.ai.model };
   const note = (t: string) => { setMsg(t); setTimeout(() => setMsg(null), 2500); };
 
   const buy = () => {
@@ -140,6 +146,40 @@ export default function Perfil() {
             {VOICES.map(([id, name]) => <option key={id} value={id}>{name}</option>)}
           </select>
         </label>
+      </section>
+
+      <section className="card stack" style={{ gap: 8 }}>
+        <div className="h2" style={{ margin: 0 }}>🤖 Uso de IA y gasto</div>
+        <div className="small">
+          <b>Hoy:</b> {ai.callsToday}{ai.limit > 0 ? ` de ${ai.limit}` : ""} usos{ai.limit === 0 ? " (IA desactivada)" : ai.limit < 0 ? " (sin límite)" : ""}
+        </div>
+        {ai.limit > 0 && (
+          <div className="progress" style={{ height: 10 }}><div style={{ width: `${Math.min(100, (ai.callsToday / ai.limit) * 100)}%`, background: ai.callsToday >= ai.limit ? "var(--bad)" : undefined }} /></div>
+        )}
+        <div className="small">
+          <b>Este mes:</b> {m.monthCalls} usos · {m.monthIn.toLocaleString("es-AR")} tokens de entrada · {m.monthOut.toLocaleString("es-AR")} de salida
+        </div>
+        <div className="h2" style={{ margin: 0 }}>≈ {usd(m.monthCost)}{ai.budget > 0 ? ` de ${usd(ai.budget)}` : ""}</div>
+        {ai.budget > 0 && (
+          <div className="progress" style={{ height: 10 }}><div style={{ width: `${Math.min(100, (m.monthCost / ai.budget) * 100)}%`, background: m.monthCost >= ai.budget ? "var(--bad)" : undefined }} /></div>
+        )}
+        {m.unpriced && <div className="notice small">Usaste un modelo sin precio conocido: el gasto real es mayor que el mostrado.</div>}
+        <label className="switch">
+          <span>Límite diario</span>
+          <select className="select" value={p.aiDailyLimit} onChange={(e) => setSetting("aiDailyLimit", Number(e.target.value))}>
+            {LIMITS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+          </select>
+        </label>
+        <label className="switch">
+          <span>Tope mensual</span>
+          <select className="select" value={p.aiMonthlyBudget} onChange={(e) => setSetting("aiMonthlyBudget", Number(e.target.value))}>
+            {BUDGETS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+          </select>
+        </label>
+        <div className="muted small">
+          Al llegar a un tope, la app sigue funcionando sin IA: las traducciones se corrigen comparando con respuestas modelo, y la charla y la práctica personalizada se pausan.
+          Son estimaciones con precios de lista{m.model ? ` (modelo: ${m.model})` : ""}: la cifra real está en la consola de Claude. El tope que no se puede pasar es el saldo prepago sin recarga automática.
+        </div>
       </section>
 
       <section className="card stack">

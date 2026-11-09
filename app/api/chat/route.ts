@@ -71,7 +71,8 @@ Reglas:
   }
 
   try {
-    return Response.json(await structured({ schema: Turn, system, messages: merged }));
+    const { output, usage } = await structured({ schema: Turn, system, messages: merged });
+    return Response.json({ ...output, _usage: usage });
   } catch (err) {
     return errorResponse(err);
   }

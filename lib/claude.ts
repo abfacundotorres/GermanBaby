@@ -3,7 +3,11 @@ import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import type { z } from "zod";
 
-export const MODEL = process.env.CLAUDE_MODEL || "claude-opus-5-5";
+// Haiku por defecto: ~40 veces más barato que Opus. Para más calidad en las
+// explicaciones, poné CLAUDE_MODEL=claude-sonnet-5-5 o claude-opus-5-5.
+export const MODEL = process.env.CLAUDE_MODEL || "claude-haiku-5-5";
+
+export type Usage = { input: number; output: number; model: string };
 
 // Los respaldos ante rechazo del lado del servidor existen para Opus/Sonnet/Fable,
 // no para Haiku.
@@ -19,7 +23,7 @@ export async function structured<S extends z.ZodType>(args: {
   schema: S;
   system: string;
   messages: Anthropic.Beta.BetaMessageParam[];
-}): Promise<z.infer<S>> {
+}): Promise<{ output: z.infer<S>; usage: Usage }> {
   client ??= new Anthropic();
   const res = await client.beta.messages.parse({
     model: MODEL,
@@ -32,7 +36,11 @@ export async function structured<S extends z.ZodType>(args: {
   });
   if (res.stop_reason === "refusal") throw new ClaudeRefusal("El modelo no pudo responder a este mensaje.");
   if (!res.parsed_output) throw new Error(`Respuesta sin formato válido (stop_reason: ${res.stop_reason}).`);
-  return res.parsed_output;
+  // output_tokens incluye los tokens de razonamiento, que también se cobran.
+  return {
+    output: res.parsed_output,
+    usage: { input: res.usage.input_tokens, output: res.usage.output_tokens, model: res.model ?? MODEL },
+  };
 }
 
 export function errorResponse(err: unknown) {

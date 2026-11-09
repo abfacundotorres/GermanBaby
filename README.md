@@ -25,7 +25,7 @@ La app se publica en Vercel, que es gratis para uso personal, y después la abr�
 | `ANTHROPIC_API_KEY` | la clave de Claude |
 | `AZURE_SPEECH_KEY` | la clave de Azure |
 | `AZURE_SPEECH_REGION` | la región, por ejemplo `brazilsouth` |
-| `CLAUDE_MODEL` | opcional: `claude-haiku-5-5` para gastar mucho menos |
+| `CLAUDE_MODEL` | opcional. Por defecto `claude-haiku-5-5` (el más barato). Si las explicaciones te parecen flojas, probá `claude-sonnet-5-5` o `claude-opus-5-5` |
 
 5. *Deploy*. Al terminar te da una dirección tipo `germanbaby-xxxx.vercel.app`.
 
@@ -38,7 +38,10 @@ La primera vez te pide el código de acceso. El micrófono funciona porque Verce
 ### Importante
 - **Sin `ACCESS_CODE`, la publicada rechaza todas las llamadas a Claude y Azure** (devuelve un error 503). Es a propósito, para que nadie gaste tu saldo.
 - **El progreso vive en el navegador del celular.** Si borrás los datos del sitio, o abrís la app desde otro navegador, empezás de cero. En *Perfil → Copia de seguridad* podés copiar tu progreso a tus notas y restaurarlo.
-- Poné un tope de gasto en la consola de Claude para estar tranquilo.
+- **Cuidá el gasto de Claude**, que es lo único que cuesta (con Haiku, menos de USD 1 por mes):
+  - Cargá saldo prepago y **dejá apagada la recarga automática**: cuando se acaba, la API deja de responder y no te cobra de más.
+  - En *Perfil → Uso de IA y gasto* ves cuánto gastaste y elegís un límite diario y un tope mensual. Al llegar a uno, la app sigue funcionando sin IA.
+  - Es una estimación con precios de lista: la cifra real está en la consola de Claude.
 
 ## Puesta en marcha en una PC
 
@@ -56,7 +59,7 @@ npm run dev                  # http://localhost:3000
 |---|---|
 | `ANTHROPIC_API_KEY` | https://platform.claude.com → API Keys |
 | `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION` | Portal de Azure → crear recurso **Speech** (el nivel F0 es gratis) → «Keys and Endpoint» |
-| `CLAUDE_MODEL` (opcional) | Por defecto `claude-opus-5-5`. `claude-haiku-5-5` es más barato. |
+| `CLAUDE_MODEL` (opcional) | Por defecto `claude-haiku-5-5` (el más barato). Con `claude-sonnet-5-5` o `claude-opus-5-5` las explicaciones pueden ser mejores, pero cuestan mucho más. |
 | `ACCESS_CODE` (recomendado) | Código para entrar. Obligatorio al publicar. En local se puede omitir. |
 
 La app funciona sin claves, con menos funciones: el audio usa la voz del navegador, los ejercicios de hablar se pueden saltear y la traducción se corrige comparando con respuestas modelo.

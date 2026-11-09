@@ -90,10 +90,25 @@ Hoja de ruta (próximas unidades): la casa · la ciudad y las preposiciones con 
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
-## 7. Costos estimados (uso personal)
+## 7. Costos (uso personal, 1 hora diaria o menos)
 
-- **Azure Speech:** el nivel gratuito F0 incluye unas 5 h de reconocimiento por mes (la evaluación de pronunciación cuenta como reconocimiento) y 0,5 M de caracteres de TTS neural. Una persona practicando 20 min por día no debería pasarse. Verificalo en la página de precios de Azure, porque cambia.
-- **Claude:** una corrección son ~1-2 k tokens de entrada y ~300 de salida, unos centavos de dólar con Opus 5.5 a esfuerzo bajo. Con `CLAUDE_MODEL=claude-haiku-5-5` el costo baja mucho, a cambio de explicaciones menos finas.
+Lo único que se paga es Claude. Azure Speech (en el plan gratuito F0) y Vercel (plan Hobby) deberían costar USD 0. Las cifras de abajo son **estimaciones**, no mediciones con la API real.
+
+| Modelo (`CLAUDE_MODEL`) | Por hora | Por mes |
+|---|---|---|
+| `claude-haiku-5-5` (por defecto) | ~USD 0,013 | menos de USD 1 |
+| `claude-sonnet-5-5` | ~USD 0,25 | ~USD 8 |
+| `claude-opus-5-5` | ~USD 0,50 | ~USD 15 (hasta ~USD 35 en el peor caso) |
+
+Supuestos por hora: 3 lecciones, 8 correcciones que requieren IA, 25 turnos de charla y 1 práctica personalizada. La charla es ~75 % del gasto. Lo más incierto es cuántos tokens de razonamiento usa el modelo, porque también se cobran.
+
+**Cómo se controla el gasto:**
+1. **Haiku por defecto**, que es unas 40 veces más barato que Opus.
+2. **Saldo prepago sin recarga automática** en la consola de Claude: es el único tope que no se puede pasar.
+3. **Límite diario de usos de IA** (por defecto 60) y **tope mensual en dólares** (por defecto USD 3), configurables en Perfil. Todas las llamadas pasan por `lib/ai.ts`, que los aplica antes de pedirle nada al servidor. Si se llega a un tope, las traducciones se corrigen sin IA y la charla y la práctica personalizada se pausan.
+4. **Contador de gasto** en Perfil: el servidor devuelve los tokens de cada respuesta y `lib/pricing.ts` los convierte a dólares con precios de lista. Es una estimación; la cifra real está en la consola de Claude.
+
+**Azure (plan gratuito F0):** el uso previsto es de 2 a 3 horas de micrófono por mes (el plan incluye 5) y ~105.000 caracteres de voz por mes (incluye 500.000). No pude confirmar si la evaluación de pronunciación cuenta dentro de las horas gratis; en el peor caso serían pocos dólares por mes. Verificalo en la página de precios de Azure.
 
 ## 8. Errores y práctica dirigida
 

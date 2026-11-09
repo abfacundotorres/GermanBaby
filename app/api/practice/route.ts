@@ -77,7 +77,7 @@ export async function POST(req: Request) {
     .join("\n");
 
   try {
-    const r = await structured({
+    const { output: r, usage } = await structured({
       schema: Practice,
       system: SYSTEM,
       messages: [
@@ -98,7 +98,7 @@ export async function POST(req: Request) {
     const quiz = r.quiz
       .map((q) => ({ ...q, options: [...new Set(q.options)] }))
       .filter((q) => q.options.length >= 2 && q.options.includes(q.answer));
-    return Response.json({ focus: r.focus, build, write, quiz } satisfies PracticeResult);
+    return Response.json({ focus: r.focus, build, write, quiz, _usage: usage } satisfies PracticeResult & { _usage: unknown });
   } catch (err) {
     return errorResponse(err);
   }
