@@ -119,9 +119,19 @@ Cada error de una lección, del repaso o de una charla se guarda en el navegador
 
 Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores, y una palabra que fallás vuelve a la caja 1 del repaso espaciado.
 
-## 9. Próximos pasos
+## 9. Auditoría y próximos pasos
 
-1. **Más contenido A1** (ver hoja de ruta de §6) y un test de nivel opcional.
-2. **Pronunciación:** comparar contra pares mínimos (Hölle/Hülle/Helle) y un gráfico de evolución del puntaje.
-3. **Multiusuario:** reemplazar `lib/progress.ts` por Supabase (auth + tabla `progress` JSON) y desplegar en Vercel.
-4. **PWA** para usarla en el celular sin conexión (excepto voz e IA).
+Última auditoría: revisión del código, pruebas de seguridad con peticiones reales, validación automática del contenido (24 lecciones, 141 palabras, sin duplicados que vuelvan ambiguas las opciones) y capturas en claro y oscuro. Pruebas automáticas con `npm test` (comparación de texto y precios).
+
+**Pendiente, por prioridad:**
+1. **Probar con claves y un celular real.** Nada de Claude ni de Azure se probó contra los servicios reales. Hay que verificar en particular:
+   - Qué devuelve Azure para alemán: no pude confirmar que `de-DE` soporte puntaje por fonema (alfabeto IPA) ni evaluación de prosodia. Si no los soporta, el detalle por sonido queda vacío y los consejos se eligen por las letras de la palabra.
+   - Que el audio se reproduzca solo al abrir un ejercicio en iPhone. Safari puede bloquear audio que no nace de un toque.
+2. **Guardar el progreso fuera del celular.** Hoy vive en `localStorage`. Safari puede borrar los datos de sitios que no se abren en 7 días (las apps instaladas en la pantalla de inicio están exentas). Propuesta: un pequeño almacenamiento en la nube (Upstash o Vercel KV) atado al código de acceso, sin cuentas.
+3. **Guardar el audio ya generado** (por voz, texto y velocidad) en el dispositivo: ahorra caracteres de Azure y la espera de cada reproducción.
+4. **Limitar los intentos de `/login`:** hoy se pueden hacer decenas por segundo. Mientras tanto, el código de acceso debe ser largo (16 caracteres o más).
+5. **Más lecciones de gramática explícita** (casos, preposiciones, modales) y un test de nivel para no obligar a empezar siempre desde cero.
+6. **Ajustar el umbral de pronunciación** (hoy 70/100) con uso real: puede ser demasiado exigente para un principiante.
+7. **Accesibilidad:** marcar el texto alemán con `lang="de"` y anunciar la corrección con `aria-live`.
+8. **Integración continua:** correr tipos, pruebas y `build` en cada cambio.
+

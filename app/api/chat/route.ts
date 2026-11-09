@@ -54,7 +54,9 @@ Reglas:
 
   // La API exige que el primer mensaje sea del usuario: el saludo del personaje
   // se antepone como contexto.
-  const [first, ...rest] = parsed.data.history;
+  const all = parsed.data.history;
+  const trimmed = all.length > 16 ? [all[0], ...all.slice(-15)] : all;
+  const [first, ...rest] = trimmed;
   const messages = [
     { role: "user" as const, content: `(Empieza la escena. Tu primera frase fue: «${first.text}»)` },
     ...rest.map((m) => ({ role: m.role, content: m.text })),

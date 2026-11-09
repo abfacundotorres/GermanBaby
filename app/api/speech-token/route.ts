@@ -9,7 +9,9 @@ export async function POST() {
     method: "POST",
     headers: { "Ocp-Apim-Subscription-Key": key, "Content-Length": "0" },
     cache: "no-store",
-  });
+    signal: AbortSignal.timeout(8000),
+  }).catch(() => null);
+  if (!res) return Response.json({ error: "No pude conectarme con Azure Speech." }, { status: 502 });
   if (!res.ok) {
     return Response.json({ error: `Azure rechazó la clave (${res.status}). Revisá clave y región.` }, { status: 502 });
   }

@@ -11,7 +11,7 @@ La app se publica en Vercel, que es gratis para uso personal, y después la abr�
 ### 1. Conseguí las claves
 - **Claude:** entrá a https://platform.claude.com, creá una cuenta, cargá algo de saldo y generá una clave en *API Keys*. Anotá la clave, que empieza con `sk-ant-`.
 - **Azure Speech:** entrá a https://portal.azure.com, creá un recurso **Speech** con el plan gratuito **F0**, y en *Keys and Endpoint* copiá una clave y la región (por ejemplo `brazilsouth`).
-- **Código de acceso:** inventá una frase larga que solo vos sepas. Evita que otra persona use tus claves si encuentra el link.
+- **Código de acceso:** inventá una frase **larga, de 16 caracteres o más**, que solo vos sepas. Evita que otra persona use tus claves si encuentra el link. Tiene que ser larga porque nada limita los intentos por segundo contra `/login`.
 
 ### 2. Publicala
 1. Entrá a https://vercel.com y registrate con tu cuenta de GitHub.

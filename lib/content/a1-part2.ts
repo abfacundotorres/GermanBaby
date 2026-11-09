@@ -325,7 +325,7 @@ export const UNITS_A1_PART2: Unit[] = [
           { de: "abends", es: "a la noche (siempre)", emoji: "🌙" },
         ],
         exercises: [
-          { kind: "build", es: "Me levanto a las seis", answer: "Ich stehe um sechs Uhr auf", extra: ["aufstehe", "am", "halb"] },
+          { kind: "build", es: "Me levanto a las seis", answer: "Ich stehe um sechs Uhr auf", alts: ["Um sechs Uhr stehe ich auf"], extra: ["aufstehe", "am", "halb"] },
           { kind: "speak", de: "Ich stehe um sieben Uhr auf", es: "Me levanto a las siete" },
           { kind: "write", es: "Desayuno a las ocho", references: ["Ich frühstücke um acht Uhr", "Ich frühstücke um acht", "Um acht Uhr frühstücke ich"] },
           { kind: "dictation", de: "Morgens dusche ich", es: "A la mañana me ducho" },
@@ -365,7 +365,7 @@ export const UNITS_A1_PART2: Unit[] = [
           { de: "Um elf Uhr gehe ich schlafen", es: "A las once me voy a dormir", emoji: "🕚" },
         ],
         exercises: [
-          { kind: "build", es: "Después desayuno", answer: "Dann frühstücke ich", extra: ["zuerst", "frühstücken", "bin"] },
+          { kind: "build", es: "Después desayuno", answer: "Dann frühstücke ich", alts: ["Ich frühstücke dann"], extra: ["zuerst", "frühstücken", "bin"] },
           { kind: "write", es: "Primero me ducho", references: ["Zuerst dusche ich"], hint: "Después de «zuerst», el verbo va segundo." },
           { kind: "speak", de: "Um elf Uhr gehe ich schlafen", es: "A las once me voy a dormir" },
           { kind: "dictation", de: "Danach gehe ich nach Hause", es: "Después me voy a casa" },

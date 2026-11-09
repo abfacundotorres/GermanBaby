@@ -111,8 +111,8 @@ export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
   const [chosen, setChosen] = useState<number[]>([]);
   const sentence = chosen.map((i) => bank[i].t).join(" ");
   const check = () => {
-    const v = compareLocal(sentence, step.answer);
-    onResult(v === "correct"
+    const ok = [step.answer, ...(step.alts ?? [])].some((a) => compareLocal(sentence, a, { ignoreCase: true }) === "correct");
+    onResult(ok
       ? { status: "ok" }
       : { status: "bad", detail: <>Correcto: <b>{step.answer}</b></>, answer: sentence, expected: step.answer, category: "orden de palabras" });
   };
@@ -295,7 +295,14 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
       }
     } catch (e) {
       if (e instanceof SpeechNotConfigured) setNotConfigured(true);
-      else setError((e as Error).message);
+      else {
+        const msg = (e as Error).message ?? "";
+        setError(
+          /permission|denied|notallowed|not allowed/i.test(msg)
+            ? "No tengo permiso para usar el micrófono. Habilitalo para este sitio en los ajustes del navegador y probá de nuevo."
+            : msg || "No pude usar el micrófono.",
+        );
+      }
     } finally {
       setRecording(false);
     }
@@ -330,7 +337,14 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
           <div className="muted small">{recording ? "Te escucho… hablá ahora" : "Tocá el micrófono y decí la frase"}</div>
         </>
       )}
-      {error && <div className="notice">{error}</div>}
+      {error && !locked && (
+        <div className="notice" style={{ textAlign: "left" }}>
+          {error}
+          <div style={{ marginTop: 8 }}>
+            <button className="btn" onClick={() => onResult({ status: "skip", title: "Ejercicio salteado" })}>Saltear este ejercicio</button>
+          </div>
+        </div>
+      )}
       {result && <PronunciationReport result={result} />}
       {!locked && result && result.pronScore < PASS_SCORE && (
         <div className="row" style={{ justifyContent: "center" }}>

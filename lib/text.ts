@@ -31,19 +31,31 @@ export function levenshtein(a: string, b: string) {
 
 export type LocalVerdict = "correct" | "almost" | "incorrect";
 
+const words = (s: string) => s.replace(/[.,!?¿¡;:"'«»„“”’]/g, " ").split(/\s+/).filter(Boolean);
+
 /**
- * "correct": igual salvo mayúsculas/puntuación.
- * "almost": igual escribiendo ae/oe/ue/ss, o con 1-2 letras de diferencia.
+ * "correct": igual salvo la puntuación y la mayúscula de la primera palabra.
+ * "almost": mayúsculas mal puestas (los sustantivos alemanes van con mayúscula), ae/oe/ue/ss en vez
+ *   de ä/ö/ü/ß, o un typo de 1-2 letras en una PALABRA SUELTA.
+ * "incorrect": cualquier otra diferencia. En frases no se tolera ni una letra: ahí viven los
+ *   errores de gramática (ein/einen, wohnt/wohnst), que no son typos.
+ * ignoreCase: para fichas (el alumno no controla las mayúsculas).
  */
-export function compareLocal(answer: string, expected: string): LocalVerdict {
+export function compareLocal(answer: string, expected: string, opts: { ignoreCase?: boolean } = {}): LocalVerdict {
   const a = normalize(answer);
   const e = normalize(expected);
-  if (a === e) return "correct";
+  if (a === e) {
+    if (opts.ignoreCase) return "correct";
+    const aw = words(answer);
+    const ew = words(expected);
+    // La primera palabra puede ir en minúscula; las demás deben respetar la mayúscula.
+    return aw.slice(1).every((w, i) => w === ew[i + 1]) ? "correct" : "almost";
+  }
   const af = normalize(answer, { foldUmlauts: true });
   const ef = normalize(expected, { foldUmlauts: true });
   if (af === ef) return "almost";
-  const tolerance = ef.length <= 6 ? 1 : 2;
-  return levenshtein(af, ef) <= tolerance ? "almost" : "incorrect";
+  if (ef.includes(" ")) return "incorrect";
+  return levenshtein(af, ef) <= (ef.length <= 6 ? 1 : 2) ? "almost" : "incorrect";
 }
 
 export function shuffle<T>(arr: T[]): T[] {

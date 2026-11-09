@@ -236,7 +236,7 @@ export function completeLesson(key: string, accuracy: number, vocab: string[]): 
     }
     ensureToday(p);
     p.daily.lessons += 1;
-    p.gems += 10 + (accuracy === 1 ? 5 : 0);
+    if (!prev) p.gems += 10 + (accuracy === 1 ? 5 : 0); // repetir una lección no da gemas
     unlock(p, "first_lesson", unlocked);
     if (accuracy === 1) unlock(p, "perfect", unlocked);
     const unitId = key.split("/")[0];

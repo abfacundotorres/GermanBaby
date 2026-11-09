@@ -57,7 +57,7 @@ const SYSTEM = `Sos un profesor de alemán para hispanohablantes rioplatenses de
 - Español rioplatense (vos) en consignas, pistas y explicaciones.`;
 
 // Vercel: margen para respuestas largas de Claude.
-export const maxDuration = 90;
+export const maxDuration = 60;
 
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));

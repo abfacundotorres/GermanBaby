@@ -12,7 +12,7 @@ export type Vocab = {
 };
 
 export type HandExercise =
-  | { kind: "build"; es: string; answer: string; extra: string[] }
+  | { kind: "build"; es: string; answer: string; extra: string[]; alts?: string[] } // alts: otros órdenes válidos
   | { kind: "speak"; de: string; es: string }
   | { kind: "write"; es: string; references: string[]; hint?: string }
   | { kind: "dictation"; de: string; es: string };
@@ -165,7 +165,7 @@ const UNITS_A1_PART1: Unit[] = [
         title: "Tu edad",
         goal: "Preguntar y decir la edad.",
         vocab: [
-          { de: "Wie alt bist du?", es: "¿Cuántos años tenés?", emoji: "🎂", note: "En alemán se «es» de una edad: literalmente «¿qué tan viejo sos?»." },
+          { de: "Wie alt bist du?", es: "¿Cuántos años tenés?", emoji: "🎂", note: "La edad se dice con «ser» y no con «tener»: literalmente «¿qué tan viejo sos?»." },
           { de: "Ich bin zehn Jahre alt", es: "Tengo diez años", emoji: "🧒", note: "Ich bin = yo soy. Jahre = años." },
           { de: "das Jahr", es: "el año", emoji: "📅", note: "Sustantivo neutro: das. Plural: die Jahre." },
           { de: "alt", es: "viejo / de edad", emoji: "👴" },
