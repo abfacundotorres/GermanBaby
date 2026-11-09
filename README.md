@@ -54,13 +54,19 @@ La clave donde se guarda tu progreso se deriva de tu código de acceso. Si lo ca
 
 ## Puesta en marcha en una PC
 
-Requisitos: Node 20 o superior.
+Requisitos: [Node 20 o superior](https://nodejs.org) y Git.
 
 ```bash
+git clone --branch ccr-e947750e-x6s4gk https://github.com/abfacundotorres/GermanBaby.git
+cd GermanBaby
 npm install
-cp .env.example .env.local   # completá las claves
+cp .env.example .env.local   # en Windows (cmd): copy .env.example .env.local
+# editá .env.local y pegá tus claves
+npm run check                # prueba tus claves reales y te dice qué falla
 npm run dev                  # http://localhost:3000
 ```
+
+`npm run check` hace una llamada mínima a Claude (una fracción de centavo), pide un audio de prueba a Azure y, si la configuraste, prueba la nube. El micrófono funciona en `localhost` sin HTTPS.
 
 ### Claves
 
