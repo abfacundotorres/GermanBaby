@@ -56,6 +56,9 @@ const SYSTEM = `Sos un profesor de alemán para hispanohablantes rioplatenses de
 - Los errores de pronunciación o de comprensión auditiva no se practican por escrito: si solo hay de esos, armá ejercicios con esas mismas palabras para fijar su forma escrita y su significado.
 - Español rioplatense (vos) en consignas, pistas y explicaciones.`;
 
+// Vercel: margen para respuestas largas de Claude.
+export const maxDuration = 90;
+
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Solicitud inválida." }, { status: 400 });

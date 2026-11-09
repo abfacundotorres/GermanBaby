@@ -5,6 +5,7 @@ import type { Step } from "@/lib/session";
 import { compareLocal, shuffle, tiles } from "@/lib/text";
 import { assessPronunciation, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
 import { recordPronunciation } from "@/lib/progress";
+import { sfx } from "@/lib/sfx";
 import { AudioButtons } from "./Audio";
 import { PronunciationReport } from "./PronunciationReport";
 import type { CorrectionResult } from "@/app/api/correct/route";
@@ -33,7 +34,7 @@ export function Intro({ step }: { step: StepOf<"intro"> }) {
   return (
     <div className="stack center">
       <div className="prompt-label">Palabra nueva</div>
-      <div className="big-emoji">{v.emoji ?? "🆕"}</div>
+      <div className="big-emoji pop">{v.emoji ?? "🆕"}</div>
       <div className="big-word">{v.de}</div>
       <div className="h2 muted">{v.es}</div>
       <AudioButtons text={v.de} autoPlay size="big" />
@@ -120,14 +121,14 @@ export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
       <div className="h2">{step.es}</div>
       <div className="tiles answer-line">
         {chosen.map((i) => (
-          <button key={i} className="tile" disabled={locked} onClick={() => setChosen(chosen.filter((x) => x !== i))}>
+          <button key={i} className="tile" disabled={locked} onClick={() => { sfx.tap(); setChosen(chosen.filter((x) => x !== i)); }}>
             {bank[i].t}
           </button>
         ))}
       </div>
       <div className="tiles">
         {bank.map(({ t, i }) => (
-          <button key={i} className={`tile ${chosen.includes(i) ? "used" : ""}`} disabled={locked} onClick={() => setChosen([...chosen, i])}>
+          <button key={i} className={`tile ${chosen.includes(i) ? "used" : ""}`} disabled={locked} onClick={() => { sfx.tap(); setChosen([...chosen, i]); }}>
             {t}
           </button>
         ))}

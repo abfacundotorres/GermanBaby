@@ -18,15 +18,21 @@ export type Mistake = MistakeInput & {
   resolved?: boolean;
 };
 
+export type Daily = { date: string; xp: number; lessons: number; correct: number; claimed: string[] };
+
 export type Progress = {
   xp: number;
-  daily: { date: string; xp: number };
+  gems: number;
+  freezes: number; // congeladores de racha (máx. 2)
+  history: Record<string, number>; // XP por día (últimos 30)
+  sound: boolean;
+  daily: Daily;
   dailyGoal: number;
   streak: { count: number; lastDate: string | null };
   lessons: Record<string, { stars: number; bestAccuracy: number; completedAt: string }>;
   srs: Record<string, SrsItem>;
   achievements: string[];
-  stats: { bestPron: number; chats: number; spoken: number };
+  stats: { bestPron: number; chats: number; spoken: number; bestStreak: number };
   voice: string;
   mistakes: Mistake[];
 };
@@ -40,15 +46,21 @@ const addDays = (date: string, n: number) => {
   return d.toLocaleDateString("sv-SE");
 };
 
+const freshDaily = (): Daily => ({ date: today(), xp: 0, lessons: 0, correct: 0, claimed: [] });
+
 const DEFAULT: Progress = {
   xp: 0,
-  daily: { date: today(), xp: 0 },
+  gems: 0,
+  freezes: 0,
+  history: {},
+  sound: true,
+  daily: freshDaily(),
   dailyGoal: 50,
   streak: { count: 0, lastDate: null },
   lessons: {},
   srs: {},
   achievements: [],
-  stats: { bestPron: 0, chats: 0, spoken: 0 },
+  stats: { bestPron: 0, chats: 0, spoken: 0, bestStreak: 0 },
   voice: "de-DE-KatjaNeural",
   mistakes: [],
 };
@@ -56,16 +68,28 @@ const DEFAULT: Progress = {
 let cache: Progress | null = null;
 const listeners = new Set<() => void>();
 
+/** Completa campos que falten (datos de versiones anteriores) y reinicia lo diario. */
+function normalize(raw: Partial<Progress>): Progress {
+  const p = { ...structuredClone(DEFAULT), ...raw } as Progress;
+  p.stats = { ...DEFAULT.stats, ...raw.stats };
+  p.daily = { ...freshDaily(), ...raw.daily };
+  p.daily.claimed ??= [];
+  if (p.daily.date !== today()) p.daily = freshDaily();
+  return p;
+}
+
 function load(): Progress {
   if (cache) return cache;
   try {
     const raw = localStorage.getItem(KEY);
-    cache = raw ? { ...DEFAULT, ...JSON.parse(raw) } : { ...DEFAULT };
+    cache = normalize(raw ? JSON.parse(raw) : {});
   } catch {
-    cache = { ...DEFAULT };
+    cache = normalize({});
   }
   return cache!;
 }
+
+export const getProgress = load;
 
 function save(p: Progress) {
   cache = p;
@@ -107,18 +131,35 @@ export const ACHIEVEMENTS: Record<string, { title: string; emoji: string; desc: 
   unit_done: { title: "Unidad completa", emoji: "🎓", desc: "Terminaste una unidad entera." },
 };
 
+const daysBetween = (a: string, b: string) =>
+  Math.round((new Date(b + "T12:00:00").getTime() - new Date(a + "T12:00:00").getTime()) / 86400_000);
+
+function ensureToday(p: Progress) {
+  if (p.daily.date !== today()) p.daily = freshDaily();
+}
+
 /** Suma XP, mantiene meta diaria y racha. Devuelve logros nuevos. */
 export function addXp(amount: number): string[] {
   const unlocked: string[] = [];
   update((p) => {
     const t = today();
-    if (p.daily.date !== t) p.daily = { date: t, xp: 0 };
+    ensureToday(p);
     p.daily.xp += amount;
     p.xp += amount;
+    p.history[t] = (p.history[t] ?? 0) + amount;
+    const keep = Object.keys(p.history).sort().slice(-30);
+    p.history = Object.fromEntries(keep.map((k) => [k, p.history[k]]));
     if (p.streak.lastDate !== t) {
-      p.streak.count = p.streak.lastDate === addDays(t, -1) ? p.streak.count + 1 : 1;
+      const gap = p.streak.lastDate ? daysBetween(p.streak.lastDate, t) : null;
+      if (gap === 1) p.streak.count += 1;
+      else if (gap === 2 && p.freezes > 0) {
+        // Faltó un solo día: un congelador salva la racha.
+        p.freezes -= 1;
+        p.streak.count += 1;
+      } else p.streak.count = 1;
       p.streak.lastDate = t;
     }
+    p.stats.bestStreak = Math.max(p.stats.bestStreak, p.streak.count);
     if (p.streak.count >= 3) unlock(p, "streak3", unlocked);
     if (p.streak.count >= 7) unlock(p, "streak7", unlocked);
     return p;
@@ -158,6 +199,9 @@ export function completeLesson(key: string, accuracy: number, vocab: string[]): 
     for (const de of vocab) {
       if (!p.srs[de]) p.srs[de] = { box: 1, due: addDays(today(), 1) };
     }
+    ensureToday(p);
+    p.daily.lessons += 1;
+    p.gems += 10 + (accuracy === 1 ? 5 : 0);
     unlock(p, "first_lesson", unlocked);
     if (accuracy === 1) unlock(p, "perfect", unlocked);
     const unitId = key.split("/")[0];
@@ -212,7 +256,9 @@ export function reviewItem(de: string, correct: boolean) {
 /** Racha vigente: si no practicaste ni hoy ni ayer, vuelve a 0. */
 export function currentStreak(p: Progress) {
   const t = today();
-  return p.streak.lastDate === t || p.streak.lastDate === addDays(t, -1) ? p.streak.count : 0;
+  if (!p.streak.lastDate) return 0;
+  const gap = daysBetween(p.streak.lastDate, t);
+  return gap <= 1 || (gap === 2 && p.freezes > 0) ? p.streak.count : 0;
 }
 
 // ---------- Registro de errores ----------
@@ -258,4 +304,105 @@ export function useHydrated() {
     () => true,
     () => false,
   );
+}
+
+// ---------- Misiones diarias, gemas y tienda ----------
+
+export type Quest = { id: string; title: string; emoji: string; target: number; reward: number; value: (d: Daily) => number };
+
+export const QUESTS: Quest[] = [
+  { id: "xp", title: "Ganá 40 XP", emoji: "⭐", target: 40, reward: 10, value: (d) => d.xp },
+  { id: "lesson", title: "Completá 1 lección", emoji: "📘", target: 1, reward: 10, value: (d) => d.lessons },
+  { id: "correct", title: "Acertá 15 ejercicios", emoji: "🎯", target: 15, reward: 10, value: (d) => d.correct },
+];
+export const CHEST_REWARD = 20;
+export const FREEZE_COST = 50;
+export const MAX_FREEZES = 2;
+
+export function questState(p: Progress) {
+  const d = p.daily.date === today() ? p.daily : freshDaily();
+  const quests = QUESTS.map((q) => {
+    const value = Math.min(q.value(d), q.target);
+    return { ...q, progress: value, done: value >= q.target, claimed: d.claimed.includes(q.id) };
+  });
+  const allClaimed = quests.every((q) => q.claimed);
+  return { quests, chest: { reward: CHEST_REWARD, ready: allClaimed && !d.claimed.includes("chest"), claimed: d.claimed.includes("chest") } };
+}
+
+/** Un ejercicio acertado cuenta para la misión «acertá 15». */
+export function tickCorrect() {
+  update((p) => {
+    ensureToday(p);
+    p.daily.correct += 1;
+    return p;
+  });
+}
+
+export function claimQuest(id: string): number {
+  let gained = 0;
+  update((p) => {
+    ensureToday(p);
+    if (p.daily.claimed.includes(id)) return p;
+    if (id === "chest") {
+      if (!QUESTS.every((q) => p.daily.claimed.includes(q.id))) return p;
+      gained = CHEST_REWARD;
+    } else {
+      const q = QUESTS.find((x) => x.id === id);
+      if (!q || q.value(p.daily) < q.target) return p;
+      gained = q.reward;
+    }
+    p.daily.claimed.push(id);
+    p.gems += gained;
+    return p;
+  });
+  return gained;
+}
+
+export function buyFreeze(): "ok" | "poor" | "max" {
+  let res: "ok" | "poor" | "max" = "ok";
+  update((p) => {
+    if (p.freezes >= MAX_FREEZES) res = "max";
+    else if (p.gems < FREEZE_COST) res = "poor";
+    else {
+      p.gems -= FREEZE_COST;
+      p.freezes += 1;
+    }
+    return p;
+  });
+  return res;
+}
+
+// ---------- Ajustes y copia de seguridad ----------
+
+export function setSetting<K extends "sound" | "voice" | "dailyGoal">(key: K, value: Progress[K]) {
+  update((p) => {
+    p[key] = value;
+    return p;
+  });
+}
+
+export const exportProgress = () => JSON.stringify(load());
+
+export function importProgress(text: string): boolean {
+  try {
+    const raw = JSON.parse(text);
+    if (typeof raw !== "object" || raw === null || typeof raw.xp !== "number" || typeof raw.lessons !== "object") return false;
+    save(normalize(raw));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function resetProgress() {
+  save(normalize({}));
+}
+
+/** Últimos `n` días con su XP (el más viejo primero). */
+export function lastDays(p: Progress, n = 7) {
+  const t = today();
+  return Array.from({ length: n }, (_, i) => {
+    const date = addDays(t, i - (n - 1));
+    return { date, xp: p.history[date] ?? 0 };
+  });
 }

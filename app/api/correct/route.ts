@@ -34,6 +34,9 @@ Criterios:
 - Explicá cada error en una línea, con la regla mínima necesaria para A1. Sin listas de excepciones ni terminología innecesaria.
 - Si no hay errores, devolvé "errors" vacío y "corrected" igual a la respuesta.`;
 
+// Vercel: margen para respuestas largas de Claude.
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Solicitud inválida." }, { status: 400 });

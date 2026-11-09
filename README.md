@@ -4,7 +4,43 @@ Aprendé alemán desde cero jugando: lecciones cortas, voz nativa, **corrección
 
 El diseño completo está en [docs/DISENO.md](docs/DISENO.md).
 
-## Puesta en marcha
+## Usarla desde el celular (sin PC)
+
+La app se publica en Vercel, que es gratis para uso personal, y después la abrís desde el navegador del celular o la instalás como app. Todo se puede hacer desde el teléfono.
+
+### 1. Conseguí las claves
+- **Claude:** entrá a https://platform.claude.com, creá una cuenta, cargá algo de saldo y generá una clave en *API Keys*. Anotá la clave, que empieza con `sk-ant-`.
+- **Azure Speech:** entrá a https://portal.azure.com, creá un recurso **Speech** con el plan gratuito **F0**, y en *Keys and Endpoint* copiá una clave y la región (por ejemplo `brazilsouth`).
+- **Código de acceso:** inventá una frase larga que solo vos sepas. Evita que otra persona use tus claves si encuentra el link.
+
+### 2. Publicala
+1. Entrá a https://vercel.com y registrate con tu cuenta de GitHub.
+2. *Add New → Project* y elegí el repositorio `GermanBaby`.
+3. Si la rama de trabajo todavía no está en `main`, en *Branch* elegí `ccr-e947750e-x6s4gk`. Más adelante conviene pasarla a `main`.
+4. En *Environment Variables* agregá:
+
+| Nombre | Valor |
+|---|---|
+| `ACCESS_CODE` | tu código de acceso |
+| `ANTHROPIC_API_KEY` | la clave de Claude |
+| `AZURE_SPEECH_KEY` | la clave de Azure |
+| `AZURE_SPEECH_REGION` | la región, por ejemplo `brazilsouth` |
+| `CLAUDE_MODEL` | opcional: `claude-haiku-5-5` para gastar mucho menos |
+
+5. *Deploy*. Al terminar te da una dirección tipo `germanbaby-xxxx.vercel.app`.
+
+### 3. Instalala en el celular
+- **iPhone (Safari):** abrí la dirección, tocá *Compartir* y después *Agregar a pantalla de inicio*.
+- **Android (Chrome):** menú ⋮ y después *Instalar app*.
+
+La primera vez te pide el código de acceso. El micrófono funciona porque Vercel usa HTTPS.
+
+### Importante
+- **Sin `ACCESS_CODE`, la publicada rechaza todas las llamadas a Claude y Azure** (devuelve un error 503). Es a propósito, para que nadie gaste tu saldo.
+- **El progreso vive en el navegador del celular.** Si borrás los datos del sitio, o abrís la app desde otro navegador, empezás de cero. En *Perfil → Copia de seguridad* podés copiar tu progreso a tus notas y restaurarlo.
+- Poné un tope de gasto en la consola de Claude para estar tranquilo.
+
+## Puesta en marcha en una PC
 
 Requisitos: Node 20 o superior.
 
@@ -21,6 +57,7 @@ npm run dev                  # http://localhost:3000
 | `ANTHROPIC_API_KEY` | https://platform.claude.com → API Keys |
 | `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION` | Portal de Azure → crear recurso **Speech** (el nivel F0 es gratis) → «Keys and Endpoint» |
 | `CLAUDE_MODEL` (opcional) | Por defecto `claude-opus-5-5`. `claude-haiku-5-5` es más barato. |
+| `ACCESS_CODE` (recomendado) | Código para entrar. Obligatorio al publicar. En local se puede omitir. |
 
 La app funciona sin claves, con menos funciones: el audio usa la voz del navegador, los ejercicios de hablar se pueden saltear y la traducción se corrige comparando con respuestas modelo.
 

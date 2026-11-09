@@ -1,118 +1,135 @@
 "use client";
 
 import Link from "next/link";
-import { UNITS, lessonKey } from "@/lib/curriculum";
-import { ACHIEVEMENTS, dueItems, isUnlocked, levelFor, openMistakes, useProgress, xpForLevel } from "@/lib/progress";
+import { useEffect, useRef, useState } from "react";
+import { LESSON_ORDER, UNITS, lessonKey } from "@/lib/curriculum";
+import { isUnlocked, levelFor, useHydrated, useProgress, xpForLevel } from "@/lib/progress";
+import { sfx } from "@/lib/sfx";
+import Mascot from "@/components/Mascot";
+import Quests from "@/components/Quests";
+
+const COLORS: [string, string][] = [
+  ["#d99a14", "#a8730a"], ["#3b9ae1", "#2672b0"], ["#9b6bdf", "#7b4cc0"], ["#e0597a", "#b83d5e"],
+  ["#2e9e5b", "#1f7d45"], ["#e07a2e", "#b85a14"], ["#2bb3a8", "#1b8a80"], ["#7a8bd6", "#5566b3"],
+];
+const OFFSETS = [0, 46, 74, 46, 0, -46, -74, -46];
 
 export default function Home() {
+  const hydrated = useHydrated();
   const p = useProgress();
-  const due = dueItems(p).length;
-  const mistakes = openMistakes(p).length;
+  const [selected, setSelected] = useState<string | null>(null);
+  const currentRef = useRef<HTMLDivElement>(null);
+  const scrolled = useRef(false);
+
   const level = levelFor(p.xp);
   const from = xpForLevel(level);
   const to = xpForLevel(level + 1);
+  const currentKey = LESSON_ORDER.find((k) => !p.lessons[k]);
 
+  useEffect(() => {
+    if (hydrated && !scrolled.current && currentRef.current) {
+      scrolled.current = true;
+      currentRef.current.scrollIntoView({ block: "center", behavior: "auto" });
+    }
+  }, [hydrated]);
+
+  if (!hydrated) return <main className="container" />;
+
+  let slot = 0;
   return (
     <main className="container">
-      <section className="card row" style={{ marginTop: 8 }}>
-        <span className="mascot" aria-hidden>🥨</span>
+      <section className="card row" style={{ marginTop: 4 }}>
+        <Mascot mood={p.xp === 0 ? "happy" : "cheer"} size={72} />
         <div style={{ flex: 1 }}>
-          <div className="h2">Hallo! Soy Brezi.</div>
-          <div className="muted small">
-            Nivel {level} · {p.xp - from}/{to - from} XP para el siguiente
-          </div>
+          <div className="h2" style={{ margin: 0 }}>{p.xp === 0 ? "Hallo! Soy Brezi." : "Willkommen zurück!"}</div>
+          <div className="muted small">Nivel {level} · {p.xp - from}/{to - from} XP al siguiente</div>
           <div className="progress" style={{ marginTop: 8 }}>
             <div style={{ width: `${((p.xp - from) / (to - from)) * 100}%` }} />
           </div>
         </div>
       </section>
 
-      <Link href="/review" className={`lesson-node ${due ? "" : "locked"}`} style={{ marginTop: 14 }}>
-        <div className="node-dot">🔁</div>
-        <div style={{ flex: 1 }}>
-          <b>Repaso del día</b>
-          <div className="muted small">
-            {due ? `${due} palabra${due > 1 ? "s" : ""} para repasar` : "No tenés repasos pendientes. ¡Bien!"}
-          </div>
-        </div>
-      </Link>
+      <Quests />
 
-      <Link href="/practice" className="lesson-node" style={{ marginTop: 10 }}>
-        <div className="node-dot">🎯</div>
-        <div style={{ flex: 1 }}>
-          <b>Mis errores</b>
-          <div className="muted small">
-            {mistakes ? `${mistakes} error${mistakes > 1 ? "es" : ""} para practicar` : "Acá vas a ver tus errores para practicarlos."}
-          </div>
-        </div>
-      </Link>
-
-      {UNITS.map((unit) => {
-        const unitStarted = isUnlocked(p, lessonKey(unit.id, unit.lessons[0].id));
+      {UNITS.map((unit, ui) => {
+        const [uc, ucd] = COLORS[ui % COLORS.length];
         const chatUnlocked = Boolean(p.lessons[lessonKey(unit.id, unit.lessons[0].id)]);
+        const style = { ["--uc" as string]: uc, ["--ucd" as string]: ucd } as React.CSSProperties;
+        const chatKey = `chat/${unit.id}`;
         return (
-          <section key={unit.id} className="unit">
-            <div className="unit-header">
-              <span className="unit-emoji">{unit.emoji}</span>
+          <section key={unit.id} style={style}>
+            <div className="unit-banner">
               <div>
-                <div className="h2" style={{ margin: 0 }}>{unit.title}</div>
-                <div className="muted small">{unit.description}</div>
+                <div className="kicker">UNIDAD {ui + 1}</div>
+                <div className="name">{unit.title}</div>
+                <div className="desc">{unit.description}</div>
               </div>
+              <span className="uemoji">{unit.emoji}</span>
             </div>
-            <div className="lesson-path">
-              {unit.lessons.map((lesson, i) => {
+
+            <div className="path">
+              {unit.lessons.map((lesson) => {
                 const key = lessonKey(unit.id, lesson.id);
                 const done = p.lessons[key];
                 const unlocked = isUnlocked(p, key);
+                const isCurrent = key === currentKey;
+                const dx = OFFSETS[slot++ % OFFSETS.length];
                 return (
-                  <Link
-                    key={key}
-                    href={`/lesson/${unit.id}/${lesson.id}`}
-                    className={`lesson-node ${done ? "done" : ""} ${unlocked ? "" : "locked"}`}
-                  >
-                    <div className="node-dot">{done ? "✓" : unlocked ? i + 1 : "🔒"}</div>
-                    <div style={{ flex: 1 }}>
-                      <b>{lesson.title}</b>
-                      <div className="muted small">{lesson.goal}</div>
+                  <div key={key} style={{ width: "100%" }}>
+                    <div className="path-row" ref={isCurrent ? currentRef : undefined}>
+                      <div className="node-wrap" style={{ transform: `translateX(${dx}px)` }}>
+                        {isCurrent && selected !== key && <div className="start-bubble">EMPEZAR</div>}
+                        <button
+                          className={`node ${done ? "done" : unlocked ? "" : "locked"} ${isCurrent ? "current" : ""}`}
+                          aria-label={`${lesson.title}${done ? `, ${done.stars} estrellas` : unlocked ? "" : ", bloqueada"}`}
+                          onClick={() => { sfx.tap(); setSelected(selected === key ? null : key); }}
+                        >
+                          {done ? "✓" : unlocked ? "★" : "🔒"}
+                        </button>
+                        {done && <div className="node-stars">{"★".repeat(done.stars)}{"☆".repeat(3 - done.stars)}</div>}
+                      </div>
                     </div>
-                    {done && <span className="stars">{"★".repeat(done.stars)}{"☆".repeat(3 - done.stars)}</span>}
-                  </Link>
+                    {selected === key && (
+                      <div className={`node-pop ${unlocked ? "" : "lockedpop"}`}>
+                        <div className="t">{lesson.title}</div>
+                        <div className="g">{unlocked ? lesson.goal : "Completá la lección anterior para desbloquear esta."}</div>
+                        {unlocked && (
+                          <Link href={`/lesson/${unit.id}/${lesson.id}`} className="btn btn-block btn-lg">
+                            {done ? "Practicar de nuevo" : "Empezar"} · +20 XP
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
-              <Link
-                href={`/chat/${unit.id}`}
-                className={`lesson-node chat-node ${chatUnlocked && unitStarted ? "" : "locked"}`}
-              >
-                <div className="node-dot">💬</div>
-                <div style={{ flex: 1 }}>
-                  <b>Charla: {unit.chat.title}</b>
-                  <div className="muted small">
-                    {chatUnlocked ? "Practicá hablando con un personaje." : "Se desbloquea con la primera lección."}
+
+              <div style={{ width: "100%" }}>
+                <div className="path-row">
+                  <div className="node-wrap" style={{ transform: `translateX(${OFFSETS[slot++ % OFFSETS.length]}px)` }}>
+                    <button
+                      className={`node chat ${chatUnlocked ? "" : "locked"}`}
+                      aria-label={`Charla: ${unit.chat.title}`}
+                      onClick={() => { sfx.tap(); setSelected(selected === chatKey ? null : chatKey); }}
+                    >
+                      💬
+                    </button>
                   </div>
                 </div>
-              </Link>
+                {selected === chatKey && (
+                  <div className={`node-pop ${chatUnlocked ? "" : "lockedpop"}`}>
+                    <div className="t">Charla: {unit.chat.title}</div>
+                    <div className="g">
+                      {chatUnlocked ? "Practicá hablando con un personaje. Te corrige en cada turno." : "Se desbloquea al terminar la primera lección de la unidad."}
+                    </div>
+                    {chatUnlocked && <Link href={`/chat/${unit.id}`} className="btn btn-block btn-lg">Hablar</Link>}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         );
       })}
-
-      <section className="unit">
-        <div className="h2">Logros</div>
-        <div className="grid2">
-          {Object.entries(ACHIEVEMENTS).map(([id, a]) => {
-            const has = p.achievements.includes(id);
-            return (
-              <div key={id} className="card row" style={{ opacity: has ? 1 : 0.45, padding: 12 }}>
-                <span style={{ fontSize: 28 }}>{has ? a.emoji : "🔒"}</span>
-                <div>
-                  <b>{a.title}</b>
-                  <div className="muted small">{a.desc}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
     </main>
   );
 }

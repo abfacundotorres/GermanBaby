@@ -31,6 +31,9 @@ const Turn = z.object({
 });
 export type ChatTurn = z.infer<typeof Turn>;
 
+// Vercel: margen para respuestas largas de Claude.
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Solicitud inválida." }, { status: 400 });

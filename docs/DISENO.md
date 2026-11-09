@@ -9,7 +9,8 @@ App web para aprender alemán desde cero (A1), en español rioplatense, con prá
 | Pronunciación | **Azure AI Speech: Pronunciation Assessment** | Puntúa precisión, fluidez, completitud y prosodia, y además cada palabra y fonema. El reconocimiento de voz del navegador solo transcribe. |
 | Voz de salida | Azure TTS neural (`de-DE-KatjaNeural`), con la voz del navegador como respaldo | Voz natural; modo lento con SSML (`prosody rate`). |
 | Gramática, semántica y conversación | **Claude API** (por defecto `claude-opus-5-5`, esfuerzo `low`) con salida estructurada (Zod) | Explica en español a nivel A1, acepta respuestas alternativas válidas y detecta errores de sentido, no solo de forma. |
-| Usuarios | Uno solo; progreso en `localStorage` | Lo más simple para empezar. Migrar a Supabase después no cambia la UI (ver §8). |
+| Usuarios | Uno solo; progreso en `localStorage` | Lo más simple para empezar. Migrar a Supabase después no cambia la UI (ver §9). |
+| Dónde corre | Vercel, usada desde el celular | Sin PC. La app publicada exige un `ACCESS_CODE` para que nadie más gaste los créditos de Claude y Azure. |
 | Stack | Next.js 16 (App Router) + TypeScript, CSS propio | El backend mínimo (rutas API) protege las claves; todo vive en un solo proyecto. |
 
 ## 2. Arquitectura
@@ -27,6 +28,7 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 ```
 
 - **Las claves nunca llegan al navegador.** Azure entrega un token de corta duración. Claude solo se llama desde el servidor.
+- **Acceso:** `proxy.ts` (el antiguo middleware de Next) exige una cookie derivada de `ACCESS_CODE` en todas las páginas y rutas API. Publicada sin ese código, las rutas API responden 503. En local se puede omitir.
 - **Camino rápido sin IA:** si la respuesta escrita coincide con una respuesta modelo (sin contar mayúsculas ni puntuación), no se llama a Claude. Dictados, opción múltiple y armado de frases se corrigen localmente.
 - **Degradación:** sin Azure, el audio usa la voz del navegador y los ejercicios de hablar se pueden saltear. Sin Claude, la traducción se corrige localmente contra las respuestas modelo.
 
@@ -55,12 +57,21 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 
 ## 5. Gamificación
 
-- **XP:** 10 por acierto más bonus de combo (+2 por acierto seguido, hasta +10); 5 por «casi»; +5 por pronunciación de 90 o más; +20 por terminar una lección y +10 si fue perfecta. En la charla, 8 por turno sin errores y 4 con errores.
-- **Nivel:** `floor(sqrt(XP/25)) + 1`, una curva suave al principio.
-- **Meta diaria:** 50 XP (anillo en la barra superior). **Racha** de días consecutivos con práctica.
-- **Estrellas por lección:** 3 con 95 % de precisión o más, 2 con 75 % o más, 1 en otro caso. Las lecciones se desbloquean en orden.
+Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propias, mascota propia).
+
+- **Camino de lecciones:** nodos en zigzag por unidad, con globo «EMPEZAR» en la lección actual, estrellas en las completadas y candados. Tocar un nodo abre una tarjeta con el objetivo, para no entrar por error.
+- **Mascota Brezi** (pretzel dibujado en SVG): cambia de cara según el momento (contenta, festejando, triste, pensando) y reacciona a cada respuesta.
+- **Corazones:** 5 por lección. Cada error resta uno. Sin corazones se ofrece reintentar la lección: no se pierden XP ni progreso (sin castigo real).
+- **Racha de aciertos:** bonus de XP por combo y cartel de «¡Racha de N!» con sonido que sube de tono.
+- **Sonido y vibración:** efectos sintetizados con Web Audio (sin archivos) y `navigator.vibrate`. Se pueden apagar en Perfil.
+- **Pantalla final:** estrellas que aparecen una a una, contadores animados (XP, precisión, gemas), confeti, aviso de racha de días y de subida de nivel.
+- **XP y nivel:** 10 por acierto más bonus de combo (+2 por acierto seguido, hasta +10), 5 por «casi», +5 por pronunciación de 90 o más, +20 por lección y +10 si fue perfecta. Nivel = `floor(sqrt(XP/25)) + 1`.
+- **Gemas 💎:** +10 por lección (+5 si fue perfecta) y por cada misión cobrada.
+- **Misiones diarias:** ganar 40 XP, completar 1 lección y acertar 15 ejercicios. Al cobrar las tres se abre un cofre con +20 gemas.
+- **Racha de días y congelador 🧊:** el congelador cuesta 50 gemas (máximo 2) y salva la racha si falta un solo día.
+- **Meta diaria** configurable (20, 50 o 100 XP), anillo en la barra superior y gráfico de la semana en Perfil.
 - **Logros:** primera lección, lección perfecta, racha de 3 y 7 días, pronunciación de 90 o más, primera charla, unidad completa.
-- **Sin vidas ni castigos.** Fallar no corta la sesión: la app tiene que motivar, no frustrar.
+- **Instalable (PWA):** manifiesto e íconos; se agrega a la pantalla de inicio y abre a pantalla completa.
 
 ## 6. Currículo
 
