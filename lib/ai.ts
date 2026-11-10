@@ -3,11 +3,11 @@
 // Todas las llamadas a Claude desde el navegador pasan por acá: se respetan los
 // topes (diario y mensual) y se registra el gasto estimado.
 
-import { aiAllowance, getProgress, recordAi } from "./progress";
+import { aiAllowance, getProgress, recordAi, type Feature } from "./progress";
 
 export class AiBlocked extends Error {}
 
-export async function callAi<T>(url: string, body: unknown): Promise<T> {
+export async function callAi<T>(url: string, body: unknown, feature: Feature): Promise<T> {
   const a = aiAllowance(getProgress());
   if (!a.allowed) throw new AiBlocked(a.reason!);
   const res = await fetch(url, {
@@ -18,6 +18,6 @@ export async function callAi<T>(url: string, body: unknown): Promise<T> {
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw Object.assign(new Error(data.error ?? `Error ${res.status}`), { status: res.status });
   const { _usage, ...rest } = data as { _usage?: { input: number; output: number; model: string } } & Record<string, unknown>;
-  recordAi(_usage ?? null);
+  recordAi(_usage ?? null, feature);
   return rest as T;
 }

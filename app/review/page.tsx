@@ -35,6 +35,7 @@ export default function ReviewPage() {
       steps={steps}
       title="Repaso"
       source="review"
+      resumeKey="review"
       onStepResult={(step, ok) => {
         if ("vocab" in step && step.vocab) reviewItem(step.vocab.de, ok);
       }}

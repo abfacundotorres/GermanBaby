@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import {
-  aiAllowance, ACHIEVEMENTS, FREEZE_COST, MAX_FREEZES, buyFreeze, currentStreak, exportProgress, importProgress, lastDays, levelFor,
+  aiAllowance, ACHIEVEMENTS, FEATURES, type Feature, FREEZE_COST, MAX_FREEZES, buyFreeze, currentStreak, exportProgress, importProgress, lastDays, levelFor,
   resetProgress, setSetting, useHydrated, useProgress, xpForLevel,
 } from "@/lib/progress";
 import { speak } from "@/lib/speech";
+import { AZURE_FREE, azureCost } from "@/lib/pricing";
 import { syncNow, useSyncStatus } from "@/lib/sync";
 import { sfx } from "@/lib/sfx";
 import Mascot from "@/components/Mascot";
+import MicTest from "@/components/MicTest";
 
 const VOICES = [
   ["de-DE-KatjaNeural", "Katja (mujer)"],
@@ -21,6 +23,12 @@ const ago = (t: number) => {
   const s = Math.max(0, Math.round((Date.now() - t) / 1000));
   return s < 10 ? "recién" : s < 60 ? `hace ${s} s` : s < 3600 ? `hace ${Math.round(s / 60)} min` : `hace ${Math.round(s / 3600)} h`;
 };
+const FEATURE_LABEL: Record<Feature, [string, string]> = {
+  correct: ["🧠", "Corrección de tus traducciones"],
+  chat: ["💬", "Charla con los personajes"],
+  practice: ["🎯", "Práctica personalizada de tus errores"],
+};
+const pct = (n: number, d: number) => `${Math.min(100, Math.round((n / d) * 100))} %`;
 const usd = (n: number) => `USD ${(n < 0.1 ? n.toFixed(3) : n.toFixed(2)).replace(".", ",")}`;
 const LIMITS: [number, string][] = [[0, "Sin IA"], [20, "20 por día"], [40, "40 por día"], [60, "60 por día"], [100, "100 por día"], [200, "200 por día"], [-1, "Sin límite"]];
 const BUDGETS: [number, string][] = [[0, "Sin tope"], [1, "USD 1"], [3, "USD 3"], [5, "USD 5"], [10, "USD 10"], [20, "USD 20"]];
@@ -146,9 +154,10 @@ export default function Perfil() {
             {[20, 50, 100].map((n) => <option key={n} value={n}>{n} XP{n === 20 ? " (relajada)" : n === 50 ? " (normal)" : " (intensa)"}</option>)}
           </select>
         </label>
+        <MicTest />
         <label className="switch">
           <span>🗣️ Voz</span>
-          <select className="select" value={p.voice} onChange={(e) => { setSetting("voice", e.target.value); void speak("Hallo! Ich bin Brezi.", { voice: e.target.value }).catch(() => {}); }}>
+          <select className="select" value={p.voice} onChange={(e) => { setSetting("voice", e.target.value); void speak("Hallo! Ich bin Donki.", { voice: e.target.value }).catch(() => {}); }}>
             {VOICES.map(([id, name]) => <option key={id} value={id}>{name}</option>)}
           </select>
         </label>
@@ -186,6 +195,50 @@ export default function Perfil() {
           Al llegar a un tope, la app sigue funcionando sin IA: las traducciones se corrigen comparando con respuestas modelo, y la charla y la práctica personalizada se pausan.
           Son estimaciones con precios de lista{m.model ? ` (modelo: ${m.model})` : ""}: la cifra real está en la consola de Claude. El tope que no se puede pasar es el saldo prepago sin recarga automática.
         </div>
+      </section>
+
+      <section className="card stack" style={{ gap: 10 }}>
+        <div className="h2" style={{ margin: 0 }}>📊 ¿En qué se gasta?</div>
+        <div className="muted small">Este mes, según lo que registró esta app en este dispositivo.</div>
+        {(() => {
+          const claudeTotal = FEATURES.reduce((t, f) => t + p.meter.claude[f].cost, 0);
+          const az = azureCost(p.meter);
+          const total = claudeTotal + az.stt + az.tts;
+          return (
+            <>
+              <div className="small"><b>Claude</b> (las explicaciones y la charla; es lo único que cobra):</div>
+              {FEATURES.map((f) => {
+                const m = p.meter.claude[f];
+                return (
+                  <div key={f} className="row small" style={{ alignItems: "flex-start" }}>
+                    <span style={{ flex: 1 }}>{FEATURE_LABEL[f][0]} {FEATURE_LABEL[f][1]}<div className="muted">{m.calls} {m.calls === 1 ? "uso" : "usos"} · {(m.input + m.output).toLocaleString("es-AR")} tokens</div></span>
+                    <b>{usd(m.cost)}</b>
+                  </div>
+                );
+              })}
+              <div className="small"><b>Azure Speech</b> (gratis hasta su cuota mensual):</div>
+              <div className="row small" style={{ alignItems: "flex-start" }}>
+                <span style={{ flex: 1 }}>🔊 Voz: cuando el burrito te habla<div className="muted">{p.meter.ttsPlays} {p.meter.ttsPlays === 1 ? "reproducción" : "reproducciones"} · {p.meter.ttsChars.toLocaleString("es-AR")} de {AZURE_FREE.ttsChars.toLocaleString("es-AR")} caracteres gratis ({pct(p.meter.ttsChars, AZURE_FREE.ttsChars)})</div></span>
+                <b>{usd(az.tts)}</b>
+              </div>
+              <div className="row small" style={{ alignItems: "flex-start" }}>
+                <span style={{ flex: 1 }}>🎤 Micrófono: te escucha y puntúa tu pronunciación<div className="muted">{p.meter.sttAttempts} {p.meter.sttAttempts === 1 ? "intento" : "intentos"} · {(p.meter.sttSeconds / 60).toFixed(1)} de {AZURE_FREE.sttSeconds / 60} min gratis ({pct(p.meter.sttSeconds, AZURE_FREE.sttSeconds)})</div></span>
+                <b>{usd(az.stt)}</b>
+              </div>
+              <div className="small"><b>Gratis siempre:</b></div>
+              <div className="row small"><span style={{ flex: 1 }}>🔔 Sonidos de acierto y error, y vibración<div className="muted">Los genera tu celular</div></span><b>USD 0</b></div>
+              <div className="row small"><span style={{ flex: 1 }}>☁️ Vercel y guardado en la nube<div className="muted">En sus planes gratuitos</div></span><b>USD 0</b></div>
+              <div className="row" style={{ borderTop: "2px solid var(--border)", paddingTop: 8 }}>
+                <b style={{ flex: 1 }}>Total estimado del mes</b>
+                <b className="h2" style={{ margin: 0 }}>{usd(total)}</b>
+              </div>
+              {p.meter.unpriced && <div className="notice small">Usaste un modelo sin precio conocido: el gasto real es mayor.</div>}
+              <div className="muted small">
+                Azure fuera de su cuota gratuita se estima con precios aproximados que no pude confirmar. La cifra real de Claude está en su consola y la de Azure en el portal de Azure.
+              </div>
+            </>
+          );
+        })()}
       </section>
 
       <section className="card stack" style={{ gap: 8 }}>

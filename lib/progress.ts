@@ -34,8 +34,24 @@ export type AiUsage = {
   model: string | null;
 };
 
+/** Funciones que usan Claude, para el desglose del gasto. */
+export type Feature = "correct" | "chat" | "practice";
+export const FEATURES: Feature[] = ["correct", "chat", "practice"];
+
+/** Uso del mes por servicio: lo de Claude por función, y lo de Azure (voz y micrófono). */
+export type Meter = {
+  month: string; // YYYY-MM
+  claude: Record<Feature, { calls: number; input: number; output: number; cost: number }>;
+  ttsChars: number; // caracteres que Azure convirtió en voz
+  ttsPlays: number;
+  sttSeconds: number; // segundos de micrófono enviados a Azure (aprox.)
+  sttAttempts: number;
+  unpriced: boolean;
+};
+
 export type Progress = {
-  updatedAt: number; // ms desde 1970; la sincronización decide qué copia es más nueva
+  updatedAt: number;
+  meter: Meter; // ms desde 1970; la sincronización decide qué copia es más nueva
   xp: number;
   aiDailyLimit: number; // llamadas a IA por día: 0 = sin IA, -1 = sin límite
   aiMonthlyBudget: number; // USD por mes: 0 = sin tope
@@ -64,6 +80,12 @@ const addDays = (date: string, n: number) => {
   return d.toLocaleDateString("sv-SE");
 };
 
+const freshMeter = (): Meter => ({
+  month: today().slice(0, 7),
+  claude: { correct: { calls: 0, input: 0, output: 0, cost: 0 }, chat: { calls: 0, input: 0, output: 0, cost: 0 }, practice: { calls: 0, input: 0, output: 0, cost: 0 } },
+  ttsChars: 0, ttsPlays: 0, sttSeconds: 0, sttAttempts: 0, unpriced: false,
+});
+
 const freshAi = (): AiUsage => ({
   date: today(), calls: 0, month: today().slice(0, 7), monthCalls: 0, monthIn: 0, monthOut: 0, monthCost: 0, unpriced: false, model: null,
 });
@@ -72,6 +94,7 @@ const freshDaily = (): Daily => ({ date: today(), xp: 0, lessons: 0, correct: 0,
 
 const DEFAULT: Progress = {
   updatedAt: 0,
+  meter: freshMeter(),
   xp: 0,
   aiDailyLimit: 60,
   aiMonthlyBudget: 3,
@@ -112,6 +135,9 @@ function normalize(raw: Partial<Progress>): Progress {
   if (p.daily.date !== today()) p.daily = freshDaily();
   p.ai = { ...freshAi(), ...raw.ai };
   rollAi(p.ai);
+  const fm = freshMeter();
+  p.meter = { ...fm, ...raw.meter, claude: { ...fm.claude, ...raw.meter?.claude } };
+  if (p.meter.month !== fm.month) p.meter = fm;
   return p;
 }
 
@@ -466,10 +492,44 @@ export function aiAllowance(p: Progress) {
   return { allowed: reason === null, reason, callsToday, limit, monthCost, budget: p.aiMonthlyBudget };
 }
 
+function rollMeter(p: Progress) {
+  if (p.meter.month !== today().slice(0, 7)) p.meter = freshMeter();
+}
+
+/** Voz de Azure: cuenta los caracteres sintetizados (cada reproducción se cobra de nuevo). */
+export function recordTts(chars: number) {
+  update((p) => {
+    rollMeter(p);
+    p.meter.ttsChars += chars;
+    p.meter.ttsPlays += 1;
+    return p;
+  });
+}
+
+/** Micrófono con Azure: segundos de audio enviados. */
+export function recordStt(seconds: number) {
+  update((p) => {
+    rollMeter(p);
+    p.meter.sttSeconds += seconds;
+    p.meter.sttAttempts += 1;
+    return p;
+  });
+}
+
 /** Registra una llamada a IA y, si hay datos de tokens, su costo estimado. */
-export function recordAi(usage: { input: number; output: number; model: string } | null) {
+export function recordAi(usage: { input: number; output: number; model: string } | null, feature: Feature) {
   update((p) => {
     rollAi(p.ai);
+    rollMeter(p);
+    const f = p.meter.claude[feature];
+    f.calls += 1;
+    if (usage) {
+      f.input += usage.input;
+      f.output += usage.output;
+      const c = costUsd(usage.model, usage.input, usage.output);
+      if (c === null) p.meter.unpriced = true;
+      else f.cost += c;
+    }
     p.ai.calls += 1;
     p.ai.monthCalls += 1;
     if (usage) {

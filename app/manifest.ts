@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "GermanBaby: alemán desde cero",
-    short_name: "GermanBaby",
+    name: "DankeDonkey: alemán desde cero",
+    short_name: "DankeDonkey",
     description: "Aprendé alemán jugando, con corrección de pronunciación y gramática.",
     start_url: "/",
     display: "standalone",

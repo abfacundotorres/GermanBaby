@@ -11,6 +11,8 @@ export default function SyncManager() {
 
   useEffect(() => {
     if (onLogin) return;
+    // Pide al navegador que no borre los datos de la app si falta espacio (Chrome y Android suelen aceptar).
+    void navigator.storage?.persist?.().catch(() => {});
     void syncNow();
     let timer: ReturnType<typeof setTimeout> | undefined;
     // Tras cada cambio local, espera 3 s sin actividad y sube.

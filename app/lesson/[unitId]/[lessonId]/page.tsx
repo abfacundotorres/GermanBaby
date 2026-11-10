@@ -40,6 +40,7 @@ function Lesson({ found }: { found: NonNullable<ReturnType<typeof getLesson>> })
     <LessonPlayer
       steps={steps}
       title={found.lesson.title}
+      resumeKey={`lesson/${key}`}
       onFinish={({ accuracy }) => {
         const { stars, unlocked } = completeLesson(key, accuracy, found.lesson.vocab.map((v) => v.de));
         return { extraXp: 20 + (accuracy === 1 ? 10 : 0), stars, achievements: unlocked };

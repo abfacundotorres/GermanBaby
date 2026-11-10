@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { compareLocal, normalize, tiles } from "../lib/text.ts";
-import { costUsd } from "../lib/pricing.ts";
+import { azureCost, costUsd } from "../lib/pricing.ts";
 
 test("la puntuación y la mayúscula inicial no cuentan", () => {
   assert.equal(compareLocal("hallo, guten Abend!", "Hallo, guten Abend"), "correct");
@@ -36,6 +36,13 @@ test("con ignoreCase (fichas) las mayúsculas no importan", () => {
 test("normalize y tiles", () => {
   assert.equal(normalize("  Hallo,   Welt! "), "hallo welt");
   assert.deepEqual(tiles("Wie geht's du?"), ["Wie", "geht's", "du"]);
+});
+
+test("azureCost: dentro de la cuota gratuita no cuesta nada", () => {
+  assert.deepEqual(azureCost({ ttsChars: 120_000, sttSeconds: 600 }), { stt: 0, tts: 0 });
+  const over = azureCost({ ttsChars: 1_500_000, sttSeconds: 6 * 3600 });
+  assert.equal(over.tts, 15);
+  assert.equal(Number(over.stt.toFixed(2)), 1.3);
 });
 
 test("costUsd: precios conocidos y modelo desconocido", () => {

@@ -71,6 +71,21 @@ export function mergeProgress(a: Progress, b: Progress): Progress {
     };
   } else out.ai = structuredClone(a.ai.date > b.ai.date ? a.ai : b.ai);
 
+  // Medidor de gasto por servicio: mismo mes → el mayor de cada contador; si no, el más reciente.
+  if (a.meter.month === b.meter.month) {
+    const m = (k: "calls" | "input" | "output" | "cost", f: "correct" | "chat" | "practice") => Math.max(a.meter.claude[f][k], b.meter.claude[f][k]);
+    const claude = (f: "correct" | "chat" | "practice") => ({ calls: m("calls", f), input: m("input", f), output: m("output", f), cost: m("cost", f) });
+    out.meter = {
+      month: a.meter.month,
+      claude: { correct: claude("correct"), chat: claude("chat"), practice: claude("practice") },
+      ttsChars: Math.max(a.meter.ttsChars, b.meter.ttsChars),
+      ttsPlays: Math.max(a.meter.ttsPlays, b.meter.ttsPlays),
+      sttSeconds: Math.max(a.meter.sttSeconds, b.meter.sttSeconds),
+      sttAttempts: Math.max(a.meter.sttAttempts, b.meter.sttAttempts),
+      unpriced: a.meter.unpriced || b.meter.unpriced,
+    };
+  } else out.meter = structuredClone(a.meter.month > b.meter.month ? a.meter : b.meter);
+
   // Errores: unión por id; un error resuelto en cualquiera de las copias queda resuelto.
   const byId = new Map<string, Mistake>();
   for (const m of [...a.mistakes, ...b.mistakes]) {

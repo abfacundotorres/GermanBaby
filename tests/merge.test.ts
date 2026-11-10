@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import { isPristine, mergeProgress } from "../lib/merge.ts";
 import type { Progress } from "../lib/progress.ts";
 
+const zero = { calls: 0, input: 0, output: 0, cost: 0 };
 const base = (over: Partial<Progress> = {}): Progress => ({
-  updatedAt: 1000, xp: 0, gems: 0, freezes: 0, history: {}, sound: true, aiDailyLimit: 60, aiMonthlyBudget: 3,
+  updatedAt: 1000, meter: { month: "2026-11", claude: { correct: { ...zero }, chat: { ...zero }, practice: { ...zero } }, ttsChars: 0, ttsPlays: 0, sttSeconds: 0, sttAttempts: 0, unpriced: false }, xp: 0, gems: 0, freezes: 0, history: {}, sound: true, aiDailyLimit: 60, aiMonthlyBudget: 3,
   ai: { date: "2026-11-09", calls: 0, month: "2026-11", monthCalls: 0, monthIn: 0, monthOut: 0, monthCost: 0, unpriced: false, model: null },
   daily: { date: "2026-11-09", xp: 0, lessons: 0, correct: 0, claimed: [] }, dailyGoal: 50,
   streak: { count: 0, lastDate: null }, lessons: {}, srs: {}, achievements: [],
@@ -65,4 +66,14 @@ test("isPristine: un progreso vacío nunca debe pisar la nube", () => {
   assert.equal(isPristine(base()), true);
   assert.equal(isPristine(base({ xp: 5 })), false);
   assert.equal(isPristine(base({ lessons: { a: lesson(1) } })), false);
+});
+
+test("el medidor de gasto toma el mayor de cada contador en el mismo mes", () => {
+  const a = base(), b = base();
+  a.meter.ttsChars = 1200; a.meter.claude.chat = { calls: 3, input: 900, output: 600, cost: 0.002 };
+  b.meter.ttsChars = 800; b.meter.sttSeconds = 40; b.meter.claude.chat = { calls: 5, input: 700, output: 500, cost: 0.003 };
+  const m = mergeProgress(a, b);
+  assert.equal(m.meter.ttsChars, 1200);
+  assert.equal(m.meter.sttSeconds, 40);
+  assert.deepEqual(m.meter.claude.chat, { calls: 5, input: 900, output: 600, cost: 0.003 });
 });

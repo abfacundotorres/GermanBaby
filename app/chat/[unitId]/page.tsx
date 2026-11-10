@@ -3,7 +3,7 @@
 import { use, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getUnit } from "@/lib/curriculum";
-import { assessPronunciation, SpeechNotConfigured, speak, type PronunciationResult } from "@/lib/speech";
+import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, speak, type PronunciationResult } from "@/lib/speech";
 import { addXp, aiAllowance, grantAchievement, logMistakes, update, useProgress } from "@/lib/progress";
 import { callAi } from "@/lib/ai";
 import { PronunciationReport } from "@/components/PronunciationReport";
@@ -36,6 +36,7 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
   }, [msgs, loading]);
 
   useEffect(() => {
+    prewarmSpeech();
     if (unit) void speak(unit.chat.opener, { voice }).catch(() => {});
     // solo al entrar
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -53,7 +54,7 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
     setMsgs(history);
     setLoading(true);
     try {
-      const turn = await callAi<ChatTurn>("/api/chat", { unitId, history: history.map((m) => ({ role: m.role, text: m.text })) });
+      const turn = await callAi<ChatTurn>("/api/chat", { unitId, history: history.map((m) => ({ role: m.role, text: m.text })) }, "chat");
       setMsgs((m) => {
         const copy = [...m];
         const last = copy[copy.length - 1];
@@ -99,7 +100,7 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
       const r = await assessPronunciation(""); // evaluación libre, sin guion
       await send(r.recognized, r);
     } catch (e) {
-      setError(e instanceof SpeechNotConfigured ? "El micrófono necesita Azure Speech configurado. Mientras tanto podés escribir." : (e as Error).message);
+      setError(e instanceof SpeechNotConfigured ? "El micrófono necesita Azure Speech configurado. Mientras tanto podés escribir." : e instanceof MicError ? e.message : (e as Error).message);
     } finally {
       setRecording(false);
     }

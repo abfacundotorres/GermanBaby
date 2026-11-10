@@ -1,4 +1,4 @@
-# GermanBaby: documento de diseño
+# DankeDonkey: documento de diseño
 
 App web para aprender alemán desde cero (A1), en español rioplatense, con práctica oral corregida fonema por fonema y corrección de gramática y semántica con IA.
 
@@ -58,10 +58,10 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 
 ## 5. Gamificación
 
-Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propias, mascota propia).
+Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propias, mascota propia). La app se llama **DankeDonkey** (de «danke» y «donkey», burro en inglés).
 
 - **Camino de lecciones:** nodos en zigzag por unidad, con globo «EMPEZAR» en la lección actual, estrellas en las completadas y candados. Tocar un nodo abre una tarjeta con el objetivo, para no entrar por error.
-- **Mascota Brezi** (pretzel dibujado en SVG): cambia de cara según el momento (contenta, festejando, triste, pensando) y reacciona a cada respuesta.
+- **Mascota Donki**, un burrito alemán dibujado en SVG con sombrero tirolés y bufanda negro-rojo-dorado: cambia de cara y de orejas según el momento (contento, festejando, triste, pensando, dormido), parpadea y mueve las orejas. Acompaña la lección actual en el camino.
 - **Corazones:** 5 por lección. Cada error resta uno. Sin corazones se ofrece reintentar la lección: no se pierden XP ni progreso (sin castigo real).
 - **Racha de aciertos:** bonus de XP por combo y cartel de «¡Racha de N!» con sonido que sube de tono.
 - **Sonido y vibración:** efectos sintetizados con Web Audio (sin archivos) y `navigator.vibrate`. Se pueden apagar en Perfil.
@@ -72,6 +72,8 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 - **Racha de días y congelador 🧊:** el congelador cuesta 50 gemas (máximo 2) y salva la racha si falta un solo día.
 - **Meta diaria** configurable (20, 50 o 100 XP), anillo en la barra superior y gráfico de la semana en Perfil.
 - **Logros:** primera lección, lección perfecta, racha de 3 y 7 días, pronunciación de 90 o más, primera charla, unidad completa.
+- **Retomar a la mitad:** el avance de una lección se guarda en el dispositivo al pasar de ejercicio; al volver ofrece «Retomar donde quedé» o empezar de nuevo (vale 7 días).
+- **Frase del día** con audio, camino con puntitos, banners de unidad con progreso, «+XP» flotante y animaciones de entrada.
 - **Instalable (PWA):** manifiesto e íconos; se agrega a la pantalla de inicio y abre a pantalla completa.
 
 ## 6. Currículo
@@ -109,6 +111,8 @@ Supuestos por hora: 3 lecciones, 8 correcciones que requieren IA, 25 turnos de c
 3. **Límite diario de usos de IA** (por defecto 60) y **tope mensual en dólares** (por defecto USD 3), configurables en Perfil. Todas las llamadas pasan por `lib/ai.ts`, que los aplica antes de pedirle nada al servidor. Si se llega a un tope, las traducciones se corrigen sin IA y la charla y la práctica personalizada se pausan.
 4. **Contador de gasto** en Perfil: el servidor devuelve los tokens de cada respuesta y `lib/pricing.ts` los convierte a dólares con precios de lista. Es una estimación; la cifra real está en la consola de Claude.
 
+**Desglose por servicio:** Perfil → «¿En qué se gasta?» muestra, para el mes, los usos y el costo de cada función de Claude (corrección, charla, práctica), los caracteres de voz y los minutos de micrófono de Azure contra su cuota gratuita, y que los sonidos y Vercel no cuestan. Lo de Azure fuera de la cuota se estima con precios aproximados que no pude confirmar.
+
 **Azure (plan gratuito F0):** el uso previsto es de 2 a 3 horas de micrófono por mes (el plan incluye 5) y ~105.000 caracteres de voz por mes (incluye 500.000). No pude confirmar si la evaluación de pronunciación cuenta dentro de las horas gratis; en el peor caso serían pocos dólares por mes. Verificalo en la página de precios de Azure.
 
 ## 8. Errores y práctica dirigida
@@ -123,6 +127,8 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 ## 9. Auditoría y próximos pasos
 
 Última auditoría: revisión del código, pruebas de seguridad con peticiones reales, validación automática del contenido (24 lecciones, 141 palabras, sin duplicados que vuelvan ambiguas las opciones) y capturas en claro y oscuro. Pruebas automáticas con `npm test` (comparación de texto y precios).
+
+**Micrófono:** `lib/speech.ts` pide el permiso dentro del toque (antes de cualquier espera de red) y le da a Azure el audio ya capturado (`fromStreamInput`). Perfil → «Probar el micrófono» revisa paso a paso (https, permiso, acceso, nivel de sonido y reconocimiento de Azure) para diagnosticar fallas desde el propio celular.
 
 **Pendiente, por prioridad:**
 1. **Probar con claves y un celular real.** Nada de Claude ni de Azure se probó contra los servicios reales. Hay que verificar en particular:

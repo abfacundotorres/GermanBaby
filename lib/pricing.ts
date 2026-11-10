@@ -17,3 +17,17 @@ export function costUsd(model: string, inputTokens: number, outputTokens: number
   const p = PRICES[model];
   return p ? (inputTokens * p[0] + outputTokens * p[1]) / 1_000_000 : null;
 }
+
+// ---- Azure Speech (cuota gratuita F0 y precios de lista APROXIMADOS) ----
+// La cuota gratuita (5 h de reconocimiento y 0,5 M de caracteres de voz por mes) figura en la página
+// de precios de Azure. Los precios de pago NO los pude confirmar: son aproximados (el reconocimiento
+// con evaluación de pronunciación se cobra aparte según fuentes que no coinciden). Verificalos en Azure.
+export const AZURE_FREE = { sttSeconds: 5 * 3600, ttsChars: 500_000 };
+export const AZURE_LIST_APPROX = { sttPerHour: 1.3, ttsPerMillionChars: 15 };
+
+/** Costo estimado de Azure FUERA de la cuota gratuita. */
+export function azureCost(m: { ttsChars: number; sttSeconds: number }) {
+  const stt = (Math.max(0, m.sttSeconds - AZURE_FREE.sttSeconds) / 3600) * AZURE_LIST_APPROX.sttPerHour;
+  const tts = (Math.max(0, m.ttsChars - AZURE_FREE.ttsChars) / 1_000_000) * AZURE_LIST_APPROX.ttsPerMillionChars;
+  return { stt, tts };
+}

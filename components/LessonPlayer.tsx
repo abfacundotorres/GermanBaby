@@ -88,35 +88,96 @@ function Modal({ children }: { children: ReactNode }) {
   );
 }
 
-export function LessonPlayer({
-  steps: initial,
-  title,
-  source = "lesson",
-  onFinish,
-  onStepResult,
-}: {
+// ---------- Retomar una lección a medias (se guarda en el dispositivo) ----------
+
+type Saved = {
+  v: 1; at: number; queue: Step[]; index: number; hearts: number; combo: number; xp: number;
+  results: { step: Step; ok: boolean }[]; retried: number[];
+};
+const SAVE_PREFIX = "germanbaby.session.v1.";
+const SAVE_TTL = 7 * 24 * 3600 * 1000;
+
+function readSaved(key?: string): Saved | null {
+  if (!key) return null;
+  try {
+    const raw = localStorage.getItem(SAVE_PREFIX + key);
+    if (!raw) return null;
+    const s = JSON.parse(raw) as Saved;
+    const valid = s.v === 1 && Array.isArray(s.queue) && s.queue.length > 0 && s.index > 0 && s.index < s.queue.length && Date.now() - s.at < SAVE_TTL;
+    if (!valid) localStorage.removeItem(SAVE_PREFIX + key);
+    return valid ? s : null;
+  } catch {
+    return null;
+  }
+}
+const writeSaved = (key: string, s: Saved) => { try { localStorage.setItem(SAVE_PREFIX + key, JSON.stringify(s)); } catch { /* sin espacio */ } };
+const clearSaved = (key?: string) => { try { if (key) localStorage.removeItem(SAVE_PREFIX + key); } catch { /* nada */ } };
+
+type PlayerProps = {
   steps: Step[];
   title: string;
   source?: Mistake["source"];
+  /** Si se pasa, el avance se guarda y se puede retomar. */
+  resumeKey?: string;
   onFinish: (info: FinishInfo) => { extraXp?: number; stars?: number; achievements?: string[] };
   onStepResult?: (step: Step, ok: boolean) => void;
-}) {
-  const [queue, setQueue] = useState<Step[]>(initial);
-  const [index, setIndex] = useState(0);
+};
+
+export function LessonPlayer(props: PlayerProps) {
+  const [saved] = useState(() => readSaved(props.resumeKey));
+  const [choice, setChoice] = useState<"ask" | "resume" | "fresh">(saved ? "ask" : "fresh");
+
+  if (choice === "ask" && saved) {
+    return (
+      <div className="player">
+        <main className="container center stack" style={{ paddingTop: 70 }}>
+          <Mascot mood="think" size={120} />
+          <div className="h1">Tenés una lección empezada</div>
+          <div className="muted">«{props.title}»: ejercicio {saved.index + 1} de {saved.queue.length} · ❤️ {saved.hearts}</div>
+          <button className="btn btn-primary btn-block btn-lg" onClick={() => setChoice("resume")}>Retomar donde quedé</button>
+          <button className="btn btn-block" onClick={() => { clearSaved(props.resumeKey); setChoice("fresh"); }}>Empezar de nuevo</button>
+          <Link href="/" className="btn btn-block">Volver</Link>
+        </main>
+      </div>
+    );
+  }
+  return <Session {...props} init={choice === "resume" ? saved ?? undefined : undefined} />;
+}
+
+function Session({
+  steps: initial,
+  title,
+  source = "lesson",
+  resumeKey,
+  init,
+  onFinish,
+  onStepResult,
+}: PlayerProps & { init?: Saved }) {
+  const [queue, setQueue] = useState<Step[]>(init?.queue ?? initial);
+  const [index, setIndex] = useState(init?.index ?? 0);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
-  const [combo, setCombo] = useState(0);
+  const [combo, setCombo] = useState(init?.combo ?? 0);
   const [comboBanner, setComboBanner] = useState<number | null>(null);
-  const [hearts, setHearts] = useState(MAX_HEARTS);
+  const [hearts, setHearts] = useState(init?.hearts ?? MAX_HEARTS);
+  const [xpPop, setXpPop] = useState<{ n: number; k: number } | null>(null);
   const [dead, setDead] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
-  const [xp, setXp] = useState(0);
-  const [results, setResults] = useState<{ step: Step; ok: boolean }[]>([]);
-  const [retried, setRetried] = useState<Set<number>>(new Set());
+  const [xp, setXp] = useState(init?.xp ?? 0);
+  const [results, setResults] = useState<{ step: Step; ok: boolean }[]>(init?.results ?? []);
+  const [retried, setRetried] = useState<Set<number>>(new Set(init?.retried ?? []));
   const [toasts, setToasts] = useState<string[]>([]);
   const [summary, setSummary] = useState<{
     accuracy: number; xp: number; stars?: number; gems: number; levelUp: number | null; streak: number; correct: number; total: number;
   } | null>(null);
   const levelBefore = useRef(levelFor(getProgress().xp));
+
+  // Se guarda al pasar de ejercicio (sin feedback abierto), no durante la corrección.
+  const done = summary !== null;
+  useEffect(() => {
+    if (!resumeKey || done || dead || feedback) return;
+    if (index === 0) return;
+    writeSaved(resumeKey, { v: 1, at: Date.now(), queue, index, hearts, combo, xp, results, retried: [...retried] });
+  }, [resumeKey, done, dead, feedback, queue, index, hearts, combo, xp, results, retried]);
 
   const step = queue[index];
   const gradedTotal = initial.filter(isGraded).length;
@@ -171,6 +232,8 @@ export function LessonPlayer({
     }
     setFeedback({ ...o, combo: newCombo, praise: o.status === "bad" ? pick(OOPS) : pick(PRAISE) });
     if (gained) {
+      setXpPop({ n: gained, k: Date.now() });
+      setTimeout(() => setXpPop(null), 1100);
       setXp((x) => x + gained);
       const unlocked = addXp(gained);
       if (unlocked.length) setToasts((t) => [...t, ...unlocked]);
@@ -214,6 +277,7 @@ export function LessonPlayer({
       accuracy, xp: xp + (res.extraXp ?? 0), stars: res.stars, gems: after.gems - gemsBefore,
       levelUp: lvl > levelBefore.current ? lvl : null, streak: currentStreak(after), correct, total: graded,
     });
+    clearSaved(resumeKey);
     if (lvl > levelBefore.current) setTimeout(() => sfx.levelUp(), 1200);
     sfx.complete();
   };
@@ -227,6 +291,7 @@ export function LessonPlayer({
     setResults([]);
     setRetried(new Set());
     setDead(false);
+    clearSaved(resumeKey);
   };
 
   useEffect(() => {
@@ -297,6 +362,7 @@ export function LessonPlayer({
     <div className="player">
       <AchievementToast ids={toasts} onDone={() => setToasts((t) => t.slice(1))} />
       {comboBanner && <div className="combo-banner" key={comboBanner}>🔥 ¡Racha de {comboBanner}!</div>}
+      {xpPop && <div className="xp-pop" key={xpPop.k}>+{xpPop.n} XP</div>}
       <main className="container" style={{ paddingBottom: 240 }}>
         <div className="lesson-top">
           <button className="btn btn-round" aria-label="Salir" style={{ width: 44, height: 44, fontSize: 18 }} onClick={() => setConfirmExit(true)}>✕</button>
@@ -343,7 +409,7 @@ export function LessonPlayer({
         <Modal>
           <Mascot mood="think" size={90} />
           <div className="h2">¿Salir de la lección?</div>
-          <p className="muted">Si salís ahora, perdés lo que avanzaste en esta lección.</p>
+          <p className="muted">{resumeKey ? "Tu avance se guarda: podés retomar esta lección cuando quieras." : "Si salís ahora, perdés lo que avanzaste."}</p>
           <button className="btn btn-primary btn-block btn-lg" onClick={() => setConfirmExit(false)}>Seguir practicando</button>
           <Link href="/" className="btn btn-block">Salir</Link>
         </Modal>

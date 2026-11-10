@@ -1,6 +1,6 @@
-# 🥨 GermanBaby
+# 🫏 DankeDonkey
 
-Aprendé alemán desde cero jugando: lecciones cortas, voz nativa, **corrección de pronunciación fonema por fonema** (Azure) y **corrección de gramática y semántica** (Claude), más charlas de rol con personajes.
+Aprendé alemán desde cero jugando con Donki, el burrito alemán: lecciones cortas, voz nativa, **corrección de pronunciación fonema por fonema** (Azure) y **corrección de gramática y semántica** (Claude), más charlas de rol con personajes.
 
 El diseño completo está en [docs/DISENO.md](docs/DISENO.md).
 
@@ -43,6 +43,9 @@ Sin esto, tu progreso vive solo en el navegador del celular y Safari puede borra
 4. Abrí la app y mirá *Perfil → Sincronización*: tiene que decir «Guardado en la nube». Desde ahí el avance se guarda solo y se recupera en otro dispositivo (con el mismo código de acceso).
 
 La clave donde se guarda tu progreso se deriva de tu código de acceso. Si lo cambiás, empezás con un progreso nuevo en la nube. Nota: esta función se probó con un servicio falso, no con Upstash real, y los pasos de Vercel están escritos de memoria; si algún nombre no coincide, avisame.
+
+### Si el micrófono no funciona
+Entrá a *Perfil → Probar el micrófono*: revisa paso a paso qué falla y te dice cómo arreglarlo. En Android, además del permiso de Chrome para el sitio, el teléfono tiene que permitirle el micrófono a Chrome (*Ajustes → Apps → Chrome → Permisos*).
 
 ### Importante
 - **Sin `ACCESS_CODE`, la publicada rechaza todas las llamadas a Claude y Azure** (devuelve un error 503). Es a propósito, para que nadie gaste tu saldo.

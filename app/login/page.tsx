@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <main className="container center stack" style={{ paddingTop: 48 }}>
       <Mascot mood="happy" size={120} />
-      <div className="h1">GermanBaby</div>
+      <div className="h1">DankeDonkey</div>
       <p className="muted">Escribí tu código de acceso para entrar.</p>
       <input
         className="input"

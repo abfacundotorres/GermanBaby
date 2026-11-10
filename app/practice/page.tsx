@@ -68,7 +68,7 @@ export default function PracticePage() {
       const r = await callAi<PracticeResult>("/api/practice", {
         mistakes: sent.map(({ category, wrong, right, explanation, prompt }) => ({ category, wrong, right, explanation, prompt })),
         studied: Object.keys(p.lessons),
-      });
+      }, "practice");
       const steps: Step[] = shuffle([
         ...r.build.map((b): Step => ({ kind: "build", ...b })),
         ...r.write.map((w): Step => ({ kind: "write", ...w })),

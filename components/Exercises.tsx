@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import type { Step } from "@/lib/session";
 import { compareLocal, shuffle, tiles } from "@/lib/text";
-import { assessPronunciation, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
+import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
 import { recordPronunciation } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
 import { callAi } from "@/lib/ai";
@@ -35,10 +35,12 @@ export function Intro({ step }: { step: StepOf<"intro"> }) {
   return (
     <div className="stack center">
       <div className="prompt-label">Palabra nueva</div>
-      <div className="big-emoji pop">{v.emoji ?? "🆕"}</div>
-      <div className="big-word">{v.de}</div>
-      <div className="h2 muted">{v.es}</div>
-      <AudioButtons text={v.de} autoPlay size="big" />
+      <div className="intro-card stack center" style={{ gap: 8 }}>
+        <div className="intro-emoji pop">{v.emoji ?? "🆕"}</div>
+        <div className="big-word">{v.de}</div>
+        <div className="h2 muted" style={{ margin: 0 }}>{v.es}</div>
+        <AudioButtons text={v.de} autoPlay size="big" />
+      </div>
       {v.note && <div className="card small" style={{ textAlign: "left" }}>💡 {v.note}</div>}
     </div>
   );
@@ -219,7 +221,7 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
     }
     setLoading(true);
     try {
-      const r = await callAi<CorrectionResult>("/api/correct", { es: step.es, references: step.references, answer, hint: step.hint });
+      const r = await callAi<CorrectionResult>("/api/correct", { es: step.es, references: step.references, answer, hint: step.hint }, "correct");
       const status: Status = r.verdict === "correct" ? "ok" : r.verdict === "almost" ? "almost" : "bad";
       onResult({
         status,
@@ -275,6 +277,7 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
   const [error, setError] = useState<string | null>(null);
   const [notConfigured, setNotConfigured] = useState(false);
   const [attempts, setAttempts] = useState(0);
+  useEffect(() => prewarmSpeech(), []);
 
   const record = async () => {
     setRecording(true);
@@ -296,12 +299,7 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
     } catch (e) {
       if (e instanceof SpeechNotConfigured) setNotConfigured(true);
       else {
-        const msg = (e as Error).message ?? "";
-        setError(
-          /permission|denied|notallowed|not allowed/i.test(msg)
-            ? "No tengo permiso para usar el micrófono. Habilitalo para este sitio en los ajustes del navegador y probá de nuevo."
-            : msg || "No pude usar el micrófono.",
-        );
+        setError(e instanceof MicError ? e.message : (e as Error).message || "No pude usar el micrófono.");
       }
     } finally {
       setRecording(false);

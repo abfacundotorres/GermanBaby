@@ -31,7 +31,7 @@ export default function TopBar() {
     <header className="topbar">
       <div className="topbar-inner">
         <Link href="/" className="brand-mini">
-          <Mascot size={34} animate={false} /> <span>GermanBaby</span>
+          <Mascot size={34} animate={false} /> <span>DankeDonkey</span>
         </Link>
         <span className="stat-chip chip-fire" title="Racha de días">🔥 {currentStreak(p)}</span>
         <span className="stat-chip chip-gem" title="Gemas">💎 {p.gems}</span>

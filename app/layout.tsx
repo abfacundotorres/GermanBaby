@@ -5,10 +5,10 @@ import BottomNav from "@/components/BottomNav";
 import SyncManager from "@/components/SyncManager";
 
 export const metadata: Metadata = {
-  title: "GermanBaby: alemán desde cero",
+  title: "DankeDonkey: alemán desde cero",
   description: "Aprendé alemán jugando, con corrección de pronunciación y gramática.",
   manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: "GermanBaby", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "DankeDonkey", statusBarStyle: "default" },
   robots: { index: false, follow: false },
 };
 
