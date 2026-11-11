@@ -119,7 +119,7 @@ Supuestos por hora: 3 lecciones, 8 correcciones que requieren IA, 25 turnos de c
 
 Cada error de una lección, del repaso o de una charla se guarda en el navegador (máximo 150) con su categoría: gramática, artículo/género, orden de palabras, vocabulario, ortografía, significado, pronunciación o comprensión auditiva. En «Mis errores» se ven agrupados por categoría y hay dos formas de practicarlos:
 
-- **Repetir lo que fallé:** vuelve a mostrar los mismos ejercicios, sin IA. Acertar uno lo marca como resuelto.
+- **Repetir lo que fallé:** vuelve a mostrar los ejercicios, sin IA, y acertar uno lo marca como resuelto. Si el error no tiene el ejercicio original guardado (errores de la charla o secundarios), se arma uno con lo registrado: una pregunta «¿cuál es la forma correcta?», un dictado o una frase para decir en voz alta. Cada error también se puede descartar a mano con «✓ Ya lo sé».
 - **Práctica personalizada:** `/api/practice` le manda a Claude los errores recientes y el vocabulario ya estudiado. Claude detecta uno o dos patrones y arma 3 ejercicios de cada tipo (armar frase, traducir y pregunta con explicación) con frases nuevas. Si se termina con 80 % o más de acierto, los errores enviados se marcan como resueltos.
 
 Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores, y una palabra que fallás vuelve a la caja 1 del repaso espaciado.

@@ -14,16 +14,41 @@ type Session = { steps: Step[]; focus?: string; resolveOnPass: string[]; started
 
 const stepKey = (s: Step) => JSON.stringify({ ...s, mistakeId: undefined, fromReview: undefined });
 
-/** Ejercicios originales que fallaste (sin repetir), con el id del error para resolverlo. */
+/**
+ * Ejercicio para rehacer un error. Si se guardó el original (lecciones y repaso) se usa ese; si no
+ * (errores de la charla o secundarios), se arma uno con lo registrado: lo que escribiste y lo correcto.
+ */
+function stepForMistake(m: Mistake): Step | null {
+  if (m.step && m.step.kind !== "intro") return m.step;
+  const right = m.right?.trim();
+  if (!right) return null;
+  if (m.category === "pronunciación") return { kind: "speak", de: right, es: m.prompt ?? "Decilo en voz alta" };
+  if (m.category === "comprensión auditiva") return { kind: "dictation", de: right, es: m.prompt ?? right };
+  const wrong = m.wrong?.trim();
+  if (wrong && wrong.toLowerCase() !== right.toLowerCase()) {
+    return {
+      kind: "quiz",
+      question: m.source === "chat" ? "En la charla: ¿cuál es la forma correcta?" : m.prompt ? `${m.prompt}: ¿cuál es la forma correcta?` : "¿Cuál es la forma correcta?",
+      options: shuffle([right, wrong]),
+      answer: right,
+      explanation: m.explanation ?? `Lo correcto es «${right}».`,
+      category: m.category,
+    };
+  }
+  return { kind: "write", es: m.prompt ?? "Escribí la forma correcta", references: [right], hint: m.explanation };
+}
+
+/** Ejercicios para rehacer los errores, con el id del error para resolverlo al acertar. */
 function replaySteps(open: Mistake[], limit = 10): Step[] {
   // Agrupa errores del mismo ejercicio: acertarlo una vez los resuelve a todos.
   const groups = new Map<string, { step: Step; ids: string[] }>();
   for (const m of open) {
-    if (!m.step || m.step.kind === "intro") continue;
-    const k = stepKey(m.step);
+    const step = stepForMistake(m);
+    if (!step) continue;
+    const k = m.step ? stepKey(step) : `m:${m.id}`;
     const g = groups.get(k);
     if (g) g.ids.push(m.id);
-    else groups.set(k, { step: m.step, ids: [m.id] });
+    else groups.set(k, { step, ids: [m.id] });
   }
   return shuffle(
     [...groups.values()].slice(0, limit).map(({ step, ids }) => ({ ...step, mistakeId: ids.join(","), fromReview: false })),
@@ -36,6 +61,7 @@ export default function PracticePage() {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   if (!hydrated) return null;
 
@@ -142,7 +168,7 @@ export default function PracticePage() {
 
           <div className="h2" style={{ marginTop: 10 }}>Últimos errores</div>
           <div className="stack" style={{ gap: 8 }}>
-            {open.slice(0, 10).map((m) => (
+            {(showAll ? open : open.slice(0, 10)).map((m) => (
               <div key={m.id} className="card small" style={{ padding: 12 }}>
                 <span className="tag">{CATEGORY_EMOJI[m.category]} {m.category}</span>
                 {m.prompt && <span className="muted">{m.prompt}</span>}
@@ -150,8 +176,16 @@ export default function PracticePage() {
                   {m.wrong && <><del>{m.wrong}</del> → </>}<ins>{m.right}</ins>
                 </div>
                 {m.explanation && <div className="muted">{m.explanation}</div>}
+                <div className="row" style={{ marginTop: 8, justifyContent: "flex-end" }}>
+                  <button className="btn" style={{ minHeight: 40, padding: "6px 12px", fontSize: 14 }} onClick={() => resolveMistakes([m.id])}>
+                    ✓ Ya lo sé
+                  </button>
+                </div>
               </div>
             ))}
+            {!showAll && open.length > 10 && (
+              <button className="btn btn-block" onClick={() => setShowAll(true)}>Ver los {open.length - 10} restantes</button>
+            )}
           </div>
         </>
       )}
