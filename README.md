@@ -11,7 +11,7 @@ La app se publica en Vercel, que es gratis para uso personal, y después la abr�
 ### 1. Conseguí las claves
 - **Claude:** entrá a https://platform.claude.com, creá una cuenta, cargá algo de saldo y generá una clave en *API Keys*. Anotá la clave, que empieza con `sk-ant-`.
 - **Azure Speech:** entrá a https://portal.azure.com, creá un recurso **Speech** con el plan gratuito **F0**, y en *Keys and Endpoint* copiá una clave y la región (por ejemplo `brazilsouth`).
-- **Código de acceso:** inventá una frase **larga, de 16 caracteres o más**, que solo vos sepas. Evita que otra persona use tus claves si encuentra el link. Tiene que ser larga porque nada limita los intentos por segundo contra `/login`.
+- **Código de acceso:** inventá una frase **larga, de 16 caracteres o más**, que solo vos sepas. Evita que otra persona use tus claves si encuentra el link. Además hay un límite de intentos fallidos (8 cada 15 minutos por IP), pero un código largo sigue siendo la defensa principal.
 
 ### 2. Publicala
 1. Entrá a https://vercel.com y registrate con tu cuenta de GitHub.
@@ -98,12 +98,21 @@ app/
   api/speech-token             clave Azure → token de 10 min
   api/correct                  corrección de traducciones (Claude)
   api/chat                     turno de conversación (Claude)
+  api/practice                 práctica personalizada de errores (Claude)
+  api/sync                     progreso en la nube (Upstash Redis)
+  api/login                    código de acceso, con límite de intentos
+proxy.ts                       exige el código de acceso en todo
 components/                    ejercicios, reporte de pronunciación, reproductor de lecciones
 lib/
   curriculum.ts                contenido (agregar lecciones acá)
   session.ts                   arma la secuencia de ejercicios
   progress.ts                  XP, racha, logros, cajas de Leitner (localStorage)
-  speech.ts                    Azure: TTS, reconocimiento, evaluación de pronunciación
+  speech.ts                    Azure: TTS (con caché de audio), reconocimiento, pronunciación
+  audiocache.ts                caché de audio en IndexedDB
+  ratelimit.ts                 límite de intentos de login
+  ai.ts                        todas las llamadas a Claude, con topes de gasto
+  capture.ts, vad.ts, pcm.ts   micrófono y corte automático al terminar de hablar
+  sync.ts, merge.ts            sincronización con la nube
   phonemeTips.ts               consejos de pronunciación para hispanohablantes
   claude.ts                    cliente de Claude con salida estructurada
 ```

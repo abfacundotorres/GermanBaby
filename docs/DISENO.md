@@ -8,7 +8,7 @@ App web para aprender alemán desde cero (A1), en español rioplatense, con prá
 |---|---|---|
 | Pronunciación | **Azure AI Speech: Pronunciation Assessment** | Puntúa precisión, fluidez, completitud y prosodia, y además cada palabra y fonema. El reconocimiento de voz del navegador solo transcribe. |
 | Voz de salida | Azure TTS neural (`de-DE-KatjaNeural`), con la voz del navegador como respaldo | Voz natural; modo lento con SSML (`prosody rate`). |
-| Gramática, semántica y conversación | **Claude API** (por defecto `claude-opus-5-5`, esfuerzo `low`) con salida estructurada (Zod) | Explica en español a nivel A1, acepta respuestas alternativas válidas y detecta errores de sentido, no solo de forma. |
+| Gramática, semántica y conversación | **Claude API** (por defecto `claude-haiku-5-5`, configurable con `CLAUDE_MODEL`) con salida estructurada (Zod) | Explica en español a nivel A1, acepta respuestas alternativas válidas y detecta errores de sentido, no solo de forma. |
 | Usuarios | Uno solo; progreso en `localStorage` | Lo más simple para empezar. Migrar a Supabase después no cambia la UI (ver §9). |
 | Dónde corre | Vercel, usada desde el celular | Sin PC. La app publicada exige un `ACCESS_CODE` para que nadie más gaste los créditos de Claude y Azure. |
 | Stack | Next.js 16 (App Router) + TypeScript, CSS propio | El backend mínimo (rutas API) protege las claves; todo vive en un solo proyecto. |
@@ -135,8 +135,8 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
    - Qué devuelve Azure para alemán: no pude confirmar que `de-DE` soporte puntaje por fonema (alfabeto IPA) ni evaluación de prosodia. Si no los soporta, el detalle por sonido queda vacío y los consejos se eligen por las letras de la palabra.
    - Que el audio se reproduzca solo al abrir un ejercicio en iPhone. Safari puede bloquear audio que no nace de un toque.
 2. ~~Guardar el progreso fuera del celular.~~ Hecho (ver §2): sincronización con Upstash Redis. Falta probarla con un Upstash real; hasta ahora se probó con un servicio falso. Limitaciones conocidas: «Borrar progreso» en un dispositivo no borra la copia de otro que ya la tiene, y dos dispositivos usados a la vez pueden perder las gemas del que guardó primero.
-3. **Guardar el audio ya generado** (por voz, texto y velocidad) en el dispositivo: ahorra caracteres de Azure y la espera de cada reproducción.
-4. **Limitar los intentos de `/login`:** hoy se pueden hacer decenas por segundo. Mientras tanto, el código de acceso debe ser largo (16 caracteres o más).
+3. ~~Guardar el audio ya generado.~~ Hecho: `lib/audiocache.ts` guarda en IndexedDB el MP3 de cada frase (voz + velocidad + texto, hasta 400 clips). Una frase repetida no gasta caracteres de Azure ni espera. Cambio de comportamiento: ahora el audio empieza cuando Azure terminó de sintetizar la frase completa (antes se reproducía en streaming); en frases cortas es imperceptible, pero conviene confirmarlo en el celular.
+4. ~~Limitar los intentos de `/login`.~~ Hecho (`lib/ratelimit.ts`): 8 fallos cada 15 minutos por IP y 40 por hora en total devuelven 429. Usa Upstash si está conectado; si no, la memoria de cada instancia de Vercel, que no se comparte y se reinicia, así que es un freno parcial hasta activar la nube. El tope global también puede bloquearte a vos durante una hora si alguien insiste. Igual conviene un código largo.
 5. **Más lecciones de gramática explícita** (casos, preposiciones, modales) y un test de nivel para no obligar a empezar siempre desde cero.
 6. **Ajustar el umbral de pronunciación** (hoy 70/100) con uso real: puede ser demasiado exigente para un principiante.
 7. **Accesibilidad:** marcar el texto alemán con `lang="de"` y anunciar la corrección con `aria-live`.

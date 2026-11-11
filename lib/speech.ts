@@ -5,6 +5,7 @@
 
 import { getProgress, recordStt, recordTts } from "./progress";
 import { startCapture, type CaptureEnd } from "./capture";
+import { clipKey, getClip, putClip } from "./audiocache";
 
 type SDK = typeof import("microsoft-cognitiveservices-speech-sdk");
 
@@ -91,42 +92,60 @@ const stopMic = (stream: MediaStream) => stream.getTracks().forEach((t) => t.sto
 const escapeXml = (s: string) =>
   s.replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]!);
 
-let currentPlayer: { pause(): void } | null = null;
+let currentAudio: HTMLAudioElement | null = null;
+
+function play(blob: Blob) {
+  currentAudio?.pause();
+  const url = URL.createObjectURL(blob);
+  const audio = new Audio(url);
+  audio.onended = audio.onerror = () => URL.revokeObjectURL(url);
+  currentAudio = audio;
+  return audio.play();
+}
+
+/** Pide el audio a Azure (sin reproducirlo) y devuelve el MP3. */
+async function synthesize(text: string, voice: string, slow: boolean): Promise<Blob> {
+  const { sdk, cfg } = await speechConfig();
+  const synth = new sdk.SpeechSynthesizer(cfg, null as unknown as import("microsoft-cognitiveservices-speech-sdk").AudioConfig);
+  const ssml =
+    `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="de-DE">` +
+    `<voice name="${voice}"><prosody rate="${slow ? "-35%" : "-5%"}">${escapeXml(text)}</prosody></voice></speak>`;
+  return new Promise<Blob>((resolve, reject) => {
+    synth.speakSsmlAsync(
+      ssml,
+      (r) => {
+        synth.close();
+        if (r.reason === sdk.ResultReason.SynthesizingAudioCompleted && r.audioData.byteLength > 0) {
+          recordTts(text.length);
+          resolve(new Blob([r.audioData], { type: "audio/mpeg" }));
+        } else reject(new Error(r.errorDetails || "Azure no devolvió audio."));
+      },
+      (e) => {
+        synth.close();
+        reject(new Error(e));
+      },
+    );
+  });
+}
 
 export async function speak(text: string, opts: { slow?: boolean; voice?: string } = {}) {
   const voice = opts.voice ?? "de-DE-KatjaNeural";
+  const slow = !!opts.slow;
   try {
-    const { sdk, cfg } = await speechConfig();
-    currentPlayer?.pause();
-    const player = new sdk.SpeakerAudioDestination();
-    currentPlayer = player;
-    const synth = new sdk.SpeechSynthesizer(cfg, sdk.AudioConfig.fromSpeakerOutput(player));
-    const ssml =
-      `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="de-DE">` +
-      `<voice name="${voice}"><prosody rate="${opts.slow ? "-35%" : "-5%"}">${escapeXml(text)}</prosody></voice></speak>`;
-    await new Promise<void>((resolve, reject) => {
-      synth.speakSsmlAsync(
-        ssml,
-        (r) => {
-          synth.close();
-          if (r.reason === sdk.ResultReason.SynthesizingAudioCompleted) {
-            recordTts(text.length);
-            resolve();
-          } else reject(new Error(r.errorDetails));
-        },
-        (e) => {
-          synth.close();
-          reject(new Error(e));
-        },
-      );
-    });
+    const key = clipKey(voice, slow, text);
+    let blob = await getClip(key);
+    if (!blob) {
+      blob = await synthesize(text, voice, slow);
+      void putClip(key, blob);
+    }
+    await play(blob);
   } catch (err) {
     // Sin Azure (o sin red): voz del navegador como respaldo.
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang = "de-DE";
-      u.rate = opts.slow ? 0.6 : 0.95;
+      u.rate = slow ? 0.6 : 0.95;
       window.speechSynthesis.speak(u);
       return;
     }
