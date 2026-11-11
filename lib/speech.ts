@@ -3,7 +3,8 @@
 // Voz con Azure AI Speech desde el navegador.
 // La clave nunca llega al cliente: /api/speech-token entrega un token de 10 min.
 
-import { recordStt, recordTts } from "./progress";
+import { getProgress, recordStt, recordTts } from "./progress";
+import { startCapture, type CaptureEnd } from "./capture";
 
 type SDK = typeof import("microsoft-cognitiveservices-speech-sdk");
 
@@ -150,6 +151,17 @@ export type PronunciationResult = {
   completeness: number;
   prosody?: number;
   words: WordScore[];
+  /** Cómo se grabó y cuánto tardó Azure en responder desde que se cortó el audio (ms). */
+  mode?: "rapido" | "compatible";
+  latencyMs?: number;
+  endReason?: CaptureEnd;
+};
+
+/** Ganchos de la interfaz durante una grabación. */
+export type RecordHooks = {
+  onLevel?: (level: number) => void; // volumen de 0 a 1, para animar el botón
+  onProcessing?: () => void; // dejó de grabar: Azure está analizando
+  registerFinish?: (finish: () => void) => void; // para el botón «listo»
 };
 
 type RawWord = {
@@ -162,27 +174,40 @@ type RawWord = {
  * Graba una frase por el micrófono y la compara con `referenceText`.
  * Con referenceText vacío hace evaluación libre (sin guion), útil en la charla.
  */
-export async function assessPronunciation(referenceText: string): Promise<PronunciationResult> {
+export async function assessPronunciation(referenceText: string, hooks: RecordHooks = {}): Promise<PronunciationResult> {
   // 1) El micrófono se pide ya, dentro del toque; el token y el SDK se cargan en paralelo.
   const cfgPromise = speechConfig();
   cfgPromise.catch(() => {});
   const stream = await getMic();
   const started = Date.now();
   let sent = false;
+  let secondsSent: number | null = null; // en modo rápido es exacto: bytes de audio enviados
   try {
     const { sdk, cfg } = await cfgPromise;
     sent = true;
-    return await recognize(sdk, cfg, stream, referenceText);
+    if (getProgress().fastMic !== false) {
+      try {
+        const r = await recognizeFast(sdk, cfg, stream, referenceText, hooks);
+        secondsSent = r.seconds;
+        return r.result;
+      } catch (e) {
+        if (!(e instanceof FastUnavailable)) throw e;
+        // Sin AudioWorklet: seguimos con el modo compatible.
+      }
+    }
+    return await recognize(sdk, cfg, stream, referenceText, hooks);
   } finally {
     stopMic(stream);
-    if (sent) recordStt((Date.now() - started) / 1000);
+    if (sent) recordStt(secondsSent ?? (Date.now() - started) / 1000);
   }
 }
 
-async function recognize(sdk: SDK, cfg: import("microsoft-cognitiveservices-speech-sdk").SpeechConfig, stream: MediaStream, referenceText: string): Promise<PronunciationResult> {
-  const audio = sdk.AudioConfig.fromStreamInput(stream);
-  const recognizer = new sdk.SpeechRecognizer(cfg, audio);
+class FastUnavailable extends Error {}
+type SpeechCfg = import("microsoft-cognitiveservices-speech-sdk").SpeechConfig;
+type Recognizer = import("microsoft-cognitiveservices-speech-sdk").SpeechRecognizer;
+type RecognitionResult = import("microsoft-cognitiveservices-speech-sdk").SpeechRecognitionResult;
 
+function setupAssessment(sdk: SDK, recognizer: Recognizer, referenceText: string) {
   const pa = new sdk.PronunciationAssessmentConfig(
     referenceText,
     sdk.PronunciationAssessmentGradingSystem.HundredMark,
@@ -192,18 +217,15 @@ async function recognize(sdk: SDK, cfg: import("microsoft-cognitiveservices-spee
   pa.phonemeAlphabet = "IPA";
   pa.enableProsodyAssessment = true;
   pa.applyTo(recognizer);
+}
 
-  const result = await new Promise<import("microsoft-cognitiveservices-speech-sdk").SpeechRecognitionResult>(
-    (resolve, reject) => recognizer.recognizeOnceAsync(resolve, (e) => reject(new Error(e))),
-  ).finally(() => recognizer.close());
-
+function toPronunciationResult(sdk: SDK, result: RecognitionResult): PronunciationResult {
   if (result.reason === sdk.ResultReason.NoMatch) {
     throw new Error("No te escuché bien. Acercate al micrófono y probá de nuevo.");
   }
   if (result.reason !== sdk.ResultReason.RecognizedSpeech) {
     throw new Error(result.errorDetails || "El reconocimiento falló.");
   }
-
   const json = JSON.parse(result.properties.getProperty(sdk.PropertyId.SpeechServiceResponse_JsonResult));
   const best = json?.NBest?.[0] ?? {};
   const pa0 = best.PronunciationAssessment ?? {};
@@ -216,7 +238,6 @@ async function recognize(sdk: SDK, cfg: import("microsoft-cognitiveservices-spee
       score: ph.PronunciationAssessment?.AccuracyScore ?? 0,
     })),
   }));
-
   return {
     recognized: result.text,
     pronScore: Math.round(pa0.PronScore ?? 0),
@@ -226,6 +247,79 @@ async function recognize(sdk: SDK, cfg: import("microsoft-cognitiveservices-spee
     prosody: pa0.ProsodyScore != null ? Math.round(pa0.ProsodyScore) : undefined,
     words,
   };
+}
+
+/**
+ * Modo rápido: capturamos el audio nosotros, detectamos cuándo dejaste de hablar y le cerramos el
+ * flujo a Azure en ese momento, para que responda enseguida en vez de esperar su silencio largo.
+ */
+async function recognizeFast(
+  sdk: SDK,
+  cfg: SpeechCfg,
+  stream: MediaStream,
+  referenceText: string,
+  hooks: RecordHooks,
+): Promise<{ result: PronunciationResult; seconds: number }> {
+  const push = sdk.AudioInputStream.createPushStream(sdk.AudioStreamFormat.getWaveFormatPCM(16000, 16, 1));
+  const recognizer = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(push));
+  setupAssessment(sdk, recognizer, referenceText);
+
+  let endedAt = 0;
+  let endReason: CaptureEnd | undefined;
+  const resultPromise = new Promise<RecognitionResult>((resolve, reject) => recognizer.recognizeOnceAsync(resolve, (e) => reject(new Error(e))));
+  resultPromise.catch(() => {});
+
+  let capture;
+  try {
+    capture = await startCapture(
+      stream,
+      {
+        onPcm: (b) => push.write(b),
+        onLevel: hooks.onLevel,
+        onEnd: (reason) => {
+          endedAt = Date.now();
+          endReason = reason;
+          push.close(); // Azure recibe el final del audio y devuelve el resultado
+          hooks.onProcessing?.();
+        },
+      },
+      { silenceMs: 700, initialSilenceMs: 6000, maxMs: 12000 },
+    );
+  } catch {
+    push.close();
+    recognizer.close();
+    throw new FastUnavailable();
+  }
+  hooks.registerFinish?.(() => capture.finish());
+
+  try {
+    const res = await resultPromise;
+    const result = toPronunciationResult(sdk, res);
+    result.mode = "rapido";
+    result.latencyMs = endedAt ? Date.now() - endedAt : undefined;
+    result.endReason = endReason;
+    return { result, seconds: capture.bytes / 32000 };
+  } finally {
+    capture.stop();
+    recognizer.close();
+  }
+}
+
+/** Modo compatible: el SDK captura el micrófono y Azure decide cuándo terminaste (más lento). */
+async function recognize(sdk: SDK, cfg: SpeechCfg, stream: MediaStream, referenceText: string, hooks: RecordHooks): Promise<PronunciationResult> {
+  // Azure espera menos silencio antes de cerrar la frase.
+  cfg.setProperty(sdk.PropertyId.SpeechServiceConnection_EndSilenceTimeoutMs, "700");
+  cfg.setProperty(sdk.PropertyId.SpeechServiceConnection_InitialSilenceTimeoutMs, "6000");
+  const recognizer = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(stream));
+  setupAssessment(sdk, recognizer, referenceText);
+  // Aquí no hay forma de cortar antes: el botón «listo» no hace nada.
+  hooks.registerFinish?.(() => {});
+  const result = await new Promise<RecognitionResult>((resolve, reject) =>
+    recognizer.recognizeOnceAsync(resolve, (e) => reject(new Error(e))),
+  ).finally(() => recognizer.close());
+  const out = toPronunciationResult(sdk, result);
+  out.mode = "compatible";
+  return out;
 }
 
 // ---------------- Probador de micrófono ----------------
@@ -296,21 +390,27 @@ export async function diagnoseMic(report: (steps: DiagStep[]) => void): Promise<
       detail: peak >= 4 ? `Nivel máximo ${peak}/100 (audio: ${state})` : `No llega sonido (nivel ${peak}/100, audio: ${state}). Revisá que el micrófono no esté silenciado o tapado.`,
     });
 
-    // Azure
-    set(i, { label: "Azure te entiende: decí «Hallo, ich heiße…» y tu nombre", ok: null });
-    const { sdk, cfg } = await speechConfig();
-    const recognizer = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(stream));
-    const started = Date.now();
-    const result = await new Promise<import("microsoft-cognitiveservices-speech-sdk").SpeechRecognitionResult>((res, rej) =>
-      recognizer.recognizeOnceAsync(res, (e) => rej(new Error(e))),
-    ).finally(() => recognizer.close());
-    recordStt((Date.now() - started) / 1000);
-    if (result.reason === sdk.ResultReason.RecognizedSpeech) set(i++, { label: "Azure te entiende", ok: true, detail: `Escuchó: «${result.text}»` });
-    else if (result.reason === sdk.ResultReason.NoMatch) set(i++, { label: "Azure te entiende", ok: false, detail: "Recibió audio pero no detectó palabras. Hablá más cerca y más fuerte." });
-    else {
-      const d = sdk.CancellationDetails.fromResult(result);
-      set(i++, { label: "Azure te entiende", ok: false, detail: `Azure canceló: ${d.errorDetails || d.reason}` });
+    // Captura rápida: ¿llega audio por el AudioWorklet?
+    set(i, { label: "Captura rápida", ok: null });
+    try {
+      let bytes = 0;
+      const cap = await startCapture(stream, { onPcm: (b) => (bytes += b.byteLength), onEnd: () => {} }, { silenceMs: 60000, maxMs: 60000 });
+      await new Promise((r) => setTimeout(r, 1200));
+      cap.stop();
+      set(i++, { label: "Captura rápida", ok: bytes > 0, detail: bytes > 0 ? `Funciona: ${(bytes / 32000).toFixed(1)} s de audio capturado` : "No llegó audio: se usará el modo compatible (más lento)." });
+    } catch {
+      set(i++, { label: "Captura rápida", ok: true, detail: "Este navegador no la soporta: se usará el modo compatible (más lento)." });
     }
+
+    // Azure: el mismo camino que usa la app
+    stopMic(stream);
+    set(i, { label: "Azure te entiende: decí «Hallo, ich heiße…» y tu nombre; se corta solo cuando terminás", ok: null });
+    const r = await assessPronunciation("");
+    set(i++, {
+      label: "Azure te entiende",
+      ok: true,
+      detail: `Escuchó: «${r.recognized}» · modo ${r.mode === "rapido" ? "rápido" : "compatible"}${r.latencyMs != null ? ` · Azure respondió ${(r.latencyMs / 1000).toFixed(1)} s después de que terminaste` : ""}`,
+    });
   } catch (e) {
     set(i++, { label: "Azure te entiende", ok: false, detail: (e as Error).message });
   } finally {

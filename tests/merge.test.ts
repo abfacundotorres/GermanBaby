@@ -5,7 +5,7 @@ import type { Progress } from "../lib/progress.ts";
 
 const zero = { calls: 0, input: 0, output: 0, cost: 0 };
 const base = (over: Partial<Progress> = {}): Progress => ({
-  updatedAt: 1000, meter: { month: "2026-11", claude: { correct: { ...zero }, chat: { ...zero }, practice: { ...zero } }, ttsChars: 0, ttsPlays: 0, sttSeconds: 0, sttAttempts: 0, unpriced: false }, xp: 0, gems: 0, freezes: 0, history: {}, sound: true, aiDailyLimit: 60, aiMonthlyBudget: 3,
+  updatedAt: 1000, fastMic: true, meter: { month: "2026-11", claude: { correct: { ...zero }, chat: { ...zero }, practice: { ...zero } }, ttsChars: 0, ttsPlays: 0, sttSeconds: 0, sttAttempts: 0, unpriced: false }, xp: 0, gems: 0, freezes: 0, history: {}, sound: true, aiDailyLimit: 60, aiMonthlyBudget: 3,
   ai: { date: "2026-11-09", calls: 0, month: "2026-11", monthCalls: 0, monthIn: 0, monthOut: 0, monthCost: 0, unpriced: false, model: null },
   daily: { date: "2026-11-09", xp: 0, lessons: 0, correct: 0, claimed: [] }, dailyGoal: 50,
   streak: { count: 0, lastDate: null }, lessons: {}, srs: {}, achievements: [],

@@ -26,7 +26,10 @@ export function PronunciationReport({ result, compact = false }: { result: Pronu
           <div className="score"><b>{result.completeness}</b><span className="small">Completitud</span></div>
         </div>
       )}
-      <div className="small muted">Escuché: «{result.recognized}»</div>
+      <div className="small muted">
+        Escuché: «{result.recognized}»
+        {result.latencyMs != null && <> · ⏱ Azure respondió en {(result.latencyMs / 1000).toFixed(1)} s</>}
+      </div>
       <div className="word-chips">
         {result.words.map((w, i) => (
           <span key={i} className={`word-chip ${w.errorType === "Omission" ? "lvl-bad" : lvl(w.score)}`} title={`${w.score}/100`}>

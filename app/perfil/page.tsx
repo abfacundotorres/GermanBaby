@@ -154,6 +154,10 @@ export default function Perfil() {
             {[20, 50, 100].map((n) => <option key={n} value={n}>{n} XP{n === 20 ? " (relajada)" : n === 50 ? " (normal)" : " (intensa)"}</option>)}
           </select>
         </label>
+        <label className="switch">
+          <span>⚡ Grabación rápida<div className="muted small">Corta apenas dejás de hablar. Si falla, apagala.</div></span>
+          <input type="checkbox" checked={p.fastMic} onChange={(e) => setSetting("fastMic", e.target.checked)} style={{ width: 24, height: 24 }} />
+        </label>
         <MicTest />
         <label className="switch">
           <span>🗣️ Voz</span>

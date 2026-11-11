@@ -44,6 +44,9 @@ Sin esto, tu progreso vive solo en el navegador del celular y Safari puede borra
 
 La clave donde se guarda tu progreso se deriva de tu código de acceso. Si lo cambiás, empezás con un progreso nuevo en la nube. Nota: esta función se probó con un servicio falso, no con Upstash real, y los pasos de Vercel están escritos de memoria; si algún nombre no coincide, avisame.
 
+### Si tarda en responder
+La grabación corta sola unos 0,7 segundos después de que dejás de hablar, o al instante si tocás ✓. Debajo del puntaje aparece «⏱ Azure respondió en X s», que es lo que tarda Azure en analizar. Si la grabación rápida te da problemas, apagala en *Perfil → Grabación rápida*.
+
 ### Si el micrófono no funciona
 Entrá a *Perfil → Probar el micrófono*: revisa paso a paso qué falla y te dice cómo arreglarlo. En Android, además del permiso de Chrome para el sitio, el teléfono tiene que permitirle el micrófono a Chrome (*Ajustes → Apps → Chrome → Permisos*).
 

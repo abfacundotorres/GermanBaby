@@ -51,6 +51,7 @@ export type Meter = {
 
 export type Progress = {
   updatedAt: number;
+  fastMic: boolean; // la grabación corta apenas dejás de hablar (no espera el silencio largo de Azure)
   meter: Meter; // ms desde 1970; la sincronización decide qué copia es más nueva
   xp: number;
   aiDailyLimit: number; // llamadas a IA por día: 0 = sin IA, -1 = sin límite
@@ -94,6 +95,7 @@ const freshDaily = (): Daily => ({ date: today(), xp: 0, lessons: 0, correct: 0,
 
 const DEFAULT: Progress = {
   updatedAt: 0,
+  fastMic: true,
   meter: freshMeter(),
   xp: 0,
   aiDailyLimit: 60,
@@ -445,7 +447,7 @@ export function buyFreeze(): "ok" | "poor" | "max" {
 
 // ---------- Ajustes y copia de seguridad ----------
 
-export function setSetting<K extends "sound" | "voice" | "dailyGoal" | "aiDailyLimit" | "aiMonthlyBudget">(key: K, value: Progress[K]) {
+export function setSetting<K extends "sound" | "voice" | "dailyGoal" | "aiDailyLimit" | "aiMonthlyBudget" | "fastMic">(key: K, value: Progress[K]) {
   update((p) => {
     p[key] = value;
     return p;

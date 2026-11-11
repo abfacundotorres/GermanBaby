@@ -26,6 +26,9 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [recording, setRecording] = useState(false);
+  const [processing, setProcessing] = useState(false);
+  const [level, setLevel] = useState(0);
+  const finishRef = useRef<(() => void) | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showEs, setShowEs] = useState(false);
   const [toasts, setToasts] = useState<string[]>([]);
@@ -94,15 +97,25 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
   };
 
   const talk = async () => {
+    if (recording && !processing) { finishRef.current?.(); return; } // segundo toque: terminé
     setRecording(true);
+    setProcessing(false);
     setError(null);
     try {
-      const r = await assessPronunciation(""); // evaluación libre, sin guion
+      const r = await assessPronunciation("", {
+        onLevel: setLevel,
+        onProcessing: () => setProcessing(true),
+        registerFinish: (f) => { finishRef.current = f; },
+      }); // evaluación libre, sin guion
+      setProcessing(false);
       await send(r.recognized, r);
     } catch (e) {
       setError(e instanceof SpeechNotConfigured ? "El micrófono necesita Azure Speech configurado. Mientras tanto podés escribir." : e instanceof MicError ? e.message : (e as Error).message);
     } finally {
       setRecording(false);
+      setProcessing(false);
+      setLevel(0);
+      finishRef.current = null;
     }
   };
 
@@ -168,18 +181,18 @@ export default function ChatPage({ params }: { params: Promise<{ unitId: string 
         ) : null}
         <div className="row">
           <button
-            className={`btn btn-round btn-mic ${recording ? "recording" : ""}`}
-            style={{ width: 56, height: 56, fontSize: 24, flexShrink: 0 }}
+            className={`btn btn-round btn-mic ${recording && !processing ? "recording" : ""}`}
+            style={{ width: 56, height: 56, fontSize: 24, flexShrink: 0, ...(recording && !processing ? { boxShadow: `0 0 0 ${4 + level * 18}px rgba(214,69,61,0.28)` } : {}) }}
             onClick={talk}
-            disabled={recording || loading}
-            aria-label="Hablar"
+            disabled={processing || loading}
+            aria-label={recording && !processing ? "Terminé" : "Hablar"}
           >
-            🎤
+            {processing ? <span className="spinner" /> : recording ? "✓" : "🎤"}
           </button>
           <input
             className="input"
             value={input}
-            placeholder={recording ? "Te escucho…" : "Escribí en alemán…"}
+            placeholder={processing ? "Analizando…" : recording ? "Te escucho… tocá ✓ al terminar" : "Escribí en alemán…"}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && send(input)}
             disabled={loading || recording}

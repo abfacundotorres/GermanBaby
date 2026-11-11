@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Step } from "@/lib/session";
 import { compareLocal, shuffle, tiles } from "@/lib/text";
 import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
@@ -272,7 +272,9 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
 export const PASS_SCORE = 70;
 
 export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
-  const [recording, setRecording] = useState(false);
+  const [phase, setPhase] = useState<"idle" | "listening" | "processing">("idle");
+  const [level, setLevel] = useState(0);
+  const finishRef = useRef<(() => void) | null>(null);
   const [result, setResult] = useState<PronunciationResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notConfigured, setNotConfigured] = useState(false);
@@ -280,10 +282,14 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
   useEffect(() => prewarmSpeech(), []);
 
   const record = async () => {
-    setRecording(true);
+    setPhase("listening");
     setError(null);
     try {
-      const r = await assessPronunciation(step.de);
+      const r = await assessPronunciation(step.de, {
+        onLevel: setLevel,
+        onProcessing: () => setPhase("processing"),
+        registerFinish: (f) => { finishRef.current = f; },
+      });
       setResult(r);
       setAttempts((a) => a + 1);
       const newBadge = recordPronunciation(r.pronScore);
@@ -302,7 +308,9 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
         setError(e instanceof MicError ? e.message : (e as Error).message || "No pude usar el micrófono.");
       }
     } finally {
-      setRecording(false);
+      setPhase("idle");
+      setLevel(0);
+      finishRef.current = null;
     }
   };
 
@@ -324,15 +332,18 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
         <>
           <div>
             <button
-              className={`btn btn-round btn-mic ${recording ? "recording" : ""}`}
-              onClick={record}
-              disabled={recording || locked}
-              aria-label="Grabar"
+              className={`btn btn-round btn-mic ${phase === "listening" ? "recording" : ""}`}
+              style={phase === "listening" ? { boxShadow: `0 0 0 ${6 + level * 26}px rgba(214,69,61,0.28)` } : undefined}
+              onClick={() => (phase === "listening" ? finishRef.current?.() : void record())}
+              disabled={phase === "processing" || locked}
+              aria-label={phase === "listening" ? "Terminé" : "Grabar"}
             >
-              🎤
+              {phase === "processing" ? <span className="spinner" /> : phase === "listening" ? "✓" : "🎤"}
             </button>
           </div>
-          <div className="muted small">{recording ? "Te escucho… hablá ahora" : "Tocá el micrófono y decí la frase"}</div>
+          <div className="muted small">
+            {phase === "listening" ? "Te escucho… se corta solo cuando terminás, o tocá ✓" : phase === "processing" ? "Analizando tu pronunciación…" : "Tocá el micrófono y decí la frase"}
+          </div>
         </>
       )}
       {error && !locked && (
