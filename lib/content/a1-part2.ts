@@ -1,7 +1,7 @@
 // Unidades 4-8 de A1: familia, verbos en presente, días y horas,
 // números hasta 100 y compras, rutina con verbos separables.
 
-import type { Unit } from "../curriculum";
+import type { Unit } from "../curriculum.ts";
 
 export const UNITS_A1_PART2: Unit[] = [
   {

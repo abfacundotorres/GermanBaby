@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { isGraded, type Step } from "@/lib/session";
+import { isGraded, isReadOnly, type Step } from "@/lib/session";
 import {
   ACHIEVEMENTS, addXp, currentStreak, getProgress, levelFor, logMistakes, markVocabWeak,
   resolveMistakes, reviewItem, tickCorrect, type Mistake,
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
-import { Build, Choice, Dictation, Intro, Listen, Quiz, Speak, Write, type Outcome } from "./Exercises";
+import { Build, Choice, Dictation, Intro, Listen, ListenQ, Quiz, Rule, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
 export const MAX_HEARTS = 5;
@@ -193,7 +193,7 @@ function Session({
     if ("vocab" in s && s.vocab && o.status === "bad") markVocabWeak(s.vocab.de);
     // Un ejercicio repetido que se vuelve a fallar no se duplica en el registro.
     if (s.mistakeId) return;
-    const prompt = "es" in s ? s.es : "question" in s ? s.question : "vocab" in s && s.vocab ? s.vocab.es : undefined;
+    const prompt = s.kind === "listenq" ? s.question.q : "es" in s ? s.es : "question" in s ? s.question : "vocab" in s && s.vocab ? s.vocab.es : undefined;
     const items = o.mistakes?.length
       ? o.mistakes
       : [{ category: o.category ?? "vocabulario", wrong: o.answer ?? "", right: o.expected ?? "" }];
@@ -298,7 +298,7 @@ function Session({
     const onKey = (e: KeyboardEvent) => {
       // Enter sobre un botón o campo ya dispara su propia acción.
       if (e.target instanceof HTMLElement && ["BUTTON", "INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
-      if (e.key === "Enter" && (feedback || step?.kind === "intro") && !summary && !dead) {
+      if (e.key === "Enter" && (feedback || step && isReadOnly(step)) && !summary && !dead) {
         e.preventDefault();
         next();
       }
@@ -351,6 +351,8 @@ function Session({
     case "write": body = <Write key={key} step={step} {...props} />; break;
     case "speak": body = <Speak key={key} step={step} {...props} />; break;
     case "quiz": body = <Quiz key={key} step={step} {...props} />; break;
+    case "rule": body = <Rule key={key} step={step} />; break;
+    case "listenq": body = <ListenQ key={key} step={step} {...props} />; break;
   }
 
   const fbClass = feedback ? ({ ok: "ok", almost: "almost", bad: "bad", skip: "almost" } as const)[feedback.status] : "";
@@ -370,7 +372,7 @@ function Session({
           <Hearts n={hearts} />
         </div>
         <div className="step-in" key={key}>{body}</div>
-        {step.kind === "intro" && (
+        {isReadOnly(step) && (
           <div style={{ marginTop: 20 }}>
             <button className="btn btn-primary btn-block btn-lg" onClick={() => { sfx.tap(); next(); }}>Entendido</button>
           </div>

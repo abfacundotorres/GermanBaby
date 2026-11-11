@@ -2,7 +2,9 @@
 // genera ejercicios automáticos de opción múltiple y escucha) y ejercicios
 // escritos a mano (armar frases, hablar, traducir, dictado).
 
-import { UNITS_A1_PART2 } from "./content/a1-part2";
+import type { MistakeCategory } from "./mistakes.ts";
+import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
+import { UNITS_A1_PART3 } from "./content/a1-part3.ts";
 
 export type Vocab = {
   de: string;
@@ -15,7 +17,26 @@ export type HandExercise =
   | { kind: "build"; es: string; answer: string; extra: string[]; alts?: string[] } // alts: otros órdenes válidos
   | { kind: "speak"; de: string; es: string }
   | { kind: "write"; es: string; references: string[]; hint?: string }
-  | { kind: "dictation"; de: string; es: string };
+  | { kind: "dictation"; de: string; es: string }
+  | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory };
+
+/** Regla de gramática: tarjeta explicativa en español, con tabla y ejemplos opcionales. */
+export type GrammarRule = {
+  title: string;
+  body: string[]; // párrafos
+  table?: { head: string[]; rows: string[][] };
+  examples?: { de: string; es: string }[];
+};
+
+export type Speaker = "f" | "m"; // f = voz de mujer, m = voz de hombre
+export type DialogueLine = { who: Speaker; name: string; de: string; es: string };
+/** Pregunta de comprensión. `why` explica dónde estaba la respuesta. */
+export type ListenQuestion =
+  | { type: "choice"; q: string; options: string[]; answer: string; why?: string }
+  | { type: "tf"; q: string; answer: boolean; why?: string } // q = afirmación en español
+  | { type: "fill"; q: string; answers: string[]; hint?: string; why?: string }; // dato oído: número, hora, precio
+/** Escucha larga: diálogo con dos voces y preguntas. El texto se muestra recién al responder. */
+export type Dialogue = { title: string; setting: string; lines: DialogueLine[]; questions: ListenQuestion[] };
 
 export type Lesson = {
   id: string;
@@ -23,6 +44,9 @@ export type Lesson = {
   goal: string;
   vocab: Vocab[];
   exercises: HandExercise[];
+  icon?: string; // emoji del nodo en el camino (por defecto, el de la primera palabra)
+  grammar?: GrammarRule[]; // tarjetas de regla, antes de los ejercicios
+  dialogue?: Dialogue; // escucha larga, al final de la lección
 };
 
 export type Unit = {
@@ -263,7 +287,7 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2];
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3];
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);

@@ -1,0 +1,243 @@
+// Unidades 9 en adelante de A1 (ampliación): cada unidad tiene lecciones de vocabulario con
+// una escucha larga (diálogo con dos voces) y una lección de gramática explícita.
+
+import type { Unit } from "../curriculum.ts";
+
+export const UNITS_A1_PART3: Unit[] = [
+  {
+    id: "wohnung",
+    title: "La casa",
+    emoji: "🏠",
+    description: "Los ambientes, los muebles, describir una vivienda y buscar un departamento.",
+    lessons: [
+      {
+        id: "zimmer",
+        title: "Los ambientes",
+        goal: "Nombrar las partes de una vivienda y preguntar cuántos ambientes tiene.",
+        vocab: [
+          { de: "das Haus", es: "la casa", emoji: "🏠", note: "Plural: die Häuser." },
+          { de: "die Wohnung", es: "el departamento", emoji: "🏢", note: "«Wohnung» es el departamento y «Haus» la casa. Plural: die Wohnungen." },
+          { de: "das Zimmer", es: "el ambiente / la habitación", emoji: "🚪", note: "Al contar los «Zimmer» no se cuentan la cocina ni el baño: «zwei Zimmer, Küche, Bad». Plural igual: die Zimmer." },
+          { de: "die Küche", es: "la cocina", emoji: "🍳", note: "La «ü» se dice con labios de «u» y lengua de «i»." },
+          { de: "das Bad", es: "el baño", emoji: "🛁", note: "Neutro. También se dice «das Badezimmer»." },
+          { de: "das Wohnzimmer", es: "el living", emoji: "🛋️", note: "«wohnen» (vivir) + «Zimmer»." },
+          { de: "das Schlafzimmer", es: "el dormitorio", emoji: "🛏️", note: "«schlafen» (dormir) + «Zimmer»: el ambiente para dormir." },
+          { de: "Wie viele Zimmer hast du?", es: "¿Cuántos ambientes tenés?", emoji: "🔢", note: "«Wie viele» = cuántos/as." },
+        ],
+        exercises: [
+          { kind: "speak", de: "das Wohnzimmer", es: "el living" },
+          { kind: "build", es: "La casa tiene una cocina", answer: "Das Haus hat eine Küche", extra: ["ein", "Bad", "der"] },
+          { kind: "dictation", de: "das Schlafzimmer", es: "el dormitorio" },
+          { kind: "write", es: "el baño", references: ["das Bad", "das Badezimmer"], hint: "Es neutro: «das»." },
+          { kind: "write", es: "El departamento tiene dos ambientes", references: ["Die Wohnung hat zwei Zimmer"], hint: "«tener» = haben: er/sie/es hat." },
+          { kind: "speak", de: "Ich habe eine Wohnung", es: "Tengo un departamento" },
+        ],
+        dialogue: {
+          title: "Una visita",
+          setting: "Anna le muestra su departamento a Tom",
+          lines: [
+            { who: "f", name: "Anna", de: "Hallo Tom! Willkommen! Das ist meine Wohnung.", es: "¡Hola, Tom! ¡Bienvenido! Este es mi departamento." },
+            { who: "m", name: "Tom", de: "Danke, Anna! Wie viele Zimmer hast du?", es: "¡Gracias, Anna! ¿Cuántos ambientes tenés?" },
+            { who: "f", name: "Anna", de: "Ich habe zwei Zimmer: ein Wohnzimmer und ein Schlafzimmer. Und ich habe eine Küche und ein Bad.", es: "Tengo dos ambientes: un living y un dormitorio. Y tengo una cocina y un baño." },
+            { who: "m", name: "Tom", de: "Eine Küche und ein Bad? Das ist perfekt!", es: "¿Una cocina y un baño? ¡Es perfecto!" },
+            { who: "f", name: "Anna", de: "Ja! Ich möchte einen Kaffee. Und du?", es: "¡Sí! Quisiera un café. ¿Y vos?" },
+            { who: "m", name: "Tom", de: "Ja, bitte! Ich möchte auch einen Kaffee.", es: "¡Sí, por favor! Yo también quisiera un café." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué le pregunta Tom a Anna?", options: ["Cuántos ambientes tiene", "Cuánto paga de alquiler", "Dónde queda la cocina", "Cómo se llama el barrio"], answer: "Cuántos ambientes tiene", why: "Tom: «Wie viele Zimmer hast du?»" },
+            { type: "fill", q: "¿Cuántos «Zimmer» tiene Anna? (un número)", answers: ["2", "zwei"], hint: "Un número", why: "Anna: «zwei Zimmer». La cocina y el baño no se cuentan." },
+            { type: "tf", q: "Anna tiene un baño.", answer: true, why: "Anna: «ich habe eine Küche und ein Bad»." },
+            { type: "tf", q: "Anna y Tom toman té.", answer: false, why: "Los dos quieren «Kaffee» (café)." },
+          ],
+        },
+      },
+      {
+        id: "moebel",
+        title: "Muebles",
+        goal: "Nombrar los muebles, preguntar el precio y decir cuál querés.",
+        vocab: [
+          { de: "der Tisch", es: "la mesa", emoji: "🍽️", note: "Masculino: der Tisch. Plural: die Tische." },
+          { de: "der Stuhl", es: "la silla", emoji: "🪑", note: "Plural: die Stühle (la «u» pasa a «ü»)." },
+          { de: "das Bett", es: "la cama", emoji: "🛏️", note: "Plural: die Betten." },
+          { de: "der Schrank", es: "el armario", emoji: "🗄️", note: "Plural: die Schränke." },
+          { de: "die Lampe", es: "la lámpara", emoji: "💡", note: "Plural: die Lampen." },
+          { de: "das Fenster", es: "la ventana", emoji: "🪟", note: "Plural igual: die Fenster." },
+          { de: "die Tür", es: "la puerta", emoji: "🚪", note: "Plural: die Türen. La «ü» se dice con labios de «u»." },
+          { de: "Ich möchte den Tisch", es: "Quisiera la mesa", emoji: "👆", note: "Cuando es el objeto (acusativo), «der» pasa a «den»: der Tisch → den Tisch. «die» y «das» no cambian." },
+        ],
+        exercises: [
+          { kind: "speak", de: "die Tür", es: "la puerta" },
+          { kind: "build", es: "Quisiera la lámpara", answer: "Ich möchte die Lampe", extra: ["den", "das", "eine"] },
+          { kind: "build", es: "Quisiera el armario", answer: "Ich möchte den Schrank", extra: ["der", "das", "Tisch"] },
+          { kind: "dictation", de: "das Fenster", es: "la ventana" },
+          { kind: "write", es: "la cama", references: ["das Bett"], hint: "Es neutro: «das»." },
+          { kind: "write", es: "Quisiera la mesa", references: ["Ich möchte den Tisch"], hint: "«Tisch» es masculino: «der» se vuelve «den»." },
+          { kind: "speak", de: "Der Tisch kostet achtzig Euro", es: "La mesa cuesta ochenta euros" },
+        ],
+        dialogue: {
+          title: "En la mueblería",
+          setting: "Clara compra una mesa y una lámpara",
+          lines: [
+            { who: "f", name: "Clara", de: "Guten Tag! Ich möchte einen Tisch und eine Lampe.", es: "¡Buenas tardes! Quisiera una mesa y una lámpara." },
+            { who: "m", name: "Herr Berger", de: "Gern. Der Tisch kostet achtzig Euro und die Lampe zwanzig Euro.", es: "Con gusto. La mesa cuesta ochenta euros y la lámpara veinte." },
+            { who: "f", name: "Clara", de: "Gut. Ich möchte den Tisch und die Lampe.", es: "Bien. Quisiera la mesa y la lámpara." },
+            { who: "m", name: "Herr Berger", de: "Sehr gut. Zusammen sind das hundert Euro.", es: "Muy bien. En total son cien euros." },
+            { who: "f", name: "Clara", de: "Hier, bitte. Auf Wiedersehen!", es: "Tome, por favor. ¡Hasta luego!" },
+            { who: "m", name: "Herr Berger", de: "Danke und auf Wiedersehen!", es: "¡Gracias y hasta luego!" },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué compra Clara?", options: ["Una mesa y una lámpara", "Una silla y una cama", "Un armario y una lámpara", "Una mesa y una ventana"], answer: "Una mesa y una lámpara", why: "Clara: «einen Tisch und eine Lampe»." },
+            { type: "fill", q: "¿Cuánto cuesta la mesa? (en euros)", answers: ["80", "achtzig"], hint: "Un número", why: "«achtzig Euro» = 80 €." },
+            { type: "fill", q: "¿Cuánto pagan en total? (en euros)", answers: ["100", "hundert"], hint: "Un número", why: "«Zusammen sind das hundert Euro»." },
+            { type: "tf", q: "La lámpara cuesta treinta euros.", answer: false, why: "«zwanzig Euro» = 20 €." },
+          ],
+        },
+      },
+      {
+        id: "beschreiben",
+        title: "Describir",
+        goal: "Describir una vivienda con groß, klein, neu, alt, hell y schön.",
+        vocab: [
+          { de: "groß", es: "grande", emoji: "🔼", note: "Después de «ist» el adjetivo no cambia: «Die Wohnung ist groß». La «ß» es una «s» fuerte." },
+          { de: "klein", es: "chico / pequeño", emoji: "🔽", note: "«ei» suena como «ai»: «klain»." },
+          { de: "schön", es: "lindo / bonito", emoji: "✨", note: "La «ö» se dice con labios de «o» y lengua de «e». «sch» suena como «sh»." },
+          { de: "neu", es: "nuevo", emoji: "🆕", note: "«eu» suena como «oi»: «noi»." },
+          { de: "Die Wohnung ist alt", es: "El departamento es viejo", emoji: "🏚️", note: "«alt» ya lo viste con la edad («Ich bin 30 Jahre alt»); con las cosas significa «viejo»." },
+          { de: "hell", es: "luminoso / claro", emoji: "☀️", note: "Una vivienda «hell» tiene mucha luz." },
+          { de: "sehr hell", es: "muy luminoso", emoji: "🌞", note: "«sehr» = muy." },
+          { de: "klein, aber schön", es: "chico, pero lindo", emoji: "💛", note: "«aber» = pero." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Die Wohnung ist groß", es: "El departamento es grande" },
+          { kind: "build", es: "El departamento es chico", answer: "Die Wohnung ist klein", extra: ["groß", "das", "Haus"] },
+          { kind: "build", es: "El baño es nuevo", answer: "Das Bad ist neu", extra: ["alt", "die", "Küche"] },
+          { kind: "write", es: "La cocina es luminosa", references: ["Die Küche ist hell"], hint: "«Küche» es femenino: «die»." },
+          { kind: "dictation", de: "klein, aber schön", es: "chico, pero lindo" },
+          { kind: "write", es: "El departamento es muy lindo", references: ["Die Wohnung ist sehr schön"] },
+          { kind: "speak", de: "Die Küche ist alt", es: "La cocina es vieja" },
+        ],
+        dialogue: {
+          title: "Fotos de la casa nueva",
+          setting: "Max mira fotos del departamento de Lena",
+          lines: [
+            { who: "m", name: "Max", de: "Lena, ist das deine neue Wohnung?", es: "Lena, ¿este es tu departamento nuevo?" },
+            { who: "f", name: "Lena", de: "Ja! Sie ist neu und sehr hell.", es: "¡Sí! Es nuevo y muy luminoso." },
+            { who: "m", name: "Max", de: "Ist sie groß?", es: "¿Es grande?" },
+            { who: "f", name: "Lena", de: "Nein, sie ist klein, aber sehr schön.", es: "No, es chico, pero muy lindo." },
+            { who: "m", name: "Max", de: "Und das Bad? Ist es alt?", es: "¿Y el baño? ¿Es viejo?" },
+            { who: "f", name: "Lena", de: "Nein, das Bad ist neu. Die Küche ist alt.", es: "No, el baño es nuevo. La cocina es vieja." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cómo es el departamento de Lena?", options: ["Chico, pero muy lindo", "Grande y viejo", "Grande y luminoso", "Chico y caro"], answer: "Chico, pero muy lindo", why: "Lena: «klein, aber sehr schön»." },
+            { type: "choice", q: "¿Qué es lo que está viejo?", options: ["La cocina", "El baño", "El living", "La puerta"], answer: "La cocina", why: "Lena: «Die Küche ist alt»." },
+            { type: "tf", q: "El departamento de Lena es nuevo.", answer: true, why: "Lena: «Sie ist neu»." },
+            { type: "tf", q: "El baño es viejo.", answer: false, why: "Lena: «das Bad ist neu»." },
+          ],
+        },
+      },
+      {
+        id: "suchen",
+        title: "Buscar un departamento",
+        goal: "Decir que buscás un departamento y entender el alquiler.",
+        vocab: [
+          { de: "Ich suche eine Wohnung", es: "Busco un departamento", emoji: "🔎", note: "«suchen» = buscar. «Wohnung» es femenino: «eine»." },
+          { de: "die Miete", es: "el alquiler", emoji: "💶", note: "Femenino. Es lo que se paga por mes." },
+          { de: "im Monat", es: "por mes", emoji: "📅", note: "Literal: «en el mes»." },
+          { de: "sechshundert Euro", es: "seiscientos euros", emoji: "💰", note: "100 = hundert. 600 = sechs + hundert, todo junto: sechshundert." },
+          
+          { de: "günstig", es: "barato / conveniente", emoji: "🏷️", note: "Suena más amable que «billig», que puede sonar a «de mala calidad»." },
+          { de: "Wie viele Zimmer hat die Wohnung?", es: "¿Cuántos ambientes tiene el departamento?", emoji: "❓", note: "«hat» viene de «haben»: er/sie/es hat." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Ich suche eine Wohnung", es: "Busco un departamento" },
+          { kind: "build", es: "Busco un departamento", answer: "Ich suche eine Wohnung", extra: ["einen", "Haus", "möchte"] },
+          { kind: "write", es: "El alquiler es caro", references: ["Die Miete ist teuer"] },
+          { kind: "dictation", de: "sechshundert Euro", es: "seiscientos euros" },
+          { kind: "speak", de: "Was kostet die Wohnung im Monat?", es: "¿Cuánto cuesta el departamento por mes?" },
+          { kind: "write", es: "¿Cuántos ambientes tiene el departamento?", references: ["Wie viele Zimmer hat die Wohnung?"] },
+        ],
+        dialogue: {
+          title: "En la inmobiliaria",
+          setting: "Herr Weber busca un departamento y habla con Frau Bauer",
+          lines: [
+            { who: "m", name: "Herr Weber", de: "Guten Tag, ich suche eine Wohnung.", es: "Buenas tardes, busco un departamento." },
+            { who: "f", name: "Frau Bauer", de: "Gern. Hier ist eine Wohnung. Sie hat zwei Zimmer, eine Küche und ein Bad.", es: "Con gusto. Acá hay un departamento. Tiene dos ambientes, una cocina y un baño." },
+            { who: "m", name: "Herr Weber", de: "Was kostet die Wohnung im Monat?", es: "¿Cuánto cuesta el departamento por mes?" },
+            { who: "f", name: "Frau Bauer", de: "Die Miete ist sechshundert Euro im Monat.", es: "El alquiler es de seiscientos euros por mes." },
+            { who: "m", name: "Herr Weber", de: "Das ist günstig. Ich möchte die Wohnung.", es: "Es conveniente. Quisiera el departamento." },
+            { who: "f", name: "Frau Bauer", de: "Sehr gut. Willkommen!", es: "Muy bien. ¡Bienvenido!" },
+          ],
+          questions: [
+            { type: "fill", q: "¿Cuánto es el alquiler por mes? (en euros)", answers: ["600", "sechshundert"], hint: "Un número", why: "«sechshundert Euro im Monat»." },
+            { type: "fill", q: "¿Cuántos «Zimmer» tiene el departamento?", answers: ["2", "zwei"], hint: "Un número", why: "«zwei Zimmer, eine Küche und ein Bad»." },
+            { type: "tf", q: "Herr Weber piensa que el alquiler es caro.", answer: false, why: "Dice «günstig»: es conveniente." },
+            { type: "choice", q: "¿Qué hace Herr Weber al final?", options: ["Dice que quiere el departamento", "Busca otro departamento", "Pide un descuento", "Se va sin decidir"], answer: "Dice que quiere el departamento", why: "«Ich möchte die Wohnung»." },
+          ],
+        },
+      },
+      {
+        id: "plural",
+        title: "Gramática: el plural",
+        goal: "Entender cómo se forma el plural y qué artículo lleva.",
+        icon: "🔤",
+        vocab: [],
+        grammar: [
+          {
+            title: "En plural, el artículo es siempre «die»",
+            body: [
+              "En alemán el plural cambia la palabra (y a veces la vocal), pero el artículo es siempre «die»: da igual si el singular es der, die o das.",
+              "Por eso conviene aprender cada palabra junto con su plural.",
+            ],
+            table: {
+              head: ["Singular", "Plural"],
+              rows: [["der Tisch", "die Tische"], ["die Lampe", "die Lampen"], ["das Bett", "die Betten"], ["das Fenster", "die Fenster"]],
+            },
+          },
+          {
+            title: "Las terminaciones más comunes",
+            body: ["No hay una regla perfecta, pero estos patrones sirven para adivinar:"],
+            table: {
+              head: ["Patrón", "Ejemplo"],
+              rows: [
+                ["-n / -en (casi todas las femeninas)", "die Lampe → die Lampen"],
+                ["-e (muchas masculinas)", "der Tisch → die Tische"],
+                ["-e y la vocal pasa a ä/ö/ü", "der Stuhl → die Stühle"],
+                ["sin cambio (palabras en -er, -el, -en)", "das Zimmer → die Zimmer"],
+                ["-s (palabras de otros idiomas)", "das Sofa → die Sofas"],
+              ],
+            },
+          },
+          {
+            title: "«Das ist» pasa a «Das sind»",
+            body: ["Con un solo objeto se dice «Das ist…». Con varios, el verbo también cambia: «Das sind…». Y en plural no existe «ein»: se dice la palabra sola o con un número."],
+            examples: [
+              { de: "Das ist ein Tisch.", es: "Esto es una mesa." },
+              { de: "Das sind zwei Tische.", es: "Estas son dos mesas." },
+              { de: "Das sind meine Stühle.", es: "Estas son mis sillas." },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "¿Cuál es el plural de «der Stuhl»?", options: ["die Stühle", "die Stuhle", "die Stuhlen", "die Stuhls"], answer: "die Stühle", explanation: "Masculina que agrega -e, y la «u» pasa a «ü».", category: "gramática" },
+          { kind: "quiz", question: "¿Qué artículo lleva «Bett» en plural?", options: ["die", "das", "der", "den"], answer: "die", explanation: "En plural siempre es «die»: die Betten.", category: "artículo/género" },
+          { kind: "quiz", question: "¿Cuál es el plural de «die Lampe»?", options: ["die Lampen", "die Lämpe", "die Lampe", "die Lampes"], answer: "die Lampen", explanation: "Femenina: agrega -n (o -en).", category: "gramática" },
+          { kind: "quiz", question: "¿Cuál es el plural de «die Tür»?", options: ["die Türen", "die Türe", "die Tür", "die Türs"], answer: "die Türen", explanation: "Femenina: agrega -en.", category: "gramática" },
+          { kind: "quiz", question: "¿Cuál oración es correcta?", options: ["Das sind zwei Zimmer.", "Das ist zwei Zimmer.", "Das sind zwei Zimmers.", "Das sind zwei Zimmere."], answer: "Das sind zwei Zimmer.", explanation: "Varios objetos: «Das sind». Y «Zimmer» no cambia en plural.", category: "gramática" },
+          { kind: "build", es: "Las lámparas son nuevas", answer: "Die Lampen sind neu", extra: ["ist", "Lampe", "alt"] },
+          { kind: "build", es: "Estas son dos mesas", answer: "Das sind zwei Tische", extra: ["ist", "Tisch", "drei"] },
+          { kind: "write", es: "las ventanas", references: ["die Fenster"] },
+          { kind: "write", es: "las sillas", references: ["die Stühle"], hint: "La «u» pasa a «ü»." },
+          { kind: "dictation", de: "die Schränke", es: "los armarios" },
+          { kind: "speak", de: "Das sind meine Stühle", es: "Estas son mis sillas" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Visitar un departamento en Hamburgo",
+      scenario:
+        "Sos Frau Schmidt, dueña de un departamento en Hamburgo que se alquila. Atendés al usuario de usted (Sie). Le preguntás qué busca y cuántos Zimmer necesita, le mostrás el departamento y le contestás lo que pregunte. Datos: zwei Zimmer (Wohnzimmer y Schlafzimmer), eine Küche (alt), ein Bad (neu), die Wohnung ist klein, aber hell und schön; die Miete ist sechshundert Euro im Monat. Usá frases cortas de nivel A1 y evitá el dativo y los tiempos pasados.",
+      opener: "Guten Tag! Sie suchen eine Wohnung?",
+      openerEs: "¡Buenas tardes! ¿Busca un departamento?",
+    },
+  },
+];

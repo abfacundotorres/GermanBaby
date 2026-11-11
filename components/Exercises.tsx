@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Step } from "@/lib/session";
-import { compareLocal, shuffle, tiles } from "@/lib/text";
+import { compareLocal, matchFill, shuffle, tiles } from "@/lib/text";
 import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
-import { recordPronunciation } from "@/lib/progress";
+import { recordPronunciation, useProgress } from "@/lib/progress";
+import { speak } from "@/lib/speech";
+import { DialoguePlayer } from "./Dialogue";
 import { sfx } from "@/lib/sfx";
 import { callAi } from "@/lib/ai";
 import { AudioButtons } from "./Audio";
@@ -392,6 +394,94 @@ export function Quiz({ step, locked, onResult }: Props<StepOf<"quiz">>) {
             : { status: "bad", detail: <>Correcto: <b>{step.answer}</b>. {step.explanation}</>, answer: o, expected: step.answer, category: step.category, mistakes: [{ category: step.category, wrong: o, right: step.answer, explanation: step.explanation }] })
         }
       />
+    </div>
+  );
+}
+
+// ---------------- Regla de gramática ----------------
+export function Rule({ step }: { step: StepOf<"rule"> }) {
+  const { voice } = useProgress();
+  const r = step.rule;
+  return (
+    <div className="stack">
+      <div className="prompt-label">Gramática · {step.n} de {step.total}</div>
+      <div className="h2" style={{ margin: 0 }}>{r.title}</div>
+      {r.body.map((p, i) => <p key={i} style={{ margin: 0 }}>{p}</p>)}
+      {r.table && (
+        <div className="table-wrap">
+          <table className="gtable">
+            <thead><tr>{r.table.head.map((h) => <th key={h}>{h}</th>)}</tr></thead>
+            <tbody>
+              {r.table.rows.map((row, i) => (
+                <tr key={i}>{row.map((c, j) => <td key={j} lang={j === 0 ? undefined : "de"}>{c}</td>)}</tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {r.examples?.map((e) => (
+        <div key={e.de} className="card row" style={{ padding: 12 }}>
+          <div style={{ flex: 1 }}>
+            <div lang="de"><b>{e.de}</b></div>
+            <div className="small muted">{e.es}</div>
+          </div>
+          <button className="btn btn-round" aria-label="Escuchar" onClick={() => void speak(e.de, { voice }).catch(() => {})}>🔊</button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ---------------- Escucha larga: diálogo + preguntas ----------------
+export function ListenQ({ step, locked, onResult }: Props<StepOf<"listenq">>) {
+  const { question: q, dialogue: d } = step;
+  const [value, setValue] = useState("");
+  const [answered, setAnswered] = useState(false);
+  const bad = (picked: string, right: string): Outcome => ({
+    status: "bad",
+    detail: <><b>Correcto: {right}.</b>{q.why ? ` ${q.why}` : ""}</>,
+    answer: picked,
+    expected: right,
+    category: "comprensión auditiva",
+    mistakes: [{ category: "comprensión auditiva", wrong: picked, right, explanation: q.why }],
+  });
+  const good = (): Outcome => ({ status: "ok", detail: q.why });
+  const report = (o: Outcome) => { setAnswered(true); onResult(o); };
+
+  let input: React.ReactNode;
+  if (q.type === "fill") {
+    const check = () => report(matchFill(value, q.answers) ? good() : bad(value.trim(), q.answers[0]));
+    input = (
+      <div className="stack">
+        <input
+          className="input"
+          value={value}
+          placeholder={q.hint ?? "Escribí lo que escuchaste…"}
+          disabled={locked}
+          autoCapitalize="off"
+          autoCorrect="off"
+          spellCheck={false}
+          inputMode="text"
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && value.trim() && check()}
+        />
+        {!locked && <button className="btn btn-primary btn-block" disabled={!value.trim()} onClick={check}>Comprobar</button>}
+      </div>
+    );
+  } else {
+    const options = q.type === "tf" ? ["Verdadero", "Falso"] : q.options;
+    const right = q.type === "tf" ? (q.answer ? "Verdadero" : "Falso") : q.answer;
+    input = <Options options={options} answer={right} locked={locked} onPick={(o) => report(o === right ? good() : bad(o, right))} />;
+  }
+
+  return (
+    <div className="stack">
+      <div className="prompt-label">Escucha · pregunta {step.n} de {step.total}</div>
+      <div className="small muted">{d.title} · {d.setting}</div>
+      <DialoguePlayer dialogue={d} autoPlay={step.n === 1} reveal={locked || answered} />
+      {q.type === "tf" && <div className="prompt-label">¿Verdadero o falso?</div>}
+      <div className="h2" style={{ margin: 0 }}>{q.q}</div>
+      {input}
     </div>
   );
 }

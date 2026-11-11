@@ -54,7 +54,9 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 | Traducción libre | Producción escrita | Claude: gramática, artículo/género, orden, vocabulario, ortografía y significado |
 | Decilo en voz alta | Pronunciación | Azure: puntaje total y por palabra y fonema, más consejos |
 | Charla de rol | Interacción | Claude (gramática y sentido en contexto) + Azure en modo libre |
-| Pregunta con explicación | Gramática dirigida | Local (opciones y explicación generadas por Claude en «Mis errores») |
+| Pregunta con explicación | Gramática dirigida | Local (en las lecciones de gramática está escrita a mano; en «Mis errores» la genera Claude) |
+| Escucha larga | Comprensión de un diálogo de 4 a 6 líneas con dos voces | Local: opción múltiple, verdadero/falso y dato oído (número, precio, hora) |
+| Tarjeta de regla | Gramática explícita | – (se lee y se pasa con «Entendido») |
 
 ## 5. Gamificación
 
@@ -89,9 +91,15 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 7. **En el mercado**: 11-100, cantidades, precios.
 8. **Mi día**: rutina, verbos separables (`aufstehen`, `einkaufen`), `zuerst/dann/danach`.
 
-Hoja de ruta (próximas unidades): la casa · la ciudad y las preposiciones con dativo · comida y gustos (`mögen`, `essen`) · modales (`können`, `müssen`) · pasado básico (Perfekt) · preparación para el examen A1.
+9. **La casa**: ambientes, muebles, describir (`groß`, `klein`, `neu`…), buscar departamento y alquiler, y una lección de gramática sobre el plural.
+
+Cada unidad nueva sigue este formato: 3 a 4 lecciones de vocabulario, **cada una con una escucha larga**, una **lección de gramática** y la charla de rol. Las unidades 1 a 8 todavía no tienen escucha larga ni lección de gramática.
+
+Hoja de ruta (próximas unidades): la ciudad y las preposiciones con dativo · comida y gustos (`mögen`, `essen`) · modales (`können`, `müssen`) · pasado básico (Perfekt) · preparación para el examen A1.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
+
+**Escucha larga** (`Lesson.dialogue`, `components/Dialogue.tsx`): un diálogo de 4 a 6 líneas con dos voces (Katja y Conrad). Cada pregunta es un ejercicio calificado (corazones, XP y registro de errores como «comprensión auditiva»); el texto y la traducción aparecen recién al responder. `speakDialogue` (`lib/speech.ts`) reproduce línea por línea y prepara la siguiente mientras suena la actual, de a una por vez para no saturar el plan gratuito de Azure; cada línea pasa por el caché de audio. **Lección de gramática** (`Lesson.grammar`): tarjetas de regla con tabla y ejemplos con audio, y después ejercicios escritos a mano. Las pruebas de `tests/content.test.ts` validan todo el contenido (opciones, fichas, respuestas, largo de los diálogos).
 
 ## 7. Costos (uso personal, 1 hora diaria o menos)
 

@@ -16,8 +16,14 @@ let tokenCache: { token: string; region: string; expires: number } | null = null
 
 export class SpeechNotConfigured extends Error {}
 
-async function getToken() {
+type TokenInfo = { token: string; region: string; expires: number };
+let tokenInflight: Promise<TokenInfo> | null = null;
+async function getToken(): Promise<TokenInfo> {
   if (tokenCache && tokenCache.expires > Date.now()) return tokenCache;
+  return (tokenInflight ??= fetchToken().finally(() => { tokenInflight = null; }));
+}
+
+async function fetchToken(): Promise<TokenInfo> {
   const res = await fetch("/api/speech-token", { method: "POST" });
   if (res.status === 503) throw new SpeechNotConfigured("Azure Speech no está configurado.");
   if (!res.ok) throw new Error(`No pude obtener el token de voz (${res.status}).`);
@@ -93,14 +99,19 @@ const escapeXml = (s: string) =>
   s.replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]!);
 
 let currentAudio: HTMLAudioElement | null = null;
+let playGen = 0; // se incrementa al detener, para cortar secuencias en curso
 
-function play(blob: Blob) {
+/** Reproduce el clip. Con `untilEnd` espera a que termine; si no, vuelve cuando empieza. */
+async function playBlob(blob: Blob, untilEnd = false) {
   currentAudio?.pause();
   const url = URL.createObjectURL(blob);
   const audio = new Audio(url);
-  audio.onended = audio.onerror = () => URL.revokeObjectURL(url);
   currentAudio = audio;
-  return audio.play();
+  const ended = new Promise<void>((resolve) => {
+    audio.onended = audio.onerror = audio.onpause = () => { URL.revokeObjectURL(url); resolve(); };
+  });
+  await audio.play();
+  if (untilEnd) await ended;
 }
 
 /** Pide el audio a Azure (sin reproducirlo) y devuelve el MP3. */
@@ -128,29 +139,83 @@ async function synthesize(text: string, voice: string, slow: boolean): Promise<B
   });
 }
 
+/** Audio de una frase: del caché del dispositivo o, si no está, de Azure (y lo guarda). */
+async function getAudio(text: string, voice: string, slow: boolean): Promise<Blob> {
+  const key = clipKey(voice, slow, text);
+  const cached = await getClip(key);
+  if (cached) return cached;
+  const blob = await synthesize(text, voice, slow);
+  void putClip(key, blob);
+  return blob;
+}
+
+function browserSpeak(text: string, slow: boolean, untilEnd = false) {
+  return new Promise<void>((resolve) => {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "de-DE";
+    u.rate = slow ? 0.6 : 0.95;
+    u.onend = u.onerror = () => resolve();
+    window.speechSynthesis.speak(u);
+    // Algunos navegadores no avisan cuando terminan (o no tienen voz alemana): no quedarse esperando.
+    setTimeout(resolve, untilEnd ? 1500 + text.length * 110 : 0);
+  });
+}
+
 export async function speak(text: string, opts: { slow?: boolean; voice?: string } = {}) {
   const voice = opts.voice ?? "de-DE-KatjaNeural";
   const slow = !!opts.slow;
+  playGen++;
   try {
-    const key = clipKey(voice, slow, text);
-    let blob = await getClip(key);
-    if (!blob) {
-      blob = await synthesize(text, voice, slow);
-      void putClip(key, blob);
-    }
-    await play(blob);
+    await playBlob(await getAudio(text, voice, slow));
   } catch (err) {
     // Sin Azure (o sin red): voz del navegador como respaldo.
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = "de-DE";
-      u.rate = slow ? 0.6 : 0.95;
-      window.speechSynthesis.speak(u);
-      return;
-    }
+    if (typeof window !== "undefined" && "speechSynthesis" in window) return browserSpeak(text, slow);
     throw err;
   }
+}
+
+export const DIALOGUE_VOICES = { f: "de-DE-KatjaNeural", m: "de-DE-ConradNeural" } as const;
+
+/** Corta lo que esté sonando, incluida una secuencia de diálogo. */
+export function stopSpeaking() {
+  playGen++;
+  currentAudio?.pause();
+  if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+}
+
+/**
+ * Reproduce un diálogo línea por línea con la voz de cada personaje. Mientras suena una línea
+ * se prepara la siguiente (de a una por vez, para no saturar el plan gratuito de Azure).
+ * Termina cuando acaba el diálogo o cuando se llama a stopSpeaking().
+ */
+export async function speakDialogue(
+  lines: { text: string; who: "f" | "m" }[],
+  opts: { slow?: boolean; onLine?: (i: number) => void } = {},
+) {
+  const slow = !!opts.slow;
+  const gen = ++playGen;
+  currentAudio?.pause();
+  let azure = true;
+  const prepare = (i: number) =>
+    getAudio(lines[i].text, DIALOGUE_VOICES[lines[i].who], slow).catch(() => null);
+  let next: Promise<Blob | null> | null = prepare(0);
+  for (let i = 0; i < lines.length; i++) {
+    const blob = await next;
+    if (gen !== playGen) return;
+    next = i + 1 < lines.length && azure ? prepare(i + 1) : null;
+    opts.onLine?.(i);
+    if (blob) await playBlob(blob, true).catch(() => {});
+    else if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      azure = false;
+      await browserSpeak(lines[i].text, slow, true);
+    } else return;
+    if (gen !== playGen) return;
+    if (!azure && i + 1 < lines.length) next = Promise.resolve(null);
+    await new Promise((r) => setTimeout(r, 350)); // pausa entre personajes
+    if (gen !== playGen) return;
+  }
+  opts.onLine?.(-1);
 }
 
 // ---------------- Evaluación de pronunciación ----------------

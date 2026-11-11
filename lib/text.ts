@@ -71,3 +71,11 @@ export function shuffle<T>(arr: T[]): T[] {
 export function tiles(sentence: string) {
   return sentence.replace(/[.,!?]/g, "").split(/\s+/).filter(Boolean);
 }
+
+/** Respuesta a un dato oído (número, hora, precio): ignora €, «euro», «Uhr», espacios y coma/punto decimal. */
+export function matchFill(input: string, answers: string[]) {
+  const norm = (x: string) =>
+    x.toLowerCase().normalize("NFC").replace(/€|euros?|uhr/g, "").replace(/\s+/g, "").replace(",", ".");
+  const n = norm(input);
+  return n !== "" && answers.some((a) => norm(a) === n);
+}

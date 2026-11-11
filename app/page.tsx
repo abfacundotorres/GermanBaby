@@ -127,7 +127,7 @@ export default function Home() {
                           aria-label={lesson ? `${lesson.title}${record ? `, ${record.stars} estrellas` : unlocked ? "" : ", bloqueada"}` : `Charla: ${unit.chat.title}`}
                           onClick={() => { sfx.tap(); setSelected(selected === n.key ? null : n.key); }}
                         >
-                          {n.kind === "chat" ? (unlocked ? "💬" : "🔒") : record ? "✓" : unlocked ? lesson!.vocab[0].emoji ?? "★" : "🔒"}
+                          {n.kind === "chat" ? (unlocked ? "💬" : "🔒") : record ? "✓" : unlocked ? lesson!.icon ?? lesson!.vocab[0]?.emoji ?? "★" : "🔒"}
                         </button>
                         {record && <div className="node-stars">{"★".repeat(record.stars)}{"☆".repeat(3 - record.stars)}</div>}
                       </div>
