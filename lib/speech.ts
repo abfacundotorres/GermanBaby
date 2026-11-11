@@ -215,7 +215,7 @@ function setupAssessment(sdk: SDK, recognizer: Recognizer, referenceText: string
     Boolean(referenceText), // detectar omisiones/inserciones solo si hay guion
   );
   pa.phonemeAlphabet = "IPA";
-  pa.enableProsodyAssessment = true;
+  // Sin evaluación de prosodia: la app no la muestra y Azure parece cobrarla aparte (complemento «enhanced»).
   pa.applyTo(recognizer);
 }
 

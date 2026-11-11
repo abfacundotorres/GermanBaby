@@ -113,7 +113,7 @@ Supuestos por hora: 3 lecciones, 8 correcciones que requieren IA, 25 turnos de c
 
 **Desglose por servicio:** Perfil → «¿En qué se gasta?» muestra, para el mes, los usos y el costo de cada función de Claude (corrección, charla, práctica), los caracteres de voz y los minutos de micrófono de Azure contra su cuota gratuita, y que los sonidos y Vercel no cuestan. Lo de Azure fuera de la cuota se estima con precios aproximados que no pude confirmar.
 
-**Azure (plan gratuito F0):** el uso previsto es de 2 a 3 horas de micrófono por mes (el plan incluye 5) y ~105.000 caracteres de voz por mes (incluye 500.000). No pude confirmar si la evaluación de pronunciación cuenta dentro de las horas gratis; en el peor caso serían pocos dólares por mes. Verificalo en la página de precios de Azure.
+**Azure (plan gratuito F0):** el uso previsto es de 2 a 3 horas de micrófono por mes (el plan incluye 5) y ~105.000 caracteres de voz por mes (incluye 500.000). La evaluación de pronunciación básica se factura como reconocimiento de voz estándar, así que descuenta de las mismas 5 horas gratis (esto surge de la documentación de Microsoft según una búsqueda; no pude abrir la página original). Azure cobra aparte los complementos «enhanced» (prosodia, gramática, vocabulario, tema); la app no los pide. Con el plan F0 no debería haber cargos: al agotarse la cuota, Azure rechaza las llamadas hasta el mes siguiente. Verificalo en la página de precios de Azure.
 
 ## 8. Errores y práctica dirigida
 

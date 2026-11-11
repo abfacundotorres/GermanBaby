@@ -42,7 +42,7 @@ test("azureCost: dentro de la cuota gratuita no cuesta nada", () => {
   assert.deepEqual(azureCost({ ttsChars: 120_000, sttSeconds: 600 }), { stt: 0, tts: 0 });
   const over = azureCost({ ttsChars: 1_500_000, sttSeconds: 6 * 3600 });
   assert.equal(over.tts, 15);
-  assert.equal(Number(over.stt.toFixed(2)), 1.3);
+  assert.equal(Number(over.stt.toFixed(2)), 1);
 });
 
 test("costUsd: precios conocidos y modelo desconocido", () => {
