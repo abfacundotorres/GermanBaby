@@ -5,6 +5,7 @@
 import type { MistakeCategory } from "./mistakes.ts";
 import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
 import { UNITS_A1_PART3 } from "./content/a1-part3.ts";
+import { UNITS_A1_PART4 } from "./content/a1-part4.ts";
 
 export type Vocab = {
   de: string;
@@ -287,7 +288,7 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3];
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4];
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);
