@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
 import { UNITS, lessonKey } from "@/lib/curriculum";
+import { levelRules, type Level } from "@/lib/level";
 import { ALL_CATEGORIES, TEXT_CATEGORIES } from "@/lib/mistakes";
 import { tiles } from "@/lib/text";
 
@@ -41,18 +42,18 @@ const Practice = z.object({
       question: z.string().describe("Pregunta en español, p. ej. «Completá: ___ Mutter» o «¿Cuál está bien?»."),
       options: z.array(z.string()).describe("3 o 4 opciones distintas."),
       answer: z.string().describe("La opción correcta, idéntica a una de options."),
-      explanation: z.string().describe("Por qué, en una línea, nivel A1."),
+      explanation: z.string().describe("Por qué, en una línea, al nivel del alumno."),
       category: z.enum(TEXT_CATEGORIES),
     }),
   ),
 });
 export type PracticeResult = z.infer<typeof Practice>;
 
-const SYSTEM = `Sos un profesor de alemán para hispanohablantes rioplatenses de nivel A1. A partir de los errores recientes del alumno, diseñás una práctica corta y dirigida.
+const system = (level: Level) => `Sos un profesor de alemán para hispanohablantes rioplatenses de nivel ${level}. A partir de los errores recientes del alumno, diseñás una práctica corta y dirigida.
 
-- Detectá 1 o 2 patrones (p. ej. «einen» con masculinos en acusativo, el verbo en segundo lugar, «-st» con du, los verbos separables). Priorizá lo que se repite.
+- Detectá 1 o 2 patrones (p. ej. «einen» con masculinos en acusativo, el verbo en segundo lugar, «-st» con du, los verbos separables, el participio al final, la terminación de los adjetivos). Priorizá lo que se repite.
 - Generá exactamente 3 ejercicios de cada tipo (build, write, quiz) que ataquen esos patrones con frases NUEVAS: no repitas las frases donde se equivocó.
-- Usá solo alemán A1 y, en lo posible, el vocabulario que el alumno ya estudió.
+- Usá solo alemán de nivel ${level} (${levelRules(level)}) y, en lo posible, el vocabulario que el alumno ya estudió.
 - Los errores de pronunciación o de comprensión auditiva no se practican por escrito: si solo hay de esos, armá ejercicios con esas mismas palabras para fijar su forma escrita y su significado.
 - Español rioplatense (vos) en consignas, pistas y explicaciones.`;
 
@@ -65,6 +66,8 @@ export async function POST(req: Request) {
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
 
   const studied = new Set(parsed.data.studied);
+  // Si ya estudió alguna lección de una unidad A2, la práctica es de nivel A2.
+  const level: Level = UNITS.some((u) => u.level === "A2" && u.lessons.some((l) => studied.has(lessonKey(u.id, l.id)))) ? "A2" : "A1";
   const vocab = UNITS.flatMap((u) =>
     u.lessons.filter((l) => studied.has(lessonKey(u.id, l.id))).flatMap((l) => l.vocab.map((v) => v.de)),
   );
@@ -79,7 +82,7 @@ export async function POST(req: Request) {
   try {
     const { output: r, usage } = await structured({
       schema: Practice,
-      system: SYSTEM,
+      system: system(level),
       messages: [
         {
           role: "user",

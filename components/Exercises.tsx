@@ -9,6 +9,7 @@ import { speak } from "@/lib/speech";
 import { DialoguePlayer } from "./Dialogue";
 import { sfx } from "@/lib/sfx";
 import { callAi } from "@/lib/ai";
+import { getStudyLevel } from "@/lib/level";
 import { AudioButtons } from "./Audio";
 import { PronunciationReport } from "./PronunciationReport";
 import type { CorrectionResult } from "@/app/api/correct/route";
@@ -223,7 +224,7 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
     }
     setLoading(true);
     try {
-      const r = await callAi<CorrectionResult>("/api/correct", { es: step.es, references: step.references, answer, hint: step.hint }, "correct");
+      const r = await callAi<CorrectionResult>("/api/correct", { es: step.es, references: step.references, answer, hint: step.hint, level: getStudyLevel() }, "correct");
       const status: Status = r.verdict === "correct" ? "ok" : r.verdict === "almost" ? "almost" : "bad";
       onResult({
         status,

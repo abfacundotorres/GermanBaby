@@ -1,0 +1,208 @@
+// Unidad 17 (A2): ropa y compras, con los adjetivos declinados.
+
+import type { Unit } from "../curriculum.ts";
+
+export const UNITS_A2_PART2: Unit[] = [
+  {
+    id: "kleidung",
+    title: "Ropa y compras",
+    emoji: "👕",
+    level: "A2",
+    description: "Ropa, colores, talles y la terminación de los adjetivos.",
+    lessons: [
+      {
+        id: "kleider",
+        title: "La ropa",
+        goal: "Nombrar prendas y hablar con un vendedor.",
+        vocab: [
+          { de: "das T-Shirt", es: "la remera", emoji: "👕", note: "Neutro. Plural: die T-Shirts." },
+          { de: "die Hose", es: "el pantalón", emoji: "👖", note: "Femenino y singular en alemán: «die Hose»." },
+          { de: "die Jacke", es: "la campera / la chaqueta", emoji: "🧥" },
+          { de: "der Pullover", es: "el pulóver", emoji: "🧶", note: "Masculino. Se dice también «der Pulli»." },
+          { de: "das Kleid", es: "el vestido", emoji: "👗", note: "Plural: die Kleider." },
+          { de: "die Schuhe", es: "los zapatos", emoji: "👟", note: "Plural. El singular es «der Schuh»." },
+          { de: "der Rock", es: "la pollera / la falda", emoji: "🩱", note: "Masculino." },
+          { de: "Kann ich Ihnen helfen?", es: "¿Puedo ayudarlo?", emoji: "🛍️", note: "Lo dice el vendedor. «Ihnen» = a usted (dativo)." },
+        ],
+        exercises: [
+          { kind: "speak", de: "die Jacke", es: "la campera" },
+          { kind: "write", es: "los zapatos", references: ["die Schuhe"] },
+          { kind: "build", es: "Quisiera una campera", answer: "Ich möchte eine Jacke", extra: ["einen", "ein", "Hose"] },
+          { kind: "build", es: "Quisiera un pulóver", answer: "Ich möchte einen Pullover", extra: ["ein", "eine", "Rock"] },
+          { kind: "dictation", de: "das Kleid", es: "el vestido" },
+          { kind: "write", es: "el pantalón", references: ["die Hose"] },
+          { kind: "speak", de: "Kann ich Ihnen helfen?", es: "¿Puedo ayudarlo?" },
+        ],
+        dialogue: {
+          title: "En la tienda de ropa",
+          setting: "Herr Peters compra un pulóver y un pantalón",
+          lines: [
+            { who: "f", name: "Verkäuferin", de: "Guten Tag! Kann ich Ihnen helfen?", es: "¡Buenas tardes! ¿Puedo ayudarlo?" },
+            { who: "m", name: "Herr Peters", de: "Ja, ich suche eine Jacke.", es: "Sí, busco una campera." },
+            { who: "f", name: "Verkäuferin", de: "Hier haben wir eine Jacke. Sie kostet neunzig Euro.", es: "Acá tenemos una campera. Cuesta noventa euros." },
+            { who: "m", name: "Herr Peters", de: "Das ist zu teuer. Haben Sie auch einen Pullover?", es: "Es demasiado cara. ¿Tienen también un pulóver?" },
+            { who: "f", name: "Verkäuferin", de: "Ja, der Pullover kostet fünfundvierzig Euro.", es: "Sí, el pulóver cuesta cuarenta y cinco euros." },
+            { who: "m", name: "Herr Peters", de: "Gut, ich nehme den Pullover und die Hose.", es: "Bien, me llevo el pulóver y el pantalón." },
+            { who: "f", name: "Verkäuferin", de: "Die Hose kostet fünfzig Euro. Zusammen sind das fünfundneunzig Euro.", es: "El pantalón cuesta cincuenta euros. En total son noventa y cinco euros." },
+            { who: "m", name: "Herr Peters", de: "Perfekt. Hier, bitte.", es: "Perfecto. Tome." },
+          ],
+          questions: [
+            { type: "fill", q: "¿Cuánto cuesta la campera? (en euros)", answers: ["90", "neunzig"], hint: "Un número", why: "«neunzig Euro»." },
+            { type: "fill", q: "¿Cuánto cuesta el pulóver? (en euros)", answers: ["45", "fünfundvierzig"], hint: "Un número", why: "«fünfundvierzig Euro»." },
+            { type: "fill", q: "¿Cuánto paga en total? (en euros)", answers: ["95", "fünfundneunzig"], hint: "Sumá pulóver y pantalón", why: "45 + 50 = 95." },
+            { type: "choice", q: "¿Qué compra al final?", options: ["Un pulóver y un pantalón", "Una campera", "Una campera y un pulóver", "Un vestido"], answer: "Un pulóver y un pantalón", why: "«den Pullover und die Hose»." },
+          ],
+        },
+      },
+      {
+        id: "farben",
+        title: "Los colores",
+        goal: "Nombrar colores y preguntar por el color.",
+        vocab: [
+          { de: "rot", es: "rojo", emoji: "🔴" },
+          { de: "blau", es: "azul", emoji: "🔵", note: "«au» suena como «au»: «blau»." },
+          { de: "grün", es: "verde", emoji: "🟢", note: "La «ü» se dice con labios de «u» y lengua de «i»." },
+          { de: "gelb", es: "amarillo", emoji: "🟡" },
+          { de: "schwarz", es: "negro", emoji: "⚫", note: "«sch» suena como «sh»; «z» como «ts»: «shvarts»." },
+          { de: "weiß", es: "blanco", emoji: "⚪" },
+          { de: "braun", es: "marrón", emoji: "🟤" },
+          { de: "Welche Farbe?", es: "¿Qué color?", emoji: "🎨", note: "«die Farbe» = el color." },
+        ],
+        exercises: [
+          { kind: "speak", de: "rot", es: "rojo" },
+          { kind: "dictation", de: "schwarz", es: "negro" },
+          { kind: "write", es: "azul", references: ["blau"] },
+          { kind: "write", es: "verde", references: ["grün"] },
+          { kind: "build", es: "La campera es roja", answer: "Die Jacke ist rot", extra: ["der", "blau", "das"] },
+          { kind: "write", es: "El pantalón es negro", references: ["Die Hose ist schwarz"] },
+          { kind: "speak", de: "Das Kleid ist gelb", es: "El vestido es amarillo" },
+        ],
+        dialogue: {
+          title: "¿De qué color?",
+          setting: "Anna y Paul eligen ropa",
+          lines: [
+            { who: "f", name: "Anna", de: "Ich möchte eine Hose kaufen.", es: "Quiero comprar un pantalón." },
+            { who: "m", name: "Paul", de: "Welche Farbe?", es: "¿De qué color?" },
+            { who: "f", name: "Anna", de: "Schwarz oder blau? Ich mag Schwarz und Blau.", es: "¿Negro o azul? Me gustan el negro y el azul." },
+            { who: "m", name: "Paul", de: "Und der Pullover? Rot oder grün?", es: "¿Y el pulóver? ¿Rojo o verde?" },
+            { who: "f", name: "Anna", de: "Rot! Ich mag Rot.", es: "¡Rojo! Me gusta el rojo." },
+            { who: "m", name: "Paul", de: "Gut. Die Hose ist schwarz, und der Pullover ist rot. Das ist perfekt!", es: "Bien. El pantalón es negro y el pulóver es rojo. ¡Es perfecto!" },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué quiere comprar Anna primero?", options: ["Un pantalón", "Un pulóver", "Un vestido", "Zapatos"], answer: "Un pantalón", why: "«Ich möchte eine Hose kaufen»." },
+            { type: "choice", q: "¿De qué colores duda para el pantalón?", options: ["Negro o azul", "Rojo o verde", "Blanco o gris", "Amarillo o marrón"], answer: "Negro o azul", why: "«Schwarz oder blau?»" },
+            { type: "choice", q: "¿Qué color elige para el pulóver?", options: ["Rojo", "Verde", "Azul", "Negro"], answer: "Rojo", why: "«Rot! Ich mag Rot»." },
+            { type: "tf", q: "Anna quiere el pulóver verde.", answer: false, why: "Elige «Rot»." },
+          ],
+        },
+      },
+      {
+        id: "anprobieren",
+        title: "Probarse y talles",
+        goal: "Probarte ropa, decir el talle y opinar.",
+        vocab: [
+          { de: "die Größe", es: "el talle / el tamaño", emoji: "📏", note: "«ß» = «s» fuerte." },
+          { de: "Welche Größe haben Sie?", es: "¿Qué talle usa?", emoji: "❓" },
+          { de: "Das ist zu groß", es: "Es demasiado grande", emoji: "🔼", note: "«zu» + adjetivo = demasiado." },
+          { de: "Das ist zu klein", es: "Es demasiado chico", emoji: "🔽" },
+          { de: "Kann ich das anprobieren?", es: "¿Puedo probármelo?", emoji: "👗", note: "«anprobieren» = probarse; separable, pero con modal queda entero al final." },
+          { de: "Das passt gut", es: "Queda bien", emoji: "✅", note: "«passen» = quedar bien / combinar." },
+          { de: "Wie findest du das Kleid?", es: "¿Qué te parece el vestido?", emoji: "🤔", note: "«finden» = opinar, encontrar." },
+          { de: "Ich finde es schön", es: "Me parece lindo", emoji: "😍" },
+        ],
+        exercises: [
+          { kind: "speak", de: "Kann ich das anprobieren?", es: "¿Puedo probármelo?" },
+          { kind: "build", es: "Es demasiado grande", answer: "Das ist zu groß", extra: ["klein", "sehr", "Der"] },
+          { kind: "build", es: "Me parece lindo", answer: "Ich finde es schön", extra: ["findest", "das", "finden"] },
+          { kind: "write", es: "¿Qué te parece el vestido?", references: ["Wie findest du das Kleid"] },
+          { kind: "dictation", de: "die Größe", es: "el talle" },
+          { kind: "write", es: "Queda bien", references: ["Das passt gut"] },
+          { kind: "speak", de: "Das ist zu klein", es: "Es demasiado chico" },
+        ],
+        dialogue: {
+          title: "Probarse un vestido",
+          setting: "Frau Ortiz busca un vestido",
+          lines: [
+            { who: "m", name: "Verkäufer", de: "Guten Tag! Kann ich Ihnen helfen?", es: "¡Buenas tardes! ¿Puedo ayudarla?" },
+            { who: "f", name: "Frau Ortiz", de: "Ja, ich suche ein Kleid.", es: "Sí, busco un vestido." },
+            { who: "m", name: "Verkäufer", de: "Welche Größe haben Sie?", es: "¿Qué talle usa?" },
+            { who: "f", name: "Frau Ortiz", de: "Größe achtunddreißig.", es: "Talle treinta y ocho." },
+            { who: "m", name: "Verkäufer", de: "Hier ist ein Kleid in Größe achtunddreißig. Möchten Sie es anprobieren?", es: "Acá hay un vestido en talle treinta y ocho. ¿Quiere probárselo?" },
+            { who: "f", name: "Frau Ortiz", de: "Ja, gern. Oh, das Kleid ist zu klein.", es: "Sí, con gusto. Ay, el vestido es demasiado chico." },
+            { who: "m", name: "Verkäufer", de: "Dann nehmen Sie Größe vierzig.", es: "Entonces tome el talle cuarenta." },
+            { who: "f", name: "Frau Ortiz", de: "Ja! Das passt gut. Ich nehme es.", es: "¡Sí! Me queda bien. Me lo llevo." },
+          ],
+          questions: [
+            { type: "fill", q: "¿Qué talle usa Frau Ortiz al principio? (un número)", answers: ["38", "achtunddreißig", "achtunddreissig"], hint: "Un número", why: "«Größe achtunddreißig»." },
+            { type: "tf", q: "El vestido de talle 38 le queda bien.", answer: false, why: "«das Kleid ist zu klein»." },
+            { type: "fill", q: "¿Qué talle se lleva al final? (un número)", answers: ["40", "vierzig"], hint: "Un número", why: "«Größe vierzig»." },
+            { type: "tf", q: "Frau Ortiz se lleva el vestido.", answer: true, why: "«Ich nehme es»." },
+          ],
+        },
+      },
+      {
+        id: "adjektive",
+        title: "Gramática: los adjetivos",
+        goal: "Poner la terminación correcta a un adjetivo delante del sustantivo.",
+        icon: "🔤",
+        vocab: [],
+        grammar: [
+          {
+            title: "Después de «ist» no cambia; delante del sustantivo, sí",
+            body: [
+              "Si el adjetivo va después de «ist», queda tal cual: «Die Jacke ist rot». Si va delante del sustantivo, lleva una terminación que depende del género y del caso: «eine rote Jacke».",
+            ],
+            examples: [
+              { de: "Die Jacke ist rot.", es: "La campera es roja." },
+              { de: "Das ist eine rote Jacke.", es: "Esta es una campera roja." },
+            ],
+          },
+          {
+            title: "Con «ein» / «eine»",
+            body: ["El artículo «ein» no muestra el género del masculino ni del neutro, así que el adjetivo lo hace: -er (masculino) y -es (neutro)."],
+            table: {
+              head: ["", "m.", "f.", "n.", "plural"],
+              rows: [
+                ["Normal", "ein roter Pullover", "eine rote Jacke", "ein rotes Kleid", "rote Schuhe"],
+                ["Objeto", "einen roten Pullover", "eine rote Jacke", "ein rotes Kleid", "rote Schuhe"],
+              ],
+            },
+          },
+          {
+            title: "Con «der» / «die» / «das»",
+            body: ["Con el artículo definido el adjetivo casi siempre termina en -e o -en. Regla práctica: -e en singular (salvo el masculino objeto) y -en en plural y en «den»."],
+            table: {
+              head: ["", "m.", "f.", "n.", "plural"],
+              rows: [
+                ["Normal", "der rote Pullover", "die rote Jacke", "das rote Kleid", "die roten Schuhe"],
+                ["Objeto", "den roten Pullover", "die rote Jacke", "das rote Kleid", "die roten Schuhe"],
+              ],
+            },
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Ich möchte eine ___ Jacke. (rot)", options: ["rote", "roter", "rotes", "roten"], answer: "rote", explanation: "Femenino con «eine»: -e.", category: "gramática" },
+          { kind: "quiz", question: "Das ist ein ___ Pullover. (rot)", options: ["roter", "rote", "rotes", "roten"], answer: "roter", explanation: "Masculino con «ein», como sujeto: -er.", category: "gramática" },
+          { kind: "quiz", question: "Ich kaufe einen ___ Pullover. (blau)", options: ["blauen", "blauer", "blaue", "blaues"], answer: "blauen", explanation: "Masculino como objeto (einen): -en.", category: "gramática" },
+          { kind: "quiz", question: "Das Kleid ist ___.", options: ["schön", "schöne", "schönes", "schönen"], answer: "schön", explanation: "Después de «ist» el adjetivo no cambia.", category: "gramática" },
+          { kind: "quiz", question: "Ich nehme das ___ Kleid. (gelb)", options: ["gelbe", "gelben", "gelber", "gelbes"], answer: "gelbe", explanation: "Neutro con «das»: -e.", category: "gramática" },
+          { kind: "quiz", question: "Die ___ Schuhe sind neu. (schwarz)", options: ["schwarzen", "schwarze", "schwarzer", "schwarzes"], answer: "schwarzen", explanation: "Plural con «die»: -en.", category: "gramática" },
+          { kind: "quiz", question: "Ich suche ___ Schuhe. (schwarz, sin artículo)", options: ["schwarze", "schwarzen", "schwarzer", "schwarzes"], answer: "schwarze", explanation: "Plural sin artículo: -e.", category: "gramática" },
+          { kind: "build", es: "Quisiera una campera roja", answer: "Ich möchte eine rote Jacke", extra: ["roter", "rot", "einen"] },
+          { kind: "build", es: "Este es un pulóver negro", answer: "Das ist ein schwarzer Pullover", extra: ["schwarze", "einen", "Kleid"] },
+          { kind: "write", es: "Quisiera un vestido azul", references: ["Ich möchte ein blaues Kleid"] },
+          { kind: "write", es: "Compro los zapatos negros", references: ["Ich kaufe die schwarzen Schuhe"] },
+          { kind: "dictation", de: "ein rotes Kleid", es: "un vestido rojo" },
+          { kind: "speak", de: "Ich nehme den blauen Pullover", es: "Me llevo el pulóver azul" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Comprar ropa",
+      scenario:
+        "Sos Frau Lang, vendedora de una tienda de ropa en Hamburgo. Atendés al usuario de usted (Sie): le preguntás qué busca, qué color y qué talle, le sugerís prendas y le decís el precio. Stock: Jacke (rot, schwarz) 90 €, Pullover (blau, grün, rot) 45 €, Hose (schwarz, blau) 50 €, Kleid (gelb, rot) 60 €, Schuhe (schwarz, braun) 70 €; talles 36 a 44. Usá frases cortas de nivel A2 y adjetivos con su terminación.",
+      opener: "Guten Tag! Kann ich Ihnen helfen?",
+      openerEs: "¡Buenas tardes! ¿Puedo ayudarlo?",
+    },
+  },
+];

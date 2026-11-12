@@ -1,13 +1,16 @@
-// Currículo A1. Cada lección declara vocabulario (se presenta con tarjetas y
+// Currículo A1 y A2. Cada lección declara vocabulario (se presenta con tarjetas y
 // genera ejercicios automáticos de opción múltiple y escucha) y ejercicios
 // escritos a mano (armar frases, hablar, traducir, dictado).
 
 import type { MistakeCategory } from "./mistakes.ts";
+import type { Level } from "./level.ts";
 import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
 import { UNITS_A1_PART3 } from "./content/a1-part3.ts";
 import { UNITS_A1_PART4 } from "./content/a1-part4.ts";
 import { UNITS_A1_PART5 } from "./content/a1-part5.ts";
 import { UNITS_A1_PART6 } from "./content/a1-part6.ts";
+import { UNITS_A2_PART1 } from "./content/a2-part1.ts";
+import { UNITS_A2_PART2 } from "./content/a2-part2.ts";
 
 export type Vocab = {
   de: string;
@@ -57,6 +60,7 @@ export type Unit = {
   title: string;
   emoji: string;
   description: string;
+  level?: Level; // por defecto A1
   lessons: Lesson[];
   chat: {
     title: string;
@@ -290,7 +294,7 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6];
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2];
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);

@@ -80,6 +80,8 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 ## 6. Currículo
 
+A1 (14 unidades) y A2 (en curso). A1:
+
 14 unidades de A1 (las 8 primeras con 3 lecciones y charla de rol; de la 9 en adelante, con escucha larga y gramática):
 
 1. **¡Hallo!**: saludos, presentarse (`heißen`, `kommen aus`, du/Sie), «¿cómo andás?».
@@ -101,7 +103,15 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 Cada unidad nueva sigue este formato: 3 a 4 lecciones de vocabulario, **cada una con una escucha larga**, una **lección de gramática** y la charla de rol. Las unidades 1 a 8 todavía no tienen escucha larga ni lección de gramática.
 
-Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras. Lo que sigue sería A2 (Präteritum, adjetivos con declinación, oraciones subordinadas, verbos reflexivos…).
+Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
+
+**A2** (`Unit.level = "A2"`, en `lib/content/a2-part*.ts`): el camino muestra un cartel «Nivel A2» y el kicker de cada unidad dice el nivel. Los diálogos son más largos (hasta 8 líneas) y cada unidad tiene una lección de gramática. Las llamadas a Claude (corrección, charla, práctica) usan el nivel de la unidad (`lib/level.ts`).
+
+15. **Contar el pasado**: disculparse y dar razones (konnte, musste, wollte, war, hatte), vor/seit/früher, años (1990, 2016), estudios; gramática del pasado corto.
+16. **Cuerpo y salud**: partes del cuerpo y `weh tun`, el médico, verbos reflexivos; gramática de reflexivos e imperativo (du/ihr/Sie).
+17. **Ropa y compras**: ropa, colores, talles y opinión; gramática de la terminación de los adjetivos.
+
+Próximas unidades de A2 (pendientes): weil/dass/wenn (oraciones subordinadas), dativo con pronombres y regalos, preposiciones de lugar (¿dónde? / ¿adónde?), comparar y viajar (comparativo y superlativo, el clima), trabajo y planes (futuro con `werden`, `dürfen`/`sollen`, `würde gern`) y una unidad de preparación para el examen A2.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 

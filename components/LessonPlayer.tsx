@@ -8,6 +8,7 @@ import {
   resolveMistakes, reviewItem, tickCorrect, type Mistake,
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
+import { setStudyLevel, type Level } from "@/lib/level";
 import { Build, Choice, Dictation, Intro, Listen, ListenQ, Quiz, Rule, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
@@ -116,6 +117,7 @@ const clearSaved = (key?: string) => { try { if (key) localStorage.removeItem(SA
 type PlayerProps = {
   steps: Step[];
   title: string;
+  level?: Level; // nivel de la lección, para las correcciones con IA
   source?: Mistake["source"];
   /** Si se pasa, el avance se guarda y se puede retomar. */
   resumeKey?: string;
@@ -147,12 +149,14 @@ export function LessonPlayer(props: PlayerProps) {
 function Session({
   steps: initial,
   title,
+  level = "A1",
   source = "lesson",
   resumeKey,
   init,
   onFinish,
   onStepResult,
 }: PlayerProps & { init?: Saved }) {
+  useEffect(() => { setStudyLevel(level); }, [level]);
   const [queue, setQueue] = useState<Step[]>(init?.queue ?? initial);
   const [index, setIndex] = useState(init?.index ?? 0);
   const [feedback, setFeedback] = useState<Feedback | null>(null);

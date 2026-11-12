@@ -493,3 +493,6 @@ body {
 .cast { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 2px solid transparent; transition: background 0.15s, border-color 0.15s; }
 .cast.on { background: var(--surface-2); border-color: var(--primary); }
 .transcript-line { padding: 6px 0; border-top: 1px solid var(--border); }
+.level-divider { margin: 28px 0 12px; padding: 16px; border: 2px dashed var(--primary); border-radius: 22px; text-align: center; background: var(--surface-2); }
+.level-divider span { display: block; font-size: 22px; font-weight: 900; }
+.level-divider small { display: block; margin-top: 4px; color: var(--muted); font-weight: 700; }

@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
+import { levelRules } from "@/lib/level";
 import { getUnit } from "@/lib/curriculum";
 import { TEXT_CATEGORIES } from "@/lib/mistakes";
 
@@ -25,7 +26,7 @@ const Turn = z.object({
       }),
     ).describe("Un elemento por error; vacío si no hay errores."),
   }),
-  reply_de: z.string().describe("Respuesta del personaje en alemán A1: máximo 2 frases cortas, termina con una pregunta cuando tenga sentido."),
+  reply_de: z.string().describe("Respuesta del personaje en alemán del nivel del alumno (A1 o A2): máximo 2 frases cortas, termina con una pregunta cuando tenga sentido."),
   reply_es: z.string().describe("Traducción al español de reply_de."),
   suggestions: z.array(z.string()).describe("2 respuestas posibles y simples que el alumno podría dar, en alemán."),
 });
@@ -41,13 +42,14 @@ export async function POST(req: Request) {
   if (!unit) return Response.json({ error: "Unidad inexistente." }, { status: 404 });
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
 
+  const level = unit.level ?? "A1";
   const vocab = unit.lessons.flatMap((l) => l.vocab.map((v) => v.de)).join(", ");
-  const system = `Estás en un juego de rol para practicar alemán con un alumno hispanohablante (rioplatense) de nivel A1.
+  const system = `Estás en un juego de rol para practicar alemán con un alumno hispanohablante (rioplatense) de nivel ${level}.
 
 Personaje y escena: ${unit.chat.scenario}
 
 Reglas:
-- Hablá SOLO en alemán A1: frases cortas, presente, vocabulario muy frecuente. Priorizá este vocabulario que el alumno ya estudió: ${vocab}.
+- Hablá SOLO en alemán ${level}: ${levelRules(level)}. Priorizá este vocabulario que el alumno ya estudió: ${vocab}.
 - Mantené el personaje y avanzá la escena; no des clases dentro de reply_de.
 - Corregí el último mensaje del alumno en "correction" (gramática, artículos, orden de palabras y si lo que dijo tiene sentido en la escena). Si escribió en español, ayudalo con la frase en alemán en "corrected".
 - El alumno puede hablar por micrófono: ignorá mayúsculas y puntuación faltantes, porque vienen del reconocimiento de voz.`;
