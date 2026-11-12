@@ -15,12 +15,16 @@ export const GLOSS: Record<string, string> = {
   frau: "señora", herr: "señor", lernst: "aprendés",
   oma: "abuela", dann: "entonces / después", etwas: "algo", bis: "hasta", ihr: "su (de usted)",
   für: "para", leider: "lamentablemente", noch: "todavía / más", mal: "vez", wie: "cómo",
+  klar: "claro / por supuesto", bestimmt: "seguro / seguramente", kochst: "cocinás", schlafe: "duermo", arbeitet: "trabaja",
+  fertig: "listo", wieder: "otra vez / de nuevo", name: "nombre / apellido", nächte: "noches",
+  restaurant: "restaurante", interessant: "interesante", team: "equipo", plan: "plan", firma: "empresa",
+  schreiben: "escribir", beginne: "empiezo", ende: "final",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "thomas", "schulz", "lena",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "thomas", "schulz", "lena", "müller",
 ]);
 
 const tok = (s: string) =>

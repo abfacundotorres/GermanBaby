@@ -111,7 +111,14 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 16. **Cuerpo y salud**: partes del cuerpo y `weh tun`, el médico, verbos reflexivos; gramática de reflexivos e imperativo (du/ihr/Sie).
 17. **Ropa y compras**: ropa, colores, talles y opinión; gramática de la terminación de los adjetivos.
 
-Próximas unidades de A2 (pendientes): weil/dass/wenn (oraciones subordinadas), dativo con pronombres y regalos, preposiciones de lugar (¿dónde? / ¿adónde?), comparar y viajar (comparativo y superlativo, el clima), trabajo y planes (futuro con `werden`, `dürfen`/`sollen`, `würde gern`) y una unidad de preparación para el examen A2.
+18. **Razones y opiniones**: weil/denn/deshalb, dass, wenn y frecuencia (immer, oft, manchmal, nie); gramática del verbo al final.
+19. **Regalos y dativo**: mir/dir/ihm/ihr/uns, helfen/gefallen, regalar con meiner/meinem, fiestas e invitaciones; gramática de los pronombres y verbos con dativo.
+20. **Dónde y adónde**: auf, unter, neben, vor, hinter, zwischen, an, in; stehen/stellen, liegen/legen, hängen; gramática de ¿dónde? (dativo) y ¿adónde? (acusativo).
+21. **Comparar y viajar**: comparativo y superlativo (als, so… wie, am liebsten), el clima y el hotel.
+22. **Trabajo y planes**: profesiones, buscar trabajo, futuro con `werden`, `dürfen`/`sollen` y `würde gern`.
+23. **Preparación para el examen A2**: teléfono, correos y cartas, acordar una cita y un repaso general (dónde va el verbo, casos y preposiciones).
+
+Con esto el currículo tiene 23 unidades (14 de A1 y 9 de A2), 87 lecciones, unas 530 palabras y 48 escuchas largas. Lo que sigue serían B1 (Präteritum completo, Konjunktiv II, oraciones de relativo, Passiv…) o más práctica de A2.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
@@ -169,7 +176,7 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 
 ## 10. Auditoría del contenido
 
-- **Resolución de punta a punta:** un bot recorre las 63 lecciones por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
+- **Resolución de punta a punta:** un bot recorre todas las lecciones (87) por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
 - **Vocabulario enseñado antes de usarse:** `tests/content.test.ts` exige que toda palabra de un diálogo o de un ejercicio escrito (dictado, hablar, armar, traducir) esté enseñada antes (vocabulario, notas con alemán entre «», tablas de gramática), figure en el glosario `lib/gloss.ts` (se muestra al revelar el diálogo) o sea un nombre propio. Los adjetivos con terminación y los números compuestos se aceptan por regla.
 - **Órdenes de palabras válidos:** los ejercicios de armar frases admiten los órdenes alternativos más naturales (`alts`), por ejemplo «Gestern habe ich gekocht» e «Ich habe gestern gekocht».
 - **Límites de esta auditoría:** verifica que el contenido es coherente y resoluble, no que el alemán sea correcto. Eso solo lo confirma una persona nativa.
