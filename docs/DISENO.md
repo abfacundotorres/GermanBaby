@@ -80,7 +80,7 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 ## 6. Currículo
 
-8 unidades de A1, con 3 lecciones y una charla de rol cada una:
+14 unidades de A1 (las 8 primeras con 3 lecciones y charla de rol; de la 9 en adelante, con escucha larga y gramática):
 
 1. **¡Hallo!**: saludos, presentarse (`heißen`, `kommen aus`, du/Sie), «¿cómo andás?».
 2. **Números**: 1-10, la edad (`Ich bin … Jahre alt`; en alemán se *es* de una edad).
@@ -93,9 +93,15 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 9. **La casa**: ambientes, muebles, describir (`groß`, `klein`, `neu`…), buscar departamento y alquiler, y una lección de gramática sobre el plural.
 
+10. **La ciudad**: lugares y «Es gibt», preguntar el camino, transporte y gramática del dativo (mit, zu, in; zum/zur/im).
+11. **Comida y gustos**: comidas, gern/mögen/kein, restaurante y gramática de los verbos que cambian la vocal (essen, nehmen, sprechen, fahren…).
+12. **Poder, deber, querer**: können, müssen, wollen, frases de supervivencia («Wie bitte?», «langsamer») y gramática de los modales.
+13. **El pasado**: Perfekt con haben (regulares e irregulares) y con sein, `war`, y gramática del participio.
+14. **Preparación para el examen**: meses, cumpleaños con ordinales, formularios y deletreo (con el nombre de las letras), anuncios de estación y repaso de casos, orden de la oración y negación.
+
 Cada unidad nueva sigue este formato: 3 a 4 lecciones de vocabulario, **cada una con una escucha larga**, una **lección de gramática** y la charla de rol. Las unidades 1 a 8 todavía no tienen escucha larga ni lección de gramática.
 
-Hoja de ruta (próximas unidades): la ciudad y las preposiciones con dativo · comida y gustos (`mögen`, `essen`) · modales (`können`, `müssen`) · pasado básico (Perfekt) · preparación para el examen A1.
+Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras. Lo que sigue sería A2 (Präteritum, adjetivos con declinación, oraciones subordinadas, verbos reflexivos…).
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
