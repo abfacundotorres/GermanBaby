@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
-import { LevelSchema, levelRules } from "@/lib/level";
+import { LevelSchema, levelRules, type Level } from "@/lib/level";
 
 const Body = z.object({
   es: z.string().max(500), // consigna en español
@@ -25,7 +25,7 @@ const Correction = z.object({
 });
 export type CorrectionResult = z.infer<typeof Correction>;
 
-const system = (level: "A1" | "A2") => `Sos un profesor de alemán para hispanohablantes rioplatenses de nivel ${level}. Corregís traducciones del español al alemán.
+const system = (level: Level) => `Sos un profesor de alemán para hispanohablantes rioplatenses de nivel ${level}. Corregís traducciones del español al alemán.
 
 Criterios:
 - "correct": la frase es gramatical y significa lo mismo que la consigna. Aceptá variantes válidas aunque no estén en las respuestas modelo (sinónimos, otro orden posible, formal/informal si la consigna no lo fija).

@@ -14,6 +14,8 @@ import { UNITS_A2_PART2 } from "./content/a2-part2.ts";
 import { UNITS_A2_PART3 } from "./content/a2-part3.ts";
 import { UNITS_A2_PART4 } from "./content/a2-part4.ts";
 import { UNITS_A2_PART5 } from "./content/a2-part5.ts";
+import { UNITS_B1_PART1 } from "./content/b1-part1.ts";
+import { UNITS_B1_PART2 } from "./content/b1-part2.ts";
 
 export type Vocab = {
   de: string;
@@ -298,7 +300,7 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5];
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2];
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);

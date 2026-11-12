@@ -89,7 +89,7 @@ export default function Home() {
             {ui > 0 && (unit.level ?? "A1") !== (UNITS[ui - 1].level ?? "A1") && (
               <div className="level-divider anim-in">
                 <span>🎓 Nivel {unit.level ?? "A1"}</span>
-                <small>{isUnlocked(p, lessonKey(unit.id, unit.lessons[0].id)) ? `¡Terminaste ${UNITS[ui - 1].level ?? "A1"}! ` : `Se abre al terminar ${UNITS[ui - 1].level ?? "A1"}. `}Más gramática y diálogos más largos.</small>
+                <small>{isUnlocked(p, lessonKey(unit.id, unit.lessons[0].id)) ? `¡Terminaste ${UNITS[ui - 1].level ?? "A1"}! ` : `Se abre al terminar ${UNITS[ui - 1].level ?? "A1"}. `}{(unit.level ?? "A1") === "B1" ? "Estructuras más complejas: relativos, pasiva, Konjunktiv." : "Más gramática y diálogos más largos."}</small>
               </div>
             )}
             <div className="unit-banner anim-in">

@@ -19,12 +19,21 @@ export const GLOSS: Record<string, string> = {
   fertig: "listo", wieder: "otra vez / de nuevo", name: "nombre / apellido", nächte: "noches",
   restaurant: "restaurante", interessant: "interesante", team: "equipo", plan: "plan", firma: "empresa",
   schreiben: "escribir", beginne: "empiezo", ende: "final",
+  wohntest: "vivías", dorf: "pueblo", machtest: "hacías", dort: "allá / ahí", tante: "tía", wunderbar: "maravilloso",
+  museen: "museos", jeden: "cada", anfang: "principio", schien: "brilló (de «scheinen»)", büro: "oficina",
+  aufstand: "me levanté (de «aufstehen»)", gefrühstückt: "desayuné", lag: "estaba acostado", würdest: "harías / irías",
+  hättest: "tuvieras", professor: "profesor", natürlich: "por supuesto", erklären: "explicar", erkläre: "explico",
+  internet: "internet",
+  kennen: "conocer", kennst: "conocés", kenne: "conozco", stock: "piso (de un edificio)", wirklich: "de verdad", sohn: "hijo",
+  informationen: "información", beste: "el/la mejor", mach: "hacé", bring: "traé", möchtest: "querés", brauchst: "necesitás",
+  geschäft: "negocio / tienda", gerade: "justo ahora", gefeiert: "festejado", dieses: "este", fotografieren: "sacar fotos",
+  doch: "¡sí! (contradice un no)", herein: "adelante / adentro", verständnis: "comprensión",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "thomas", "schulz", "lena", "müller",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "thomas", "schulz", "lena", "müller",
 ]);
 
 const tok = (s: string) =>

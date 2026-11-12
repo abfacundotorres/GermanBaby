@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
 import { UNITS, lessonKey } from "@/lib/curriculum";
-import { levelRules, type Level } from "@/lib/level";
+import { levelFromProgress, levelRules, type Level } from "@/lib/level";
 import { ALL_CATEGORIES, TEXT_CATEGORIES } from "@/lib/mistakes";
 import { tiles } from "@/lib/text";
 
@@ -66,8 +66,8 @@ export async function POST(req: Request) {
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
 
   const studied = new Set(parsed.data.studied);
-  // Si ya estudió alguna lección de una unidad A2, la práctica es de nivel A2.
-  const level: Level = UNITS.some((u) => u.level === "A2" && u.lessons.some((l) => studied.has(lessonKey(u.id, l.id)))) ? "A2" : "A1";
+  // La práctica es del nivel más alto en el que ya estudió alguna lección.
+  const level: Level = levelFromProgress(Object.fromEntries([...studied].map((k) => [k, true])));
   const vocab = UNITS.flatMap((u) =>
     u.lessons.filter((l) => studied.has(lessonKey(u.id, l.id))).flatMap((l) => l.vocab.map((v) => v.de)),
   );

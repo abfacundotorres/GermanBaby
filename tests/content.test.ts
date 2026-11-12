@@ -84,7 +84,7 @@ test("contenido: los diálogos y los ejercicios solo usan palabras enseñadas, g
     const names = new Set<string>();
     for (const line of l.dialogue?.lines ?? []) { used.push(line.de); tokenize(line.name).forEach((w) => names.add(w)); }
     // Un adjetivo ya enseñado con terminación (schwarz → schwarzen) se enseña por regla, no por palabra.
-    const inflected = (w: string) => ["e", "en", "er", "es", "em"].some((e) => w.endsWith(e) && known.has(w.slice(0, -e.length)));
+    const inflected = (w: string) => ["e", "en", "er", "es", "em", "n"].some((e) => w.endsWith(e) && known.has(w.slice(0, -e.length)));
     const unknown = new Set<string>();
     for (const text of used) for (const w of tokenize(text)) {
       if (!known.has(w) && !(w in GLOSS) && !PROPER.has(w) && !names.has(w) && !isNumberWord(w) && !inflected(w)) unknown.add(w);
