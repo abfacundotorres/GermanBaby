@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { UNITS, ALL_VOCAB, LESSON_ORDER } from "../lib/curriculum.ts";
-import { buildLessonSession, isGraded } from "../lib/session.ts";
+import { UNITS, ALL_VOCAB, LESSON_ORDER, BONUS_PREV } from "../lib/curriculum.ts";
+import { autoCloze, buildLessonSession, isGraded } from "../lib/session.ts";
 import { matchFill, tiles } from "../lib/text.ts";
 import { GLOSS, PROPER, isNumberWord, tokenize } from "../lib/gloss.ts";
 
@@ -28,7 +28,7 @@ test("contenido: preguntas de opción múltiple y de escucha son coherentes", ()
       assert.ok(e.options.includes(e.answer), `${l.id}: la respuesta no está en las opciones: ${e.question}`);
       assert.equal(new Set(e.options).size, e.options.length, `${l.id}: opciones repetidas: ${e.question}`);
     }
-    for (const q of l.dialogue?.questions ?? []) {
+    for (const q of [...(l.dialogue?.questions ?? []), ...(l.reading?.questions ?? [])]) {
       if (q.type === "choice") {
         assert.ok(q.options.includes(q.answer), `${l.id}: la respuesta no está en las opciones: ${q.q}`);
         assert.equal(new Set(q.options).size, q.options.length);
@@ -80,7 +80,9 @@ test("contenido: los diálogos y los ejercicios solo usan palabras enseñadas, g
       if (e.kind === "speak" || e.kind === "dictation") used.push(e.de);
       if (e.kind === "build") used.push(e.answer);
       if (e.kind === "write") used.push(e.references[0]);
+      if (e.kind === "cloze") used.push(e.sentence.replace("___", e.answer));
     }
+    for (const t of l.reading?.text ?? []) used.push(t);
     const names = new Set<string>();
     for (const line of l.dialogue?.lines ?? []) { used.push(line.de); tokenize(line.name).forEach((w) => names.add(w)); }
     // Un adjetivo ya enseñado con terminación (schwarz → schwarzen) se enseña por regla, no por palabra.
@@ -92,4 +94,45 @@ test("contenido: los diálogos y los ejercicios solo usan palabras enseñadas, g
     if (unknown.size) problems.push(`${u.id}/${l.id}: ${[...unknown].join(", ")}`);
   }
   assert.deepEqual(problems, [], "Palabras sin enseñar: agregalas al vocabulario o a lib/gloss.ts");
+});
+
+test("lecciones bonus: no entran en el orden lineal y se desbloquean con la anterior de su unidad", () => {
+  const bonus = lessons.filter(({ l }) => l.bonus);
+  for (const { u, l } of bonus) {
+    const key = `${u.id}/${l.id}`;
+    assert.ok(!LESSON_ORDER.includes(key), `${key} no debe estar en LESSON_ORDER`);
+    assert.ok(BONUS_PREV[key], `${key} necesita una lección anterior`);
+    assert.ok(l.reading, `${key}: una lección bonus es de lectura`);
+    assert.equal(l.reading!.text.length, l.reading!.translation.length, `${key}: un párrafo, una traducción`);
+    assert.ok(l.reading!.questions.length >= 3, `${key}: pocas preguntas`);
+  }
+});
+
+test("completar la frase: respuesta entre las opciones y un solo hueco", () => {
+  for (const { l } of lessons) for (const e of l.exercises) {
+    if (e.kind !== "cloze") continue;
+    assert.equal(e.sentence.split("___").length, 2, `${l.id}: la frase debe tener un solo «___»`);
+    assert.ok(e.options.includes(e.answer), `${l.id}: la respuesta no está en las opciones`);
+    assert.equal(new Set(e.options).size, e.options.length);
+  }
+});
+
+test("completar la frase automático: tapa la palabra que se confunde con un distractor", () => {
+  const c = autoCloze({ es: "Voy en colectivo", answer: "Ich fahre mit dem Bus", extra: ["der", "den", "Zug"] });
+  assert.ok(c);
+  assert.equal(c!.answer, "dem");
+  assert.equal(c!.sentence, "Ich fahre mit ___ Bus");
+  assert.ok(c!.options.includes("dem") && c!.options.includes("den") && c!.options.length >= 2);
+  // sin distractores parecidos no inventa un ejercicio
+  assert.equal(autoCloze({ es: "x", answer: "Hallo Welt", extra: ["zzzzzz"] }), null);
+});
+
+test("cada lección con armar frases genera algún completar la frase", () => {
+  let withCloze = 0;
+  const withBuild = lessons.filter(({ l }) => l.exercises.some((e) => e.kind === "build"));
+  for (const { u, l } of withBuild) {
+    const steps = buildLessonSession(l, u.lessons.flatMap((x) => x.vocab));
+    if (steps.some((s) => s.kind === "cloze")) withCloze++;
+  }
+  assert.ok(withCloze >= withBuild.length * 0.8, `solo ${withCloze} de ${withBuild.length} lecciones generan un completar la frase`);
 });

@@ -9,7 +9,7 @@ import {
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
 import { levelFromProgress, setStudyLevel, type Level } from "@/lib/level";
-import { Build, Choice, Dictation, Intro, Listen, ListenQ, Quiz, Rule, Speak, Write, type Outcome } from "./Exercises";
+import { Build, Choice, Cloze, Dictation, Intro, Listen, ListenQ, Quiz, ReadQ, Rule, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
 export const MAX_HEARTS = 5;
@@ -198,7 +198,7 @@ function Session({
     if ("vocab" in s && s.vocab && o.status === "bad") markVocabWeak(s.vocab.de);
     // Un ejercicio repetido que se vuelve a fallar no se duplica en el registro.
     if (s.mistakeId) return;
-    const prompt = s.kind === "listenq" ? s.question.q : "es" in s ? s.es : "question" in s ? s.question : "vocab" in s && s.vocab ? s.vocab.es : undefined;
+    const prompt = s.kind === "listenq" || s.kind === "readq" ? s.question.q : s.kind === "cloze" ? s.es : "es" in s ? s.es : "question" in s ? s.question : "vocab" in s && s.vocab ? s.vocab.es : undefined;
     const items = o.mistakes?.length
       ? o.mistakes
       : [{ category: o.category ?? "vocabulario", wrong: o.answer ?? "", right: o.expected ?? "" }];
@@ -358,6 +358,8 @@ function Session({
     case "quiz": body = <Quiz key={key} step={step} {...props} />; break;
     case "rule": body = <Rule key={key} step={step} />; break;
     case "listenq": body = <ListenQ key={key} step={step} {...props} />; break;
+    case "readq": body = <ReadQ key={key} step={step} {...props} />; break;
+    case "cloze": body = <Cloze key={key} step={step} {...props} />; break;
   }
 
   const fbClass = feedback ? ({ ok: "ok", almost: "almost", bad: "bad", skip: "almost" } as const)[feedback.status] : "";

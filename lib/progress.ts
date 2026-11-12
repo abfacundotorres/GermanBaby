@@ -3,7 +3,7 @@
 // Progreso local (un solo usuario): se guarda en localStorage.
 
 import { useSyncExternalStore } from "react";
-import { LESSON_ORDER } from "./curriculum";
+import { BONUS_PREV, LESSON_ORDER } from "./curriculum";
 import type { MistakeInput } from "./mistakes";
 import type { Step } from "./session";
 import { costUsd } from "./pricing";
@@ -286,6 +286,8 @@ export function completeLesson(key: string, accuracy: number, vocab: string[]): 
 }
 
 export function isUnlocked(p: Progress, key: string) {
+  const bonusPrev = BONUS_PREV[key];
+  if (bonusPrev) return Boolean(p.lessons[bonusPrev]);
   const i = LESSON_ORDER.indexOf(key);
   return i <= 0 || Boolean(p.lessons[LESSON_ORDER[i - 1]]);
 }

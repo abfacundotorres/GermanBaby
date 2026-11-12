@@ -40,8 +40,8 @@ export const UNITS_A1_PART3: Unit[] = [
             { who: "m", name: "Tom", de: "Danke, Anna! Wie viele Zimmer hast du?", es: "¡Gracias, Anna! ¿Cuántos ambientes tenés?" },
             { who: "f", name: "Anna", de: "Ich habe zwei Zimmer: ein Wohnzimmer und ein Schlafzimmer. Und ich habe eine Küche und ein Bad.", es: "Tengo dos ambientes: un living y un dormitorio. Y tengo una cocina y un baño." },
             { who: "m", name: "Tom", de: "Eine Küche und ein Bad? Das ist perfekt!", es: "¿Una cocina y un baño? ¡Es perfecto!" },
-            { who: "f", name: "Anna", de: "Ja! Ich möchte einen Kaffee. Und du?", es: "¡Sí! Quisiera un café. ¿Y vos?" },
-            { who: "m", name: "Tom", de: "Ja, bitte! Ich möchte auch einen Kaffee.", es: "¡Sí, por favor! Yo también quisiera un café." },
+            { who: "f", name: "Anna", de: "Ja! Ich möchte jetzt einen Kaffee. Und du?", es: "¡Sí! Ahora quisiera un café. ¿Y vos?" },
+            { who: "m", name: "Tom", de: "Ich möchte auch einen Kaffee, bitte!", es: "¡Yo también quisiera un café, por favor!" },
           ],
           questions: [
             { type: "choice", q: "¿Qué le pregunta Tom a Anna?", options: ["Cuántos ambientes tiene", "Cuánto paga de alquiler", "Dónde queda la cocina", "Cómo se llama el barrio"], answer: "Cuántos ambientes tiene", why: "Tom: «Wie viele Zimmer hast du?»" },

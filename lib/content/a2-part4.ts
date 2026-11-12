@@ -124,7 +124,7 @@ export const UNITS_A2_PART4: Unit[] = [
           setting: "Leo le pregunta a Nora cómo es su cuarto",
           lines: [
             { who: "m", name: "Leo", de: "Nora, wie ist dein neues Zimmer?", es: "Nora, ¿cómo es tu cuarto nuevo?" },
-            { who: "f", name: "Nora", de: "Sehr schön! In meinem Zimmer steht ein Regal und ein Tisch.", es: "¡Muy lindo! En mi cuarto hay un estante y una mesa." },
+            { who: "f", name: "Nora", de: "Sehr schön! In meinem Zimmer stehen ein Regal und ein Tisch.", es: "¡Muy lindo! En mi cuarto hay un estante y una mesa." },
             { who: "m", name: "Leo", de: "Und das Bett? Wo steht das Bett?", es: "¿Y la cama? ¿Dónde está la cama?" },
             { who: "f", name: "Nora", de: "Das Bett steht am Fenster. Neben dem Bett liegt ein Teppich.", es: "La cama está junto a la ventana. Al lado de la cama hay una alfombra." },
             { who: "m", name: "Leo", de: "Hast du einen Fernseher?", es: "¿Tenés un televisor?" },

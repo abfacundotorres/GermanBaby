@@ -5,6 +5,8 @@
 import type { MistakeCategory } from "./mistakes.ts";
 import type { Level } from "./level.ts";
 import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
+import { A1_DIALOGUES } from "./content/a1-dialogues.ts";
+import { READINGS } from "./content/readings.ts";
 import { UNITS_A1_PART3 } from "./content/a1-part3.ts";
 import { UNITS_A1_PART4 } from "./content/a1-part4.ts";
 import { UNITS_A1_PART5 } from "./content/a1-part5.ts";
@@ -29,7 +31,12 @@ export type HandExercise =
   | { kind: "speak"; de: string; es: string }
   | { kind: "write"; es: string; references: string[]; hint?: string }
   | { kind: "dictation"; de: string; es: string }
-  | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory };
+  | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory }
+  /** Completar la frase: `sentence` lleva «___» donde falta la palabra. `es` es la traducción de la frase entera. */
+  | { kind: "cloze"; sentence: string; es: string; options: string[]; answer: string; explanation?: string; category?: MistakeCategory };
+
+/** Texto para leer, con preguntas. Las palabras nuevas van en el vocabulario de la lección. */
+export type Reading = { title: string; text: string[]; translation: string[]; questions: ListenQuestion[] };
 
 /** Regla de gramática: tarjeta explicativa en español, con tabla y ejemplos opcionales. */
 export type GrammarRule = {
@@ -58,6 +65,9 @@ export type Lesson = {
   icon?: string; // emoji del nodo en el camino (por defecto, el de la primera palabra)
   grammar?: GrammarRule[]; // tarjetas de regla, antes de los ejercicios
   dialogue?: Dialogue; // escucha larga, al final de la lección
+  /** Lección de lectura opcional: no bloquea el avance. Se abre al terminar la lección anterior de la unidad. */
+  bonus?: boolean;
+  reading?: Reading; // texto con preguntas, después de la escucha
 };
 
 export type Unit = {
@@ -302,6 +312,17 @@ const UNITS_A1_PART1: Unit[] = [
 
 export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2];
 
+// Diálogos cortos de las unidades 1 a 8, definidos aparte.
+for (const u of UNITS) for (const l of u.lessons) {
+  const d = A1_DIALOGUES[`${u.id}/${l.id}`];
+  if (d && !l.dialogue) l.dialogue = d;
+}
+// Lecturas opcionales al final de cada unidad desde la 9.
+for (const u of UNITS) {
+  const r = READINGS[u.id];
+  if (r && !u.lessons.some((l) => l.id === r.id)) u.lessons.push(r);
+}
+
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);
 }
@@ -315,7 +336,14 @@ export function getLesson(unitId: string, lessonId: string) {
 export const lessonKey = (unitId: string, lessonId: string) => `${unitId}/${lessonId}`;
 
 /** Orden global de lecciones, para desbloquear de a una. */
-export const LESSON_ORDER: string[] = UNITS.flatMap((u) => u.lessons.map((l) => lessonKey(u.id, l.id)));
+export const LESSON_ORDER: string[] = UNITS.flatMap((u) => u.lessons.filter((l) => !l.bonus).map((l) => lessonKey(u.id, l.id)));
+
+/** Lección bonus → la lección anterior de su unidad, que la desbloquea. */
+export const BONUS_PREV: Record<string, string> = Object.fromEntries(
+  UNITS.flatMap((u) =>
+    u.lessons.flatMap((l, i) => (l.bonus && i > 0 ? [[lessonKey(u.id, l.id), lessonKey(u.id, u.lessons[i - 1].id)] as [string, string]] : [])),
+  ),
+);
 
 export const ALL_VOCAB: (Vocab & { unitId: string })[] = UNITS.flatMap((u) =>
   u.lessons.flatMap((l) => l.vocab.map((v) => ({ ...v, unitId: u.id }))),

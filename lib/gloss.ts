@@ -28,12 +28,18 @@ export const GLOSS: Record<string, string> = {
   informationen: "información", beste: "el/la mejor", mach: "hacé", bring: "traé", möchtest: "querés", brauchst: "necesitás",
   geschäft: "negocio / tienda", gerade: "justo ahora", gefeiert: "festejado", dieses: "este", fotografieren: "sacar fotos",
   doch: "¡sí! (contradice un no)", herein: "adelante / adentro", verständnis: "comprensión",
+  nur: "solo", wohnen: "vivir", familie: "familia", plus: "más (suma)", viel: "mucho", heute: "hoy", morgen: "mañana",
+  opa: "abuelo", hund: "perro", spät: "tarde", müde: "cansado/a", viele: "muchos/as",
+  das: "esto / el (neutro)", aber: "pero",
+  manche: "algunos/as", trage: "llevo puesto", bücher: "libros", sommer: "verano", gäste: "invitados / clientes", geld: "dinero",
+  ans: "a la / al (an + das)", schönste: "la más linda", geschenkt: "regalado", letztes: "pasado / último", geraucht: "fumado",
+  unserer: "nuestra",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "thomas", "schulz", "lena", "müller",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "schulz", "lena", "müller",
 ]);
 
 const tok = (s: string) =>

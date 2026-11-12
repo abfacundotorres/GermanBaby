@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Step } from "@/lib/session";
+import type { ListenQuestion } from "@/lib/curriculum";
 import { compareLocal, matchFill, shuffle, tiles } from "@/lib/text";
 import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
 import { recordPronunciation, useProgress } from "@/lib/progress";
@@ -433,31 +434,27 @@ export function Rule({ step }: { step: StepOf<"rule"> }) {
   );
 }
 
-// ---------------- Escucha larga: diálogo + preguntas ----------------
-export function ListenQ({ step, locked, onResult }: Props<StepOf<"listenq">>) {
-  const { question: q, dialogue: d } = step;
+// ---------------- Pregunta de comprensión (escucha y lectura) ----------------
+function QuestionBlock({ q, locked, onResult, category, placeholder }: { q: ListenQuestion; locked: boolean; onResult: (o: Outcome) => void; category: MistakeCategory; placeholder: string }) {
   const [value, setValue] = useState("");
-  const [answered, setAnswered] = useState(false);
   const bad = (picked: string, right: string): Outcome => ({
     status: "bad",
     detail: <><b>Correcto: {right}.</b>{q.why ? ` ${q.why}` : ""}</>,
     answer: picked,
     expected: right,
-    category: "comprensión auditiva",
-    mistakes: [{ category: "comprensión auditiva", wrong: picked, right, explanation: q.why }],
+    category,
+    mistakes: [{ category, wrong: picked, right, explanation: q.why }],
   });
   const good = (): Outcome => ({ status: "ok", detail: q.why });
-  const report = (o: Outcome) => { setAnswered(true); onResult(o); };
 
-  let input: React.ReactNode;
   if (q.type === "fill") {
-    const check = () => report(matchFill(value, q.answers) ? good() : bad(value.trim(), q.answers[0]));
-    input = (
+    const check = () => onResult(matchFill(value, q.answers) ? good() : bad(value.trim(), q.answers[0]));
+    return (
       <div className="stack">
         <input
           className="input"
           value={value}
-          placeholder={q.hint ?? "Escribí lo que escuchaste…"}
+          placeholder={q.hint ?? placeholder}
           disabled={locked}
           autoCapitalize="off"
           autoCorrect="off"
@@ -469,20 +466,99 @@ export function ListenQ({ step, locked, onResult }: Props<StepOf<"listenq">>) {
         {!locked && <button className="btn btn-primary btn-block" disabled={!value.trim()} onClick={check}>Comprobar</button>}
       </div>
     );
-  } else {
-    const options = q.type === "tf" ? ["Verdadero", "Falso"] : q.options;
-    const right = q.type === "tf" ? (q.answer ? "Verdadero" : "Falso") : q.answer;
-    input = <Options options={options} answer={right} locked={locked} onPick={(o) => report(o === right ? good() : bad(o, right))} />;
   }
+  const options = q.type === "tf" ? ["Verdadero", "Falso"] : q.options;
+  const right = q.type === "tf" ? (q.answer ? "Verdadero" : "Falso") : q.answer;
+  return <Options options={options} answer={right} locked={locked} onPick={(o) => onResult(o === right ? good() : bad(o, right))} />;
+}
 
+
+// ---------------- Escucha larga: diálogo + preguntas ----------------
+export function ListenQ({ step, locked, onResult }: Props<StepOf<"listenq">>) {
+  const { question: q, dialogue: d, hints = [] } = step;
+  const [answered, setAnswered] = useState(false);
+  const [showHints, setShowHints] = useState(false);
+  const [showText, setShowText] = useState(false);
+  const report = (o: Outcome) => { setAnswered(true); onResult(o); };
   return (
     <div className="stack">
       <div className="prompt-label">Escucha · pregunta {step.n} de {step.total}</div>
       <div className="small muted">{d.title} · {d.setting}</div>
-      <DialoguePlayer dialogue={d} autoPlay={step.n === 1} reveal={locked || answered} />
+      <DialoguePlayer dialogue={d} autoPlay={step.n === 1} reveal={locked || answered || showText} />
+      {!locked && !answered && (
+        <div className="row" style={{ justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+          {hints.length > 0 && <button className="btn" onClick={() => setShowHints((v) => !v)}>💡 Palabras clave</button>}
+          <button className="btn" onClick={() => setShowText((v) => !v)} title="Podés leerlo si te cuesta, pero practicás menos la escucha">👁 {showText ? "Ocultar el texto" : "Ver el texto"}</button>
+        </div>
+      )}
+      {showHints && !locked && !answered && (
+        <div className="notice small" style={{ textAlign: "left" }}>
+          {hints.map((h) => <div key={h.de}><b lang="de">{h.de}</b> = {h.es}</div>)}
+        </div>
+      )}
       {q.type === "tf" && <div className="prompt-label">¿Verdadero o falso?</div>}
       <div className="h2" style={{ margin: 0 }}>{q.q}</div>
-      {input}
+      <QuestionBlock q={q} locked={locked} onResult={report} category="comprensión auditiva" placeholder="Escribí lo que escuchaste…" />
+    </div>
+  );
+}
+
+// ---------------- Lectura: texto + preguntas ----------------
+export function ReadQ({ step, locked, onResult }: Props<StepOf<"readq">>) {
+  const { reading: r, question: q } = step;
+  const { voice } = useProgress();
+  const [answered, setAnswered] = useState(false);
+  const [translated, setTranslated] = useState(false);
+  const report = (o: Outcome) => { setAnswered(true); onResult(o); };
+  return (
+    <div className="stack">
+      <div className="prompt-label">Lectura · pregunta {step.n} de {step.total}</div>
+      <div className="card stack" style={{ gap: 10, textAlign: "left" }}>
+        <div className="h2" style={{ margin: 0 }} lang="de">{r.title}</div>
+        {r.text.map((p, i) => (
+          <div key={i}>
+            <p lang="de" style={{ margin: 0 }}>{p}</p>
+            {(locked || answered || translated) && <p className="small muted" style={{ margin: "4px 0 0" }}>{r.translation[i]}</p>}
+          </div>
+        ))}
+        <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+          <button className="btn" onClick={() => void speak(r.text.join(" "), { voice }).catch(() => {})}>🔊 Escuchar el texto</button>
+          {!locked && !answered && <button className="btn" onClick={() => setTranslated((v) => !v)}>🇦🇷 {translated ? "Ocultar traducción" : "Ver traducción"}</button>}
+        </div>
+      </div>
+      {q.type === "tf" && <div className="prompt-label">¿Verdadero o falso?</div>}
+      <div className="h2" style={{ margin: 0 }}>{q.q}</div>
+      <QuestionBlock q={q} locked={locked} onResult={report} category="significado" placeholder="Escribí tu respuesta…" />
+    </div>
+  );
+}
+
+// ---------------- Completar la frase ----------------
+export function Cloze({ step, locked, onResult }: Props<StepOf<"cloze">>) {
+  const [picked, setPicked] = useState<string | null>(null);
+  const done = locked || picked !== null;
+  const category = step.category ?? "gramática";
+  const full = step.sentence.replace("___", step.answer);
+  const parts = step.sentence.split("___");
+  return (
+    <div className="stack">
+      <div className="prompt-label">Completá la frase</div>
+      <div className="h2" lang="de" style={{ margin: 0 }}>
+        {parts[0]}<span className="blank">{done ? step.answer : "\u00a0\u00a0\u00a0\u00a0\u00a0"}</span>{parts[1]}
+      </div>
+      <div className="muted">{step.es}</div>
+      {done && <AudioButtons text={full} />}
+      <Options
+        options={step.options}
+        answer={step.answer}
+        locked={locked}
+        onPick={(o) => {
+          setPicked(o);
+          onResult(o === step.answer
+            ? { status: "ok", detail: step.explanation ?? <span lang="de">{full}</span> }
+            : { status: "bad", detail: <>Correcto: <b>{step.answer}</b>. {step.explanation}</>, answer: o, expected: step.answer, category, mistakes: [{ category, wrong: o, right: step.answer, explanation: step.explanation }] });
+        }}
+      />
     </div>
   );
 }

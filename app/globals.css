@@ -496,3 +496,4 @@ body {
 .level-divider { margin: 28px 0 12px; padding: 16px; border: 2px dashed var(--primary); border-radius: 22px; text-align: center; background: var(--surface-2); }
 .level-divider span { display: block; font-size: 22px; font-weight: 900; }
 .level-divider small { display: block; margin-top: 4px; color: var(--muted); font-weight: 700; }
+.blank { display: inline-block; min-width: 72px; border-bottom: 3px solid var(--primary); text-align: center; color: var(--primary); font-weight: 900; }

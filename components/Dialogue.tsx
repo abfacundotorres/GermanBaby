@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Dialogue } from "@/lib/curriculum";
-import { speakDialogue, stopSpeaking } from "@/lib/speech";
+import { DIALOGUE_VOICES, speak, speakDialogue, stopSpeaking } from "@/lib/speech";
 import { glossFor } from "@/lib/gloss";
 
 const ICON = { f: "👩", m: "👨" } as const;
@@ -66,9 +66,12 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
       {reveal && (
         <div className="stack" style={{ gap: 8, textAlign: "left" }}>
           {dialogue.lines.map((l, i) => (
-            <div key={i} className="transcript-line">
-              <b>{ICON[l.who]} {l.name}:</b> <span lang="de">{l.de}</span>
-              <div className="small muted">{l.es}</div>
+            <div key={i} className="transcript-line row" style={{ alignItems: "flex-start" }}>
+              <div style={{ flex: 1 }}>
+                <b>{ICON[l.who]} {l.name}:</b> <span lang="de">{l.de}</span>
+                <div className="small muted">{l.es}</div>
+              </div>
+              <button className="btn" style={{ padding: "2px 8px" }} aria-label={`Escuchar la línea ${i + 1}`} onClick={() => { stopSpeaking(); void speak(l.de, { voice: DIALOGUE_VOICES[l.who] }).catch(() => {}); }}>🔊</button>
             </div>
           ))}
           {glossFor(dialogue.lines.map((l) => l.de)).length > 0 && (

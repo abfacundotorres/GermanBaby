@@ -55,6 +55,8 @@ localStorage: XP, racha, lecciones, cajas de repaso, logros
 | Decilo en voz alta | Pronunciación | Azure: puntaje total y por palabra y fonema, más consejos |
 | Charla de rol | Interacción | Claude (gramática y sentido en contexto) + Azure en modo libre |
 | Pregunta con explicación | Gramática dirigida | Local (en las lecciones de gramática está escrita a mano; en «Mis errores» la genera Claude) |
+| Completar la frase | Gramática en contexto (formas confundibles) | Local |
+| Lectura | Comprensión de un texto escrito (con audio y traducción) | Local: opción múltiple, verdadero/falso y dato leído |
 | Escucha larga | Comprensión de un diálogo de 4 a 6 líneas con dos voces | Local: opción múltiple, verdadero/falso y dato oído (número, precio, hora) |
 | Tarjeta de regla | Gramática explícita | – (se lee y se pasa con «Entendido») |
 
@@ -101,6 +103,13 @@ A1 (14 unidades) y A2 (en curso). A1:
 13. **El pasado**: Perfekt con haben (regulares e irregulares) y con sein, `war`, y gramática del participio.
 14. **Preparación para el examen**: meses, cumpleaños con ordinales, formularios y deletreo (con el nombre de las letras), anuncios de estación y repaso de casos, orden de la oración y negación.
 
+**Rampa de dificultad (suavizado de los saltos).** Se midió por unidad el vocabulario nuevo, las palabras por frase y por diálogo, y la carga de gramática. Los saltos más duros eran: la unidad 9 (primera con escucha larga y gramática, 30 palabras), A1→A2 (unidad 15), la unidad 18 (aparece `weil`) y A2→B1 (unidades 24 y 26). Se suavizaron así:
+- **Diálogos cortos (3 a 6 líneas) en las unidades 1 a 8** (`lib/content/a1-dialogues.ts`), con solo lo enseñado hasta cada lección: la escucha larga se introduce de a poco.
+- **Lecturas opcionales** (`lib/content/readings.ts`): una lección «bonus» al final de cada unidad desde la 9. Trae un texto con audio y traducción, 2 a 4 palabras nuevas con tarjeta (entran al repaso espaciado), ejercicios de completar y preguntas de comprensión. No bloquea el avance (`Lesson.bonus`, fuera de `LESSON_ORDER`; se abre al terminar la lección anterior de su unidad).
+- **Completar la frase**: ejercicio nuevo. Cada lección con «armar la frase» genera hasta 2 automáticamente: se tapa la palabra que más se parece a un distractor (den/dem, ist/wird…), que es el error típico. Las lecturas traen los suyos escritos a mano.
+- **Ayudas en la escucha larga**: «💡 Palabras clave» (vocabulario de la lección que aparece en el diálogo), «👁 Ver el texto» (para leer si cuesta), y 🔊 en cada línea al revelar el texto.
+- Los diálogos de arranque de A2 (unidad 15) y B1 (unidad 24) se acortaron a 6 líneas.
+
 Cada unidad nueva sigue este formato: 3 a 4 lecciones de vocabulario, **cada una con una escucha larga**, una **lección de gramática** y la charla de rol. Las unidades 1 a 8 todavía no tienen escucha larga ni lección de gramática.
 
 Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
@@ -125,7 +134,7 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 26. **Describir con relativos**: oraciones de relativo (sujeto, objeto, dativo, con preposición), «was» y «jemand, der».
 27. **La voz pasiva**: Passiv de presente y pasado, con modales, y estados con sein + participio (carteles).
 
-Con esto el currículo tiene 27 unidades (14 de A1, 9 de A2 y 4 de B1), 103 lecciones y unas 630 palabras. Pendientes de B1: `obwohl`/`damit`/`um… zu` y el infinitivo con `zu`, adjetivos con terminación completa y genitivo (`wegen`, `trotz`), argumentar y discutir, textos formales (quejas, cartas) y una unidad de preparación para el examen B1.
+Con esto el currículo tiene 27 unidades (14 de A1, 9 de A2 y 4 de B1), 103 lecciones del camino principal más 19 lecturas opcionales, y unas 680 palabras. Pendientes de B1: `obwohl`/`damit`/`um… zu` y el infinitivo con `zu`, adjetivos con terminación completa y genitivo (`wegen`, `trotz`), argumentar y discutir, textos formales (quejas, cartas) y una unidad de preparación para el examen B1.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
@@ -183,8 +192,9 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 
 ## 10. Auditoría del contenido
 
-- **Resolución de punta a punta:** un bot recorre todas las lecciones (103) por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
+- **Resolución de punta a punta:** un bot recorre todas las lecciones (122, incluidas las 19 lecturas) por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
 - **Vocabulario enseñado antes de usarse:** `tests/content.test.ts` exige que toda palabra de un diálogo o de un ejercicio escrito (dictado, hablar, armar, traducir) esté enseñada antes (vocabulario, notas con alemán entre «», tablas de gramática), figure en el glosario `lib/gloss.ts` (se muestra al revelar el diálogo) o sea un nombre propio. Los adjetivos con terminación y los números compuestos se aceptan por regla.
 - **Órdenes de palabras válidos:** los ejercicios de armar frases admiten los órdenes alternativos más naturales (`alts`), por ejemplo «Gestern habe ich gekocht» e «Ich habe gestern gekocht».
+- **Revisión del alemán sin nativo:** se leyó todo el texto alemán de las 27 unidades buscando errores de forma, de caso y de naturalidad; se corrigieron `steht ein Regal und ein Tisch` (→ `stehen`) y un pedido poco natural de la unidad 9. Sigue siendo una lectura de quien escribió el contenido, no una revisión independiente.
 - **Límites de esta auditoría:** verifica que el contenido es coherente y resoluble, no que el alemán sea correcto. Eso solo lo confirma una persona nativa.
 

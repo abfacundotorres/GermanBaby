@@ -76,7 +76,8 @@ export default function Home() {
 
       {UNITS.map((unit, ui) => {
         const [uc, ucd] = COLORS[ui % COLORS.length];
-        const done = unit.lessons.filter((l) => p.lessons[lessonKey(unit.id, l.id)]).length;
+        const core = unit.lessons.filter((l) => !l.bonus);
+        const done = core.filter((l) => p.lessons[lessonKey(unit.id, l.id)]).length;
         const chatUnlocked = Boolean(p.lessons[lessonKey(unit.id, unit.lessons[0].id)]);
         const style = { ["--uc" as string]: uc, ["--ucd" as string]: ucd } as React.CSSProperties;
         const chatKey = `chat/${unit.id}`;
@@ -94,10 +95,10 @@ export default function Home() {
             )}
             <div className="unit-banner anim-in">
               <div style={{ flex: 1 }}>
-                <div className="kicker">{unit.level ?? "A1"} · UNIDAD {ui + 1} · {done}/{unit.lessons.length} lecciones</div>
+                <div className="kicker">{unit.level ?? "A1"} · UNIDAD {ui + 1} · {done}/{core.length} lecciones</div>
                 <div className="name">{unit.title}</div>
                 <div className="desc">{unit.description}</div>
-                <div className="unit-bar"><div style={{ width: `${(done / unit.lessons.length) * 100}%` }} /></div>
+                <div className="unit-bar"><div style={{ width: `${(done / core.length) * 100}%` }} /></div>
               </div>
               <span className="uemoji">{unit.emoji}</span>
             </div>
