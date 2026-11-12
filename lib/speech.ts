@@ -205,7 +205,7 @@ export async function speakDialogue(
     if (gen !== playGen) return;
     next = i + 1 < lines.length && azure ? prepare(i + 1) : null;
     opts.onLine?.(i);
-    if (blob) await playBlob(blob, true).catch(() => {});
+    if (blob) await playBlob(blob, true).catch((e) => { if ((e as Error).name === "NotAllowedError") throw e; });
     else if (typeof window !== "undefined" && "speechSynthesis" in window) {
       azure = false;
       await browserSpeak(lines[i].text, slow, true);

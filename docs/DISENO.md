@@ -163,6 +163,14 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 4. ~~Limitar los intentos de `/login`.~~ Hecho (`lib/ratelimit.ts`): 8 fallos cada 15 minutos por IP y 40 por hora en total devuelven 429. Usa Upstash si está conectado; si no, la memoria de cada instancia de Vercel, que no se comparte y se reinicia, así que es un freno parcial hasta activar la nube. El tope global también puede bloquearte a vos durante una hora si alguien insiste. Igual conviene un código largo.
 5. **Más lecciones de gramática explícita** (casos, preposiciones, modales) y un test de nivel para no obligar a empezar siempre desde cero.
 6. **Ajustar el umbral de pronunciación** (hoy 70/100) con uso real: puede ser demasiado exigente para un principiante.
-7. **Accesibilidad:** marcar el texto alemán con `lang="de"` y anunciar la corrección con `aria-live`.
-8. **Integración continua:** correr tipos, pruebas y `build` en cada cambio.
+7. ~~Accesibilidad.~~ Hecho en lo básico: el texto alemán de tarjetas, fichas y ejemplos lleva `lang="de"`, y la corrección se anuncia con `aria-live`. Falta revisar el contraste y el uso con lector de pantalla de punta a punta.
+8. ~~Integración continua.~~ `.github/workflows/ci.yml` corre tipos, pruebas y `build` en cada push.
+9. **Revisión del alemán por un nativo** (pendiente, ver §10).
+
+## 10. Auditoría del contenido
+
+- **Resolución de punta a punta:** un bot recorre las 63 lecciones por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
+- **Vocabulario enseñado antes de usarse:** `tests/content.test.ts` exige que toda palabra de un diálogo o de un ejercicio escrito (dictado, hablar, armar, traducir) esté enseñada antes (vocabulario, notas con alemán entre «», tablas de gramática), figure en el glosario `lib/gloss.ts` (se muestra al revelar el diálogo) o sea un nombre propio. Los adjetivos con terminación y los números compuestos se aceptan por regla.
+- **Órdenes de palabras válidos:** los ejercicios de armar frases admiten los órdenes alternativos más naturales (`alts`), por ejemplo «Gestern habe ich gekocht» e «Ich habe gestern gekocht».
+- **Límites de esta auditoría:** verifica que el contenido es coherente y resoluble, no que el alemán sea correcto. Eso solo lo confirma una persona nativa.
 

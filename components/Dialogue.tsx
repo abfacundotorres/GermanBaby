@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Dialogue } from "@/lib/curriculum";
 import { speakDialogue, stopSpeaking } from "@/lib/speech";
+import { glossFor } from "@/lib/gloss";
 
 const ICON = { f: "👩", m: "👨" } as const;
 
@@ -10,6 +11,7 @@ const ICON = { f: "👩", m: "👨" } as const;
 export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: { dialogue: Dialogue; autoPlay?: boolean; reveal?: boolean }) {
   const [state, setState] = useState<"idle" | "playing">("idle");
   const [line, setLine] = useState(-1);
+  const [blocked, setBlocked] = useState(false);
   const run = useRef(0); // identifica la reproducción vigente: una cortada no pisa el estado de la nueva
 
   const stop = () => { run.current++; stopSpeaking(); setState("idle"); setLine(-1); };
@@ -17,6 +19,7 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
   const play = async (slow: boolean) => {
     const mine = ++run.current;
     setState("playing");
+    setBlocked(false);
     try {
       await speakDialogue(dialogue.lines.map((l) => ({ text: l.de, who: l.who })), {
         slow,
@@ -24,6 +27,8 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
       });
     } catch (e) {
       console.warn(e);
+      // Safari y otros bloquean el audio que no nace de un toque.
+      if (run.current === mine && (e as Error).name === "NotAllowedError") setBlocked(true);
     } finally {
       if (run.current === mine) { setState("idle"); setLine(-1); }
     }
@@ -57,6 +62,7 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
           <button className="btn btn-round" style={{ width: 80, height: 80, fontSize: 30 }} onClick={stop} aria-label="Parar">⏹</button>
         )}
       </div>
+      {blocked && <div className="notice small" role="alert">El navegador bloqueó el audio automático. Tocá ▶ para escuchar el diálogo.</div>}
       {reveal && (
         <div className="stack" style={{ gap: 8, textAlign: "left" }}>
           {dialogue.lines.map((l, i) => (
@@ -65,6 +71,14 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
               <div className="small muted">{l.es}</div>
             </div>
           ))}
+          {glossFor(dialogue.lines.map((l) => l.de)).length > 0 && (
+            <div className="small muted" style={{ borderTop: "1px solid var(--border)", paddingTop: 8 }}>
+              <b>Palabras del diálogo:</b>{" "}
+              {glossFor(dialogue.lines.map((l) => l.de)).map(([w, es], i) => (
+                <span key={w}>{i > 0 && " · "}<span lang="de">{w}</span> = {es}</span>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

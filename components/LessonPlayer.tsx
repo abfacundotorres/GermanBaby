@@ -8,7 +8,7 @@ import {
   resolveMistakes, reviewItem, tickCorrect, type Mistake,
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
-import { setStudyLevel, type Level } from "@/lib/level";
+import { levelFromProgress, setStudyLevel, type Level } from "@/lib/level";
 import { Build, Choice, Dictation, Intro, Listen, ListenQ, Quiz, Rule, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
@@ -149,13 +149,14 @@ export function LessonPlayer(props: PlayerProps) {
 function Session({
   steps: initial,
   title,
-  level = "A1",
+  level: levelProp,
   source = "lesson",
   resumeKey,
   init,
   onFinish,
   onStepResult,
 }: PlayerProps & { init?: Saved }) {
+  const level = levelProp ?? levelFromProgress(getProgress().lessons);
   useEffect(() => { setStudyLevel(level); }, [level]);
   const [queue, setQueue] = useState<Step[]>(init?.queue ?? initial);
   const [index, setIndex] = useState(init?.index ?? 0);
@@ -384,7 +385,7 @@ function Session({
       </main>
 
       {feedback && (
-        <div className={`feedback ${fbClass}`}>
+        <div className={`feedback ${fbClass}`} role="status" aria-live="polite">
           <div className="feedback-inner">
             <div className="row" style={{ alignItems: "flex-start", gap: 12 }}>
               <Mascot mood={mood} size={64} />

@@ -71,7 +71,7 @@ export const UNITS_A2_PART1: Unit[] = [
         exercises: [
           { kind: "speak", de: "Ich bin in Argentinien geboren", es: "Nací en Argentina" },
           { kind: "build", es: "Nací en Argentina", answer: "Ich bin in Argentinien geboren", extra: ["habe", "geborn", "wohne"] },
-          { kind: "build", es: "Estudio alemán desde hace un año", answer: "Ich lerne seit einem Jahr Deutsch", extra: ["vor", "einen", "lernte"] },
+          { kind: "build", es: "Estudio alemán desde hace un año", answer: "Ich lerne seit einem Jahr Deutsch", extra: ["vor", "einen", "lernte"], alts: ["Seit einem Jahr lerne ich Deutsch", "Ich lerne Deutsch seit einem Jahr"] },
           { kind: "write", es: "hace un año", references: ["vor einem Jahr"] },
           { kind: "dictation", de: "als Kind", es: "de chico" },
           { kind: "write", es: "Viví dos años en Berlín", references: ["Ich habe zwei Jahre in Berlin gewohnt"] },
@@ -196,7 +196,7 @@ export const UNITS_A2_PART1: Unit[] = [
           { kind: "quiz", question: "Du ___ keine Zeit. (haben, pasado)", options: ["hattest", "hast", "hattet", "hatten"], answer: "hattest", explanation: "Con «du»: hattest.", category: "gramática" },
           { kind: "quiz", question: "Ich lerne ___ einem Jahr Deutsch.", options: ["seit", "vor", "für", "bei"], answer: "seit", explanation: "Algo que sigue hasta hoy: «seit» + presente.", category: "gramática" },
           { kind: "quiz", question: "___ einem Jahr habe ich in Berlin gewohnt.", options: ["Vor", "Seit", "Für", "Bei"], answer: "Vor", explanation: "«Hace un año», mirando hacia atrás: «vor».", category: "gramática" },
-          { kind: "build", es: "Ayer tuve que trabajar", answer: "Ich musste gestern arbeiten", extra: ["muss", "arbeitet", "wollte"] },
+          { kind: "build", es: "Ayer tuve que trabajar", answer: "Ich musste gestern arbeiten", extra: ["muss", "arbeitet", "wollte"], alts: ["Gestern musste ich arbeiten"] },
           { kind: "build", es: "No pudimos venir", answer: "Wir konnten nicht kommen", extra: ["können", "kam", "wollten"] },
           { kind: "write", es: "Quería dormir", references: ["Ich wollte schlafen"] },
           { kind: "write", es: "No tuve tiempo", references: ["Ich hatte keine Zeit"] },
@@ -394,6 +394,7 @@ export const UNITS_A2_PART1: Unit[] = [
             body: ["Los separables dejan el prefijo al final: «Steh auf!». Los reflexivos llevan el pronombre después del verbo: «Beeil dich!»."],
             examples: [
               { de: "Trinken Sie viel Wasser!", es: "¡Tome mucha agua!" },
+              { de: "Trink viel Wasser!", es: "¡Tomá mucha agua!" },
               { de: "Bleib im Bett!", es: "¡Quedate en la cama!" },
               { de: "Ruh dich aus!", es: "¡Descansá!" },
             ],

@@ -160,6 +160,7 @@ const UNITS_A1_PART1: Unit[] = [
         title: "Del 1 al 5",
         goal: "Contar del uno al cinco.",
         vocab: [
+          { de: "null", es: "cero", emoji: "0️⃣" },
           { de: "eins", es: "uno", emoji: "1️⃣", note: "«ei» se pronuncia «ai»." },
           { de: "zwei", es: "dos", emoji: "2️⃣", note: "La «z» alemana suena «ts»: «tsvai»." },
           { de: "drei", es: "tres", emoji: "3️⃣" },

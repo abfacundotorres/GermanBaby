@@ -55,7 +55,7 @@ export const UNITS_A1_PART6: Unit[] = [
         title: "Los meses (2)",
         goal: "Nombrar de julio a diciembre y hablar de las vacaciones.",
         vocab: [
-          { de: "Juli", es: "julio", emoji: "🏖️", note: "Se acentúa en la última sílaba: «iuli»." },
+          { de: "Juli", es: "julio", emoji: "🏖️", note: "La «J» suena como una «i»: «iuli»." },
           { de: "August", es: "agosto", emoji: "🌞" },
           { de: "September", es: "septiembre", emoji: "🍂" },
           { de: "Oktober", es: "octubre", emoji: "🎃" },
@@ -69,7 +69,7 @@ export const UNITS_A1_PART6: Unit[] = [
           { kind: "dictation", de: "im Dezember", es: "en diciembre" },
           { kind: "write", es: "septiembre", references: ["September"] },
           { kind: "write", es: "las vacaciones", references: ["der Urlaub", "Urlaub"] },
-          { kind: "build", es: "Tengo vacaciones en julio", answer: "Ich habe im Juli Urlaub", extra: ["am", "bin", "Juni"] },
+          { kind: "build", es: "Tengo vacaciones en julio", answer: "Ich habe im Juli Urlaub", extra: ["am", "bin", "Juni"], alts: ["Im Juli habe ich Urlaub"] },
           { kind: "speak", de: "Ich habe im August Urlaub", es: "Tengo vacaciones en agosto" },
         ],
         dialogue: {
@@ -107,7 +107,7 @@ export const UNITS_A1_PART6: Unit[] = [
         ],
         exercises: [
           { kind: "speak", de: "Wann hast du Geburtstag?", es: "¿Cuándo es tu cumpleaños?" },
-          { kind: "build", es: "Mi cumpleaños es el 1 de mayo", answer: "Ich habe am ersten Mai Geburtstag", extra: ["erste", "im", "bin"] },
+          { kind: "build", es: "Mi cumpleaños es el 1 de mayo", answer: "Ich habe am ersten Mai Geburtstag", extra: ["erste", "im", "bin"], alts: ["Am ersten Mai habe ich Geburtstag"] },
           { kind: "write", es: "el 3 de junio", references: ["am dritten Juni"] },
           { kind: "dictation", de: "am zehnten Oktober", es: "el 10 de octubre" },
           { kind: "write", es: "el cumpleaños", references: ["der Geburtstag"] },
@@ -307,7 +307,7 @@ export const UNITS_A1_PART6: Unit[] = [
           { kind: "quiz", question: "¿Cuál oración es correcta?", options: ["Ich habe gestern Fisch gegessen.", "Ich habe gegessen gestern Fisch.", "Ich gegessen habe gestern Fisch.", "Ich habe gestern gegessen Fisch."], answer: "Ich habe gestern Fisch gegessen.", explanation: "En el Perfekt, el participio va al final.", category: "orden de palabras" },
           { kind: "quiz", question: "¿Cuál oración es correcta?", options: ["Ich kaufe morgen ein.", "Ich einkaufe morgen.", "Ich kaufen morgen ein.", "Morgen ich kaufe ein."], answer: "Ich kaufe morgen ein.", explanation: "El verbo separable se parte: «kaufe» en segundo lugar y «ein» al final.", category: "orden de palabras" },
           { kind: "build", es: "No tengo hermano", answer: "Ich habe keinen Bruder", extra: ["kein", "nicht", "keine"] },
-          { kind: "build", es: "Vamos en colectivo", answer: "Wir fahren mit dem Bus", extra: ["den", "der", "nach"] },
+          { kind: "build", es: "Vamos en colectivo", answer: "Wir fahren mit dem Bus", extra: ["den", "der", "nach"], alts: ["Mit dem Bus fahren wir"] },
           { kind: "write", es: "No tengo hermanas", references: ["Ich habe keine Schwester", "Ich habe keine Schwestern"] },
           { kind: "write", es: "Hoy no trabajo", references: ["Ich arbeite heute nicht", "Heute arbeite ich nicht"] },
           { kind: "speak", de: "Ich habe keinen Fisch gegessen", es: "No comí pescado" },

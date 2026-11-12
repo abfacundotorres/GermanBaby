@@ -40,7 +40,7 @@ export function Intro({ step }: { step: StepOf<"intro"> }) {
       <div className="prompt-label">Palabra nueva</div>
       <div className="intro-card stack center" style={{ gap: 8 }}>
         <div className="intro-emoji pop">{v.emoji ?? "🆕"}</div>
-        <div className="big-word">{v.de}</div>
+        <div className="big-word" lang="de">{v.de}</div>
         <div className="h2 muted" style={{ margin: 0 }}>{v.es}</div>
         <AudioButtons text={v.de} autoPlay size="big" />
       </div>
@@ -74,7 +74,7 @@ export function Choice({ step, locked, onResult }: Props<StepOf<"choice">>) {
     <div className="stack">
       <div className="prompt-label">{deToEs ? "¿Qué significa?" : "¿Cómo se dice en alemán?"}</div>
       <div className="row">
-        <div className="big-word" style={{ flex: 1 }}>{deToEs ? v.de : v.es}</div>
+        <div className="big-word" style={{ flex: 1 }} lang={deToEs ? "de" : "es"}>{deToEs ? v.de : v.es}</div>
         {deToEs && <AudioButtons text={v.de} />}
       </div>
       <Options
@@ -127,14 +127,14 @@ export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
       <div className="h2">{step.es}</div>
       <div className="tiles answer-line">
         {chosen.map((i) => (
-          <button key={i} className="tile" disabled={locked} onClick={() => { sfx.tap(); setChosen(chosen.filter((x) => x !== i)); }}>
+          <button key={i} lang="de" className="tile" disabled={locked} onClick={() => { sfx.tap(); setChosen(chosen.filter((x) => x !== i)); }}>
             {bank[i].t}
           </button>
         ))}
       </div>
       <div className="tiles">
         {bank.map(({ t, i }) => (
-          <button key={i} className={`tile ${chosen.includes(i) ? "used" : ""}`} disabled={locked} onClick={() => { sfx.tap(); setChosen([...chosen, i]); }}>
+          <button key={i} lang="de" className={`tile ${chosen.includes(i) ? "used" : ""}`} disabled={locked} onClick={() => { sfx.tap(); setChosen([...chosen, i]); }}>
             {t}
           </button>
         ))}
@@ -320,7 +320,7 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
   return (
     <div className="stack center">
       <div className="prompt-label">Decilo en voz alta</div>
-      <div className="big-word">{step.de}</div>
+      <div className="big-word" lang="de">{step.de}</div>
       <div className="muted">{step.es}</div>
       <AudioButtons text={step.de} />
       {notConfigured ? (
@@ -414,7 +414,7 @@ export function Rule({ step }: { step: StepOf<"rule"> }) {
             <thead><tr>{r.table.head.map((h) => <th key={h}>{h}</th>)}</tr></thead>
             <tbody>
               {r.table.rows.map((row, i) => (
-                <tr key={i}>{row.map((c, j) => <td key={j} lang={j === 0 ? undefined : "de"}>{c}</td>)}</tr>
+                <tr key={i}>{row.map((c, j) => <td key={j}>{c}</td>)}</tr>
               ))}
             </tbody>
           </table>

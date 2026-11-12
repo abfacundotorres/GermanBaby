@@ -104,12 +104,14 @@ app/
 proxy.ts                       exige el código de acceso en todo
 components/                    ejercicios, reporte de pronunciación, reproductor de lecciones
 lib/
-  curriculum.ts                contenido (agregar lecciones acá)
+  curriculum.ts, content/      contenido A1 y A2 (agregar lecciones acá)
   session.ts                   arma la secuencia de ejercicios
   progress.ts                  XP, racha, logros, cajas de Leitner (localStorage)
   speech.ts                    Azure: TTS (con caché de audio), reconocimiento, pronunciación
   audiocache.ts                caché de audio en IndexedDB
   ratelimit.ts                 límite de intentos de login
+  level.ts                     nivel A1/A2 para las llamadas a Claude
+  gloss.ts                     glosario de palabras sueltas de los diálogos
   ai.ts                        todas las llamadas a Claude, con topes de gasto
   capture.ts, vad.ts, pcm.ts   micrófono y corte automático al terminar de hablar
   sync.ts, merge.ts            sincronización con la nube

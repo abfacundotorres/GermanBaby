@@ -13,6 +13,13 @@ export function levelRules(level: Level) {
     : "frases cortas, presente, vocabulario muy frecuente";
 }
 
+import { UNITS, lessonKey } from "./curriculum.ts";
+
+/** A2 si ya completó alguna lección de una unidad A2; si no, A1. Para repaso y práctica, que no son de una unidad. */
+export function levelFromProgress(lessons: Record<string, unknown>): Level {
+  return UNITS.some((u) => u.level === "A2" && u.lessons.some((l) => lessons[lessonKey(u.id, l.id)])) ? "A2" : "A1";
+}
+
 let studyLevel: Level = "A1";
 /** Nivel de la lección o charla que se está estudiando ahora (lo fija el reproductor). */
 export const setStudyLevel = (l: Level) => { studyLevel = l; };

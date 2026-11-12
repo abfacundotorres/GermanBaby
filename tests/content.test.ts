@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { UNITS, ALL_VOCAB, LESSON_ORDER } from "../lib/curriculum.ts";
 import { buildLessonSession, isGraded } from "../lib/session.ts";
 import { matchFill, tiles } from "../lib/text.ts";
+import { GLOSS, PROPER, isNumberWord, tokenize } from "../lib/gloss.ts";
 
 const lessons = UNITS.flatMap((u) => u.lessons.map((l) => ({ u, l })));
 
@@ -59,4 +60,36 @@ test("matchFill: números, palabras, euros y decimales", () => {
   assert.ok(matchFill("15 Uhr", ["15"]));
   assert.ok(!matchFill("", ["0"]));
   assert.ok(!matchFill("60", ["600"]));
+});
+
+const quoted = (s: string) => [...s.matchAll(/«([^»]+)»/g)].map((m) => m[1]);
+
+test("contenido: los diálogos y los ejercicios solo usan palabras enseñadas, glosadas o nombres propios", () => {
+  const known = new Set<string>();
+  const add = (s: string) => tokenize(s).forEach((w) => known.add(w));
+  const problems: string[] = [];
+  for (const { u, l } of lessons) {
+    for (const v of l.vocab) { add(v.de); if (v.note) quoted(v.note).forEach(add); }
+    for (const g of l.grammar ?? []) {
+      g.body.forEach((b) => quoted(b).forEach(add));
+      g.examples?.forEach((e) => add(e.de));
+      g.table?.rows.forEach((r) => r.forEach(add));
+    }
+    const used: string[] = [];
+    for (const e of l.exercises) {
+      if (e.kind === "speak" || e.kind === "dictation") used.push(e.de);
+      if (e.kind === "build") used.push(e.answer);
+      if (e.kind === "write") used.push(e.references[0]);
+    }
+    const names = new Set<string>();
+    for (const line of l.dialogue?.lines ?? []) { used.push(line.de); tokenize(line.name).forEach((w) => names.add(w)); }
+    // Un adjetivo ya enseñado con terminación (schwarz → schwarzen) se enseña por regla, no por palabra.
+    const inflected = (w: string) => ["e", "en", "er", "es", "em"].some((e) => w.endsWith(e) && known.has(w.slice(0, -e.length)));
+    const unknown = new Set<string>();
+    for (const text of used) for (const w of tokenize(text)) {
+      if (!known.has(w) && !(w in GLOSS) && !PROPER.has(w) && !names.has(w) && !isNumberWord(w) && !inflected(w)) unknown.add(w);
+    }
+    if (unknown.size) problems.push(`${u.id}/${l.id}: ${[...unknown].join(", ")}`);
+  }
+  assert.deepEqual(problems, [], "Palabras sin enseñar: agregalas al vocabulario o a lib/gloss.ts");
 });
