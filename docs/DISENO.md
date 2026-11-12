@@ -127,14 +127,19 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 22. **Trabajo y planes**: profesiones, buscar trabajo, futuro con `werden`, `dürfen`/`sollen` y `würde gern`.
 23. **Preparación para el examen A2**: teléfono, correos y cartas, acordar una cita y un repaso general (dónde va el verbo, casos y preposiciones).
 
-**B1** (`Unit.level = "B1"`, en `lib/content/b1-part*.ts`): el cartel de nivel y las llamadas a Claude ya lo reconocen. Estructuras más complejas y diálogos de hasta 8 líneas.
+**B1** (`Unit.level = "B1"`, en `lib/content/b1-part*.ts`): el cartel de nivel y las llamadas a Claude ya lo reconocen. Estructuras más complejas y diálogos de hasta 8 líneas. En el contenido B1 se cuida la coherencia de las reglas: p. ej. `um… zu` con el mismo sujeto y `damit` con sujetos distintos.
 
 24. **Contar una historia**: Präteritum regular e irregular; als/wenn/während/bevor/nachdem y el Plusquamperfekt.
 25. **Deseos y consejos**: Konjunktiv II (hätte, wäre, würde, könnte, solltest), consejos y pedidos corteses.
 26. **Describir con relativos**: oraciones de relativo (sujeto, objeto, dativo, con preposición), «was» y «jemand, der».
 27. **La voz pasiva**: Passiv de presente y pasado, con modales, y estados con sein + participio (carteles).
 
-Con esto el currículo tiene 27 unidades (14 de A1, 9 de A2 y 4 de B1), 103 lecciones del camino principal más 19 lecturas opcionales, y unas 680 palabras. Pendientes de B1: `obwohl`/`damit`/`um… zu` y el infinitivo con `zu`, adjetivos con terminación completa y genitivo (`wegen`, `trotz`), argumentar y discutir, textos formales (quejas, cartas) y una unidad de preparación para el examen B1.
+28. **Contrastes y metas**: `obwohl`/`trotzdem`, `um… zu` y `damit`, el infinitivo con `zu` (`ohne… zu`, `statt… zu`).
+29. **Posesión y causas**: el genitivo y `wessen`, `wegen`/`trotz`/`statt`/`während` + genitivo, y las terminaciones de los adjetivos en dativo y genitivo.
+30. **Opinar y argumentar**: dar y defender una opinión, `einerseits… andererseits`, `zwar… aber`, `außerdem`, y preguntas indirectas con `ob`.
+31. **Preparación para el examen B1**: reclamos, carta formal, resumir un texto y repaso de B1.
+
+Con esto el currículo tiene 31 unidades (14 de A1, 9 de A2 y 8 de B1), 119 lecciones del camino principal más 23 lecturas opcionales, 96 escuchas largas y unas 790 palabras. Lo que sigue serían B2 (Konjunktiv I y discurso indirecto, Passiv con modales y variantes, participios como adjetivos, nominalización…) o más práctica de B1.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 
@@ -192,7 +197,7 @@ Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores
 
 ## 10. Auditoría del contenido
 
-- **Resolución de punta a punta:** un bot recorre todas las lecciones (122, incluidas las 19 lecturas) por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
+- **Resolución de punta a punta:** un bot recorre todas las lecciones (142, incluidas las 23 lecturas) por la interfaz con un navegador de tamaño de celular, respondiendo cada ejercicio con la respuesta del currículo (opciones, fichas, dictados, escucha larga con respuestas escritas y «Saltear» en los de hablar). Todas llegan a la pantalla final sin que ninguna respuesta correcta se marque mal. No es parte de `npm test`: usa el navegador y un servidor de desarrollo.
 - **Vocabulario enseñado antes de usarse:** `tests/content.test.ts` exige que toda palabra de un diálogo o de un ejercicio escrito (dictado, hablar, armar, traducir) esté enseñada antes (vocabulario, notas con alemán entre «», tablas de gramática), figure en el glosario `lib/gloss.ts` (se muestra al revelar el diálogo) o sea un nombre propio. Los adjetivos con terminación y los números compuestos se aceptan por regla.
 - **Órdenes de palabras válidos:** los ejercicios de armar frases admiten los órdenes alternativos más naturales (`alts`), por ejemplo «Gestern habe ich gekocht» e «Ich habe gestern gekocht».
 - **Revisión del alemán sin nativo:** se leyó todo el texto alemán de las 27 unidades buscando errores de forma, de caso y de naturalidad; se corrigieron `steht ein Regal und ein Tisch` (→ `stehen`) y un pedido poco natural de la unidad 9. Sigue siendo una lectura de quien escribió el contenido, no una revisión independiente.

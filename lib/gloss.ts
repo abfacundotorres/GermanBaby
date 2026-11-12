@@ -34,12 +34,19 @@ export const GLOSS: Record<string, string> = {
   manche: "algunos/as", trage: "llevo puesto", bücher: "libros", sommer: "verano", gäste: "invitados / clientes", geld: "dinero",
   ans: "a la / al (an + das)", schönste: "la más linda", geschenkt: "regalado", letztes: "pasado / último", geraucht: "fumado",
   unserer: "nuestra",
+  bestehen: "aprobar", sparst: "ahorrás", reiseführer: "guía de viaje", ins: "al (in + das)", kino: "cine", auszugehen: "salir",
+  recht: "razón (recht haben)", tochter: "hija", sohnes: "del hijo", verloren: "perdido/a", wetters: "del clima",
+  drinnen: "adentro", welcher: "qué (cuál)",
+  denkst: "pensás", homeoffice: "trabajo desde casa", kollegen: "colegas", beides: "las dos cosas", laut: "ruidoso",
+  langweilig: "aburrido", argument: "argumento", gespart: "ahorrado", entschuldigen: "disculpar", beginnen: "empezar",
+  bekommen: "recibir", worum: "¿de qué?", zieht: "se muda", mädchen: "niña / joven", endet: "termina",
+  braucht: "necesita", jeder: "todos / cada uno", erstens: "primero", zweitens: "segundo",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "schulz", "lena", "müller",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller",
 ]);
 
 const tok = (s: string) =>

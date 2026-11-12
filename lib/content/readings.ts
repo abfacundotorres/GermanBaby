@@ -458,4 +458,92 @@ export const READINGS: Record<string, Lesson> = {
       { type: "tf", q: "Se puede fumar.", answer: false, why: "«darf nicht geraucht werden»." },
     ],
   ),
+  ziele: reading(
+    "Por qué corro",
+    "Leer sobre una rutina con obwohl, um… zu y damit.",
+    [
+      { de: "laufen", es: "correr", emoji: "🏃", note: "«ich laufe», «er läuft». Cambia la vocal con er/sie/es." },
+      { de: "fit", es: "en forma", emoji: "💪", note: "«fit bleiben» = mantenerse en forma." },
+    ],
+    [
+      cz("Ich laufe, ___ fit zu bleiben.", "Corro para mantenerme en forma.", ["um", "damit", "weil", "dass"], "um", "Mismo sujeto: um… zu."),
+      cz("Ich koche Gemüse, ___ meine Familie gesund ist.", "Cocino verduras para que mi familia esté sana.", ["damit", "um", "obwohl", "trotzdem"], "damit", "Sujetos distintos (yo / mi familia): damit."),
+      { kind: "write", es: "en forma", references: ["fit"] },
+    ],
+    "Jeden Morgen",
+    ["Ich laufe jeden Morgen, obwohl ich früh aufstehen muss. Ich laufe, um fit zu bleiben, und ich koche viel Gemüse, damit meine Familie gesund ist. Manchmal habe ich keine Lust, zu laufen. Trotzdem laufe ich, denn danach fühle ich mich besser."],
+    ["Corro todas las mañanas, aunque tengo que levantarme temprano. Corro para mantenerme en forma y cocino muchas verduras para que mi familia esté sana. A veces no tengo ganas de correr. A pesar de eso corro, porque después me siento mejor."],
+    [
+      { type: "choice", q: "¿Para qué corre?", options: ["Para estar en forma", "Para bajar de peso", "Para competir", "Para conocer gente"], answer: "Para estar en forma", why: "«um fit zu bleiben»." },
+      { type: "choice", q: "¿Para qué cocina muchas verduras?", options: ["Para que su familia esté sana", "Para bajar de peso", "Porque es vegetariana", "Porque es barato"], answer: "Para que su familia esté sana", why: "«damit meine Familie gesund ist»." },
+      { type: "tf", q: "Siempre tiene ganas de correr.", answer: false, why: "«Manchmal habe ich keine Lust»." },
+    ],
+  ),
+  genitiv: reading(
+    "Una cartera perdida",
+    "Leer un relato con genitivo, wegen/trotz y adjetivos con terminación.",
+    [
+      { de: "das Fundbüro", es: "la oficina de objetos perdidos", emoji: "🧳" },
+      { de: "traurig", es: "triste", emoji: "😢" },
+      { de: "verlieren", es: "perder", emoji: "🔍", note: "Participio: «verloren». «Ich habe die Tasche verloren»." },
+    ],
+    [
+      cz("Das ist die Tasche meiner ___.", "Es la cartera de mi madre.", ["Mutter", "Mutters", "Muttern", "Mütter"], "Mutter", "Genitivo femenino: no cambia el sustantivo."),
+      cz("___ des Regens bin ich gegangen.", "A pesar de la lluvia fui.", ["Trotz", "Obwohl", "Weil", "Damit"], "Trotz", "Con un sustantivo en genitivo: trotz."),
+      { kind: "write", es: "triste", references: ["traurig"] },
+    ],
+    "Das Fundbüro",
+    ["Gestern habe ich im Bus die Tasche meiner Mutter verloren. Es ist eine kleine, rote Tasche mit einem alten Schlüssel. Wegen der Tasche war meine Mutter sehr traurig. Trotz des Regens bin ich zum Fundbüro gegangen. Dort hat ein netter Mann die Tasche gefunden. Wir sind sehr glücklich!"],
+    ["Ayer perdí en el bus la cartera de mi madre. Es una cartera chica y roja con una llave vieja. Por la cartera, mi madre estaba muy triste. A pesar de la lluvia fui a la oficina de objetos perdidos. Allá un hombre amable encontró la cartera. ¡Estamos muy contentos!"],
+    [
+      { type: "choice", q: "¿Qué perdió?", options: ["La cartera de su madre", "Su teléfono", "Su llave", "Su libro"], answer: "La cartera de su madre", why: "«die Tasche meiner Mutter»." },
+      { type: "choice", q: "¿Cómo es la cartera?", options: ["Chica y roja", "Grande y negra", "Nueva y azul", "Vieja y verde"], answer: "Chica y roja", why: "«eine kleine, rote Tasche»." },
+      { type: "tf", q: "Fue a la oficina de objetos perdidos aunque llovía.", answer: true, why: "«Trotz des Regens»." },
+      { type: "choice", q: "¿Quién encontró la cartera?", options: ["Un hombre amable", "Su madre", "Un policía", "Un taxista"], answer: "Un hombre amable", why: "«ein netter Mann»." },
+    ],
+  ),
+  meinung: reading(
+    "¿Auto o bicicleta?",
+    "Leer un texto de opinión con conectores.",
+    [
+      { de: "das Fahrrad", es: "la bicicleta", emoji: "🚲", note: "Plural: «die Fahrräder»." },
+      { de: "die Umwelt", es: "el medio ambiente", emoji: "🌍" },
+    ],
+    [
+      cz("Das Auto ist ___ bequem, aber es braucht viel Geld.", "El auto sí es cómodo, pero necesita mucho dinero.", ["zwar", "obwohl", "denn", "weil"], "zwar", "«zwar… aber…»."),
+      cz("Ich weiß nicht, ___ jeder ein Fahrrad kaufen kann.", "No sé si todos pueden comprar una bicicleta.", ["ob", "dass", "weil", "damit"], "ob", "Pregunta indirecta: ob."),
+      { kind: "write", es: "la bicicleta", references: ["das Fahrrad"] },
+    ],
+    "Auto oder Fahrrad?",
+    ["Meiner Meinung nach ist das Fahrrad besser als das Auto. Erstens ist es günstig, zweitens ist es gut für die Umwelt. Außerdem bleibt man fit. Einerseits ist das Auto bequem und schnell, andererseits braucht man viel Geld. Ich weiß nicht, ob jeder ein Fahrrad kaufen kann, aber ich bin dafür."],
+    ["En mi opinión, la bicicleta es mejor que el auto. Primero, es barata; segundo, es buena para el medio ambiente. Además uno se mantiene en forma. Por un lado el auto es cómodo y rápido; por otro, se necesita mucho dinero. No sé si todos pueden comprar una bicicleta, pero estoy a favor."],
+    [
+      { type: "choice", q: "¿Qué prefiere?", options: ["La bicicleta", "El auto", "El tren", "El bus"], answer: "La bicicleta", why: "«das Fahrrad besser als das Auto»." },
+      { type: "choice", q: "¿Qué ventaja menciona primero?", options: ["Es barata", "Es rápida", "Es cómoda", "Es nueva"], answer: "Es barata", why: "«Erstens ist es günstig»." },
+      { type: "tf", q: "Cree que el auto es cómodo.", answer: true, why: "«das Auto bequem und schnell»." },
+      { type: "tf", q: "Está en contra de la bicicleta.", answer: false, why: "«ich bin dafür»." },
+    ],
+  ),
+  "pruefung-b1": reading(
+    "Un reclamo por escrito",
+    "Leer un correo de reclamo formal con varios conectores.",
+    [
+      { de: "die Anleitung", es: "las instrucciones", emoji: "📖", note: "Plural: «die Anleitungen»." },
+      { de: "ander-", es: "otro", emoji: "🔄", note: "Con terminaciones: «ein anderes Gerät», «der andere Mann»." },
+    ],
+    [
+      cz("Ich möchte mein Geld zurück, ___ ein anderes Gerät zu kaufen.", "Quisiera que me devuelvan el dinero para comprar otro aparato.", ["um", "damit", "weil", "dass"], "um", "Mismo sujeto: um… zu."),
+      cz("___ ich die Anleitung gelesen habe, funktioniert es nicht.", "Aunque leí las instrucciones, no funciona.", ["Obwohl", "Weil", "Damit", "Dass"], "Obwohl", "Contraste con el verbo al final: obwohl."),
+      { kind: "write", es: "las instrucciones", references: ["die Anleitung"] },
+    ],
+    "Eine E-Mail",
+    ["Sehr geehrte Damen und Herren, ich schreibe Ihnen, weil das Gerät, das ich gestern gekauft habe, kaputt ist. Obwohl ich die Anleitung gelesen habe, funktioniert es nicht. Ich möchte mein Geld zurück, um ein anderes Gerät zu kaufen. Bitte schicken Sie mir eine Antwort. Mit freundlichen Grüßen, Peter Braun"],
+    ["Estimados señores, les escribo porque el aparato que compré ayer está roto. Aunque leí las instrucciones, no funciona. Quisiera que me devuelvan el dinero para comprar otro aparato. Por favor, envíenme una respuesta. Saludos cordiales, Peter Braun"],
+    [
+      { type: "choice", q: "¿Por qué escribe?", options: ["Porque el aparato no funciona", "Para pedir información", "Para felicitar", "Para reservar"], answer: "Porque el aparato no funciona", why: "«das Gerät… ist kaputt»." },
+      { type: "choice", q: "¿Qué quiere?", options: ["Que le devuelvan el dinero", "Otro aparato igual", "Una reparación gratuita", "Un descuento"], answer: "Que le devuelvan el dinero", why: "«Ich möchte mein Geld zurück»." },
+      { type: "tf", q: "No leyó las instrucciones.", answer: false, why: "«Obwohl ich die Anleitung gelesen habe»." },
+      { type: "tf", q: "Termina con un saludo formal.", answer: true, why: "«Mit freundlichen Grüßen»." },
+    ],
+  ),
 };
