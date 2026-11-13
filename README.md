@@ -104,7 +104,7 @@ app/
 proxy.ts                       exige el código de acceso en todo
 components/                    ejercicios, reporte de pronunciación, reproductor de lecciones
 lib/
-  curriculum.ts, content/      contenido A1 y A2 (agregar lecciones acá)
+  curriculum.ts, content/      contenido A1, A2 y B1 (agregar lecciones acá)
   session.ts                   arma la secuencia de ejercicios
   progress.ts                  XP, racha, logros, cajas de Leitner (localStorage)
   speech.ts                    Azure: TTS (con caché de audio), reconocimiento, pronunciación

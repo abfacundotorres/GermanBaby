@@ -102,9 +102,11 @@ test("lecciones bonus: no entran en el orden lineal y se desbloquean con la ante
     const key = `${u.id}/${l.id}`;
     assert.ok(!LESSON_ORDER.includes(key), `${key} no debe estar en LESSON_ORDER`);
     assert.ok(BONUS_PREV[key], `${key} necesita una lección anterior`);
-    assert.ok(l.reading, `${key}: una lección bonus es de lectura`);
-    assert.equal(l.reading!.text.length, l.reading!.translation.length, `${key}: un párrafo, una traducción`);
-    assert.ok(l.reading!.questions.length >= 3, `${key}: pocas preguntas`);
+    assert.ok(l.reading || l.dialogue, `${key}: una lección bonus es de lectura o de escucha`);
+    if (l.reading) {
+      assert.equal(l.reading.text.length, l.reading.translation.length, `${key}: un párrafo, una traducción`);
+      assert.ok(l.reading.questions.length >= 3, `${key}: pocas preguntas`);
+    }
   }
 });
 

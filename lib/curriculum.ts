@@ -7,6 +7,8 @@ import type { Level } from "./level.ts";
 import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
 import { A1_DIALOGUES } from "./content/a1-dialogues.ts";
 import { READINGS } from "./content/readings.ts";
+import { PRACTICE_A2 } from "./content/practice-a2.ts";
+import { PRACTICE_B1 } from "./content/practice-b1.ts";
 import { UNITS_A1_PART3 } from "./content/a1-part3.ts";
 import { UNITS_A1_PART4 } from "./content/a1-part4.ts";
 import { UNITS_A1_PART5 } from "./content/a1-part5.ts";
@@ -324,6 +326,12 @@ for (const u of UNITS) {
   const r = READINGS[u.id];
   if (r && !u.lessons.some((l) => l.id === r.id)) u.lessons.push(r);
 }
+// Práctica extra opcional (A2 y B1), después de la lectura.
+const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A2, ...PRACTICE_B1 };
+for (const u of UNITS) {
+  const pr = PRACTICE[u.id];
+  if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
+}
 
 export function getUnit(unitId: string) {
   return UNITS.find((u) => u.id === unitId);
@@ -340,10 +348,14 @@ export const lessonKey = (unitId: string, lessonId: string) => `${unitId}/${less
 /** Orden global de lecciones, para desbloquear de a una. */
 export const LESSON_ORDER: string[] = UNITS.flatMap((u) => u.lessons.filter((l) => !l.bonus).map((l) => lessonKey(u.id, l.id)));
 
-/** Lección bonus → la lección anterior de su unidad, que la desbloquea. */
+/** Lección bonus → la última lección principal de su unidad, que la desbloquea (las bonus no se encadenan). */
 export const BONUS_PREV: Record<string, string> = Object.fromEntries(
   UNITS.flatMap((u) =>
-    u.lessons.flatMap((l, i) => (l.bonus && i > 0 ? [[lessonKey(u.id, l.id), lessonKey(u.id, u.lessons[i - 1].id)] as [string, string]] : [])),
+    u.lessons.flatMap((l, i) => {
+      if (!l.bonus) return [];
+      const prev = u.lessons.slice(0, i).reverse().find((x) => !x.bonus);
+      return prev ? [[lessonKey(u.id, l.id), lessonKey(u.id, prev.id)] as [string, string]] : [];
+    }),
   ),
 );
 
