@@ -2,9 +2,8 @@
 // Clave: «unidad/lección». Se asignan a Lesson.intro y Lesson.summary al armar el currículo.
 // `intro` se muestra antes de practicar; `summary`, en el resumen final de la lección.
 
-export type LessonNotes = { intro: string[]; summary: string[] };
-
-const READING_TIP = "Esta es una lectura: un texto corto con audio y traducción. Lo importante es entender la idea general, no cada palabra. Primero leé o escuchá el texto, y después respondé las preguntas. Las palabras nuevas que aparecen entran al repaso.";
+import { READING_TIP, INTROS_A2, type LessonNotes } from "./intros-a2.ts";
+export type { LessonNotes };
 
 export const INTROS: Record<string, LessonNotes> = {
   // ---------- Unidad 1: ¡Hallo!
@@ -562,3 +561,5 @@ export const INTROS: Record<string, LessonNotes> = {
   },
   "pruefung/lesen": { intro: [READING_TIP], summary: ["Aprendiste palabras para estudiar: die Stunde, das Wort, schwer, üben."] },
 };
+
+Object.assign(INTROS, INTROS_A2);

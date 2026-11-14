@@ -335,13 +335,6 @@ for (const u of UNITS) for (const l of u.lessons) {
   const d = A1_DIALOGUES[`${u.id}/${l.id}`];
   if (d && !l.dialogue) l.dialogue = d;
 }
-// Frases de ejemplo por palabra y explicaciones previas por lección.
-for (const u of UNITS) for (const l of u.lessons) {
-  for (const v of l.vocab) if (!v.example && EXAMPLES[v.de]) v.example = EXAMPLES[v.de];
-  const notes = INTROS[`${u.id}/${l.id}`];
-  if (notes && !l.intro) l.intro = notes.intro;
-  if (notes && !l.summary) l.summary = notes.summary;
-}
 // Lecturas opcionales al final de cada unidad desde la 9.
 for (const u of UNITS) {
   const r = READINGS[u.id];
@@ -352,6 +345,14 @@ const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A2, ...PRACTICE_B1, ...PR
 for (const u of UNITS) {
   const pr = PRACTICE[u.id];
   if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
+}
+
+// Frases de ejemplo por palabra y explicaciones previas por lección (después de armar las lecturas y las prácticas, que también las llevan).
+for (const u of UNITS) for (const l of u.lessons) {
+  for (const v of l.vocab) if (!v.example && EXAMPLES[v.de]) v.example = EXAMPLES[v.de];
+  const notes = INTROS[`${u.id}/${l.id}`];
+  if (notes && !l.intro) l.intro = notes.intro;
+  if (notes && !l.summary) l.summary = notes.summary;
 }
 
 export function getUnit(unitId: string) {

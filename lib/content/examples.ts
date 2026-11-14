@@ -246,3 +246,150 @@ ex("die Stunde", "Eine Stunde hat sechzig Minuten.", "Una hora tiene sesenta min
 ex("das Wort", "Das ist ein neues Wort.", "Esta es una palabra nueva.");
 ex("schwer", "Deutsch ist nicht schwer.", "El alemán no es difícil.");
 ex("üben", "Ich möchte jeden Tag üben.", "Quiero practicar todos los días.");
+
+// ================= A2 =================
+
+// ---------- Unidad 15: Contar el pasado
+ex("früher", "Früher habe ich in Berlin gewohnt.", "Antes viví en Berlín.");
+ex("damals", "Damals war ich jung.", "En aquel entonces yo era joven.");
+ex("vor einem Jahr", "Vor einem Jahr war ich in Berlin.", "Hace un año estuve en Berlín.");
+ex("seit einem Jahr", "Ich wohne seit einem Jahr in Berlin.", "Vivo en Berlín desde hace un año.");
+ex("als Kind", "Als Kind habe ich Fußball gespielt.", "De chico jugaba al fútbol.");
+ex("tausend", "Das Zimmer kostet tausend Euro im Monat.", "La habitación cuesta mil euros por mes.");
+ex("zweitausend", "Im Jahr zweitausend war ich acht Jahre alt.", "En el año dos mil yo tenía ocho años.");
+ex("neunzehnhundertneunzig", "Mein Vater ist neunzehnhundertneunzig geboren.", "Mi padre nació en 1990.");
+ex("die Schule", "Die Schule ist nicht weit.", "La escuela no queda lejos.");
+ex("die Universität", "Die Universität ist groß.", "La universidad es grande.");
+ex("Deutschland", "Berlin ist in Deutschland.", "Berlín está en Alemania.");
+ex("kaum", "Ich habe kaum Zeit.", "Casi no tengo tiempo.");
+ex("die Geschichte", "Das ist eine schöne Geschichte.", "Es una linda historia.");
+
+// ---------- Unidad 16: Cuerpo y salud
+ex("der Kopf", "Mein Vater hat einen großen Kopf.", "Mi padre tiene una cabeza grande.");
+ex("der Bauch", "Das Kind hat einen kleinen Bauch.", "El niño tiene una panza chiquita.");
+ex("der Rücken", "Mein Rücken tut weh.", "Me duele la espalda.");
+ex("der Arm", "Mein Arm tut weh.", "Me duele el brazo.");
+ex("die Hand", "Meine Hand ist klein.", "Mi mano es chica.");
+ex("das Bein", "Das Kind hat zwei Beine.", "El niño tiene dos piernas.");
+ex("krank", "Mein Bruder ist krank.", "Mi hermano está enfermo.");
+ex("gesund", "Mein Vater ist alt, aber gesund.", "Mi padre es mayor, pero está sano.");
+ex("das Fieber", "Das Kind hat Fieber.", "El niño tiene fiebre.");
+ex("die Tablette", "Ich nehme eine Tablette.", "Tomo una pastilla.");
+ex("der Arzt / die Ärztin", "Meine Mutter ist Ärztin.", "Mi madre es médica.");
+ex("viel", "Ich habe viel Zeit.", "Tengo mucho tiempo.");
+ex("bald", "Bald habe ich Geburtstag.", "Pronto es mi cumpleaños.");
+ex("sagen", "Ich möchte etwas sagen.", "Quiero decir algo.");
+
+// ---------- Unidad 17: Ropa y compras
+ex("das T-Shirt", "Das T-Shirt ist billig.", "La remera es barata.");
+ex("die Hose", "Die Hose ist sehr günstig.", "El pantalón es muy barato.");
+ex("die Jacke", "Die Jacke ist teuer.", "La campera es cara.");
+ex("der Pullover", "Der Pullover ist schön.", "El pulóver es lindo.");
+ex("das Kleid", "Anna hat ein neues Kleid.", "Anna tiene un vestido nuevo.");
+ex("die Schuhe", "Die Schuhe sind sehr günstig.", "Los zapatos son muy baratos.");
+ex("der Rock", "Mia hat einen neuen Rock.", "Mia tiene una pollera nueva.");
+ex("rot", "Das Kleid ist rot.", "El vestido es rojo.");
+ex("blau", "Die Hose ist blau.", "El pantalón es azul.");
+ex("grün", "Der Pullover ist grün.", "El pulóver es verde.");
+ex("gelb", "Das T-Shirt ist gelb.", "La remera es amarilla.");
+ex("schwarz", "Der Rock ist schwarz.", "La pollera es negra.");
+ex("weiß", "Die Schuhe sind weiß.", "Los zapatos son blancos.");
+ex("braun", "Die Jacke ist braun.", "La campera es marrón.");
+ex("die Größe", "Ich habe Größe vierzig.", "Uso talle cuarenta.");
+ex("der Winter", "Im Winter bin ich gern zu Hause.", "En invierno me gusta estar en casa.");
+ex("die Mütze", "Ich habe eine neue Mütze.", "Tengo un gorro nuevo.");
+ex("der Schal", "Der Schal ist sehr schön.", "La bufanda es muy linda.");
+ex("tragen", "Im Winter muss ich eine Jacke tragen.", "En invierno tengo que llevar campera.");
+
+// ---------- Unidad 18: Razones y opiniones
+ex("weil", "Ich esse Kuchen, weil ich Hunger habe.", "Como torta porque tengo hambre.");
+ex("denn", "Ich gehe nach Hause, denn ich bin müde.", "Me voy a casa, porque estoy cansado.");
+ex("müde", "Ich bin heute sehr müde.", "Hoy estoy muy cansado.");
+ex("deshalb", "Ich habe Hunger, deshalb esse ich Brot.", "Tengo hambre, por eso como pan.");
+ex("dass", "Ich weiß, dass du Zeit hast.", "Sé que tenés tiempo.");
+ex("wichtig", "Deutsch ist sehr wichtig.", "El alemán es muy importante.");
+ex("wenn", "Wenn ich Hunger habe, esse ich Brot.", "Cuando tengo hambre, como pan.");
+ex("immer", "Ich trinke immer Kaffee.", "Siempre tomo café.");
+ex("oft", "Mein Bruder spielt oft Fußball.", "Mi hermano juega al fútbol a menudo.");
+ex("manchmal", "Manchmal esse ich Fisch.", "A veces como pescado.");
+ex("nie", "Ich esse nie Fleisch.", "Nunca como carne.");
+ex("leicht", "Das Wort ist leicht.", "La palabra es fácil.");
+ex("schwierig", "Die Prüfung ist schwierig.", "El examen es difícil.");
+ex("die Grammatik", "Die Grammatik ist nicht leicht.", "La gramática no es fácil.");
+
+// ---------- Unidad 19: Regalos y dativo
+ex("mir", "Das Haus gefällt mir sehr.", "La casa me gusta mucho.");
+ex("dir", "Gefällt dir die Wohnung?", "¿Te gusta el departamento?");
+ex("ihm / ihr", "Ich helfe ihm, und er hilft ihr.", "Yo lo ayudo a él, y él la ayuda a ella.");
+ex("das Geschenk", "Das Geschenk ist für meine Mutter.", "El regalo es para mi madre.");
+ex("die Blumen", "Die Blumen sind schön.", "Las flores son lindas.");
+ex("die Schokolade", "Ich esse gern Schokolade.", "Me gusta comer chocolate.");
+ex("feiern", "Wir feiern am Samstag eine Party.", "El sábado hacemos una fiesta.");
+ex("die Einladung", "Danke für die Einladung!", "¡Gracias por la invitación!");
+ex("mitbringen", "Ich möchte Kuchen mitbringen.", "Quiero traer torta.");
+ex("der Gast", "Der Gast möchte einen Kaffee.", "El invitado quiere un café.");
+ex("backen", "Meine Mutter möchte einen Kuchen backen.", "Mi madre quiere hornear una torta.");
+ex("die Überraschung", "Das ist eine Überraschung!", "¡Es una sorpresa!");
+
+// ---------- Unidad 20: Dónde y adónde
+ex("auf dem Tisch", "Der Kaffee ist auf dem Tisch.", "El café está sobre la mesa.");
+ex("unter dem Bett", "Die Schuhe sind unter dem Bett.", "Los zapatos están debajo de la cama.");
+ex("neben der Lampe", "Das Buch ist neben der Lampe.", "El libro está al lado de la lámpara.");
+ex("vor dem Haus", "Der Bus ist vor dem Haus.", "El colectivo está delante de la casa.");
+ex("hinter der Tür", "Die Jacke ist hinter der Tür.", "La campera está detrás de la puerta.");
+ex("zwischen dem Bett und dem Schrank", "Die Lampe ist zwischen dem Bett und dem Schrank.", "La lámpara está entre la cama y el armario.");
+ex("am Fenster", "Der Tisch ist am Fenster.", "La mesa está junto a la ventana.");
+ex("im Schrank", "Die Hose ist im Schrank.", "El pantalón está en el armario.");
+ex("das Bild", "Das Bild ist sehr schön.", "El cuadro es muy lindo.");
+ex("der Teppich", "Der Teppich ist neu.", "La alfombra es nueva.");
+ex("das Regal", "Das Regal ist neben dem Fenster.", "El estante está al lado de la ventana.");
+ex("der Spiegel", "Der Spiegel ist im Bad.", "El espejo está en el baño.");
+ex("die Pflanze", "Die Pflanze steht am Fenster.", "La planta está junto a la ventana.");
+ex("der Fernseher", "Der Fernseher ist im Wohnzimmer.", "El televisor está en el living.");
+ex("der Balkon", "Die Wohnung hat einen Balkon.", "El departamento tiene balcón.");
+ex("die Ecke", "Die Lampe steht in der Ecke.", "La lámpara está en el rincón.");
+ex("der Schreibtisch", "Mein Schreibtisch ist klein.", "Mi escritorio es chico.");
+
+// ---------- Unidad 21: Comparar y viajar
+ex("schnell", "Der Zug ist schnell.", "El tren es rápido.");
+ex("größer", "Berlin ist größer als Wien.", "Berlín es más grande que Viena.");
+ex("teurer", "Der Kaffee ist teurer als der Tee.", "El café es más caro que el té.");
+ex("besser", "Der Salat ist besser als die Suppe.", "La ensalada es mejor que la sopa.");
+ex("am besten", "Der Kuchen schmeckt am besten.", "La torta es lo que mejor sabe.");
+ex("das Wetter", "Das Wetter ist heute schön.", "Hoy hace lindo tiempo.");
+ex("warm", "Das Wasser ist warm.", "El agua está tibia.");
+ex("kalt", "Der Tee ist kalt.", "El té está frío.");
+ex("das Hotel", "Das Hotel ist in der Stadt.", "El hotel está en la ciudad.");
+ex("das Einzelzimmer", "Ich möchte ein Einzelzimmer.", "Quiero una habitación simple.");
+ex("das Doppelzimmer", "Wir möchten ein Doppelzimmer.", "Queremos una habitación doble.");
+ex("der Schlüssel", "Der Schlüssel ist auf dem Tisch.", "La llave está sobre la mesa.");
+ex("der Koffer", "Mein Koffer ist schwer.", "Mi valija es pesada.");
+ex("das Meer", "Das Meer ist nicht weit.", "El mar no queda lejos.");
+ex("der Strand", "Der Strand ist sehr groß.", "La playa es muy grande.");
+
+// ---------- Unidad 22: Trabajo y planes
+ex("der Beruf", "Mein Vater hat einen guten Beruf.", "Mi padre tiene una buena profesión.");
+ex("der Lehrer / die Lehrerin", "Meine Schwester ist Lehrerin.", "Mi hermana es docente.");
+ex("der Koch / die Köchin", "Mein Bruder ist Koch.", "Mi hermano es cocinero.");
+ex("der Ingenieur / die Ingenieurin", "Mein Vater ist Ingenieur.", "Mi padre es ingeniero.");
+ex("der Student / die Studentin", "Mia ist Studentin.", "Mia es estudiante.");
+ex("die Arbeit", "Meine Arbeit ist sehr interessant.", "Mi trabajo es muy interesante.");
+ex("die Stelle", "Die Stelle ist in Berlin.", "El puesto es en Berlín.");
+ex("die Bewerbung", "Ich möchte eine Bewerbung schreiben.", "Quiero escribir una postulación.");
+ex("der Lebenslauf", "Der Lebenslauf ist wichtig.", "El currículum es importante.");
+ex("die Erfahrung", "Ich habe keine Erfahrung.", "No tengo experiencia.");
+ex("nächstes Jahr", "Nächstes Jahr fahre ich nach Wien.", "El año que viene viajo a Viena.");
+ex("hoffentlich", "Hoffentlich ist das Wetter schön.", "Ojalá haga lindo tiempo.");
+ex("im Sommer", "Im Sommer ist es warm.", "En verano hace calor.");
+ex("das Land", "Deutschland ist ein großes Land.", "Alemania es un país grande.");
+ex("eröffnen", "Anna möchte ein Restaurant eröffnen.", "Anna quiere abrir un restaurante.");
+ex("genug", "Ich habe genug Zeit.", "Tengo suficiente tiempo.");
+
+// ---------- Unidad 23: Preparación para el examen A2
+ex("das Telefon", "Mein Telefon ist auf dem Tisch.", "Mi teléfono está sobre la mesa.");
+ex("später", "Ich rufe dich später an.", "Te llamo más tarde.");
+ex("die E-Mail", "Ich habe eine E-Mail für dich.", "Tengo un correo para vos.");
+ex("der Termin", "Ich habe heute einen Termin.", "Hoy tengo una cita.");
+ex("Einverstanden!", "Am Montag um zehn Uhr? — Einverstanden!", "¿El lunes a las diez? — ¡De acuerdo!");
+ex("verschieben", "Ich muss den Termin leider verschieben.", "Lamentablemente tengo que posponer la cita.");
+ex("die Antwort", "Ich habe keine Antwort.", "No tengo respuesta.");
