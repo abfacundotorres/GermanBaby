@@ -393,3 +393,107 @@ ex("der Termin", "Ich habe heute einen Termin.", "Hoy tengo una cita.");
 ex("Einverstanden!", "Am Montag um zehn Uhr? — Einverstanden!", "¿El lunes a las diez? — ¡De acuerdo!");
 ex("verschieben", "Ich muss den Termin leider verschieben.", "Lamentablemente tengo que posponer la cita.");
 ex("die Antwort", "Ich habe keine Antwort.", "No tengo respuesta.");
+
+// ================= B1 =================
+
+// ---------- Unidad 24: Contar una historia
+ex("Es war einmal…", "Es war einmal ein Kind in Wien.", "Había una vez un niño en Viena.");
+ex("als", "Als ich in Berlin war, regnete es.", "Cuando estuve en Berlín, llovía.");
+ex("während", "Während ich kochte, kam Tom nach Hause.", "Mientras yo cocinaba, Tom llegó a casa.");
+ex("bevor", "Bevor ich schlafen ging, trank ich Tee.", "Antes de irme a dormir, tomé té.");
+ex("nachdem", "Nachdem wir gegessen hatten, tranken wir Kaffee.", "Después de comer, tomamos café.");
+ex("die Erinnerung", "Das ist eine schöne Erinnerung.", "Es un lindo recuerdo.");
+ex("unvergesslich", "Der Urlaub war unvergesslich.", "Las vacaciones fueron inolvidables.");
+
+// ---------- Unidad 25: Deseos y consejos
+ex("das Geld", "Ich habe nicht viel Geld.", "No tengo mucho dinero.");
+ex("reich", "Er ist sehr reich.", "Es muy rico.");
+ex("der Rat", "Mein Vater gibt mir einen Rat.", "Mi padre me da un consejo.");
+ex("der Sport", "Sport ist gesund.", "El deporte es sano.");
+ex("die Idee", "Das ist eine gute Idee.", "Es una buena idea.");
+ex("die Frage", "Ich habe eine Frage.", "Tengo una pregunta.");
+ex("die Weltreise", "Eine Weltreise ist teuer.", "Un viaje alrededor del mundo es caro.");
+ex("der Traum", "Das Haus am Meer ist mein Traum.", "La casa junto al mar es mi sueño.");
+ex("sparen", "Ich möchte Geld sparen.", "Quiero ahorrar dinero.");
+ex("frei", "Heute habe ich frei.", "Hoy tengo el día libre.");
+
+// ---------- Unidad 26: Describir con relativos
+ex("der Mann", "Der Mann ist mein Vater.", "El hombre es mi padre.");
+ex("die Frau", "Die Frau ist Ärztin.", "La mujer es médica.");
+ex("der Freund / die Freundin", "Meine Freundin heißt Lena.", "Mi amiga se llama Lena.");
+ex("der Nachbar / die Nachbarin", "Mein Nachbar ist sehr nett.", "Mi vecino es muy simpático.");
+ex("alles", "Das ist alles.", "Eso es todo.");
+ex("das Beste", "Das ist das Beste.", "Es lo mejor.");
+ex("jemand", "Jemand ist an der Tür.", "Hay alguien en la puerta.");
+ex("freundlich", "Die Lehrerin ist sehr freundlich.", "La docente es muy amable.");
+ex("lange", "Ich warte schon lange.", "Espero desde hace mucho.");
+
+// ---------- Unidad 27: La voz pasiva
+ex("das Geschäft", "Das Geschäft ist sehr klein.", "El negocio es muy chico.");
+ex("geöffnet", "Die Tür ist geöffnet.", "La puerta está abierta.");
+ex("geschlossen", "Die Bank ist heute geschlossen.", "El banco está cerrado hoy.");
+ex("verboten", "Das ist verboten.", "Eso está prohibido.");
+ex("das Rathaus", "Das Rathaus ist im Zentrum.", "El ayuntamiento está en el centro.");
+ex("montags", "Montags arbeite ich nicht.", "Los lunes no trabajo.");
+
+// ---------- Unidad 28: Contrastes y metas
+ex("obwohl", "Ich bleibe zu Hause, obwohl ich nicht krank bin.", "Me quedo en casa, aunque no estoy enfermo.");
+ex("trotzdem", "Es regnet, trotzdem fahre ich nach Berlin.", "Llueve, pero igual viajo a Berlín.");
+ex("wenig", "Ich habe wenig Zeit.", "Tengo poco tiempo.");
+ex("glücklich", "Meine Mutter ist heute glücklich.", "Mi madre está feliz hoy.");
+ex("um … zu", "Ich gehe zum Bahnhof, um Anna zu sehen.", "Voy a la estación para ver a Anna.");
+ex("damit", "Ich koche, damit du keinen Hunger hast.", "Cocino para que no tengas hambre.");
+ex("vergessen", "Ich habe den Schlüssel vergessen.", "Me olvidé la llave.");
+ex("die Lust", "Ich habe heute keine Lust.", "Hoy no tengo ganas.");
+ex("laufen", "Ich laufe gern im Park.", "Me gusta correr en el parque.");
+ex("fit", "Ich möchte fit bleiben.", "Quiero mantenerme en forma.");
+
+// ---------- Unidad 29: Posesión y causas
+ex("das Auto", "Das Auto ist neu.", "El auto es nuevo.");
+ex("die Tasche", "Die Tasche ist auf dem Stuhl.", "La cartera está sobre la silla.");
+ex("wegen", "Wegen der Arbeit bin ich müde.", "Por el trabajo estoy cansado.");
+ex("der Regen", "Der Regen ist kalt.", "La lluvia es fría.");
+ex("trotz", "Trotz der Prüfung bin ich nicht müde.", "A pesar del examen no estoy cansado.");
+ex("während des Essens", "Während des Essens trinke ich Wasser.", "Durante la comida tomo agua.");
+ex("das Fundbüro", "Das Fundbüro ist am Bahnhof.", "La oficina de objetos perdidos está en la estación.");
+ex("traurig", "Das Kind ist traurig.", "El niño está triste.");
+ex("verlieren", "Ich möchte den Schlüssel nicht verlieren.", "No quiero perder la llave.");
+
+// ---------- Unidad 30: Opinar y argumentar
+ex("die Meinung", "Das ist meine Meinung.", "Esa es mi opinión.");
+ex("der Vorteil", "Der Zug hat einen Vorteil: Er ist günstig.", "El tren tiene una ventaja: es barato.");
+ex("der Nachteil", "Der Nachteil ist, dass es teuer ist.", "La desventaja es que es caro.");
+ex("außerdem", "Außerdem habe ich Hunger.", "Además tengo hambre.");
+ex("bequem", "Der Stuhl ist bequem.", "La silla es cómoda.");
+ex("zum Beispiel", "Ich mag Gemüse, zum Beispiel Tomaten.", "Me gustan las verduras, por ejemplo los tomates.");
+ex("ob", "Ich weiß nicht, ob er krank ist.", "No sé si está enfermo.");
+ex("sicher", "Ich bin sicher, dass du das kannst.", "Estoy seguro de que podés hacerlo.");
+ex("das Fahrrad", "Mein Fahrrad ist neu.", "Mi bicicleta es nueva.");
+ex("die Umwelt", "Die Umwelt ist wichtig.", "El medio ambiente es importante.");
+
+// ---------- Unidad 32: Verbos con preposición
+ex("die Vorfreude", "Die Vorfreude auf den Urlaub ist groß.", "La ilusión por las vacaciones es grande.");
+ex("gespannt", "Ich bin gespannt auf die Prüfung.", "Tengo curiosidad por el examen.");
+
+// ---------- Unidad 33: Si hubiera…
+ex("die Entscheidung", "Das ist eine wichtige Entscheidung.", "Es una decisión importante.");
+
+// ---------- Unidad 34: Conectores
+ex("regelmäßig", "Ich lerne regelmäßig Deutsch.", "Estudio alemán con regularidad.");
+ex("die Gewohnheit", "Das ist eine gute Gewohnheit.", "Es un buen hábito.");
+
+// ---------- Unidad 31: Preparación para el examen B1
+ex("die Beschwerde", "Ich habe eine Beschwerde.", "Tengo un reclamo.");
+ex("das Gerät", "Das Gerät ist neu.", "El aparato es nuevo.");
+ex("kaputt", "Der Fernseher ist kaputt.", "El televisor está roto.");
+ex("der Fehler", "Das ist ein Fehler.", "Eso es un error.");
+ex("der Betreff", "Der Betreff ist wichtig.", "El asunto es importante.");
+ex("der Brief", "Ich habe einen Brief für dich.", "Tengo una carta para vos.");
+ex("schicken", "Ich möchte dir ein Foto schicken.", "Quiero mandarte una foto.");
+ex("der Text", "Der Text ist nicht schwer.", "El texto no es difícil.");
+ex("die Hauptperson", "Die Hauptperson ist ein Kind.", "El personaje principal es un niño.");
+ex("am Anfang", "Am Anfang war alles schwer.", "Al principio todo era difícil.");
+ex("am Ende", "Am Ende ist alles gut.", "Al final todo está bien.");
+ex("zusammenfassend", "Zusammenfassend war der Urlaub sehr schön.", "En resumen, las vacaciones fueron muy lindas.");
+ex("die Anleitung", "Die Anleitung ist leicht.", "Las instrucciones son fáciles.");
+ex("ander-", "Ich möchte ein anderes Zimmer.", "Quiero otra habitación.");

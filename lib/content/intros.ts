@@ -3,6 +3,7 @@
 // `intro` se muestra antes de practicar; `summary`, en el resumen final de la lección.
 
 import { READING_TIP, INTROS_A2, type LessonNotes } from "./intros-a2.ts";
+import { INTROS_B1 } from "./intros-b1.ts";
 export type { LessonNotes };
 
 export const INTROS: Record<string, LessonNotes> = {
@@ -562,4 +563,4 @@ export const INTROS: Record<string, LessonNotes> = {
   "pruefung/lesen": { intro: [READING_TIP], summary: ["Aprendiste palabras para estudiar: die Stunde, das Wort, schwer, üben."] },
 };
 
-Object.assign(INTROS, INTROS_A2);
+Object.assign(INTROS, INTROS_A2, INTROS_B1);
