@@ -270,7 +270,7 @@ export const INTROS_B1: Record<string, LessonNotes> = {
   "genitiv/adjektive-dativ": {
     intro: [
       "En dativo y en genitivo, el adjetivo termina en «-en» casi siempre: «mit dem alten Auto», «in einer kleinen Wohnung», «das Haus des jungen Mannes». Es más simple que en nominativo y acusativo.",
-      "La excepción habitual es el femenino con artículo: «der» (dativo y genitivo) pide «-en» igual: «der netten Frau».",
+      "Vale también para el femenino: «der netten Frau» (dativo y genitivo).",
     ],
     summary: [
       "Dativo y genitivo: adjetivo en «-en» (mit dem alten Auto).",

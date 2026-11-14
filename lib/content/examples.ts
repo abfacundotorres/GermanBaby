@@ -497,3 +497,53 @@ ex("am Ende", "Am Ende ist alles gut.", "Al final todo está bien.");
 ex("zusammenfassend", "Zusammenfassend war der Urlaub sehr schön.", "En resumen, las vacaciones fueron muy lindas.");
 ex("die Anleitung", "Die Anleitung ist leicht.", "Las instrucciones son fáciles.");
 ex("ander-", "Ich möchte ein anderes Zimmer.", "Quiero otra habitación.");
+
+// ================= B2 =================
+
+// ---------- Unidad 35: Discurso indirecto
+ex("die Quelle", "Die Quelle ist nicht sicher.", "La fuente no es segura.");
+ex("bestätigen", "Der Arzt muss das bestätigen.", "El médico tiene que confirmarlo.");
+
+// ---------- Unidad 36: Participios como adjetivos
+ex("das lachende Kind", "Das lachende Kind ist glücklich.", "El niño que se ríe está feliz.");
+ex("der schlafende Hund", "Der schlafende Hund liegt im Garten.", "El perro que duerme está en el jardín.");
+ex("die kommende Woche", "Die kommende Woche habe ich frei.", "La semana que viene tengo libre.");
+ex("die steigenden Preise", "Die steigenden Preise sind ein Problem.", "Los precios que suben son un problema.");
+ex("ein überraschendes Ergebnis", "Die Prüfung hatte ein überraschendes Ergebnis.", "El examen tuvo un resultado sorprendente.");
+ex("das gekaufte Auto", "Das gekaufte Auto ist rot.", "El auto comprado es rojo.");
+ex("die geöffnete Tür", "Die geöffnete Tür ist im Wohnzimmer.", "La puerta abierta está en el living.");
+ex("ein gebrochener Arm", "Er hat einen gebrochenen Arm.", "Tiene un brazo quebrado.");
+ex("das verlorene Buch", "Das verlorene Buch war im Fundbüro.", "El libro perdido estaba en la oficina de objetos perdidos.");
+ex("ein gelungenes Fest", "Das war ein gelungenes Fest.", "Fue una fiesta lograda.");
+ex("die geschlossenen Fenster", "Die geschlossenen Fenster sind neu.", "Las ventanas cerradas son nuevas.");
+ex("das von meinem Vater gekaufte Auto", "Das von meinem Vater gekaufte Auto ist blau.", "El auto comprado por mi padre es azul.");
+ex("die in Berlin lebende Frau", "Die in Berlin lebende Frau ist Ärztin.", "La mujer que vive en Berlín es médica.");
+ex("der im Garten spielende Hund", "Der im Garten spielende Hund ist braun.", "El perro que juega en el jardín es marrón.");
+ex("das gestern geöffnete Geschäft", "Das gestern geöffnete Geschäft ist sehr klein.", "El negocio abierto ayer es muy chico.");
+ex("die vor zwei Jahren gebaute Brücke", "Die vor zwei Jahren gebaute Brücke ist schön.", "El puente construido hace dos años es lindo.");
+ex("der Weg", "Der Weg zur Schule ist nicht weit.", "El camino a la escuela no es largo.");
+ex("der duftende Kaffee", "Der duftende Kaffee steht auf dem Tisch.", "El café que huele rico está sobre la mesa.");
+
+// ---------- Unidad 37: Lenguaje formal
+ex("die Maßnahme", "Das ist eine wichtige Maßnahme.", "Es una medida importante.");
+ex("die Zusammenarbeit", "Die Zusammenarbeit ist sehr gut.", "La colaboración es muy buena.");
+
+// ---------- Unidad 38: Pasiva avanzada
+ex("die Baustelle", "Die Baustelle ist vor dem Haus.", "La obra está delante de la casa.");
+ex("die Genehmigung", "Ich habe keine Genehmigung.", "No tengo permiso.");
+
+// ---------- Unidad 39: Conectores avanzados
+ex("der Umzug", "Der Umzug ist am Samstag.", "La mudanza es el sábado.");
+ex("überzeugen", "Ich möchte dich überzeugen.", "Quiero convencerte.");
+
+// ---------- Unidad 40: Texto de opinión
+ex("überwiegen", "Hier überwiegen die Vorteile.", "Acá pesan más las ventajas.");
+ex("der Kompromiss", "Das ist ein guter Kompromiss.", "Es un buen acuerdo.");
+
+// ---------- Unidad 41: Registro y estilo
+ex("die Einladung zum Vorstellungsgespräch", "Die Einladung zum Vorstellungsgespräch ist für Montag.", "La invitación a la entrevista de trabajo es para el lunes.");
+ex("kurz und bündig", "Der Brief ist kurz und bündig.", "La carta es breve y directa.");
+
+// ---------- Unidad 42: Preparación para el examen B2
+ex("der Umsatz", "Der Umsatz ist deutlich besser.", "Las ventas son notablemente mejores.");
+ex("deutlich", "Das Wetter ist deutlich besser.", "El tiempo está notablemente mejor.");
