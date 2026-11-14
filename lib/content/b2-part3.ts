@@ -20,7 +20,7 @@ export const UNITS_B2_PART3: Unit[] = [
           { de: "Wir fahren morgen, es sei denn, es regnet", es: "Viajamos mañana, a menos que llueva", emoji: "☔", note: "«es sei denn» = a menos que. Es una fórmula fija; después sigue una oración con el verbo en segundo lugar." },
           { de: "Das geht, vorausgesetzt, dass alle einverstanden sind", es: "Se puede, siempre y cuando todos estén de acuerdo", emoji: "✅", note: "«vorausgesetzt, dass» + verbo al final." },
           { de: "Je nachdem, wie das Wetter ist, fahren wir", es: "Según cómo esté el clima, viajamos", emoji: "🌦️", note: "«je nachdem» = según. Después, una pregunta indirecta con el verbo al final." },
-          { de: "Im Fall, dass es regnet, bleiben wir zu Hause", es: "En caso de que llueva, nos quedamos en casa", emoji: "🏠", note: "Otra forma de decir «falls»." },
+          { de: "Im Falle eines Regens bleiben wir zu Hause", es: "En caso de lluvia nos quedamos en casa", emoji: "🏠", note: "«im Falle» + genitivo: más formal que «falls». «der Regen» → «eines Regens»." },
         ],
         exercises: [
           { kind: "speak", de: "Ich komme, sofern ich Zeit habe", es: "Voy, siempre que tenga tiempo" },
@@ -76,7 +76,7 @@ export const UNITS_B2_PART3: Unit[] = [
             { who: "f", name: "Frau Keller", de: "Herr Braun, ich komme heute nicht ins Büro.", es: "Sr. Braun, hoy no voy a la oficina." },
             { who: "m", name: "Herr Braun", de: "Warum nicht?", es: "¿Por qué no?" },
             { who: "f", name: "Frau Keller", de: "Da ich krank bin, bleibe ich zu Hause, zumal der Zug zu spät ist.", es: "Como estoy enferma, me quedo en casa, sobre todo porque el tren llega tarde." },
-            { who: "m", name: "Herr Braun", de: "Verstehe. Sie sind ja nämlich schon lange krank.", es: "Entiendo. Es que ya hace mucho que está enferma." },
+            { who: "m", name: "Herr Braun", de: "Verstehe. Sie sind nämlich schon lange krank.", es: "Entiendo. Es que ya hace mucho que está enferma." },
             { who: "f", name: "Frau Keller", de: "Ja. Folglich kann ich nicht arbeiten.", es: "Sí. Por lo tanto no puedo trabajar." },
             { who: "m", name: "Herr Braun", de: "Dann fällt die Sitzung somit aus.", es: "Entonces la reunión se cancela." },
           ],

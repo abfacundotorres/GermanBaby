@@ -391,7 +391,7 @@ export const UNITS_B1_PART5: Unit[] = [
         ],
         exercises: [
           { kind: "quiz", question: "Wenn ich Zeit ___, wäre ich gekommen.", options: ["gehabt hätte", "hatte", "habe gehabt", "hätte gehabt"], answer: "gehabt hätte", explanation: "En la oración de «wenn», el verbo conjugado va al final: «gehabt hätte».", category: "orden de palabras" },
-          { kind: "quiz", question: "Ich ___ gern mehr geschlafen.", options: ["hätte", "wäre", "habe", "würde"], answer: "hätte", explanation: "«schlafen» forma el Perfekt con «haben»: «hätte geschlafen».", category: "gramática" },
+          { kind: "quiz", question: "Ich ___ gern mehr geschlafen. (me hubiera gustado)", options: ["hätte", "wäre", "habe", "würde"], answer: "hätte", explanation: "«schlafen» forma el Perfekt con «haben»: «hätte geschlafen».", category: "gramática" },
           { kind: "quiz", question: "Wenn wir Zeit gehabt hätten, ___ wir nach Berlin gefahren.", options: ["wären", "hätten", "sind", "waren"], answer: "wären", explanation: "«fahren» forma el Perfekt con «sein»: «wären gefahren».", category: "gramática" },
           { kind: "quiz", question: "Du ___ mehr lernen sollen.", options: ["hättest", "wärst", "hast", "würdest"], answer: "hättest", explanation: "Reproche con modal: «hättest» + infinitivo + «sollen».", category: "gramática" },
           { kind: "quiz", question: "Wenn ich früher ___, wäre ich nicht zu spät gekommen.", options: ["aufgestanden wäre", "aufgestanden hätte", "aufstehen würde", "aufstand"], answer: "aufgestanden wäre", explanation: "«aufstehen» forma el Perfekt con «sein»: «aufgestanden wäre».", category: "gramática" },

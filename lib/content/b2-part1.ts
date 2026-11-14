@@ -161,7 +161,7 @@ export const UNITS_B2_PART1: Unit[] = [
           {
             title: "Cuando el Konjunktiv I se confunde con el presente",
             body: [
-              "Con «ich», «wir» y «sie» (plural), la forma del Konjunktiv I es igual a la del presente («wir haben», «sie kommen»). Entonces no se nota que es discurso indirecto, y se usa el Konjunktiv II en su lugar: «hätten», «kämen», «wären».",
+              "Con «ich», «wir» y «sie» (plural), la forma del Konjunktiv I es casi siempre igual a la del presente («wir haben», «sie kommen»; «sein» es la excepción: ich sei, wir seien). Entonces no se nota que es discurso indirecto, y se usa el Konjunktiv II en su lugar: «hätten», «kämen», «wären».",
             ],
             examples: [
               { de: "Sie sagten, sie hätten keine Zeit.", es: "Dijeron que no tenían tiempo." },
@@ -183,9 +183,9 @@ export const UNITS_B2_PART1: Unit[] = [
           },
         ],
         exercises: [
-          { kind: "quiz", question: "Er sagt, er ___ krank.", options: ["sei", "ist", "wäre", "war"], answer: "sei", explanation: "Discurso indirecto: «sein» → «er sei».", category: "gramática" },
-          { kind: "quiz", question: "Sie sagt, sie ___ keine Zeit.", options: ["habe", "hat", "hätte", "hatte"], answer: "habe", explanation: "«haben» → «sie habe».", category: "gramática" },
-          { kind: "quiz", question: "Er sagte, er ___ morgen. (kommen)", options: ["komme", "kommt", "kam", "kämen"], answer: "komme", explanation: "Raíz + -e: «er komme».", category: "gramática" },
+          { kind: "quiz", question: "Er sagt, er ___ krank. (Konjunktiv I)", options: ["sei", "ist", "wäre", "war"], answer: "sei", explanation: "Discurso indirecto: «sein» → «er sei».", category: "gramática" },
+          { kind: "quiz", question: "Sie sagt, sie ___ keine Zeit. (Konjunktiv I)", options: ["habe", "hat", "hätte", "hatte"], answer: "habe", explanation: "«haben» → «sie habe».", category: "gramática" },
+          { kind: "quiz", question: "Er sagte, er ___ morgen. (kommen, Konjunktiv I)", options: ["komme", "kommt", "kam", "kämen"], answer: "komme", explanation: "Raíz + -e: «er komme».", category: "gramática" },
           { kind: "quiz", question: "Sie sagten, sie ___ keine Zeit. (con «sie» plural)", options: ["hätten", "haben", "habe", "hatten"], answer: "hätten", explanation: "«sie haben» no se distingue del presente: se usa el Konjunktiv II, «hätten».", category: "gramática" },
           { kind: "quiz", question: "Er fragte, ___ ich Zeit habe.", options: ["ob", "dass", "weil", "wenn"], answer: "ob", explanation: "Pregunta de sí o no: «ob».", category: "gramática" },
           { kind: "quiz", question: "Er sagte, ich ___ warten.", options: ["solle", "soll", "sollte", "sollen"], answer: "solle", explanation: "Pedido en discurso indirecto: «solle».", category: "gramática" },
