@@ -546,4 +546,67 @@ export const READINGS: Record<string, Lesson> = {
       { type: "tf", q: "Termina con un saludo formal.", answer: true, why: "«Mit freundlichen Grüßen»." },
     ],
   ),
+  "praeposition-verben": reading(
+    "Un paseo",
+    "Leer sobre un paseo con verbos con preposición y sumar dos palabras.",
+    [
+      { de: "die Vorfreude", es: "la ilusión de esperar algo", emoji: "🧺", note: "Es la alegría que se siente antes de algo lindo: «Die Vorfreude ist groß»." },
+      { de: "gespannt", es: "ansioso / con curiosidad", emoji: "🤩", note: "«Ich bin gespannt» = tengo curiosidad por ver cómo sale." },
+    ],
+    [
+      cz("Ich warte ___ meine Freunde.", "Espero a mis amigos.", ["auf", "an", "für", "über"], "auf", "«warten auf» + acusativo."),
+      cz("Ob wir fahren, hängt ___ Wetter ab.", "Si viajamos depende del clima.", ["vom", "am", "im", "zum"], "vom", "«abhängen von» + dativo: von + dem = vom."),
+      { kind: "write", es: "la ilusión de esperar algo", references: ["die Vorfreude"] },
+    ],
+    "Ein Ausflug ans Meer",
+    ["Am Samstag machen wir einen Ausflug ans Meer. Ich freue mich sehr darauf! Ich warte auf meine Freunde, und wir sprechen über das Wetter. Ob wir fahren, hängt vom Wetter ab. Ich denke schon an das Essen und an das Meer. Ich bin gespannt."],
+    ["El sábado hacemos una excursión al mar. ¡Tengo muchas ganas! Espero a mis amigos y hablamos del clima. Si viajamos depende del clima. Ya pienso en la comida y en el mar. Tengo curiosidad."],
+    [
+      { type: "tf", q: "La excursión es el domingo.", answer: false, why: "«Am Samstag»." },
+      { type: "choice", q: "¿Adónde van?", options: ["Al mar", "A la montaña", "A Viena", "A la ciudad"], answer: "Al mar", why: "«ans Meer»." },
+      { type: "choice", q: "¿De qué depende si viajan?", options: ["Del clima", "Del dinero", "De los amigos", "Del tren"], answer: "Del clima", why: "«hängt vom Wetter ab»." },
+    ],
+  ),
+  "konjunktiv-vergangenheit": reading(
+    "Una decisión",
+    "Leer sobre un arrepentimiento con el Konjunktiv II del pasado.",
+    [
+      { de: "die Entscheidung", es: "la decisión", emoji: "⚖️", note: "Plural: «die Entscheidungen»." },
+      { de: "Ich bereue es", es: "Me arrepiento", emoji: "😔", note: "«bereuen» = arrepentirse de algo, con acusativo." },
+    ],
+    [
+      cz("Wenn ich mehr Geld gespart ___, wäre ich gefahren.", "Si hubiera ahorrado más dinero, habría viajado.", ["hätte", "wäre", "habe", "hatte"], "hätte", "«sparen» forma el Perfekt con «haben»: «gespart hätte»."),
+      cz("Ich ___ früher anfangen sollen.", "Tendría que haber empezado antes.", ["hätte", "wäre", "habe", "würde"], "hätte", "Reproche: «hätte» + infinitivo + «sollen»."),
+      { kind: "write", es: "la decisión", references: ["die Entscheidung"] },
+    ],
+    "Japan",
+    ["Letztes Jahr bin ich nicht nach Japan gefahren. Ich bereue es. Wenn ich mehr Geld gespart hätte, wäre ich gefahren. Die Entscheidung war nicht leicht. Ich hätte früher anfangen sollen zu sparen. Aber nächstes Jahr fahre ich bestimmt."],
+    ["El año pasado no viajé a Japón. Me arrepiento. Si hubiera ahorrado más dinero, habría viajado. La decisión no fue fácil. Tendría que haber empezado antes a ahorrar. Pero el año que viene viajo seguro."],
+    [
+      { type: "choice", q: "¿Adónde no viajó?", options: ["A Japón", "A Italia", "A Viena", "A Berlín"], answer: "A Japón", why: "«nicht nach Japan gefahren»." },
+      { type: "tf", q: "Ahorró mucho dinero.", answer: false, why: "«Wenn ich mehr Geld gespart hätte»." },
+      { type: "choice", q: "¿Qué tendría que haber hecho antes?", options: ["Empezar a ahorrar", "Comprar el pasaje", "Pedir vacaciones", "Aprender japonés"], answer: "Empezar a ahorrar", why: "«früher anfangen sollen zu sparen»." },
+    ],
+  ),
+  konnektoren: reading(
+    "Mi método",
+    "Leer sobre cómo se aprende con conectores y sumar dos palabras.",
+    [
+      { de: "regelmäßig", es: "regularmente", emoji: "📅", note: "«regelmäßig lernen» = estudiar todos los días, o con frecuencia fija." },
+      { de: "die Gewohnheit", es: "el hábito", emoji: "🔁", note: "Plural: «die Gewohnheiten»." },
+    ],
+    [
+      cz("Ich lerne Deutsch, ___ ich jeden Tag lese.", "Aprendo alemán leyendo todos los días.", ["indem", "sodass", "daher", "falls"], "indem", "«indem» = de qué manera."),
+      cz("Je mehr ich lese, ___ besser verstehe ich.", "Cuanto más leo, mejor entiendo.", ["desto", "je", "falls", "indem"], "desto", "«je… desto» + comparativo."),
+      { kind: "write", es: "el hábito", references: ["die Gewohnheit"] },
+    ],
+    "Meine Gewohnheit",
+    ["Meine Gewohnheit: Ich lerne regelmäßig, indem ich jeden Tag ein bisschen lese. Je mehr ich lese, desto besser verstehe ich. Ich habe weder viel Zeit noch viel Geld, daher lerne ich zu Hause. Ich lerne nicht nur zu Hause, sondern auch mit Freunden. Falls ich einen Fehler mache, ist das kein Problem."],
+    ["Mi hábito: estudio con regularidad, leyendo un poco cada día. Cuanto más leo, mejor entiendo. No tengo mucho tiempo ni mucho dinero, por eso estudio en casa. No estudio solo en casa, sino también con amigos. Si cometo un error, no es un problema."],
+    [
+      { type: "choice", q: "¿Cómo aprende?", options: ["Leyendo un poco cada día", "Con un curso", "Viajando", "Mirando películas"], answer: "Leyendo un poco cada día", why: "«indem ich jeden Tag ein bisschen lese»." },
+      { type: "tf", q: "Tiene mucho dinero.", answer: false, why: "«weder viel Zeit noch viel Geld»." },
+      { type: "choice", q: "¿Qué pasa si comete un error?", options: ["No es un problema", "Se enoja", "Deja de estudiar", "Llama al docente"], answer: "No es un problema", why: "«ist das kein Problem»." },
+    ],
+  ),
 };

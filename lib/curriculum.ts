@@ -22,6 +22,7 @@ import { UNITS_B1_PART1 } from "./content/b1-part1.ts";
 import { UNITS_B1_PART2 } from "./content/b1-part2.ts";
 import { UNITS_B1_PART3 } from "./content/b1-part3.ts";
 import { UNITS_B1_PART4 } from "./content/b1-part4.ts";
+import { UNITS_B1_PART5 } from "./content/b1-part5.ts";
 
 export type Vocab = {
   de: string;
@@ -314,7 +315,7 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4];
+export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1")];
 
 // Diálogos cortos de las unidades 1 a 8, definidos aparte.
 for (const u of UNITS) for (const l of u.lessons) {

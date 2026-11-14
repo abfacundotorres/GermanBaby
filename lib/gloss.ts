@@ -41,7 +41,7 @@ export const GLOSS: Record<string, string> = {
   langweilig: "aburrido", argument: "argumento", gespart: "ahorrado", entschuldigen: "disculpar", beginnen: "empezar",
   bekommen: "recibir", worum: "¿de qué?", zieht: "se muda", mädchen: "niña / joven", endet: "termina",
   braucht: "necesita", jeder: "todos / cada uno", erstens: "primero", zweitens: "segundo",
-  leg: "poné (de «legen»)", mache: "hago (de «machen»)",
+  leg: "poné (de «legen»)", mache: "hago (de «machen»)", wartest: "esperás", interessiert: "interesa (de «sich interessieren»)", andere: "otro/a", schlecht: "mal / malo", fehler: "error", müder: "más cansado", kümmere: "me ocupo (de «sich kümmern»)", wovon: "¿de qué?", träumst: "soñás", lernt: "aprende", trinkst: "tomás", trinkt: "toma",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
