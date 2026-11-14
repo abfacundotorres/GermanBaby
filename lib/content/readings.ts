@@ -693,4 +693,88 @@ export const READINGS: Record<string, Lesson> = {
       { type: "choice", q: "¿Cuándo se dio el permiso?", options: ["Hace un año", "Hace un mes", "Ayer", "Hace diez años"], answer: "Hace un año", why: "«vor einem Jahr»." },
     ],
   ),
+  "konnektoren-b2": reading(
+    "Un cambio de oficina",
+    "Leer un texto con conectores avanzados y sumar dos palabras.",
+    [
+      { de: "der Umzug", es: "la mudanza", emoji: "📦", note: "Plural: «die Umzüge». «umziehen» = mudarse." },
+      { de: "überzeugen", es: "convencer", emoji: "🗣️", note: "«Er hat mich überzeugt» = me convenció." },
+    ],
+    [
+      cz("___ die Miete steigt, planen wir einen Umzug.", "Como el alquiler sube, planeamos una mudanza.", ["Da", "Folglich", "Nämlich", "Dennoch"], "Da", "«da» = como; verbo al final."),
+      cz("Wir bleiben, ___ die Miete sinkt.", "Nos quedamos, siempre que baje el alquiler.", ["sofern", "somit", "dennoch", "nämlich"], "sofern", "«sofern» = siempre que; verbo al final."),
+      { kind: "write", es: "la mudanza", references: ["der Umzug"] },
+    ],
+    "Der Umzug",
+    ["Da die Miete steigt, planen wir einen Umzug. Das Büro ist zwar zentral, doch es ist zu klein, zumal die Zahl der Mitarbeiter wächst. Wir bleiben nur, sofern die Miete sinkt. Der Chef konnte uns nicht überzeugen; dennoch zieht die Firma um."],
+    ["Como el alquiler sube, planeamos una mudanza. La oficina es céntrica, pero es demasiado chica, sobre todo porque crece la cantidad de empleados. Nos quedamos solo si baja el alquiler. El jefe no pudo convencernos; aun así, la empresa se muda."],
+    [
+      { type: "choice", q: "¿Por qué planean mudarse?", options: ["Sube el alquiler", "El jefe se va", "Hay un accidente", "No hay clientes"], answer: "Sube el alquiler", why: "«Da die Miete steigt»." },
+      { type: "tf", q: "Se quedan sea como sea.", answer: false, why: "«nur, sofern die Miete sinkt»." },
+      { type: "choice", q: "¿Qué pasa al final?", options: ["La empresa se muda", "La empresa se queda", "El jefe renuncia", "Cierran la oficina"], answer: "La empresa se muda", why: "«dennoch zieht die Firma um»." },
+    ],
+  ),
+  meinungstext: reading(
+    "Un texto de opinión",
+    "Leer un texto de opinión completo y sumar dos palabras.",
+    [
+      { de: "überwiegen", es: "predominar, pesar más", emoji: "⚖️", note: "«Die Vorteile überwiegen» = las ventajas pesan más." },
+      { de: "der Kompromiss", es: "el compromiso, el acuerdo", emoji: "🤝", note: "Plural: «die Kompromisse»." },
+    ],
+    [
+      cz("___ arbeiten viele Menschen von zu Hause.", "Hoy en día mucha gente trabaja desde casa.", ["Heutzutage", "Abschließend", "Dagegen", "Zwar"], "Heutzutage", "«heutzutage» abre el tema."),
+      cz("___ spricht, dass man Zeit spart.", "A favor está que uno ahorra tiempo.", ["Dafür", "Dagegen", "Dennoch", "Zumal"], "Dafür", "«dafür spricht» = a favor."),
+      { kind: "write", es: "el compromiso", references: ["der Kompromiss"] },
+    ],
+    "Homeoffice",
+    ["Heutzutage arbeiten viele Menschen von zu Hause. Die Frage ist, ob das besser ist. Dafür spricht, dass man Zeit spart. Dagegen spricht, dass der Kontakt fehlt. Man könnte einwenden, dass es teuer ist; dennoch überwiegen die Vorteile. Ein Kompromiss wäre ein gemischtes Modell."],
+    ["Hoy en día mucha gente trabaja desde casa. La pregunta es si eso es mejor. A favor está que uno ahorra tiempo. En contra está que falta el contacto. Se podría objetar que es caro; aun así, las ventajas pesan más. Un compromiso sería un modelo mixto."],
+    [
+      { type: "choice", q: "¿Qué ventaja menciona?", options: ["Se ahorra tiempo", "Se gana más", "Se descansa más", "Se viaja más"], answer: "Se ahorra tiempo", why: "«dass man Zeit spart»." },
+      { type: "tf", q: "Concluye que las desventajas pesan más.", answer: false, why: "«dennoch überwiegen die Vorteile»." },
+      { type: "choice", q: "¿Qué propone como compromiso?", options: ["Un modelo mixto", "Solo oficina", "Solo casa", "No trabajar"], answer: "Un modelo mixto", why: "«ein gemischtes Modell»." },
+    ],
+  ),
+  register: reading(
+    "Dos correos",
+    "Leer un correo formal y uno informal y sumar dos palabras.",
+    [
+      { de: "die Einladung zum Vorstellungsgespräch", es: "la invitación a la entrevista de trabajo", emoji: "💼", note: "«das Vorstellungsgespräch» = la entrevista de trabajo." },
+      { de: "kurz und bündig", es: "breve y directo", emoji: "✂️", note: "Un estilo sin rodeos." },
+    ],
+    [
+      cz("Ich ___ Ihnen dankbar, wenn Sie mir antworten könnten.", "Le agradecería que pudiera responderme.", ["wäre", "bin", "war", "wurde"], "wäre", "Pedido muy cortés: Konjunktiv II."),
+      cz("Komm ___ mal vorbei!", "¡Pasá por casa, dale!", ["doch", "denn", "eben", "ja"], "doch", "«doch mal» invita con suavidad."),
+      { kind: "write", es: "breve y directo", references: ["kurz und bündig"] },
+    ],
+    "Formal e informal",
+    ["Sehr geehrte Frau Weber, anbei finden Sie meinen Lebenslauf. Ich wäre Ihnen dankbar für eine Einladung zum Vorstellungsgespräch. Mit freundlichen Grüßen, Julia Costa.", "Hallo Jonas, komm doch mal vorbei! Das ist ja toll, dass du Zeit hast. Bis bald, Julia."],
+    ["Estimada Sra. Weber, adjunto encontrará mi currículum. Le agradecería una invitación a la entrevista de trabajo. Saludos cordiales, Julia Costa.", "Hola Jonas, ¡pasá por casa, dale! Qué bueno que tengas tiempo. Hasta pronto, Julia."],
+    [
+      { type: "choice", q: "¿Cuál de los dos textos es formal?", options: ["El primero", "El segundo", "Los dos", "Ninguno"], answer: "El primero", why: "«Sehr geehrte Frau Weber… Mit freundlichen Grüßen»." },
+      { type: "tf", q: "En el correo informal se usa «Sie».", answer: false, why: "Se usa «du»: «komm doch mal vorbei»." },
+      { type: "choice", q: "¿Qué pide Julia en el correo formal?", options: ["Una invitación a la entrevista", "Un aumento", "Un puesto nuevo", "Una carta"], answer: "Una invitación a la entrevista", why: "«eine Einladung zum Vorstellungsgespräch»." },
+    ],
+  ),
+  "pruefung-b2": reading(
+    "Una gráfica de la empresa",
+    "Leer la descripción de una gráfica y sumar dos palabras.",
+    [
+      { de: "der Umsatz", es: "la facturación, las ventas", emoji: "💹", note: "«der Umsatz» = el total vendido." },
+      { de: "deutlich", es: "claramente, notablemente", emoji: "🔍", note: "«deutlich gestiegen» = subió notablemente." },
+    ],
+    [
+      cz("Die Grafik ___, dass der Umsatz gestiegen ist.", "La gráfica muestra que la facturación subió.", ["zeigt", "zeigen", "zeigte", "gezeigt"], "zeigt", "«die Grafik zeigt, dass…»."),
+      cz("Im ___ zum letzten Jahr ist der Anteil höher.", "En comparación con el año pasado, la proporción es mayor.", ["Vergleich", "Rahmen", "Grund", "Fall"], "Vergleich", "«im Vergleich zu»."),
+      { kind: "write", es: "la facturación", references: ["der Umsatz"] },
+    ],
+    "Der Umsatz",
+    ["Die Grafik zeigt, dass der Umsatz der Firma deutlich gestiegen ist. Im Vergleich zum letzten Jahr beträgt der Anteil der neuen Kunden zwanzig Prozent. Die Kosten sind jedoch um zehn Prozent gestiegen. Abschließend lässt sich sagen, dass die Entwicklung positiv ist, zumal die Zahl der Kunden weiter wächst."],
+    ["La gráfica muestra que la facturación de la empresa subió notablemente. En comparación con el año pasado, la proporción de clientes nuevos es del veinte por ciento. Los costos, sin embargo, subieron un diez por ciento. Para terminar, se puede decir que la evolución es positiva, sobre todo porque sigue creciendo el número de clientes."],
+    [
+      { type: "choice", q: "¿Qué muestra la gráfica?", options: ["Que la facturación subió", "Que bajó", "Que no cambió", "Que hubo pérdidas"], answer: "Que la facturación subió", why: "«der Umsatz… deutlich gestiegen»." },
+      { type: "fill", q: "¿Qué porcentaje de clientes son nuevos?", answers: ["20", "zwanzig"], hint: "un número", why: "«zwanzig Prozent»." },
+      { type: "tf", q: "La evolución es negativa.", answer: false, why: "«die Entwicklung positiv ist»." },
+    ],
+  ),
 };

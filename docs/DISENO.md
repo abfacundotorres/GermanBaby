@@ -82,7 +82,7 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 ## 6. Currículo
 
-A1 (14 unidades), A2 (9), B1 (11) y B2 (en curso). A1:
+A1 (14 unidades), A2 (9), B1 (11) y B2 (8). A1:
 
 14 unidades de A1 (las 8 primeras con 3 lecciones y charla de rol; de la 9 en adelante, con escucha larga y gramática):
 
@@ -149,7 +149,12 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 37. **Lenguaje formal** (`nominalstil`): nominalización (`-ung`, infinitivo sustantivado), combinaciones verbo + sustantivo (`eine Entscheidung treffen`, `zur Verfügung stehen`) y preposiciones con genitivo (`aufgrund`, `infolge`, `angesichts`, `mithilfe`, `im Rahmen`).
 38. **Pasiva avanzada** (`passiv-plus`): la pasiva en todos los tiempos (`ist gebaut worden`), pasiva sin sujeto y con dativo (`Mir wurde geholfen`) y alternativas (`man`, `sich lassen`, `sein + zu`, `-bar`).
 
-Con esto el currículo tiene 38 unidades (14 de A1, 9 de A2, 11 de B1 y 4 de B2), 143 lecciones del camino principal más 30 lecturas opcionales y 24 prácticas extra de A2 a B2, unas 140 escuchas largas y unas 920 palabras. Faltan, para completar B2, unidades de conectores y argumentación avanzada (`obwohl`/`während` con matices, `je… desto` complejo, `zumal`, `sofern`), voz de texto de opinión y examen B2. Lo que sigue serían B2 (Konjunktiv I y discurso indirecto, Passiv con modales y variantes, participios como adjetivos, nominalización…) o más práctica de B1.
+39. **Conectores avanzados** (`konnektoren-b2`): condiciones (`sofern`, `solange`, `es sei denn`, `vorausgesetzt, dass`, `je nachdem`), causa y consecuencia (`da`, `zumal`, `nämlich`, `folglich`, `somit`, `infolgedessen`) y contraste (`wohingegen`, `dennoch`, `allerdings`, `jedoch`, `immerhin`, `hingegen`), con su efecto sobre el orden del verbo.
+40. **Texto de opinión** (`meinungstext`): introducción, argumentos con ejemplos, `dafür / dagegen spricht`, objeciones (`man könnte einwenden`, `zwar… doch`) y conclusión (`abschließend lässt sich sagen`), y el Konjunktiv II para suavizar.
+41. **Registro y estilo** (`register`): carta o correo formal (`hiermit`, `anbei`, `ich wäre Ihnen dankbar, wenn…`), partículas del habla (`doch`, `mal`, `ja`, `halt`, `eben`, `denn`) y expresiones cotidianas (`die Daumen drücken`, `das kommt darauf an`, `ich verstehe nur Bahnhof`).
+42. **Preparación para el examen B2** (`pruefung-b2`): presentar un tema, describir una gráfica (`steigen`, `sinken`, `der Anteil`, `um… Prozent`), carta del lector y repaso de B2.
+
+Con esto el currículo tiene 42 unidades (14 de A1, 9 de A2, 11 de B1 y 8 de B2), unas 155 lecciones del camino principal más 34 lecturas opcionales y 28 prácticas extra de A2 a B2, unas 160 escuchas largas y unas 1.000 palabras. B2 queda completo en lo básico; lo que sigue serían unidades de C1 o más práctica y escuchas más largas.
 
 **Práctica extra (A2 y B1)** (`lib/content/practice-a2.ts`, `practice-b1.ts`): una lección opcional («bonus», 🎯) al final de cada una de las unidades de A2, B1 y B2, después de la lectura. No enseña vocabulario nuevo, repasa lo de la unidad con frases nuevas: 3 «completar la frase» y una pregunta de «¿cuál es correcta?», un «armar la frase», 2 o 3 **producciones escritas en situaciones** («decile a la vendedora que…», con varias respuestas válidas), una frase para decir en voz alta y una **escucha nueva** de 6 líneas con 4 preguntas. Se abre al terminar la última lección principal de la unidad (`BONUS_PREV` ya no encadena las bonus entre sí). Se agrega al camino con el mismo mecanismo que las lecturas.
 
