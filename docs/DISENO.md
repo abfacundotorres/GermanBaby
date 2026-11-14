@@ -82,7 +82,7 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 
 ## 6. Currículo
 
-A1 (14 unidades) y A2 (en curso). A1:
+A1 (14 unidades), A2 (9), B1 (11) y B2 (en curso). A1:
 
 14 unidades de A1 (las 8 primeras con 3 lecciones y charla de rol; de la 9 en adelante, con escucha larga y gramática):
 
@@ -142,9 +142,16 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 33. **Si hubiera…** (`konjunktiv-vergangenheit`): Konjunktiv II del pasado (`hätte / wäre` + participio), condiciones que no se dieron, lamentos y reproches (`du hättest… sollen`).
 34. **Conectores** (`konnektoren`): `falls`, `je… desto`, `entweder… oder`, `weder… noch`, `indem`, `sodass` / `so… dass`, `daher`, `sondern` frente a `aber`, `sowohl… als auch`, `nicht nur… sondern auch`, `dagegen`.
 
-Con esto el currículo tiene 34 unidades (14 de A1, 9 de A2 y 11 de B1), 131 lecciones del camino principal más 26 lecturas opcionales y 20 prácticas extra de A2 y B1, unas 125 escuchas largas y unas 850 palabras. Lo que sigue serían B2 (Konjunktiv I y discurso indirecto, Passiv con modales y variantes, participios como adjetivos, nominalización…) o más práctica de B1.
+**B2** (`Unit.level = "B2"`, en `lib/content/b2-part*.ts`): el cartel de nivel y las llamadas a Claude lo reconocen (`lib/level.ts`). Mismo formato que B1 (3 lecciones de vocabulario con escucha, una de gramática, charla de rol, lectura y práctica extra), con textos más formales y abstractos.
 
-**Práctica extra (A2 y B1)** (`lib/content/practice-a2.ts`, `practice-b1.ts`): una lección opcional («bonus», 🎯) al final de cada una de las 20 unidades de A2 y B1, después de la lectura. No enseña vocabulario nuevo, repasa lo de la unidad con frases nuevas: 3 «completar la frase» y una pregunta de «¿cuál es correcta?», un «armar la frase», 2 o 3 **producciones escritas en situaciones** («decile a la vendedora que…», con varias respuestas válidas), una frase para decir en voz alta y una **escucha nueva** de 6 líneas con 4 preguntas. Se abre al terminar la última lección principal de la unidad (`BONUS_PREV` ya no encadena las bonus entre sí). Se agrega al camino con el mismo mecanismo que las lecturas.
+35. **Discurso indirecto** (`indirekte-rede`): Konjunktiv I (`er sei`, `sie habe`, `er komme`, `es gebe`), cuándo pasa al Konjunktiv II (`sie hätten`), tiempos, preguntas con `ob` y pedidos con `solle` / `bitten… zu`, y fórmulas de periodismo (`laut`, `angeblich`, `es heißt`).
+36. **Participios como adjetivos** (`partizipien`): Partizip I (`das lachende Kind`), Partizip II (`das gekaufte Auto`) y participios ampliados (`das von meinem Vater gekaufte Auto`).
+37. **Lenguaje formal** (`nominalstil`): nominalización (`-ung`, infinitivo sustantivado), combinaciones verbo + sustantivo (`eine Entscheidung treffen`, `zur Verfügung stehen`) y preposiciones con genitivo (`aufgrund`, `infolge`, `angesichts`, `mithilfe`, `im Rahmen`).
+38. **Pasiva avanzada** (`passiv-plus`): la pasiva en todos los tiempos (`ist gebaut worden`), pasiva sin sujeto y con dativo (`Mir wurde geholfen`) y alternativas (`man`, `sich lassen`, `sein + zu`, `-bar`).
+
+Con esto el currículo tiene 38 unidades (14 de A1, 9 de A2, 11 de B1 y 4 de B2), 143 lecciones del camino principal más 30 lecturas opcionales y 24 prácticas extra de A2 a B2, unas 140 escuchas largas y unas 920 palabras. Faltan, para completar B2, unidades de conectores y argumentación avanzada (`obwohl`/`während` con matices, `je… desto` complejo, `zumal`, `sofern`), voz de texto de opinión y examen B2. Lo que sigue serían B2 (Konjunktiv I y discurso indirecto, Passiv con modales y variantes, participios como adjetivos, nominalización…) o más práctica de B1.
+
+**Práctica extra (A2 y B1)** (`lib/content/practice-a2.ts`, `practice-b1.ts`): una lección opcional («bonus», 🎯) al final de cada una de las unidades de A2, B1 y B2, después de la lectura. No enseña vocabulario nuevo, repasa lo de la unidad con frases nuevas: 3 «completar la frase» y una pregunta de «¿cuál es correcta?», un «armar la frase», 2 o 3 **producciones escritas en situaciones** («decile a la vendedora que…», con varias respuestas válidas), una frase para decir en voz alta y una **escucha nueva** de 6 líneas con 4 preguntas. Se abre al terminar la última lección principal de la unidad (`BONUS_PREV` ya no encadena las bonus entre sí). Se agrega al camino con el mismo mecanismo que las lecturas.
 
 El contenido vive en `lib/curriculum.ts` y `lib/content/`. Agregar una lección es agregar datos, no código.
 

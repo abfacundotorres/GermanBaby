@@ -41,13 +41,13 @@ export const GLOSS: Record<string, string> = {
   langweilig: "aburrido", argument: "argumento", gespart: "ahorrado", entschuldigen: "disculpar", beginnen: "empezar",
   bekommen: "recibir", worum: "¿de qué?", zieht: "se muda", mädchen: "niña / joven", endet: "termina",
   braucht: "necesita", jeder: "todos / cada uno", erstens: "primero", zweitens: "segundo",
-  leg: "poné (de «legen»)", mache: "hago (de «machen»)", wartest: "esperás", interessiert: "interesa (de «sich interessieren»)", andere: "otro/a", schlecht: "mal / malo", fehler: "error", müder: "más cansado", kümmere: "me ocupo (de «sich kümmern»)", wovon: "¿de qué?", träumst: "soñás", lernt: "aprende", trinkst: "tomás", trinkt: "toma",
+  leg: "poné (de «legen»)", mache: "hago (de «machen»)", wartest: "esperás", minister: "ministro", sprecherin: "vocera", erklärt: "explica", erkältung: "resfrío", krankenhaus: "hospital", bisher: "hasta ahora", erfolg: "éxito", grund: "razón / motivo", erst: "recién / solo", empfohlene: "recomendado/a", beschlossen: "decidido", qualität: "calidad", kunden: "clientes", getroffen: "tomada (de «treffen»)", kosten: "costos", wichtigste: "el/la más importante", ziel: "objetivo", heizung: "calefacción", sitzung: "reunión", lage: "situación", information: "información", dach: "techo", sieh: "mirá", geräts: "del aparato", chef: "jefe", gespräch: "entrevista / conversación", könne: "podría (Konjunktiv I de «können»)", schau: "mirá", fest: "fiesta", öffne: "abrí (de «öffnen»)", besitzerin: "dueña", führung: "recorrido guiado", interessiert: "interesa (de «sich interessieren»)", andere: "otro/a", schlecht: "mal / malo", fehler: "error", müder: "más cansado", kümmere: "me ocupo (de «sich kümmern»)", wovon: "¿de qué?", träumst: "soñás", lernt: "aprende", trinkst: "tomás", trinkt: "toma",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia",
 ]);
 
 const tok = (s: string) =>

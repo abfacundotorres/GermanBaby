@@ -609,4 +609,88 @@ export const READINGS: Record<string, Lesson> = {
       { type: "choice", q: "¿Qué pasa si comete un error?", options: ["No es un problema", "Se enoja", "Deja de estudiar", "Llama al docente"], answer: "No es un problema", why: "«ist das kein Problem»." },
     ],
   ),
+  "indirekte-rede": reading(
+    "Una noticia",
+    "Leer una noticia con discurso indirecto y sumar dos palabras.",
+    [
+      { de: "die Quelle", es: "la fuente", emoji: "🔎", note: "Plural: «die Quellen». «laut einer Quelle» = según una fuente." },
+      { de: "bestätigen", es: "confirmar", emoji: "✔️", note: "«Niemand hat die Nachricht bestätigt» = nadie confirmó la noticia." },
+    ],
+    [
+      cz("Die Zeitung berichtet, der Minister ___ krank.", "El diario informa que el ministro está enfermo.", ["sei", "ist", "wäre", "war"], "sei", "Discurso indirecto: «sein» → «er sei»."),
+      cz("Die Sprecherin sagt, er ___ morgen wieder arbeiten.", "La vocera dice que mañana va a volver a trabajar.", ["werde", "wird", "wurde", "würde"], "werde", "Futuro en Konjunktiv I: «er werde»."),
+      { kind: "write", es: "la fuente", references: ["die Quelle"] },
+    ],
+    "Der kranke Minister",
+    ["Die Zeitung berichtet, der Minister sei krank. Seine Sprecherin erklärt, er habe nur eine Erkältung und werde morgen wieder arbeiten. Aber die Quelle der Zeitung behauptet, er müsse im Krankenhaus bleiben. Bisher hat niemand die Nachricht bestätigt."],
+    ["El diario informa que el ministro está enfermo. Su vocera explica que solo tiene un resfrío y que mañana va a volver a trabajar. Pero la fuente del diario afirma que tiene que quedarse en el hospital. Hasta ahora nadie confirmó la noticia."],
+    [
+      { type: "choice", q: "¿Qué dice la vocera?", options: ["Que solo tiene un resfrío", "Que está en el hospital", "Que renuncia", "Que viaja"], answer: "Que solo tiene un resfrío", why: "«er habe nur eine Erkältung»." },
+      { type: "tf", q: "La fuente del diario dice que el ministro está sano.", answer: false, why: "«er müsse im Krankenhaus bleiben»." },
+      { type: "choice", q: "¿Quién confirmó la noticia?", options: ["Nadie", "La vocera", "El diario", "El ministro"], answer: "Nadie", why: "«niemand hat die Nachricht bestätigt»." },
+    ],
+  ),
+  partizipien: reading(
+    "Mi camino",
+    "Leer una descripción con participios como adjetivos y sumar dos palabras.",
+    [
+      { de: "der Weg", es: "el camino", emoji: "🛤️", note: "Plural: «die Wege». «auf dem Weg zur Arbeit» = camino al trabajo." },
+      { de: "der duftende Kaffee", es: "el café que huele rico", emoji: "☕", note: "«duften» = oler (bien). Partizip I: duftend + -e." },
+    ],
+    [
+      cz("Ich sehe die ___ Hunde. (schlafen)", "Veo a los perros que duermen.", ["schlafenden", "schlafende", "geschlafenen", "schlafend"], "schlafenden", "Partizip I, plural con «die»: -en."),
+      cz("Das gestern ___ Café ist schön. (öffnen)", "El café abierto ayer es lindo.", ["geöffnete", "öffnende", "geöffnet", "geöffneten"], "geöffnete", "Partizip II con «das» + neutro: -e."),
+      { kind: "write", es: "el camino", references: ["der Weg"] },
+    ],
+    "Mein Weg zur Arbeit",
+    ["Auf dem Weg zur Arbeit sehe ich jeden Morgen die schlafenden Hunde und das gestern geöffnete Café. Der duftende Kaffee ist ein Grund, früher aufzustehen. Die geschlossenen Geschäfte öffnen erst um neun."],
+    ["Camino al trabajo veo cada mañana a los perros que duermen y al café abierto ayer. El café que huele rico es una razón para levantarse más temprano. Los negocios cerrados abren recién a las nueve."],
+    [
+      { type: "choice", q: "¿Qué ve cada mañana?", options: ["Perros que duermen", "Niños que bailan", "Autos que corren", "Gente que ríe"], answer: "Perros que duermen", why: "«die schlafenden Hunde»." },
+      { type: "tf", q: "El café abrió hoy.", answer: false, why: "«gestern geöffnete Café»." },
+      { type: "choice", q: "¿A qué hora abren los negocios cerrados?", options: ["A las nueve", "A las ocho", "A las diez", "A las doce"], answer: "A las nueve", why: "«erst um neun»." },
+    ],
+  ),
+  nominalstil: reading(
+    "Un informe",
+    "Leer un texto formal con sustantivos y sumar dos palabras.",
+    [
+      { de: "die Maßnahme", es: "la medida", emoji: "🛠️", note: "Plural: «die Maßnahmen». «Maßnahmen beschließen» = decidir medidas." },
+      { de: "die Zusammenarbeit", es: "la colaboración", emoji: "🤝", note: "Viene de «zusammenarbeiten» (trabajar juntos)." },
+    ],
+    [
+      cz("___ der steigenden Preise hat die Firma neue Maßnahmen beschlossen.", "Debido a los precios en aumento, la empresa decidió nuevas medidas.", ["Aufgrund", "Trotz", "Während", "Nach"], "Aufgrund", "Causa formal: «aufgrund» + genitivo."),
+      cz("Im ___ der Zusammenarbeit wird die Qualität verbessert.", "En el marco de la colaboración se mejora la calidad.", ["Rahmen", "Frage", "Rolle", "Grund"], "Rahmen", "Fórmula fija: «im Rahmen» + genitivo."),
+      { kind: "write", es: "la medida", references: ["die Maßnahme"] },
+    ],
+    "Der Bericht",
+    ["Aufgrund der steigenden Preise hat die Firma neue Maßnahmen beschlossen. Im Rahmen der Zusammenarbeit mit den Kunden wird die Qualität verbessert. Die Entscheidung darüber ist gestern getroffen worden. Trotz der hohen Kosten bleibt die Verbesserung der Arbeit das wichtigste Ziel."],
+    ["Debido a los precios en aumento, la empresa decidió nuevas medidas. En el marco de la colaboración con los clientes, se mejora la calidad. La decisión al respecto se tomó ayer. A pesar de los costos altos, la mejora del trabajo sigue siendo el objetivo más importante."],
+    [
+      { type: "choice", q: "¿Por qué decidió medidas la empresa?", options: ["Por los precios en aumento", "Por una huelga", "Por un accidente", "Por falta de clientes"], answer: "Por los precios en aumento", why: "«Aufgrund der steigenden Preise»." },
+      { type: "tf", q: "La decisión se tomó hoy.", answer: false, why: "«gestern getroffen worden»." },
+      { type: "choice", q: "¿Cuál es el objetivo más importante?", options: ["La mejora del trabajo", "Bajar los precios", "Contratar gente", "Abrir otra sede"], answer: "La mejora del trabajo", why: "«die Verbesserung der Arbeit»." },
+    ],
+  ),
+  "passiv-plus": reading(
+    "La obra",
+    "Leer sobre una obra con la pasiva y sumar dos palabras.",
+    [
+      { de: "die Baustelle", es: "la obra", emoji: "🚧", note: "«bauen» + «die Stelle». «auf der Baustelle» = en la obra." },
+      { de: "die Genehmigung", es: "el permiso", emoji: "📋", note: "Una autorización oficial. Plural: «die Genehmigungen»." },
+    ],
+    [
+      cz("Das Dach ist schon repariert ___.", "El techo ya fue reparado.", ["worden", "geworden", "werden", "wird"], "worden", "Passiv Perfekt: participio + «worden»."),
+      cz("Das Problem ___ sich lösen.", "El problema se puede resolver.", ["lässt", "lasst", "wird", "kann"], "lässt", "«sich lassen» + infinitivo."),
+      { kind: "write", es: "la obra", references: ["die Baustelle"] },
+    ],
+    "Auf der Baustelle",
+    ["Auf der Baustelle wird seit Monaten gearbeitet. Das Dach ist schon repariert worden, und die Fenster werden nächste Woche gemacht werden. Die Genehmigung ist vor einem Jahr gegeben worden. Man sagt, das Haus sei bald fertig, und das Problem mit dem Lärm lässt sich lösen."],
+    ["En la obra se trabaja desde hace meses. El techo ya fue reparado, y las ventanas se van a hacer la semana que viene. El permiso fue dado hace un año. Dicen que la casa estará lista pronto, y el problema del ruido se puede resolver."],
+    [
+      { type: "choice", q: "¿Qué ya se hizo?", options: ["Se reparó el techo", "Se hicieron las ventanas", "Se pintó la casa", "Se vendió la casa"], answer: "Se reparó el techo", why: "«Das Dach ist schon repariert worden»." },
+      { type: "tf", q: "Las ventanas ya están hechas.", answer: false, why: "«werden nächste Woche gemacht werden»." },
+      { type: "choice", q: "¿Cuándo se dio el permiso?", options: ["Hace un año", "Hace un mes", "Ayer", "Hace diez años"], answer: "Hace un año", why: "«vor einem Jahr»." },
+    ],
+  ),
 };

@@ -1,0 +1,128 @@
+// Práctica extra de B2: una lección opcional («bonus») al final de cada unidad, después de la lectura.
+
+import type { Lesson } from "../curriculum.ts";
+import { cz, qz, practice } from "./practice-a2.ts";
+
+/** Clave: id de la unidad. */
+export const PRACTICE_B2: Record<string, Lesson> = {
+  "indirekte-rede": practice(
+    "discurso indirecto",
+    "Repasar el Konjunktiv I: afirmaciones, preguntas y pedidos con frases nuevas.",
+    [
+      cz("Sie sagt, sie ___ keine Zeit.", "Dice que no tiene tiempo.", ["habe", "hat", "hätte", "hatte"], "habe", "«haben» → «sie habe»."),
+      cz("Er sagte, er ___ morgen.", "Dijo que viene mañana. (kommen)", ["komme", "kommt", "kam", "käme"], "komme", "Konjunktiv I: raíz + -e."),
+      cz("Er fragte, ___ ich Zeit habe.", "Preguntó si tengo tiempo.", ["ob", "dass", "wenn", "weil"], "ob", "Pregunta de sí o no: «ob» + verbo al final."),
+      qz("¿Cuál oración es correcta?", ["Sie sagten, sie hätten keine Zeit.", "Sie sagten, sie haben keine Zeit.", "Sie sagten, sie habe keine Zeit.", "Sie sagten, sie hatte keine Zeit."], "Sie sagten, sie hätten keine Zeit.", "Con «sie» plural, el Konjunktiv I coincide con el presente: se usa el Konjunktiv II, «hätten»."),
+      { kind: "build", es: "Dijo que yo esperara", answer: "Er sagte, ich solle warten", extra: ["soll", "sollte", "wartet"] },
+      { kind: "write", es: "Contá lo que dijo tu amigo: que está enfermo y no viene.", references: ["Er sagte, er sei krank und komme nicht", "Er sagt, er sei krank und komme nicht"] },
+      { kind: "write", es: "Contá lo que te preguntaron: dónde vivís.", references: ["Er fragte mich, wo ich wohne", "Sie fragte mich, wo ich wohne", "Man fragte mich, wo ich wohne"] },
+      { kind: "speak", de: "Er behauptet, er wisse nichts", es: "Afirma que no sabe nada" },
+    ],
+    "Un rumor",
+    "Dos colegas comentan lo que dijo el jefe.",
+    [
+      ["f", "Nora", "Hast du gehört? Der Chef sagt, die Firma habe Erfolg.", "¿Escuchaste? El jefe dice que la empresa tiene éxito."],
+      ["m", "Max", "Angeblich ja. Aber er behauptet auch, er wisse nichts von den Preisen.", "Supuestamente sí. Pero también afirma que no sabe nada de los precios."],
+      ["f", "Nora", "Und die Sprecherin sagte, es gebe keine Probleme.", "Y la vocera dijo que no hay problemas."],
+      ["m", "Max", "Sie fragte mich, ob ich morgen komme.", "Me preguntó si mañana vengo."],
+      ["f", "Nora", "Und? Wirst du kommen?", "¿Y? ¿Vas a venir?"],
+      ["m", "Max", "Ich habe gesagt, ich sei krank.", "Dije que estoy enfermo."],
+    ],
+    [
+      { type: "choice", q: "¿Qué dice el jefe de la empresa?", options: ["Que tiene éxito", "Que está en crisis", "Que va a cerrar", "Que contrata gente"], answer: "Que tiene éxito", why: "«die Firma habe Erfolg»." },
+      { type: "tf", q: "El jefe afirma que sabe todo de los precios.", answer: false, why: "«er wisse nichts von den Preisen»." },
+      { type: "choice", q: "¿Qué le preguntó la vocera a Max?", options: ["Si viene mañana", "Si está enfermo", "Si tiene tiempo", "Dónde vive"], answer: "Si viene mañana", why: "«ob ich morgen komme»." },
+      { type: "choice", q: "¿Qué respondió Max?", options: ["Que está enfermo", "Que sí viene", "Que no sabe", "Que no tiene tiempo"], answer: "Que está enfermo", why: "«ich sei krank»." },
+    ],
+  ),
+  partizipien: practice(
+    "participios",
+    "Repasar Partizip I y II como adjetivos y los participios ampliados.",
+    [
+      cz("das ___ Kind", "el niño que se ríe (lachen)", ["lachende", "lachendes", "gelachte", "lachenden"], "lachende", "Partizip I con «das» + neutro: -e."),
+      cz("die ___ Fenster", "las ventanas cerradas (schließen)", ["geschlossenen", "geschlossene", "schließenden", "geschlossen"], "geschlossenen", "Partizip II, plural con «die»: -en."),
+      cz("das von meiner Mutter ___ Essen", "la comida cocinada por mi madre (kochen)", ["gekochte", "kochende", "gekochten", "kochte"], "gekochte", "Partizip II ampliado: «das von meiner Mutter gekochte Essen»."),
+      qz("¿Cuál oración es correcta?", ["Die in Berlin lebende Frau ist meine Lehrerin.", "Die lebende in Berlin Frau ist meine Lehrerin.", "Die in Berlin gelebte Frau ist meine Lehrerin.", "Die in Berlin lebt Frau ist meine Lehrerin."], "Die in Berlin lebende Frau ist meine Lehrerin.", "Lo que completa al participio va entre el artículo y el participio."),
+      { kind: "build", es: "los precios que suben", answer: "die steigenden Preise", extra: ["steigende", "steigen", "den"] },
+      { kind: "write", es: "Decí que el libro perdido está sobre la mesa.", references: ["Das verlorene Buch liegt auf dem Tisch", "Das verlorene Buch ist auf dem Tisch"] },
+      { kind: "write", es: "Decí que la mujer que vive en Berlín es tu vecina.", references: ["Die in Berlin lebende Frau ist meine Nachbarin"] },
+      { kind: "speak", de: "Das gestern geöffnete Geschäft ist neu", es: "El negocio abierto ayer es nuevo" },
+    ],
+    "En el barrio",
+    "Dos amigos pasean y comentan lo que ven.",
+    [
+      ["f", "Lena", "Siehst du das gestern geöffnete Geschäft?", "¿Ves el negocio abierto ayer?"],
+      ["m", "Tim", "Ja. Und die steigenden Preise im Fenster!", "Sí. ¡Y los precios que suben en la vidriera!"],
+      ["f", "Lena", "Die in Berlin lebende Besitzerin ist sehr freundlich.", "La dueña, que vive en Berlín, es muy amable."],
+      ["m", "Tim", "Und der schlafende Hund vor der Tür?", "¿Y el perro que duerme delante de la puerta?"],
+      ["f", "Lena", "Der gehört ihr. Das verlorene Buch hat sie auch gefunden.", "Es de ella. El libro perdido también lo encontró."],
+      ["m", "Tim", "Schön! Ich kaufe das von ihr empfohlene Buch.", "¡Lindo! Compro el libro recomendado por ella."],
+    ],
+    [
+      { type: "choice", q: "¿Qué abrió ayer?", options: ["Un negocio", "Un café", "Una escuela", "Un banco"], answer: "Un negocio", why: "«das gestern geöffnete Geschäft»." },
+      { type: "tf", q: "La dueña vive en Hamburgo.", answer: false, why: "«die in Berlin lebende Besitzerin»." },
+      { type: "choice", q: "¿Qué hace el perro?", options: ["Duerme", "Juega", "Come", "Ladra"], answer: "Duerme", why: "«der schlafende Hund»." },
+      { type: "choice", q: "¿Qué piensa comprar Tim?", options: ["El libro recomendado", "El perro", "Un café", "Una remera"], answer: "El libro recomendado", why: "«das von ihr empfohlene Buch»." },
+    ],
+  ),
+  nominalstil: practice(
+    "lenguaje formal",
+    "Repasar nominalización, verbo + sustantivo y preposiciones con genitivo.",
+    [
+      cz("___ des Regens fällt das Fest aus.", "Por la lluvia se cancela la fiesta.", ["Aufgrund", "Trotz", "Nach", "Während"], "Aufgrund", "Causa formal: «aufgrund» + genitivo."),
+      cz("Ich muss heute eine Entscheidung ___.", "Hoy tengo que tomar una decisión.", ["treffen", "machen", "nehmen", "geben"], "treffen", "Combinación fija: «eine Entscheidung treffen»."),
+      cz("Beim ___ höre ich Musik.", "Mientras leo, escucho música. (lesen)", ["Lesen", "lesen", "Gelesen", "Lesung"], "Lesen", "Infinitivo sustantivado: neutro, con mayúscula."),
+      qz("¿Cuál es la versión con sustantivo de «Obwohl es regnet, gehe ich spazieren»?", ["Trotz des Regens gehe ich spazieren.", "Wegen des Regens gehe ich spazieren.", "Bei Regen gehe ich spazieren.", "Nach dem Regen gehe ich spazieren."], "Trotz des Regens gehe ich spazieren.", "«obwohl» → «trotz» + genitivo."),
+      { kind: "build", es: "Esa fecha no es posible", answer: "Dieser Termin kommt nicht in Frage", extra: ["kein", "Fragen", "geht"] },
+      { kind: "write", es: "Decí que a raíz del accidente la calle está cortada.", references: ["Infolge des Unfalls ist die Straße gesperrt"] },
+      { kind: "write", es: "Decile a alguien que te avise.", references: ["Sag mir bitte Bescheid", "Sagen Sie mir bitte Bescheid"] },
+      { kind: "speak", de: "Das Geld spielt keine Rolle", es: "El dinero no importa" },
+    ],
+    "Un reclamo",
+    "Un cliente le escribe a la empresa por un servicio.",
+    [
+      ["m", "Herr Koch", "Aufgrund der Verspätung des Zuges komme ich zu spät.", "Por el atraso del tren llego tarde."],
+      ["f", "Frau Lang", "Wir nehmen Rücksicht auf Ihre Zeit.", "Tenemos en cuenta su tiempo."],
+      ["m", "Herr Koch", "Die Entwicklung der Preise ist ein Problem.", "La evolución de los precios es un problema."],
+      ["f", "Frau Lang", "Das Geld spielt keine Rolle, nur die Qualität?", "¿El dinero no importa, solo la calidad?"],
+      ["m", "Herr Koch", "Genau. Sagen Sie mir bitte Bescheid.", "Exacto. Avíseme, por favor."],
+      ["f", "Frau Lang", "Gern. Ein Termin am Freitag kommt in Frage.", "Con gusto. Una cita el viernes es posible."],
+    ],
+    [
+      { type: "choice", q: "¿Por qué llega tarde Herr Koch?", options: ["Por el atraso del tren", "Por la lluvia", "Por un accidente", "Por el trabajo"], answer: "Por el atraso del tren", why: "«Aufgrund der Verspätung des Zuges»." },
+      { type: "tf", q: "Para Herr Koch lo más importante es el dinero.", answer: false, why: "«Das Geld spielt keine Rolle»." },
+      { type: "choice", q: "¿Qué le pide a Frau Lang?", options: ["Que le avise", "Que lo llame", "Que cancele", "Que le pague"], answer: "Que le avise", why: "«Sagen Sie mir bitte Bescheid»." },
+      { type: "choice", q: "¿Qué día es posible?", options: ["El viernes", "El martes", "El lunes", "El sábado"], answer: "El viernes", why: "«Freitag kommt in Frage»." },
+    ],
+  ),
+  "passiv-plus": practice(
+    "pasiva avanzada",
+    "Repasar la pasiva en todos los tiempos, sin sujeto y sus alternativas.",
+    [
+      cz("Das Haus ist gebaut ___.", "La casa fue construida.", ["worden", "geworden", "werden", "wird"], "worden", "Passiv Perfekt: participio + «worden»."),
+      cz("___ wurde geholfen.", "Me ayudaron. (a mí)", ["Mir", "Ich", "Mich", "Mein"], "Mir", "«helfen» conserva el dativo en la pasiva."),
+      cz("Das Problem ___ sich lösen.", "El problema se puede resolver.", ["lässt", "lasst", "wird", "kann"], "lässt", "«sich lassen» + infinitivo."),
+      qz("¿Cuál oración dice lo mismo que «Hier wird Deutsch gesprochen»?", ["Man spricht hier Deutsch.", "Er spricht hier Deutsch.", "Es spricht hier Deutsch.", "Hier spricht Deutsch man."], "Man spricht hier Deutsch.", "La alternativa más común: «man» + activo."),
+      { kind: "build", es: "Eso podría haberse hecho antes", answer: "Das hätte früher gemacht werden können", extra: ["wäre", "wurde", "hatte"] },
+      { kind: "write", es: "Decí que hoy no se trabaja, se baila.", references: ["Heute wird nicht gearbeitet, sondern getanzt", "Heute wird nicht gearbeitet. Es wird getanzt."] },
+      { kind: "write", es: "Decí que el texto se lee bien.", references: ["Der Text ist gut lesbar", "Der Text lässt sich gut lesen"] },
+      { kind: "speak", de: "Das Problem ist gelöst worden", es: "El problema fue resuelto" },
+    ],
+    "Después de la obra",
+    "Dos vecinos hablan de lo que se hizo en el edificio.",
+    [
+      ["f", "Frau Lang", "Ist die Heizung repariert worden?", "¿Ya fue reparada la calefacción?"],
+      ["m", "Herr Weiß", "Ja. Mir wurde gesagt, dass sie gestern gemacht worden ist.", "Sí. Me dijeron que fue arreglada ayer."],
+      ["f", "Frau Lang", "Und das Fenster? Es lässt sich nicht öffnen.", "¿Y la ventana? No se puede abrir."],
+      ["m", "Herr Weiß", "Das wird nächste Woche gemacht werden.", "Eso se va a hacer la semana que viene."],
+      ["f", "Frau Lang", "Hier wird zu viel gebaut!", "¡Acá se construye demasiado!"],
+      ["m", "Herr Weiß", "Das Problem ist leicht zu lösen: Man muss warten.", "El problema es fácil de resolver: hay que esperar."],
+    ],
+    [
+      { type: "choice", q: "¿Qué fue arreglado ayer?", options: ["La calefacción", "El techo", "La ventana", "La puerta"], answer: "La calefacción", why: "«Heizung… gestern gemacht worden»." },
+      { type: "tf", q: "La ventana ya se puede abrir.", answer: false, why: "«lässt sich nicht öffnen»." },
+      { type: "choice", q: "¿Cuándo se va a arreglar la ventana?", options: ["La semana que viene", "Hoy", "Ayer", "Nunca"], answer: "La semana que viene", why: "«nächste Woche gemacht werden»." },
+      { type: "choice", q: "¿Qué solución propone Herr Weiß?", options: ["Esperar", "Llamar al técnico", "Mudarse", "Pagar más"], answer: "Esperar", why: "«Man muss warten»." },
+    ],
+  ),
+};
