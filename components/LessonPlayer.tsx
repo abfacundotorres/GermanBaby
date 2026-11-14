@@ -9,7 +9,7 @@ import {
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
 import { levelFromProgress, setStudyLevel, type Level } from "@/lib/level";
-import { Build, Choice, Cloze, Dictation, Intro, Listen, ListenQ, Quiz, ReadQ, Rule, Speak, Write, type Outcome } from "./Exercises";
+import { Build, Choice, Cloze, Dictation, Explain, Intro, Listen, ListenQ, Quiz, ReadQ, Rule, Section, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
 export const MAX_HEARTS = 5;
@@ -68,7 +68,7 @@ const PRAISE: [string, string][] = [
 const OOPS: [string, string][] = [["Nicht ganz", "No del todo"], ["Schade", "Qué pena"], ["Noch einmal", "Otra vez"]];
 const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
 
-const STEP_KEY = (s: Step, i: number) => `${i}-${s.kind}-${"de" in s ? s.de : "vocab" in s && s.vocab ? s.vocab.de : "es" in s ? s.es : ""}`;
+const STEP_KEY = (s: Step, i: number) => `${i}-${s.kind}-${"de" in s ? s.de : "title" in s ? s.title : "vocab" in s && s.vocab ? s.vocab.de : "es" in s ? s.es : ""}`;
 
 export type FinishInfo = { accuracy: number; xp: number; results: { step: Step; ok: boolean }[] };
 type Feedback = Outcome & { praise: [string, string]; combo: number };
@@ -121,6 +121,8 @@ type PlayerProps = {
   source?: Mistake["source"];
   /** Si se pasa, el avance se guarda y se puede retomar. */
   resumeKey?: string;
+  /** Resumen de lo aprendido, que se muestra en la pantalla final. */
+  recap?: ReactNode;
   onFinish: (info: FinishInfo) => { extraXp?: number; stars?: number; achievements?: string[] };
   onStepResult?: (step: Step, ok: boolean) => void;
 };
@@ -153,6 +155,7 @@ function Session({
   source = "lesson",
   resumeKey,
   init,
+  recap,
   onFinish,
   onStepResult,
 }: PlayerProps & { init?: Saved }) {
@@ -185,6 +188,9 @@ function Session({
   }, [resumeKey, done, dead, feedback, queue, index, hearts, combo, xp, results, retried]);
 
   const step = queue[index];
+  const examResults = results.filter((r) => r.step.exam);
+  const examTotal = examResults.length;
+  const examOk = examResults.filter((r) => r.ok).length;
   const gradedTotal = initial.filter(isGraded).length;
   const progress = summary ? 1 : index / queue.length;
 
@@ -215,6 +221,8 @@ function Session({
       gained = 10 + Math.min(combo, 5) * 2 + (o.bonusXp ?? 0);
       setCombo(newCombo);
       tickCorrect();
+      // Un corazón de regalo cada 10 aciertos seguidos: las lecciones ahora son más largas.
+      if (newCombo > 0 && newCombo % 10 === 0) setHearts((h) => Math.min(MAX_HEARTS, h + 1));
       if (newCombo >= 3) {
         sfx.combo(newCombo);
         if ([3, 5, 8, 10, 15, 20].includes(newCombo)) setComboBanner(newCombo);
@@ -334,8 +342,10 @@ function Session({
             <div className="stat stat-gem"><div className="stat-label">Gemas</div><div className="stat-val">💎 <CountUp to={summary.gems} /></div></div>
           </div>
           <div className="muted small">{summary.correct} de {summary.total || gradedTotal} ejercicios bien a la primera</div>
+          {examTotal > 0 && <div className="banner exam-banner">📝 Mini examen: {examOk} de {examTotal} bien a la primera</div>}
           {summary.streak > 0 && <div className="banner streak-banner">🔥 ¡Racha de {summary.streak} día{summary.streak > 1 ? "s" : ""}!</div>}
           {summary.levelUp && <div className="banner level-banner">🚀 ¡Subiste al nivel {summary.levelUp}!</div>}
+          {recap && <div style={{ width: "100%" }}>{recap}</div>}
           <Link href="/" className="btn btn-primary btn-block btn-lg">Continuar</Link>
         </main>
       </div>
@@ -360,6 +370,8 @@ function Session({
     case "listenq": body = <ListenQ key={key} step={step} {...props} />; break;
     case "readq": body = <ReadQ key={key} step={step} {...props} />; break;
     case "cloze": body = <Cloze key={key} step={step} {...props} />; break;
+    case "explain": body = <Explain key={key} step={step} />; break;
+    case "section": body = <Section key={key} step={step} />; break;
   }
 
   const fbClass = feedback ? ({ ok: "ok", almost: "almost", bad: "bad", skip: "almost" } as const)[feedback.status] : "";

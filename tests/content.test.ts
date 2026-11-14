@@ -76,6 +76,7 @@ test("contenido: los diálogos y los ejercicios solo usan palabras enseñadas, g
       g.table?.rows.forEach((r) => r.forEach(add));
     }
     const used: string[] = [];
+    for (const v of l.vocab) if (v.example) used.push(v.example.de);
     for (const e of l.exercises) {
       if (e.kind === "speak" || e.kind === "dictation") used.push(e.de);
       if (e.kind === "build") used.push(e.answer);
@@ -137,4 +138,42 @@ test("cada lección con armar frases genera algún completar la frase", () => {
     if (steps.some((s) => s.kind === "cloze")) withCloze++;
   }
   assert.ok(withCloze >= withBuild.length * 0.8, `solo ${withCloze} de ${withBuild.length} lecciones generan un completar la frase`);
+});
+
+test("ejemplos: cada clave existe en el vocabulario y la frase usa la palabra", async () => {
+  const { EXAMPLES } = await import("../lib/content/examples.ts");
+  const keys = new Set(ALL_VOCAB.map((v) => v.de));
+  for (const k of Object.keys(EXAMPLES)) assert.ok(keys.has(k), `ejemplo para una palabra que no existe: «${k}»`);
+  for (const { u, l } of lessons) for (const v of l.vocab) {
+    if (!v.example) continue;
+    const words = tokenize(v.example.de);
+    // Alguna palabra del vocabulario (sin artículo) aparece en el ejemplo, con terminación o sin ella.
+    const heads = tokenize(v.de).filter((w) => w.length > 1 && !["der", "die", "das", "ein", "eine"].includes(w));
+    const ok = heads.some((h) => (h.length <= 3 ? words.includes(h) : words.some((w) => w.startsWith(h.slice(0, Math.max(3, h.length - 2))))));
+    assert.ok(ok, `${u.id}/${l.id}: el ejemplo de «${v.de}» no usa la palabra: ${v.example.de}`);
+    assert.ok(v.example.es.trim().length > 3, `${u.id}/${l.id}: falta la traducción del ejemplo de «${v.de}»`);
+  }
+});
+
+test("lección: empieza con la explicación, termina con un mini examen y no repite el examen en la práctica", () => {
+  for (const { u, l } of lessons) {
+    const steps = buildLessonSession(l, u.lessons.flatMap((x) => x.vocab));
+    assert.equal(steps[0].kind, "explain", `${l.id}: debe empezar con la explicación`);
+    const exam = steps.filter((s) => s.exam);
+    if (exam.length) {
+      assert.ok(exam.length >= 3 && exam.length <= 8, `${l.id}: tamaño del mini examen ${exam.length}`);
+      assert.equal(steps[steps.length - exam.length - 1].kind, "section", `${l.id}: el mini examen va después de un divisor`);
+    }
+    assert.ok(steps.filter(isGraded).length >= 6, `${l.id}: muy pocos ejercicios`);
+  }
+});
+
+test("explicaciones previas: cada clave es una lección real y trae explicación y resumen", async () => {
+  const { INTROS } = await import("../lib/content/intros.ts");
+  const keys = new Set(lessons.map(({ u, l }) => `${u.id}/${l.id}`));
+  for (const [k, n] of Object.entries(INTROS)) {
+    assert.ok(keys.has(k), `explicación para una lección que no existe: ${k}`);
+    assert.ok(n.intro.length >= 1 && n.intro.every((p) => p.trim().length > 20), `${k}: explicación muy corta`);
+    assert.ok(n.summary.length >= 1, `${k}: falta el resumen`);
+  }
 });

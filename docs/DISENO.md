@@ -80,6 +80,19 @@ Pensada para el celular, con un diseño de juego tipo Duolingo (mecánicas propi
 - **Frase del día** con audio, camino con puntitos, banners de unidad con progreso, «+XP» flotante y animaciones de entrada.
 - **Instalable (PWA):** manifiesto e íconos; se agrega a la pantalla de inicio y abre a pantalla completa.
 
+## 5b. Estructura de una lección y resumen de lo aprendido
+
+Cada lección se arma en `buildLessonSession` (`lib/session.ts`) y ahora dura unos 37 pasos de media (antes, 23), de lo más guiado a lo menos guiado:
+
+1. **Explicación previa** (`explain`): qué vas a aprender, en qué se diferencia del español (`Lesson.intro`, de `lib/content/intros.ts`), la lista de palabras y las reglas que vienen.
+2. **Palabras nuevas** (`intro`): artículo en color según el género (der azul, die rojo, das verde), género y plural, **frase de ejemplo** con audio (`Vocab.example`, de `lib/content/examples.ts`) y nota. Se intercalan con reconocimiento.
+3. **A practicar**: los ejercicios de la lección, más cada palabra otra vez y de otras formas: escuchar, escribirla de memoria (con su artículo), dictado y decirla en voz alta.
+4. **Escucha o lectura** con preguntas.
+5. **Mini examen** (3 a 8 preguntas sin ayudas): palabras en las dos direcciones, escucha, escritura y preguntas de gramática que se reservaron y no aparecieron antes. Se informa el resultado al final.
+6. **Resumen: «Lo que aprendiste»** (`components/LessonRecap.tsx`): meta de la lección, explicación, puntos para recordar (`Lesson.summary`), todas las palabras con artículo, traducción, ejemplo y nota, reglas de gramática con sus tablas, el diálogo con traducción y el texto de lectura. Aparece en la pantalla final, se puede reabrir desde la lección en el camino («Ver lo que aprendí», ruta `/resumen/<unidad>/<lección>`) y alimenta el **Glosario** general (`/glosario`), que lista lo ya visto por unidad y se puede buscar.
+
+Un corazón de regalo cada 10 aciertos seguidos compensa que las lecciones sean más largas. Tareas de contenido: las frases de ejemplo y las explicaciones previas están escritas para **A1** (unidades 1 a 14, unas 200 palabras y 57 lecciones); en A2, B1 y B2 las lecciones ya usan la estructura nueva, pero todavía sin ejemplo por palabra ni explicación previa escrita a mano (la pantalla de explicación muestra la meta y las listas, y el resumen sale igual).
+
 ## 6. Currículo
 
 A1 (14 unidades), A2 (9), B1 (11) y B2 (8). A1:

@@ -9,14 +9,19 @@ type BaseStep =
   | { kind: "rule"; rule: GrammarRule; n: number; total: number }
   | { kind: "listenq"; dialogue: Dialogue; question: ListenQuestion; n: number; total: number; hints?: { de: string; es: string }[] }
   | { kind: "readq"; reading: Reading; question: ListenQuestion; n: number; total: number }
+  /** Pantalla previa: qué se va a aprender. */
+  | { kind: "explain"; title: string; goal: string; paras: string[]; words: { de: string; es: string }[]; rules: string[] }
+  /** Divisor entre partes de la lección («Ahora, a practicar», «Mini examen»). */
+  | { kind: "section"; emoji: string; title: string; text: string }
   | (HandExercise & { vocab?: Vocab });
 
-/** fromReview: palabra vencida intercalada en una lección. mistakeId: repetición de un error. */
-export type Step = BaseStep & { fromReview?: boolean; mistakeId?: string };
+/** fromReview: palabra vencida intercalada en una lección. mistakeId: repetición de un error. exam: parte del mini examen. */
+export type Step = BaseStep & { fromReview?: boolean; mistakeId?: string; exam?: boolean };
 
-export const isGraded = (s: Step) => s.kind !== "intro" && s.kind !== "rule";
+const READ_ONLY = new Set<Step["kind"]>(["intro", "rule", "explain", "section"]);
+export const isGraded = (s: Step) => !READ_ONLY.has(s.kind);
 /** Pasos que solo se leen: se avanzan con «Entendido». */
-export const isReadOnly = (s: Step) => s.kind === "intro" || s.kind === "rule";
+export const isReadOnly = (s: Step) => READ_ONLY.has(s.kind);
 
 function distractors(target: Vocab, pool: Vocab[], field: "de" | "es", n = 3) {
   const others = shuffle(pool.filter((v) => v[field] !== target[field])).map((v) => v[field]);
@@ -73,45 +78,93 @@ function dialogueHints(lesson: Lesson, d: Dialogue) {
     .map((v) => ({ de: v.de, es: v.es }));
 }
 
+const writeWord = (v: Vocab): Step => ({ kind: "write", es: v.es, references: [v.de], vocab: v });
+const speakWord = (v: Vocab): Step => ({ kind: "speak", de: v.de, es: v.es, vocab: v });
+const dictateWord = (v: Vocab): Step => ({ kind: "dictation", de: v.de, es: v.es, vocab: v });
+
 /**
- * Lección: tarjetas nuevas intercaladas con práctica, después ejercicios mixtos
- * y hasta 2 palabras vencidas de lecciones anteriores.
+ * Lección, de la más a la menos guiada:
+ *  1. Explicación previa (qué vas a aprender) y reglas de gramática.
+ *  2. Palabras nuevas, con ejemplo, intercaladas con reconocimiento.
+ *  3. Práctica: ejercicios de la lección y cada palabra otra vez, de varias formas (escuchar, escribir, decir).
+ *  4. Escucha o lectura.
+ *  5. Mini examen sin ayudas, con lo visto.
+ * Incluye hasta 2 palabras vencidas de lecciones anteriores.
  */
 export function buildLessonSession(lesson: Lesson, unitVocab: Vocab[], dueVocab: Vocab[] = []): Step[] {
   const pool = unitVocab.length >= 4 ? unitVocab : ALL_VOCAB;
-  const steps: Step[] = [];
-  lesson.vocab.forEach((v, i) => {
-    steps.push({ kind: "intro", vocab: v });
-    if (i % 2 === 1) steps.push(choice(lesson.vocab[i - 1], pool), choice(v, pool));
-  });
-  if (lesson.vocab.length % 2 === 1) steps.push(choice(lesson.vocab[lesson.vocab.length - 1], pool));
+  const out: Step[] = [];
   const rules: Step[] = (lesson.grammar ?? []).map((rule, i, all) => ({ kind: "rule", rule, n: i + 1, total: all.length }));
+
+  out.push({
+    kind: "explain", title: lesson.title, goal: lesson.goal, paras: lesson.intro ?? [],
+    words: lesson.vocab.map((v) => ({ de: v.de, es: v.es })), rules: (lesson.grammar ?? []).map((g) => g.title),
+  });
+  out.push(...rules);
+
+  const intros: Step[] = [];
+  lesson.vocab.forEach((v, i) => {
+    intros.push({ kind: "intro", vocab: v });
+    if (i % 2 === 1) intros.push(choice(lesson.vocab[i - 1], pool), choice(v, pool));
+  });
+  if (lesson.vocab.length % 2 === 1) intros.push(choice(lesson.vocab[lesson.vocab.length - 1], pool));
+  out.push(...intros);
+
   // Hasta 2 «completar la frase» automáticos, sacados de los ejercicios de armar frases.
   const clozes = shuffle(lesson.exercises.filter((e) => e.kind === "build"))
     .map((e) => (e.kind === "build" ? autoCloze(e) : null))
     .filter((c): c is Cloze => c !== null)
     .slice(0, 2);
-  const mixed = shuffle([
+
+  // Parte de los ejercicios de elegir se reserva para el mini examen, así no se repiten.
+  const choosable = shuffle(lesson.exercises.filter((e) => e.kind === "quiz" || e.kind === "cloze"));
+  const reserved = choosable.slice(0, choosable.length >= 6 ? 3 : 0);
+  const reservedSet = new Set<HandExercise>(reserved);
+  const hand = lesson.exercises.filter((e) => !reservedSet.has(e));
+
+  const vocab = shuffle(lesson.vocab);
+  const practice = shuffle([
     ...clozes,
-    ...lesson.exercises.map((e): Step => (e.kind === "quiz" ? { ...e, options: shuffle(e.options) } : e)),
-    ...shuffle(lesson.vocab).slice(0, 3).map((v) => listen(v, pool)),
+    ...hand.map((e): Step => (e.kind === "quiz" ? { ...e, options: shuffle(e.options) } : e)),
+    ...vocab.slice(0, 5).map((v) => listen(v, pool)),
+    ...vocab.slice(0, 5).map(writeWord),
+    ...vocab.slice(2, 6).map(dictateWord),
+    ...vocab.slice(0, 3).map(speakWord),
     ...dueVocab.slice(0, 2).map((v): Step => ({ ...choice(v, ALL_VOCAB), fromReview: true })),
   ]);
+  if (practice.length) {
+    out.push({ kind: "section", emoji: "🏋️", title: "A practicar", text: "Ahora usás lo que viste: escuchar, escribir y decir las palabras y las frases." });
+    out.push(...practice);
+  }
+
   const d = lesson.dialogue;
-  const listening: Step[] = d
-    ? d.questions.map((q, i): Step => ({
-        kind: "listenq", dialogue: d, n: i + 1, total: d.questions.length, hints: dialogueHints(lesson, d),
-        question: q.type === "choice" ? { ...q, options: shuffle(q.options) } : q,
-      }))
-    : [];
+  if (d) {
+    out.push(...d.questions.map((q, i): Step => ({
+      kind: "listenq", dialogue: d, n: i + 1, total: d.questions.length, hints: dialogueHints(lesson, d),
+      question: q.type === "choice" ? { ...q, options: shuffle(q.options) } : q,
+    })));
+  }
   const r = lesson.reading;
-  const reading: Step[] = r
-    ? r.questions.map((q, i): Step => ({
-        kind: "readq", reading: r, n: i + 1, total: r.questions.length,
-        question: q.type === "choice" ? { ...q, options: shuffle(q.options) } : q,
-      }))
-    : [];
-  return [...rules, ...steps, ...mixed, ...listening, ...reading];
+  if (r) {
+    out.push(...r.questions.map((q, i): Step => ({
+      kind: "readq", reading: r, n: i + 1, total: r.questions.length,
+      question: q.type === "choice" ? { ...q, options: shuffle(q.options) } : q,
+    })));
+  }
+
+  // Mini examen: sin tarjetas ni ayudas; palabras en las dos direcciones, escucha y escritura, más lo reservado.
+  const exam: Step[] = [];
+  const ev = shuffle(lesson.vocab).slice(0, 4);
+  if (ev[0]) exam.push({ kind: "choice", vocab: ev[0], direction: "es-de", options: distractors(ev[0], pool, "de") });
+  if (ev[1]) exam.push({ kind: "choice", vocab: ev[1], direction: "de-es", options: distractors(ev[1], pool, "es") });
+  if (ev[2]) exam.push(listen(ev[2], pool));
+  if (ev[3]) exam.push(writeWord(ev[3]));
+  for (const e of reserved) exam.push(e.kind === "quiz" ? { ...e, options: shuffle(e.options) } : e);
+  if (exam.length >= 3) {
+    out.push({ kind: "section", emoji: "📝", title: "Mini examen", text: "Última parte: sin ayudas. Es para ver qué te quedó de esta lección." });
+    out.push(...shuffle(exam).map((s): Step => ({ ...s, exam: true })));
+  }
+  return out;
 }
 
 /** Repaso: un ejercicio por palabra vencida, alternando tipos. */

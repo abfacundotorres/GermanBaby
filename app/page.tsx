@@ -148,6 +148,11 @@ export default function Home() {
                             {record ? "Practicar de nuevo" : "Empezar"} · +20 XP
                           </Link>
                         )}
+                        {unlocked && record && (
+                          <Link href={`/resumen/${unit.id}/${lesson.id}`} className="btn btn-block" style={{ marginTop: 8 }}>
+                            📘 Ver lo que aprendí
+                          </Link>
+                        )}
                       </div>
                     )}
                     {selected === n.key && n.kind === "chat" && (

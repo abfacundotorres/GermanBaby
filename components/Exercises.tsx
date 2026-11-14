@@ -13,6 +13,8 @@ import { callAi } from "@/lib/ai";
 import { getStudyLevel } from "@/lib/level";
 import { AudioButtons } from "./Audio";
 import { PronunciationReport } from "./PronunciationReport";
+import { GENDER_ES, WordText } from "./WordText";
+import { splitArticle, pluralFromNote } from "@/lib/vocab";
 import type { CorrectionResult } from "@/app/api/correct/route";
 import type { MistakeCategory, MistakeInput } from "@/lib/mistakes";
 
@@ -36,16 +38,68 @@ type StepOf<K extends Step["kind"]> = Extract<Step, { kind: K }>;
 // ---------------- Tarjeta nueva ----------------
 export function Intro({ step }: { step: StepOf<"intro"> }) {
   const v = step.vocab;
+  const { voice } = useProgress();
+  const { art } = splitArticle(v.de);
+  const plural = pluralFromNote(v.note);
   return (
     <div className="stack center">
       <div className="prompt-label">Palabra nueva</div>
       <div className="intro-card stack center" style={{ gap: 8 }}>
         <div className="intro-emoji pop">{v.emoji ?? "🆕"}</div>
-        <div className="big-word" lang="de">{v.de}</div>
+        <div className="big-word"><WordText de={v.de} /></div>
         <div className="h2 muted" style={{ margin: 0 }}>{v.es}</div>
+        {art && <div className="chip">{art} = {GENDER_ES[art]}{plural ? ` · plural: ${plural}` : ""}</div>}
         <AudioButtons text={v.de} autoPlay size="big" />
       </div>
+      {v.example && (
+        <div className="card example row" style={{ textAlign: "left" }}>
+          <div style={{ flex: 1 }}>
+            <div className="prompt-label" style={{ marginBottom: 2 }}>Ejemplo</div>
+            <div lang="de"><b>{v.example.de}</b></div>
+            <div className="small muted">{v.example.es}</div>
+          </div>
+          <button className="btn btn-round" aria-label="Escuchar el ejemplo" onClick={() => void speak(v.example!.de, { voice }).catch(() => {})}>🔊</button>
+        </div>
+      )}
       {v.note && <div className="card small" style={{ textAlign: "left" }}>💡 {v.note}</div>}
+    </div>
+  );
+}
+
+// ---------------- Explicación previa ----------------
+export function Explain({ step }: { step: StepOf<"explain"> }) {
+  return (
+    <div className="stack">
+      <div className="prompt-label">Lo que vas a aprender</div>
+      <div className="h1" style={{ margin: 0 }}>{step.title}</div>
+      <div className="card"><b>Vas a aprender a:</b> {step.goal}</div>
+      {step.paras.map((p, i) => <p key={i} style={{ margin: 0 }}>{p}</p>)}
+      {step.words.length > 0 && (
+        <div className="stack" style={{ gap: 6 }}>
+          <div className="prompt-label" style={{ marginBottom: 0 }}>{step.words.length} palabras y frases nuevas</div>
+          {step.words.map((w) => (
+            <div key={w.de} className="row small" style={{ gap: 8 }}>
+              <b style={{ flex: 1 }}><WordText de={w.de} /></b>
+              <span className="muted" style={{ flex: 1 }}>{w.es}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      {step.rules.length > 0 && (
+        <div className="card small">📐 <b>Gramática:</b> {step.rules.join(" · ")}</div>
+      )}
+      <div className="small muted">La lección va así: palabras nuevas → práctica → mini examen. Al final te dejo un resumen de todo lo que viste.</div>
+    </div>
+  );
+}
+
+// ---------------- Divisor entre partes ----------------
+export function Section({ step }: { step: StepOf<"section"> }) {
+  return (
+    <div className="stack center" style={{ paddingTop: 40 }}>
+      <div className="intro-emoji pop">{step.emoji}</div>
+      <div className="h1" style={{ margin: 0 }}>{step.title}</div>
+      <p className="muted" style={{ margin: 0 }}>{step.text}</p>
     </div>
   );
 }

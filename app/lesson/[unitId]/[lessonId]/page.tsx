@@ -6,6 +6,7 @@ import { ALL_VOCAB, getLesson, lessonKey } from "@/lib/curriculum";
 import { buildLessonSession } from "@/lib/session";
 import { completeLesson, dueItems, isUnlocked, useHydrated, useProgress } from "@/lib/progress";
 import { LessonPlayer } from "@/components/LessonPlayer";
+import { LessonRecap } from "@/components/LessonRecap";
 
 export default function LessonPage({ params }: { params: Promise<{ unitId: string; lessonId: string }> }) {
   const { unitId, lessonId } = use(params);
@@ -42,6 +43,7 @@ function Lesson({ found }: { found: NonNullable<ReturnType<typeof getLesson>> })
       title={found.lesson.title}
       level={found.unit.level ?? "A1"}
       resumeKey={`lesson/${key}`}
+      recap={<LessonRecap unit={found.unit} lesson={found.lesson} />}
       onFinish={({ accuracy }) => {
         const { stars, unlocked } = completeLesson(key, accuracy, found.lesson.vocab.map((v) => v.de));
         return { extraXp: 20 + (accuracy === 1 ? 10 : 0), stars, achievements: unlocked };

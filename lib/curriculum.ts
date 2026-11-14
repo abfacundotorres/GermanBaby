@@ -7,6 +7,8 @@ import type { Level } from "./level.ts";
 import { UNITS_A1_PART2 } from "./content/a1-part2.ts";
 import { A1_DIALOGUES } from "./content/a1-dialogues.ts";
 import { READINGS } from "./content/readings.ts";
+import { EXAMPLES } from "./content/examples.ts";
+import { INTROS } from "./content/intros.ts";
 import { PRACTICE_A2 } from "./content/practice-a2.ts";
 import { PRACTICE_B1 } from "./content/practice-b1.ts";
 import { PRACTICE_B2 } from "./content/practice-b2.ts";
@@ -34,6 +36,8 @@ export type Vocab = {
   es: string;
   emoji?: string;
   note?: string; // explicación gramatical o cultural breve
+  /** Frase de ejemplo con la palabra en uso (se ve en la tarjeta y en el resumen). */
+  example?: { de: string; es: string };
 };
 
 export type HandExercise =
@@ -78,6 +82,10 @@ export type Lesson = {
   /** Lección de lectura opcional: no bloquea el avance. Se abre al terminar la lección anterior de la unidad. */
   bonus?: boolean;
   reading?: Reading; // texto con preguntas, después de la escucha
+  /** Explicación previa: qué se va a aprender y en qué se diferencia del español (párrafos). */
+  intro?: string[];
+  /** Puntos extra para el resumen final, además de la meta, las palabras y las reglas. */
+  summary?: string[];
 };
 
 export type Unit = {
@@ -326,6 +334,13 @@ export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_
 for (const u of UNITS) for (const l of u.lessons) {
   const d = A1_DIALOGUES[`${u.id}/${l.id}`];
   if (d && !l.dialogue) l.dialogue = d;
+}
+// Frases de ejemplo por palabra y explicaciones previas por lección.
+for (const u of UNITS) for (const l of u.lessons) {
+  for (const v of l.vocab) if (!v.example && EXAMPLES[v.de]) v.example = EXAMPLES[v.de];
+  const notes = INTROS[`${u.id}/${l.id}`];
+  if (notes && !l.intro) l.intro = notes.intro;
+  if (notes && !l.summary) l.summary = notes.summary;
 }
 // Lecturas opcionales al final de cada unidad desde la 9.
 for (const u of UNITS) {

@@ -497,3 +497,26 @@ body {
 .level-divider span { display: block; font-size: 22px; font-weight: 900; }
 .level-divider small { display: block; margin-top: 4px; color: var(--muted); font-weight: 700; }
 .blank { display: inline-block; min-width: 72px; border-bottom: 3px solid var(--primary); text-align: center; color: var(--primary); font-weight: 900; }
+
+/* ---- Género de las palabras, ejemplos y resumen de lección ---- */
+.art { font-weight: 800; padding: 0 6px; border-radius: 8px; }
+.art-der { color: #1d4ed8; background: color-mix(in srgb, #3b82f6 16%, transparent); }
+.art-die { color: #b91c1c; background: color-mix(in srgb, #ef4444 16%, transparent); }
+.art-das { color: #15803d; background: color-mix(in srgb, #22c55e 16%, transparent); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .art-der { color: #93c5fd; }
+  :root:not([data-theme="light"]) .art-die { color: #fca5a5; }
+  :root:not([data-theme="light"]) .art-das { color: #86efac; }
+}
+:root[data-theme="dark"] .art-der { color: #93c5fd; }
+:root[data-theme="dark"] .art-die { color: #fca5a5; }
+:root[data-theme="dark"] .art-das { color: #86efac; }
+.chip { display: inline-block; font-size: 13px; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); border: 2px solid var(--border); color: var(--muted); }
+.example { padding: 12px 14px; }
+.recap-word { padding: 12px 14px; }
+.recap-de { font-size: 19px; }
+.recap-emoji { font-size: 26px; width: 34px; text-align: center; }
+.recap-ex { margin-top: 6px; padding: 6px 10px; border-left: 4px solid var(--border); }
+.recap-list { margin: 0; padding-left: 20px; }
+.linklike { background: none; border: 0; cursor: pointer; font-size: 16px; padding: 0 4px; }
+.exam-banner { background: var(--surface-2); border: 2px solid var(--border); }
