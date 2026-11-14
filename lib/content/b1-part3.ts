@@ -185,10 +185,10 @@ export const UNITS_B1_PART3: Unit[] = [
           },
         ],
         exercises: [
-          { kind: "quiz", question: "Ich gehe zur Arbeit, ___ ich krank bin.", options: ["obwohl", "trotzdem", "weil", "damit"], answer: "obwohl", explanation: "Con el verbo al final y sentido de «aunque»: obwohl.", category: "gramática" },
+          { kind: "quiz", question: "Ich gehe zur Arbeit, ___ ich krank bin. (aunque)", options: ["obwohl", "trotzdem", "weil", "damit"], answer: "obwohl", explanation: "Con el verbo al final y sentido de «aunque»: obwohl.", category: "gramática" },
           { kind: "quiz", question: "Ich bin müde, ___ lerne ich Deutsch.", options: ["trotzdem", "obwohl", "damit", "weil"], answer: "trotzdem", explanation: "Con el verbo enseguida: trotzdem.", category: "gramática" },
           { kind: "quiz", question: "Ich lerne Deutsch, ___ in Deutschland zu arbeiten.", options: ["um", "damit", "weil", "dass"], answer: "um", explanation: "Mismo sujeto: um… zu.", category: "gramática" },
-          { kind: "quiz", question: "Ich erkläre es langsam, ___ du es verstehst.", options: ["damit", "um", "weil", "obwohl"], answer: "damit", explanation: "Sujetos distintos: damit.", category: "gramática" },
+          { kind: "quiz", question: "Ich erkläre es langsam, ___ du es verstehst. (para que)", options: ["damit", "um", "weil", "obwohl"], answer: "damit", explanation: "Sujetos distintos: damit.", category: "gramática" },
           { kind: "quiz", question: "Es ist wichtig, früh ___. (aufstehen)", options: ["aufzustehen", "zu aufstehen", "aufstehen zu", "auf zu stehen"], answer: "aufzustehen", explanation: "Con un separable, «zu» va entre el prefijo y la raíz.", category: "gramática" },
           { kind: "quiz", question: "Ich habe keine Lust, ___ arbeiten.", options: ["zu", "um", "damit", "dass"], answer: "zu", explanation: "Después de «Lust haben»: zu + infinitivo.", category: "gramática" },
           { kind: "quiz", question: "¿Cuál oración es correcta?", options: ["Obwohl ich müde bin, lerne ich Deutsch.", "Obwohl ich bin müde, lerne ich Deutsch.", "Obwohl ich müde bin, ich lerne Deutsch.", "Obwohl ich müde, lerne ich Deutsch bin."], answer: "Obwohl ich müde bin, lerne ich Deutsch.", explanation: "Verbo al final en la subordinada y verbo justo después de la coma en la principal.", category: "orden de palabras" },

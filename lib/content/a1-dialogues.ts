@@ -13,8 +13,8 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     lines: [
       L("m", "Tom", "Hallo, Lena! Guten Morgen!", "¡Hola, Lena! ¡Buenos días!"),
       L("f", "Lena", "Guten Morgen, Tom!", "¡Buenos días, Tom!"),
-      L("m", "Tom", "Tschüss! Guten Tag!", "¡Chau! ¡Buen día!"),
-      L("f", "Lena", "Tschüss!", "¡Chau!"),
+      L("m", "Tom", "Tschüss, Lena!", "¡Chau, Lena!"),
+      L("f", "Lena", "Tschüss, Tom!", "¡Chau, Tom!"),
     ],
     questions: [
       { type: "choice", q: "¿Qué momento del día es?", options: ["La mañana", "La noche", "La tarde", "El mediodía"], answer: "La mañana", why: "«Guten Morgen» = buenos días." },

@@ -189,7 +189,7 @@ export const UNITS_A1_PART4: Unit[] = [
           { kind: "quiz", question: "Ich fahre mit ___ U-Bahn.", options: ["der", "dem", "die", "den"], answer: "der", explanation: "«die U-Bahn» es femenina: en dativo pasa a «der».", category: "gramática" },
           { kind: "quiz", question: "Ich gehe ___ Bahnhof.", options: ["zum", "zur", "zu der", "im"], answer: "zum", explanation: "zu + dem = zum (Bahnhof es masculino).", category: "gramática" },
           { kind: "quiz", question: "Ich gehe ___ Post.", options: ["zur", "zum", "zu dem", "im"], answer: "zur", explanation: "zu + der = zur (Post es femenino).", category: "gramática" },
-          { kind: "quiz", question: "Ich bin ___ Park.", options: ["im", "in", "am", "zum"], answer: "im", explanation: "in + dem = im: así se dice dónde estás.", category: "gramática" },
+          { kind: "quiz", question: "Ich bin ___ Park.", options: ["im", "in", "ins", "zum"], answer: "im", explanation: "in + dem = im: así se dice dónde estás.", category: "gramática" },
           { kind: "quiz", question: "Wie komme ich ___ Bank?", options: ["zur", "zum", "zu dem", "im"], answer: "zur", explanation: "«die Bank» es femenina: zu + der = zur.", category: "gramática" },
           { kind: "build", es: "Voy a la estación", answer: "Ich gehe zum Bahnhof", extra: ["zur", "Park", "mit"], alts: ["Zum Bahnhof gehe ich"] },
           { kind: "build", es: "Voy en tren", answer: "Ich fahre mit dem Zug", extra: ["der", "den", "nach"], alts: ["Mit dem Zug fahre ich"] },

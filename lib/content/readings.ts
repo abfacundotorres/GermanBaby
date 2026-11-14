@@ -160,7 +160,7 @@ export const READINGS: Record<string, Lesson> = {
       { de: "die Geschichte", es: "la historia / el relato", emoji: "📜" },
     ],
     [
-      cz("Vor fünf Jahren ___ ich nach Deutschland gekommen.", "Hace cinco años llegué a Alemania.", ["bin", "habe", "war", "hatte"], "bin", "«kommen» usa «sein»."),
+      cz("Vor fünf Jahren ___ ich nach Deutschland gekommen.", "Hace cinco años llegué a Alemania.", ["bin", "habe", "sind", "hatte"], "bin", "«kommen» usa «sein»."),
       cz("Ich lerne ___ zwei Jahren Deutsch.", "Estudio alemán desde hace dos años.", ["seit", "vor", "für", "bei"], "seit", "Algo que sigue hasta hoy: «seit»."),
       { kind: "write", es: "la historia", references: ["die Geschichte"] },
     ],
@@ -347,7 +347,7 @@ export const READINGS: Record<string, Lesson> = {
       { de: "Ich freue mich auf Ihre Antwort", es: "Espero su respuesta", emoji: "📬", note: "«sich freuen auf» + acusativo = tener ganas de que llegue algo. «Ihre» = su (de usted)." },
     ],
     [
-      cz("___ es Ihnen am Mittwoch?", "¿Le viene bien el miércoles?", ["Passt", "Passe", "Passen", "Passt's"], "Passt", "«passen» con «es»: passt."),
+      cz("___ es Ihnen am Mittwoch?", "¿Le viene bien el miércoles?", ["Passt", "Passe", "Passen", "Passend"], "Passt", "«passen» con «es»: passt."),
       cz("Ich ___ einen Termin vereinbaren.", "Quisiera acordar una cita.", ["möchte", "möchtest", "möchten", "möchtet"], "möchte", "Con «ich»: möchte."),
       { kind: "write", es: "la respuesta", references: ["die Antwort"] },
     ],
@@ -404,7 +404,7 @@ export const READINGS: Record<string, Lesson> = {
     ],
     [
       cz("Wenn ich viel Geld ___, würde ich reisen.", "Si tuviera mucho dinero, viajaría.", ["hätte", "habe", "hatte", "hat"], "hätte", "Condición irreal: hätte."),
-      cz("Du ___ Geld sparen.", "Deberías ahorrar dinero.", ["solltest", "sollst", "solltet", "sollte"], "solltest", "Consejo con «du»: solltest."),
+      cz("Du ___ Geld sparen.", "Deberías ahorrar dinero.", ["solltest", "sollen", "solltet", "sollte"], "solltest", "Consejo con «du»: solltest."),
       { kind: "write", es: "el sueño", references: ["der Traum"] },
     ],
     "Mein Traum",
