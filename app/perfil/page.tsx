@@ -37,6 +37,7 @@ export default function Perfil() {
   const hydrated = useHydrated();
   const p = useProgress();
   const [msg, setMsg] = useState<string | null>(null);
+  const [updating, setUpdating] = useState(false);
   const [backup, setBackup] = useState("");
   const [confirmReset, setConfirmReset] = useState(false);
   const sync = useSyncStatus();
@@ -75,6 +76,16 @@ export default function Perfil() {
   const restore = () => {
     if (importProgress(backup.trim())) { note("✅ Progreso restaurado."); setBackup(""); }
     else note("Ese texto no es una copia válida.");
+  };
+
+  // Limpia las cachés del navegador y recarga con la versión más nueva del sitio. No toca el progreso.
+  const update = async () => {
+    setUpdating(true);
+    try {
+      if ("serviceWorker" in navigator) for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister();
+      if ("caches" in window) for (const k of await caches.keys()) await caches.delete(k);
+    } catch { /* igual recarga */ }
+    window.location.replace(`/perfil?v=${Date.now()}`);
   };
 
   const logout = async () => {
@@ -277,6 +288,7 @@ export default function Perfil() {
       </section>
 
       <section className="stack">
+        <button className="btn btn-block" onClick={update} disabled={updating}>{updating ? "Actualizando…" : "🔄 Buscar actualización"}</button>
         <button className="btn btn-block" onClick={logout}>Cerrar sesión</button>
         {confirmReset ? (
           <div className="card stack">

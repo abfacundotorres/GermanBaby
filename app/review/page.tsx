@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { buildReviewSession } from "@/lib/session";
-import { dueItems, reviewItem, useProgress } from "@/lib/progress";
+import { dueItems, openMistakes, reviewItem, useProgress } from "@/lib/progress";
 import { LessonPlayer } from "@/components/LessonPlayer";
 
 export default function ReviewPage() {
   const p = useProgress();
   const [steps, setSteps] = useState<ReturnType<typeof buildReviewSession> | null>(null);
   const due = dueItems(p);
+  const mistakes = openMistakes(p).length;
 
   if (!steps) {
     return (
@@ -26,6 +27,10 @@ export default function ReviewPage() {
         ) : (
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
+        <Link href="/practice" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>🎯 Mis errores{mistakes > 0 ? ` (${mistakes})` : ""}</b>
+          <span className="muted small">{mistakes > 0 ? "Practicá lo que fallaste, con ejercicios armados a medida." : "No tenés errores pendientes. Si fallás algo, aparece acá."}</span>
+        </Link>
       </main>
     );
   }
