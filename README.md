@@ -87,6 +87,10 @@ La app funciona sin claves, con menos funciones: el audio usa la voz del navegad
 
 **Micrófono:** el navegador solo lo permite en `localhost` o con HTTPS.
 
+## Probar el contenido con el bot
+
+`npm run bot` resuelve las lecciones por la interfaz (con las respuestas del propio currículo) y avisa si alguna no se puede terminar, si una respuesta correcta se marca mal o si falta el resumen final. Corre la app en otra terminal (`npm run dev`) y, la primera vez, instalá Playwright: `npm i -D playwright` y `npx playwright install chromium`. Variantes: `npm run bot -- --practice`, `--unit cafe`, `--lesson cafe/bestellen` o `--all`. Si la app tiene `ACCESS_CODE`, pasalo con `--code` o con la variable `BOT_ACCESS_CODE`. No prueba que el alemán sea correcto, solo que el contenido es coherente y resoluble.
+
 ## Estructura
 
 ```
@@ -101,6 +105,7 @@ app/
   api/practice                 práctica personalizada de errores (Claude)
   api/sync                     progreso en la nube (Upstash Redis)
   api/login                    código de acceso, con límite de intentos
+scripts/                       check.mjs (prueba tus claves) y solve-lessons.mjs (el bot)
 proxy.ts                       exige el código de acceso en todo
 components/                    ejercicios, reporte de pronunciación, reproductor de lecciones
 lib/
