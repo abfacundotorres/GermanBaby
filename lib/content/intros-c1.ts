@@ -4,6 +4,9 @@ import { READING_TIP, PRACTICE_TIP, type LessonNotes } from "./intros-a2.ts";
 const reading = (words: string): LessonNotes => ({ intro: [READING_TIP], summary: [`Palabras nuevas de la lectura: ${words}.`] });
 const practice = (topic: string): LessonNotes => ({ intro: [PRACTICE_TIP], summary: [`Repasaste lo de la unidad: ${topic}.`] });
 
+const LONG_TIP = "Esta es una escucha larga: una conversación de 14 a 16 líneas a velocidad natural, con muchos más datos que un diálogo común. No hace falta entender cada palabra: escuchá una vez para captar la idea general, y después respondé las preguntas. Podés volver a escucharla, con 🐢 para ir más lento. Al final se muestra el texto con su traducción.";
+const long = (topic: string): LessonNotes => ({ intro: [LONG_TIP], summary: [`Escuchaste una conversación larga sobre ${topic}.`] });
+
 export const INTROS_C1: Record<string, LessonNotes> = {
   // ---------- Unidad 44: Suposiciones
   "vermutung/sicher": {
@@ -540,4 +543,19 @@ export const INTROS_C1: Record<string, LessonNotes> = {
   },
   "pruefung-c1/lesen": reading("die Abwägung, schlüssig"),
   "pruefung-c1/practica": practice("el examen C1"),
+
+  // ---------- Escuchas largas
+  "erzaehlen/escucha-larga": long("un viaje con problemas"),
+  "passiv/escucha-larga": long("una obra en el barrio"),
+  "meinung/escucha-larga": long("el transporte en la ciudad"),
+  "konjunktiv-vergangenheit/escucha-larga": long("lo que pudo haber sido"),
+  "indirekte-rede/escucha-larga": long("el acta de una reunión"),
+  "nominalstil/escucha-larga": long("una conferencia sobre la ciudad"),
+  "meinungstext/escucha-larga": long("el home office"),
+  "register/escucha-larga": long("el registro formal e informal"),
+  "bruecke-c1/escucha-larga": long("el futuro del trabajo"),
+  "konzessiv/escucha-larga": long("una negociación difícil"),
+  "medien-c1/escucha-larga": long("los medios"),
+  "technik-c1/escucha-larga": long("la inteligencia artificial"),
+  "pruefung-c1/escucha-larga": long("un examen oral"),
 };

@@ -36,8 +36,9 @@ test("contenido: preguntas de opción múltiple y de escucha son coherentes", ()
       if (q.type === "fill") assert.ok(q.answers.length > 0 && q.answers.every((a) => matchFill(a, q.answers)));
     }
     if (l.dialogue) {
-      assert.ok(l.dialogue.lines.length >= 3 && l.dialogue.lines.length <= 8, `${l.id}: largo del diálogo`);
-      assert.ok(l.dialogue.questions.length >= 3, `${l.id}: pocas preguntas`);
+      const long = l.id === "escucha-larga";
+      assert.ok(long ? l.dialogue.lines.length >= 12 && l.dialogue.lines.length <= 20 : l.dialogue.lines.length >= 3 && l.dialogue.lines.length <= 8, `${l.id}: largo del diálogo`);
+      assert.ok(l.dialogue.questions.length >= (long ? 6 : 3), `${l.id}: pocas preguntas`);
       assert.ok(new Set(l.dialogue.lines.map((x) => x.who)).size === 2, `${l.id}: el diálogo debe tener dos voces`);
     }
   }

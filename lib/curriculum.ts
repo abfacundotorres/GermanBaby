@@ -40,6 +40,7 @@ import { UNITS_C1_PART5 } from "./content/c1-part5.ts";
 import { UNITS_C1_PART6 } from "./content/c1-part6.ts";
 import { READINGS_C1 } from "./content/readings-c1.ts";
 import { PRACTICE_C1 } from "./content/practice-c1.ts";
+import { LONG_LISTENINGS } from "./content/long-listening.ts";
 
 export type Vocab = {
   de: string;
@@ -370,6 +371,9 @@ for (const u of UNITS) {
   // Al final de cada práctica, un ejercicio de producción libre corregido por Claude.
   const fp = FREE_PROMPTS[u.id];
   if (pr && fp && !pr.exercises.some((e) => e.kind === "free")) pr.exercises.push({ kind: "free", ...fp });
+  // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
+  const long = LONG_LISTENINGS[u.id];
+  if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
 }
 
 // Frases de ejemplo por palabra y explicaciones previas por lección (después de armar las lecturas y las prácticas, que también las llevan).
