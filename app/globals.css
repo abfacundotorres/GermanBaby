@@ -68,6 +68,7 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Botones ---------- */
 .btn {
+  display: inline-flex; align-items: center; justify-content: center; text-align: center; text-decoration: none;
   border: 2px solid var(--border);
   background: var(--surface);
   border-radius: 14px;
