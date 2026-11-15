@@ -32,3 +32,17 @@ test("login: la ventana expira", async () => {
   t += LIMITS.perIp.windowSec * 1000 + 1;
   assert.equal(await blockedFor(s, "1.1.1.1"), 0);
 });
+
+test("IA: frena al pasar el tope por minuto y por día, y se libera al cambiar la ventana", async () => {
+  const { takeAiCall } = await import("../lib/quota.ts");
+  let t = Date.UTC(2026, 0, 1, 12, 0, 0);
+  const s = memoryStore(() => t);
+  const limits = { perMinute: 3, perDay: 5 };
+  for (let i = 0; i < 3; i++) assert.equal(await takeAiCall(s, () => t, limits), null);
+  assert.equal((await takeAiCall(s, () => t, limits))?.reason, "minute");
+  t += 120_000; // otro minuto: pasa (la 5.ª del día todavía entra)
+  assert.equal(await takeAiCall(s, () => t, limits), null);
+  assert.equal((await takeAiCall(s, () => t, limits))?.reason, "day"); // la 6.ª del día
+  t += 25 * 3600_000; // otro día
+  assert.equal(await takeAiCall(s, () => t, limits), null);
+});

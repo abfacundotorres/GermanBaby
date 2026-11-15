@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
+import { aiQuotaResponse } from "@/lib/quota";
 import { LevelSchema, levelRules, type Level } from "@/lib/level";
 
 const Body = z.object({
@@ -46,6 +47,8 @@ export async function POST(req: Request) {
   if (!claudeConfigured()) {
     return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
   }
+  const blocked = await aiQuotaResponse();
+  if (blocked) return blocked;
   const { es, references, answer, hint, level } = parsed.data;
   try {
     const { output, usage } = await structured({

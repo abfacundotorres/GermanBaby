@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
+import { aiQuotaResponse } from "@/lib/quota";
 import { levelRules } from "@/lib/level";
 import { getUnit } from "@/lib/curriculum";
 import { TEXT_CATEGORIES } from "@/lib/mistakes";
@@ -41,6 +42,8 @@ export async function POST(req: Request) {
   const unit = getUnit(parsed.data.unitId);
   if (!unit) return Response.json({ error: "Unidad inexistente." }, { status: 404 });
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
+  const blocked = await aiQuotaResponse();
+  if (blocked) return blocked;
 
   const level = unit.level ?? "A1";
   const vocab = unit.lessons.flatMap((l) => l.vocab.map((v) => v.de)).join(", ");

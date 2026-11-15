@@ -23,11 +23,13 @@ export async function structured<S extends z.ZodType>(args: {
   schema: S;
   system: string;
   messages: Anthropic.Beta.BetaMessageParam[];
+  /** Tope de tokens de salida (incluye el razonamiento). Una corrección necesita pocos. */
+  maxTokens?: number;
 }): Promise<{ output: z.infer<S>; usage: Usage }> {
   client ??= new Anthropic();
   const res = await client.beta.messages.parse({
     model: MODEL,
-    max_tokens: 16000,
+    max_tokens: args.maxTokens ?? 2500,
     system: args.system,
     messages: args.messages,
     // Tareas cortas de tutoría: esfuerzo bajo = respuestas rápidas y baratas.

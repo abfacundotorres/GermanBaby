@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { claudeConfigured, errorResponse, structured } from "@/lib/claude";
+import { aiQuotaResponse } from "@/lib/quota";
 import { UNITS, lessonKey } from "@/lib/curriculum";
 import { levelFromProgress, levelRules, type Level } from "@/lib/level";
 import { ALL_CATEGORIES, TEXT_CATEGORIES } from "@/lib/mistakes";
@@ -64,6 +65,8 @@ export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return Response.json({ error: "Solicitud inválida." }, { status: 400 });
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
+  const blocked = await aiQuotaResponse();
+  if (blocked) return blocked;
 
   const studied = new Set(parsed.data.studied);
   // La práctica es del nivel más alto en el que ya estudió alguna lección.
@@ -82,6 +85,7 @@ export async function POST(req: Request) {
   try {
     const { output: r, usage } = await structured({
       schema: Practice,
+      maxTokens: 6000,
       system: system(level),
       messages: [
         {
