@@ -581,3 +581,13 @@ ex("der Computer", "Ich habe einen Computer.", "Tengo una computadora.");
 ex("das Bier", "Ich möchte ein Bier, bitte.", "Quiero una cerveza, por favor.");
 ex("die Leute", "Die Leute sind hier.", "La gente está acá.");
 ex("weit", "Wien ist weit.", "Viena queda lejos.");
+
+// ================= C1 =================
+ex("das Gerücht", "Das ist nur ein Gerücht.", "Eso es solo un rumor.");
+ex("vermuten", "Ich vermute, dass er krank ist.", "Supongo que está enfermo.");
+ex("hilfsbereit", "Meine Nachbarin ist sehr hilfsbereit.", "Mi vecina es muy servicial.");
+ex("die Nachbarschaft", "Die Nachbarschaft ist ruhig.", "El vecindario es tranquilo.");
+ex("das Heimweh", "Im Urlaub hatte ich Heimweh.", "En las vacaciones extrañaba mi casa.");
+ex("einsam", "Ich bin heute nicht einsam.", "Hoy no me siento solo.");
+ex("die Nutzung", "Die Nutzung ist wichtig.", "El uso es importante.");
+ex("zunehmen", "Die Zahl soll zunehmen.", "El número va a aumentar.");

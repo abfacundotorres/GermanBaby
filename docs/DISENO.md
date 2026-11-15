@@ -168,7 +168,14 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 42. **Registro y estilo** (`register`): carta o correo formal (`hiermit`, `anbei`, `ich wäre Ihnen dankbar, wenn…`), partículas del habla (`doch`, `mal`, `ja`, `halt`, `eben`, `denn`) y expresiones cotidianas (`die Daumen drücken`, `das kommt darauf an`, `ich verstehe nur Bahnhof`).
 43. **Preparación para el examen B2** (`pruefung-b2`): presentar un tema, describir una gráfica (`steigen`, `sinken`, `der Anteil`, `um… Prozent`), carta del lector y repaso de B2.
 
-Con esto el currículo tiene 43 unidades (14 de A1 más la de pronunciación, 9 de A2, 11 de B1 y 8 de B2), unas 159 lecciones del camino principal más 34 lecturas opcionales y 28 prácticas extra de A2 a B2, unas 160 escuchas largas y unas 1.000 palabras. B2 queda completo en lo básico; lo que sigue serían unidades de C1 o más práctica y escuchas más largas.
+**C1** (`Unit.level = "C1"`, en `lib/content/c1-part1.ts` y `c1-part2.ts`): primera tanda de 4 unidades. Cada una tiene 2 o 3 lecciones con escucha larga, una lección de gramática, charla de rol, lectura (`readings-c1.ts`) y práctica extra (`practice-c1.ts`) con producción libre. Las frases de vocabulario son oraciones completas, así que casi no hay ejemplos por palabra (solo en las lecturas).
+
+44. **Suposiciones** (`vermutung`): modales subjetivos (`muss`, `dürfte`, `kann nicht`, `soll`, `will`), infinitivo perfecto y adverbios (`wohl`, `offenbar`, `anscheinend`).
+45. **Relativos avanzados** (`relativ-plus`): `dessen` / `deren`, `wer` / `was` / `wo`, el relativo de toda la oración, relativo con preposición y genitivo.
+46. **Irrealidad** (`irrealis`): `als ob` / `als` + Konjunktiv II, deseos irreales (`Wenn ich nur…`, `Hätte ich doch…`), `beinahe`, `ohne dass`, `anstatt dass`.
+47. **Lenguaje académico** (`akademisch`): `zufolge`, `gemäß`, `anhand`, `hinsichtlich`, `bezüglich`, `anlässlich`, `mittels`; `demnach`, `mithin`, `insofern… als`; `belegen`, `darlegen`, `hinweisen auf`.
+
+Con esto el currículo tiene 47 unidades (14 de A1 más la de pronunciación, 9 de A2, 11 de B1, 8 de B2 y 4 de C1), unas 175 lecciones del camino principal más 34 lecturas opcionales y 28 prácticas extra de A2 a B2, unas 160 escuchas largas y unas 1.000 palabras. B2 queda completo en lo básico; lo que sigue serían unidades de C1 o más práctica y escuchas más largas.
 
 **Práctica extra (A2 y B1)** (`lib/content/practice-a2.ts`, `practice-b1.ts`): una lección opcional («bonus», 🎯) al final de cada una de las unidades de A2, B1 y B2, después de la lectura. No enseña vocabulario nuevo, repasa lo de la unidad con frases nuevas: 3 «completar la frase» y una pregunta de «¿cuál es correcta?», un «armar la frase», 2 o 3 **producciones escritas en situaciones** («decile a la vendedora que…», con varias respuestas válidas), una frase para decir en voz alta y una **escucha nueva** de 6 líneas con 4 preguntas. Se abre al terminar la última lección principal de la unidad (`BONUS_PREV` ya no encadena las bonus entre sí). Se agrega al camino con el mismo mecanismo que las lecturas.
 

@@ -24,6 +24,18 @@ export const GLOSS: Record<string, string> = {
   aufstand: "me levanté (de «aufstehen»)", gefrühstückt: "desayuné", lag: "estaba acostado", würdest: "harías / irías",
   hättest: "tuvieras", professor: "profesor", natürlich: "por supuesto", erklären: "explicar", erkläre: "explico",
   internet: "internet",
+  // C1
+  verkehr: "tráfico", stecken: "estar metido / atascado", verpasst: "perdió (un tren)", handy: "celular", geschickt: "enviado",
+  verkauft: "vendido", gar: "en absoluto (gar nicht)", klingt: "suena", komisch: "raro", wusste: "sabía",
+  ganz: "completamente / muy", sorgen: "preocupaciones (sich Sorgen machen)", nervös: "nervioso/a", ferien: "vacaciones", treppe: "escalera",
+  nass: "mojado/a", half: "ayudó (de «helfen»)", standen: "estaban parados", gemeldet: "denunciado / informado", vertrag: "contrato",
+  frist: "plazo", feier: "celebración", schlüsse: "conclusiones", fahrradfahrer: "ciclistas",
+  chefin: "jefa", verlassen: "dejar / abandonar", genaues: "algo concreto", dienstreise: "viaje de trabajo", ganze: "toda (la)",
+  schließen: "cerrar / concluir", abgesagt: "canceló", stolzer: "más orgulloso/a", ruft: "llama", kollege: "colega",
+  taten: "hacían (de «tun»)", zurückgefahren: "volvió (en vehículo)", wüsste: "supiera", gereist: "viajado", tat: "hizo",
+  ordnung: "orden (in Ordnung = bien)", eingeschlafen: "dormido", städten: "ciudades", umgestiegen: "cambiaron (de medio)",
+  baut: "construye", arbeitslosigkeit: "desempleo", untersuchung: "investigación", klaren: "clara",
+  vorbereitet: "preparado/a", stolz: "orgulloso/a", geschafft: "logrado", kunde: "cliente",
   kennen: "conocer", kennst: "conocés", kenne: "conozco", stock: "piso (de un edificio)", wirklich: "de verdad", sohn: "hijo",
   informationen: "información", beste: "el/la mejor", mach: "hacé", bring: "traé", möchtest: "querés", brauchst: "necesitás",
   geschäft: "negocio / tienda", gerade: "justo ahora", gefeiert: "festejado", dieses: "este", fotografieren: "sacar fotos",
@@ -47,7 +59,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg",
 ]);
 
 const tok = (s: string) =>

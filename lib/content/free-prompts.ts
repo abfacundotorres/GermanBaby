@@ -38,4 +38,10 @@ export const FREE_PROMPTS: Record<string, FreePrompt> = {
   meinungstext: { prompt: "Escribí un texto de opinión corto: ¿conviene trabajar desde casa?", focus: ["introducción (Heutzutage … / Die Frage ist, ob …)", "zunächst / darüber hinaus", "una objeción (Man könnte einwenden …)", "una conclusión (Abschließend …)"], minSentences: 6 },
   register: { prompt: "Escribí dos versiones del mismo pedido de ayuda: una informal, para un amigo, y una formal, para un jefe.", focus: ["du frente a Sie", "partículas (doch / mal)", "Konjunktiv II de cortesía"], minSentences: 4 },
   "pruefung-b2": { prompt: "Describí con tus palabras una gráfica sobre un tema que elijas y sacá una conclusión.", focus: ["Die Grafik zeigt, dass …", "steigen / sinken, um … Prozent", "im Vergleich zu", "una conclusión"], minSentences: 5 },
+
+  // ---------- C1
+  vermutung: { prompt: "Un compañero no vino hoy y nadie sabe por qué. Escribí qué suponés, qué dicen otros y qué afirma él mismo.", focus: ["muss / dürfte / kann nicht + infinitivo", "soll / will + infinitivo (perfecto)", "wohl / offenbar / anscheinend"], minSentences: 5 },
+  "relativ-plus": { prompt: "Describí a tres personas de tu entorno y a un lugar que conocés, con oraciones de relativo avanzadas.", focus: ["dessen / deren", "wer … o was …", "relativo con preposición", "wo o warum"], minSentences: 5 },
+  irrealis: { prompt: "Contá algo que lamentás y cómo habría sido distinto, y describí a alguien que hace como si nada pasara.", focus: ["Wenn … nur / Hätte … doch / Ich wünschte", "als ob / als + Konjunktiv II", "beinahe o ohne dass"], minSentences: 5 },
+  akademisch: { prompt: "Presentá por escrito los resultados de un estudio imaginario sobre un tema que elijas, con lenguaje académico.", focus: ["zufolge / gemäß / hinsichtlich / bezüglich", "demnach / mithin / insbesondere", "belegen / darlegen / hinweisen auf"], minSentences: 6 },
 };

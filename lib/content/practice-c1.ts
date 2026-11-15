@@ -1,0 +1,128 @@
+// Práctica extra de C1: una lección opcional («bonus») al final de cada unidad, después de la lectura.
+
+import type { Lesson } from "../curriculum.ts";
+import { cz, qz, practice } from "./practice-a2.ts";
+
+/** Clave: id de la unidad. */
+export const PRACTICE_C1: Record<string, Lesson> = {
+  vermutung: practice(
+    "suposiciones",
+    "Repasar los modales para suponer (muss, dürfte, kann, soll, will) y el infinitivo perfecto con frases nuevas.",
+    [
+      cz("Er ___ sehr müde sein, er hat die ganze Nacht gearbeitet.", "Seguro que está muy cansado, trabajó toda la noche.", ["muss", "soll", "will", "darf"], "muss", "«muss» expresa casi certeza."),
+      cz("Das ___ nicht stimmen, ich war doch dort.", "Eso no puede ser verdad, yo estuve ahí.", ["kann", "muss", "soll", "dürfte"], "kann", "«kann nicht» = es imposible."),
+      cz("Sie ___ sehr gut kochen, sagt man.", "Dicen que cocina muy bien.", ["soll", "muss", "will", "kann"], "soll", "«soll» = dicen que."),
+      qz("¿Cuál es la oración más segura?", ["Er muss zu Hause sein", "Er dürfte zu Hause sein", "Er ist wohl zu Hause", "Er könnte zu Hause sein"], "Er muss zu Hause sein", "«muss» expresa casi certeza."),
+      { kind: "build", es: "Seguro que llegó ayer", answer: "Sie muss gestern angekommen sein", extra: ["soll", "will", "ist"] },
+      { kind: "write", es: "Decí que probablemente tu amigo ya está en casa.", references: ["Mein Freund dürfte schon zu Hause sein", "Mein Freund ist wohl schon zu Hause", "Mein Freund ist wahrscheinlich schon zu Hause"] },
+      { kind: "write", es: "Contá un rumor: dicen que el restaurante cierra.", references: ["Das Restaurant soll schließen", "Das Restaurant soll geschlossen werden", "Das Restaurant soll zumachen"] },
+      { kind: "speak", de: "Das dürfte genügen", es: "Eso debería bastar" },
+    ],
+    "Una cena cancelada",
+    "Dos amigos suponen por qué canceló una invitada.",
+    [
+      ["f", "Anna", "Julia hat abgesagt. Sie muss krank sein.", "Julia canceló. Seguro que está enferma."],
+      ["m", "Tom", "Das kann nicht stimmen. Ich habe sie heute gesehen.", "Eso no puede ser. La vi hoy."],
+      ["f", "Anna", "Dann hat sie wohl keine Zeit.", "Entonces supongo que no tiene tiempo."],
+      ["m", "Tom", "Sie soll viel arbeiten, sagt man.", "Dicen que trabaja mucho."],
+      ["f", "Anna", "Sie will gestern erst spät nach Hause gekommen sein.", "Ella dice que ayer llegó tarde a casa."],
+      ["m", "Tom", "Das dürfte der Grund sein.", "Probablemente esa es la razón."],
+    ],
+    [
+      { type: "choice", q: "¿Qué supone Anna al principio?", options: ["Que Julia está enferma", "Que Julia viaja", "Que se olvidó", "Que no quiere venir"], answer: "Que Julia está enferma", why: "«Sie muss krank sein»." },
+      { type: "tf", q: "Tom vio a Julia hoy.", answer: true, why: "«Ich habe sie heute gesehen»." },
+      { type: "choice", q: "¿Qué dicen de Julia?", options: ["Que trabaja mucho", "Que está de viaje", "Que se casa", "Que está en casa"], answer: "Que trabaja mucho", why: "«Sie soll viel arbeiten»." },
+      { type: "choice", q: "¿Qué dice Julia sobre ayer?", options: ["Que llegó tarde a casa", "Que estuvo enferma", "Que fue al cine", "Que no salió"], answer: "Que llegó tarde a casa", why: "«gestern erst spät nach Hause gekommen sein»." },
+    ],
+  ),
+  "relativ-plus": practice(
+    "relativos avanzados",
+    "Repasar dessen / deren, wer / was / wo y los relativos con preposición con frases nuevas.",
+    [
+      cz("Das ist die Frau, ___ Sohn Arzt ist.", "Esta es la mujer cuyo hijo es médico.", ["deren", "dessen", "der", "die"], "deren", "Femenino: «deren»."),
+      cz("Das ist der Chef, ___ Frau Lehrerin ist.", "Este es el jefe cuya esposa es docente.", ["dessen", "deren", "dem", "den"], "dessen", "Masculino: «dessen»."),
+      cz("Er hat die Prüfung bestanden, ___ mich freut.", "Aprobó el examen, lo que me alegra.", ["was", "das", "wer", "wo"], "was", "Se refiere a toda la oración: «was»."),
+      qz("¿Cuál es correcta?", ["Wer das sagt, hat unrecht", "Was das sagt, hat unrecht", "Der das sagt, hat unrecht", "Wo das sagt, hat unrecht"], "Wer das sagt, hat unrecht", "«Wer» = quien (cualquier persona)."),
+      { kind: "build", es: "La ciudad en cuyo centro vivo es chica", answer: "Die Stadt, in deren Zentrum ich wohne, ist klein", extra: ["dessen", "der", "ihr"] },
+      { kind: "write", es: "Describí a un colega cuya hija estudia medicina.", references: ["Mein Kollege, dessen Tochter Medizin studiert, ist nett", "Das ist mein Kollege, dessen Tochter Medizin studiert"] },
+      { kind: "write", es: "Decí que no hay nada de lo que estés más orgulloso que de tu familia.", references: ["Es gibt nichts, worauf ich stolzer bin als auf meine Familie"] },
+      { kind: "speak", de: "Das ist der Grund, warum ich komme", es: "Esa es la razón por la que vengo" },
+    ],
+    "Una presentación entre colegas",
+    "Dos colegas se presentan a sus familias.",
+    [
+      ["f", "Frau Berg", "Das ist mein Kollege, dessen Tochter Medizin studiert.", "Este es mi colega cuya hija estudia medicina."],
+      ["m", "Herr Klein", "Und das ist meine Chefin, deren Mann Lehrer ist.", "Y esta es mi jefa cuyo marido es docente."],
+      ["f", "Frau Berg", "Die Firma, für die wir arbeiten, ist sehr groß.", "La empresa para la que trabajamos es muy grande."],
+      ["m", "Herr Klein", "Wer dort arbeitet, hat viele Kollegen.", "Quien trabaja ahí tiene muchos colegas."],
+      ["f", "Frau Berg", "Es gibt nichts, worauf ich stolzer bin als auf diese Arbeit.", "No hay nada de lo que esté más orgullosa que de este trabajo."],
+      ["m", "Herr Klein", "Das ist der Grund, warum ich so gern hier bin.", "Esa es la razón por la que estoy tan a gusto acá."],
+    ],
+    [
+      { type: "choice", q: "¿Qué estudia la hija del colega?", options: ["Medicina", "Derecho", "Arte", "Música"], answer: "Medicina", why: "«dessen Tochter Medizin studiert»." },
+      { type: "tf", q: "El marido de la jefa es docente.", answer: true, why: "«deren Mann Lehrer ist»." },
+      { type: "choice", q: "¿Cómo es la empresa?", options: ["Muy grande", "Muy pequeña", "Nueva", "Cara"], answer: "Muy grande", why: "«ist sehr groß»." },
+      { type: "choice", q: "¿Por qué le gusta estar ahí a Herr Klein?", options: ["Por los colegas", "Por el sueldo", "Por la cercanía", "Por la comida"], answer: "Por los colegas", why: "Se menciona en el diálogo: quien trabaja ahí tiene muchos colegas." },
+    ],
+  ),
+  irrealis: practice(
+    "irrealidad",
+    "Repasar «als ob», deseos irreales y «beinahe» / «ohne dass» con frases nuevas.",
+    [
+      cz("Er tut so, als ob er alles ___.", "Hace como si supiera todo.", ["wüsste", "weiß", "wusste", "wisse"], "wüsste", "«als ob» pide Konjunktiv II: «wüsste»."),
+      cz("Wenn ich nur reich ___!", "¡Si tan solo fuera rico!", ["wäre", "bin", "war", "sei"], "wäre", "Deseo irreal: «wäre»."),
+      cz("Ich ___ beinahe den Bus verpasst.", "Casi pierdo el colectivo.", ["hätte", "wäre", "habe", "bin"], "hätte", "«verpassen» usa «haben»: «hätte verpasst»."),
+      qz("¿Cuál expresa un deseo irreal del pasado?", ["Hätte ich doch mehr gelernt!", "Ich lerne mehr", "Ich habe mehr gelernt", "Ich würde mehr lernen"], "Hätte ich doch mehr gelernt!", "«Hätte… doch» + participio."),
+      { kind: "build", es: "Se fue sin que nadie lo notara", answer: "Er ging, ohne dass es jemand merkte", extra: ["mit", "geht", "merkt"] },
+      { kind: "write", es: "Decí que parece que no hubieras dormido.", references: ["Du siehst aus, als hättest du nicht geschlafen"] },
+      { kind: "write", es: "Contá un deseo: ojalá hubieras viajado más.", references: ["Ich wünschte, ich wäre mehr gereist", "Wäre ich doch mehr gereist", "Ich wünschte, ich hätte mehr Reisen gemacht"] },
+      { kind: "speak", de: "Ich wünschte, ich hätte mehr gelernt", es: "Ojalá hubiera estudiado más" },
+    ],
+    "Después de una fiesta",
+    "Dos amigos conversan al día siguiente de una fiesta.",
+    [
+      ["m", "Max", "Du siehst aus, als hättest du nicht geschlafen.", "Parece que no hubieras dormido."],
+      ["f", "Lena", "Ich wünschte, ich wäre früher nach Hause gegangen.", "Ojalá me hubiera ido antes a casa."],
+      ["m", "Max", "Er tat so, als wäre alles in Ordnung.", "Hizo como si todo estuviera bien."],
+      ["f", "Lena", "Wenn ich nur nicht so lange geblieben wäre!", "¡Si tan solo no me hubiera quedado tanto!"],
+      ["m", "Max", "Ich wäre beinahe eingeschlafen, ohne dass es jemand merkte.", "Casi me duermo sin que nadie lo notara."],
+      ["f", "Lena", "An deiner Stelle wäre ich früher gegangen.", "En tu lugar, yo me habría ido antes."],
+    ],
+    [
+      { type: "choice", q: "¿Cómo parece Lena?", options: ["Como si no hubiera dormido", "Como si estuviera contenta", "Como si estuviera enferma", "Como si estuviera de viaje"], answer: "Como si no hubiera dormido", why: "«als hättest du nicht geschlafen»." },
+      { type: "tf", q: "Lena se fue pronto de la fiesta.", answer: false, why: "«Ich wünschte, ich wäre früher nach Hause gegangen»: se quedó hasta tarde." },
+      { type: "choice", q: "¿Qué casi le pasa a Max?", options: ["Casi se duerme", "Casi se cae", "Casi pierde el tren", "Casi se pelea"], answer: "Casi se duerme", why: "«beinahe eingeschlafen»." },
+      { type: "choice", q: "¿Qué habría hecho Lena en lugar de Max?", options: ["Irse antes", "Quedarse más", "Dormir en la fiesta", "Llamar un taxi"], answer: "Irse antes", why: "«wäre ich früher gegangen»." },
+    ],
+  ),
+  akademisch: practice(
+    "lenguaje académico",
+    "Repasar preposiciones formales, conectores y verbos de investigación con frases nuevas.",
+    [
+      cz("___ der Kosten gibt es keine Probleme.", "En cuanto a los costos, no hay problemas.", ["Hinsichtlich", "Mittels", "Zufolge", "Entgegen"], "Hinsichtlich", "«hinsichtlich» + genitivo."),
+      cz("Der Studie ___ hat die Zahl zugenommen.", "Según el estudio, el número aumentó.", ["zufolge", "anhand", "gemäß", "mittels"], "zufolge", "«zufolge» después del sustantivo."),
+      cz("Die Studie ___, dass die Methode funktioniert.", "El estudio demuestra que el método funciona.", ["belegt", "legt", "liegt", "hängt"], "belegt", "«belegen» = demostrar."),
+      qz("¿Cuál expresa «por lo tanto»?", ["demnach", "insbesondere", "sowie", "entgegen"], "demnach", "«demnach» = por lo tanto."),
+      { kind: "build", es: "Con motivo del aniversario hay una fiesta", answer: "Anlässlich des Jubiläums gibt es ein Fest", extra: ["Gemäß", "dem", "geben"] },
+      { kind: "write", es: "Presentá un resultado: el estudio demuestra que el desempleo bajó.", references: ["Die Studie belegt, dass die Arbeitslosigkeit gesunken ist"] },
+      { kind: "write", es: "Decí que se trata de un problema complejo.", references: ["Es handelt sich um ein komplexes Problem"] },
+      { kind: "speak", de: "Daraus ergibt sich, dass wir handeln müssen", es: "De ahí resulta que tenemos que actuar" },
+    ],
+    "Defensa de un trabajo",
+    "Una estudiante presenta su trabajo ante una profesora.",
+    [
+      ["f", "Studentin", "Der Studie zufolge hat die Nutzung von Fahrrädern zugenommen.", "Según el estudio, el uso de bicicletas aumentó."],
+      ["m", "Prof. Lang", "Und was belegt Ihre Untersuchung hinsichtlich der Kosten?", "¿Y qué demuestra su investigación en cuanto a los costos?"],
+      ["f", "Studentin", "Sie belegt, dass die Kosten sinken, sofern neue Wege gebaut werden.", "Demuestra que los costos bajan, siempre que se construyan nuevos caminos."],
+      ["m", "Prof. Lang", "Demnach ist die Maßnahme sinnvoll?", "¿Por lo tanto la medida tiene sentido?"],
+      ["f", "Studentin", "Ja, insbesondere in den Städten. Es handelt sich um einen klaren Trend.", "Sí, en especial en las ciudades. Se trata de una tendencia clara."],
+      ["m", "Prof. Lang", "Danke. Anlässlich der Prüfung wünsche ich Ihnen viel Erfolg.", "Gracias. Con motivo del examen le deseo mucho éxito."],
+    ],
+    [
+      { type: "choice", q: "¿Qué aumentó, según el estudio?", options: ["El uso de bicicletas", "El uso de autos", "Los precios", "Los salarios"], answer: "El uso de bicicletas", why: "«die Nutzung von Fahrrädern zugenommen»." },
+      { type: "tf", q: "Según la estudiante, los costos suben.", answer: false, why: "«die Kosten sinken»." },
+      { type: "choice", q: "¿Dónde es más claro el efecto?", options: ["En las ciudades", "En el campo", "En el extranjero", "En las escuelas"], answer: "En las ciudades", why: "«insbesondere in den Städten»." },
+      { type: "choice", q: "¿Qué le desea Frau Lang?", options: ["Mucho éxito", "Buen viaje", "Buenas vacaciones", "Un buen descanso"], answer: "Mucho éxito", why: "«viel Erfolg»." },
+    ],
+  ),
+};
