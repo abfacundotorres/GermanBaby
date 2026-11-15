@@ -591,3 +591,15 @@ ex("das Heimweh", "Im Urlaub hatte ich Heimweh.", "En las vacaciones extrañaba 
 ex("einsam", "Ich bin heute nicht einsam.", "Hoy no me siento solo.");
 ex("die Nutzung", "Die Nutzung ist wichtig.", "El uso es importante.");
 ex("zunehmen", "Die Zahl soll zunehmen.", "El número va a aumentar.");
+
+// ---------- C1, tanda 2 (lecturas)
+ex("der Arbeitsmarkt", "Der Arbeitsmarkt ist im Wandel.", "El mercado laboral está cambiando.");
+ex("die Zuwanderung", "Die Zuwanderung ist ein Thema.", "La inmigración es un tema.");
+ex("die Skepsis", "Seine Skepsis ist verständlich.", "Su escepticismo es comprensible.");
+ex("das Risiko", "Das Risiko ist klein.", "El riesgo es chico.");
+ex("die Gelassenheit", "Ihre Gelassenheit ist beeindruckend.", "Su serenidad es impresionante.");
+ex("unermüdlich", "Sie arbeitet unermüdlich.", "Trabaja sin descanso.");
+ex("der Beschluss", "Der Beschluss ist wichtig.", "La resolución es importante.");
+ex("die Umsetzung", "Die Umsetzung dauert lange.", "La puesta en práctica lleva tiempo.");
+ex("die Redewendung", "Das ist eine bekannte Redewendung.", "Es una expresión conocida.");
+ex("wörtlich", "Man darf das nicht wörtlich übersetzen.", "No hay que traducirlo literalmente.");
