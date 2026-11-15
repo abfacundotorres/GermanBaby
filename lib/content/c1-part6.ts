@@ -1,0 +1,358 @@
+// Unidades de C1, tanda 3 (parte 2): tecnología y datos, y el examen C1.
+
+import type { Unit } from "../curriculum.ts";
+
+export const UNITS_C1_PART6: Unit[] = [
+  {
+    id: "technik-c1",
+    title: "Tecnología y datos",
+    emoji: "🤖",
+    level: "C1",
+    description: "Hablar de inteligencia artificial, ética y protección de datos con «bleibt abzuwarten», «hängt davon ab, ob» y «ein Recht darauf».",
+    lessons: [
+      {
+        id: "ki",
+        title: "Inteligencia artificial",
+        goal: "Hablar de inteligencia artificial y de sus consecuencias con estructuras como «hängt davon ab, wie…» y «es bleibt abzuwarten».",
+        vocab: [
+          { de: "Künstliche Intelligenz verändert viele Branchen", es: "La inteligencia artificial cambia muchos sectores", emoji: "🤖", note: "«die Branche» = el sector, la rama de la economía." },
+          { de: "Maschinen können Aufgaben übernehmen, die früher Menschen erledigten", es: "Las máquinas pueden asumir tareas que antes hacían las personas", emoji: "⚙️", note: "«übernehmen» = asumir. «erledigen» = hacer, resolver (una tarea)." },
+          { de: "Die Entwicklung verläuft schneller, als viele erwartet haben", es: "El desarrollo avanza más rápido de lo que muchos esperaban", emoji: "🚀" },
+          { de: "Ob die Technik uns nützt, hängt davon ab, wie wir sie einsetzen", es: "Que la técnica nos sirva depende de cómo la usemos", emoji: "🎚️", note: "«nützen» + dativo = servir, ser útil. «abhängen von» = depender de. «einsetzen» = emplear (separable)." },
+          { de: "Ethische Fragen dürfen dabei nicht ausgeklammert werden", es: "No se pueden dejar de lado las cuestiones éticas", emoji: "⚖️", note: "«ausklammern» = dejar de lado. «ethisch» = ético. Pasiva con modal." },
+          { de: "Die Forschung steht erst am Anfang", es: "La investigación recién está en el comienzo", emoji: "🔬" },
+          { de: "Es bleibt abzuwarten, welche Folgen das haben wird", es: "Habrá que esperar para ver qué consecuencias tendrá", emoji: "⏳", note: "«bleiben» + «zu» + infinitivo = queda por (hacer). «die Folge» = la consecuencia." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Es bleibt abzuwarten, welche Folgen das haben wird", es: "Habrá que esperar para ver qué consecuencias tendrá" },
+          { kind: "build", es: "La investigación recién está en el comienzo", answer: "Die Forschung steht erst am Anfang", extra: ["stehen", "im", "Anfangs"] },
+          { kind: "build", es: "No se pueden dejar de lado las cuestiones éticas", answer: "Ethische Fragen dürfen dabei nicht ausgeklammert werden", extra: ["Ethik", "darf", "ausgeklammerte"] },
+          { kind: "write", es: "La inteligencia artificial cambia muchos sectores", references: ["Künstliche Intelligenz verändert viele Branchen"] },
+          { kind: "write", es: "El desarrollo avanza más rápido de lo que muchos esperaban", references: ["Die Entwicklung verläuft schneller, als viele erwartet haben"] },
+          { kind: "cloze", sentence: "Ob die Technik uns nützt, ___ davon ab, wie wir sie einsetzen.", es: "Que la técnica nos sirva depende de cómo la usemos.", options: ["hängt", "hängen", "hing", "hängt sich"], answer: "hängt", explanation: "«abhängen» separable: «hängt… ab».", category: "gramática" },
+          { kind: "dictation", de: "Maschinen können Aufgaben übernehmen, die früher Menschen erledigten", es: "Las máquinas pueden asumir tareas que antes hacían las personas" },
+        ],
+        dialogue: {
+          title: "Un debate sobre tecnología",
+          setting: "Una investigadora y un periodista hablan de la inteligencia artificial",
+          lines: [
+            { who: "m", name: "Herr Weber", de: "Künstliche Intelligenz verändert viele Branchen.", es: "La inteligencia artificial cambia muchos sectores." },
+            { who: "f", name: "Frau Lang", de: "Ja. Maschinen können Aufgaben übernehmen, die früher Menschen erledigten.", es: "Sí. Las máquinas pueden asumir tareas que antes hacían las personas." },
+            { who: "m", name: "Herr Weber", de: "Die Entwicklung verläuft schneller, als viele erwartet haben.", es: "El desarrollo avanza más rápido de lo que muchos esperaban." },
+            { who: "f", name: "Frau Lang", de: "Ob die Technik uns nützt, hängt davon ab, wie wir sie einsetzen.", es: "Que la técnica nos sirva depende de cómo la usemos." },
+            { who: "m", name: "Herr Weber", de: "Ethische Fragen dürfen dabei nicht ausgeklammert werden.", es: "No se pueden dejar de lado las cuestiones éticas." },
+            { who: "f", name: "Frau Lang", de: "Die Forschung steht erst am Anfang. Es bleibt abzuwarten, welche Folgen das haben wird.", es: "La investigación recién está en el comienzo. Habrá que esperar para ver qué consecuencias tendrá." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué hace la inteligencia artificial?", options: ["Cambia muchos sectores", "Reemplaza el clima", "Elimina la prensa", "Cierra bancos"], answer: "Cambia muchos sectores", why: "«verändert viele Branchen»." },
+            { type: "tf", q: "El desarrollo es más lento de lo esperado.", answer: false, why: "«schneller, als viele erwartet haben»." },
+            { type: "choice", q: "¿De qué depende que la técnica sirva?", options: ["De cómo se use", "Del precio", "Del país", "Del tamaño"], answer: "De cómo se use", why: "«hängt davon ab, wie wir sie einsetzen»." },
+            { type: "choice", q: "¿Qué hay que esperar?", options: ["Las consecuencias", "El precio", "El clima", "El examen"], answer: "Las consecuencias", why: "«welche Folgen das haben wird»." },
+          ],
+        },
+      },
+      {
+        id: "datenschutz",
+        title: "Datos y privacidad",
+        goal: "Hablar de datos personales, derechos y seguridad con «ein Recht darauf, zu…», «mit sich bringen» y «dürfte».",
+        vocab: [
+          { de: "Persönliche Daten müssen besser geschützt werden", es: "Los datos personales deben protegerse mejor", emoji: "🔒", note: "Pasiva con modal. «schützen» = proteger." },
+          { de: "Die Nutzer haben ein Recht darauf, zu erfahren, was gespeichert wird", es: "Los usuarios tienen derecho a saber qué se guarda", emoji: "📋", note: "«ein Recht darauf, zu…» + infinitivo. «speichern» = guardar, almacenar." },
+          { de: "Die Verschlüsselung gilt als sicher", es: "El cifrado se considera seguro", emoji: "🔐", note: "«die Verschlüsselung» = el cifrado." },
+          { de: "Der Fortschritt bringt Chancen, aber auch Risiken mit sich", es: "El progreso trae oportunidades, pero también riesgos", emoji: "⚖️", note: "«mit sich bringen» = traer consigo, implicar." },
+          { de: "Wer nichts zu verbergen hat, muss trotzdem nicht alles preisgeben", es: "Quien no tiene nada que ocultar igual no tiene que revelar todo", emoji: "🙈", note: "«verbergen» = ocultar. «preisgeben» = revelar (separable)." },
+          { de: "Das Gesetz soll die Privatsphäre stärken", es: "La ley busca reforzar la privacidad", emoji: "🛡️", note: "«die Privatsphäre» = la privacidad. «stärken» = fortalecer." },
+          { de: "Die Firma hat die Daten unerlaubt weitergegeben", es: "La empresa transmitió los datos sin autorización", emoji: "🚨", note: "«unerlaubt» = sin permiso. «weitergeben» = transmitir (separable)." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Die Nutzer haben ein Recht darauf, zu erfahren, was gespeichert wird", es: "Los usuarios tienen derecho a saber qué se guarda" },
+          { kind: "build", es: "Los datos personales deben protegerse mejor", answer: "Persönliche Daten müssen besser geschützt werden", extra: ["muss", "gut", "Datum"] },
+          { kind: "build", es: "La ley busca reforzar la privacidad", answer: "Das Gesetz soll die Privatsphäre stärken", extra: ["Die", "sollen", "stärker"] },
+          { kind: "write", es: "El progreso trae oportunidades, pero también riesgos", references: ["Der Fortschritt bringt Chancen, aber auch Risiken mit sich"] },
+          { kind: "write", es: "El cifrado se considera seguro", references: ["Die Verschlüsselung gilt als sicher"] },
+          { kind: "cloze", sentence: "Die Firma hat die Daten unerlaubt ___.", es: "La empresa transmitió los datos sin autorización.", options: ["weitergegeben", "gegeben", "weitergeben", "weiter"], answer: "weitergegeben", explanation: "Participio de «weitergeben».", category: "gramática" },
+          { kind: "dictation", de: "Wer nichts zu verbergen hat, muss trotzdem nicht alles preisgeben", es: "Quien no tiene nada que ocultar igual no tiene que revelar todo" },
+        ],
+        dialogue: {
+          title: "Una consulta sobre privacidad",
+          setting: "Una jurista responde las preguntas de un cliente sobre sus datos",
+          lines: [
+            { who: "m", name: "Herr Klein", de: "Persönliche Daten müssen besser geschützt werden.", es: "Los datos personales deben protegerse mejor." },
+            { who: "f", name: "Frau Lang", de: "Richtig. Die Nutzer haben ein Recht darauf, zu erfahren, was gespeichert wird.", es: "Correcto. Los usuarios tienen derecho a saber qué se guarda." },
+            { who: "m", name: "Herr Klein", de: "Die Firma hat meine Daten unerlaubt weitergegeben.", es: "La empresa transmitió mis datos sin autorización." },
+            { who: "f", name: "Frau Lang", de: "Das Gesetz soll die Privatsphäre stärken. Sie können dagegen vorgehen.", es: "La ley busca reforzar la privacidad. Usted puede actuar contra eso." },
+            { who: "m", name: "Herr Klein", de: "Die Verschlüsselung gilt doch als sicher?", es: "¿Pero el cifrado se considera seguro, no?" },
+            { who: "f", name: "Frau Lang", de: "Ja. Der Fortschritt bringt Chancen, aber auch Risiken mit sich.", es: "Sí. El progreso trae oportunidades, pero también riesgos." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué hizo la empresa con los datos?", options: ["Los transmitió sin autorización", "Los borró", "Los cifró", "Los vendió legalmente"], answer: "Los transmitió sin autorización", why: "«unerlaubt weitergegeben»." },
+            { type: "tf", q: "Los usuarios no tienen derecho a saber qué se guarda.", answer: false, why: "«ein Recht darauf, zu erfahren»." },
+            { type: "choice", q: "¿Qué busca la ley?", options: ["Reforzar la privacidad", "Cerrar empresas", "Limitar internet", "Subir impuestos"], answer: "Reforzar la privacidad", why: "«die Privatsphäre stärken»." },
+            { type: "tf", q: "El cifrado se considera inseguro.", answer: false, why: "«gilt als sicher»." },
+          ],
+        },
+      },
+      {
+        id: "technik-c1-regeln",
+        title: "Gramática: estructuras de la tecnología",
+        goal: "Usar «bleiben / sein + zu + infinitivo», «ein Recht darauf, zu…» y «hängt davon ab, ob / wie».",
+        vocab: [],
+        grammar: [
+          {
+            title: "sein / bleiben + zu + infinitivo",
+            body: [
+              "«sein + zu + infinitivo» expresa posibilidad o necesidad («Das ist zu beachten» = hay que tenerlo en cuenta). «bleiben + zu + infinitivo» significa «queda por…»: «Es bleibt abzuwarten» (habrá que esperar). Con verbos separables, «zu» va en medio: «abzuwarten», «einzusetzen».",
+            ],
+            examples: [
+              { de: "Es bleibt abzuwarten, welche Folgen das hat.", es: "Habrá que esperar a ver qué consecuencias tiene." },
+              { de: "Das ist zu beachten.", es: "Hay que tenerlo en cuenta." },
+            ],
+          },
+          {
+            title: "Sustantivo + preposición + «zu»",
+            body: [
+              "Algunos sustantivos llevan una preposición y una oración de infinitivo: «ein Recht darauf, zu erfahren…», «die Möglichkeit, zu wählen», «die Pflicht, zu informieren». «darauf» anticipa el infinitivo con «zu».",
+            ],
+            examples: [
+              { de: "Sie haben ein Recht darauf, zu erfahren, was passiert.", es: "Tienen derecho a saber qué pasa." },
+              { de: "Es gibt die Möglichkeit, die Daten zu löschen.", es: "Existe la posibilidad de borrar los datos." },
+            ],
+          },
+          {
+            title: "«hängt davon ab, ob / wie» y la pasiva con modal",
+            body: [
+              "«abhängen von» se anticipa con «davon» antes de «ob», «wie» o «dass», y el verbo conjugado va al final. Las pasivas con modal («müssen geschützt werden», «dürfen nicht ausgeklammert werden») son frecuentes en el lenguaje de la tecnología.",
+            ],
+            examples: [
+              { de: "Ob die Technik uns nützt, hängt davon ab, wie wir sie einsetzen.", es: "Que la técnica nos sirva depende de cómo la usemos." },
+              { de: "Daten müssen besser geschützt werden.", es: "Los datos deben protegerse mejor." },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Es bleibt ___, welche Folgen das hat.", options: ["abzuwarten", "abwarten", "abgewartet", "zu abwarten"], answer: "abzuwarten", explanation: "Separable: «zu» en medio.", category: "gramática" },
+          { kind: "quiz", question: "Das ist ___ beachten.", options: ["zu", "zum", "am", "um"], answer: "zu", explanation: "«sein + zu + infinitivo».", category: "gramática" },
+          { kind: "quiz", question: "Sie haben ein Recht ___, zu erfahren, was passiert.", options: ["darauf", "davon", "dafür", "dazu"], answer: "darauf", explanation: "«ein Recht auf» → «darauf».", category: "gramática" },
+          { kind: "quiz", question: "Es hängt ___ ab, wie wir es einsetzen.", options: ["davon", "darauf", "dazu", "daran"], answer: "davon", explanation: "«abhängen von» → «davon».", category: "gramática" },
+          { kind: "quiz", question: "Daten müssen besser ___ werden.", options: ["geschützt", "schützen", "schützt", "schütze"], answer: "geschützt", explanation: "Pasiva con modal: participio + «werden».", category: "gramática" },
+          { kind: "quiz", question: "¿Cuál significa «queda por esperar»?", options: ["Es bleibt abzuwarten", "Es wartet ab", "Es ist abgewartet", "Es wird gewartet"], answer: "Es bleibt abzuwarten", explanation: "«bleiben + zu + infinitivo».", category: "gramática" },
+          { kind: "build", es: "Existe la posibilidad de borrar los datos", answer: "Es gibt die Möglichkeit, die Daten zu löschen", extra: ["Möglichkeiten", "löscht", "ist"] },
+          { kind: "write", es: "Decí que hay que tener en cuenta el riesgo.", references: ["Das Risiko ist zu beachten", "Das Risiko ist zu berücksichtigen"] },
+          { kind: "write", es: "Decí que depende de cómo se use la técnica.", references: ["Das hängt davon ab, wie man die Technik einsetzt", "Es hängt davon ab, wie man die Technik einsetzt"] },
+          { kind: "speak", de: "Es gibt die Möglichkeit, die Daten zu löschen", es: "Existe la posibilidad de borrar los datos" },
+          { kind: "dictation", de: "Ethische Fragen dürfen dabei nicht ausgeklammert werden", es: "No se pueden dejar de lado las cuestiones éticas" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Tecnología y ética",
+      scenario:
+        "Sos la Prof. Lang, una experta alemana en tecnología de nivel C1. Tratás al usuario de usted (Sie). Charlan sobre inteligencia artificial, protección de datos y ética. Usás estructuras como «es bleibt abzuwarten», «hängt davon ab, ob / wie», «ein Recht darauf, zu…», pasivas con modal y «mit sich bringen». Le pedís su opinión con argumentos y le corregís las construcciones.",
+      opener: "Guten Tag! Künstliche Intelligenz verändert viele Branchen. Sehen Sie darin eher Chancen oder Risiken?",
+      openerEs: "¡Buenas tardes! La inteligencia artificial cambia muchos sectores. ¿Ve usted más oportunidades o más riesgos?",
+    },
+  },
+  {
+    id: "pruefung-c1",
+    title: "Preparación para el examen C1",
+    emoji: "🎓",
+    level: "C1",
+    description: "Presentar un tema, escribir un ensayo argumentativo y una carta formal, y repasar la gramática de C1.",
+    lessons: [
+      {
+        id: "vortrag-c1",
+        title: "Presentar un tema",
+        goal: "Estructurar una presentación oral de nivel C1: introducción, desarrollo, conclusión.",
+        vocab: [
+          { de: "Ich möchte Ihnen heute einen Überblick über das Thema geben", es: "Hoy quiero darles un panorama del tema", emoji: "🎤", note: "«der Überblick» = el panorama, la visión general." },
+          { de: "Zunächst gehe ich auf die Ausgangslage ein", es: "Primero me ocupo de la situación de partida", emoji: "1️⃣", note: "«eingehen auf» = ocuparse de (separable). «die Ausgangslage» = la situación de partida." },
+          { de: "Anschließend beleuchte ich die Ursachen", es: "Luego analizo las causas", emoji: "🔦", note: "«beleuchten» = analizar, poner luz sobre. «anschließend» = a continuación." },
+          { de: "Besonders hervorzuheben ist der Aspekt der Nachhaltigkeit", es: "Especialmente destacable es el aspecto de la sostenibilidad", emoji: "⭐", note: "«hervorheben» separable; «hervorzuheben ist» = hay que destacar. «der Aspekt» = el aspecto." },
+          { de: "Daraus leite ich folgende Empfehlung ab", es: "De ahí derivo la siguiente recomendación", emoji: "📝", note: "«ableiten» = derivar (separable). «die Empfehlung» = la recomendación." },
+          { de: "Zum Abschluss möchte ich ein Fazit ziehen", es: "Para terminar quisiera sacar una conclusión", emoji: "🏁", note: "«ein Fazit ziehen» = sacar una conclusión." },
+          { de: "Für Ihre Fragen stehe ich Ihnen gern zur Verfügung", es: "Para sus preguntas estoy a su disposición", emoji: "🙋", note: "Locución que ya conocés: «zur Verfügung stehen»." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Ich möchte Ihnen heute einen Überblick über das Thema geben", es: "Hoy quiero darles un panorama del tema" },
+          { kind: "build", es: "Luego analizo las causas", answer: "Anschließend beleuchte ich die Ursachen", extra: ["beleuchtet", "Ursache", "ihn"] },
+          { kind: "build", es: "Para terminar quisiera sacar una conclusión", answer: "Zum Abschluss möchte ich ein Fazit ziehen", extra: ["Zur", "ziehe", "Fazite"] },
+          { kind: "write", es: "Primero me ocupo de la situación de partida", references: ["Zunächst gehe ich auf die Ausgangslage ein"] },
+          { kind: "write", es: "De ahí derivo la siguiente recomendación", references: ["Daraus leite ich folgende Empfehlung ab"] },
+          { kind: "cloze", sentence: "Zunächst gehe ich auf die Ausgangslage ___.", es: "Primero me ocupo de la situación de partida.", options: ["ein", "an", "zu", "ab"], answer: "ein", explanation: "«eingehen auf» es separable: «gehe… ein».", category: "gramática" },
+          { kind: "dictation", de: "Besonders hervorzuheben ist der Aspekt der Nachhaltigkeit", es: "Especialmente destacable es el aspecto de la sostenibilidad" },
+        ],
+        dialogue: {
+          title: "Una presentación",
+          setting: "Un orador abre y cierra una presentación ante un grupo",
+          lines: [
+            { who: "m", name: "Herr Klein", de: "Ich möchte Ihnen heute einen Überblick über das Thema geben.", es: "Hoy quiero darles un panorama del tema." },
+            { who: "m", name: "Herr Klein", de: "Zunächst gehe ich auf die Ausgangslage ein. Anschließend beleuchte ich die Ursachen.", es: "Primero me ocupo de la situación de partida. Luego analizo las causas." },
+            { who: "m", name: "Herr Klein", de: "Besonders hervorzuheben ist der Aspekt der Nachhaltigkeit.", es: "Especialmente destacable es el aspecto de la sostenibilidad." },
+            { who: "m", name: "Herr Klein", de: "Daraus leite ich folgende Empfehlung ab: mehr Zeit, mehr Geld.", es: "De ahí derivo la siguiente recomendación: más tiempo, más dinero." },
+            { who: "m", name: "Herr Klein", de: "Zum Abschluss möchte ich ein Fazit ziehen.", es: "Para terminar quisiera sacar una conclusión." },
+            { who: "f", name: "Frau Berg", de: "Vielen Dank. Für Rückfragen stehe ich Ihnen gern zur Verfügung.", es: "Muchas gracias. Para consultas estoy a su disposición." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué da el orador al comenzar?", options: ["Un panorama del tema", "Un chiste", "Un premio", "Un informe"], answer: "Un panorama del tema", why: "«einen Überblick über das Thema»." },
+            { type: "choice", q: "¿Qué aspecto destaca?", options: ["La sostenibilidad", "El precio", "El clima", "La técnica"], answer: "La sostenibilidad", why: "«der Aspekt der Nachhaltigkeit»." },
+            { type: "tf", q: "El orador no hace ninguna recomendación.", answer: false, why: "«Daraus leite ich folgende Empfehlung ab»." },
+            { type: "choice", q: "¿Qué hace al final?", options: ["Saca una conclusión", "Se va", "Hace una pausa", "Cuenta un chiste"], answer: "Saca una conclusión", why: "«ein Fazit ziehen»." },
+          ],
+        },
+      },
+      {
+        id: "eroerterung",
+        title: "El ensayo argumentativo",
+        goal: "Escribir un ensayo (Erörterung) con introducción, argumentos, objeción y conclusión de nivel C1.",
+        vocab: [
+          { de: "In der heutigen Zeit gewinnt das Thema zunehmend an Bedeutung", es: "En la actualidad el tema gana cada vez más importancia", emoji: "📖", note: "«an Bedeutung gewinnen» = ganar importancia. «zunehmend» = cada vez más." },
+          { de: "Die Frage, ob Homeoffice sinnvoll ist, wird kontrovers diskutiert", es: "La cuestión de si el home office tiene sentido se discute de forma polémica", emoji: "💭", note: "«ob» después de «die Frage»: pregunta indirecta con el verbo al final." },
+          { de: "Für diese Position sprechen mehrere Argumente", es: "A favor de esta posición hay varios argumentos", emoji: "➕", note: "«für etwas sprechen» = hablar a favor de algo. El sujeto va después." },
+          { de: "Allerdings darf nicht übersehen werden, dass es auch Nachteile gibt", es: "Sin embargo, no hay que pasar por alto que también hay desventajas", emoji: "⚠️", note: "«übersehen» = pasar por alto. Pasiva con modal." },
+          { de: "Abwägend lässt sich festhalten, dass die Vorteile überwiegen", es: "Ponderando, se puede afirmar que las ventajas pesan más", emoji: "⚖️", note: "«abwägend» = ponderando. Participio como adverbio." },
+          { de: "Letztlich hängt die Antwort von den Prioritäten ab", es: "En última instancia la respuesta depende de las prioridades", emoji: "🎚️", note: "«die Priorität» = la prioridad." },
+          { de: "Meines Erachtens überwiegen die Vorteile", es: "A mi juicio, las ventajas pesan más", emoji: "✅", note: "«meines Erachtens» = a mi juicio (genitivo). Muy formal." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Meines Erachtens überwiegen die Vorteile", es: "A mi juicio, las ventajas pesan más" },
+          { kind: "build", es: "A favor de esta posición hay varios argumentos", answer: "Für diese Position sprechen mehrere Argumente", extra: ["spricht", "Positionen", "mehrerer"] },
+          { kind: "build", es: "En última instancia la respuesta depende de las prioridades", answer: "Letztlich hängt die Antwort von den Prioritäten ab", extra: ["hängen", "auf", "Priorität"] },
+          { kind: "write", es: "En la actualidad el tema gana cada vez más importancia", references: ["In der heutigen Zeit gewinnt das Thema zunehmend an Bedeutung"] },
+          { kind: "write", es: "Sin embargo, no hay que pasar por alto que también hay desventajas", references: ["Allerdings darf nicht übersehen werden, dass es auch Nachteile gibt"] },
+          { kind: "cloze", sentence: "Allerdings darf nicht ___ werden, dass es auch Nachteile gibt.", es: "Sin embargo, no hay que pasar por alto que también hay desventajas.", options: ["übersehen", "sehen", "übersieht", "gesehen"], answer: "übersehen", explanation: "Pasiva con modal: «übersehen werden».", category: "gramática" },
+          { kind: "dictation", de: "Abwägend lässt sich festhalten, dass die Vorteile überwiegen", es: "Ponderando, se puede afirmar que las ventajas pesan más" },
+        ],
+        dialogue: {
+          title: "Revisar un ensayo",
+          setting: "Una profesora comenta con un estudiante la estructura de su ensayo",
+          lines: [
+            { who: "f", name: "Frau Lang", de: "Ihre Einleitung gefällt mir: In der heutigen Zeit gewinnt das Thema zunehmend an Bedeutung.", es: "Su introducción me gusta: en la actualidad el tema gana cada vez más importancia." },
+            { who: "m", name: "Student", de: "Danke. Die Frage, ob Homeoffice sinnvoll ist, wird kontrovers diskutiert.", es: "Gracias. La cuestión de si el home office tiene sentido se discute de forma polémica." },
+            { who: "f", name: "Frau Lang", de: "Für diese Position sprechen mehrere Argumente. Allerdings darf nicht übersehen werden, dass es Nachteile gibt.", es: "A favor de esta posición hay varios argumentos. Sin embargo, no hay que pasar por alto que hay desventajas." },
+            { who: "m", name: "Student", de: "Abwägend lässt sich festhalten, dass die Vorteile überwiegen.", es: "Ponderando, se puede afirmar que las ventajas pesan más." },
+            { who: "f", name: "Frau Lang", de: "Letztlich hängt die Antwort von den Prioritäten ab.", es: "En última instancia la respuesta depende de las prioridades." },
+            { who: "m", name: "Student", de: "Meines Erachtens überwiegen die Vorteile. Das ist mein Fazit.", es: "A mi juicio, las ventajas pesan más. Esa es mi conclusión." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué le gusta a la profesora?", options: ["La introducción", "El título", "La letra", "La bibliografía"], answer: "La introducción", why: "«Ihre Einleitung gefällt mir»." },
+            { type: "tf", q: "El estudiante ignora las desventajas.", answer: false, why: "Reconoce que «darf nicht übersehen werden, dass es Nachteile gibt»." },
+            { type: "choice", q: "¿De qué depende la respuesta?", options: ["De las prioridades", "Del tiempo", "Del dinero", "Del país"], answer: "De las prioridades", why: "«hängt die Antwort von den Prioritäten ab»." },
+            { type: "choice", q: "¿Qué piensa el estudiante al final?", options: ["Que las ventajas pesan más", "Que las desventajas pesan más", "Que es igual", "Que no sabe"], answer: "Que las ventajas pesan más", why: "«überwiegen die Vorteile»." },
+          ],
+        },
+      },
+      {
+        id: "korrespondenz-c1",
+        title: "Cartas formales",
+        goal: "Escribir correspondencia formal de nivel C1: postulaciones, consultas y disculpas.",
+        vocab: [
+          { de: "Ich wende mich an Sie, da ich Ihre Anzeige gelesen habe", es: "Me dirijo a usted porque leí su aviso", emoji: "✉️", note: "«sich wenden an» = dirigirse a. «die Anzeige» = el aviso, el anuncio." },
+          { de: "Hiermit möchte ich meine Bewerbung einreichen", es: "Por la presente quisiera presentar mi postulación", emoji: "📩", note: "«einreichen» = presentar (un documento), separable." },
+          { de: "Über eine Einladung zu einem persönlichen Gespräch würde ich mich sehr freuen", es: "Me alegraría mucho una invitación a una entrevista personal", emoji: "🤝", note: "«sich freuen über» + acusativo, con Konjunktiv II de cortesía." },
+          { de: "Für die Bearbeitung meiner Anfrage danke ich Ihnen im Voraus", es: "Le agradezco de antemano por el trámite de mi consulta", emoji: "🙏", note: "«die Bearbeitung» = el trámite. «im Voraus» = de antemano." },
+          { de: "Sollten Sie weitere Unterlagen benötigen, lasse ich sie Ihnen gern zukommen", es: "Si necesitara más documentos, con gusto se los haré llegar", emoji: "📎", note: "«Sollten Sie…» sin «wenn»: condición cortés, el verbo va primero. «zukommen lassen» = hacer llegar." },
+          { de: "Ich bitte um Verständnis für die Verzögerung", es: "Pido comprensión por la demora", emoji: "⏳", note: "«bitten um» + acusativo. «die Verzögerung» = la demora." },
+          { de: "Mit vorzüglicher Hochachtung", es: "Con la mayor consideración", emoji: "🖋️", note: "Un cierre muy formal, para cartas oficiales." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Ich bitte um Verständnis für die Verzögerung", es: "Pido comprensión por la demora" },
+          { kind: "build", es: "Por la presente quisiera presentar mi postulación", answer: "Hiermit möchte ich meine Bewerbung einreichen", extra: ["Hier", "mein", "einreicht"] },
+          { kind: "build", es: "Me dirijo a usted porque leí su aviso", answer: "Ich wende mich an Sie, da ich Ihre Anzeige gelesen habe", extra: ["wendet", "Ihnen", "Anzeigen"] },
+          { kind: "write", es: "Le agradezco de antemano por el trámite de mi consulta", references: ["Für die Bearbeitung meiner Anfrage danke ich Ihnen im Voraus"] },
+          { kind: "write", es: "Si necesitara más documentos, con gusto se los haré llegar", references: ["Sollten Sie weitere Unterlagen benötigen, lasse ich sie Ihnen gern zukommen"] },
+          { kind: "cloze", sentence: "___ Sie weitere Unterlagen benötigen, lasse ich sie Ihnen gern zukommen.", es: "Si necesitara más documentos, con gusto se los haré llegar.", options: ["Sollten", "Sollen", "Wenn", "Falls"], answer: "Sollten", explanation: "«Sollten Sie…» = si llegara a… (sin «wenn»).", category: "gramática" },
+          { kind: "dictation", de: "Über eine Einladung zu einem persönlichen Gespräch würde ich mich sehr freuen", es: "Me alegraría mucho una invitación a una entrevista personal" },
+        ],
+        dialogue: {
+          title: "Una postulación",
+          setting: "Una candidata y una gerente de recursos humanos intercambian mensajes formales",
+          lines: [
+            { who: "m", name: "Herr Weber", de: "Sehr geehrte Frau Berg, ich wende mich an Sie, da ich Ihre Anzeige gelesen habe.", es: "Estimada Sra. Berg, me dirijo a usted porque leí su aviso." },
+            { who: "m", name: "Herr Weber", de: "Hiermit möchte ich meine Bewerbung einreichen.", es: "Por la presente quisiera presentar mi postulación." },
+            { who: "m", name: "Herr Weber", de: "Sollten Sie weitere Unterlagen benötigen, lasse ich sie Ihnen gern zukommen.", es: "Si necesitara más documentos, con gusto se los haré llegar." },
+            { who: "m", name: "Herr Weber", de: "Über eine Einladung zu einem persönlichen Gespräch würde ich mich sehr freuen.", es: "Me alegraría mucho una invitación a una entrevista personal." },
+            { who: "f", name: "Frau Berg", de: "Sehr geehrter Herr Weber, ich bitte um Verständnis für die Verzögerung.", es: "Estimado Sr. Weber, pido comprensión por la demora." },
+            { who: "f", name: "Frau Berg", de: "Für Ihre Geduld danke ich Ihnen. Mit vorzüglicher Hochachtung, Berg.", es: "Le agradezco su paciencia. Con la mayor consideración, Berg." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Por qué escribe Herr Weber?", options: ["Leyó un aviso", "Quiere vender algo", "Perdió su pasaporte", "Busca una casa"], answer: "Leyó un aviso", why: "«da ich Ihre Anzeige gelesen habe»." },
+            { type: "tf", q: "Herr Weber ofrece enviar más documentos.", answer: true, why: "«lasse ich sie Ihnen gern zukommen»." },
+            { type: "choice", q: "¿Qué desea Herr Weber?", options: ["Una entrevista personal", "Un aumento", "Un día libre", "Un reembolso"], answer: "Una entrevista personal", why: "«eine Einladung zu einem persönlichen Gespräch»." },
+            { type: "choice", q: "¿Por qué se disculpa Frau Berg?", options: ["Por la demora", "Por un error", "Por una pelea", "Por el precio"], answer: "Por la demora", why: "«Verständnis für die Verzögerung»." },
+          ],
+        },
+      },
+      {
+        id: "wiederholung-c1",
+        title: "Repaso de C1",
+        goal: "Repasar las estructuras principales de C1: suposición, relativos, irrealidad, concesión, estilo académico y locuciones.",
+        vocab: [],
+        grammar: [
+          {
+            title: "Las estructuras de C1 en una tabla",
+            body: [
+              "Una vista rápida de lo que viste en C1, con su forma y un ejemplo. Repasalo y probá armar tu propio ejemplo con cada fila.",
+            ],
+            table: {
+              head: ["Estructura", "Ejemplo"],
+              rows: [
+                ["Modales para suponer", "Er muss krank sein. / Er soll reich sein. / Er will es nicht gewusst haben."],
+                ["Relativos avanzados", "der Mann, dessen Auto… / Er kam zu spät, was mich ärgerte."],
+                ["Irrealidad", "Er tut so, als ob er krank wäre. / Hätte ich doch früher angefangen!"],
+                ["Concesión", "Obgleich es regnete… / Gleichwohl wollen wir… / Selbst wenn er käme…"],
+                ["Estilo académico", "Der Studie zufolge… / Hinsichtlich der Kosten… / Demnach…"],
+                ["Locuciones verbales", "in Betracht ziehen / zur Sprache bringen / in Kraft treten"],
+                ["Debate y análisis", "Dem muss ich widersprechen. / Der Autor vertritt die These, dass…"],
+              ],
+            },
+          },
+          {
+            title: "Dónde va el verbo",
+            body: [
+              "Con las conjunciones subordinantes (obgleich, wenngleich, auch wenn, selbst wenn, als ob, ohne dass, dass, ob), el verbo conjugado va al final. Con los adverbios conectores (gleichwohl, demnach, mithin, nichtsdestotrotz) viene enseguida. Con «als» solo, también viene enseguida: «als wäre er krank».",
+            ],
+            table: {
+              head: ["Posición", "Palabras"],
+              rows: [
+                ["Al final", "obgleich, wenngleich, auch wenn, selbst wenn, als ob, ohne dass, dass, ob"],
+                ["Enseguida", "gleichwohl, nichtsdestotrotz, demnach, mithin, insbesondere, als (solo)"],
+                ["Sin cambio", "zwar… doch, beziehungsweise, sowie"],
+              ],
+            },
+          },
+          {
+            title: "Registro y vocabulario",
+            body: [
+              "En C1 elegís la palabra según el registro: neutro, formal, coloquial. Las preposiciones formales llevan genitivo o dativo, los sufijos te ayudan a deducir significado y género, y las expresiones idiomáticas se aprenden enteras.",
+            ],
+            examples: [
+              { de: "Gemäß dem Gesetz ist das verboten.", es: "Conforme a la ley, esto está prohibido." },
+              { de: "Das ist mir Wurst.", es: "Me da lo mismo. (coloquial)" },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Er ___ krank sein. (seguro que)", options: ["muss", "soll", "will", "kann nicht"], answer: "muss", explanation: "«muss» = casi seguro.", category: "gramática" },
+          { kind: "quiz", question: "Er tut so, als ob er krank ___.", options: ["wäre", "ist", "sei", "war"], answer: "wäre", explanation: "«als ob» + Konjunktiv II.", category: "gramática" },
+          { kind: "quiz", question: "Obgleich es regnete, ___ wir spazieren.", options: ["gingen", "gehen", "gegangen", "ging"], answer: "gingen", explanation: "Subordinada: el verbo de la principal viene después de la coma.", category: "gramática" },
+          { kind: "quiz", question: "Das ist der Mann, ___ Auto gestohlen wurde.", options: ["dessen", "deren", "den", "dem"], answer: "dessen", explanation: "Masculino: «dessen».", category: "gramática" },
+          { kind: "quiz", question: "Der Studie ___ sind die Preise gestiegen.", options: ["zufolge", "anhand", "mittels", "gemäß"], answer: "zufolge", explanation: "«zufolge» después del sustantivo.", category: "gramática" },
+          { kind: "quiz", question: "Wir ziehen diese Möglichkeit ___ Betracht.", options: ["in", "an", "auf", "zu"], answer: "in", explanation: "«in Betracht ziehen».", category: "gramática" },
+          { kind: "quiz", question: "Dem muss ich entschieden ___.", options: ["widersprechen", "zustimmen", "zusagen", "versprechen"], answer: "widersprechen", explanation: "«widersprechen» + dativo.", category: "vocabulario" },
+          { kind: "build", es: "Aunque viniera, no hablaría con él", answer: "Selbst wenn er käme, würde ich nicht mit ihm reden", extra: ["kommt", "werde", "wäre"] },
+          { kind: "write", es: "Escribí una frase para suponer: seguro que tu colega ya llegó.", references: ["Mein Kollege muss schon angekommen sein", "Meine Kollegin muss schon angekommen sein"] },
+          { kind: "write", es: "Decí que según un estudio los precios subieron.", references: ["Einer Studie zufolge sind die Preise gestiegen", "Der Studie zufolge sind die Preise gestiegen"] },
+          { kind: "speak", de: "Gleichwohl wollen wir den Plan umsetzen", es: "Aun así queremos llevar a cabo el plan" },
+          { kind: "dictation", de: "Insgesamt lässt sich festhalten, dass der Text lesenswert ist", es: "En conjunto se puede afirmar que el texto vale la pena" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Simulacro de examen oral",
+      scenario:
+        "Sos la Prof. Lang, una examinadora alemana de nivel C1. Tratás al usuario de usted (Sie). Simulás la parte oral de un examen C1: le pedís que presente brevemente un tema (por ejemplo, el home office o la inteligencia artificial) con estructura de presentación, que defienda una posición con argumentos y que responda a una objeción con fórmulas de debate. Le corregís el registro, las conexiones y el orden del verbo, y al final le das una breve valoración.",
+      opener: "Guten Tag! Bitte stellen Sie mir kurz ein Thema Ihrer Wahl vor, und begründen Sie Ihre Meinung dazu.",
+      openerEs: "¡Buenas tardes! Por favor, preséntenme brevemente un tema de su elección y fundamenten su opinión.",
+    },
+  },
+];

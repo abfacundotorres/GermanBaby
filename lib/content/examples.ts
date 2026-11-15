@@ -603,3 +603,15 @@ ex("der Beschluss", "Der Beschluss ist wichtig.", "La resolución es importante.
 ex("die Umsetzung", "Die Umsetzung dauert lange.", "La puesta en práctica lleva tiempo.");
 ex("die Redewendung", "Das ist eine bekannte Redewendung.", "Es una expresión conocida.");
 ex("wörtlich", "Man darf das nicht wörtlich übersetzen.", "No hay que traducirlo literalmente.");
+
+// ---------- C1, tanda 3 (lecturas)
+ex("der Einwand", "Sein Einwand ist berechtigt.", "Su objeción es justificada.");
+ex("die Kompromissbereitschaft", "Die Kompromissbereitschaft ist wichtig.", "La disposición a ceder es importante.");
+ex("die Aussage", "Die Aussage ist klar.", "El mensaje es claro.");
+ex("aufschlussreich", "Der Text ist sehr aufschlussreich.", "El texto es muy esclarecedor.");
+ex("die Glaubwürdigkeit", "Die Glaubwürdigkeit der Quelle ist wichtig.", "La credibilidad de la fuente es importante.");
+ex("die Reichweite", "Die Reichweite ist groß.", "El alcance es grande.");
+ex("der Durchbruch", "Das war ein Durchbruch.", "Fue un avance decisivo.");
+ex("der Datenschutz", "Der Datenschutz ist wichtig.", "La protección de datos es importante.");
+ex("die Abwägung", "Nach der Abwägung bin ich sicher.", "Después de la ponderación estoy seguro.");
+ex("schlüssig", "Die Argumentation ist schlüssig.", "La argumentación es coherente.");

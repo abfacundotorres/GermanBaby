@@ -1,0 +1,471 @@
+// Unidades de C1, tanda 3 (parte 1): debate, análisis de textos y medios.
+
+import type { Unit } from "../curriculum.ts";
+
+export const UNITS_C1_PART5: Unit[] = [
+  {
+    id: "diskussion-c1",
+    title: "Debatir con matices",
+    emoji: "🗳️",
+    level: "C1",
+    description: "Mostrar acuerdo y desacuerdo con precisión y ordenar un argumento: «Dem muss ich widersprechen», «Entscheidend ist…».",
+    lessons: [
+      {
+        id: "widerspruch",
+        title: "Acuerdo y desacuerdo",
+        goal: "Reconocer, matizar y rechazar un argumento con fórmulas de debate.",
+        vocab: [
+          { de: "Ich möchte darauf hinweisen, dass die Zahlen nicht stimmen", es: "Quisiera señalar que las cifras no son correctas", emoji: "☝️", note: "«hinweisen auf» = señalar. «darauf» anticipa la oración con «dass»." },
+          { de: "Dem muss ich entschieden widersprechen", es: "A eso tengo que oponerme rotundamente", emoji: "🛑", note: "«widersprechen» + dativo = contradecir. «dem» es un demostrativo en dativo: «a eso». «entschieden» = rotundamente." },
+          { de: "Zugegeben, das Argument ist nicht ganz neu", es: "Es cierto, el argumento no es del todo nuevo", emoji: "🤝", note: "«zugegeben» = admito que. Sirve para reconocer algo antes de rebatir." },
+          { de: "Ich stimme dem nur bedingt zu", es: "Solo estoy de acuerdo en parte", emoji: "⚖️", note: "«bedingt» = con condiciones, en parte. «zustimmen» + dativo." },
+          { de: "Das überzeugt mich nicht", es: "Eso no me convence", emoji: "🙅", note: "«überzeugen» lleva acusativo: «mich»." },
+          { de: "Davon kann keine Rede sein", es: "De eso ni hablar", emoji: "🚫", note: "Expresión fija: rechaza algo de plano." },
+          { de: "Da muss ich Ihnen recht geben", es: "En eso tengo que darle la razón", emoji: "✅", note: "«recht geben» + dativo = dar la razón." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Dem muss ich entschieden widersprechen", es: "A eso tengo que oponerme rotundamente" },
+          { kind: "build", es: "Solo estoy de acuerdo en parte", answer: "Ich stimme dem nur bedingt zu", extra: ["Ihnen", "stimmen", "dann"] },
+          { kind: "build", es: "En eso tengo que darle la razón", answer: "Da muss ich Ihnen recht geben", extra: ["Sie", "kann", "Rechte"] },
+          { kind: "write", es: "Es cierto, el argumento no es del todo nuevo", references: ["Zugegeben, das Argument ist nicht ganz neu"] },
+          { kind: "write", es: "Eso no me convence", references: ["Das überzeugt mich nicht"] },
+          { kind: "cloze", sentence: "Dem muss ich entschieden ___.", es: "A eso tengo que oponerme rotundamente.", options: ["widersprechen", "zustimmen", "zusagen", "sprechen"], answer: "widersprechen", explanation: "«widersprechen» = contradecir.", category: "vocabulario" },
+          { kind: "dictation", de: "Davon kann keine Rede sein", es: "De eso ni hablar" },
+        ],
+        dialogue: {
+          title: "Un debate",
+          setting: "Dos participantes debaten en una mesa redonda",
+          lines: [
+            { who: "f", name: "Frau Berg", de: "Ich möchte darauf hinweisen, dass die Zahlen nicht stimmen.", es: "Quisiera señalar que las cifras no son correctas." },
+            { who: "m", name: "Herr Klein", de: "Dem muss ich entschieden widersprechen.", es: "A eso tengo que oponerme rotundamente." },
+            { who: "f", name: "Frau Berg", de: "Zugegeben, das Argument ist nicht ganz neu. Aber es überzeugt mich nicht.", es: "Es cierto, el argumento no es del todo nuevo. Pero no me convence." },
+            { who: "m", name: "Herr Klein", de: "Ich stimme dem nur bedingt zu. Davon kann keine Rede sein.", es: "Solo estoy de acuerdo en parte. De eso ni hablar." },
+            { who: "f", name: "Frau Berg", de: "Da muss ich Ihnen recht geben: Die Kosten sind ein Problem.", es: "En eso tengo que darle la razón: los costos son un problema." },
+            { who: "m", name: "Herr Klein", de: "Sehen Sie? Wir sind uns eigentlich näher, als es scheint.", es: "¿Ve? En realidad estamos más cerca de lo que parece." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué señala Frau Berg al principio?", options: ["Que las cifras no son correctas", "Que el plan es bueno", "Que falta tiempo", "Que hay un error de impresión"], answer: "Que las cifras no son correctas", why: "«dass die Zahlen nicht stimmen»." },
+            { type: "tf", q: "A Frau Berg la convence el argumento.", answer: false, why: "«es überzeugt mich nicht»." },
+            { type: "choice", q: "¿En qué le da la razón Frau Berg a Herr Klein?", options: ["En que los costos son un problema", "En que el plan es perfecto", "En que hay que esperar", "En que los números están bien"], answer: "En que los costos son un problema", why: "«Die Kosten sind ein Problem»." },
+            { type: "tf", q: "Al final, están muy lejos uno del otro.", answer: false, why: "«näher, als es scheint»." },
+          ],
+        },
+      },
+      {
+        id: "argumentieren-c1",
+        title: "Estructurar un argumento",
+        goal: "Ordenar un argumento con fórmulas: «spricht dafür», «lässt sich einwenden», «entscheidend ist», «im Grunde genommen».",
+        vocab: [
+          { de: "Erstens spricht dafür, dass der Aufwand gering ist", es: "En primer lugar, a favor está que el esfuerzo es bajo", emoji: "1️⃣", note: "«erstens, zweitens, drittens» ordenan los argumentos. «der Aufwand» = el esfuerzo, el costo." },
+          { de: "Dagegen lässt sich einwenden, dass die Kosten steigen", es: "En contra se puede objetar que los costos suben", emoji: "🔄", note: "«sich einwenden lassen» = se puede objetar." },
+          { de: "Entscheidend ist letztlich, ob alle Beteiligten zustimmen", es: "Lo decisivo es, en última instancia, si todos los involucrados están de acuerdo", emoji: "🎯", note: "«entscheidend» = decisivo. «die Beteiligten» = los involucrados." },
+          { de: "Man darf dabei nicht außer Acht lassen, dass es Alternativen gibt", es: "No se debe perder de vista que existen alternativas", emoji: "👀", note: "«außer Acht lassen» = pasar por alto, no tener en cuenta." },
+          { de: "Das Argument greift zu kurz", es: "El argumento se queda corto", emoji: "📏", note: "«zu kurz greifen» = quedarse corto, ser superficial." },
+          { de: "Im Grunde genommen sind wir uns einig", es: "En el fondo estamos de acuerdo", emoji: "🤝", note: "«im Grunde genommen» = en el fondo. «sich einig sein» = estar de acuerdo." },
+          { de: "Fassen wir zusammen: Wir brauchen mehr Zeit", es: "Resumamos: necesitamos más tiempo", emoji: "📝", note: "«zusammenfassen» + imperativo con «wir» = invitación." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Entscheidend ist letztlich, ob alle Beteiligten zustimmen", es: "Lo decisivo es, en última instancia, si todos los involucrados están de acuerdo" },
+          { kind: "build", es: "El argumento se queda corto", answer: "Das Argument greift zu kurz", extra: ["greifen", "lang", "kurzes"] },
+          { kind: "build", es: "En el fondo estamos de acuerdo", answer: "Im Grunde genommen sind wir uns einig", extra: ["ist", "mich", "einer"] },
+          { kind: "write", es: "En contra se puede objetar que los costos suben", references: ["Dagegen lässt sich einwenden, dass die Kosten steigen"] },
+          { kind: "write", es: "Resumamos: necesitamos más tiempo", references: ["Fassen wir zusammen: Wir brauchen mehr Zeit", "Fassen wir zusammen: wir brauchen mehr Zeit"] },
+          { kind: "cloze", sentence: "Man darf nicht außer ___ lassen, dass es Alternativen gibt.", es: "No se debe perder de vista que existen alternativas.", options: ["Acht", "Kraft", "Frage", "Sprache"], answer: "Acht", explanation: "«außer Acht lassen» = pasar por alto.", category: "vocabulario" },
+          { kind: "dictation", de: "Erstens spricht dafür, dass der Aufwand gering ist", es: "En primer lugar, a favor está que el esfuerzo es bajo" },
+        ],
+        dialogue: {
+          title: "Una reunión de equipo",
+          setting: "Dos colegas evalúan una propuesta y la cierran",
+          lines: [
+            { who: "f", name: "Frau Berg", de: "Erstens spricht dafür, dass der Aufwand gering ist.", es: "En primer lugar, a favor está que el esfuerzo es bajo." },
+            { who: "m", name: "Herr Klein", de: "Dagegen lässt sich einwenden, dass die Kosten steigen.", es: "En contra se puede objetar que los costos suben." },
+            { who: "f", name: "Frau Berg", de: "Man darf dabei nicht außer Acht lassen, dass es Alternativen gibt.", es: "No se debe perder de vista que existen alternativas." },
+            { who: "m", name: "Herr Klein", de: "Das Argument greift zu kurz. Entscheidend ist, ob alle Beteiligten zustimmen.", es: "El argumento se queda corto. Lo decisivo es si todos los involucrados están de acuerdo." },
+            { who: "f", name: "Frau Berg", de: "Im Grunde genommen sind wir uns einig.", es: "En el fondo estamos de acuerdo." },
+            { who: "m", name: "Herr Klein", de: "Fassen wir zusammen: Wir brauchen mehr Zeit.", es: "Resumamos: necesitamos más tiempo." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué dice el primer argumento?", options: ["Que el esfuerzo es bajo", "Que el plan es caro", "Que no hay tiempo", "Que hay riesgos"], answer: "Que el esfuerzo es bajo", why: "«der Aufwand gering ist»." },
+            { type: "tf", q: "Herr Klein piensa que los costos bajan.", answer: false, why: "«dass die Kosten steigen»." },
+            { type: "choice", q: "¿Qué es decisivo, según Herr Klein?", options: ["Que todos los involucrados estén de acuerdo", "Que sea barato", "Que sea rápido", "Que sea nuevo"], answer: "Que todos los involucrados estén de acuerdo", why: "«ob alle Beteiligten zustimmen»." },
+            { type: "choice", q: "¿Cuál es la conclusión?", options: ["Necesitan más tiempo", "Cancelan todo", "Votan ya", "Piden dinero"], answer: "Necesitan más tiempo", why: "«Wir brauchen mehr Zeit»." },
+          ],
+        },
+      },
+      {
+        id: "diskussion-c1-regeln",
+        title: "Gramática: fórmulas de debate",
+        goal: "Elegir la fórmula adecuada según la función y ubicar el verbo.",
+        vocab: [],
+        grammar: [
+          {
+            title: "Fórmulas por función",
+            body: [
+              "En un debate cada fórmula tiene una función: señalar, reconocer, rechazar, matizar y concluir. Aprenderlas por función ayuda a usarlas sin pensar.",
+            ],
+            table: {
+              head: ["Función", "Fórmula"],
+              rows: [
+                ["Señalar", "Ich möchte darauf hinweisen, dass…"],
+                ["Reconocer", "Zugegeben, … / Da muss ich Ihnen recht geben."],
+                ["Rechazar", "Dem muss ich widersprechen. / Davon kann keine Rede sein."],
+                ["Matizar", "Ich stimme dem nur bedingt zu. / Das greift zu kurz."],
+                ["Concluir", "Im Grunde genommen… / Fassen wir zusammen: …"],
+              ],
+            },
+          },
+          {
+            title: "Verbos con dativo y con acusativo",
+            body: [
+              "Muchos verbos de debate piden dativo: «widersprechen», «zustimmen», «recht geben». Otros piden acusativo: «überzeugen» («Das überzeugt mich»). «dem» es el demostrativo en dativo («a eso») y evita repetir una frase.",
+            ],
+            examples: [
+              { de: "Dem muss ich widersprechen.", es: "A eso tengo que oponerme." },
+              { de: "Ich stimme Ihnen nur bedingt zu.", es: "Solo estoy de acuerdo con usted en parte." },
+              { de: "Das überzeugt mich nicht.", es: "Eso no me convence." },
+            ],
+          },
+          {
+            title: "El verbo después de la fórmula",
+            body: [
+              "Con «dass» y «ob», el verbo conjugado va al final. Con adverbios como «zugegeben», «erstens» y «letztlich», que ocupan el primer lugar, el verbo viene enseguida. En una invitación («Fassen wir zusammen»), el verbo va primero.",
+            ],
+            examples: [
+              { de: "Entscheidend ist, ob alle zustimmen.", es: "Lo decisivo es si todos están de acuerdo." },
+              { de: "Zugegeben, das Argument ist nicht neu.", es: "Es cierto, el argumento no es nuevo." },
+              { de: "Fassen wir zusammen: Wir brauchen Zeit.", es: "Resumamos: necesitamos tiempo." },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Ich stimme ___ nur bedingt zu.", options: ["dem", "den", "der", "das"], answer: "dem", explanation: "«zustimmen» + dativo: «dem».", category: "gramática" },
+          { kind: "quiz", question: "Das ___ mich nicht.", options: ["überzeugt", "überzeugst", "überzeugen", "überzeugte"], answer: "überzeugt", explanation: "3.ª persona del singular con «das».", category: "gramática" },
+          { kind: "quiz", question: "Da muss ich Ihnen ___ geben.", options: ["recht", "rechts", "Recht", "richtig"], answer: "recht", explanation: "«recht geben» + dativo.", category: "gramática" },
+          { kind: "quiz", question: "Entscheidend ist, ___ alle zustimmen.", options: ["ob", "dass", "weil", "wenn"], answer: "ob", explanation: "Pregunta indirecta de sí o no: «ob», verbo al final.", category: "gramática" },
+          { kind: "quiz", question: "¿Qué fórmula sirve para reconocer un argumento?", options: ["Zugegeben, …", "Davon kann keine Rede sein", "Dem muss ich widersprechen", "Das greift zu kurz"], answer: "Zugegeben, …", explanation: "«zugegeben» = admito que.", category: "vocabulario" },
+          { kind: "quiz", question: "¿Qué significa «Das Argument greift zu kurz»?", options: ["Es superficial", "Es muy largo", "Es nuevo", "Es perfecto"], answer: "Es superficial", explanation: "«zu kurz greifen» = quedarse corto.", category: "vocabulario" },
+          { kind: "build", es: "A eso tengo que oponerme rotundamente", answer: "Dem muss ich entschieden widersprechen", extra: ["Den", "kann", "widerspricht"] },
+          { kind: "write", es: "Decí que solo estás de acuerdo en parte.", references: ["Ich stimme dem nur bedingt zu", "Ich stimme nur bedingt zu"] },
+          { kind: "write", es: "Decí que en el fondo están de acuerdo.", references: ["Im Grunde genommen sind wir uns einig"] },
+          { kind: "speak", de: "Fassen wir zusammen: Wir brauchen mehr Zeit", es: "Resumamos: necesitamos más tiempo" },
+          { kind: "dictation", de: "Da muss ich Ihnen recht geben", es: "En eso tengo que darle la razón" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Un debate",
+      scenario:
+        "Sos Frau Berg, una colega alemana de nivel C1. Tratás al usuario de usted (Sie). Debaten un tema que él elige (home office, transporte, tecnología). Defendés una posición y le pedís que responda con fórmulas de debate: señalar (Ich möchte darauf hinweisen), reconocer (Zugegeben, Da muss ich Ihnen recht geben), rechazar (Dem muss ich widersprechen) y matizar (Ich stimme dem nur bedingt zu, Das greift zu kurz). Le corregís el caso (dativo / acusativo) y el orden del verbo.",
+      opener: "Guten Tag! Ich bin der Meinung, dass Homeoffice die Zukunft ist. Was sagen Sie dazu?",
+      openerEs: "¡Buenas tardes! Pienso que el home office es el futuro. ¿Qué dice usted?",
+    },
+  },
+  {
+    id: "textanalyse",
+    title: "Resumir y analizar textos",
+    emoji: "🧐",
+    level: "C1",
+    description: "Contar de qué trata un texto, qué sostiene el autor y evaluarlo: «Der Autor vertritt die These, dass…».",
+    lessons: [
+      {
+        id: "inhalt",
+        title: "Contenido y estructura",
+        goal: "Resumir un texto: tema, tesis, apoyo, ejemplos y estructura.",
+        vocab: [
+          { de: "Der Text behandelt die Frage, wie sich die Arbeitswelt verändert", es: "El texto trata la cuestión de cómo cambia el mundo laboral", emoji: "📄", note: "«behandeln» = tratar (un tema)." },
+          { de: "Der Autor vertritt die These, dass Homeoffice produktiver macht", es: "El autor sostiene la tesis de que el home office vuelve más productivo", emoji: "💡", note: "«die These» = la tesis. «eine These vertreten» = sostener una tesis." },
+          { de: "Er stützt sich dabei auf mehrere Studien", es: "Se apoya en varios estudios", emoji: "📚", note: "«sich stützen auf» + acusativo = apoyarse en." },
+          { de: "Als Beispiel führt er ein Unternehmen an", es: "Como ejemplo menciona una empresa", emoji: "🏢", note: "«anführen» = mencionar, citar (separable)." },
+          { de: "Im Mittelpunkt steht die Frage der Verantwortung", es: "En el centro está la cuestión de la responsabilidad", emoji: "🎯", note: "«im Mittelpunkt stehen» = estar en el centro." },
+          { de: "Der Text ist in drei Abschnitte gegliedert", es: "El texto se divide en tres secciones", emoji: "🧱", note: "«gliedern» = estructurar. «der Abschnitt» = la sección." },
+          { de: "Der Schluss fasst die wichtigsten Punkte zusammen", es: "La conclusión resume los puntos más importantes", emoji: "🔚", note: "«zusammenfassen» es separable: «fasst… zusammen»." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Der Autor vertritt die These, dass Homeoffice produktiver macht", es: "El autor sostiene la tesis de que el home office vuelve más productivo" },
+          { kind: "build", es: "El texto se divide en tres secciones", answer: "Der Text ist in drei Abschnitte gegliedert", extra: ["wird", "Abschnitten", "gliedert"] },
+          { kind: "build", es: "Se apoya en varios estudios", answer: "Er stützt sich dabei auf mehrere Studien", extra: ["stützen", "mit", "mehreren"] },
+          { kind: "write", es: "Como ejemplo menciona una empresa", references: ["Als Beispiel führt er ein Unternehmen an"] },
+          { kind: "write", es: "En el centro está la cuestión de la responsabilidad", references: ["Im Mittelpunkt steht die Frage der Verantwortung"] },
+          { kind: "cloze", sentence: "Der Schluss ___ die wichtigsten Punkte zusammen.", es: "La conclusión resume los puntos más importantes.", options: ["fasst", "fast", "fasste", "fassen"], answer: "fasst", explanation: "«zusammenfassen» separable: «fasst… zusammen».", category: "gramática" },
+          { kind: "dictation", de: "Der Text behandelt die Frage, wie sich die Arbeitswelt verändert", es: "El texto trata la cuestión de cómo cambia el mundo laboral" },
+        ],
+        dialogue: {
+          title: "Una clase de análisis",
+          setting: "Una profesora y una estudiante analizan un artículo",
+          lines: [
+            { who: "f", name: "Frau Lang", de: "Worum geht es in dem Text?", es: "¿De qué trata el texto?" },
+            { who: "m", name: "Student", de: "Der Text behandelt die Frage, wie sich die Arbeitswelt verändert.", es: "El texto trata la cuestión de cómo cambia el mundo laboral." },
+            { who: "f", name: "Frau Lang", de: "Und was ist die zentrale Aussage?", es: "¿Y cuál es el mensaje central?" },
+            { who: "m", name: "Student", de: "Der Autor vertritt die These, dass Homeoffice produktiver macht. Er stützt sich auf mehrere Studien.", es: "El autor sostiene la tesis de que el home office vuelve más productivo. Se apoya en varios estudios." },
+            { who: "f", name: "Frau Lang", de: "Wie ist der Text aufgebaut?", es: "¿Cómo está armado el texto?" },
+            { who: "m", name: "Student", de: "Er ist in drei Abschnitte gegliedert. Im Mittelpunkt steht die Frage der Verantwortung.", es: "Está dividido en tres secciones. En el centro está la cuestión de la responsabilidad." },
+          ],
+          questions: [
+            { type: "choice", q: "¿De qué trata el texto?", options: ["De cómo cambia el mundo laboral", "De viajes", "De deportes", "De cocina"], answer: "De cómo cambia el mundo laboral", why: "«wie sich die Arbeitswelt verändert»." },
+            { type: "tf", q: "El autor sostiene que el home office es menos productivo.", answer: false, why: "«dass Homeoffice produktiver macht»." },
+            { type: "choice", q: "¿En qué se apoya el autor?", options: ["En varios estudios", "En su opinión", "En una encuesta", "En un libro"], answer: "En varios estudios", why: "«stützt sich auf mehrere Studien»." },
+            { type: "choice", q: "¿Cuántas secciones tiene el texto?", options: ["Tres", "Dos", "Cuatro", "Cinco"], answer: "Tres", why: "«in drei Abschnitte gegliedert»." },
+          ],
+        },
+      },
+      {
+        id: "bewertung",
+        title: "Evaluar un texto",
+        goal: "Valorar un texto con precisión: argumentación, estilo, puntos fuertes y débiles.",
+        vocab: [
+          { de: "Der Autor argumentiert überzeugend, aber einseitig", es: "El autor argumenta de forma convincente, pero unilateral", emoji: "⚖️", note: "«einseitig» = unilateral, de un solo lado." },
+          { de: "Die Schlussfolgerung ist nicht ganz schlüssig", es: "La conclusión no es del todo coherente", emoji: "🧩", note: "«schlüssig» = coherente, lógico. «die Schlussfolgerung» = la conclusión." },
+          { de: "Dem Text fehlt es an konkreten Beispielen", es: "Al texto le faltan ejemplos concretos", emoji: "📌", note: "«es fehlt an» + dativo = faltar. «konkret» = concreto." },
+          { de: "Der Stil ist sachlich und leicht verständlich", es: "El estilo es objetivo y fácil de entender", emoji: "✒️", note: "«sachlich» = objetivo, neutro." },
+          { de: "Besonders gelungen ist die Einleitung", es: "Especialmente lograda está la introducción", emoji: "👍", note: "«gelungen» = logrado. El adjetivo al principio da énfasis." },
+          { de: "Insgesamt lässt sich festhalten, dass der Text lesenswert ist", es: "En conjunto se puede afirmar que el texto vale la pena", emoji: "✅", note: "«festhalten» = dejar asentado. «lesenswert» = que vale la pena leer." },
+          { de: "Meiner Einschätzung nach überwiegen die Stärken", es: "En mi apreciación, los puntos fuertes pesan más", emoji: "💪", note: "«die Einschätzung» = la apreciación. «die Stärke» = el punto fuerte." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Der Stil ist sachlich und leicht verständlich", es: "El estilo es objetivo y fácil de entender" },
+          { kind: "build", es: "La conclusión no es del todo coherente", answer: "Die Schlussfolgerung ist nicht ganz schlüssig", extra: ["Der", "nichts", "ganze"] },
+          { kind: "build", es: "Al texto le faltan ejemplos concretos", answer: "Dem Text fehlt es an konkreten Beispielen", extra: ["Der", "fehlen", "konkrete"] },
+          { kind: "write", es: "El autor argumenta de forma convincente, pero unilateral", references: ["Der Autor argumentiert überzeugend, aber einseitig"] },
+          { kind: "write", es: "En conjunto se puede afirmar que el texto vale la pena", references: ["Insgesamt lässt sich festhalten, dass der Text lesenswert ist"] },
+          { kind: "cloze", sentence: "Besonders ___ ist die Einleitung.", es: "Especialmente lograda está la introducción.", options: ["gelungen", "gelingt", "gelang", "gelungene"], answer: "gelungen", explanation: "Adjetivo en posición predicativa: «gelungen».", category: "gramática" },
+          { kind: "dictation", de: "Meiner Einschätzung nach überwiegen die Stärken", es: "En mi apreciación, los puntos fuertes pesan más" },
+        ],
+        dialogue: {
+          title: "Una valoración",
+          setting: "Dos estudiantes comparten su opinión sobre un artículo",
+          lines: [
+            { who: "f", name: "Lena", de: "Der Autor argumentiert überzeugend, aber einseitig.", es: "El autor argumenta de forma convincente, pero unilateral." },
+            { who: "m", name: "Max", de: "Ja. Dem Text fehlt es an konkreten Beispielen.", es: "Sí. Al texto le faltan ejemplos concretos." },
+            { who: "f", name: "Lena", de: "Die Schlussfolgerung ist nicht ganz schlüssig. Der Stil ist aber sachlich.", es: "La conclusión no es del todo coherente. Pero el estilo es objetivo." },
+            { who: "m", name: "Max", de: "Besonders gelungen ist die Einleitung. Sie ist leicht verständlich.", es: "Especialmente lograda está la introducción. Es fácil de entender." },
+            { who: "f", name: "Lena", de: "Meiner Einschätzung nach überwiegen die Stärken.", es: "En mi apreciación, los puntos fuertes pesan más." },
+            { who: "m", name: "Max", de: "Insgesamt lässt sich festhalten, dass der Text lesenswert ist.", es: "En conjunto se puede afirmar que el texto vale la pena." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cómo es la argumentación del autor?", options: ["Convincente, pero unilateral", "Débil", "Perfecta", "Confusa"], answer: "Convincente, pero unilateral", why: "«überzeugend, aber einseitig»." },
+            { type: "tf", q: "Al texto le sobran ejemplos.", answer: false, why: "«fehlt es an konkreten Beispielen»." },
+            { type: "choice", q: "¿Qué parte está especialmente lograda?", options: ["La introducción", "La conclusión", "El título", "Las citas"], answer: "La introducción", why: "«Besonders gelungen ist die Einleitung»." },
+            { type: "choice", q: "¿Qué opinan del texto en conjunto?", options: ["Que vale la pena leerlo", "Que no sirve", "Que es corto", "Que es anticuado"], answer: "Que vale la pena leerlo", why: "«lesenswert»." },
+          ],
+        },
+      },
+      {
+        id: "textanalyse-regeln",
+        title: "Gramática: describir y valorar textos",
+        goal: "Usar el presente para describir un texto y los verbos y adjetivos de análisis con su construcción.",
+        vocab: [],
+        grammar: [
+          {
+            title: "El presente para describir un texto",
+            body: [
+              "Al resumir o analizar un texto se usa siempre el presente, aunque el texto esté en pasado: «Der Autor vertritt die These…». Si querés citar lo que dice el autor, usá el discurso indirecto con Konjunktiv I o «laut» / «zufolge».",
+            ],
+            examples: [
+              { de: "Der Autor vertritt die These, dass Homeoffice produktiver macht.", es: "El autor sostiene la tesis de que el home office vuelve más productivo." },
+              { de: "Laut dem Autor sei die Arbeitswelt im Wandel.", es: "Según el autor, el mundo laboral estaría cambiando." },
+            ],
+          },
+          {
+            title: "Verbos de análisis y su construcción",
+            body: [
+              "Cada verbo pide una construcción: «behandeln» + acusativo (el tema), «vertreten» + acusativo (la tesis), «sich stützen auf» + acusativo, «gegliedert sein in» + acusativo, «fehlen an» + dativo («Dem Text fehlt es an Beispielen»).",
+            ],
+            table: {
+              head: ["Verbo", "Construcción", "Ejemplo"],
+              rows: [
+                ["behandeln", "+ acusativo", "Der Text behandelt eine Frage."],
+                ["sich stützen", "auf + acusativo", "Er stützt sich auf Studien."],
+                ["gliedern", "in + acusativo", "in drei Abschnitte gegliedert"],
+                ["fehlen", "an + dativo", "Es fehlt an Beispielen."],
+              ],
+            },
+          },
+          {
+            title: "Adjetivos para valorar",
+            body: [
+              "Para valorar, el alemán C1 usa adjetivos precisos: «überzeugend», «schlüssig», «einseitig», «sachlich», «gelungen», «lesenswert». «nicht ganz» suaviza una crítica: «nicht ganz schlüssig».",
+            ],
+            examples: [
+              { de: "Die Schlussfolgerung ist nicht ganz schlüssig.", es: "La conclusión no es del todo coherente." },
+              { de: "Der Stil ist sachlich.", es: "El estilo es objetivo." },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Der Text ___ die Frage der Verantwortung.", options: ["behandelt", "behandeln", "behandelte", "behandelst"], answer: "behandelt", explanation: "Presente, 3.ª persona.", category: "gramática" },
+          { kind: "quiz", question: "Er stützt sich ___ mehrere Studien.", options: ["auf", "an", "mit", "von"], answer: "auf", explanation: "«sich stützen auf» + acusativo.", category: "gramática" },
+          { kind: "quiz", question: "Dem Text fehlt es ___ Beispielen.", options: ["an", "auf", "von", "für"], answer: "an", explanation: "«fehlen an» + dativo.", category: "gramática" },
+          { kind: "quiz", question: "Der Text ist ___ drei Abschnitte gegliedert.", options: ["in", "an", "auf", "mit"], answer: "in", explanation: "«gegliedert in» + acusativo.", category: "gramática" },
+          { kind: "quiz", question: "¿Cuál es el tiempo para resumir un texto?", options: ["Presente", "Pasado", "Futuro", "Plusquamperfekt"], answer: "Presente", explanation: "Se resume siempre en presente.", category: "gramática" },
+          { kind: "quiz", question: "«nicht ganz schlüssig» significa…", options: ["no del todo coherente", "muy coherente", "incoherente del todo", "nuevo"], answer: "no del todo coherente", explanation: "«nicht ganz» suaviza.", category: "vocabulario" },
+          { kind: "build", es: "El autor sostiene una tesis", answer: "Der Autor vertritt eine These", extra: ["Die", "vertreten", "Thesen"] },
+          { kind: "write", es: "Decí que el texto trata la cuestión del clima.", references: ["Der Text behandelt die Frage des Klimas", "Der Text behandelt die Frage des Klimawandels"] },
+          { kind: "write", es: "Decí que el estilo del texto es objetivo.", references: ["Der Stil des Textes ist sachlich", "Der Stil ist sachlich"] },
+          { kind: "speak", de: "Der Text ist in drei Abschnitte gegliedert", es: "El texto se divide en tres secciones" },
+          { kind: "dictation", de: "Insgesamt lässt sich festhalten, dass der Text lesenswert ist", es: "En conjunto se puede afirmar que el texto vale la pena" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Analizar un artículo",
+      scenario:
+        "Sos la Prof. Lang, una profesora universitaria alemana de nivel C1. Tratás al usuario de usted (Sie). Le pedís que resuma y evalúe un artículo o un libro que haya leído, con el vocabulario del análisis de textos: tema, tesis (vertreten), apoyo (sich stützen auf), estructura (gegliedert), valoración (überzeugend, einseitig, schlüssig, sachlich). Siempre en presente. Le corregís las construcciones y le preguntás por la tesis y los argumentos.",
+      opener: "Guten Tag! Welchen Text haben Sie gelesen? Worum geht es darin?",
+      openerEs: "¡Buenas tardes! ¿Qué texto leyó? ¿De qué trata?",
+    },
+  },
+  {
+    id: "medien-c1",
+    title: "Medios de comunicación",
+    emoji: "📰",
+    level: "C1",
+    description: "Hablar de la prensa, las noticias falsas y las redes sociales con vocabulario preciso.",
+    lessons: [
+      {
+        id: "presse",
+        title: "Prensa y noticias",
+        goal: "Hablar de la prensa y de la verificación de fuentes con vocabulario de medios.",
+        vocab: [
+          { de: "Die Berichterstattung über das Thema war einseitig", es: "La cobertura del tema fue unilateral", emoji: "📰", note: "«die Berichterstattung» = la cobertura periodística." },
+          { de: "Die Zeitung hat die Meldung nicht bestätigt", es: "El diario no confirmó la noticia", emoji: "🗞️", note: "«die Meldung» = la noticia breve, el aviso." },
+          { de: "Falschmeldungen verbreiten sich im Internet rasend schnell", es: "Las noticias falsas se difunden a toda velocidad por internet", emoji: "🚀", note: "«die Falschmeldung» = noticia falsa. «sich verbreiten» = difundirse. «rasend» = a toda velocidad." },
+          { de: "Wer Quellen prüft, lässt sich nicht so leicht täuschen", es: "Quien verifica las fuentes no se deja engañar tan fácilmente", emoji: "🔍", note: "«prüfen» = verificar. «sich täuschen lassen» = dejarse engañar." },
+          { de: "Die Schlagzeile verspricht mehr, als der Artikel hält", es: "El titular promete más de lo que cumple el artículo", emoji: "🔠", note: "«die Schlagzeile» = el titular. «mehr… als» = más… de lo que." },
+          { de: "Die Pressefreiheit gilt als Grundpfeiler der Demokratie", es: "La libertad de prensa se considera un pilar de la democracia", emoji: "🏛️", note: "«gelten als» = considerarse como. «der Grundpfeiler» = el pilar fundamental." },
+          { de: "Medien tragen Verantwortung für die Meinungsbildung", es: "Los medios tienen responsabilidad en la formación de la opinión", emoji: "⚖️", note: "«Verantwortung tragen» = tener responsabilidad. «die Meinungsbildung» = la formación de opinión." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Die Pressefreiheit gilt als Grundpfeiler der Demokratie", es: "La libertad de prensa se considera un pilar de la democracia" },
+          { kind: "build", es: "El diario no confirmó la noticia", answer: "Die Zeitung hat die Meldung nicht bestätigt", extra: ["ist", "Meldungen", "bestätigen"] },
+          { kind: "build", es: "El titular promete más de lo que cumple el artículo", answer: "Die Schlagzeile verspricht mehr, als der Artikel hält", extra: ["wie", "versprechen", "halten"] },
+          { kind: "write", es: "La cobertura del tema fue unilateral", references: ["Die Berichterstattung über das Thema war einseitig"] },
+          { kind: "write", es: "Las noticias falsas se difunden a toda velocidad por internet", references: ["Falschmeldungen verbreiten sich im Internet rasend schnell"] },
+          { kind: "cloze", sentence: "Wer Quellen ___, lässt sich nicht so leicht täuschen.", es: "Quien verifica las fuentes no se deja engañar tan fácilmente.", options: ["prüft", "prüfen", "prüfe", "geprüft"], answer: "prüft", explanation: "«wer» + 3.ª persona: «prüft».", category: "gramática" },
+          { kind: "dictation", de: "Medien tragen Verantwortung für die Meinungsbildung", es: "Los medios tienen responsabilidad en la formación de la opinión" },
+        ],
+        dialogue: {
+          title: "Un programa de actualidad",
+          setting: "Un periodista y una experta analizan la cobertura de un tema",
+          lines: [
+            { who: "m", name: "Herr Weber", de: "Die Berichterstattung über das Thema war einseitig.", es: "La cobertura del tema fue unilateral." },
+            { who: "f", name: "Frau Lang", de: "Die Zeitung hat die Meldung nicht bestätigt, aber die Schlagzeile verspricht mehr, als der Artikel hält.", es: "El diario no confirmó la noticia, pero el titular promete más de lo que cumple el artículo." },
+            { who: "m", name: "Herr Weber", de: "Falschmeldungen verbreiten sich im Internet rasend schnell.", es: "Las noticias falsas se difunden a toda velocidad por internet." },
+            { who: "f", name: "Frau Lang", de: "Wer Quellen prüft, lässt sich nicht so leicht täuschen.", es: "Quien verifica las fuentes no se deja engañar tan fácilmente." },
+            { who: "m", name: "Herr Weber", de: "Die Pressefreiheit gilt als Grundpfeiler der Demokratie.", es: "La libertad de prensa se considera un pilar de la democracia." },
+            { who: "f", name: "Frau Lang", de: "Und Medien tragen Verantwortung für die Meinungsbildung.", es: "Y los medios tienen responsabilidad en la formación de la opinión." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cómo fue la cobertura?", options: ["Unilateral", "Completa", "Excelente", "Escasa"], answer: "Unilateral", why: "«einseitig»." },
+            { type: "tf", q: "El diario confirmó la noticia.", answer: false, why: "«nicht bestätigt»." },
+            { type: "choice", q: "¿Qué hace que no te engañen fácil?", options: ["Verificar las fuentes", "Leer más rápido", "Creer los titulares", "No leer"], answer: "Verificar las fuentes", why: "«Wer Quellen prüft»." },
+            { type: "choice", q: "¿Qué se considera un pilar de la democracia?", options: ["La libertad de prensa", "La publicidad", "Los impuestos", "El deporte"], answer: "La libertad de prensa", why: "«Die Pressefreiheit gilt als Grundpfeiler»." },
+          ],
+        },
+      },
+      {
+        id: "netzwerke",
+        title: "Redes sociales",
+        goal: "Hablar de redes, algoritmos y protección de datos con vocabulario preciso.",
+        vocab: [
+          { de: "Soziale Netzwerke beeinflussen unsere Meinung stärker, als wir denken", es: "Las redes sociales influyen en nuestra opinión más de lo que pensamos", emoji: "📱", note: "«beeinflussen» = influir. «stärker, als» = más fuerte de lo que." },
+          { de: "Der Algorithmus zeigt uns vor allem, was wir ohnehin mögen", es: "El algoritmo nos muestra sobre todo lo que ya nos gusta", emoji: "🤖", note: "«ohnehin» = de todos modos, ya de por sí." },
+          { de: "Viele Nutzer sind sich der Risiken kaum bewusst", es: "Muchos usuarios casi no son conscientes de los riesgos", emoji: "⚠️", note: "«sich (genitivo) bewusst sein» = ser consciente de. Pide genitivo: «der Risiken». «der Nutzer» = el usuario." },
+          { de: "Der Datenschutz wird oft vernachlässigt", es: "La protección de datos se descuida a menudo", emoji: "🔒", note: "«der Datenschutz» = la protección de datos. «vernachlässigen» = descuidar." },
+          { de: "Eine Pause von den Bildschirmen tut vielen gut", es: "Un descanso de las pantallas le hace bien a mucha gente", emoji: "😌", note: "«gut tun» + dativo = hacer bien." },
+          { de: "Die Plattformen sollen für Inhalte haften", es: "Se pretende que las plataformas respondan por los contenidos", emoji: "⚖️", note: "«haften für» = responder por. «der Inhalt» = el contenido." },
+          { de: "Es besteht die Gefahr, dass sich Falschinformationen schneller verbreiten als Fakten", es: "Existe el riesgo de que la desinformación se difunda más rápido que los hechos", emoji: "🌪️", note: "«es besteht die Gefahr, dass…» = existe el riesgo de que. «der Fakt» = el hecho." },
+        ],
+        exercises: [
+          { kind: "speak", de: "Der Algorithmus zeigt uns vor allem, was wir ohnehin mögen", es: "El algoritmo nos muestra sobre todo lo que ya nos gusta" },
+          { kind: "build", es: "Viele usuarios casi no son conscientes de los riesgos", answer: "Viele Nutzer sind sich der Risiken kaum bewusst", extra: ["die", "ist", "Risiko"] },
+          { kind: "build", es: "La protección de datos se descuida a menudo", answer: "Der Datenschutz wird oft vernachlässigt", extra: ["Die", "wurde", "vernachlässigen"] },
+          { kind: "write", es: "Las redes sociales influyen en nuestra opinión más de lo que pensamos", references: ["Soziale Netzwerke beeinflussen unsere Meinung stärker, als wir denken"] },
+          { kind: "write", es: "Un descanso de las pantallas le hace bien a mucha gente", references: ["Eine Pause von den Bildschirmen tut vielen gut"] },
+          { kind: "cloze", sentence: "Viele Nutzer sind sich der ___ kaum bewusst.", es: "Muchos usuarios casi no son conscientes de los riesgos.", options: ["Risiken", "Risiko", "Risikos", "Risikon"], answer: "Risiken", explanation: "«sich bewusst sein» + genitivo plural: «der Risiken».", category: "gramática" },
+          { kind: "dictation", de: "Es besteht die Gefahr, dass sich Falschinformationen schneller verbreiten als Fakten", es: "Existe el riesgo de que la desinformación se difunda más rápido que los hechos" },
+        ],
+        dialogue: {
+          title: "Una charla sobre redes",
+          setting: "Dos amigos conversan sobre su uso de las redes",
+          lines: [
+            { who: "f", name: "Lena", de: "Soziale Netzwerke beeinflussen unsere Meinung stärker, als wir denken.", es: "Las redes sociales influyen en nuestra opinión más de lo que pensamos." },
+            { who: "m", name: "Max", de: "Der Algorithmus zeigt uns vor allem, was wir ohnehin mögen.", es: "El algoritmo nos muestra sobre todo lo que ya nos gusta." },
+            { who: "f", name: "Lena", de: "Viele Nutzer sind sich der Risiken kaum bewusst. Der Datenschutz wird oft vernachlässigt.", es: "Muchos usuarios casi no son conscientes de los riesgos. La protección de datos se descuida a menudo." },
+            { who: "m", name: "Max", de: "Die Plattformen sollen für Inhalte haften.", es: "Se pretende que las plataformas respondan por los contenidos." },
+            { who: "f", name: "Lena", de: "Es besteht die Gefahr, dass sich Falschinformationen schneller verbreiten als Fakten.", es: "Existe el riesgo de que la desinformación se difunda más rápido que los hechos." },
+            { who: "m", name: "Max", de: "Eine Pause von den Bildschirmen tut vielen gut.", es: "Un descanso de las pantallas le hace bien a mucha gente." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué hace el algoritmo?", options: ["Muestra lo que ya nos gusta", "Oculta todo", "Borra datos", "Cobra dinero"], answer: "Muestra lo que ya nos gusta", why: "«was wir ohnehin mögen»." },
+            { type: "tf", q: "Los usuarios son muy conscientes de los riesgos.", answer: false, why: "«kaum bewusst»." },
+            { type: "choice", q: "¿Qué se pretende de las plataformas?", options: ["Que respondan por los contenidos", "Que cobren más", "Que cierren", "Que no existan"], answer: "Que respondan por los contenidos", why: "«sollen für Inhalte haften»." },
+            { type: "choice", q: "¿Qué le hace bien a mucha gente?", options: ["Un descanso de las pantallas", "Más redes", "Menos sueño", "Más noticias"], answer: "Un descanso de las pantallas", why: "«Eine Pause von den Bildschirmen tut vielen gut»." },
+          ],
+        },
+      },
+      {
+        id: "medien-c1-regeln",
+        title: "Gramática: estructuras para hablar de medios",
+        goal: "Usar comparaciones con «als», «gelten als», el genitivo con «sich bewusst sein» y «es besteht die Gefahr, dass».",
+        vocab: [],
+        grammar: [
+          {
+            title: "Comparar con «als» y con una oración",
+            body: [
+              "Para comparar con una oración entera se usa «mehr / stärker / schneller… als» + subordinada: «Soziale Netzwerke beeinflussen uns stärker, als wir denken». El verbo conjugado de la subordinada va al final.",
+            ],
+            examples: [
+              { de: "Die Schlagzeile verspricht mehr, als der Artikel hält.", es: "El titular promete más de lo que cumple el artículo." },
+              { de: "Das Problem ist größer, als wir dachten.", es: "El problema es más grande de lo que pensábamos." },
+            ],
+          },
+          {
+            title: "Verbos con genitivo y con «als»",
+            body: [
+              "Algunos verbos y expresiones piden genitivo: «sich einer Sache bewusst sein». Y «gelten als» + nominativo significa «considerarse»: «Die Pressefreiheit gilt als Grundpfeiler». «tragen» con «Verantwortung» forma una locución: «Verantwortung tragen für».",
+            ],
+            table: {
+              head: ["Construcción", "Ejemplo"],
+              rows: [
+                ["sich (genitivo) bewusst sein", "Sie sind sich der Risiken bewusst."],
+                ["gelten als + nominativo", "Das gilt als sicher."],
+                ["Verantwortung tragen für", "Medien tragen Verantwortung für die Meinung."],
+                ["haften für", "Plattformen haften für Inhalte."],
+              ],
+            },
+          },
+          {
+            title: "«Es besteht die Gefahr, dass…»",
+            body: [
+              "Para introducir un riesgo o una posibilidad se usa «es besteht die Gefahr / die Möglichkeit / der Verdacht, dass…» + subordinada con el verbo al final. «Es» es un sujeto formal.",
+            ],
+            examples: [
+              { de: "Es besteht die Gefahr, dass Falschinformationen sich verbreiten.", es: "Existe el riesgo de que se difunda desinformación." },
+              { de: "Es besteht die Möglichkeit, dass der Plan scheitert.", es: "Existe la posibilidad de que el plan fracase." },
+            ],
+          },
+        ],
+        exercises: [
+          { kind: "quiz", question: "Die Schlagzeile verspricht mehr, ___ der Artikel hält.", options: ["als", "wie", "dass", "ob"], answer: "als", explanation: "Comparativo + «als»: «mehr, als».", category: "gramática" },
+          { kind: "quiz", question: "Viele sind sich der ___ bewusst.", options: ["Risiken", "Risiko", "Risikos", "Risiker"], answer: "Risiken", explanation: "Genitivo plural.", category: "gramática" },
+          { kind: "quiz", question: "Die Pressefreiheit ___ als Grundpfeiler.", options: ["gilt", "gelte", "galt", "gelten"], answer: "gilt", explanation: "«gelten als» en presente.", category: "gramática" },
+          { kind: "quiz", question: "Medien tragen Verantwortung ___ die Meinungsbildung.", options: ["für", "von", "an", "auf"], answer: "für", explanation: "«Verantwortung tragen für».", category: "gramática" },
+          { kind: "quiz", question: "Es besteht die Gefahr, ___ sich Falschmeldungen verbreiten.", options: ["dass", "ob", "wenn", "als"], answer: "dass", explanation: "«die Gefahr, dass» + verbo al final.", category: "gramática" },
+          { kind: "quiz", question: "Plattformen sollen ___ Inhalte haften.", options: ["für", "mit", "zu", "bei"], answer: "für", explanation: "«haften für».", category: "gramática" },
+          { kind: "build", es: "El problema es más grande de lo que pensábamos", answer: "Das Problem ist größer, als wir dachten", extra: ["wie", "denken", "groß"] },
+          { kind: "write", es: "Decí que existe el riesgo de que se difundan noticias falsas.", references: ["Es besteht die Gefahr, dass sich Falschmeldungen verbreiten", "Es besteht die Gefahr, dass Falschmeldungen sich verbreiten"] },
+          { kind: "write", es: "Decí que los usuarios no son conscientes de los riesgos.", references: ["Die Nutzer sind sich der Risiken nicht bewusst", "Viele Nutzer sind sich der Risiken nicht bewusst"] },
+          { kind: "speak", de: "Falschmeldungen verbreiten sich im Internet rasend schnell", es: "Las noticias falsas se difunden a toda velocidad por internet" },
+          { kind: "dictation", de: "Der Datenschutz wird oft vernachlässigt", es: "La protección de datos se descuida a menudo" },
+        ],
+      },
+    ],
+    chat: {
+      title: "Hablar de los medios",
+      scenario:
+        "Sos Herr Weber, un periodista alemán de nivel C1. Tratás al usuario de usted (Sie). Charlan sobre cómo se informa el usuario, la verificación de fuentes, las noticias falsas y las redes sociales. Usás vocabulario de medios (Berichterstattung, Quelle prüfen, Falschmeldung, Algorithmus, Datenschutz) y estructuras como «stärker, als…», «sich der Risiken bewusst sein», «es besteht die Gefahr, dass…». Le corregís el genitivo y el orden del verbo.",
+      opener: "Guten Tag! Woher beziehen Sie Ihre Nachrichten? Und wie prüfen Sie, ob eine Meldung stimmt?",
+      openerEs: "¡Buenas tardes! ¿De dónde saca usted sus noticias? ¿Y cómo verifica que una noticia sea verdadera?",
+    },
+  },
+];

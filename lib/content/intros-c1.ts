@@ -366,4 +366,178 @@ export const INTROS_C1: Record<string, LessonNotes> = {
   },
   "redewendungen-c1/lesen": reading("die Redewendung, wörtlich"),
   "redewendungen-c1/practica": practice("las expresiones idiomáticas"),
+
+  // ---------- Debatir con matices
+  "diskussion-c1/widerspruch": {
+    intro: [
+      "En un debate de nivel C1 no alcanza con decir «sí» o «no»: reconocés, matizás y rechazás con fórmulas precisas. «Zugegeben, …» reconoce un punto; «Da muss ich Ihnen recht geben» da la razón; «Dem muss ich widersprechen» y «Davon kann keine Rede sein» rechazan; «Ich stimme dem nur bedingt zu» matiza.",
+      "Fijate en los casos: «widersprechen», «zustimmen» y «recht geben» piden dativo; «überzeugen» pide acusativo.",
+    ],
+    summary: [
+      "Reconocer: Zugegeben, … · Da muss ich Ihnen recht geben.",
+      "Rechazar: Dem muss ich widersprechen · Davon kann keine Rede sein.",
+      "Matizar: Ich stimme dem nur bedingt zu.",
+    ],
+  },
+  "diskussion-c1/argumentieren-c1": {
+    intro: [
+      "Para ordenar un argumento: «Erstens spricht dafür, dass…» y «Dagegen lässt sich einwenden, dass…». Para lo decisivo: «Entscheidend ist letztlich, ob…». Para algo que no hay que olvidar: «Man darf dabei nicht außer Acht lassen, dass…». Y para cerrar: «Im Grunde genommen…» y «Fassen wir zusammen: …».",
+    ],
+    summary: [
+      "Erstens spricht dafür… · Dagegen lässt sich einwenden…",
+      "Entscheidend ist… · außer Acht lassen · greift zu kurz.",
+      "Im Grunde genommen… · Fassen wir zusammen.",
+    ],
+  },
+  "diskussion-c1/diskussion-c1-regeln": {
+    intro: [
+      "Esta lección junta las fórmulas de debate ordenadas por función (señalar, reconocer, rechazar, matizar y concluir), los casos que piden y el orden del verbo: al final con «dass» y «ob», enseguida con adverbios como «zugegeben», y primero en una invitación como «Fassen wir zusammen».",
+    ],
+    summary: [
+      "Función: señalar · reconocer · rechazar · matizar · concluir.",
+      "widersprechen / zustimmen / recht geben + dativo · überzeugen + acusativo.",
+    ],
+  },
+  "diskussion-c1/lesen": reading("der Einwand, die Kompromissbereitschaft"),
+  "diskussion-c1/practica": practice("el debate con matices"),
+
+  // ---------- Resumir y analizar textos
+  "textanalyse/inhalt": {
+    intro: [
+      "Para resumir un texto se usa el presente y un vocabulario fijo: «Der Text behandelt…» (el tema), «Der Autor vertritt die These, dass…» (la tesis), «Er stützt sich auf…» (el apoyo), «Als Beispiel führt er… an» (un ejemplo), «Im Mittelpunkt steht…» (el centro) y «Der Text ist in … Abschnitte gegliedert» (la estructura).",
+    ],
+    summary: [
+      "behandeln · eine These vertreten · sich stützen auf · anführen.",
+      "gegliedert in + acusativo · im Mittelpunkt stehen.",
+    ],
+  },
+  "textanalyse/bewertung": {
+    intro: [
+      "Para valorar un texto, C1 usa adjetivos precisos: «überzeugend», «schlüssig», «einseitig», «sachlich», «gelungen», «lesenswert». «nicht ganz» suaviza una crítica («nicht ganz schlüssig»). Y para cerrar: «Insgesamt lässt sich festhalten, dass…» y «Meiner Einschätzung nach überwiegen die Stärken».",
+    ],
+    summary: [
+      "überzeugend · schlüssig · einseitig · sachlich · gelungen.",
+      "Dem Text fehlt es an… · nicht ganz schlüssig.",
+      "Insgesamt lässt sich festhalten… · Meiner Einschätzung nach…",
+    ],
+  },
+  "textanalyse/textanalyse-regeln": {
+    intro: [
+      "Esta lección junta lo de la unidad: se resume en presente, cada verbo de análisis pide una construcción (behandeln + acusativo, sich stützen auf, gegliedert in, fehlen an + dativo) y los adjetivos de valoración permiten matizar con precisión.",
+    ],
+    summary: [
+      "Siempre en presente.",
+      "behandeln + acc. · sich stützen auf · gegliedert in · fehlen an + dat.",
+    ],
+  },
+  "textanalyse/lesen": reading("die Aussage, aufschlussreich"),
+  "textanalyse/practica": practice("el análisis de textos"),
+
+  // ---------- Medios de comunicación
+  "medien-c1/presse": {
+    intro: [
+      "Vocabulario de la prensa y de la verificación de fuentes: «die Berichterstattung», «die Meldung», «die Falschmeldung», «die Schlagzeile», «die Pressefreiheit», «die Meinungsbildung». Y estructuras útiles: «mehr, als…» para comparar con una oración («Die Schlagzeile verspricht mehr, als der Artikel hält») y «gelten als» para decir «considerarse».",
+    ],
+    summary: [
+      "Berichterstattung · Meldung · Falschmeldung · Schlagzeile.",
+      "«mehr / stärker, als + oración» · «gelten als».",
+    ],
+  },
+  "medien-c1/netzwerke": {
+    intro: [
+      "Para hablar de redes sociales: «der Algorithmus», «der Nutzer», «der Datenschutz», «die Plattform». Aparecen tres estructuras útiles: «sich (genitivo) bewusst sein» («sich der Risiken bewusst sein»), «haften für» y «es besteht die Gefahr, dass…».",
+    ],
+    summary: [
+      "sich der Risiken bewusst sein (genitivo).",
+      "haften für · gut tun + dativo.",
+      "Es besteht die Gefahr, dass…",
+    ],
+  },
+  "medien-c1/medien-c1-regeln": {
+    intro: [
+      "Esta lección junta las estructuras para hablar de medios: la comparación con una oración («stärker, als wir denken»), los verbos con genitivo o con «als» («gelten als», «sich bewusst sein») y «es besteht die Gefahr, dass…» para introducir un riesgo.",
+    ],
+    summary: [
+      "stärker / mehr … als + oración.",
+      "gelten als + nominativo · sich bewusst sein + genitivo.",
+      "Es besteht die Gefahr / die Möglichkeit, dass…",
+    ],
+  },
+  "medien-c1/lesen": reading("die Glaubwürdigkeit, die Reichweite"),
+  "medien-c1/practica": practice("los medios de comunicación"),
+
+  // ---------- Tecnología y datos
+  "technik-c1/ki": {
+    intro: [
+      "Para hablar de inteligencia artificial y de sus consecuencias, aparecen estructuras de C1: «hängt davon ab, ob / wie…» (depende de si / de cómo), la pasiva con modal («dürfen nicht ausgeklammert werden») y «bleiben + zu + infinitivo», que significa «queda por…» («Es bleibt abzuwarten»).",
+    ],
+    summary: [
+      "«hängt davon ab, ob / wie…» = depende de si / de cómo.",
+      "«Es bleibt abzuwarten» = habrá que esperar.",
+      "Pasiva con modal: «dürfen nicht ausgeklammert werden».",
+    ],
+  },
+  "technik-c1/datenschutz": {
+    intro: [
+      "Para hablar de datos y privacidad: «schützen», «speichern», «weitergeben», «preisgeben», «die Privatsphäre». Estructuras: «ein Recht darauf, zu…» (derecho a), «mit sich bringen» (traer consigo) y pasivas con modal («Daten müssen geschützt werden»).",
+    ],
+    summary: [
+      "ein Recht darauf, zu + infinitivo.",
+      "mit sich bringen · weitergeben · preisgeben.",
+    ],
+  },
+  "technik-c1/technik-c1-regeln": {
+    intro: [
+      "Esta lección junta las estructuras de la unidad: «sein / bleiben + zu + infinitivo» (con separables: «abzuwarten»), sustantivo + preposición + «zu» («ein Recht darauf, zu…») y «abhängen von» anticipado con «davon» antes de «ob», «wie» o «dass».",
+    ],
+    summary: [
+      "sein / bleiben + zu + infinitivo (abzuwarten, einzusetzen).",
+      "ein Recht darauf, zu… · hängt davon ab, ob…",
+    ],
+  },
+  "technik-c1/lesen": reading("der Durchbruch, der Datenschutz"),
+  "technik-c1/practica": practice("la tecnología y los datos"),
+
+  // ---------- Preparación para el examen C1
+  "pruefung-c1/vortrag-c1": {
+    intro: [
+      "Una presentación de nivel C1 sigue un esquema: abrir con un panorama («Ich möchte Ihnen einen Überblick geben»), ordenar el desarrollo («Zunächst… Anschließend…»), destacar un aspecto («Besonders hervorzuheben ist…»), derivar una recomendación («Daraus leite ich ab…») y cerrar con una conclusión («Zum Abschluss möchte ich ein Fazit ziehen»).",
+    ],
+    summary: [
+      "Überblick geben · zunächst / anschließend · hervorzuheben ist.",
+      "ableiten · ein Fazit ziehen · zur Verfügung stehen.",
+    ],
+  },
+  "pruefung-c1/eroerterung": {
+    intro: [
+      "Un ensayo argumentativo (Erörterung) tiene introducción, argumentos, objeción y conclusión. Fórmulas de C1: «In der heutigen Zeit gewinnt… an Bedeutung», «Für diese Position sprechen mehrere Argumente», «Allerdings darf nicht übersehen werden, dass…», «Abwägend lässt sich festhalten, dass…» y «Meines Erachtens überwiegen…».",
+    ],
+    summary: [
+      "Introducción: an Bedeutung gewinnen · Die Frage, ob…",
+      "Objeción: Allerdings darf nicht übersehen werden…",
+      "Conclusión: Abwägend lässt sich festhalten · Meines Erachtens.",
+    ],
+  },
+  "pruefung-c1/korrespondenz-c1": {
+    intro: [
+      "La correspondencia formal de C1 usa fórmulas fijas y estructuras cortés: «Ich wende mich an Sie, da…», «Hiermit möchte ich… einreichen», «Sollten Sie… benötigen, lasse ich… zukommen» (condición sin «wenn», con el verbo primero), «Ich bitte um Verständnis für…» y el cierre «Mit vorzüglicher Hochachtung».",
+    ],
+    summary: [
+      "sich wenden an · hiermit · einreichen.",
+      "«Sollten Sie…» = si llegara a… (sin «wenn»).",
+      "Mit vorzüglicher Hochachtung.",
+    ],
+  },
+  "pruefung-c1/wiederholung-c1": {
+    intro: [
+      "Repaso de C1: los modales para suponer, los relativos avanzados, la irrealidad, las concesiones, el estilo académico, las locuciones verbales y el debate. Lo más importante, otra vez, es el lugar del verbo: al final con las conjunciones subordinantes (obgleich, selbst wenn, als ob, ohne dass), enseguida con los adverbios conectores (gleichwohl, demnach, mithin).",
+    ],
+    summary: [
+      "Suposición · relativos · irrealidad · concesión · estilo académico · locuciones.",
+      "Verbo al final: obgleich, selbst wenn, als ob, ohne dass.",
+      "Verbo enseguida: gleichwohl, demnach, mithin, als (solo).",
+    ],
+  },
+  "pruefung-c1/lesen": reading("die Abwägung, schlüssig"),
+  "pruefung-c1/practica": practice("el examen C1"),
 };

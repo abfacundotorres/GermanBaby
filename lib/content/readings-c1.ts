@@ -207,4 +207,110 @@ export const READINGS_C1: Record<string, Lesson> = {
       { type: "choice", q: "¿Cómo se pueden traducir las expresiones?", options: ["No literalmente", "Palabra por palabra", "Con un diccionario", "Nunca"], answer: "No literalmente", why: "«nicht wörtlich übersetzen»." },
     ],
   ),
+
+  "diskussion-c1": reading(
+    "Una mesa redonda",
+    "Leer un fragmento de debate y sumar dos palabras.",
+    [
+      { de: "der Einwand", es: "la objeción", emoji: "✋", note: "Plural: «die Einwände». «einen Einwand erheben» = plantear una objeción." },
+      { de: "die Kompromissbereitschaft", es: "la disposición a ceder", emoji: "🤝", note: "«der Kompromiss» + «die Bereitschaft»: estar dispuesto a llegar a un acuerdo." },
+    ],
+    [
+      cz("Dem muss ich entschieden ___.", "A eso tengo que oponerme rotundamente.", ["widersprechen", "zustimmen", "zusagen", "sprechen"], "widersprechen", "«widersprechen» + dativo."),
+      cz("Ich stimme dem nur ___ zu.", "Solo estoy de acuerdo en parte.", ["bedingt", "gerne", "sofort", "kaum"], "bedingt", "«bedingt» = en parte."),
+      { kind: "write", es: "la objeción", references: ["der Einwand"] },
+    ],
+    "Eine Diskussion",
+    ["Die Debatte wurde sachlich geführt. Frau Berg wies darauf hin, dass die Zahlen nicht stimmen. Herr Klein erhob einen Einwand: Zugegeben, die Zahlen seien nicht neu, aber sie seien trotzdem richtig. Am Ende zeigten beide Kompromissbereitschaft. Im Grunde genommen waren sie sich einig."],
+    ["El debate se llevó de forma objetiva. La Sra. Berg señaló que las cifras no son correctas. El Sr. Klein planteó una objeción: es cierto que las cifras no son nuevas, pero igual son correctas. Al final los dos mostraron disposición a ceder. En el fondo estaban de acuerdo."],
+    [
+      { type: "choice", q: "¿Cómo se llevó el debate?", options: ["De forma objetiva", "De forma agresiva", "De forma aburrida", "De forma desordenada"], answer: "De forma objetiva", why: "«sachlich geführt»." },
+      { type: "tf", q: "Herr Klein piensa que las cifras son incorrectas.", answer: false, why: "Dice que «seien trotzdem richtig»." },
+      { type: "choice", q: "¿Cómo terminó el debate?", options: ["Con disposición a ceder", "Con una pelea", "Con un voto", "Sin conclusión"], answer: "Con disposición a ceder", why: "«zeigten beide Kompromissbereitschaft»." },
+    ],
+  ),
+  textanalyse: reading(
+    "Una reseña breve",
+    "Leer una reseña con vocabulario de análisis y sumar dos palabras.",
+    [
+      { de: "die Aussage", es: "el mensaje, la afirmación", emoji: "💬", note: "La idea principal de un texto." },
+      { de: "aufschlussreich", es: "esclarecedor", emoji: "🔦", note: "Algo que da mucha información útil." },
+    ],
+    [
+      cz("Der Autor ___ die These, dass Homeoffice produktiver macht.", "El autor sostiene la tesis de que el home office vuelve más productivo.", ["vertritt", "vertreten", "vertrat", "vertritt sich"], "vertritt", "«eine These vertreten»."),
+      cz("Der Text ist in drei Abschnitte ___.", "El texto se divide en tres secciones.", ["gegliedert", "gliedert", "gegliederte", "gliedern"], "gegliedert", "«gegliedert sein»."),
+      { kind: "write", es: "el mensaje", references: ["die Aussage"] },
+    ],
+    "Eine Rezension",
+    ["Der Text behandelt die Zukunft der Arbeit. Die zentrale Aussage lautet, dass flexible Arbeitszeiten produktiver machen. Der Autor stützt sich auf mehrere Studien und führt ein Beispiel an. Der Stil ist sachlich, die Argumentation überzeugend, aber einseitig. Insgesamt lässt sich festhalten, dass der Text aufschlussreich ist."],
+    ["El texto trata el futuro del trabajo. El mensaje central es que los horarios flexibles vuelven más productivo. El autor se apoya en varios estudios y menciona un ejemplo. El estilo es objetivo, la argumentación convincente, pero unilateral. En conjunto se puede afirmar que el texto es esclarecedor."],
+    [
+      { type: "choice", q: "¿De qué trata el texto?", options: ["Del futuro del trabajo", "Del clima", "De la política", "Del turismo"], answer: "Del futuro del trabajo", why: "«die Zukunft der Arbeit»." },
+      { type: "tf", q: "El estilo del texto es objetivo.", answer: true, why: "«Der Stil ist sachlich»." },
+      { type: "choice", q: "¿Cómo es la argumentación?", options: ["Convincente, pero unilateral", "Débil", "Confusa", "Perfecta"], answer: "Convincente, pero unilateral", why: "«überzeugend, aber einseitig»." },
+    ],
+  ),
+  "medien-c1": reading(
+    "Cómo informarse",
+    "Leer un consejo sobre medios y sumar dos palabras.",
+    [
+      { de: "die Glaubwürdigkeit", es: "la credibilidad", emoji: "✅", note: "«glaubwürdig» = creíble." },
+      { de: "die Reichweite", es: "el alcance", emoji: "📡", note: "Cuántas personas llega a ver algo." },
+    ],
+    [
+      cz("Die ___ einer Quelle ist entscheidend.", "La credibilidad de una fuente es decisiva.", ["Glaubwürdigkeit", "Reichweite", "Meldung", "Schlagzeile"], "Glaubwürdigkeit", "«die Glaubwürdigkeit»."),
+      cz("Falschmeldungen haben oft eine große ___.", "Las noticias falsas suelen tener un gran alcance.", ["Reichweite", "Quelle", "Presse", "Nachricht"], "Reichweite", "«die Reichweite»."),
+      { kind: "write", es: "la credibilidad", references: ["die Glaubwürdigkeit"] },
+    ],
+    "Richtig informieren",
+    ["Wer sich informieren will, sollte mehrere Quellen vergleichen. Die Glaubwürdigkeit einer Quelle ist entscheidend. Falschmeldungen haben oft eine große Reichweite, weil sie Emotionen wecken. Es besteht die Gefahr, dass man nur noch liest, was man ohnehin glaubt. Eine Pause von den Netzwerken tut deshalb vielen gut."],
+    ["Quien quiere informarse debería comparar varias fuentes. La credibilidad de una fuente es decisiva. Las noticias falsas suelen tener un gran alcance, porque despiertan emociones. Existe el riesgo de que uno solo lea lo que ya cree. Un descanso de las redes le hace bien por eso a mucha gente."],
+    [
+      { type: "choice", q: "¿Qué conviene hacer para informarse?", options: ["Comparar varias fuentes", "Leer un solo diario", "No leer", "Creer los titulares"], answer: "Comparar varias fuentes", why: "«mehrere Quellen vergleichen»." },
+      { type: "tf", q: "Las noticias falsas tienen poco alcance.", answer: false, why: "«große Reichweite»." },
+      { type: "choice", q: "¿Qué recomienda el texto?", options: ["Un descanso de las redes", "Más redes", "Menos noticias", "Más publicidad"], answer: "Un descanso de las redes", why: "«Eine Pause von den Netzwerken»." },
+    ],
+  ),
+  "technik-c1": reading(
+    "Una tecnología prometedora",
+    "Leer un texto sobre tecnología y sumar dos palabras.",
+    [
+      { de: "der Durchbruch", es: "el avance decisivo", emoji: "💡", note: "Algo que cambia las cosas de forma importante." },
+      { de: "der Datenschutz", es: "la protección de datos", emoji: "🔒", note: "Las normas para proteger datos personales." },
+    ],
+    [
+      cz("Die Forscher feierten einen ___.", "Los investigadores festejaron un avance decisivo.", ["Durchbruch", "Rückzug", "Streit", "Fehler"], "Durchbruch", "«der Durchbruch»."),
+      cz("Es bleibt ___, welche Folgen das hat.", "Habrá que esperar a ver qué consecuencias tiene.", ["abzuwarten", "abwarten", "gewartet", "warten"], "abzuwarten", "«bleiben + zu + infinitivo»."),
+      { kind: "write", es: "el avance decisivo", references: ["der Durchbruch"] },
+    ],
+    "Ein Durchbruch",
+    ["Die Forscher haben einen Durchbruch erzielt. Die neue Technik kann Krankheiten früher erkennen. Allerdings dürfen Fragen des Datenschutzes nicht ausgeklammert werden. Ob die Technik uns nützt, hängt davon ab, wie wir sie einsetzen. Es bleibt abzuwarten, welche Folgen das haben wird."],
+    ["Los investigadores lograron un avance decisivo. La nueva técnica puede detectar enfermedades antes. Sin embargo, no se pueden dejar de lado las cuestiones de protección de datos. Que la técnica nos sirva depende de cómo la usemos. Habrá que esperar a ver qué consecuencias tendrá."],
+    [
+      { type: "choice", q: "¿Qué logró la investigación?", options: ["Un avance decisivo", "Un fracaso", "Un premio", "Un acuerdo"], answer: "Un avance decisivo", why: "«einen Durchbruch erzielt»." },
+      { type: "tf", q: "La técnica detecta enfermedades más tarde.", answer: false, why: "«Krankheiten früher erkennen»." },
+      { type: "choice", q: "¿Qué no se puede dejar de lado?", options: ["La protección de datos", "El precio", "El nombre", "El color"], answer: "La protección de datos", why: "«Fragen des Datenschutzes»." },
+    ],
+  ),
+  "pruefung-c1": reading(
+    "Un ensayo breve",
+    "Leer un ensayo y sumar dos palabras.",
+    [
+      { de: "die Abwägung", es: "la ponderación", emoji: "⚖️", note: "«abwägen» = ponderar." },
+      { de: "schlüssig", es: "coherente, lógico", emoji: "🧩", note: "Una argumentación sin contradicciones." },
+    ],
+    [
+      cz("Meines ___ überwiegen die Vorteile.", "A mi juicio, las ventajas pesan más.", ["Erachtens", "Erachten", "Erachtets", "erachten"], "Erachtens", "«meines Erachtens» (genitivo)."),
+      cz("Für diese Position ___ mehrere Argumente.", "A favor de esta posición hay varios argumentos.", ["sprechen", "spricht", "sprach", "gesprochen"], "sprechen", "El sujeto va después: plural."),
+      { kind: "write", es: "la ponderación", references: ["die Abwägung"] },
+    ],
+    "Ein Essay",
+    ["In der heutigen Zeit gewinnt die Frage nach der Arbeitsweise zunehmend an Bedeutung. Für flexible Modelle sprechen mehrere Argumente. Allerdings darf nicht übersehen werden, dass es Nachteile gibt. Nach sorgfältiger Abwägung lässt sich festhalten, dass die Vorteile überwiegen. Die Argumentation ist schlüssig, und meines Erachtens ist das Ergebnis überzeugend."],
+    ["En la actualidad la cuestión del modo de trabajo gana cada vez más importancia. A favor de los modelos flexibles hay varios argumentos. Sin embargo, no hay que pasar por alto que hay desventajas. Después de una ponderación cuidadosa se puede afirmar que las ventajas pesan más. La argumentación es coherente, y a mi juicio el resultado es convincente."],
+    [
+      { type: "choice", q: "¿Qué gana importancia?", options: ["La cuestión del modo de trabajo", "El clima", "El turismo", "La moda"], answer: "La cuestión del modo de trabajo", why: "«die Frage nach der Arbeitsweise»." },
+      { type: "tf", q: "El texto ignora las desventajas.", answer: false, why: "«darf nicht übersehen werden, dass es Nachteile gibt»." },
+      { type: "choice", q: "¿Qué piensa el autor del resultado?", options: ["Que es convincente", "Que es débil", "Que es injusto", "Que es raro"], answer: "Que es convincente", why: "«meines Erachtens ist das Ergebnis überzeugend»." },
+    ],
+  ),
 };
