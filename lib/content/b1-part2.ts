@@ -344,7 +344,7 @@ export const UNITS_B1_PART2: Unit[] = [
           ],
           questions: [
             { type: "fill", q: "¿Hasta qué hora está abierto el negocio? (formato 24 h, un número)", answers: ["18", "achtzehn"], hint: "Un número", why: "«bis achtzehn Uhr»." },
-            { type: "tf", q: "La oficina está abierta hoy.", answer: false, why: "«das Büro ist heute geschlossen»." },
+            { type: "tf", q: "La oficina está cerrada hoy.", answer: true, why: "«das Büro ist heute geschlossen»." },
             { type: "tf", q: "Se puede fumar adentro.", answer: false, why: "«Rauchen ist hier verboten»." },
             { type: "choice", q: "¿Adónde va Frau Peters a fumar?", options: ["Afuera, delante de la puerta", "Al baño", "Al balcón", "A la calle de al lado"], answer: "Afuera, delante de la puerta", why: "«Ich gehe vor die Tür»." },
           ],

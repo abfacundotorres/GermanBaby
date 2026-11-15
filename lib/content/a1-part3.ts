@@ -170,7 +170,7 @@ export const UNITS_A1_PART3: Unit[] = [
           questions: [
             { type: "fill", q: "¿Cuánto es el alquiler por mes? (en euros)", answers: ["600", "sechshundert"], hint: "Un número", why: "«sechshundert Euro im Monat»." },
             { type: "fill", q: "¿Cuántos «Zimmer» tiene el departamento?", answers: ["2", "zwei"], hint: "Un número", why: "«zwei Zimmer, eine Küche und ein Bad»." },
-            { type: "tf", q: "Herr Weber piensa que el alquiler es caro.", answer: false, why: "Dice «günstig»: es conveniente." },
+            { type: "tf", q: "Herr Weber piensa que el alquiler es conveniente.", answer: true, why: "Dice «günstig»: es conveniente." },
             { type: "choice", q: "¿Qué hace Herr Weber al final?", options: ["Dice que quiere el departamento", "Busca otro departamento", "Pide un descuento", "Se va sin decidir"], answer: "Dice que quiere el departamento", why: "«Ich möchte die Wohnung»." },
           ],
         },

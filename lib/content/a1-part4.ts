@@ -250,7 +250,7 @@ export const UNITS_A1_PART4: Unit[] = [
           ],
           questions: [
             { type: "choice", q: "¿Qué pide Herr Klein?", options: ["Pan, queso y un huevo", "Pescado y pan", "Carne y queso", "Solo un café"], answer: "Pan, queso y un huevo", why: "«Ich nehme Brot, Käse und ein Ei»." },
-            { type: "tf", q: "En el hotel hay carne.", answer: false, why: "Frau Roth: «Leider nicht»." },
+            { type: "tf", q: "En el hotel no hay carne.", answer: true, why: "Frau Roth: «Leider nicht»." },
             { type: "tf", q: "Herr Klein quiere pescado para el desayuno.", answer: false, why: "Dice «Nein, danke»." },
             { type: "choice", q: "¿Qué le ofrece Frau Roth al final?", options: ["Un café", "Un té", "Agua", "Leche"], answer: "Un café", why: "«Möchten Sie einen Kaffee?»" },
           ],

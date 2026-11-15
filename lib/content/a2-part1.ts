@@ -340,7 +340,7 @@ export const UNITS_A2_PART1: Unit[] = [
           ],
           questions: [
             { type: "choice", q: "¿Qué hora es?", options: ["Las siete", "Las ocho", "Las nueve", "Las seis"], answer: "Las siete", why: "«Es ist schon sieben Uhr»." },
-            { type: "tf", q: "Leon está enfermo.", answer: false, why: "La mamá dice «Du bist nicht krank!»" },
+            { type: "tf", q: "Leon no está enfermo.", answer: true, why: "La mamá dice «Du bist nicht krank!»" },
             { type: "choice", q: "¿Con quién se encuentran?", options: ["Con la abuela", "Con un amigo", "Con el médico", "Con la maestra"], answer: "Con la abuela", why: "«mit Oma»." },
             { type: "fill", q: "¿A qué hora se encuentran? (un número)", answers: ["9", "neun"], hint: "Un número", why: "«um neun Uhr»." },
           ],

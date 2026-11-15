@@ -277,7 +277,7 @@ export const UNITS_B1_PART1: Unit[] = [
             { type: "choice", q: "¿Qué haría Mia si tuviera mucho dinero?", options: ["Viajar", "Comprar una casa", "Dejar de trabajar", "Estudiar"], answer: "Viajar", why: "«würde ich reisen»." },
             { type: "choice", q: "¿Adónde iría?", options: ["A Japón", "A Viena", "A Berlín", "A Madrid"], answer: "A Japón", why: "«nach Japan fahren»." },
             { type: "choice", q: "¿Qué haría Paul?", options: ["Comprar una casa", "Viajar", "Estudiar", "Dejar de trabajar"], answer: "Comprar una casa", why: "«dann würde ich ein Haus kaufen»." },
-            { type: "tf", q: "Mia y Paul tienen mucho dinero.", answer: false, why: "«wir haben leider kein Geld»." },
+            { type: "tf", q: "Mia y Paul no tienen dinero.", answer: true, why: "«wir haben leider kein Geld»." },
           ],
         },
       },

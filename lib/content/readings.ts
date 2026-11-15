@@ -35,7 +35,7 @@ export const READINGS: Record<string, Lesson> = {
     ["Das ist meine Wohnung. Sie ist klein, aber schön und hell. Ich habe ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Ich habe auch einen Garten. Er ist ruhig."],
     ["Este es mi departamento. Es chico, pero lindo y luminoso. Tengo un living, un dormitorio, una cocina y un baño. También tengo un jardín. Es tranquilo."],
     [
-      { type: "tf", q: "El departamento es grande.", answer: false, why: "«Sie ist klein»." },
+      { type: "tf", q: "El departamento es chico.", answer: true, why: "«Sie ist klein»." },
       { type: "choice", q: "¿Qué tiene además de los ambientes?", options: ["Un jardín", "Un balcón", "Una terraza", "Un garaje"], answer: "Un jardín", why: "«Ich habe auch einen Garten»." },
       { type: "choice", q: "¿Cómo es el jardín?", options: ["Tranquilo", "Ruidoso", "Grande", "Nuevo"], answer: "Tranquilo", why: "«Er ist ruhig»." },
     ],
@@ -57,7 +57,7 @@ export const READINGS: Record<string, Lesson> = {
     ["Meine Stadt ist klein. Im Zentrum gibt es einen Platz, eine Kirche und einen Supermarkt. Der Bahnhof ist nicht weit. Ich gehe zu Fuß zum Park. Es gibt keine Bank, aber es gibt eine Apotheke."],
     ["Mi ciudad es chica. En el centro hay una plaza, una iglesia y un supermercado. La estación no está lejos. Voy a pie al parque. No hay banco, pero hay una farmacia."],
     [
-      { type: "tf", q: "En la ciudad hay un banco.", answer: false, why: "«Es gibt keine Bank»." },
+      { type: "tf", q: "En la ciudad no hay un banco.", answer: true, why: "«Es gibt keine Bank»." },
       { type: "choice", q: "¿Cómo va al parque?", options: ["A pie", "En bus", "En tren", "En auto"], answer: "A pie", why: "«zu Fuß»." },
       { type: "choice", q: "¿Qué hay en el centro?", options: ["Una plaza, una iglesia y un supermercado", "Una estación", "Un hospital", "Un museo"], answer: "Una plaza, una iglesia y un supermercado", why: "«einen Platz, eine Kirche und einen Supermarkt»." },
     ],
@@ -177,7 +177,7 @@ export const READINGS: Record<string, Lesson> = {
       { type: "choice", q: "¿Dónde nació?", options: ["En Argentina", "En España", "En Alemania", "En Austria"], answer: "En Argentina", why: "«in Argentinien geboren»." },
       { type: "fill", q: "¿Hace cuántos años llegó a Alemania? (un número)", answers: ["5", "fünf"], hint: "Un número", why: "«Vor fünf Jahren»." },
       { type: "fill", q: "¿Desde hace cuántos años estudia alemán? (un número)", answers: ["2", "zwei"], hint: "Un número", why: "«Seit zwei Jahren»." },
-      { type: "tf", q: "Cuando llegó hablaba muy bien alemán.", answer: false, why: "«ich konnte kaum Deutsch»." },
+      { type: "tf", q: "Cuando llegó casi no hablaba alemán.", answer: true, why: "«ich konnte kaum Deutsch»." },
     ],
   ),
   gesundheit: reading(
@@ -228,7 +228,7 @@ export const READINGS: Record<string, Lesson> = {
     [
       { type: "choice", q: "¿De qué color es el gorro?", options: ["Rojo", "Verde", "Azul", "Negro"], answer: "Rojo", why: "«eine rote Mütze»." },
       { type: "choice", q: "¿Qué lleva el hermano?", options: ["Un pulóver verde", "Una campera negra", "Zapatos marrones", "Un gorro"], answer: "Un pulóver verde", why: "«einen grünen Pullover»." },
-      { type: "tf", q: "Los zapatos son negros.", answer: false, why: "«Meine Schuhe sind braun»." },
+      { type: "tf", q: "Los zapatos son marrones.", answer: true, why: "«Meine Schuhe sind braun»." },
     ],
   ),
   gruende: reading(
@@ -250,7 +250,7 @@ export const READINGS: Record<string, Lesson> = {
     [
       { type: "choice", q: "¿Por qué estudia alemán?", options: ["Porque quiere trabajar en Alemania", "Porque tiene un examen", "Porque le gusta viajar", "Porque su familia es alemana"], answer: "Porque quiere trabajar en Alemania", why: "«weil ich in Deutschland arbeiten möchte»." },
       { type: "choice", q: "¿Qué piensa de la gramática?", options: ["Que es difícil", "Que es fácil", "Que es aburrida", "Que es corta"], answer: "Que es difícil", why: "«die Grammatik ist schwierig»." },
-      { type: "tf", q: "Cree que el alemán es muy fácil.", answer: false, why: "«Deutsch nicht leicht ist»." },
+      { type: "tf", q: "Cree que el alemán no es fácil.", answer: true, why: "«Deutsch nicht leicht ist»." },
     ],
   ),
   geschenke: reading(
@@ -312,7 +312,7 @@ export const READINGS: Record<string, Lesson> = {
     ["En verano viajo a Italia. Voy en tren porque el clima allá es lindo y el tren es más rápido que el bus. ¡El hotel es más grande que mi casa! La habitación cuesta cien euros por noche, pero el desayuno está incluido. Lo que más me gusta es el mar."],
     [
       { type: "choice", q: "¿Cómo viaja?", options: ["En tren", "En bus", "En auto", "En avión"], answer: "En tren", why: "«Ich fahre mit dem Zug»." },
-      { type: "tf", q: "El hotel es más chico que su casa.", answer: false, why: "«größer als mein Haus»." },
+      { type: "tf", q: "El hotel es más grande que su casa.", answer: true, why: "«größer als mein Haus»." },
       { type: "fill", q: "¿Cuánto cuesta la habitación por noche? (en euros)", answers: ["100", "hundert"], hint: "Un número", why: "«hundert Euro pro Nacht»." },
       { type: "choice", q: "¿Qué es lo que más le gusta?", options: ["El mar", "El hotel", "El tren", "La comida"], answer: "El mar", why: "«Am besten finde ich das Meer»." },
     ],
@@ -336,7 +336,7 @@ export const READINGS: Record<string, Lesson> = {
     [
       { type: "choice", q: "¿Qué profesión tiene?", options: ["Cocinera", "Docente", "Médica", "Ingeniera"], answer: "Cocinera", why: "«Ich bin Köchin»." },
       { type: "choice", q: "¿Qué hará el año que viene?", options: ["Abrir un restaurante", "Viajar", "Estudiar", "Cambiar de trabajo"], answer: "Abrir un restaurante", why: "«werde ich ein Restaurant eröffnen»." },
-      { type: "tf", q: "Ya tiene suficiente dinero.", answer: false, why: "«Hoffentlich habe ich genug Geld»: todavía no está segura." },
+      { type: "tf", q: "Todavía no tiene suficiente dinero.", answer: true, why: "«Hoffentlich habe ich genug Geld»: todavía no está segura." },
     ],
   ),
   "pruefung-a2": reading(
@@ -434,7 +434,7 @@ export const READINGS: Record<string, Lesson> = {
     [
       { type: "choice", q: "¿Dónde vive la vecina?", options: ["En el tercer piso", "En el segundo piso", "En otro edificio", "En la planta baja"], answer: "En el tercer piso", why: "«im dritten Stock»." },
       { type: "choice", q: "¿Qué le regaló?", options: ["Un libro que buscaba hace tiempo", "Flores", "Una torta", "Una película"], answer: "Un libro que buscaba hace tiempo", why: "«ein Buch, das ich schon lange suche»." },
-      { type: "tf", q: "La vecina es antipática.", answer: false, why: "«immer freundlich»." },
+      { type: "tf", q: "La vecina es amable.", answer: true, why: "«immer freundlich»." },
     ],
   ),
   passiv: reading(
@@ -454,7 +454,7 @@ export const READINGS: Record<string, Lesson> = {
     ["En nuestra ciudad se construye mucho. El viejo ayuntamiento se renovó el año pasado. Ahora se está haciendo un parque nuevo. El museo está cerrado los lunes. Acá no se puede fumar."],
     [
       { type: "choice", q: "¿Qué se renovó el año pasado?", options: ["El ayuntamiento", "El museo", "El parque", "La estación"], answer: "El ayuntamiento", why: "«Das alte Rathaus wurde letztes Jahr renoviert»." },
-      { type: "tf", q: "El museo está abierto los lunes.", answer: false, why: "«montags geschlossen»." },
+      { type: "tf", q: "El museo está cerrado los lunes.", answer: true, why: "«montags geschlossen»." },
       { type: "tf", q: "Se puede fumar.", answer: false, why: "«darf nicht geraucht werden»." },
     ],
   ),

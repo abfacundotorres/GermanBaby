@@ -254,7 +254,7 @@ export const UNITS_B1_PART3: Unit[] = [
             { type: "choice", q: "¿De quién es la cartera?", options: ["De su hija", "De su hijo", "De su esposo", "De su madre"], answer: "De su hija", why: "«die Tasche meiner Tochter»." },
             { type: "choice", q: "¿De quién es el libro?", options: ["De su hijo", "De su hija", "De su esposo", "De su hermano"], answer: "De su hijo", why: "«das Buch meines Sohnes»." },
             { type: "choice", q: "¿Dónde perdió la cartera?", options: ["En el auto de su esposo", "En el tren", "En el café", "En la oficina"], answer: "En el auto de su esposo", why: "«Im Auto meines Mannes»." },
-            { type: "tf", q: "El auto es verde.", answer: false, why: "«Das Auto ist rot»." },
+            { type: "tf", q: "El auto es rojo.", answer: true, why: "«Das Auto ist rot»." },
           ],
         },
       },

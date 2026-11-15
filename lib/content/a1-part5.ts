@@ -45,7 +45,7 @@ export const UNITS_A1_PART5: Unit[] = [
           ],
           questions: [
             { type: "choice", q: "¿Qué sabe hacer bien Lena?", options: ["Nadar", "Cantar", "Bailar", "Cocinar"], answer: "Nadar", why: "«Ich kann gut schwimmen»." },
-            { type: "tf", q: "Lena sabe cantar.", answer: false, why: "«Ich kann nicht singen»." },
+            { type: "tf", q: "Lena no sabe cantar.", answer: true, why: "«Ich kann nicht singen»." },
             { type: "tf", q: "Tim sabe nadar.", answer: false, why: "«Ich kann nicht schwimmen»." },
             { type: "choice", q: "¿Qué sabe hacer Tim?", options: ["Bailar", "Nadar", "Cantar", "Tocar el piano"], answer: "Bailar", why: "«Ich kann tanzen»." },
           ],
@@ -328,7 +328,7 @@ export const UNITS_A1_PART5: Unit[] = [
           ],
           questions: [
             { type: "choice", q: "¿Adónde viajó Lena?", options: ["A Berlín", "A Múnich", "A Hamburgo", "A Viena"], answer: "A Berlín", why: "«Ich bin nach Berlin gefahren»." },
-            { type: "tf", q: "Lena viajó en auto.", answer: false, why: "«mit dem Zug»: en tren." },
+            { type: "tf", q: "Lena viajó en tren.", answer: true, why: "«mit dem Zug»: en tren." },
             { type: "fill", q: "¿A qué hora se levantó? (un número)", answers: ["7", "sieben"], hint: "Un número", why: "«um sieben Uhr»." },
             { type: "choice", q: "¿Qué hizo el domingo?", options: ["Se quedó en casa", "Fue a Berlín", "Trabajó", "Fue al parque"], answer: "Se quedó en casa", why: "«Am Sonntag war ich zu Hause»." },
           ],

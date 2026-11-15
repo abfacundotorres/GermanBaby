@@ -48,7 +48,7 @@ export const UNITS_A2_PART5: Unit[] = [
             { type: "choice", q: "¿Qué profesión tiene Anna?", options: ["Ingeniera", "Docente", "Cocinera", "Médica"], answer: "Ingeniera", why: "«Ich bin Ingenieurin»." },
             { type: "choice", q: "¿Qué profesión tiene Herr Maier?", options: ["Docente", "Ingeniero", "Cocinero", "Estudiante"], answer: "Docente", why: "«Ich bin Lehrer»." },
             { type: "choice", q: "¿Qué hace la esposa de Herr Maier?", options: ["Es cocinera", "Es médica", "Es docente", "Es estudiante"], answer: "Es cocinera", why: "«Meine Frau ist Köchin»." },
-            { type: "tf", q: "Herr Maier trabaja en un restaurante.", answer: false, why: "Trabaja en una escuela; su esposa trabaja en el restaurante." },
+            { type: "tf", q: "Herr Maier trabaja en una escuela.", answer: true, why: "Trabaja en una escuela; su esposa trabaja en el restaurante." },
           ],
         },
       },
@@ -309,7 +309,7 @@ export const UNITS_A2_PART5: Unit[] = [
           questions: [
             { type: "choice", q: "¿A quién se escribe el correo?", options: ["A la Sra. Costa", "Al Sr. Weiß", "A Anna", "Al médico"], answer: "A la Sra. Costa", why: "«eine E-Mail an Frau Costa»." },
             { type: "choice", q: "¿Qué quieren acordar?", options: ["Una cita", "Un precio", "Un pasaje", "Una reserva"], answer: "Una cita", why: "«einen Termin vereinbaren»." },
-            { type: "tf", q: "El saludo del correo es informal.", answer: false, why: "«Sehr geehrte Frau Costa» es formal." },
+            { type: "tf", q: "El saludo del correo es formal.", answer: true, why: "«Sehr geehrte Frau Costa» es formal." },
             { type: "choice", q: "¿Qué día proponen?", options: ["El lunes", "El martes", "El viernes", "El domingo"], answer: "El lunes", why: "«am Montag»." },
           ],
         },

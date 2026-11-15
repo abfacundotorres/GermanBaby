@@ -531,7 +531,7 @@ export const UNITS_B1_PART5: Unit[] = [
           ],
           questions: [
             { type: "choice", q: "¿Qué toma Max?", options: ["Café", "Té", "Agua", "Jugo"], answer: "Café", why: "«sondern Kaffee»." },
-            { type: "tf", q: "El hermano de Nora toma café.", answer: false, why: "«trinkt nur Wasser»." },
+            { type: "tf", q: "El hermano de Nora toma solo agua.", answer: true, why: "«trinkt nur Wasser»." },
             { type: "choice", q: "¿Qué idiomas habla el hermano?", options: ["Español e inglés", "Solo español", "Solo inglés", "Alemán y francés"], answer: "Español e inglés", why: "«sowohl Spanisch als auch Englisch»." },
             { type: "choice", q: "¿Cómo es el hermano?", options: ["Amable e inteligente", "Callado", "Cansado", "Ruidoso"], answer: "Amable e inteligente", why: "«nicht nur nett, sondern auch klug»." },
           ],

@@ -336,7 +336,7 @@ export const UNITS_A2_PART3: Unit[] = [
             { type: "choice", q: "¿Cuándo es la fiesta?", options: ["El sábado", "El domingo", "El viernes", "El lunes"], answer: "El sábado", why: "«am Samstag»." },
             { type: "fill", q: "¿A qué hora es la fiesta? (un número)", answers: ["7", "sieben"], hint: "Un número", why: "«Um sieben Uhr»." },
             { type: "choice", q: "¿Qué tiene que traer Max?", options: ["Una ensalada", "Una torta", "Bebidas", "Flores"], answer: "Una ensalada", why: "«einen Salat mitbringen»." },
-            { type: "tf", q: "Lisa quiere un regalo de Max.", answer: false, why: "Dice «Nichts!»: no hace falta nada." },
+            { type: "tf", q: "Lisa no quiere ningún regalo de Max.", answer: true, why: "Dice «Nichts!»: no hace falta nada." },
           ],
         },
       },

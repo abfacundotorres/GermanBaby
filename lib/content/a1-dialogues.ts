@@ -97,7 +97,7 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     questions: [
       { type: "fill", q: "¿Cuántos años tiene Max? (un número)", answers: ["8", "acht"], hint: "Un número", why: "«acht Jahre alt»." },
       { type: "fill", q: "¿Cuántos años tiene Lena? (un número)", answers: ["10", "zehn"], hint: "Un número", why: "«zehn Jahre alt»." },
-      { type: "tf", q: "Max es mayor que Lena.", answer: false, why: "Max tiene 8 y Lena 10." },
+      { type: "tf", q: "Lena es mayor que Max.", answer: true, why: "Max tiene 8 y Lena 10." },
     ],
   },
   "cafe/getraenke": {
@@ -314,7 +314,7 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     questions: [
       { type: "fill", q: "¿Cuántos años tiene la abuela de Max? (un número)", answers: ["70", "siebzig"], hint: "Un número", why: "«siebzig»." },
       { type: "fill", q: "¿Cuántos años tiene el abuelo? (un número)", answers: ["80", "achtzig"], hint: "Un número", why: "«achtzig»." },
-      { type: "tf", q: "El abuelo es más joven que la abuela.", answer: false, why: "Él tiene 80 y ella 70." },
+      { type: "tf", q: "El abuelo es mayor que la abuela.", answer: true, why: "Él tiene 80 y ella 70." },
     ],
   },
   "markt/einkaufen": {
