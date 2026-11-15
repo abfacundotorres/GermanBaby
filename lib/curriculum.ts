@@ -41,6 +41,7 @@ import { UNITS_C1_PART6 } from "./content/c1-part6.ts";
 import { READINGS_C1 } from "./content/readings-c1.ts";
 import { PRACTICE_C1 } from "./content/practice-c1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
+import { THEMATIC } from "./content/thematic.ts";
 
 export type Vocab = {
   de: string;
@@ -374,6 +375,9 @@ for (const u of UNITS) {
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
   const long = LONG_LISTENINGS[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
+  // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
+  const them = THEMATIC[u.id];
+  if (them && !u.lessons.some((l) => l.id === them.id)) u.lessons.push(them);
 }
 
 // Frases de ejemplo por palabra y explicaciones previas por lección (después de armar las lecturas y las prácticas, que también las llevan).
