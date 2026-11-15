@@ -116,6 +116,16 @@ async function answer(page, step) {
       return null;
     case "dictation": await type(step.de); await check(); return null;
     case "write": await type(step.references[0]); await check(); return null;
+    case "free": {
+      // Producción libre: necesita IA. Sin clave de Claude aparece «Saltear»; con clave, se acepta lo que corrija.
+      await page.locator("textarea").first().fill("Ich bin hier. Das ist gut. Wir sind da. Es ist schön.");
+      await page.locator("button:has-text('Corregir')").first().click();
+      const skip = page.locator("button:has-text('Saltear')").first();
+      const cont = page.locator("button:has-text('Continuar')").first();
+      await skip.or(cont).waitFor({ state: "visible", timeout: 60000 });
+      if (await skip.isVisible()) await skip.click();
+      return null;
+    }
     case "speak": {
       const mic = page.locator("button:has-text('🎤')");
       if (await mic.count()) { await mic.first().click().catch(() => {}); }

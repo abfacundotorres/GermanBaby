@@ -9,6 +9,7 @@ import { A1_DIALOGUES } from "./content/a1-dialogues.ts";
 import { READINGS } from "./content/readings.ts";
 import { EXAMPLES } from "./content/examples.ts";
 import { INTROS } from "./content/intros.ts";
+import { FREE_PROMPTS } from "./content/free-prompts.ts";
 import { PRACTICE_A2 } from "./content/practice-a2.ts";
 import { PRACTICE_B1 } from "./content/practice-b1.ts";
 import { PRACTICE_B2 } from "./content/practice-b2.ts";
@@ -47,7 +48,9 @@ export type HandExercise =
   | { kind: "dictation"; de: string; es: string }
   | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory }
   /** Completar la frase: `sentence` lleva «___» donde falta la palabra. `es` es la traducción de la frase entera. */
-  | { kind: "cloze"; sentence: string; es: string; options: string[]; answer: string; explanation?: string; category?: MistakeCategory };
+  | { kind: "cloze"; sentence: string; es: string; options: string[]; answer: string; explanation?: string; category?: MistakeCategory }
+  /** Producción libre: el alumno escribe varias frases propias sobre un tema y Claude las corrige. `focus` = estructuras que debería usar. */
+  | { kind: "free"; prompt: string; focus: string[]; minSentences: number; hint?: string };
 
 /** Texto para leer, con preguntas. Las palabras nuevas van en el vocabulario de la lección. */
 export type Reading = { title: string; text: string[]; translation: string[]; questions: ListenQuestion[] };
@@ -345,6 +348,9 @@ const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A2, ...PRACTICE_B1, ...PR
 for (const u of UNITS) {
   const pr = PRACTICE[u.id];
   if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
+  // Al final de cada práctica, un ejercicio de producción libre corregido por Claude.
+  const fp = FREE_PROMPTS[u.id];
+  if (pr && fp && !pr.exercises.some((e) => e.kind === "free")) pr.exercises.push({ kind: "free", ...fp });
 }
 
 // Frases de ejemplo por palabra y explicaciones previas por lección (después de armar las lecturas y las prácticas, que también las llevan).

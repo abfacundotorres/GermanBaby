@@ -16,6 +16,7 @@ import { PronunciationReport } from "./PronunciationReport";
 import { GENDER_ES, WordText } from "./WordText";
 import { splitArticle, pluralFromNote } from "@/lib/vocab";
 import type { CorrectionResult } from "@/app/api/correct/route";
+import type { FreeResult } from "@/app/api/free/route";
 import type { MistakeCategory, MistakeInput } from "@/lib/mistakes";
 
 export type Status = "ok" | "almost" | "bad" | "skip";
@@ -88,7 +89,7 @@ export function Explain({ step }: { step: StepOf<"explain"> }) {
       {step.rules.length > 0 && (
         <div className="card small">📐 <b>Gramática:</b> {step.rules.join(" · ")}</div>
       )}
-      <div className="small muted">La lección va así: palabras nuevas → práctica → mini examen. Al final te dejo un resumen de todo lo que viste.</div>
+      <div className="small muted">La lección va así: {step.words.length ? "palabras nuevas → " : ""}práctica → escucha o lectura → mini examen. Al final te dejo un resumen de todo lo que viste.</div>
     </div>
   );
 }
@@ -321,6 +322,84 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
         <button className="btn btn-primary btn-block" disabled={!value.trim() || loading} onClick={check}>
           {loading ? <><span className="spinner" /> Corrigiendo…</> : "Comprobar"}
         </button>
+      )}
+    </div>
+  );
+}
+
+// ---------------- Producción libre (corrige Claude) ----------------
+const countSentences = (t: string) => t.split(/[.!?\n]+/).filter((x) => x.trim().split(/\s+/).filter(Boolean).length >= 2).length;
+
+export function FreeWrite({ step, locked, onResult }: Props<StepOf<"free">>) {
+  const [value, setValue] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState<string | null>(null);
+  const n = countSentences(value);
+  const enough = n >= step.minSentences;
+
+  const check = async () => {
+    const answer = value.trim();
+    setLoading(true);
+    setFailed(null);
+    try {
+      const r = await callAi<FreeResult>("/api/free", { prompt: step.prompt, focus: step.focus, answer, level: getStudyLevel() }, "correct");
+      const status: Status = r.verdict === "correct" && r.usedFocus ? "ok" : r.verdict === "incorrect" ? "bad" : "almost";
+      onResult({
+        status,
+        title: status === "ok" ? "¡Muy bien!" : status === "almost" ? "¡Casi!" : "Revisemos",
+        detail: (
+          <div className="stack" style={{ gap: 6 }}>
+            <CorrectionDetail r={r} answer={answer} />
+            {!r.usedFocus && <div className="small">💡 Te faltó usar: {step.focus.join(" · ")}.</div>}
+            {r.natural && r.natural.trim() !== answer && <div className="small muted">Otra forma de decirlo: <i>{r.natural}</i></div>}
+          </div>
+        ),
+        answer,
+        expected: r.corrected,
+        category: "gramática",
+        mistakes: r.errors.map((e) => ({ category: e.category, wrong: e.fragment, right: e.fix, explanation: e.explanation })),
+      });
+    } catch (e) {
+      setFailed((e as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="stack">
+      <div className="prompt-label">Escribí con tus palabras</div>
+      <div className="h2">{step.prompt}</div>
+      <div className="muted small">Usá: {step.focus.join(" · ")}. Mínimo {step.minSentences} frases.</div>
+      {step.hint && <div className="muted small">💡 {step.hint}</div>}
+      <textarea
+        className="input"
+        style={{ minHeight: 120, resize: "vertical", fontFamily: "inherit" }}
+        value={value}
+        placeholder="Escribí en alemán…"
+        disabled={locked || loading}
+        autoCapitalize="off"
+        autoCorrect="off"
+        spellCheck={false}
+        onChange={(e) => setValue(e.target.value)}
+      />
+      <div className="umlauts">
+        {["ä", "ö", "ü", "ß", "Ä", "Ö", "Ü"].map((c) => (
+          <button key={c} type="button" disabled={locked || loading} onClick={() => setValue(value + c)}>{c}</button>
+        ))}
+      </div>
+      {!locked && (
+        <>
+          <button className="btn btn-primary btn-block" disabled={!enough || loading} onClick={check}>
+            {loading ? <><span className="spinner" /> Corrigiendo…</> : enough ? "Corregir" : `Faltan frases (${n}/${step.minSentences})`}
+          </button>
+          {failed && (
+            <div className="stack">
+              <div className="small muted">No pude corregirlo con IA: {failed}</div>
+              <button className="btn" onClick={() => onResult({ status: "skip", title: "Ejercicio salteado" })}>Saltear este ejercicio</button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

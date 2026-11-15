@@ -177,3 +177,18 @@ test("explicaciones previas: cada clave es una lección real y trae explicación
     assert.ok(n.summary.length >= 1, `${k}: falta el resumen`);
   }
 });
+
+test("producción libre: cada práctica (A2 a B2) cierra con un ejercicio libre y cada clave es una unidad con práctica", async () => {
+  const { FREE_PROMPTS } = await import("../lib/content/free-prompts.ts");
+  const practicas = lessons.filter(({ l }) => l.id === "practica");
+  for (const { u, l } of practicas) {
+    const f = l.exercises.filter((e) => e.kind === "free");
+    assert.equal(f.length, 1, `${u.id}: la práctica debe tener un ejercicio libre`);
+    if (f[0].kind === "free") {
+      assert.ok(f[0].prompt.length > 20 && f[0].focus.length >= 2 && f[0].minSentences >= 3, `${u.id}: ejercicio libre incompleto`);
+    }
+  }
+  const withPractice = new Set(practicas.map(({ u }) => u.id));
+  for (const k of Object.keys(FREE_PROMPTS)) assert.ok(withPractice.has(k), `consigna libre para una unidad sin práctica: ${k}`);
+  assert.equal(Object.keys(FREE_PROMPTS).length, practicas.length);
+});
