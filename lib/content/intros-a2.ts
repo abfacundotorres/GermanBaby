@@ -115,7 +115,7 @@ export const INTROS_A2: Record<string, LessonNotes> = {
   "kleidung/kleider": {
     intro: [
       "Los nombres de las prendas tienen su artículo, y no siempre coincide con el español: «die Hose» (el pantalón) es femenino y singular, mientras que «die Schuhe» (los zapatos) es plural. El singular de los zapatos es «der Schuh».",
-      "El vendedor te va a preguntar «Kann ich Ihnen helfen?» (¿puedo ayudarlo?). «Ihnen» es el dativo formal de «Sie»: lo vas a ver con más detalle en la unidad 19.",
+      "El vendedor te va a preguntar «Kann ich Ihnen helfen?» (¿puedo ayudarlo?). «Ihnen» es el dativo formal de «Sie»: lo vas a ver con más detalle en la unidad 20.",
     ],
     summary: [
       "das T-Shirt · die Hose · die Jacke · der Pullover · das Kleid · die Schuhe · der Rock.",

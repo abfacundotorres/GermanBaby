@@ -9,7 +9,7 @@ import {
 } from "@/lib/progress";
 import { sfx } from "@/lib/sfx";
 import { levelFromProgress, setStudyLevel, type Level } from "@/lib/level";
-import { Build, Choice, Cloze, Dictation, Explain, FreeWrite, Intro, Listen, ListenQ, Quiz, ReadQ, Rule, Section, Speak, Write, type Outcome } from "./Exercises";
+import { Build, Choice, Cloze, Dictation, Explain, FreeWrite, Intro, Listen, ListenQ, Pair, Quiz, ReadQ, Rule, Section, Speak, Write, type Outcome } from "./Exercises";
 import Mascot, { type Mood } from "./Mascot";
 
 export const MAX_HEARTS = 5;
@@ -370,6 +370,7 @@ function Session({
     case "listenq": body = <ListenQ key={key} step={step} {...props} />; break;
     case "readq": body = <ReadQ key={key} step={step} {...props} />; break;
     case "cloze": body = <Cloze key={key} step={step} {...props} />; break;
+    case "pair": body = <Pair key={key} step={step} {...props} />; break;
     case "free": body = <FreeWrite key={key} step={step} {...props} />; break;
     case "explain": body = <Explain key={key} step={step} />; break;
     case "section": body = <Section key={key} step={step} />; break;

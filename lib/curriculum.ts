@@ -10,6 +10,7 @@ import { READINGS } from "./content/readings.ts";
 import { EXAMPLES } from "./content/examples.ts";
 import { INTROS } from "./content/intros.ts";
 import { FREE_PROMPTS } from "./content/free-prompts.ts";
+import { UNITS_AUSSPRACHE } from "./content/aussprache.ts";
 import { PRACTICE_A2 } from "./content/practice-a2.ts";
 import { PRACTICE_B1 } from "./content/practice-b1.ts";
 import { PRACTICE_B2 } from "./content/practice-b2.ts";
@@ -49,6 +50,8 @@ export type HandExercise =
   | { kind: "quiz"; question: string; options: string[]; answer: string; explanation: string; category: MistakeCategory }
   /** Completar la frase: `sentence` lleva «___» donde falta la palabra. `es` es la traducción de la frase entera. */
   | { kind: "cloze"; sentence: string; es: string; options: string[]; answer: string; explanation?: string; category?: MistakeCategory }
+  /** Escuchar y elegir entre dos palabras parecidas (pares mínimos de pronunciación). `de` = lo que se oye; `es` = su significado. */
+  | { kind: "pair"; de: string; es: string; options: string[] }
   /** Producción libre: el alumno escribe varias frases propias sobre un tema y Claude las corrige. `focus` = estructuras que debería usar. */
   | { kind: "free"; prompt: string; focus: string[]; minSentences: number; hint?: string };
 
@@ -331,7 +334,11 @@ const UNITS_A1_PART1: Unit[] = [
   },
 ];
 
-export const UNITS: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART4];
+const UNITS_ALL: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART4];
+
+// La unidad de pronunciación va después de «Mi día» (unidad 8), cuando ya hay base de vocabulario.
+const AFTER_UNIT_8 = UNITS_ALL.findIndex((u) => u.id === "alltag") + 1;
+export const UNITS: Unit[] = [...UNITS_ALL.slice(0, AFTER_UNIT_8), ...UNITS_AUSSPRACHE, ...UNITS_ALL.slice(AFTER_UNIT_8)];
 
 // Diálogos cortos de las unidades 1 a 8, definidos aparte.
 for (const u of UNITS) for (const l of u.lessons) {

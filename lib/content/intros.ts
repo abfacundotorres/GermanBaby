@@ -5,6 +5,7 @@
 import { READING_TIP, INTROS_A2, type LessonNotes } from "./intros-a2.ts";
 import { INTROS_B1 } from "./intros-b1.ts";
 import { INTROS_B2 } from "./intros-b2.ts";
+import { INTROS_AUSSPRACHE } from "./intros-aussprache.ts";
 export type { LessonNotes };
 
 export const INTROS: Record<string, LessonNotes> = {
@@ -564,4 +565,4 @@ export const INTROS: Record<string, LessonNotes> = {
   "pruefung/lesen": { intro: [READING_TIP], summary: ["Aprendiste palabras para estudiar: die Stunde, das Wort, schwer, üben."] },
 };
 
-Object.assign(INTROS, INTROS_A2, INTROS_B1, INTROS_B2);
+Object.assign(INTROS, INTROS_A2, INTROS_B1, INTROS_B2, INTROS_AUSSPRACHE);

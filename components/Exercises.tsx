@@ -166,6 +166,27 @@ export function Listen({ step, locked, onResult }: Props<StepOf<"listen">>) {
   );
 }
 
+// ---------------- Pares mínimos: escuchar y elegir ----------------
+export function Pair({ step, locked, onResult }: Props<StepOf<"pair">>) {
+  const [options] = useState(() => shuffle(step.options));
+  return (
+    <div className="stack">
+      <div className="prompt-label">¿Cuál escuchaste?</div>
+      <div style={{ margin: "10px 0" }}><AudioButtons text={step.de} autoPlay size="big" /></div>
+      <Options
+        options={options}
+        answer={step.de}
+        locked={locked}
+        onPick={(o) =>
+          onResult(o === step.de
+            ? { status: "ok", detail: <>«{step.de}» = {step.es}</> }
+            : { status: "bad", detail: <>Era <b>{step.de}</b> ({step.es}). Escuchá la diferencia de nuevo con la tortuga 🐢.</>, answer: o, expected: step.de, category: "pronunciación" })
+        }
+      />
+    </div>
+  );
+}
+
 // ---------------- Armar la frase ----------------
 export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
   const [bank] = useState(() => shuffle([...tiles(step.answer), ...step.extra]).map((t, i) => ({ t, i })));

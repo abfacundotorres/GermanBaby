@@ -107,6 +107,7 @@ async function answer(page, step) {
     case "choice": await option(step.direction === "de-es" ? step.vocab.es : step.vocab.de); return null;
     case "listen": await option(step.vocab.de); return null;
     case "quiz": await option(step.answer); return null;
+    case "pair": await option(step.de); return null;
     case "cloze": await option(step.answer); return null;
     case "build":
       for (const t of tilesOf(step.answer)) {

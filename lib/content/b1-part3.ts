@@ -268,7 +268,7 @@ export const UNITS_B1_PART3: Unit[] = [
           { de: "Wegen des Regens bleibe ich zu Hause", es: "Por la lluvia me quedo en casa", emoji: "🏠" },
           { de: "trotz", es: "a pesar de", emoji: "💪", note: "También con genitivo. Igual que «obwohl», pero seguido de un sustantivo." },
           { de: "Trotz des Regens gehe ich zur Arbeit", es: "A pesar de la lluvia voy a trabajar", emoji: "☔" },
-          { de: "während des Essens", es: "durante la comida", emoji: "🍽️", note: "Como preposición, «während» lleva genitivo. Como conjunción (en la unidad 24) manda el verbo al final." },
+          { de: "während des Essens", es: "durante la comida", emoji: "🍽️", note: "Como preposición, «während» lleva genitivo. Como conjunción (en la unidad 25) manda el verbo al final." },
           { de: "Während des Essens sehe ich nicht fern", es: "Durante la comida no miro tele", emoji: "📺" },
           { de: "Statt des Autos nehme ich den Bus", es: "En vez del auto, tomo el bus", emoji: "🚌", note: "«statt» + genitivo = en vez de." },
         ],

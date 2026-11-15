@@ -547,3 +547,37 @@ ex("kurz und bündig", "Der Brief ist kurz und bündig.", "La carta es breve y d
 // ---------- Unidad 42: Preparación para el examen B2
 ex("der Umsatz", "Der Umsatz ist deutlich besser.", "Las ventas son notablemente mejores.");
 ex("deutlich", "Das Wetter ist deutlich besser.", "El tiempo está notablemente mejor.");
+
+// ---------- Unidad 9: Aussprache (pronunciación)
+ex("über", "Der Kaffee ist über zehn Euro.", "El café cuesta más de diez euros.");
+ex("für", "Der Kaffee ist für Anna.", "El café es para Anna.");
+ex("das Büro", "Ich arbeite im Büro.", "Trabajo en la oficina.");
+ex("hören", "Ich möchte Tom hören.", "Quiero escuchar a Tom.");
+ex("der Löffel", "Ich möchte einen Löffel.", "Quiero una cuchara.");
+ex("Österreich", "Wien ist in Österreich.", "Viena está en Austria.");
+ex("spät", "Es ist schon spät.", "Ya es tarde.");
+ex("das Mädchen", "Das Mädchen heißt Mia.", "La niña se llama Mia.");
+ex("ich", "Ich bin Lena.", "Soy Lena.");
+ex("nicht", "Das ist nicht Anna.", "Esa no es Anna.");
+ex("das Buch", "Das ist mein Buch.", "Este es mi libro.");
+ex("die Nacht", "Gute Nacht, Lena!", "¡Buenas noches, Lena!");
+ex("sprechen", "Ich möchte Deutsch sprechen.", "Quiero hablar alemán.");
+ex("spielen", "Mia möchte Fußball spielen.", "Mia quiere jugar al fútbol.");
+ex("stehen", "Ich möchte nicht stehen.", "No quiero estar de pie.");
+ex("falsch", "Das ist falsch.", "Eso es incorrecto.");
+ex("die Zeit", "Ich habe keine Zeit.", "No tengo tiempo.");
+ex("der Zucker", "Ich möchte Zucker, bitte.", "Quiero azúcar, por favor.");
+ex("wo", "Wo ist Anna?", "¿Dónde está Anna?");
+ex("wer", "Wer ist das?", "¿Quién es eso?");
+ex("ja", "Ja, das ist Tom.", "Sí, ese es Tom.");
+ex("der Vogel", "Mia hat einen Vogel.", "Mia tiene un pájaro.");
+ex("vielleicht", "Vielleicht ist Tom hier.", "Quizás Tom está acá.");
+ex("die Welt", "Hallo, Welt!", "¡Hola, mundo!");
+ex("richtig", "Das ist richtig.", "Eso es correcto.");
+ex("reden", "Wir möchten reden.", "Queremos conversar.");
+ex("die Uhr", "Es ist acht Uhr.", "Son las ocho.");
+ex("sehr", "Das ist sehr gut.", "Eso es muy bueno.");
+ex("der Computer", "Ich habe einen Computer.", "Tengo una computadora.");
+ex("das Bier", "Ich möchte ein Bier, bitte.", "Quiero una cerveza, por favor.");
+ex("die Leute", "Die Leute sind hier.", "La gente está acá.");
+ex("weit", "Wien ist weit.", "Viena queda lejos.");

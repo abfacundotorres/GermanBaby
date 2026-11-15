@@ -192,3 +192,14 @@ test("producción libre: cada práctica (A2 a B2) cierra con un ejercicio libre 
   for (const k of Object.keys(FREE_PROMPTS)) assert.ok(withPractice.has(k), `consigna libre para una unidad sin práctica: ${k}`);
   assert.equal(Object.keys(FREE_PROMPTS).length, practicas.length);
 });
+
+test("pares mínimos: la palabra que se oye está entre las opciones y hay dos opciones distintas", () => {
+  let n = 0;
+  for (const { u, l } of lessons) for (const e of l.exercises) {
+    if (e.kind !== "pair") continue;
+    n++;
+    assert.ok(e.options.includes(e.de) && new Set(e.options).size === e.options.length && e.options.length >= 2, `${u.id}/${l.id}: par mal armado (${e.de})`);
+    assert.ok(e.es.trim().length > 1, `${u.id}/${l.id}: falta el significado de «${e.de}»`);
+  }
+  assert.ok(n >= 12, "la unidad de pronunciación debe traer pares mínimos");
+});

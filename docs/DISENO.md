@@ -108,13 +108,14 @@ A1 (14 unidades), A2 (9), B1 (11) y B2 (8). A1:
 7. **En el mercado**: 11-100, cantidades, precios.
 8. **Mi día**: rutina, verbos separables (`aufstehen`, `einkaufen`), `zuerst/dann/danach`.
 
-9. **La casa**: ambientes, muebles, describir (`groß`, `klein`, `neu`…), buscar departamento y alquiler, y una lección de gramática sobre el plural.
+9. **Aussprache** (`lib/content/aussprache.ts`, va después de «Mi día»): los sonidos que el español no tiene. 4 lecciones: ä/ö/ü, ch/sch/sp/st, z/w/v/j y r/-er/ie/ei/eu. Cada una trae palabras con la pista de cómo suenan, **pares mínimos** (ejercicio `pair`: «¿cuál escuchaste?», p. ej. Wein / fein), preguntas sobre el sonido y frases para decir (las evalúa Azure), más una charla con Frau Lang. Desde acá la numeración de las unidades está corrida en +1 respecto de las primeras versiones del documento.
+10. **La casa**: ambientes, muebles, describir (`groß`, `klein`, `neu`…), buscar departamento y alquiler, y una lección de gramática sobre el plural.
 
-10. **La ciudad**: lugares y «Es gibt», preguntar el camino, transporte y gramática del dativo (mit, zu, in; zum/zur/im).
-11. **Comida y gustos**: comidas, gern/mögen/kein, restaurante y gramática de los verbos que cambian la vocal (essen, nehmen, sprechen, fahren…).
-12. **Poder, deber, querer**: können, müssen, wollen, frases de supervivencia («Wie bitte?», «langsamer») y gramática de los modales.
-13. **El pasado**: Perfekt con haben (regulares e irregulares) y con sein, `war`, y gramática del participio.
-14. **Preparación para el examen**: meses, cumpleaños con ordinales, formularios y deletreo (con el nombre de las letras), anuncios de estación y repaso de casos, orden de la oración y negación.
+11. **La ciudad**: lugares y «Es gibt», preguntar el camino, transporte y gramática del dativo (mit, zu, in; zum/zur/im).
+12. **Comida y gustos**: comidas, gern/mögen/kein, restaurante y gramática de los verbos que cambian la vocal (essen, nehmen, sprechen, fahren…).
+13. **Poder, deber, querer**: können, müssen, wollen, frases de supervivencia («Wie bitte?», «langsamer») y gramática de los modales.
+14. **El pasado**: Perfekt con haben (regulares e irregulares) y con sein, `war`, y gramática del participio.
+15. **Preparación para el examen**: meses, cumpleaños con ordinales, formularios y deletreo (con el nombre de las letras), anuncios de estación y repaso de casos, orden de la oración y negación.
 
 **Rampa de dificultad (suavizado de los saltos).** Se midió por unidad el vocabulario nuevo, las palabras por frase y por diálogo, y la carga de gramática. Los saltos más duros eran: la unidad 9 (primera con escucha larga y gramática, 30 palabras), A1→A2 (unidad 15), la unidad 18 (aparece `weil`) y A2→B1 (unidades 24 y 26). Se suavizaron así:
 - **Diálogos cortos (3 a 6 líneas) en las unidades 1 a 8** (`lib/content/a1-dialogues.ts`), con solo lo enseñado hasta cada lección: la escucha larga se introduce de a poco.
@@ -129,45 +130,45 @@ Con esto A1 queda completo: 14 unidades, 51 lecciones y unas 300 palabras.
 
 **A2** (`Unit.level = "A2"`, en `lib/content/a2-part*.ts`): el camino muestra un cartel «Nivel A2» y el kicker de cada unidad dice el nivel. Los diálogos son más largos (hasta 8 líneas) y cada unidad tiene una lección de gramática. Las llamadas a Claude (corrección, charla, práctica) usan el nivel de la unidad (`lib/level.ts`).
 
-15. **Contar el pasado**: disculparse y dar razones (konnte, musste, wollte, war, hatte), vor/seit/früher, años (1990, 2016), estudios; gramática del pasado corto.
-16. **Cuerpo y salud**: partes del cuerpo y `weh tun`, el médico, verbos reflexivos; gramática de reflexivos e imperativo (du/ihr/Sie).
-17. **Ropa y compras**: ropa, colores, talles y opinión; gramática de la terminación de los adjetivos.
+16. **Contar el pasado**: disculparse y dar razones (konnte, musste, wollte, war, hatte), vor/seit/früher, años (1990, 2016), estudios; gramática del pasado corto.
+17. **Cuerpo y salud**: partes del cuerpo y `weh tun`, el médico, verbos reflexivos; gramática de reflexivos e imperativo (du/ihr/Sie).
+18. **Ropa y compras**: ropa, colores, talles y opinión; gramática de la terminación de los adjetivos.
 
-18. **Razones y opiniones**: weil/denn/deshalb, dass, wenn y frecuencia (immer, oft, manchmal, nie); gramática del verbo al final.
-19. **Regalos y dativo**: mir/dir/ihm/ihr/uns, helfen/gefallen, regalar con meiner/meinem, fiestas e invitaciones; gramática de los pronombres y verbos con dativo.
-20. **Dónde y adónde**: auf, unter, neben, vor, hinter, zwischen, an, in; stehen/stellen, liegen/legen, hängen; gramática de ¿dónde? (dativo) y ¿adónde? (acusativo).
-21. **Comparar y viajar**: comparativo y superlativo (als, so… wie, am liebsten), el clima y el hotel.
-22. **Trabajo y planes**: profesiones, buscar trabajo, futuro con `werden`, `dürfen`/`sollen` y `würde gern`.
-23. **Preparación para el examen A2**: teléfono, correos y cartas, acordar una cita y un repaso general (dónde va el verbo, casos y preposiciones).
+19. **Razones y opiniones**: weil/denn/deshalb, dass, wenn y frecuencia (immer, oft, manchmal, nie); gramática del verbo al final.
+20. **Regalos y dativo**: mir/dir/ihm/ihr/uns, helfen/gefallen, regalar con meiner/meinem, fiestas e invitaciones; gramática de los pronombres y verbos con dativo.
+21. **Dónde y adónde**: auf, unter, neben, vor, hinter, zwischen, an, in; stehen/stellen, liegen/legen, hängen; gramática de ¿dónde? (dativo) y ¿adónde? (acusativo).
+22. **Comparar y viajar**: comparativo y superlativo (als, so… wie, am liebsten), el clima y el hotel.
+23. **Trabajo y planes**: profesiones, buscar trabajo, futuro con `werden`, `dürfen`/`sollen` y `würde gern`.
+24. **Preparación para el examen A2**: teléfono, correos y cartas, acordar una cita y un repaso general (dónde va el verbo, casos y preposiciones).
 
 **B1** (`Unit.level = "B1"`, en `lib/content/b1-part*.ts`): el cartel de nivel y las llamadas a Claude ya lo reconocen. Estructuras más complejas y diálogos de hasta 8 líneas. En el contenido B1 se cuida la coherencia de las reglas: p. ej. `um… zu` con el mismo sujeto y `damit` con sujetos distintos.
 
-24. **Contar una historia**: Präteritum regular e irregular; als/wenn/während/bevor/nachdem y el Plusquamperfekt.
-25. **Deseos y consejos**: Konjunktiv II (hätte, wäre, würde, könnte, solltest), consejos y pedidos corteses.
-26. **Describir con relativos**: oraciones de relativo (sujeto, objeto, dativo, con preposición), «was» y «jemand, der».
-27. **La voz pasiva**: Passiv de presente y pasado, con modales, y estados con sein + participio (carteles).
+25. **Contar una historia**: Präteritum regular e irregular; als/wenn/während/bevor/nachdem y el Plusquamperfekt.
+26. **Deseos y consejos**: Konjunktiv II (hätte, wäre, würde, könnte, solltest), consejos y pedidos corteses.
+27. **Describir con relativos**: oraciones de relativo (sujeto, objeto, dativo, con preposición), «was» y «jemand, der».
+28. **La voz pasiva**: Passiv de presente y pasado, con modales, y estados con sein + participio (carteles).
 
-28. **Contrastes y metas**: `obwohl`/`trotzdem`, `um… zu` y `damit`, el infinitivo con `zu` (`ohne… zu`, `statt… zu`).
-29. **Posesión y causas**: el genitivo y `wessen`, `wegen`/`trotz`/`statt`/`während` + genitivo, y las terminaciones de los adjetivos en dativo y genitivo.
-30. **Opinar y argumentar**: dar y defender una opinión, `einerseits… andererseits`, `zwar… aber`, `außerdem`, y preguntas indirectas con `ob`.
-31. **Preparación para el examen B1**: reclamos, carta formal, resumir un texto y repaso de B1. En el camino va al final de B1 (después de las unidades 32 a 34, en `lib/content/b1-part5.ts`); conserva su id `pruefung-b1`.
-32. **Verbos con preposición** (`praeposition-verben`): warten auf, denken an, sich freuen auf/über, sich interessieren für, träumen von, teilnehmen an, abhängen von…; preguntar y responder con `worauf / darauf`, `auf wen`, y `darauf, dass / zu`.
-33. **Si hubiera…** (`konjunktiv-vergangenheit`): Konjunktiv II del pasado (`hätte / wäre` + participio), condiciones que no se dieron, lamentos y reproches (`du hättest… sollen`).
-34. **Conectores** (`konnektoren`): `falls`, `je… desto`, `entweder… oder`, `weder… noch`, `indem`, `sodass` / `so… dass`, `daher`, `sondern` frente a `aber`, `sowohl… als auch`, `nicht nur… sondern auch`, `dagegen`.
+29. **Contrastes y metas**: `obwohl`/`trotzdem`, `um… zu` y `damit`, el infinitivo con `zu` (`ohne… zu`, `statt… zu`).
+30. **Posesión y causas**: el genitivo y `wessen`, `wegen`/`trotz`/`statt`/`während` + genitivo, y las terminaciones de los adjetivos en dativo y genitivo.
+31. **Opinar y argumentar**: dar y defender una opinión, `einerseits… andererseits`, `zwar… aber`, `außerdem`, y preguntas indirectas con `ob`.
+32. **Preparación para el examen B1**: reclamos, carta formal, resumir un texto y repaso de B1. En el camino va al final de B1 (después de las unidades 33 a 35, en `lib/content/b1-part5.ts`); conserva su id `pruefung-b1`.
+33. **Verbos con preposición** (`praeposition-verben`): warten auf, denken an, sich freuen auf/über, sich interessieren für, träumen von, teilnehmen an, abhängen von…; preguntar y responder con `worauf / darauf`, `auf wen`, y `darauf, dass / zu`.
+34. **Si hubiera…** (`konjunktiv-vergangenheit`): Konjunktiv II del pasado (`hätte / wäre` + participio), condiciones que no se dieron, lamentos y reproches (`du hättest… sollen`).
+35. **Conectores** (`konnektoren`): `falls`, `je… desto`, `entweder… oder`, `weder… noch`, `indem`, `sodass` / `so… dass`, `daher`, `sondern` frente a `aber`, `sowohl… als auch`, `nicht nur… sondern auch`, `dagegen`.
 
 **B2** (`Unit.level = "B2"`, en `lib/content/b2-part*.ts`): el cartel de nivel y las llamadas a Claude lo reconocen (`lib/level.ts`). Mismo formato que B1 (3 lecciones de vocabulario con escucha, una de gramática, charla de rol, lectura y práctica extra), con textos más formales y abstractos.
 
-35. **Discurso indirecto** (`indirekte-rede`): Konjunktiv I (`er sei`, `sie habe`, `er komme`, `es gebe`), cuándo pasa al Konjunktiv II (`sie hätten`), tiempos, preguntas con `ob` y pedidos con `solle` / `bitten… zu`, y fórmulas de periodismo (`laut`, `angeblich`, `es heißt`).
-36. **Participios como adjetivos** (`partizipien`): Partizip I (`das lachende Kind`), Partizip II (`das gekaufte Auto`) y participios ampliados (`das von meinem Vater gekaufte Auto`).
-37. **Lenguaje formal** (`nominalstil`): nominalización (`-ung`, infinitivo sustantivado), combinaciones verbo + sustantivo (`eine Entscheidung treffen`, `zur Verfügung stehen`) y preposiciones con genitivo (`aufgrund`, `infolge`, `angesichts`, `mithilfe`, `im Rahmen`).
-38. **Pasiva avanzada** (`passiv-plus`): la pasiva en todos los tiempos (`ist gebaut worden`), pasiva sin sujeto y con dativo (`Mir wurde geholfen`) y alternativas (`man`, `sich lassen`, `sein + zu`, `-bar`).
+36. **Discurso indirecto** (`indirekte-rede`): Konjunktiv I (`er sei`, `sie habe`, `er komme`, `es gebe`), cuándo pasa al Konjunktiv II (`sie hätten`), tiempos, preguntas con `ob` y pedidos con `solle` / `bitten… zu`, y fórmulas de periodismo (`laut`, `angeblich`, `es heißt`).
+37. **Participios como adjetivos** (`partizipien`): Partizip I (`das lachende Kind`), Partizip II (`das gekaufte Auto`) y participios ampliados (`das von meinem Vater gekaufte Auto`).
+38. **Lenguaje formal** (`nominalstil`): nominalización (`-ung`, infinitivo sustantivado), combinaciones verbo + sustantivo (`eine Entscheidung treffen`, `zur Verfügung stehen`) y preposiciones con genitivo (`aufgrund`, `infolge`, `angesichts`, `mithilfe`, `im Rahmen`).
+39. **Pasiva avanzada** (`passiv-plus`): la pasiva en todos los tiempos (`ist gebaut worden`), pasiva sin sujeto y con dativo (`Mir wurde geholfen`) y alternativas (`man`, `sich lassen`, `sein + zu`, `-bar`).
 
-39. **Conectores avanzados** (`konnektoren-b2`): condiciones (`sofern`, `solange`, `es sei denn`, `vorausgesetzt, dass`, `je nachdem`), causa y consecuencia (`da`, `zumal`, `nämlich`, `folglich`, `somit`, `infolgedessen`) y contraste (`wohingegen`, `dennoch`, `allerdings`, `jedoch`, `immerhin`, `hingegen`), con su efecto sobre el orden del verbo.
-40. **Texto de opinión** (`meinungstext`): introducción, argumentos con ejemplos, `dafür / dagegen spricht`, objeciones (`man könnte einwenden`, `zwar… doch`) y conclusión (`abschließend lässt sich sagen`), y el Konjunktiv II para suavizar.
-41. **Registro y estilo** (`register`): carta o correo formal (`hiermit`, `anbei`, `ich wäre Ihnen dankbar, wenn…`), partículas del habla (`doch`, `mal`, `ja`, `halt`, `eben`, `denn`) y expresiones cotidianas (`die Daumen drücken`, `das kommt darauf an`, `ich verstehe nur Bahnhof`).
-42. **Preparación para el examen B2** (`pruefung-b2`): presentar un tema, describir una gráfica (`steigen`, `sinken`, `der Anteil`, `um… Prozent`), carta del lector y repaso de B2.
+40. **Conectores avanzados** (`konnektoren-b2`): condiciones (`sofern`, `solange`, `es sei denn`, `vorausgesetzt, dass`, `je nachdem`), causa y consecuencia (`da`, `zumal`, `nämlich`, `folglich`, `somit`, `infolgedessen`) y contraste (`wohingegen`, `dennoch`, `allerdings`, `jedoch`, `immerhin`, `hingegen`), con su efecto sobre el orden del verbo.
+41. **Texto de opinión** (`meinungstext`): introducción, argumentos con ejemplos, `dafür / dagegen spricht`, objeciones (`man könnte einwenden`, `zwar… doch`) y conclusión (`abschließend lässt sich sagen`), y el Konjunktiv II para suavizar.
+42. **Registro y estilo** (`register`): carta o correo formal (`hiermit`, `anbei`, `ich wäre Ihnen dankbar, wenn…`), partículas del habla (`doch`, `mal`, `ja`, `halt`, `eben`, `denn`) y expresiones cotidianas (`die Daumen drücken`, `das kommt darauf an`, `ich verstehe nur Bahnhof`).
+43. **Preparación para el examen B2** (`pruefung-b2`): presentar un tema, describir una gráfica (`steigen`, `sinken`, `der Anteil`, `um… Prozent`), carta del lector y repaso de B2.
 
-Con esto el currículo tiene 42 unidades (14 de A1, 9 de A2, 11 de B1 y 8 de B2), unas 155 lecciones del camino principal más 34 lecturas opcionales y 28 prácticas extra de A2 a B2, unas 160 escuchas largas y unas 1.000 palabras. B2 queda completo en lo básico; lo que sigue serían unidades de C1 o más práctica y escuchas más largas.
+Con esto el currículo tiene 43 unidades (14 de A1 más la de pronunciación, 9 de A2, 11 de B1 y 8 de B2), unas 159 lecciones del camino principal más 34 lecturas opcionales y 28 prácticas extra de A2 a B2, unas 160 escuchas largas y unas 1.000 palabras. B2 queda completo en lo básico; lo que sigue serían unidades de C1 o más práctica y escuchas más largas.
 
 **Práctica extra (A2 y B1)** (`lib/content/practice-a2.ts`, `practice-b1.ts`): una lección opcional («bonus», 🎯) al final de cada una de las unidades de A2, B1 y B2, después de la lectura. No enseña vocabulario nuevo, repasa lo de la unidad con frases nuevas: 3 «completar la frase» y una pregunta de «¿cuál es correcta?», un «armar la frase», 2 o 3 **producciones escritas en situaciones** («decile a la vendedora que…», con varias respuestas válidas), una frase para decir en voz alta y una **escucha nueva** de 6 líneas con 4 preguntas. Se abre al terminar la última lección principal de la unidad (`BONUS_PREV` ya no encadena las bonus entre sí). Se agrega al camino con el mismo mecanismo que las lecturas.
 
