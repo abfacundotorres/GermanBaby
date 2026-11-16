@@ -129,12 +129,20 @@ export const GLOSS: Record<string, string> = {
   // Vocabulario temático, segunda tanda
   liebstes: "favorito/a", jedem: "cada (dativo)", beendet: "terminado", bekommt: "recibe / recupera", cafés: "cafés", nummern: "números", verteilt: "repartido", persönlich: "en persona", abgeben: "entregar", hinein: "adentro", bringen: "traer / llevar", formular: "formulario", hundertzwölf: "ciento doce", kostenlos: "gratis", gelandet: "aterrizado", offenbar: "evidentemente", zahnbürste: "cepillo de dientes",
   films: "de la película", geändert: "cambiado", nächten: "noches", popcorn: "pochoclo", romans: "de la novela", fandest: "te pareció (de «finden»)", regisseurs: "del director", schief: "(schiefgehen = salir mal)", körpers: "del cuerpo", medikaments: "del medicamento", glas: "frasco / vaso", unmöglich: "imposible", entdeckt: "descubierto", durchbruch: "gran avance",
+  // Vocabulario temático, tercera tanda
+  bekam: "recibió / obtuvo", papiere: "papeles", tatsachen: "hechos", benachteiligt: "perjudicado/a", namens: "del nombre / apellido", merken: "notar", großeltern: "abuelos", fragt: "pregunta",
+  ewig: "para siempre", ändert: "cambia", gewachsen: "crecido", verdrängt: "tapa / reprime", brauchte: "necesitó", verdränge: "tapo / reprimo", bewältigt: "sobrelleva", zuletzt: "por última vez", erholt: "descansado / recuperado",
+  fordert: "exige", streiks: "de la huelga", versicherung: "seguro", hofft: "espera (tiene esperanza)", aufgerufen: "llamado / convocado",
+  bruders: "del hermano", tanzt: "baila", sangen: "cantaron", lädt: "invita (de «einladen»)", trinkgeld: "propina", erfolgs: "del éxito", gönnt: "desea (algo bueno a alguien)", onkel: "tío", hochzeit: "casamiento", kerze: "vela", mama: "mamá", schenkt: "regala", kerzen: "velas",
+  beschreiben: "describir", tatzeit: "hora del hecho", bemerkt: "notado", verlor: "perdió", männer: "hombres", verhaftet: "detenido", opfers: "de la víctima", still: "callado / silencio",
+  gewonnen: "ganado", wechselte: "cambió", spieler: "jugadores", feierte: "festejó", endete: "terminó",
+
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse",
 ]);
 
 const tok = (s: string) =>
