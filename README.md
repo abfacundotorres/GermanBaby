@@ -98,6 +98,7 @@ app/
   page.tsx                     mapa de unidades, repaso, logros
   lesson/[unitId]/[lessonId]   lección
   review/                      repaso espaciado
+  mixed/                       repaso mezclado de varias unidades (sin IA)
   chat/[unitId]                charla de rol
   api/speech-token             clave Azure → token de 10 min
   api/correct                  corrección de traducciones (Claude)

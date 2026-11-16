@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { UNITS, ALL_VOCAB, LESSON_ORDER, BONUS_PREV } from "../lib/curriculum.ts";
-import { autoCloze, buildLessonSession, isGraded } from "../lib/session.ts";
+import { autoCloze, buildLessonSession, buildMixedSession, isGraded } from "../lib/session.ts";
 import { matchFill, tiles } from "../lib/text.ts";
 import { GLOSS, PROPER, isNumberWord, tokenize } from "../lib/gloss.ts";
 
@@ -203,4 +203,16 @@ test("pares mínimos: la palabra que se oye está entre las opciones y hay dos o
     assert.ok(e.es.trim().length > 1, `${u.id}/${l.id}: falta el significado de «${e.de}»`);
   }
   assert.ok(n >= 12, "la unidad de pronunciación debe traer pares mínimos");
+});
+
+test("repaso mezclado: 15 ejercicios calificados de varias unidades, sin producción libre y con pocos de hablar", () => {
+  const done = UNITS.slice(0, 20).flatMap((u) => u.lessons.map((lesson) => ({ unitId: u.id, lesson })));
+  for (let i = 0; i < 20; i++) {
+    const steps = buildMixedSession(done);
+    assert.equal(steps.length, 15);
+    assert.ok(steps.every(isGraded) && steps.every((s) => s.kind !== "free"));
+    assert.ok(steps.filter((s) => s.kind === "speak").length <= 2);
+  }
+  assert.equal(buildMixedSession([]).length, 0);
+  assert.ok(buildMixedSession(done.slice(0, 2), 15).length <= 15);
 });

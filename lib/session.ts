@@ -186,3 +186,38 @@ export function buildReviewSession(dueDe: string[], limit = 12): Step[] {
     }
   });
 }
+
+const MIXED_KINDS = new Set<HandExercise["kind"]>(["build", "cloze", "quiz", "write", "dictation", "speak", "pair"]);
+
+/**
+ * Repaso mezclado: junta ejercicios de varias unidades ya hechas, sin IA. Va tomando uno por unidad,
+ * en ronda, para que ninguna domine; suma «completar la frase» automáticos y palabras sueltas, y
+ * limita los ejercicios de hablar a 2.
+ */
+export function buildMixedSession(done: { unitId: string; lesson: Lesson }[], n = 15): Step[] {
+  const byUnit = new Map<string, Step[]>();
+  for (const { unitId, lesson } of done) {
+    const steps: Step[] = [];
+    for (const e of lesson.exercises) {
+      if (!MIXED_KINDS.has(e.kind)) continue;
+      steps.push(e.kind === "quiz" || e.kind === "cloze" ? { ...e, options: shuffle(e.options) } : e);
+      const c = e.kind === "build" ? autoCloze(e) : null;
+      if (c) steps.push(c);
+    }
+    const words = lesson.vocab.filter((v) => tokenize(v.de).length <= 4);
+    for (const v of shuffle(words).slice(0, 2)) steps.push(Math.random() < 0.5 ? choice(v, ALL_VOCAB) : listen(v, ALL_VOCAB));
+    if (steps.length) byUnit.set(unitId, [...(byUnit.get(unitId) ?? []), ...steps]);
+  }
+  const queues = shuffle([...byUnit.values()]).map((s) => shuffle(s));
+  const out: Step[] = [];
+  let speaks = 0;
+  while (out.length < n && queues.some((q) => q.length)) {
+    for (const q of queues) {
+      const s = q.pop();
+      if (!s || out.length >= n) continue;
+      if (s.kind === "speak" && ++speaks > 2) continue;
+      out.push(s);
+    }
+  }
+  return shuffle(out);
+}

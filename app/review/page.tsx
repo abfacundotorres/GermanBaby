@@ -27,6 +27,10 @@ export default function ReviewPage() {
         ) : (
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
+        <Link href="/mixed" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>🔀 Repaso mezclado</b>
+          <span className="muted small">15 ejercicios al azar de las unidades que ya hiciste. Sin IA.</span>
+        </Link>
         <Link href="/practice" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>🎯 Mis errores{mistakes > 0 ? ` (${mistakes})` : ""}</b>
           <span className="muted small">{mistakes > 0 ? "Practicá lo que fallaste, con ejercicios armados a medida." : "No tenés errores pendientes. Si fallás algo, aparece acá."}</span>

@@ -228,6 +228,8 @@ Cada error de una lección, del repaso o de una charla se guarda en el navegador
 - **Repetir lo que fallé:** vuelve a mostrar los ejercicios, sin IA, y acertar uno lo marca como resuelto. Si el error no tiene el ejercicio original guardado (errores de la charla o secundarios), se arma uno con lo registrado: una pregunta «¿cuál es la forma correcta?», un dictado o una frase para decir en voz alta. Cada error también se puede descartar a mano con «✓ Ya lo sé».
 - **Práctica personalizada:** `/api/practice` le manda a Claude los errores recientes y el vocabulario ya estudiado. Claude detecta uno o dos patrones y arma 3 ejercicios de cada tipo (armar frase, traducir y pregunta con explicación) con frases nuevas. Si se termina con 80 % o más de acierto, los errores enviados se marcan como resueltos.
 
+- **Repaso mezclado** (`/mixed`, `buildMixedSession` en `lib/session.ts`): 15 ejercicios al azar de las unidades con lecciones hechas, tomados en ronda (uno por unidad) para que ninguna domine. Usa los ejercicios escritos de cada lección (armar, completar, elegir, escribir, dictado, pares mínimos y hasta 2 de hablar), «completar la frase» automáticos y palabras sueltas. No usa IA ni la producción libre. Se entra desde Repaso y se activa con 2 unidades o más.
+
 Además, cada lección incluye hasta 2 palabras vencidas de lecciones anteriores, y una palabra que fallás vuelve a la caja 1 del repaso espaciado.
 
 ## 9. Auditoría y próximos pasos
