@@ -109,6 +109,14 @@ export const GLOSS: Record<string, string> = {
   lieblingssänger: "cantante favorito", gesungen: "cantado", ausgemacht: "apagado", verrückt: "loco/a", geworden: "vuelto (de «werden»)", niemandem: "a nadie",
   gewartet: "esperado", verstanden: "entendido", schlechten: "malos", doppelte: "el doble", versuchen: "intentar", mut: "coraje", fahr: "andá (de «fahren»)",
   schnee: "nieve", anderes: "otra cosa", rede: "hablo", gemein: "malvado / mala onda", holen: "ir a buscar", kiste: "caja", versucht: "intentado", toaster: "tostadora", vierten: "cuarto/a", möglich: "posible",
+  // Diálogos reescritos de B2
+  mails: "mails", hör: "escuchá", merke: "noto", ministers: "del ministro", wolle: "quiera (Konjunktiv I de «wollen»)", unfall: "accidente", gib: "dame / pasame", höheren: "más altos", prozent: "por ciento", wofür: "¿en qué? / ¿para qué?", gebracht: "dado / traído", bezahle: "pague (Konjunktiv I)", vorschläge: "propuestas", gelte: "valga (Konjunktiv I de «gelten»)", besonders: "especialmente",
+  eis: "helado", bewundere: "admiro", tanzend: "bailando", trinkend: "tomando", riecht: "huele", bar: "bar", entschuldige: "perdón", gläsern: "vasos (dativo)", führt: "lleva", buchladen: "librería", stiehlt: "roba", steigender: "que suben", witz: "chiste", darunter: "debajo", frisch: "recién", gelieferten: "entregados",
+  schlechte: "malas", kaffees: "del café", laune: "humor", raum: "sala", risiko: "riesgo", eingehen: "correr (un riesgo)", dreihundert: "trescientos", bestellt: "encargado", verteilen: "repartir", stadtfestes: "de la fiesta de la ciudad", zeltes: "de la carpa", sobald: "apenas", sitzen: "estar sentado",
+  viertausend: "cuatro mil", nachfrage: "demanda", mieter: "inquilinos", gesetzes: "de la ley", begrenzt: "limitado", busse: "colectivos", allein: "solo / solamente", diesem: "este (dativo)", berechtigte: "justificada", eigene: "propias",
+  längst: "hace rato", besitzer: "dueño", gehalten: "tomado por (für … halten)", zusehen: "mirar", mensch: "persona (kein Mensch = nadie)", knopf: "botón", drücken: "apretar", unten: "abajo", umdrehen: "dar vuelta", nun: "ahora / ya",
+  mitbringst: "traés", zweit: "(zu zweit = de a dos)", nachmittag: "tarde", aufmachen: "abrir", schreib: "escribí / poné", beginnst: "empezás", nachts: "de noche", erstes: "primer", dazu: "al respecto", berechtigter: "justificado", gelten: "regir / valer", plant: "planifica",
+  abschicken: "mandar", direkt: "directo", weine: "lloro", "war's": "fue / te fue (war es)", interesse: "interés", aufgabe: "tarea", geredet: "hablado", schauen: "mirar", linien: "líneas", linie: "línea", fünfhundert: "quinientos", radfahrer: "ciclistas", größte: "el/la mayor", ärger: "enojo", schreibst: "escribís", dumm: "tonto/a",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
