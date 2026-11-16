@@ -126,12 +126,15 @@ export const GLOSS: Record<string, string> = {
   gehustet: "tosido", bestellen: "pedir", hereinkommt: "entra", ankam: "llegó", löwen: "león", kamera: "cámara", praktisch: "práctico", weißt: "sabés", schlagen: "(vorschlagen = proponer)",
   weitermachen: "seguir", geprüft: "revisado", zählen: "contar", freitags: "los viernes", sowieso: "de todos modos", kürzere: "más cortos", selten: "rara vez / raro", präsentation: "presentación", schaust: "mirás", regel: "regla", vierte: "cuarto (jeder Vierte = uno de cada cuatro)", entsteht: "surge", dieselbe: "la misma", prüfe: "verifico", nächstem: "próximo (dativo)", darum: "de eso (darum geht es nicht)", entfernen: "eliminar", system: "sistema",
   künstlicher: "artificial", gerechnet: "contado (rechnen mit = contar con)", tempo: "ritmo", bildern: "imágenes", bräuchten: "necesitáramos", ärzte: "médicos", erkennt: "reconoce", entscheidet: "decide", schwierigste: "la más difícil", systeme: "sistemas", millionen: "millones", wirklichkeit: "realidad", kürzer: "más corto", nennen: "nombrar / dar", wichtigster: "más importante", klingen: "sonar",
+  // Vocabulario temático, segunda tanda
+  liebstes: "favorito/a", jedem: "cada (dativo)", beendet: "terminado", bekommt: "recibe / recupera", cafés: "cafés", nummern: "números", verteilt: "repartido", persönlich: "en persona", abgeben: "entregar", hinein: "adentro", bringen: "traer / llevar", formular: "formulario", hundertzwölf: "ciento doce", kostenlos: "gratis", gelandet: "aterrizado", offenbar: "evidentemente", zahnbürste: "cepillo de dientes",
+  films: "de la película", geändert: "cambiado", nächten: "noches", popcorn: "pochoclo", romans: "de la novela", fandest: "te pareció (de «finden»)", regisseurs: "del director", schief: "(schiefgehen = salir mal)", körpers: "del cuerpo", medikaments: "del medicamento", glas: "frasco / vaso", unmöglich: "imposible", entdeckt: "descubierto", durchbruch: "gran avance",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo",
 ]);
 
 const tok = (s: string) =>
