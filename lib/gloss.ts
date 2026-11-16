@@ -83,12 +83,38 @@ export const GLOSS: Record<string, string> = {
   monatsende: "fin de mes", jede: "cada", monatlichen: "mensuales", erste: "primera", nerven: "nervios", bargeld: "efectivo", aha: "ajá", übrig: "de sobra (übrig bleiben = quedar)", hauptsache: "lo principal", kaufst: "comprás", irgendeine: "cualquier / alguna", schwärmt: "se entusiasma (schwärmen von)", gewinnt: "gana", lautesten: "más fuerte", schreit: "grita",
   niedrig: "bajo/a", stundenlang: "durante horas", sauber: "limpio/a", krankheit: "enfermedad", geheilt: "curado/a", heilt: "cura / se cura", papa: "papá", schwindlig: "mareado/a", stress: "estrés", hört: "escucha (hören auf = hacer caso)", schimpft: "protesta", allzu: "demasiado",
   herbst: "otoño", angekündigt: "anunciado", gesprächen: "conversaciones", versprochen: "prometido", abgestimmt: "votado", sitz: "sede", kritisiert: "critica", pläne: "planes", wählt: "vota", versprechen: "prometer", dasselbe: "lo mismo", ehrlich: "sincero (ehrlich gesagt = la verdad)", überlege: "estoy pensando", plakate: "carteles / afiches", furchtbar: "espantoso/a", nennt: "llama (de «nennen»)", stillstand: "parálisis", gestritten: "peleado", abstimmt: "vota", hinterher: "después", lädst: "invitás (de «einladen»)",
+  // Diálogos reescritos de B1
+  kühe: "vacas", nachbarn: "vecinos", ohne: "sin", draußen: "afuera", streng: "estricto/a",
+  anstrengend: "agotador/a", dachte: "pensé / pensaba", fuhrt: "iban (ustedes, de «fahren»)", sah: "veía / vio", überall: "en todos lados", sag: "decí", wenigstens: "al menos", füße: "pies", anders: "distinto / de otra manera",
+  frag: "preguntá", trotzdem: "igual / a pesar de eso", sofort: "enseguida", hin: "hacia ahí", rief: "llamó (de «rufen»)", zweimal: "dos veces", geantwortet: "respondido", ausgeschlafen: "dormido bien",
+  sport: "deporte / entrenamiento", los: "(was ist los? = ¿qué pasa?)", einfach: "simplemente / fácil", wurde: "se puso / fue (de «werden»)", dicke: "gordo/a", weihnachten: "Navidad", dunkel: "oscuro",
+  frage: "pregunto", begann: "empezó", regnen: "llover", wach: "despierto/a", freundlich: "amable", liefen: "caminamos (de «laufen»)", regen: "lluvia", rest: "resto", rückfahrt: "viaje de vuelta",
+  plötzlich: "de golpe", million: "millón", kurze: "corto/a", faul: "vago/a",
+  läuft: "anda / funciona", gesagt: "dicho", ausmachen: "apagar", dafür: "para eso", diskussion: "discusión", thema: "tema", papier: "papel",
+  lassen: "dejar", mitnehmen: "llevar", anmachen: "prender", zelt: "carpa", leihen: "prestar", bräuchte: "necesitaría",
+  putzt: "limpia", radio: "radio", mitsingt: "canta también", unserem: "nuestro (dativo)",
+  sagst: "decís", geweint: "llorado", weint: "llora", werbung: "publicidad", geh: "andá", jemanden: "a alguien", nachher: "después", erzählen: "contar", stirbt: "se muere", ticket: "entrada",
+  aussieht: "se ve (de «aussehen»)", hilfst: "ayudás", darauf: "(kommt darauf an = depende)", erster: "primer", voll: "lleno/a", dunkle: "oscuro/a", einzige: "único/a", passieren: "pasar / ocurrir", merkt: "(sich merken = acordarse)", namen: "nombre",
+  dieser: "esta / este", lach: "reíte", neulich: "el otro día",
+  glück: "suerte", kaputt: "roto/a", hinten: "al fondo", hunde: "perros", raucht: "fuma", bringe: "traigo", höre: "escucho", zweiten: "segundo", boden: "piso (suelo)",
+  diesmal: "esta vez", seitdem: "desde entonces", unsere: "nuestra", gleichzeitig: "al mismo tiempo", wasserleitungen: "caños de agua", jedenfalls: "en todo caso", autos: "autos", abgeschleppt: "remolcado", weggefahren: "sacado (el auto)", polizei: "policía",
+  klingst: "sonás", glaubt: "cree", niemand: "nadie", schwerfällt: "cuesta (de «schwerfallen»)", böse: "enojado/a", böser: "más enojado/a",
+  bekomme: "recibo / me dan", einzuschlafen: "dormirte (de «einschlafen»)", pause: "descanso", vergesse: "olvido", hälfte: "mitad", dank: "gracias (vielen Dank)", außerdem: "además", umgezogen: "mudado", riesigen: "enorme", aufzug: "ascensor", probleme: "problemas", oben: "arriba",
+  darüber: "sobre eso", bräuchtest: "necesitarías", hoch: "alto/a", kühen: "vacas (dativo)", lustig: "gracioso/a",
+  achttausend: "ocho mil", brauchen: "necesitar", parkplatz: "cochera / estacionamiento", taxi: "taxi", hm: "mmm",
+  lauf: "carrera", angemeldet: "anotado / inscripto", trainieren: "entrenar", bezahlst: "pagás",
+  gestanden: "estado (parado)", egal: "da igual", welchem: "qué / cuál (dativo)", sondern: "sino", benzin: "nafta", fang: "empezá (de «anfangen»)", sage: "digo",
+  denkt: "piensa", fahrt: "van (ustedes)", schlimm: "terrible / grave", computerkurs: "curso de computación", daran: "en eso / de eso", lachst: "te reís", übermorgen: "pasado mañana",
+  hörst: "escuchás", musik: "música", gitarre: "guitarra", freu: "alegrate (sich freuen auf)",
+  lieblingssänger: "cantante favorito", gesungen: "cantado", ausgemacht: "apagado", verrückt: "loco/a", geworden: "vuelto (de «werden»)", niemandem: "a nadie",
+  gewartet: "esperado", verstanden: "entendido", schlechten: "malos", doppelte: "el doble", versuchen: "intentar", mut: "coraje", fahr: "andá (de «fahren»)",
+  schnee: "nieve", anderes: "otra cosa", rede: "hablo", gemein: "malvado / mala onda", holen: "ir a buscar", kiste: "caja", versucht: "intentado", toaster: "tostadora", vierten: "cuarto/a", möglich: "posible",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa",
+  "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria",
 ]);
 
 const tok = (s: string) =>
