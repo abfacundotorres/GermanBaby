@@ -137,6 +137,8 @@ export const GLOSS: Record<string, string> = {
   beschreiben: "describir", tatzeit: "hora del hecho", bemerkt: "notado", verlor: "perdió", männer: "hombres", verhaftet: "detenido", opfers: "de la víctima", still: "callado / silencio",
   gewonnen: "ganado", wechselte: "cambió", spieler: "jugadores", feierte: "festejó", endete: "terminó",
 
+  // Diálogos reescritos de A2
+  samstagabend: "sábado a la noche", geschenk: "regalo", tasche: "cartera / bolso", nie: "nunca", deutschland: "Alemania", kalt: "frío", jacke: "campera", immer: "siempre", warm: "caluroso / cálido", steht: "dice / figura / está", weiß: "sé (de «wissen») / blanco", arzt: "médico", tickets: "entradas", zahle: "pago", alles: "todo", linke: "izquierdo/a", ihnen: "a usted / le", hose: "pantalón", wenn: "cuando / si", huste: "toso", moment: "momento", mehr: "más", ihn: "lo (a él)", nett: "amable", diesen: "este", gekauft: "comprado", weniger: "menos", einschlafe: "me duermo", fahrrad: "bicicleta", frei: "libre", regnet: "llueve", geschrieben: "escrito", schenk: "regalá", zeig: "mostrá", besten: "mejor (am besten = lo mejor)", idee: "idea", gesucht: "buscado", büchern: "libros (dativo)", liegt: "está (acostado / apoyado)", tiefer: "más bajo", bleibt: "se queda", wird: "va a / se pone (de «werden»)", blick: "vista", wärmer: "más cálido", glaub: "creé (creeme)", bei: "en lo de / con", sparen: "ahorrar", schülerin: "alumna", angerufen: "llamado", kundin: "clienta",
   sind: "son / están", ist: "es / está", wir: "nosotros", und: "y",
 };
 
