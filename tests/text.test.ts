@@ -50,3 +50,17 @@ test("costUsd: precios conocidos y modelo desconocido", () => {
   assert.equal(costUsd("claude-opus-5-5", 1_000_000, 1_000_000), 24);
   assert.equal(costUsd("modelo-inexistente", 1, 1), null);
 });
+
+test("producción libre: la revisión local frena el español, las repeticiones y las frases mínimas", async () => {
+  const { checkFree, countSentences } = await import("../lib/freecheck.ts");
+  assert.equal(countSentences("Ich wohne in Berlin. Ja. Ich arbeite viel."), 2);
+  const ok = checkFree("Früher wohnte ich in Madrid. Ich hatte kein Auto. Seit zwei Jahren lerne ich Deutsch.", 3);
+  assert.deepEqual(ok, { blockers: [], tips: [] });
+  assert.ok(checkFree("Yo vivía en Madrid porque tengo trabajo. No tenía auto. Estudio alemán hace dos años.", 3).blockers.some((b) => b.includes("español")));
+  assert.ok(checkFree("Ich lerne Deutsch gern. Ich lerne Deutsch gern. Ich arbeite hier.", 3).blockers.some((b) => b.includes("repetidas")));
+  assert.ok(checkFree("Ich lerne. Ich esse. Ich schlafe.", 3).blockers.some((b) => b.includes("cortas")));
+  const tips = checkFree("ich wohne in Berlin. Es ist sehr schön hier. Ich arbeite in einem Büro", 3);
+  assert.equal(tips.blockers.length, 0);
+  assert.equal(tips.tips.length, 2);
+  assert.deepEqual(checkFree("", 3), { blockers: [], tips: [] });
+});

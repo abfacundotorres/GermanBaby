@@ -8,6 +8,7 @@ const Body = z.object({
   focus: z.array(z.string().max(120)).max(6), // estructuras que debería usar
   answer: z.string().min(1).max(1200), // el texto del alumno
   level: LevelSchema.default("A1"),
+  minSentences: z.number().int().min(1).max(10).default(3),
 });
 
 const Free = z.object({
@@ -22,6 +23,7 @@ const Free = z.object({
     }),
   ),
   usedFocus: z.boolean().describe("true si el texto usa de verdad las estructuras pedidas (aunque tengan algún error)."),
+  missingFocus: z.array(z.string()).describe("Las estructuras pedidas que el alumno NO usó, copiadas tal cual de la lista. Vacío si usó todas."),
   natural: z.string().describe("Una versión del texto algo más natural o más rica, al nivel del alumno. Vacío si no hace falta."),
   feedback: z.string().describe("Una o dos frases en español rioplatense: honestas, cálidas, sin condescendencia."),
 });
@@ -35,7 +37,8 @@ Criterios:
 - "incorrect": hay errores gramaticales que cambian o traban el sentido (conjugación, caso, orden del verbo, falta o sobra una palabra clave), o no responde a la consigna.
 - Aceptá cualquier contenido personal e inventado: no corrijas lo que el alumno cuenta, solo cómo lo dice.
 - Marcá solo los errores reales; un error por elemento, con la regla mínima necesaria para ${level}. No inventes errores ni marques como error una variante válida.
-- "usedFocus": ¿usó las estructuras pedidas? Si no las usó, el veredicto no puede ser "correct".
+- "usedFocus": ¿usó las estructuras pedidas? Si no las usó, el veredicto no puede ser "correct". En "missingFocus" listá, copiadas tal cual, las que faltaron; una estructura cuenta como usada aunque tenga un error.
+- Si el texto no responde a la consigna (habla de otra cosa) o tiene menos frases de las pedidas, el veredicto es "incorrect" y lo decís en "feedback".
 - El alumno ya maneja: ${levelRules(level)}. No le exijas construcciones más avanzadas.
 - "natural": una versión algo mejor del mismo contenido, sin cambiar lo que dice. Si ya es natural, dejalo vacío.`;
 
@@ -48,7 +51,7 @@ export async function POST(req: Request) {
   if (!claudeConfigured()) return Response.json({ error: "Falta ANTHROPIC_API_KEY en .env.local" }, { status: 503 });
   const blocked = await aiQuotaResponse();
   if (blocked) return blocked;
-  const { prompt, focus, answer, level } = parsed.data;
+  const { prompt, focus, answer, level, minSentences } = parsed.data;
   try {
     const { output, usage } = await structured({
       schema: Free,
@@ -57,7 +60,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "user",
-          content: `Consigna: ${prompt}\nEstructuras que debía usar: ${focus.join("; ") || "(ninguna en particular)"}\nTexto del alumno:\n«${answer}»`,
+          content: `Consigna: ${prompt}\nFrases pedidas: al menos ${minSentences}\nEstructuras que debía usar: ${focus.join("; ") || "(ninguna en particular)"}\nTexto del alumno:\n«${answer}»`,
         },
       ],
     });

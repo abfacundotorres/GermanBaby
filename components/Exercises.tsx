@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Step } from "@/lib/session";
 import type { ListenQuestion } from "@/lib/curriculum";
 import { compareLocal, matchFill, shuffle, tiles } from "@/lib/text";
+import { checkFree, countSentences } from "@/lib/freecheck";
 import { assessPronunciation, MicError, prewarmSpeech, SpeechNotConfigured, type PronunciationResult } from "@/lib/speech";
 import { recordPronunciation, useProgress } from "@/lib/progress";
 import { speak } from "@/lib/speech";
@@ -349,21 +350,23 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
 }
 
 // ---------------- Producción libre (corrige Claude) ----------------
-const countSentences = (t: string) => t.split(/[.!?\n]+/).filter((x) => x.trim().split(/\s+/).filter(Boolean).length >= 2).length;
 
 export function FreeWrite({ step, locked, onResult }: Props<StepOf<"free">>) {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState<string | null>(null);
+  const [self, setSelf] = useState<boolean[]>(() => step.focus.map(() => false));
   const n = countSentences(value);
   const enough = n >= step.minSentences;
+  const local = checkFree(value, step.minSentences);
+  const blocked = local.blockers.length > 0;
 
   const check = async () => {
     const answer = value.trim();
     setLoading(true);
     setFailed(null);
     try {
-      const r = await callAi<FreeResult>("/api/free", { prompt: step.prompt, focus: step.focus, answer, level: getStudyLevel() }, "correct");
+      const r = await callAi<FreeResult>("/api/free", { prompt: step.prompt, focus: step.focus, answer, level: getStudyLevel(), minSentences: step.minSentences }, "correct");
       const status: Status = r.verdict === "correct" && r.usedFocus ? "ok" : r.verdict === "incorrect" ? "bad" : "almost";
       onResult({
         status,
@@ -371,7 +374,7 @@ export function FreeWrite({ step, locked, onResult }: Props<StepOf<"free">>) {
         detail: (
           <div className="stack" style={{ gap: 6 }}>
             <CorrectionDetail r={r} answer={answer} />
-            {!r.usedFocus && <div className="small">💡 Te faltó usar: {step.focus.join(" · ")}.</div>}
+            {!r.usedFocus && <div className="small">💡 Te faltó usar: {(r.missingFocus?.length ? r.missingFocus : step.focus).join(" · ")}.</div>}
             {r.natural && r.natural.trim() !== answer && <div className="small muted">Otra forma de decirlo: <i>{r.natural}</i></div>}
           </div>
         ),
@@ -411,12 +414,34 @@ export function FreeWrite({ step, locked, onResult }: Props<StepOf<"free">>) {
       </div>
       {!locked && (
         <>
-          <button className="btn btn-primary btn-block" disabled={!enough || loading} onClick={check}>
+          {enough && local.blockers.map((b) => <div key={b} className="small" style={{ color: "var(--bad, #c0392b)" }}>⚠️ {b}</div>)}
+          {enough && !blocked && local.tips.map((t) => <div key={t} className="small muted">✏️ {t}</div>)}
+          <button className="btn btn-primary btn-block" disabled={!enough || blocked || loading} onClick={check}>
             {loading ? <><span className="spinner" /> Corrigiendo…</> : enough ? "Corregir" : `Faltan frases (${n}/${step.minSentences})`}
           </button>
           {failed && (
             <div className="stack">
               <div className="small muted">No pude corregirlo con IA: {failed}</div>
+              <div className="small"><b>Revisalo vos:</b> marcá lo que usaste de verdad.</div>
+              {step.focus.map((f, i) => (
+                <label key={f} className="small" style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <input type="checkbox" checked={self[i]} onChange={(e) => setSelf(self.map((v, j) => (j === i ? e.target.checked : v)))} /> {f}
+                </label>
+              ))}
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  const missing = step.focus.filter((_, i) => !self[i]);
+                  onResult({
+                    status: "almost",
+                    title: missing.length ? "Anotado" : "Anotado: usaste todo",
+                    detail: <div className="small">{missing.length ? <>Te faltó usar: {missing.join(" · ")}. </> : null}Sin IA no puedo revisar la gramática: cuenta como «casi».</div>,
+                    answer: value.trim(),
+                  });
+                }}
+              >
+                Terminar con mi revisión
+              </button>
               <button className="btn" onClick={() => onResult({ status: "skip", title: "Ejercicio salteado" })}>Saltear este ejercicio</button>
             </div>
           )}
