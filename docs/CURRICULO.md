@@ -27,16 +27,16 @@ Lo que el nivel **no** garantiza por sí solo: el B2 se mide con un examen, y en
 
 | Nivel | Palabras acumuladas (con entrenador) | Meta aproximada | Cobertura |
 |---|---|---|---|
-| A1 | 390 | 650 | 60 % |
-| A2 | 804 | 1.300 | 62 % |
-| B1 | 1.501 | 2.400 | 63 % |
-| B2 | 1.759 | 4.000 | 44 % |
+| A1 | 588 | 650 | 90 % |
+| A2 | 1.144 | 1.300 | 88 % |
+| B1 | 1.651 | 2.400 | 69 % |
+| B2 | 1.909 | 4.000 | 48 % |
 
-Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1, A2, B1); B2 no tiene lista oficial y 4.000 es una cifra de uso común. Por eso se leen como referencia, no como norma. El entrenador (`/words`, 634 palabras) se asigna así: la 1.ª tanda cuenta para A2 y las siguientes para B1.
+Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1, A2, B1); B2 no tiene lista oficial y 4.000 es una cifra de uso común. Por eso se leen como referencia, no como norma. El entrenador (`/words`, 792 palabras) fija el nivel de cada tanda con una línea `## A1`, `## A2`, `## B1` o `## B2` en `lib/content/core-vocab.ts`, y las tandas se ordenan por nivel.
 
 ## Brechas, en orden de prioridad
 
-1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
+1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. A1 y A2 ya están cerca; falta sumar a B1 y B2. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
 2. **Input.** Hay 41 lecturas de unidad y 8 de la biblioteca, y unos 127 minutos de diálogos con voz sintética. Camino: más textos largos por nivel (B2 a 300–500 palabras), monólogos, tres voces y distintas velocidades.
 3. **Expresión escrita.** Un ejercicio libre por unidad, corregido por IA (sin probar contra el servicio real). Camino: más consignas, con rúbrica por nivel.
 4. **Medición.** No hay test de nivel ni simulacro. Camino: simulacros con el formato de los exámenes (comprensión lectora, auditiva, escrita y oral) y un test inicial para ubicar al alumno.

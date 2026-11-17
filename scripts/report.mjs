@@ -8,8 +8,6 @@ import { LIBRARY } from "../lib/content/library.ts";
 const TARGET = { A1: 650, A2: 1300, B1: 2400, B2: 4000 };
 const ORDER = ["A1", "A2", "B1", "B2", "C1"];
 const tok = (s) => s.toLowerCase().replace(/[.,!?¿¡«»()…]/g, " ").split(/\s+/).filter((w) => w.length > 1);
-// El entrenador se reparte por tanda: 1.ª → A2, 2.ª y 3.ª → B1 (ver docs/CURRICULO.md).
-const coreLevel = (i) => (i < 227 ? "A2" : "B1");
 
 const rows = Object.fromEntries(ORDER.map((lv) => [lv, { units: 0, main: 0, bonus: 0, words: new Set(), trainer: new Set(), rules: 0, dlg: 0, long: 0, audioWords: 0, reads: 0, readWords: 0, free: 0 }]));
 for (const u of UNITS) {
@@ -24,7 +22,7 @@ for (const u of UNITS) {
     if (l.reading) { r.reads++; r.readWords += l.reading.text.join(" ").split(/\s+/).length; }
   }
 }
-CORE_VOCAB.forEach((v, i) => tok(v.de).forEach((w) => rows[coreLevel(i)].trainer.add(w)));
+CORE_VOCAB.forEach((v) => tok(v.de).forEach((w) => rows[v.level].trainer.add(w)));
 for (const t of LIBRARY) { rows[t.level].reads++; rows[t.level].readWords += t.reading.text.join(" ").split(/\s+/).length; }
 
 const acc = new Set(); const pad = (s, n) => String(s).padEnd(n);
