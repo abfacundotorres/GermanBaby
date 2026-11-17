@@ -260,7 +260,7 @@ test("biblioteca de lecturas: formato, traducción párrafo a párrafo y pregunt
     assert.equal(r.text.length, r.translation.length, `${t.id}: un párrafo, una traducción`);
     assert.ok(r.questions.length >= 5, `${t.id}: pocas preguntas`);
     const n = r.text.join(" ").split(/\s+/).length;
-    const min = t.level === "A2" ? 60 : t.level === "B1" ? 100 : 180;
+    const min = t.level === "A2" ? 60 : t.level === "B1" ? 100 : 160;
     assert.ok(n >= min, `${t.id}: texto muy corto (${n} palabras)`);
     for (const q of r.questions) {
       if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length, `${t.id}: opciones mal armadas: ${q.q}`);

@@ -195,14 +195,14 @@ export const LIBRARY: LibraryText[] = [
         "Heutige Studien zeichnen ein anderes Bild. Zweisprachige Kinder mischen zwar anfangs manchmal die Sprachen, doch das ist normal und ein Zeichen dafür, dass sie beide Systeme gleichzeitig verarbeiten. Außerdem scheinen sie besser darin zu sein, zwischen Aufgaben zu wechseln und ihre Aufmerksamkeit zu steuern.",
         "Entscheidend ist dabei, dass Kinder beide Sprachen regelmäßig und in verschiedenen Situationen hören. Wer eine Sprache nur selten verwendet, verliert sie leichter wieder.",
         "Auch für Erwachsene lohnt es sich, eine weitere Sprache zu lernen. Es dauert zwar länger, doch Untersuchungen legen nahe, dass das Gehirn dadurch länger leistungsfähig bleibt.",
-        "Für Familien bedeutet das eine Entscheidung im Alltag: Spricht man zu Hause die Herkunftssprache oder die Sprache des Landes? Fachleute raten meist dazu, dass jeder Elternteil konsequent seine eigene Sprache verwendet, damit die Kinder klare Vorbilder haben.",
+        "Für Familien bedeutet das eine Entscheidung im Alltag: Spricht man zu Hause die Herkunftssprache oder die Sprache des Landes? Fachleute raten meist dazu, dass jeder Elternteil konsequent seine eigene Sprache verwendet, damit die Kinder klare Vorbilder haben. Wichtig ist außerdem, dass beide Sprachen im Umfeld Ansehen genießen; wenn eine als weniger wertvoll gilt, verlieren Kinder schnell die Lust, sie zu sprechen.",
       ],
       translation: [
         "Más de la mitad de la población mundial crece con al menos dos idiomas. Durante mucho tiempo el plurilingüismo en los chicos se consideró un riesgo: se temía que aprendieran peor los dos idiomas.",
         "Los estudios actuales muestran otro panorama. Los chicos bilingües, al principio, a veces mezclan los idiomas, pero eso es normal y una señal de que procesan los dos sistemas a la vez. Además parecen ser mejores para cambiar de tarea y controlar su atención.",
         "Lo decisivo es que los chicos escuchen los dos idiomas con regularidad y en distintas situaciones. Quien usa un idioma solo muy de vez en cuando lo pierde más fácil.",
         "También a los adultos les conviene aprender otro idioma. Lleva más tiempo, pero hay investigaciones que sugieren que así el cerebro se mantiene en forma por más tiempo.",
-        "Para las familias eso significa una decisión cotidiana: ¿se habla en casa el idioma de origen o el del país? Los especialistas suelen aconsejar que cada madre o padre use de manera consecuente su propio idioma, para que los chicos tengan modelos claros.",
+        "Para las familias eso significa una decisión cotidiana: ¿se habla en casa el idioma de origen o el del país? Los especialistas suelen aconsejar que cada madre o padre use de manera consecuente su propio idioma, para que los chicos tengan modelos claros. También es importante que los dos idiomas gocen de prestigio en el entorno; si uno se considera menos valioso, los chicos pierden rápido las ganas de hablarlo.",
       ],
       questions: [
         c("¿Qué se temía antes sobre el plurilingüismo en los chicos?", ["Que aprendieran peor los dos idiomas", "Que olvidaran el primero", "Que no hablaran", "Que fueran más lentos en la escuela"], "«schlechter lernen»."),
