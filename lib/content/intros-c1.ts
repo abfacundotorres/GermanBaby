@@ -558,4 +558,8 @@ export const INTROS_C1: Record<string, LessonNotes> = {
   "medien-c1/escucha-larga": long("los medios"),
   "technik-c1/escucha-larga": long("la inteligencia artificial"),
   "pruefung-c1/escucha-larga": long("un examen oral"),
+  "relativ/escucha-larga": long("los vecinos de un edificio"),
+  "konnektoren/escucha-larga": long("una fiesta sorpresa"),
+  "konnektoren-b2/escucha-larga": long("una decisión de la empresa"),
+  "diskussion-c1/escucha-larga": long("una asamblea de vecinos"),
 };
