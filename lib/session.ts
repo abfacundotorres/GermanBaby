@@ -1,6 +1,7 @@
 import { ALL_VOCAB, type Dialogue, type GrammarRule, type HandExercise, type ListenQuestion, type Lesson, type Reading, type Vocab } from "./curriculum.ts";
 import { levenshtein, shuffle, tiles } from "./text.ts";
 import { tokenize } from "./gloss.ts";
+import { CORE_VOCAB } from "./content/core-vocab.ts";
 
 type BaseStep =
   | { kind: "intro"; vocab: Vocab }
@@ -171,14 +172,16 @@ export function buildLessonSession(lesson: Lesson, unitVocab: Vocab[], dueVocab:
 export function buildReviewSession(dueDe: string[], limit = 12): Step[] {
   const items = dueDe
     .slice(0, limit)
-    .map((de) => ALL_VOCAB.find((v) => v.de === de))
+    .map((de) => ALL_VOCAB.find((v) => v.de === de) ?? CORE_VOCAB.find((v) => v.de === de))
     .filter((v): v is (typeof ALL_VOCAB)[number] => Boolean(v));
   return items.map((v, i): Step => {
+    // Las palabras del entrenador se repasan entre ellas: mezclarlas con frases del currículo daría opciones raras.
+    const pool = v.unitId === "core" ? CORE_VOCAB : ALL_VOCAB;
     switch (i % 4) {
       case 0:
-        return choice(v, ALL_VOCAB);
+        return choice(v, pool);
       case 1:
-        return listen(v, ALL_VOCAB);
+        return listen(v, pool);
       case 2:
         return { kind: "speak", de: v.de, es: v.es, vocab: v };
       default:
@@ -220,4 +223,21 @@ export function buildMixedSession(done: { unitId: string; lesson: Lesson }[], n 
     }
   }
   return shuffle(out);
+}
+
+/**
+ * Sesión del entrenador de vocabulario: cada palabra con su ejemplo, reconocimiento a medida que se ven de a dos,
+ * y al final escuchar y escribir cada una. Sin IA.
+ */
+export function buildCoreSession(words: Vocab[]): Step[] {
+  const pool = CORE_VOCAB;
+  const out: Step[] = [{ kind: "section", emoji: "📚", title: "Palabras nuevas", text: `${words.length} palabras de uso frecuente. Primero las ves con un ejemplo y después las practicás.` }];
+  words.forEach((v, i) => {
+    out.push({ kind: "intro", vocab: v });
+    if (i % 2 === 1) out.push(choice(words[i - 1], pool), choice(v, pool));
+  });
+  if (words.length % 2 === 1) out.push(choice(words[words.length - 1], pool));
+  out.push({ kind: "section", emoji: "🏋️", title: "A practicar", text: "Ahora las escuchás y las escribís de memoria." });
+  out.push(...shuffle([...words.map((v) => listen(v, pool)), ...words.map(writeWord)]));
+  return out;
 }

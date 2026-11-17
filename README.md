@@ -99,6 +99,7 @@ app/
   lesson/[unitId]/[lessonId]   lección
   review/                      repaso espaciado
   mixed/                       repaso mezclado de varias unidades (sin IA)
+  words/                       entrenador de vocabulario por frecuencia (sin IA)
   chat/[unitId]                charla de rol
   api/speech-token             clave Azure → token de 10 min
   api/correct                  corrección de traducciones (Claude)

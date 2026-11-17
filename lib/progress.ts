@@ -318,6 +318,14 @@ export function dueItems(p: Progress): string[] {
     .map(([de]) => de);
 }
 
+/** Palabras nuevas del entrenador: entran al repaso espaciado para mañana. */
+export function learnWords(des: string[]) {
+  update((p) => {
+    for (const de of des) if (!p.srs[de]) p.srs[de] = { box: 1, due: addDays(today(), 1) };
+    return p;
+  });
+}
+
 export function reviewItem(de: string, correct: boolean) {
   update((p) => {
     const item = p.srs[de] ?? { box: 1, due: today() };

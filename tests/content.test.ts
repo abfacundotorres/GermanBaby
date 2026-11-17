@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { UNITS, ALL_VOCAB, LESSON_ORDER, BONUS_PREV } from "../lib/curriculum.ts";
-import { autoCloze, buildLessonSession, buildMixedSession, isGraded } from "../lib/session.ts";
+import { autoCloze, buildCoreSession, buildReviewSession, buildLessonSession, buildMixedSession, isGraded } from "../lib/session.ts";
 import { matchFill, tiles } from "../lib/text.ts";
 import { GLOSS, PROPER, isNumberWord, tokenize } from "../lib/gloss.ts";
 
@@ -215,4 +215,39 @@ test("repaso mezclado: 15 ejercicios calificados de varias unidades, sin producc
   }
   assert.equal(buildMixedSession([]).length, 0);
   assert.ok(buildMixedSession(done.slice(0, 2), 15).length <= 15);
+});
+
+test("entrenador de vocabulario: palabras bien formadas, sin repetir y con ejemplo que las usa", async () => {
+  const { CORE_VOCAB } = await import("../lib/content/core-vocab.ts");
+  const strip = (s: string) => s.toLowerCase().replace(/^(der|die|das|ein|eine|sich)\s+/, "").replace(/[.,!?¿¡]/g, "").trim();
+  const taught = new Set(ALL_VOCAB.map((v) => strip(v.de)));
+  const seen = new Set<string>();
+  assert.ok(CORE_VOCAB.length >= 200);
+  for (const v of CORE_VOCAB) {
+    assert.ok(v.de && v.es && v.example?.de && v.example?.es, `línea incompleta: ${v.de}`);
+    const k = strip(v.de);
+    assert.ok(!seen.has(k), `palabra repetida en el entrenador: ${v.de}`);
+    seen.add(k);
+    assert.ok(!taught.has(k), `«${v.de}» ya se enseña en una lección`);
+    const words = tokenize(v.example!.de);
+    const ok = tokenize(v.de).filter((w) => w.length > 1 && !["der", "die", "das"].includes(w)).some((h) => (h.length <= 3 ? words.includes(h) : words.some((w) => w.startsWith(h.slice(0, Math.max(3, h.length - 2))))));
+    assert.ok(ok, `el ejemplo de «${v.de}» no usa la palabra: ${v.example!.de}`);
+  }
+});
+
+test("entrenador de vocabulario: la sesión de 10 palabras es calificada y no usa frases del currículo", async () => {
+  const { CORE_VOCAB } = await import("../lib/content/core-vocab.ts");
+  const steps = buildCoreSession(CORE_VOCAB.slice(0, 10));
+  assert.equal(steps.filter((s) => s.kind === "intro").length, 10);
+  assert.ok(steps.filter(isGraded).length >= 30);
+  const corePool = new Set(CORE_VOCAB.flatMap((v) => [v.de, v.es]));
+  for (const s of steps) if (s.kind === "choice" || s.kind === "listen") assert.ok(s.options.every((o) => corePool.has(o)), "las opciones salen del entrenador");
+});
+
+test("repaso espaciado: incluye las palabras del entrenador y las repasa entre ellas", async () => {
+  const { CORE_VOCAB } = await import("../lib/content/core-vocab.ts");
+  const steps = buildReviewSession(CORE_VOCAB.slice(0, 8).map((v) => v.de));
+  assert.equal(steps.length, 8);
+  const corePool = new Set(CORE_VOCAB.flatMap((v) => [v.de, v.es]));
+  for (const s of steps) if (s.kind === "choice" || s.kind === "listen") assert.ok(s.options.every((o) => corePool.has(o)));
 });

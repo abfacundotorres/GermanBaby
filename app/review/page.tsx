@@ -27,6 +27,10 @@ export default function ReviewPage() {
         ) : (
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
+        <Link href="/words" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>📚 Palabras nuevas</b>
+          <span className="muted small">Vocabulario de uso frecuente, de a 10, con ejemplo y repaso espaciado. Sin IA.</span>
+        </Link>
         <Link href="/mixed" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>🔀 Repaso mezclado</b>
           <span className="muted small">15 ejercicios al azar de las unidades que ya hiciste. Sin IA.</span>
