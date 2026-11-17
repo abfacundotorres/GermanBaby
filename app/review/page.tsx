@@ -27,6 +27,10 @@ export default function ReviewPage() {
         ) : (
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
+        <Link href="/library" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>📖 Biblioteca de lecturas</b>
+          <span className="muted small">Textos graduados de A2 a B2, con preguntas y traducción.</span>
+        </Link>
         <Link href="/words" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📚 Palabras nuevas</b>
           <span className="muted small">Vocabulario de uso frecuente, de a 10, con ejemplo y repaso espaciado. Sin IA.</span>

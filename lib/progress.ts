@@ -279,7 +279,7 @@ export function completeLesson(key: string, accuracy: number, vocab: string[]): 
     if (accuracy === 1) unlock(p, "perfect", unlocked);
     const unitId = key.split("/")[0];
     const unitLessons = LESSON_ORDER.filter((k) => k.startsWith(unitId + "/"));
-    if (unitLessons.every((k) => p.lessons[k])) unlock(p, "unit_done", unlocked);
+    if (unitLessons.length > 0 && unitLessons.every((k) => p.lessons[k])) unlock(p, "unit_done", unlocked);
     return p;
   });
   return { stars, unlocked };

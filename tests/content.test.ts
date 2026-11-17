@@ -251,3 +251,20 @@ test("repaso espaciado: incluye las palabras del entrenador y las repasa entre e
   const corePool = new Set(CORE_VOCAB.flatMap((v) => [v.de, v.es]));
   for (const s of steps) if (s.kind === "choice" || s.kind === "listen") assert.ok(s.options.every((o) => corePool.has(o)));
 });
+
+test("biblioteca de lecturas: formato, traducción párrafo a párrafo y preguntas coherentes", async () => {
+  const { LIBRARY } = await import("../lib/content/library.ts");
+  assert.equal(new Set(LIBRARY.map((x) => x.id)).size, LIBRARY.length, "ids repetidos");
+  for (const t of LIBRARY) {
+    const r = t.reading;
+    assert.equal(r.text.length, r.translation.length, `${t.id}: un párrafo, una traducción`);
+    assert.ok(r.questions.length >= 5, `${t.id}: pocas preguntas`);
+    const n = r.text.join(" ").split(/\s+/).length;
+    const min = t.level === "A2" ? 60 : t.level === "B1" ? 100 : 180;
+    assert.ok(n >= min, `${t.id}: texto muy corto (${n} palabras)`);
+    for (const q of r.questions) {
+      if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length, `${t.id}: opciones mal armadas: ${q.q}`);
+      if (q.type === "fill") assert.ok(q.answers.length > 0 && q.answers.every((a) => matchFill(a, q.answers)));
+    }
+  }
+});
