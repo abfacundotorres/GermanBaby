@@ -119,7 +119,7 @@ async function answer(page, step) {
     case "write": await type(step.references[0]); await check(); return null;
     case "free": {
       // Producción libre: necesita IA. El texto tiene frases largas y distintas para pasar la revisión local (lib/freecheck.ts). Sin clave de Claude aparece «Saltear»; con clave, se acepta lo que corrija.
-      await page.locator("textarea").first().fill("Ich wohne seit zwei Jahren in Berlin. Früher habe ich in Madrid gearbeitet. Am Wochenende koche ich gern für meine Freunde. Wenn ich Zeit habe, lerne ich Deutsch. Meine Schwester hilft mir oft dabei. Nächstes Jahr möchte ich nach Wien fahren.");
+      await page.locator("textarea").first().fill("Ich wohne seit zwei Jahren in Berlin. Früher habe ich in Madrid gearbeitet. Am Wochenende koche ich gern für meine Freunde. Wenn ich Zeit habe, lerne ich Deutsch. Meine Schwester hilft mir oft dabei. Nächstes Jahr möchte ich nach Wien fahren. Im Sommer besuche ich dort meine Tante. Danach reisen wir zusammen an die Küste.");
       await page.locator("button:has-text('Corregir')").first().click();
       const skip = page.locator("button:has-text('Saltear')").first();
       const cont = page.locator("button:has-text('Continuar')").first();
