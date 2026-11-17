@@ -232,6 +232,200 @@ warum|por qué|Warum bist du traurig?|¿Por qué estás triste?
 wie|cómo|Wie geht es dir?|¿Cómo estás?
 was|qué|Was ist das?|¿Qué es esto?
 wohin|adónde|Wohin gehst du?|¿Adónde vas?
+bekommen|recibir|Wir bekommen morgen Besuch.|Mañana recibimos visitas.
+holen|ir a buscar / traer|Ich hole schnell ein Glas Wasser.|Traigo rápido un vaso de agua.
+legen|poner (acostado)|Wir legen die Karte auf den Tisch.|Ponemos el mapa sobre la mesa.
+stellen|poner (parado)|Wir stellen die Flasche auf den Boden.|Ponemos la botella en el piso.
+setzen|sentar / poner|Wir setzen uns an den Tisch.|Nos sentamos a la mesa.
+ziehen|tirar / mudarse|Wir ziehen im Mai um.|Nos mudamos en mayo.
+drücken|apretar|Wir drücken auf den Knopf.|Apretamos el botón.
+werfen|tirar / arrojar|Wir werfen den Ball.|Tiramos la pelota.
+fallen|caer|Die Blätter fallen im Herbst.|Las hojas caen en otoño.
+springen|saltar|Die Kinder springen ins Wasser.|Los chicos saltan al agua.
+steigen|subir|Die Preise steigen jedes Jahr.|Los precios suben cada año.
+schlafen|dormir|Wir schlafen acht Stunden.|Dormimos ocho horas.
+träumen|soñar|Wir träumen von einem Haus.|Soñamos con una casa.
+aufräumen|ordenar|Ich muss mein Zimmer aufräumen.|Tengo que ordenar mi cuarto.
+anziehen|vestirse / ponerse (ropa)|Im Winter muss man sich warm anziehen.|En invierno hay que abrigarse bien.
+einladen|invitar|Ich möchte dich zum Essen einladen.|Quiero invitarte a comer.
+besuchen|visitar|Wir besuchen morgen unsere Oma.|Mañana visitamos a nuestra abuela.
+benutzen|usar|Wir benutzen den Bus.|Usamos el colectivo.
+bauen|construir|Wir bauen ein Haus.|Construimos una casa.
+zählen|contar (números)|Wir zählen bis zehn.|Contamos hasta diez.
+rechnen|calcular / contar con|Wir rechnen mit zehn Gästen.|Contamos con diez invitados.
+entscheiden|decidir|Wir entscheiden das morgen.|Eso lo decidimos mañana.
+versuchen|intentar|Wir versuchen es noch einmal.|Lo intentamos otra vez.
+probieren|probar|Wir probieren den Kuchen.|Probamos la torta.
+vorschlagen|proponer|Ich möchte etwas vorschlagen.|Quiero proponer algo.
+erlauben|permitir|Wir erlauben das nicht.|No permitimos eso.
+verbieten|prohibir|Wir verbieten das Rauchen.|Prohibimos fumar.
+erzählen|contar (una historia)|Wir erzählen eine Geschichte.|Contamos una historia.
+kennen|conocer (algo o a alguien)|Wir kennen die Stadt gut.|Conocemos bien la ciudad.
+kennenlernen|conocer (a alguien nuevo)|Ich möchte dich kennenlernen.|Quiero conocerte.
+verlassen|dejar / abandonar|Wir verlassen das Haus um acht.|Salimos de la casa a las ocho.
+verpassen|perder (un tren)|Wir verpassen den Zug.|Perdemos el tren.
+ankommen|llegar|Wann wollen wir ankommen?|¿Cuándo queremos llegar?
+abfahren|salir (un vehículo)|Der Zug soll um acht abfahren.|El tren tiene que salir a las ocho.
+einsteigen|subir (a un vehículo)|Bitte nicht einsteigen!|¡Por favor, no subir!
+aussteigen|bajar (de un vehículo)|Wir müssen in Köln aussteigen.|Tenemos que bajar en Colonia.
+reservieren|reservar|Wir reservieren einen Tisch.|Reservamos una mesa.
+bestellen|pedir (encargar)|Wir bestellen zwei Kaffee.|Pedimos dos cafés.
+ausgeben|gastar (dinero)|Ich will nicht so viel Geld ausgeben.|No quiero gastar tanta plata.
+verdienen|ganar (dinero)|Wir verdienen nicht viel.|No ganamos mucho.
+leihen|prestar / pedir prestado|Kannst du mir deinen Stift leihen?|¿Me prestás tu lapicera?
+schenken|regalar|Wir schenken ihr ein Buch.|Le regalamos un libro.
+gewinnen|ganar (una competencia)|Wir gewinnen das Spiel.|Ganamos el partido.
+ändern|cambiar (modificar)|Wir ändern den Plan.|Cambiamos el plan.
+wechseln|cambiar (de lugar o de ropa)|Wir wechseln das Hotel.|Cambiamos de hotel.
+wachsen|crecer|Die Kinder wachsen schnell.|Los chicos crecen rápido.
+sterben|morir|Viele Tiere sterben im Winter.|Muchos animales mueren en invierno.
+passieren|pasar / ocurrir|Was ist hier passiert?|¿Qué pasó acá?
+scheinen|brillar / parecer|Die Sonne scheint heute.|El sol brilla hoy.
+aussehen|verse / parecer|Wie soll das aussehen?|¿Cómo se supone que se vea eso?
+klingen|sonar|Das klingt gut.|Eso suena bien.
+riechen|oler|Hier riecht es nach Kaffee.|Acá huele a café.
+fühlen|sentir|Wir fühlen uns hier wohl.|Nos sentimos bien acá.
+wünschen|desear|Wir wünschen dir viel Glück.|Te deseamos mucha suerte.
+erreichen|alcanzar / llegar a|Wir erreichen den Bahnhof um neun.|Llegamos a la estación a las nueve.
+der Kollege|el colega|Mein Kollege kommt aus Polen.|Mi colega es de Polonia.
+der Chef|el jefe|Der Chef ist heute nicht da.|El jefe hoy no está.
+die Aufgabe|la tarea / el ejercicio|Die Aufgabe ist nicht schwer.|El ejercicio no es difícil.
+das Projekt|el proyecto|Das Projekt dauert ein Jahr.|El proyecto dura un año.
+der Lohn|el salario|Der Lohn ist zu niedrig.|El salario es demasiado bajo.
+die Klasse|el grado / la clase|Die Klasse hat zwanzig Kinder.|El grado tiene veinte chicos.
+die Hausaufgabe|la tarea escolar|Die Hausaufgabe ist für morgen.|La tarea es para mañana.
+der Test|la prueba|Der Test war nicht schwer.|La prueba no fue difícil.
+das Heft|el cuaderno|Mein Heft liegt auf dem Tisch.|Mi cuaderno está sobre la mesa.
+der Stift|la lapicera / el lápiz|Hast du einen Stift?|¿Tenés una lapicera?
+die Tafel|el pizarrón|Der Lehrer schreibt an die Tafel.|El docente escribe en el pizarrón.
+das Wörterbuch|el diccionario|Ich brauche ein Wörterbuch.|Necesito un diccionario.
+das Formular|el formulario|Bitte füllen Sie das Formular aus.|Por favor, complete el formulario.
+die Unterschrift|la firma|Hier fehlt Ihre Unterschrift.|Acá falta su firma.
+die Kamera|la cámara|Die Kamera ist neu.|La cámara es nueva.
+das Radio|la radio|Das Radio läuft den ganzen Tag.|La radio anda todo el día.
+das Programm|el programa|Das Programm beginnt um acht.|El programa empieza a las ocho.
+das Konzert|el concierto|Das Konzert war wunderbar.|El concierto fue maravilloso.
+das Theater|el teatro|Wir gehen ins Theater.|Vamos al teatro.
+das Kino|el cine|Das Kino ist um die Ecke.|El cine está a la vuelta.
+die Hochzeit|el casamiento|Die Hochzeit ist im Mai.|El casamiento es en mayo.
+der Besuch|la visita|Wir haben heute Besuch.|Hoy tenemos visitas.
+der Nachbar|el vecino|Mein Nachbar ist sehr freundlich.|Mi vecino es muy amable.
+das Gesetz|la ley|Das Gesetz ist neu.|La ley es nueva.
+die Politik|la política|Ich interessiere mich für Politik.|Me interesa la política.
+die Gegend|la zona|Die Gegend ist sehr ruhig.|La zona es muy tranquila.
+der Norden|el norte|Im Norden ist es kälter.|En el norte hace más frío.
+der Süden|el sur|Im Süden scheint oft die Sonne.|En el sur muchas veces hay sol.
+der Osten|el este|Der Osten ist grün.|El este es verde.
+der Westen|el oeste|Im Westen wohnen viele Leute.|En el oeste vive mucha gente.
+die Insel|la isla|Die Insel ist sehr klein.|La isla es muy chica.
+der Fluss|el río|Der Fluss ist breit.|El río es ancho.
+die Brücke|el puente|Die Brücke ist alt.|El puente es viejo.
+die Landschaft|el paisaje|Die Landschaft ist wunderschön.|El paisaje es hermosísimo.
+der Mond|la luna|Der Mond scheint hell.|La luna brilla fuerte.
+der Stern|la estrella|Der Stern ist sehr hell.|La estrella es muy brillante.
+der Himmel|el cielo|Der Himmel ist blau.|El cielo es azul.
+die Erde|la tierra|Die Erde ist rund.|La tierra es redonda.
+das Eis|el hielo / el helado|Ich möchte ein Eis.|Quiero un helado.
+die Kälte|el frío|Die Kälte ist heute stark.|El frío es fuerte hoy.
+die Hitze|el calor (intenso)|Die Hitze ist kaum auszuhalten.|El calor casi no se aguanta.
+die Temperatur|la temperatura|Die Temperatur steigt.|La temperatura sube.
+der Grad|el grado|Heute sind es zehn Grad.|Hoy hace diez grados.
+die Jahreszeit|la estación del año|Der Herbst ist meine liebste Jahreszeit.|El otoño es mi estación favorita.
+der Frühling|la primavera|Im Frühling blüht alles.|En primavera florece todo.
+der Sommer|el verano|Im Sommer fahren wir ans Meer.|En verano vamos al mar.
+der Herbst|el otoño|Im Herbst regnet es viel.|En otoño llueve mucho.
+der Anfang|el comienzo|Am Anfang war alles neu.|Al principio todo era nuevo.
+die Mitte|el medio|Der Tisch steht in der Mitte.|La mesa está en el medio.
+die Gelegenheit|la oportunidad|Das ist eine gute Gelegenheit.|Es una buena oportunidad.
+die Möglichkeit|la posibilidad|Es gibt zwei Möglichkeiten.|Hay dos posibilidades.
+die Erklärung|la explicación|Die Erklärung ist klar.|La explicación es clara.
+der Unterschied|la diferencia|Was ist der Unterschied?|¿Cuál es la diferencia?
+die Situation|la situación|Die Situation ist schwierig.|La situación es difícil.
+der Erfolg|el éxito|Wir wünschen dir viel Erfolg.|Te deseamos mucho éxito.
+der Fortschritt|el progreso|Du machst große Fortschritte.|Hacés grandes progresos.
+die Entwicklung|el desarrollo|Die Entwicklung ist positiv.|El desarrollo es positivo.
+die Veränderung|el cambio|Die Veränderung ist groß.|El cambio es grande.
+der Vorschlag|la propuesta|Das ist ein guter Vorschlag.|Es una buena propuesta.
+der Gedanke|el pensamiento|Der Gedanke gefällt mir.|El pensamiento me gusta.
+das Gefühl|el sentimiento / la sensación|Ich habe ein gutes Gefühl.|Tengo un buen presentimiento.
+die Stimme|la voz|Deine Stimme klingt müde.|Tu voz suena cansada.
+das Gespräch|la conversación|Das Gespräch war kurz.|La conversación fue corta.
+die Diskussion|la discusión|Die Diskussion war lang.|La discusión fue larga.
+das Interview|la entrevista|Das Interview dauert eine Stunde.|La entrevista dura una hora.
+die Rede|el discurso|Die Rede war sehr kurz.|El discurso fue muy corto.
+die Regel|la regla|Die Regel ist einfach.|La regla es simple.
+die Verantwortung|la responsabilidad|Ich übernehme die Verantwortung.|Asumo la responsabilidad.
+die Sicherheit|la seguridad|Die Sicherheit ist wichtig.|La seguridad es importante.
+die Gefahr|el peligro|Hier gibt es keine Gefahr.|Acá no hay peligro.
+der Schutz|la protección|Der Schutz ist wichtig.|La protección es importante.
+die Krankheit|la enfermedad|Die Krankheit ist nicht gefährlich.|La enfermedad no es peligrosa.
+der Schmerz|el dolor|Der Schmerz ist stark.|El dolor es fuerte.
+die Medizin|la medicina|Sie studiert Medizin.|Ella estudia Medicina.
+die Nudel|el fideo|Die Nudeln sind fertig.|Los fideos están listos.
+das Salz|la sal|Gib mir bitte das Salz.|Pasame la sal, por favor.
+der Pfeffer|la pimienta|Der Pfeffer steht neben dem Salz.|La pimienta está al lado de la sal.
+das Öl|el aceite|Wir brauchen Öl zum Kochen.|Necesitamos aceite para cocinar.
+der Joghurt|el yogur|Ich esse Joghurt zum Frühstück.|Como yogur en el desayuno.
+die Marmelade|la mermelada|Die Marmelade ist selbst gemacht.|La mermelada es casera.
+der Honig|la miel|Ich nehme Honig statt Zucker.|Uso miel en vez de azúcar.
+der Saft|el jugo|Ein Glas Saft, bitte.|Un vaso de jugo, por favor.
+der Wein|el vino|Der Wein ist aus Österreich.|El vino es de Austria.
+die Limonade|la gaseosa|Die Kinder trinken Limonade.|Los chicos toman gaseosa.
+wach|despierto|Ich bin schon wach.|Ya estoy despierto.
+fremd|extraño / ajeno|Die Stadt ist mir fremd.|La ciudad me es extraña.
+bekannt|conocido|Er ist sehr bekannt.|Es muy conocido.
+berühmt|famoso|Die Sängerin ist berühmt.|La cantante es famosa.
+dunkel|oscuro|Im Zimmer ist es dunkel.|En el cuarto está oscuro.
+breit|ancho|Die Straße ist sehr breit.|La calle es muy ancha.
+eng|estrecho / ajustado|Die Hose ist zu eng.|El pantalón es demasiado ajustado.
+tief|profundo|Der See ist sehr tief.|El lago es muy profundo.
+flach|plano / bajo|Das Land ist flach.|El país es llano.
+steil|empinado|Der Weg ist steil.|El camino es empinado.
+rund|redondo|Der Tisch ist rund.|La mesa es redonda.
+gefährlich|peligroso|Das ist sehr gefährlich.|Eso es muy peligroso.
+höflich|cortés|Er ist immer höflich.|Siempre es cortés.
+ehrlich|honesto|Sei bitte ehrlich.|Sé honesto, por favor.
+klug|inteligente|Das Kind ist sehr klug.|El chico es muy inteligente.
+dumm|tonto|Das war eine dumme Idee.|Fue una idea tonta.
+faul|vago|Ich bin heute faul.|Hoy estoy vago.
+fleißig|aplicado / trabajador|Sie ist sehr fleißig.|Es muy aplicada.
+sportlich|deportista|Er ist sehr sportlich.|Es muy deportista.
+nötig|necesario|Das ist nicht nötig.|Eso no es necesario.
+anders|distinto|Das ist ganz anders.|Eso es completamente distinto.
+ähnlich|parecido|Die Wörter sind ähnlich.|Las palabras son parecidas.
+normal|normal|Das ist ganz normal.|Eso es totalmente normal.
+typisch|típico|Das ist typisch deutsch.|Eso es típicamente alemán.
+bestimmt|seguramente|Er kommt bestimmt.|Seguro que viene.
+wahrscheinlich|probablemente|Es regnet wahrscheinlich morgen.|Probablemente llueva mañana.
+eigentlich|en realidad|Wie heißt du eigentlich?|¿Cómo te llamás, en realidad?
+sogar|incluso|Sogar die Kinder sind müde.|Hasta los chicos están cansados.
+fast|casi|Wir sind fast fertig.|Casi terminamos.
+ungefähr|aproximadamente|Es dauert ungefähr eine Stunde.|Dura aproximadamente una hora.
+genau|exacto|Genau, das meine ich.|Exacto, eso digo.
+natürlich|por supuesto|Natürlich komme ich.|Por supuesto que voy.
+leider|lamentablemente|Leider habe ich keine Zeit.|Lamentablemente no tengo tiempo.
+endlich|por fin|Endlich ist Wochenende!|¡Por fin es fin de semana!
+plötzlich|de golpe|Plötzlich war das Licht aus.|De golpe se apagó la luz.
+meistens|casi siempre|Ich esse meistens zu Hause.|Casi siempre como en casa.
+täglich|todos los días|Wir üben täglich.|Practicamos todos los días.
+vorher|antes|Rufst du vorher an?|¿Llamás antes?
+nachher|después|Wir sehen uns nachher.|Nos vemos después.
+inzwischen|mientras tanto|Inzwischen ist es dunkel geworden.|Mientras tanto se hizo de noche.
+bisher|hasta ahora|Bisher ist alles gut gegangen.|Hasta ahora salió todo bien.
+ebenfalls|igualmente|Danke, ebenfalls!|¡Gracias, igualmente!
+also|entonces / bueno|Also gut, gehen wir.|Bueno, vamos.
+doch|sí (contradiciendo)|Doch, ich komme mit.|Sí que voy con vos.
+sondern|sino|Nicht heute, sondern morgen.|No hoy, sino mañana.
+niemand|nadie|Niemand ist zu Hause.|No hay nadie en casa.
+irgendwo|en algún lugar|Ich habe das irgendwo gelesen.|Lo leí en algún lado.
+überall|en todos lados|Hier gibt es überall Blumen.|Acá hay flores por todos lados.
+nirgends|en ningún lado|Ich finde ihn nirgends.|No lo encuentro en ningún lado.
+irgendwann|en algún momento|Wir fahren irgendwann nach Japan.|Algún día vamos a Japón.
+jedes Mal|cada vez|Jedes Mal vergesse ich es.|Cada vez me olvido.
+vor allem|sobre todo|Ich mag vor allem Pizza.|Me gusta sobre todo la pizza.
+auf jeden Fall|sí o sí|Ich komme auf jeden Fall.|Voy sí o sí.
+zum Glück|por suerte|Zum Glück ist nichts passiert.|Por suerte no pasó nada.
+ein paar|unos pocos|Ich habe ein paar Fragen.|Tengo unas preguntas.
 `;
 
 /** Palabras del entrenador, en orden de estudio. `unitId: "core"` las distingue de las del currículo. */
