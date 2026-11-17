@@ -1064,6 +1064,308 @@ ständig|constantemente|Er ruft ständig an.|Llama constantemente.
 mehrmals|varias veces|Ich habe mehrmals angerufen.|Llamé varias veces.
 anschließend|a continuación|Anschließend gehen wir essen.|A continuación vamos a comer.
 beispielsweise|por ejemplo|Beispielsweise gibt es hier einen Park.|Por ejemplo, acá hay un parque.
+## B2
+abwägen|sopesar|Wir müssen Vor- und Nachteile abwägen.|Tenemos que sopesar ventajas y desventajas.
+abschaffen|abolir|Die Stadt will die Gebühr abschaffen.|La ciudad quiere abolir la tasa.
+abstreiten|negar|Er will alles abstreiten.|Quiere negarlo todo.
+anerkennen|reconocer|Wir müssen seine Leistung anerkennen.|Tenemos que reconocer su logro.
+anführen|citar / alegar|Er kann viele Gründe anführen.|Puede alegar muchas razones.
+angreifen|atacar|Man darf niemanden angreifen.|No se debe atacar a nadie.
+ankündigen|anunciar|Die Firma will neue Preise ankündigen.|La empresa quiere anunciar precios nuevos.
+anpassen|adaptar|Wir müssen uns den Regeln anpassen.|Tenemos que adaptarnos a las reglas.
+anregen|incentivar / sugerir|Das Buch kann viele Diskussionen anregen.|El libro puede generar muchas discusiones.
+anstreben|aspirar a|Wir wollen eine Lösung anstreben.|Queremos aspirar a una solución.
+ansprechen|dirigirse a / mencionar|Wir möchten das Thema ansprechen.|Queremos plantear el tema.
+anwenden|aplicar|Wir können die Regel hier anwenden.|Podemos aplicar la regla acá.
+aufbauen|construir / armar|Wir wollen ein Unternehmen aufbauen.|Queremos construir una empresa.
+aufdecken|revelar / destapar|Die Zeitung will den Skandal aufdecken.|El diario quiere destapar el escándalo.
+aufklären|aclarar / informar|Wir müssen die Bevölkerung aufklären.|Tenemos que informar a la población.
+aufweisen|presentar / mostrar|Das Gebäude kann viele Schäden aufweisen.|El edificio puede presentar muchos daños.
+ausbauen|ampliar|Man will das Netz ausbauen.|Quieren ampliar la red.
+ausgleichen|compensar|Das müssen wir irgendwie ausgleichen.|Eso lo tenemos que compensar de algún modo.
+auslösen|desencadenar|Das kann eine Krise auslösen.|Eso puede desencadenar una crisis.
+ausnutzen|aprovecharse de|Man darf andere nicht ausnutzen.|No se debe aprovecharse de otros.
+ausschließen|excluir|Wir können das nicht ausschließen.|No lo podemos excluir.
+ausüben|ejercer|Er will seinen Beruf wieder ausüben.|Quiere volver a ejercer su profesión.
+auswerten|evaluar (datos)|Wir müssen die Zahlen auswerten.|Tenemos que evaluar los números.
+bedauern|lamentar|Wir bedauern die Verzögerung.|Lamentamos la demora.
+bedenken|tener en cuenta / considerar|Man muss auch die Kosten bedenken.|También hay que tener en cuenta los costos.
+bedienen|atender / manejar|Wir bedienen unsere Kunden schnell.|Atendemos rápido a nuestros clientes.
+beeindrucken|impresionar|Das Ergebnis soll uns beeindrucken.|El resultado nos tiene que impresionar.
+sich befassen|ocuparse (de un tema)|Wir befassen uns mit dem Thema.|Nos ocupamos del tema.
+befolgen|cumplir (una regla)|Wir müssen die Regeln befolgen.|Tenemos que cumplir las reglas.
+befördern|transportar / ascender|Man wollte ihn befördern.|Querían ascenderlo.
+begründen|fundamentar|Wir müssen die Entscheidung begründen.|Tenemos que fundamentar la decisión.
+begrenzen|limitar|Wir wollen die Kosten begrenzen.|Queremos limitar los costos.
+behindern|obstaculizar|Das kann die Arbeit behindern.|Eso puede obstaculizar el trabajo.
+beherrschen|dominar|Sie will drei Sprachen beherrschen.|Quiere dominar tres idiomas.
+beibehalten|mantener|Wir wollen den Plan beibehalten.|Queremos mantener el plan.
+beitreten|afiliarse|Er will dem Verein beitreten.|Quiere afiliarse al club.
+belasten|cargar / afectar|Die Kosten können das Budget belasten.|Los costos pueden afectar el presupuesto.
+belohnen|recompensar|Wir wollen gute Arbeit belohnen.|Queremos recompensar el buen trabajo.
+beobachten|observar|Wir beobachten die Lage genau.|Observamos la situación de cerca.
+beschränken|restringir|Man will den Verkehr beschränken.|Quieren restringir el tráfico.
+beseitigen|eliminar|Wir wollen die Fehler beseitigen.|Queremos eliminar los errores.
+bestreiten|negar / costear|Das kann niemand bestreiten.|Eso no lo puede negar nadie.
+sich beteiligen|participar|Alle sollen sich beteiligen.|Todos tienen que participar.
+betonen|enfatizar|Wir möchten das noch einmal betonen.|Queremos enfatizar eso otra vez.
+betrachten|considerar / observar|Wir betrachten das Problem genauer.|Observamos el problema más de cerca.
+beunruhigen|inquietar|Das soll Sie nicht beunruhigen.|Eso no lo tiene que inquietar.
+bewirken|lograr / provocar|Wir können damit viel bewirken.|Con eso podemos lograr mucho.
+bezeichnen|designar|Man kann das als Erfolg bezeichnen.|Eso se puede calificar de éxito.
+bezweifeln|dudar de|Das müssen wir bezweifeln.|De eso tenemos que dudar.
+dienen|servir|Das Gebäude kann als Schule dienen.|El edificio puede servir de escuela.
+durchsetzen|imponer / hacer valer|Wir wollen unsere Idee durchsetzen.|Queremos imponer nuestra idea.
+einhalten|respetar (un plazo)|Wir müssen die Frist einhalten.|Tenemos que respetar el plazo.
+einräumen|admitir / conceder|Er musste den Fehler einräumen.|Tuvo que admitir el error.
+einsehen|entender / admitir|Er will seinen Fehler einsehen.|Quiere admitir su error.
+einwenden|objetar|Wir können nichts einwenden.|No podemos objetar nada.
+enthalten|contener|Das Paket kann Fehler enthalten.|El paquete puede contener errores.
+entlasten|aliviar|Das Gesetz soll die Familien entlasten.|La ley tiene que aliviar a las familias.
+sich entschließen|decidirse|Wir müssen uns bald entschließen.|Tenemos que decidirnos pronto.
+erfassen|registrar / captar|Wir wollen alle Daten erfassen.|Queremos registrar todos los datos.
+ergreifen|tomar (medidas) / agarrar|Wir müssen Maßnahmen ergreifen.|Tenemos que tomar medidas.
+erheben|relevar / elevar|Wir wollen neue Daten erheben.|Queremos relevar datos nuevos.
+sich erkundigen|informarse|Ich möchte mich nach dem Preis erkundigen.|Quiero informarme del precio.
+erläutern|explicar en detalle|Wir wollen den Plan kurz erläutern.|Queremos explicar el plan brevemente.
+ermutigen|alentar|Wir wollen alle ermutigen.|Queremos alentar a todos.
+erneuern|renovar|Wir wollen den Vertrag erneuern.|Queremos renovar el contrato.
+erörtern|debatir / tratar|Wir wollen das Thema erörtern.|Queremos tratar el tema.
+erschweren|dificultar|Das kann die Arbeit erschweren.|Eso puede dificultar el trabajo.
+erwägen|considerar / barajar|Wir wollen alle Möglichkeiten erwägen.|Queremos barajar todas las posibilidades.
+erweitern|ampliar|Wir wollen unser Angebot erweitern.|Queremos ampliar nuestra oferta.
+erzielen|lograr|Wir wollen gute Ergebnisse erzielen.|Queremos lograr buenos resultados.
+festhalten|retener / dejar constancia|Wir möchten das schriftlich festhalten.|Queremos dejarlo por escrito.
+festlegen|fijar|Wir müssen den Termin festlegen.|Tenemos que fijar la fecha.
+fortsetzen|continuar|Wir wollen die Arbeit fortsetzen.|Queremos continuar el trabajo.
+gelten|valer / regir|Die Regel soll für alle gelten.|La regla tiene que valer para todos.
+gewährleisten|garantizar|Wir können das nicht gewährleisten.|No lo podemos garantizar.
+hervorheben|resaltar|Wir möchten einen Punkt hervorheben.|Queremos resaltar un punto.
+hinnehmen|aceptar (resignarse)|Das können wir nicht hinnehmen.|Eso no lo podemos aceptar.
+hinterfragen|cuestionar|Man sollte alles hinterfragen.|Habría que cuestionarlo todo.
+konfrontieren|confrontar|Wir wollen ihn damit konfrontieren.|Lo queremos confrontar con eso.
+lindern|aliviar (dolor)|Die Salbe kann den Schmerz lindern.|La pomada puede aliviar el dolor.
+mildern|atenuar|Wir wollen die Folgen mildern.|Queremos atenuar las consecuencias.
+missbrauchen|abusar|Man darf Macht nicht missbrauchen.|No se debe abusar del poder.
+mitwirken|colaborar|Wir wollen daran mitwirken.|Queremos colaborar en eso.
+nachgeben|ceder|Wir wollen nicht nachgeben.|No queremos ceder.
+nachlassen|disminuir|Der Regen soll bald nachlassen.|La lluvia tiene que aflojar pronto.
+nachvollziehen|entender (razonamiento)|Ich kann das gut nachvollziehen.|Lo puedo entender bien.
+neigen|tender|Er kann zum Übertreiben neigen.|Puede tender a exagerar.
+optimieren|optimizar|Wir wollen den Ablauf optimieren.|Queremos optimizar el proceso.
+prägen|marcar / influir|Das Erlebnis kann ihn prägen.|La experiencia lo puede marcar.
+preisgeben|revelar|Er will nichts preisgeben.|No quiere revelar nada.
+reagieren|reaccionar|Wir müssen schnell reagieren.|Tenemos que reaccionar rápido.
+rechtfertigen|justificar|Wir wollen das nicht rechtfertigen.|No lo queremos justificar.
+resultieren|resultar|Daraus kann ein Problem resultieren.|De ahí puede resultar un problema.
+scheuen|temer / rehuir|Wir scheuen keine Mühe.|No rehuimos el esfuerzo.
+schwanken|oscilar / vacilar|Die Preise können schwanken.|Los precios pueden oscilar.
+sich sehnen|anhelar|Wir sehnen uns nach Ruhe.|Anhelamos tranquilidad.
+sicherstellen|asegurar|Wir müssen das sicherstellen.|Tenemos que asegurar eso.
+spiegeln|reflejar|Das Bild kann die Stimmung spiegeln.|La imagen puede reflejar el ánimo.
+stärken|fortalecer|Wir wollen das Vertrauen stärken.|Queremos fortalecer la confianza.
+thematisieren|abordar (como tema)|Wir wollen das Problem thematisieren.|Queremos abordar el problema.
+überschreiten|superar / cruzar|Wir dürfen die Grenze nicht überschreiten.|No podemos cruzar el límite.
+übertragen|transmitir / trasladar|Man kann die Ergebnisse übertragen.|Se pueden trasladar los resultados.
+überwinden|superar|Wir wollen die Krise überwinden.|Queremos superar la crisis.
+umfassen|abarcar|Das Angebot soll alles umfassen.|La oferta tiene que abarcarlo todo.
+umsetzen|poner en práctica|Wir wollen den Plan umsetzen.|Queremos poner en práctica el plan.
+unterbreiten|presentar (una propuesta)|Wir wollen Ihnen ein Angebot unterbreiten.|Le queremos presentar una oferta.
+unterstreichen|subrayar|Wir möchten das noch unterstreichen.|Queremos subrayar eso todavía.
+verankern|anclar / consagrar|Das Recht soll im Gesetz verankert sein.|El derecho tiene que estar consagrado en la ley.
+veranschaulichen|ilustrar|Ein Beispiel kann das veranschaulichen.|Un ejemplo puede ilustrar eso.
+veranlassen|disponer / hacer que|Wir wollen eine Prüfung veranlassen.|Queremos disponer una revisión.
+verbergen|ocultar|Er will nichts verbergen.|No quiere ocultar nada.
+verdeutlichen|dejar claro|Das soll den Unterschied verdeutlichen.|Eso tiene que dejar claro la diferencia.
+vereinfachen|simplificar|Wir wollen das Verfahren vereinfachen.|Queremos simplificar el trámite.
+verfügen|disponer de|Die Firma kann über viel Geld verfügen.|La empresa puede disponer de mucha plata.
+vergeben|adjudicar / perdonar|Man will die Aufträge vergeben.|Quieren adjudicar los encargos.
+verhandeln|negociar|Wir wollen über den Preis verhandeln.|Queremos negociar el precio.
+verkörpern|encarnar|Sie kann die Hoffnung verkörpern.|Ella puede encarnar la esperanza.
+verleihen|otorgar / prestar|Man will ihm einen Preis verleihen.|Le quieren otorgar un premio.
+vermitteln|transmitir / mediar|Wir wollen Wissen vermitteln.|Queremos transmitir conocimiento.
+vernachlässigen|descuidar|Man darf die Kinder nicht vernachlässigen.|No se debe descuidar a los chicos.
+verpflichten|obligar / comprometer|Wir wollen uns dazu verpflichten.|Nos queremos comprometer a eso.
+verschärfen|endurecer / agravar|Man will die Regeln verschärfen.|Quieren endurecer las reglas.
+verschweigen|callar / ocultar|Er wollte die Wahrheit verschweigen.|Quería ocultar la verdad.
+versöhnen|reconciliar|Wir wollen uns versöhnen.|Queremos reconciliarnos.
+verstärken|reforzar|Wir wollen die Kontrollen verstärken.|Queremos reforzar los controles.
+vertiefen|profundizar|Wir wollen das Thema vertiefen.|Queremos profundizar el tema.
+verweigern|negarse|Er wollte die Aussage verweigern.|Quería negarse a declarar.
+verweisen|remitir / aludir|Wir möchten auf die Quelle verweisen.|Queremos remitir a la fuente.
+verwirklichen|hacer realidad|Wir wollen unseren Traum verwirklichen.|Queremos hacer realidad nuestro sueño.
+verzichten|renunciar|Wir wollen auf das Auto verzichten.|Queremos renunciar al auto.
+vorantreiben|impulsar|Wir wollen das Projekt vorantreiben.|Queremos impulsar el proyecto.
+voraussetzen|presuponer|Das kann man nicht voraussetzen.|Eso no se puede presuponer.
+vorbeugen|prevenir|Man kann Krankheiten vorbeugen.|Se pueden prevenir enfermedades.
+vorgehen|proceder|Wir müssen vorsichtig vorgehen.|Tenemos que proceder con cuidado.
+widerlegen|refutar|Wir können das leicht widerlegen.|Eso lo podemos refutar fácil.
+widerspiegeln|reflejar|Das Ergebnis soll die Meinung widerspiegeln.|El resultado tiene que reflejar la opinión.
+zuordnen|asignar|Wir müssen die Aufgaben zuordnen.|Tenemos que asignar las tareas.
+zurückführen|atribuir|Man kann das auf einen Fehler zurückführen.|Eso se puede atribuir a un error.
+zusichern|asegurar / garantizar|Wir können Ihnen das zusichern.|Se lo podemos asegurar.
+zuspitzen|agudizarse|Die Lage kann sich zuspitzen.|La situación se puede agudizar.
+die Auswirkung|el efecto / la repercusión|Die Auswirkungen sind noch unklar.|Las repercusiones todavía no están claras.
+die Anforderung|el requisito / la exigencia|Die Anforderungen sind hoch.|Las exigencias son altas.
+der Anspruch|el derecho / la pretensión|Er hat Anspruch auf Urlaub.|Tiene derecho a vacaciones.
+der Aufschwung|el repunte|Die Wirtschaft erlebt einen Aufschwung.|La economía vive un repunte.
+der Ausgleich|la compensación|Dafür bekommen wir einen Ausgleich.|Por eso recibimos una compensación.
+die Ausnahme|la excepción|Es gibt keine Ausnahme.|No hay excepción.
+der Auftrag|el encargo|Der Auftrag kommt von der Stadt.|El encargo viene de la ciudad.
+die Bedrohung|la amenaza|Die Bedrohung ist real.|La amenaza es real.
+die Behörde|la autoridad / el organismo|Die Behörde prüft den Antrag.|El organismo revisa la solicitud.
+die Besorgnis|la preocupación|Das ist ein Grund zur Besorgnis.|Es motivo de preocupación.
+die Bestandsaufnahme|el relevamiento|Wir machen eine Bestandsaufnahme.|Hacemos un relevamiento.
+die Beteiligung|la participación|Die Beteiligung war hoch.|La participación fue alta.
+der Betrieb|la empresa / el funcionamiento|Der Betrieb hat zwanzig Mitarbeiter.|La empresa tiene veinte empleados.
+die Bilanz|el balance|Die Bilanz ist positiv.|El balance es positivo.
+die Branche|el sector (rubro)|In dieser Branche gibt es viel Konkurrenz.|En este rubro hay mucha competencia.
+die Bürokratie|la burocracia|Die Bürokratie kostet viel Zeit.|La burocracia lleva mucho tiempo.
+der Einfluss|la influencia|Der Einfluss der Medien ist groß.|La influencia de los medios es grande.
+die Einschränkung|la restricción|Es gibt keine Einschränkung.|No hay restricción.
+die Einstellung|la actitud / la contratación|Seine Einstellung gefällt mir.|Su actitud me gusta.
+die Empfehlung|la recomendación|Wir geben eine Empfehlung ab.|Damos una recomendación.
+die Entschädigung|la indemnización / la compensación|Er verlangt eine Entschädigung.|Exige una compensación.
+das Erbe|la herencia|Das Erbe ist groß.|La herencia es grande.
+die Erhebung|el relevamiento / la encuesta|Die Erhebung läuft bis Mai.|El relevamiento dura hasta mayo.
+die Erscheinung|el fenómeno / la apariencia|Das ist eine neue Erscheinung.|Es un fenómeno nuevo.
+die Fachkraft|el profesional calificado|Die Firma sucht eine Fachkraft.|La empresa busca un profesional calificado.
+die Forderung|la exigencia|Die Forderung ist berechtigt.|La exigencia es justificada.
+die Förderung|el apoyo / el subsidio|Die Förderung läuft bis Dezember.|El subsidio dura hasta diciembre.
+die Fragestellung|el planteo (de una pregunta)|Die Fragestellung ist komplex.|El planteo es complejo.
+die Führung|la dirección / el liderazgo|Die Führung entscheidet.|La dirección decide.
+die Gegebenheit|la circunstancia|Wir müssen die Gegebenheiten berücksichtigen.|Tenemos que considerar las circunstancias.
+der Gegenstand|el objeto / el tema|Der Gegenstand der Studie ist klar.|El objeto del estudio es claro.
+die Geltung|la validez|Die Geltung des Gesetzes ist begrenzt.|La validez de la ley es limitada.
+die Haftung|la responsabilidad (legal)|Die Haftung liegt bei der Firma.|La responsabilidad es de la empresa.
+die Herausforderung|el desafío|Das ist eine große Herausforderung.|Es un gran desafío.
+die Hürde|el obstáculo|Die Hürde ist hoch.|El obstáculo es alto.
+die Identität|la identidad|Die Identität ist wichtig.|La identidad es importante.
+der Impuls|el impulso|Wir brauchen einen neuen Impuls.|Necesitamos un impulso nuevo.
+die Instanz|la instancia|Die Instanz entscheidet.|La instancia decide.
+die Kapazität|la capacidad|Die Kapazität ist begrenzt.|La capacidad es limitada.
+die Klage|la demanda / la queja|Die Klage wurde abgewiesen.|La demanda fue rechazada.
+die Kluft|la brecha|Die Kluft wird größer.|La brecha se agranda.
+die Konkurrenz|la competencia|Die Konkurrenz schläft nicht.|La competencia no duerme.
+die Konsequenz|la consecuencia|Das hat Konsequenzen.|Eso tiene consecuencias.
+die Kontrolle|el control|Die Kontrolle ist streng.|El control es estricto.
+die Kritik|la crítica|Die Kritik ist berechtigt.|La crítica es justificada.
+die Kündigung|el despido / la renuncia|Die Kündigung kam überraschend.|El despido llegó de sorpresa.
+die Lebensqualität|la calidad de vida|Die Lebensqualität ist hoch.|La calidad de vida es alta.
+die Leitung|la dirección / la línea|Die Leitung übernimmt Frau Berg.|La dirección la asume la Sra. Berg.
+das Missverständnis|el malentendido|Das war ein Missverständnis.|Fue un malentendido.
+der Nachweis|la prueba / el comprobante|Der Nachweis fehlt.|Falta el comprobante.
+die Neigung|la inclinación|Er hat eine Neigung zum Übertreiben.|Tiene una inclinación a exagerar.
+die Norm|la norma|Die Norm gilt für alle.|La norma vale para todos.
+die Perspektive|la perspectiva|Aus meiner Perspektive ist das klar.|Desde mi perspectiva eso es claro.
+die Position|la posición / el puesto|Seine Position ist stark.|Su posición es fuerte.
+der Rahmen|el marco|Im Rahmen des Projekts gibt es drei Kurse.|En el marco del proyecto hay tres cursos.
+die Reform|la reforma|Die Reform kommt nächstes Jahr.|La reforma llega el año que viene.
+die Regelung|la normativa / el arreglo|Die Regelung ist neu.|La normativa es nueva.
+der Schwerpunkt|el foco / el énfasis|Der Schwerpunkt liegt auf der Praxis.|El énfasis está en la práctica.
+die Sicht|la vista / el punto de vista|Aus meiner Sicht ist das falsch.|Desde mi punto de vista eso es erróneo.
+der Stellenwert|la importancia|Bildung hat einen hohen Stellenwert.|La educación tiene un alto valor.
+die Stellungnahme|el posicionamiento|Wir erwarten eine Stellungnahme.|Esperamos un posicionamiento.
+der Streitpunkt|el punto de discordia|Das ist ein Streitpunkt.|Es un punto de discordia.
+die Tendenz|la tendencia|Die Tendenz ist steigend.|La tendencia es ascendente.
+die Teilnahme|la participación|Die Teilnahme ist kostenlos.|La participación es gratis.
+die Überzeugung|la convicción|Das ist meine Überzeugung.|Esa es mi convicción.
+der Umbruch|el cambio profundo|Wir erleben einen großen Umbruch.|Vivimos un gran cambio.
+der Umfang|el alcance / el volumen|Der Umfang des Textes ist groß.|La extensión del texto es grande.
+der Ursprung|el origen|Der Ursprung ist unklar.|El origen no está claro.
+die Verbesserung|la mejora|Die Verbesserung ist deutlich.|La mejora es clara.
+die Vereinbarung|el acuerdo|Die Vereinbarung gilt ein Jahr.|El acuerdo vale un año.
+die Verfügung|la disposición|Wir stellen Ihnen alles zur Verfügung.|Ponemos todo a su disposición.
+die Verhandlung|la negociación / el juicio|Die Verhandlung dauert lange.|La negociación se alarga.
+die Verpflichtung|la obligación|Das ist eine Verpflichtung.|Es una obligación.
+der Verstoß|la infracción|Der Verstoß wird bestraft.|La infracción se sanciona.
+das Vorbild|el modelo / el ejemplo a seguir|Sie ist ein Vorbild für alle.|Es un ejemplo para todos.
+der Wandel|el cambio|Der Wandel ist spürbar.|El cambio se nota.
+die Wechselwirkung|la interacción|Es gibt eine Wechselwirkung.|Hay una interacción.
+der Wohlstand|el bienestar económico|Der Wohlstand wächst.|El bienestar crece.
+die Würde|la dignidad|Die Würde ist unantastbar.|La dignidad es intocable.
+der Zusammenhalt|la cohesión|Der Zusammenhalt ist wichtig.|La cohesión es importante.
+der Zuschuss|el subsidio|Wir bekommen einen Zuschuss.|Recibimos un subsidio.
+die Zuständigkeit|la competencia (responsabilidad)|Das liegt in der Zuständigkeit der Stadt.|Eso es responsabilidad de la ciudad.
+der Zwang|la obligación / la coacción|Es gibt keinen Zwang.|No hay obligación.
+absichtlich|a propósito|Er hat das absichtlich getan.|Lo hizo a propósito.
+akut|agudo|Das Problem ist akut.|El problema es agudo.
+angemessen|adecuado / razonable|Der Preis ist angemessen.|El precio es razonable.
+anspruchsvoll|exigente|Die Aufgabe ist anspruchsvoll.|La tarea es exigente.
+aufwendig|costoso / laborioso|Das Verfahren ist sehr aufwendig.|El trámite es muy laborioso.
+ausdrücklich|expresamente|Das ist ausdrücklich verboten.|Eso está expresamente prohibido.
+ausführlich|detallado|Wir sprechen ausführlich darüber.|Hablamos en detalle de eso.
+ausgeprägt|marcado|Er hat einen ausgeprägten Sinn für Humor.|Tiene un marcado sentido del humor.
+ausschließlich|exclusivamente|Das gilt ausschließlich für Mitglieder.|Eso vale exclusivamente para socios.
+bedeutend|importante|Das ist ein bedeutender Fortschritt.|Es un avance importante.
+bedenklich|preocupante|Die Lage ist bedenklich.|La situación es preocupante.
+beträchtlich|considerable|Die Kosten sind beträchtlich.|Los costos son considerables.
+bewusst|consciente|Wir müssen uns dessen bewusst sein.|Tenemos que ser conscientes de eso.
+dauerhaft|duradero|Wir suchen eine dauerhafte Lösung.|Buscamos una solución duradera.
+effektiv|efectivo|Die Methode ist sehr effektiv.|El método es muy efectivo.
+ehrgeizig|ambicioso|Der Plan ist sehr ehrgeizig.|El plan es muy ambicioso.
+eindrucksvoll|impresionante|Das Konzert war eindrucksvoll.|El concierto fue impresionante.
+empfindlich|sensible|Die Haut ist sehr empfindlich.|La piel es muy sensible.
+entscheidend|decisivo|Das ist ein entscheidender Punkt.|Es un punto decisivo.
+erheblich|considerable|Der Unterschied ist erheblich.|La diferencia es considerable.
+fließend|fluido / con fluidez|Sie spricht fließend Deutsch.|Habla alemán con fluidez.
+flexibel|flexible|Wir sind sehr flexibel.|Somos muy flexibles.
+fragwürdig|cuestionable|Das Ergebnis ist fragwürdig.|El resultado es cuestionable.
+gelassen|sereno|Er bleibt immer gelassen.|Siempre se queda sereno.
+gerechtfertigt|justificado|Die Kritik ist gerechtfertigt.|La crítica está justificada.
+gesetzlich|legal|Das ist gesetzlich geregelt.|Eso está regulado por ley.
+gewaltig|enorme / imponente|Der Unterschied ist gewaltig.|La diferencia es enorme.
+glaubwürdig|creíble|Der Zeuge ist glaubwürdig.|El testigo es creíble.
+grundlegend|fundamental|Das ist eine grundlegende Frage.|Es una pregunta fundamental.
+hartnäckig|obstinado / persistente|Er ist sehr hartnäckig.|Es muy obstinado.
+kompliziert|complicado|Das Verfahren ist kompliziert.|El trámite es complicado.
+komplex|complejo|Das Thema ist sehr komplex.|El tema es muy complejo.
+konsequent|consecuente|Sie handelt immer konsequent.|Siempre actúa con coherencia.
+kontrovers|controvertido|Das Thema ist sehr kontrovers.|El tema es muy controvertido.
+langwierig|largo y trabajoso|Das Verfahren ist langwierig.|El trámite es largo y trabajoso.
+maßgeblich|determinante|Er war maßgeblich beteiligt.|Participó de forma determinante.
+nahezu|casi|Das ist nahezu unmöglich.|Eso es casi imposible.
+notwendig|necesario|Das ist notwendig.|Eso es necesario.
+nüchtern|sobrio / objetivo|Der Bericht ist sehr nüchtern.|El informe es muy sobrio.
+objektiv|objetivo|Wir wollen objektiv bleiben.|Queremos mantenernos objetivos.
+offensichtlich|evidente|Der Fehler ist offensichtlich.|El error es evidente.
+optimal|óptimo|Das ist die optimale Lösung.|Esa es la solución óptima.
+rasch|rápido|Wir brauchen eine rasche Antwort.|Necesitamos una respuesta rápida.
+rechtlich|jurídico|Rechtlich ist das kein Problem.|Jurídicamente no es un problema.
+riskant|riesgoso|Der Plan ist riskant.|El plan es riesgoso.
+schwerwiegend|grave|Das ist ein schwerwiegender Fehler.|Es un error grave.
+subjektiv|subjetivo|Das ist nur subjektiv.|Eso es solo subjetivo.
+tiefgreifend|profundo|Die Veränderung ist tiefgreifend.|El cambio es profundo.
+überflüssig|innecesario|Das ist überflüssig.|Eso es innecesario.
+überzeugend|convincente|Das Argument ist überzeugend.|El argumento es convincente.
+umfassend|amplio / completo|Wir brauchen umfassende Informationen.|Necesitamos información completa.
+umstritten|polémico|Das Gesetz ist sehr umstritten.|La ley es muy polémica.
+unausweichlich|inevitable|Die Folgen sind unausweichlich.|Las consecuencias son inevitables.
+unerlässlich|imprescindible|Geduld ist unerlässlich.|La paciencia es imprescindible.
+ungewiss|incierto|Die Zukunft ist ungewiss.|El futuro es incierto.
+unverzichtbar|indispensable|Das ist unverzichtbar.|Eso es indispensable.
+vielfältig|variado|Das Angebot ist sehr vielfältig.|La oferta es muy variada.
+vorübergehend|transitorio|Das ist nur vorübergehend.|Eso es solo transitorio.
+widersprüchlich|contradictorio|Die Aussagen sind widersprüchlich.|Las declaraciones son contradictorias.
+zunehmend|cada vez más|Es wird zunehmend schwierig.|Se vuelve cada vez más difícil.
+zwingend|obligatorio / forzoso|Das ist nicht zwingend nötig.|Eso no es forzosamente necesario.
+ebenso|igualmente|Das gilt ebenso für dich.|Eso vale igualmente para vos.
+demnach|según eso|Demnach ist alles in Ordnung.|Según eso, está todo en orden.
+insbesondere|en especial|Insbesondere die Jungen sind betroffen.|En especial están afectados los jóvenes.
+hingegen|en cambio|Er ist ruhig, sie hingegen ist laut.|Él es tranquilo; ella, en cambio, es ruidosa.
+somit|por lo tanto|Somit ist das Problem gelöst.|Por lo tanto, el problema está resuelto.
+nämlich|es que / pues|Ich komme später, ich habe nämlich Termine.|Llego más tarde, es que tengo citas.
+ohnehin|de todos modos|Das ist ohnehin klar.|Eso ya está claro de todos modos.
+vielmehr|más bien|Es ist nicht teuer, vielmehr günstig.|No es caro, más bien barato.
+weitgehend|en gran medida|Das Problem ist weitgehend gelöst.|El problema está resuelto en gran medida.
+zudem|además|Zudem ist die Lage ruhig.|Además la zona es tranquila.
+zugleich|al mismo tiempo|Er ist Lehrer und zugleich Autor.|Es docente y al mismo tiempo autor.
+ausnahmslos|sin excepción|Das gilt ausnahmslos für alle.|Eso vale para todos sin excepción.
+größtenteils|en su mayor parte|Das stimmt größtenteils.|Eso es cierto en su mayor parte.
+keinesfalls|bajo ningún concepto|Das darf keinesfalls passieren.|Eso no debe pasar bajo ningún concepto.
+mittlerweile|mientras tanto / ya|Mittlerweile ist alles fertig.|Ya está todo listo.
+überwiegend|en su mayoría|Die Gäste sind überwiegend jung.|Los invitados son en su mayoría jóvenes.
+zeitweise|por momentos|Zeitweise regnet es stark.|Por momentos llueve fuerte.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";
