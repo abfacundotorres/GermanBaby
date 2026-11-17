@@ -1593,6 +1593,283 @@ vielerorts|en muchos lugares|Vielerorts gibt es Probleme.|En muchos lugares hay 
 weshalb|por lo cual|Das ist der Grund, weshalb wir kommen.|Esa es la razón por la cual venimos.
 wiederum|a su vez|Das hängt wiederum vom Wetter ab.|Eso depende a su vez del clima.
 zumeist|en general|Die Gäste sind zumeist jung.|Los invitados son en general jóvenes.
+abbauen|desmontar / reducir|Wir wollen die Bürokratie abbauen.|Queremos reducir la burocracia.
+abbrechen|interrumpir / cancelar|Wir müssen die Reise abbrechen.|Tenemos que cancelar el viaje.
+ablaufen|transcurrir / vencer|Der Pass kann bald ablaufen.|El pasaporte puede vencer pronto.
+ablösen|reemplazar (en un puesto)|Man will den Chef ablösen.|Quieren reemplazar al jefe.
+absagen|cancelar / rechazar|Wir müssen das Fest absagen.|Tenemos que cancelar la fiesta.
+abschreiben|copiar|Man darf nicht abschreiben.|No se debe copiar.
+absichern|asegurar|Wir wollen uns absichern.|Queremos asegurarnos.
+anbringen|colocar|Wir wollen ein Schild anbringen.|Queremos colocar un cartel.
+anfordern|solicitar|Wir müssen Unterlagen anfordern.|Tenemos que solicitar documentación.
+anhören|escuchar (con atención)|Wir wollen uns das Konzert anhören.|Queremos escuchar el concierto.
+anmerken|notar / comentar|Wir möchten kurz etwas anmerken.|Quisiéramos comentar algo brevemente.
+anstoßen|brindar / chocar|Wir wollen auf den Erfolg anstoßen.|Queremos brindar por el éxito.
+antreiben|impulsar / motivar|Der Ehrgeiz kann uns antreiben.|La ambición nos puede impulsar.
+anvertrauen|confiar (algo)|Wir wollen dir das anvertrauen.|Te lo queremos confiar.
+anzeigen|denunciar / mostrar|Man kann den Diebstahl anzeigen.|Se puede denunciar el robo.
+aufbewahren|guardar / conservar|Wir müssen die Belege aufbewahren.|Tenemos que guardar los comprobantes.
+aufführen|representar / enumerar|Man will das Stück aufführen.|Quieren representar la obra.
+aufheben|guardar / levantar|Wir müssen den Beleg aufheben.|Tenemos que guardar el comprobante.
+aufnehmen|grabar / admitir|Wir wollen ein Lied aufnehmen.|Queremos grabar una canción.
+aufrufen|llamar / convocar|Man will zum Streik aufrufen.|Quieren convocar a una huelga.
+aufrechterhalten|mantener|Wir wollen den Kontakt aufrechterhalten.|Queremos mantener el contacto.
+aufteilen|repartir|Wir wollen die Kosten aufteilen.|Queremos repartir los costos.
+auftreten|aparecer / presentarse|Das Problem kann plötzlich auftreten.|El problema puede aparecer de golpe.
+ausarbeiten|elaborar|Wir wollen einen Plan ausarbeiten.|Queremos elaborar un plan.
+ausbrechen|estallar / escaparse|Ein Streit kann ausbrechen.|Una pelea puede estallar.
+ausfallen|suspenderse / caerse|Das Konzert muss ausfallen.|El concierto se tiene que suspender.
+ausführen|ejecutar / llevar a cabo|Wir wollen den Auftrag ausführen.|Queremos ejecutar el encargo.
+auskommen|arreglarse / llevarse bien|Wir wollen mit wenig auskommen.|Queremos arreglarnos con poco.
+auslassen|omitir|Wir dürfen nichts auslassen.|No podemos omitir nada.
+ausrichten|transmitir (un mensaje) / organizar|Können Sie ihm etwas ausrichten?|¿Le puede transmitir algo?
+aussprechen|pronunciar / expresar|Wir wollen das Wort richtig aussprechen.|Queremos pronunciar bien la palabra.
+austauschen|intercambiar|Wir wollen Erfahrungen austauschen.|Queremos intercambiar experiencias.
+ausweisen|identificarse / expulsar|Man muss sich ausweisen.|Hay que identificarse.
+auszahlen|pagar (en efectivo)|Man kann das Geld auszahlen.|Se puede pagar el dinero.
+bearbeiten|procesar / trabajar|Wir wollen den Antrag bearbeiten.|Queremos procesar la solicitud.
+bedrohen|amenazar|Das kann die Umwelt bedrohen.|Eso puede amenazar el medio ambiente.
+beenden|terminar|Wir wollen die Sitzung beenden.|Queremos terminar la reunión.
+begleiten|acompañar|Wir wollen dich begleiten.|Te queremos acompañar.
+beheben|solucionar (una falla)|Wir müssen den Fehler beheben.|Tenemos que solucionar la falla.
+beilegen|zanjar / adjuntar|Wir wollen den Streit beilegen.|Queremos zanjar la discusión.
+beleidigen|ofender|Wir wollen niemanden beleidigen.|No queremos ofender a nadie.
+beliefern|abastecer|Wir können die Läden beliefern.|Podemos abastecer a los negocios.
+berechnen|calcular / cobrar|Wir müssen die Kosten berechnen.|Tenemos que calcular los costos.
+berichtigen|corregir|Wir müssen den Fehler berichtigen.|Tenemos que corregir el error.
+beschäftigen|ocupar / emplear|Die Firma will mehr Leute beschäftigen.|La empresa quiere emplear más gente.
+beschleunigen|acelerar|Wir wollen das Verfahren beschleunigen.|Queremos acelerar el trámite.
+beschädigen|dañar|Wir wollen nichts beschädigen.|No queremos dañar nada.
+besetzen|ocupar / cubrir (un puesto)|Wir müssen die Stelle besetzen.|Tenemos que cubrir el puesto.
+besichtigen|visitar / recorrer|Wir wollen das Schloss besichtigen.|Queremos recorrer el castillo.
+bestrafen|castigar|Man darf Kinder nicht bestrafen.|No se debe castigar a los chicos.
+betätigen|accionar|Man muss den Schalter betätigen.|Hay que accionar el interruptor.
+betreiben|operar / dedicarse a|Wir wollen ein Geschäft betreiben.|Queremos manejar un negocio.
+betrügen|estafar / engañar|Man darf niemanden betrügen.|No se debe estafar a nadie.
+bewilligen|aprobar (un pedido)|Man will den Antrag bewilligen.|Quieren aprobar la solicitud.
+bewahren|preservar|Wir wollen die Ruhe bewahren.|Queremos mantener la calma.
+blockieren|bloquear|Wir wollen die Straße nicht blockieren.|No queremos bloquear la calle.
+darlegen|exponer|Wir wollen unsere Gründe darlegen.|Queremos exponer nuestras razones.
+dazugehören|formar parte|Wir wollen dazugehören.|Queremos formar parte.
+drohen|amenazar con|Dem Betrieb kann die Pleite drohen.|A la empresa le puede amenazar la quiebra.
+durchlaufen|recorrer / pasar por|Wir müssen mehrere Stufen durchlaufen.|Tenemos que pasar por varias etapas.
+durchsuchen|registrar|Die Polizei will das Haus durchsuchen.|La policía quiere registrar la casa.
+ehren|honrar|Man will ihn ehren.|Lo quieren honrar.
+eintragen|anotar / inscribir|Wir müssen uns in die Liste eintragen.|Tenemos que anotarnos en la lista.
+einwilligen|consentir|Wir können nicht einwilligen.|No podemos consentir.
+empfangen|recibir (a alguien)|Wir wollen die Gäste empfangen.|Queremos recibir a los invitados.
+entfalten|desplegar / desarrollar|Er kann sich hier frei entfalten.|Acá se puede desarrollar libremente.
+enthüllen|revelar / descubrir|Man will ein Denkmal enthüllen.|Quieren inaugurar un monumento.
+entkommen|escapar|Der Täter konnte entkommen.|El autor pudo escapar.
+entlohnen|remunerar|Man muss die Arbeit gut entlohnen.|Hay que remunerar bien el trabajo.
+ereignen|ocurrir|Ein Unfall kann sich ereignen.|Un accidente puede ocurrir.
+ermahnen|exhortar|Wir müssen ihn ermahnen.|Tenemos que exhortarlo.
+ernähren|alimentar / mantener|Er muss eine große Familie ernähren.|Tiene que mantener a una familia grande.
+erobern|conquistar|Wir wollen den Markt erobern.|Queremos conquistar el mercado.
+erraten|adivinar|Wir können das nicht erraten.|Eso no lo podemos adivinar.
+erscheinen|aparecer / publicarse|Das Buch soll im Herbst erscheinen.|El libro tiene que salir en otoño.
+erschrecken|asustar|Wir wollen niemanden erschrecken.|No queremos asustar a nadie.
+ersparen|ahorrar (evitar)|Das kann uns viel Ärger ersparen.|Eso nos puede ahorrar muchos problemas.
+erwidern|responder / devolver|Wir wollen darauf erwidern.|Queremos responder a eso.
+erwischen|atrapar / pillar|Man kann ihn beim Rauchen erwischen.|Lo pueden atrapar fumando.
+fälschen|falsificar|Man darf keine Dokumente fälschen.|No se deben falsificar documentos.
+festnehmen|detener|Die Polizei will ihn festnehmen.|La policía lo quiere detener.
+forschen|investigar|Wir wollen an dem Thema forschen.|Queremos investigar el tema.
+fortfahren|continuar|Wir wollen mit der Arbeit fortfahren.|Queremos continuar con el trabajo.
+freisprechen|absolver|Das Gericht kann ihn freisprechen.|El tribunal lo puede absolver.
+gestehen|confesar|Er will alles gestehen.|Quiere confesarlo todo.
+gewähren|conceder|Man will einen Kredit gewähren.|Quieren conceder un crédito.
+grübeln|cavilar|Wir wollen nicht ständig grübeln.|No queremos cavilar todo el tiempo.
+haften|responder (legalmente)|Wir können dafür nicht haften.|No podemos responder por eso.
+handhaben|manejar / aplicar|Wir wollen das flexibel handhaben.|Lo queremos manejar con flexibilidad.
+herbeiführen|provocar|Das kann eine Veränderung herbeiführen.|Eso puede provocar un cambio.
+der Führerschein|el carnet de conducir|Ich mache den Führerschein.|Estoy sacando el carnet de conducir.
+das Lenkrad|el volante|Das Lenkrad ist sehr alt.|El volante es muy viejo.
+die Bremse|el freno|Die Bremse funktioniert nicht.|El freno no funciona.
+der Reifen|el neumático|Der Reifen ist kaputt.|El neumático está roto.
+der Motor|el motor|Der Motor ist sehr laut.|El motor es muy ruidoso.
+die Panne|la avería|Wir hatten eine Panne.|Tuvimos una avería.
+der Kofferraum|el baúl|Der Kofferraum ist voll.|El baúl está lleno.
+das Kennzeichen|la patente|Das Kennzeichen ist nicht lesbar.|La patente no se puede leer.
+der Rucksack|la mochila|Mein Rucksack ist schwer.|Mi mochila es pesada.
+das Handgepäck|el equipaje de mano|Das Handgepäck ist begrenzt.|El equipaje de mano es limitado.
+der Zwischenstopp|la escala|Wir haben einen Zwischenstopp in Wien.|Tenemos una escala en Viena.
+die Passkontrolle|el control de pasaportes|Die Passkontrolle dauert lange.|El control de pasaportes tarda mucho.
+die Pauschalreise|el viaje con paquete|Die Pauschalreise ist günstig.|El viaje con paquete es barato.
+die Rundreise|el circuito turístico|Wir machen eine Rundreise.|Hacemos un circuito turístico.
+die Halbpension|la media pensión|Die Halbpension kostet extra.|La media pensión cuesta extra.
+die Hauptsaison|la temporada alta|In der Hauptsaison ist alles teuer.|En temporada alta todo es caro.
+der Hammer|el martillo|Der Hammer liegt im Werkzeugkasten.|El martillo está en la caja de herramientas.
+der Nagel|el clavo|Der Nagel ist zu kurz.|El clavo es demasiado corto.
+die Schraube|el tornillo|Die Schraube ist locker.|El tornillo está flojo.
+die Bohrmaschine|el taladro|Die Bohrmaschine ist laut.|El taladro es ruidoso.
+die Leiter|la escalera (portátil)|Die Leiter steht an der Wand.|La escalera está apoyada en la pared.
+der Pinsel|el pincel|Der Pinsel ist nass.|El pincel está mojado.
+die Tapete|el papel pintado|Die Tapete löst sich.|El papel pintado se despega.
+die Fliese|la baldosa|Die Fliesen sind im Bad.|Las baldosas están en el baño.
+der Wasserschaden|el daño por agua|Der Wasserschaden ist groß.|El daño por agua es grande.
+der Heizkörper|el radiador|Der Heizkörper ist kalt.|El radiador está frío.
+das Schloss|la cerradura / el castillo|Das Schloss ist kaputt.|La cerradura está rota.
+die Tastatur|el teclado|Die Tastatur ist neu.|El teclado es nuevo.
+das WLAN|el wifi|Das WLAN funktioniert nicht.|El wifi no funciona.
+das Ladegerät|el cargador|Ich habe mein Ladegerät vergessen.|Me olvidé el cargador.
+der Speicher|la memoria / el almacenamiento|Der Speicher ist voll.|La memoria está llena.
+das Training|el entrenamiento|Das Training beginnt um sechs.|El entrenamiento empieza a las seis.
+der Sportler|el deportista|Der Sportler ist verletzt.|El deportista está lesionado.
+das Tor|el gol / el portón|Das Tor fiel in der letzten Minute.|El gol cayó en el último minuto.
+der Ball|la pelota|Der Ball ist rund.|La pelota es redonda.
+die Vorspeise|la entrada (comida)|Als Vorspeise gibt es Suppe.|De entrada hay sopa.
+die Hauptspeise|el plato principal|Die Hauptspeise ist Fisch.|El plato principal es pescado.
+der Nachtisch|el postre|Der Nachtisch ist lecker.|El postre está rico.
+die Soße|la salsa|Die Soße ist scharf.|La salsa es picante.
+die Beilage|la guarnición|Als Beilage gibt es Reis.|De guarnición hay arroz.
+schneiden|cortar|Wir müssen das Gemüse schneiden.|Tenemos que cortar la verdura.
+schälen|pelar|Wir müssen die Kartoffeln schälen.|Tenemos que pelar las papas.
+rühren|revolver|Wir müssen die Soße rühren.|Tenemos que revolver la salsa.
+mischen|mezclar|Wir wollen alles mischen.|Queremos mezclarlo todo.
+würzen|condimentar|Wir müssen die Suppe würzen.|Tenemos que condimentar la sopa.
+grillen|hacer a la parrilla|Wir wollen am Sonntag grillen.|Queremos hacer parrilla el domingo.
+abschmecken|probar y ajustar el sabor|Wir müssen die Suppe abschmecken.|Tenemos que probar y ajustar la sopa.
+die Abweichung|la desviación|Die Abweichung ist klein.|La desviación es chica.
+die Annäherung|el acercamiento|Die Annäherung ist schwierig.|El acercamiento es difícil.
+die Anpassung|la adaptación|Die Anpassung dauert lange.|La adaptación lleva tiempo.
+die Anschauung|la concepción / la visión|Das ist seine Anschauung.|Esa es su visión.
+der Ansatz|el enfoque|Der Ansatz ist neu.|El enfoque es nuevo.
+die Anspannung|la tensión|Die Anspannung ist groß.|La tensión es grande.
+der Aufwand|el esfuerzo / el costo|Der Aufwand ist hoch.|El esfuerzo es alto.
+die Ausdauer|la resistencia / la perseverancia|Dafür braucht man Ausdauer.|Para eso se necesita perseverancia.
+die Auseinandersetzung|la discusión / el enfrentamiento|Es gab eine heftige Auseinandersetzung.|Hubo un fuerte enfrentamiento.
+die Auslegung|la interpretación|Die Auslegung ist umstritten.|La interpretación es polémica.
+die Bandbreite|la gama|Die Bandbreite ist groß.|La gama es amplia.
+die Beharrlichkeit|la tenacidad|Beharrlichkeit zahlt sich aus.|La tenacidad rinde.
+die Berufung|la vocación / la apelación|Er hat Berufung eingelegt.|Presentó una apelación.
+das Bewusstsein|la conciencia|Das Bewusstsein wächst.|La conciencia crece.
+die Bindung|el vínculo|Die Bindung ist stark.|El vínculo es fuerte.
+die Einsicht|el entendimiento / la comprensión|Er zeigt wenig Einsicht.|Muestra poca comprensión.
+die Empörung|la indignación|Die Empörung ist groß.|La indignación es grande.
+die Enttäuschung|la decepción|Die Enttäuschung war riesig.|La decepción fue enorme.
+die Entfaltung|el desarrollo (pleno)|Die Entfaltung braucht Freiheit.|El desarrollo pleno necesita libertad.
+der Ernst|la seriedad|Der Ernst der Lage ist klar.|La seriedad de la situación es clara.
+die Erleichterung|el alivio|Die Erleichterung war groß.|El alivio fue grande.
+die Fehleinschätzung|el error de cálculo|Das war eine Fehleinschätzung.|Fue un error de cálculo.
+die Fürsorge|el cuidado / la asistencia|Die Fürsorge ist wichtig.|El cuidado es importante.
+das Gewissen|la conciencia (moral)|Er hat ein schlechtes Gewissen.|Tiene cargo de conciencia.
+der Grundsatz|el principio|Das ist mein Grundsatz.|Ese es mi principio.
+die Hemmung|la inhibición|Er hat keine Hemmungen.|No tiene inhibiciones.
+der Hintergedanke|la segunda intención|Er hat keine Hintergedanken.|No tiene segundas intenciones.
+die Hingabe|la entrega / la dedicación|Sie arbeitet mit Hingabe.|Trabaja con entrega.
+die Kehrseite|la otra cara|Das ist die Kehrseite.|Esa es la otra cara.
+das Konzept|el concepto / el plan|Das Konzept überzeugt mich.|El concepto me convence.
+die Leidenschaft|la pasión|Er spielt mit Leidenschaft.|Juega con pasión.
+die Lebensweise|el estilo de vida|Die Lebensweise ändert sich.|El estilo de vida cambia.
+die Macht|el poder|Die Macht liegt bei den Bürgern.|El poder está en los ciudadanos.
+die Mentalität|la mentalidad|Die Mentalität ist anders.|La mentalidad es distinta.
+der Misserfolg|el fracaso|Der Misserfolg war schmerzhaft.|El fracaso fue doloroso.
+die Mühe|el esfuerzo / la molestia|Das war viel Mühe.|Fue mucho esfuerzo.
+die Rücksicht|la consideración|Wir nehmen Rücksicht auf die Nachbarn.|Tenemos consideración con los vecinos.
+die Schuld|la culpa / la deuda|Die Schuld liegt bei mir.|La culpa es mía.
+der Sinn|el sentido|Das hat keinen Sinn.|Eso no tiene sentido.
+die Spannung|la tensión / el suspenso|Die Spannung steigt.|La tensión sube.
+der Spielraum|el margen|Wir haben wenig Spielraum.|Tenemos poco margen.
+die Unabhängigkeit|la independencia|Die Unabhängigkeit ist wichtig.|La independencia es importante.
+die Unsicherheit|la inseguridad|Die Unsicherheit wächst.|La inseguridad crece.
+die Vernunft|la razón / el sentido común|Seine Vernunft siegt.|Su razón se impone.
+das Verständnis|la comprensión|Ich habe volles Verständnis.|Tengo plena comprensión.
+die Verwirrung|la confusión|Die Verwirrung ist groß.|La confusión es grande.
+die Vorliebe|la preferencia|Sie hat eine Vorliebe für Krimis.|Tiene preferencia por los policiales.
+der Vorwurf|el reproche|Der Vorwurf ist unfair.|El reproche es injusto.
+die Wertschätzung|el aprecio|Wertschätzung ist wichtig.|El aprecio es importante.
+der Wille|la voluntad|Der Wille ist da.|La voluntad está.
+die Zielgruppe|el público objetivo|Die Zielgruppe ist jung.|El público objetivo es joven.
+das Zugeständnis|la concesión|Wir machen ein Zugeständnis.|Hacemos una concesión.
+die Zumutung|el abuso / la exageración|Das ist eine Zumutung.|Eso es un abuso.
+die Zuversicht|la confianza (en el futuro)|Ich habe Zuversicht.|Tengo confianza.
+abweichend|divergente|Er hat eine abweichende Meinung.|Tiene una opinión divergente.
+anschaulich|ilustrativo|Das Beispiel ist anschaulich.|El ejemplo es ilustrativo.
+ausgewogen|equilibrado|Die Ernährung ist ausgewogen.|La alimentación es equilibrada.
+begehrt|codiciado|Die Stelle ist begehrt.|El puesto es codiciado.
+beharrlich|tenaz|Er arbeitet beharrlich.|Trabaja con tenacidad.
+beschwerlich|penoso|Der Weg ist beschwerlich.|El camino es penoso.
+bodenständig|con los pies en la tierra|Er ist sehr bodenständig.|Es muy terrenal.
+dürftig|escaso / pobre|Die Auswahl ist dürftig.|La selección es pobre.
+eigenartig|extraño|Das ist eigenartig.|Eso es extraño.
+eigenständig|independiente|Sie arbeitet eigenständig.|Trabaja de forma independiente.
+eilig|apurado|Ich habe es eilig.|Estoy apurado.
+eintönig|monótono|Die Arbeit ist eintönig.|El trabajo es monótono.
+empfehlenswert|recomendable|Das Buch ist empfehlenswert.|El libro es recomendable.
+enorm|enorme|Der Aufwand ist enorm.|El esfuerzo es enorme.
+entspannt|relajado|Ich bin heute sehr entspannt.|Hoy estoy muy relajado.
+erfreulich|alentador|Das ist erfreulich.|Eso es alentador.
+ernsthaft|serio / en serio|Er denkt ernsthaft darüber nach.|Lo piensa en serio.
+fahrlässig|negligente|Das war fahrlässig.|Eso fue negligente.
+flüchtig|fugaz / superficial|Ich habe den Text nur flüchtig gelesen.|Leí el texto solo por encima.
+förderlich|beneficioso|Das ist der Gesundheit förderlich.|Eso es beneficioso para la salud.
+geistig|mental / intelectual|Geistige Arbeit ist anstrengend.|El trabajo intelectual es agotador.
+gelungen|logrado|Das Fest war gelungen.|La fiesta salió bien.
+geräumig|espacioso|Die Wohnung ist sehr geräumig.|El departamento es muy espacioso.
+geschickt|hábil|Er ist sehr geschickt.|Es muy hábil.
+gewagt|arriesgado|Das ist ein gewagter Plan.|Es un plan arriesgado.
+gründlich|minucioso|Er arbeitet sehr gründlich.|Trabaja con mucha minuciosidad.
+hektisch|agitado|Der Tag war hektisch.|El día fue agitado.
+hinderlich|que estorba|Das ist hinderlich.|Eso estorba.
+intensiv|intenso|Wir lernen intensiv.|Estudiamos de forma intensa.
+kostspielig|costoso|Das Hobby ist kostspielig.|El pasatiempo es costoso.
+lästig|molesto|Das ist wirklich lästig.|Eso es realmente molesto.
+locker|relajado / flojo|Die Stimmung ist locker.|El ambiente es relajado.
+lohnenswert|que vale la pena|Der Besuch ist lohnenswert.|La visita vale la pena.
+mangelhaft|deficiente|Die Qualität ist mangelhaft.|La calidad es deficiente.
+mühelos|sin esfuerzo|Er löst das mühelos.|Lo resuelve sin esfuerzo.
+nachlässig|descuidado|Er arbeitet nachlässig.|Trabaja con descuido.
+nachteilig|desventajoso|Das ist nachteilig.|Eso es desventajoso.
+naiv|ingenuo|Das ist naiv.|Eso es ingenuo.
+nebensächlich|secundario|Das ist nebensächlich.|Eso es secundario.
+nutzlos|inútil|Das ist nutzlos.|Eso es inútil.
+oberflächlich|superficial|Die Diskussion war oberflächlich.|La discusión fue superficial.
+plausibel|plausible|Die Erklärung ist plausibel.|La explicación es plausible.
+prächtig|espléndido|Das Wetter ist prächtig.|El clima es espléndido.
+provisorisch|provisorio|Das ist nur provisorisch.|Eso es solo provisorio.
+rücksichtslos|sin consideración|Er fährt rücksichtslos.|Maneja sin consideración.
+rücksichtsvoll|considerado|Sie ist sehr rücksichtsvoll.|Es muy considerada.
+sachkundig|competente|Sie ist sehr sachkundig.|Es muy competente.
+schlagfertig|rápido de respuesta|Er ist sehr schlagfertig.|Tiene respuesta rápida.
+schleppend|lento / pesado|Das Verfahren verläuft schleppend.|El trámite avanza con lentitud.
+schlicht|sencillo|Das Zimmer ist schlicht.|La habitación es sencilla.
+selbstlos|desinteresado|Sie hilft selbstlos.|Ayuda de forma desinteresada.
+sinnlos|sin sentido|Das ist sinnlos.|Eso no tiene sentido.
+spärlich|escaso|Das Licht ist spärlich.|La luz es escasa.
+standhaft|firme|Er bleibt standhaft.|Se mantiene firme.
+tadellos|impecable|Seine Arbeit ist tadellos.|Su trabajo es impecable.
+tatkräftig|enérgico / activo|Sie hilft tatkräftig.|Ayuda con energía.
+träge|perezoso / lento|Das Auto ist träge.|El auto es lento.
+trügerisch|engañoso|Der Schein ist trügerisch.|La apariencia es engañosa.
+übertrieben|exagerado|Das ist übertrieben.|Eso es exagerado.
+umständlich|engorroso|Das Verfahren ist umständlich.|El trámite es engorroso.
+unauffällig|discreto|Er ist sehr unauffällig.|Es muy discreto.
+unentbehrlich|imprescindible|Das ist unentbehrlich.|Eso es imprescindible.
+unerträglich|insoportable|Die Hitze ist unerträglich.|El calor es insoportable.
+ungeduldig|impaciente|Er ist sehr ungeduldig.|Es muy impaciente.
+unhöflich|descortés|Das war unhöflich.|Eso fue descortés.
+unverständlich|incomprensible|Das ist unverständlich.|Eso es incomprensible.
+unvorstellbar|inimaginable|Das ist unvorstellbar.|Eso es inimaginable.
+verantwortungslos|irresponsable|Das ist verantwortungslos.|Eso es irresponsable.
+verblüffend|sorprendente|Das Ergebnis ist verblüffend.|El resultado es sorprendente.
+verfügbar|disponible|Das Zimmer ist nicht verfügbar.|La habitación no está disponible.
+verheerend|devastador|Die Folgen waren verheerend.|Las consecuencias fueron devastadoras.
+verlockend|tentador|Das Angebot ist verlockend.|La oferta es tentadora.
+verständnisvoll|comprensivo|Sie ist sehr verständnisvoll.|Es muy comprensiva.
+verwandt|emparentado|Wir sind miteinander verwandt.|Somos parientes.
+voreingenommen|prejuiciado|Er ist voreingenommen.|Está prejuiciado.
+vorsätzlich|premeditado|Das war vorsätzlich.|Eso fue premeditado.
+waghalsig|temerario|Das war waghalsig.|Eso fue temerario.
+weitreichend|de gran alcance|Die Folgen sind weitreichend.|Las consecuencias son de gran alcance.
+wirksam|eficaz|Das Mittel ist wirksam.|El remedio es eficaz.
+wohlhabend|adinerado|Die Familie ist wohlhabend.|La familia es adinerada.
+zäh|duro / tenaz|Das Fleisch ist zäh.|La carne está dura.
+zerstreut|distraído|Er ist heute sehr zerstreut.|Hoy está muy distraído.
+zielstrebig|decidido / con rumbo|Sie arbeitet zielstrebig.|Trabaja con determinación.
+zügig|rápido|Wir arbeiten zügig.|Trabajamos con rapidez.
+zurückhaltend|reservado|Er ist sehr zurückhaltend.|Es muy reservado.
+glücklicherweise|por suerte|Glücklicherweise ist nichts passiert.|Por suerte no pasó nada.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";
