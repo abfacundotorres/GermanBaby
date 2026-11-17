@@ -1366,6 +1366,233 @@ keinesfalls|bajo ningún concepto|Das darf keinesfalls passieren.|Eso no debe pa
 mittlerweile|mientras tanto / ya|Mittlerweile ist alles fertig.|Ya está todo listo.
 überwiegend|en su mayoría|Die Gäste sind überwiegend jung.|Los invitados son en su mayoría jóvenes.
 zeitweise|por momentos|Zeitweise regnet es stark.|Por momentos llueve fuerte.
+abschätzen|estimar|Wir können die Kosten schwer abschätzen.|Los costos son difíciles de estimar.
+sich aneignen|apropiarse / adquirir|Wir wollen uns neues Wissen aneignen.|Queremos adquirir conocimientos nuevos.
+sich anschließen|sumarse|Wir wollen uns der Gruppe anschließen.|Queremos sumarnos al grupo.
+auffordern|exigir / invitar a|Wir müssen ihn dazu auffordern.|Tenemos que exigirle eso.
+aufsuchen|acudir a|Wir sollten einen Arzt aufsuchen.|Deberíamos acudir a un médico.
+ausbilden|formar / capacitar|Die Firma will junge Leute ausbilden.|La empresa quiere formar a gente joven.
+ausgrenzen|excluir (socialmente)|Wir wollen niemanden ausgrenzen.|No queremos excluir a nadie.
+beinhalten|incluir / implicar|Der Vertrag kann viele Punkte beinhalten.|El contrato puede incluir muchos puntos.
+sich beziehen|referirse|Wir beziehen uns auf Ihre Anfrage.|Nos referimos a su consulta.
+eindämmen|contener|Man will die Kosten eindämmen.|Quieren contener los costos.
+einführen|introducir / implementar|Wir wollen ein neues System einführen.|Queremos implementar un sistema nuevo.
+eingreifen|intervenir|Die Polizei muss eingreifen.|La policía tiene que intervenir.
+einleiten|iniciar / encaminar|Wir wollen Maßnahmen einleiten.|Queremos iniciar medidas.
+einreichen|presentar (un documento)|Wir müssen den Antrag einreichen.|Tenemos que presentar la solicitud.
+einsparen|ahorrar|Wir wollen Energie einsparen.|Queremos ahorrar energía.
+enttäuschen|decepcionar|Wir wollen niemanden enttäuschen.|No queremos decepcionar a nadie.
+erfüllen|cumplir / satisfacer|Wir müssen die Bedingungen erfüllen.|Tenemos que cumplir las condiciones.
+ergänzen|complementar|Wir möchten kurz ergänzen.|Quisiéramos agregar brevemente.
+sich ergeben|resultar|Daraus kann sich etwas ergeben.|De eso puede resultar algo.
+erkranken|enfermarse|Viele Menschen können erkranken.|Mucha gente puede enfermarse.
+erlassen|dictar / eximir|Man will ein neues Gesetz erlassen.|Quieren dictar una ley nueva.
+erlernen|aprender (adquirir)|Man kann eine Sprache erlernen.|Un idioma se puede aprender.
+ernennen|nombrar|Man will sie zur Direktorin ernennen.|La quieren nombrar directora.
+erstatten|reembolsar|Wir wollen die Kosten erstatten.|Queremos reembolsar los costos.
+sich erweisen|resultar / demostrarse|Das kann sich als Fehler erweisen.|Eso puede resultar un error.
+feststehen|estar decidido|Der Termin soll bald feststehen.|La fecha tiene que quedar fijada pronto.
+folgern|deducir|Wir können daraus nichts folgern.|De eso no podemos deducir nada.
+gestatten|permitir|Wir können das nicht gestatten.|Eso no lo podemos permitir.
+gliedern|estructurar|Wir wollen den Text gliedern.|Queremos estructurar el texto.
+herrschen|reinar / predominar|Hier soll Ruhe herrschen.|Acá tiene que reinar la calma.
+hinterlassen|dejar (tras de sí)|Wir wollen keine Spuren hinterlassen.|No queremos dejar huellas.
+hinzufügen|agregar|Wir möchten etwas hinzufügen.|Quisiéramos agregar algo.
+konkurrieren|competir|Die Firmen konkurrieren miteinander.|Las empresas compiten entre sí.
+kontrollieren|controlar|Wir wollen alles kontrollieren.|Queremos controlarlo todo.
+nachkommen|cumplir (una obligación)|Wir müssen der Pflicht nachkommen.|Tenemos que cumplir con la obligación.
+offenbaren|revelar|Er will seine Gefühle offenbaren.|Quiere revelar sus sentimientos.
+pflegen|cuidar / mantener|Wir pflegen die Kontakte.|Mantenemos los contactos.
+schlussfolgern|concluir|Man kann daraus schlussfolgern.|De eso se puede concluir.
+überfordern|exigir de más / sobrepasar|Wir wollen niemanden überfordern.|No queremos exigirle de más a nadie.
+überleben|sobrevivir|Wir wollen die Krise überleben.|Queremos sobrevivir a la crisis.
+übersehen|pasar por alto|Man darf das nicht übersehen.|Eso no se puede pasar por alto.
+unterlassen|abstenerse|Wir sollten das unterlassen.|Deberíamos abstenernos de eso.
+untermauern|respaldar (con pruebas)|Wir können das untermauern.|Lo podemos respaldar con pruebas.
+verfassen|redactar|Wir wollen einen Brief verfassen.|Queremos redactar una carta.
+verhängen|imponer (una sanción)|Man will eine Strafe verhängen.|Quieren imponer una sanción.
+verkünden|anunciar (oficialmente)|Man wird das Ergebnis verkünden.|Se va a anunciar el resultado.
+verschlechtern|empeorar|Die Lage kann sich verschlechtern.|La situación puede empeorar.
+versäumen|perder (una ocasión) / omitir|Wir wollen nichts versäumen.|No queremos perdernos nada.
+vortäuschen|simular|Er wollte Krankheit vortäuschen.|Quería simular una enfermedad.
+wahren|preservar|Wir wollen den Frieden wahren.|Queremos preservar la paz.
+zulassen|permitir / admitir|Das dürfen wir nicht zulassen.|Eso no lo podemos permitir.
+zurücktreten|renunciar (a un cargo)|Der Minister muss zurücktreten.|El ministro tiene que renunciar.
+die Rezession|la recesión|Die Rezession dauert schon lange.|La recesión ya dura mucho.
+der Export|la exportación|Der Export steigt.|La exportación sube.
+der Import|la importación|Der Import wird teurer.|La importación se encarece.
+der Handel|el comercio|Der Handel zwischen den Ländern wächst.|El comercio entre los países crece.
+die Investition|la inversión|Die Investition lohnt sich.|La inversión vale la pena.
+der Investor|el inversor|Der Investor will mehr Gewinn.|El inversor quiere más ganancias.
+das Kapital|el capital|Das Kapital ist knapp.|El capital es escaso.
+die Abgabe|el tributo / la entrega|Die Abgabe ist am Freitag.|La entrega es el viernes.
+die Altersvorsorge|la previsión para la vejez|Die Altersvorsorge wird wichtiger.|La previsión para la vejez se vuelve más importante.
+das Defizit|el déficit|Das Defizit wächst.|El déficit crece.
+die Subvention|el subsidio|Die Subvention läuft aus.|El subsidio termina.
+der Konzern|el grupo empresarial|Der Konzern hat tausend Mitarbeiter.|El grupo empresarial tiene mil empleados.
+der Mittelstand|las pymes|Der Mittelstand ist sehr wichtig.|Las pymes son muy importantes.
+die Gründung|la fundación|Die Gründung war im Jahr zweitausend.|La fundación fue en el año dos mil.
+die Insolvenz|la quiebra|Die Firma meldet Insolvenz an.|La empresa se declara en quiebra.
+der Gläubiger|el acreedor|Der Gläubiger will sein Geld.|El acreedor quiere su plata.
+der Schuldner|el deudor|Der Schuldner kann nicht zahlen.|El deudor no puede pagar.
+die Preissteigerung|el aumento de precios|Die Preissteigerung betrifft alle.|El aumento de precios afecta a todos.
+die Produktion|la producción|Die Produktion läuft wieder.|La producción vuelve a funcionar.
+der Hersteller|el fabricante|Der Hersteller gibt zwei Jahre Garantie.|El fabricante da dos años de garantía.
+der Lieferant|el proveedor|Der Lieferant kommt am Montag.|El proveedor viene el lunes.
+die Lohnerhöhung|el aumento de sueldo|Die Lohnerhöhung beträgt drei Prozent.|El aumento de sueldo es del tres por ciento.
+der Tarif|la tarifa / el convenio|Der Tarif gilt für alle.|El convenio vale para todos.
+der Arbeitnehmer|el empleado|Die Arbeitnehmer fordern mehr Lohn.|Los empleados exigen más sueldo.
+der Richter|el juez|Der Richter entscheidet morgen.|El juez decide mañana.
+der Staatsanwalt|el fiscal|Der Staatsanwalt prüft den Fall.|El fiscal revisa el caso.
+der Prozess|el juicio / el proceso|Der Prozess dauert schon ein Jahr.|El juicio ya dura un año.
+das Verfahren|el procedimiento|Das Verfahren ist eingestellt.|El procedimiento fue archivado.
+die Verfassung|la constitución|Die Verfassung schützt die Rechte.|La constitución protege los derechos.
+das Grundgesetz|la Ley Fundamental|Das Grundgesetz gilt seit neunzehnhundertneunundvierzig.|La Ley Fundamental rige desde 1949.
+die Bundesregierung|el gobierno federal|Die Bundesregierung plant eine Reform.|El gobierno federal planea una reforma.
+der Minister|el ministro|Der Minister spricht im Fernsehen.|El ministro habla en la televisión.
+das Parlament|el parlamento|Das Parlament stimmt morgen ab.|El parlamento vota mañana.
+die Verwaltung|la administración|Die Verwaltung ist langsam.|La administración es lenta.
+die Gesetzgebung|la legislación|Die Gesetzgebung ändert sich.|La legislación cambia.
+die Verordnung|el decreto / la ordenanza|Die Verordnung tritt morgen in Kraft.|El decreto entra en vigor mañana.
+die Richtlinie|la directriz|Die Richtlinie ist klar.|La directriz es clara.
+das Asyl|el asilo|Er hat Asyl beantragt.|Solicitó asilo.
+die Staatsangehörigkeit|la nacionalidad|Meine Staatsangehörigkeit ist argentinisch.|Mi nacionalidad es argentina.
+die Außenpolitik|la política exterior|Die Außenpolitik ist wichtig.|La política exterior es importante.
+der Konflikt|el conflicto|Der Konflikt dauert schon lange.|El conflicto ya dura mucho.
+die Sanktion|la sanción|Die Sanktionen wirken.|Las sanciones surten efecto.
+das Bündnis|la alianza|Das Bündnis ist stark.|La alianza es fuerte.
+die Europäische Union|la Unión Europea|Die Europäische Union hat viele Mitglieder.|La Unión Europea tiene muchos miembros.
+die Entwicklungshilfe|la ayuda al desarrollo|Die Entwicklungshilfe ist umstritten.|La ayuda al desarrollo es polémica.
+die Therapie|la terapia|Die Therapie dauert sechs Monate.|La terapia dura seis meses.
+die Infektion|la infección|Die Infektion ist nicht gefährlich.|La infección no es peligrosa.
+die Epidemie|la epidemia|Die Epidemie breitet sich aus.|La epidemia se extiende.
+die Pandemie|la pandemia|Die Pandemie hat alles verändert.|La pandemia cambió todo.
+das Immunsystem|el sistema inmune|Das Immunsystem schützt den Körper.|El sistema inmune protege el cuerpo.
+die Dosis|la dosis|Die Dosis ist zu hoch.|La dosis es demasiado alta.
+die Sucht|la adicción|Die Sucht ist eine Krankheit.|La adicción es una enfermedad.
+die Abhängigkeit|la dependencia|Die Abhängigkeit ist groß.|La dependencia es grande.
+die Depression|la depresión|Die Depression ist behandelbar.|La depresión se puede tratar.
+die Psychotherapie|la psicoterapia|Die Psychotherapie hilft ihm.|La psicoterapia lo ayuda.
+das Gesundheitswesen|el sistema de salud|Das Gesundheitswesen ist teuer.|El sistema de salud es caro.
+die Wissenschaft|la ciencia|Die Wissenschaft macht Fortschritte.|La ciencia hace progresos.
+die Theorie|la teoría|Die Theorie ist interessant.|La teoría es interesante.
+die These|la tesis|Die These ist umstritten.|La tesis es polémica.
+das Experiment|el experimento|Das Experiment war erfolgreich.|El experimento fue exitoso.
+die Auswertung|la evaluación (de datos)|Die Auswertung dauert eine Woche.|La evaluación lleva una semana.
+die Stichprobe|la muestra|Die Stichprobe ist zu klein.|La muestra es demasiado chica.
+die Innovation|la innovación|Innovation ist wichtig.|La innovación es importante.
+das Patent|la patente|Das Patent gehört der Firma.|La patente es de la empresa.
+die Automatisierung|la automatización|Die Automatisierung spart Zeit.|La automatización ahorra tiempo.
+der Roboter|el robot|Der Roboter arbeitet nachts.|El robot trabaja de noche.
+die Plattform|la plataforma|Die Plattform ist kostenlos.|La plataforma es gratis.
+die Artenvielfalt|la biodiversidad|Die Artenvielfalt ist bedroht.|La biodiversidad está amenazada.
+das Ökosystem|el ecosistema|Das Ökosystem ist empfindlich.|El ecosistema es delicado.
+die Abholzung|la tala|Die Abholzung zerstört den Wald.|La tala destruye el bosque.
+die Erderwärmung|el calentamiento global|Die Erderwärmung schreitet voran.|El calentamiento global avanza.
+der Treibhauseffekt|el efecto invernadero|Der Treibhauseffekt wird stärker.|El efecto invernadero se intensifica.
+die Windkraft|la energía eólica|Die Windkraft wird ausgebaut.|La energía eólica se amplía.
+die Solarenergie|la energía solar|Die Solarenergie ist sauber.|La energía solar es limpia.
+die Kernenergie|la energía nuclear|Die Kernenergie ist umstritten.|La energía nuclear es polémica.
+die Kohle|el carbón|Die Kohle verschmutzt die Luft.|El carbón contamina el aire.
+das Erdöl|el petróleo|Das Erdöl wird knapp.|El petróleo se vuelve escaso.
+der Rohstoff|la materia prima|Der Rohstoff ist teuer.|La materia prima es cara.
+der Naturschutz|la protección de la naturaleza|Der Naturschutz ist wichtig.|La protección de la naturaleza es importante.
+das Hochwasser|la crecida|Das Hochwasser steigt.|La crecida sube.
+der Sturm|la tormenta (viento)|Der Sturm hat Bäume umgeworfen.|La tormenta derribó árboles.
+die Hitzewelle|la ola de calor|Die Hitzewelle dauert eine Woche.|La ola de calor dura una semana.
+der Gletscher|el glaciar|Der Gletscher schmilzt.|El glaciar se derrite.
+die Trockenheit|la sequedad|Die Trockenheit schadet den Feldern.|La sequedad daña los campos.
+die Kunst|el arte|Die Kunst ist mein Hobby.|El arte es mi pasatiempo.
+das Kunstwerk|la obra de arte|Das Kunstwerk ist sehr wertvoll.|La obra de arte es muy valiosa.
+die Skulptur|la escultura|Die Skulptur steht im Park.|La escultura está en el parque.
+die Literatur|la literatura|Ich interessiere mich für Literatur.|Me interesa la literatura.
+der Autor|el autor|Der Autor liest aus seinem Buch.|El autor lee de su libro.
+der Schriftsteller|el escritor|Der Schriftsteller lebt in Wien.|El escritor vive en Viena.
+das Gedicht|el poema|Das Gedicht ist sehr kurz.|El poema es muy corto.
+die Übersetzung|la traducción|Die Übersetzung ist gut gelungen.|La traducción salió muy bien.
+das Publikum|el público|Das Publikum klatscht.|El público aplaude.
+der Zuschauer|el espectador|Die Zuschauer sind begeistert.|Los espectadores están entusiasmados.
+der Leser|el lector|Der Leser muss mitdenken.|El lector tiene que pensar.
+die Rezension|la reseña (crítica)|Die Rezension ist positiv.|La reseña es positiva.
+die Zeitschrift|la revista|Die Zeitschrift erscheint monatlich.|La revista sale mensualmente.
+die Redaktion|la redacción|Die Redaktion sucht neue Leute.|La redacción busca gente nueva.
+der Journalist|el periodista|Der Journalist schreibt über Politik.|El periodista escribe sobre política.
+die Reportage|el reportaje|Die Reportage ist sehr spannend.|El reportaje es muy atrapante.
+der Kommentar|el comentario|Der Kommentar ist kritisch.|El comentario es crítico.
+die Überschrift|el título (de un texto)|Die Überschrift ist zu lang.|El título es demasiado largo.
+das Urheberrecht|el derecho de autor|Das Urheberrecht schützt Autoren.|El derecho de autor protege a los autores.
+die Persönlichkeit|la personalidad|Sie hat eine starke Persönlichkeit.|Tiene una personalidad fuerte.
+das Bedürfnis|la necesidad|Jeder hat andere Bedürfnisse.|Cada uno tiene necesidades distintas.
+die Motivation|la motivación|Die Motivation fehlt mir.|Me falta motivación.
+das Klischee|el cliché|Das ist ein Klischee.|Eso es un cliché.
+die Erziehung|la crianza / la educación|Die Erziehung beginnt zu Hause.|La crianza empieza en casa.
+der Erwachsene|el adulto|Die Erwachsenen reden zu viel.|Los adultos hablan demasiado.
+die Generation|la generación|Die junge Generation denkt anders.|La generación joven piensa distinto.
+die Gleichstellung|la igualdad (de género)|Die Gleichstellung ist ein Ziel.|La igualdad es una meta.
+die Diskriminierung|la discriminación|Diskriminierung ist verboten.|La discriminación está prohibida.
+die Toleranz|la tolerancia|Toleranz ist wichtig.|La tolerancia es importante.
+die Einsamkeit|la soledad|Die Einsamkeit kann krank machen.|La soledad puede enfermar.
+die Solidarität|la solidaridad|Wir brauchen mehr Solidarität.|Necesitamos más solidaridad.
+die Gerechtigkeit|la justicia|Gerechtigkeit ist schwer zu messen.|La justicia es difícil de medir.
+das Selbstvertrauen|la autoconfianza|Sein Selbstvertrauen wächst.|Su autoconfianza crece.
+das Gemeinwohl|el bien común|Das Gemeinwohl steht an erster Stelle.|El bien común está primero.
+die Armutsgrenze|la línea de pobreza|Viele leben unter der Armutsgrenze.|Muchos viven bajo la línea de pobreza.
+die Lebensbedingungen|las condiciones de vida|Die Lebensbedingungen verbessern sich.|Las condiciones de vida mejoran.
+der Mangel|la falta / la escasez|Es herrscht Mangel an Fachkräften.|Hay escasez de personal calificado.
+der Überfluss|la abundancia|Wir leben im Überfluss.|Vivimos en la abundancia.
+der Verzicht|la renuncia|Der Verzicht fällt schwer.|Renunciar cuesta.
+der Fortbestand|la continuidad|Der Fortbestand der Firma ist gesichert.|La continuidad de la empresa está asegurada.
+die Anschaffung|la adquisición|Die Anschaffung kostet viel.|La adquisición cuesta mucho.
+die Ausgabe|el gasto / la edición|Die Ausgaben steigen.|Los gastos suben.
+das Budget|el presupuesto|Das Budget ist knapp.|El presupuesto es ajustado.
+die Prognose|el pronóstico|Die Prognose ist optimistisch.|El pronóstico es optimista.
+die Konjunktur|la coyuntura económica|Die Konjunktur ist schwach.|La coyuntura económica es débil.
+der Standort|la ubicación (empresarial)|Der Standort ist günstig.|La ubicación es conveniente.
+das Wachstum|el crecimiento|Das Wachstum ist gering.|El crecimiento es bajo.
+bereitwillig|dispuesto / de buena gana|Er hilft bereitwillig.|Ayuda de buena gana.
+dringlich|apremiante|Das Problem ist dringlich.|El problema es apremiante.
+einschlägig|pertinente|Er hat einschlägige Erfahrung.|Tiene experiencia pertinente.
+folgerichtig|lógico / coherente|Das ist folgerichtig.|Eso es coherente.
+fortschrittlich|progresista / avanzado|Die Stadt ist sehr fortschrittlich.|La ciudad es muy avanzada.
+gegenwärtig|actual|Die gegenwärtige Lage ist schwierig.|La situación actual es difícil.
+gewissenhaft|escrupuloso|Er arbeitet gewissenhaft.|Trabaja con escrúpulo.
+hilflos|indefenso|Er fühlt sich hilflos.|Se siente indefenso.
+lückenhaft|con lagunas|Die Liste ist lückenhaft.|La lista tiene lagunas.
+mühsam|trabajoso|Der Weg war mühsam.|El camino fue trabajoso.
+naheliegend|evidente / lógico|Das ist naheliegend.|Eso es lo más lógico.
+sachlich|objetivo / factual|Die Diskussion blieb sachlich.|La discusión se mantuvo objetiva.
+selbstkritisch|autocrítico|Sie ist sehr selbstkritisch.|Es muy autocrítica.
+stichhaltig|sólido (argumento)|Das Argument ist stichhaltig.|El argumento es sólido.
+unbestritten|indiscutido|Das ist unbestritten.|Eso es indiscutido.
+unerwartet|inesperado|Das kam völlig unerwartet.|Eso vino totalmente inesperado.
+unvermeidlich|inevitable|Das ist unvermeidlich.|Eso es inevitable.
+verantwortungsvoll|responsable|Sie handelt verantwortungsvoll.|Actúa con responsabilidad.
+vergleichsweise|comparativamente|Das ist vergleichsweise günstig.|Eso es comparativamente barato.
+verlässlich|fiable|Er ist ein verlässlicher Partner.|Es un socio fiable.
+vollkommen|completo / perfecto|Das ist vollkommen richtig.|Eso es completamente correcto.
+wahrnehmbar|perceptible|Der Unterschied ist kaum wahrnehmbar.|La diferencia casi no se percibe.
+wegweisend|innovador / pionero|Das Projekt ist wegweisend.|El proyecto es pionero.
+zeitgemäß|actual / acorde a la época|Das Konzept ist zeitgemäß.|El concepto es actual.
+zielgerichtet|dirigido a un objetivo|Wir arbeiten zielgerichtet.|Trabajamos con objetivos claros.
+zukunftsfähig|con futuro|Das Modell ist zukunftsfähig.|El modelo tiene futuro.
+zweifellos|sin duda|Das ist zweifellos richtig.|Eso es sin duda correcto.
+alsbald|pronto|Wir melden uns alsbald.|Nos comunicamos pronto.
+andererseits|por otro lado|Andererseits ist es auch teuer.|Por otro lado también es caro.
+anderweitig|de otro modo / en otro lado|Wir müssen anderweitig suchen.|Tenemos que buscar en otro lado.
+diesbezüglich|al respecto|Haben Sie diesbezüglich Fragen?|¿Tiene preguntas al respecto?
+einerseits|por un lado|Einerseits ist es schön.|Por un lado es lindo.
+erstmals|por primera vez|Das passiert erstmals.|Eso pasa por primera vez.
+fortan|de ahora en adelante|Fortan gilt die neue Regel.|De ahora en adelante rige la regla nueva.
+hierbei|en esto / al hacerlo|Hierbei ist Vorsicht nötig.|Al hacerlo se necesita cuidado.
+hinsichtlich|con respecto a|Hinsichtlich der Kosten gibt es keine Probleme.|Con respecto a los costos no hay problemas.
+inwiefern|en qué medida|Inwiefern ist das wichtig?|¿En qué medida es importante?
+mitunter|a veces|Das kann mitunter schwierig sein.|Eso puede ser difícil a veces.
+sodass|de modo que|Es regnet, sodass wir drinnen bleiben.|Llueve, de modo que nos quedamos adentro.
+sofern|siempre que|Wir kommen, sofern es nicht regnet.|Vamos, siempre que no llueva.
+vielerorts|en muchos lugares|Vielerorts gibt es Probleme.|En muchos lugares hay problemas.
+weshalb|por lo cual|Das ist der Grund, weshalb wir kommen.|Esa es la razón por la cual venimos.
+wiederum|a su vez|Das hängt wiederum vom Wetter ab.|Eso depende a su vez del clima.
+zumeist|en general|Die Gäste sind zumeist jung.|Los invitados son en general jóvenes.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";

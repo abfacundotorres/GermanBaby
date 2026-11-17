@@ -30,13 +30,13 @@ Lo que el nivel **no** garantiza por sí solo: el B2 se mide con un examen, y en
 | A1 | 588 | 650 | 90 % |
 | A2 | 1.144 | 1.300 | 88 % |
 | B1 | 1.912 | 2.400 | 80 % |
-| B2 | 2.457 | 4.000 | 61 % |
+| B2 | 2.679 | 4.000 | 67 % |
 
-Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1, A2, B1); B2 no tiene lista oficial y 4.000 es una cifra de uso común. Por eso se leen como referencia, no como norma. El entrenador (`/words`, 1.357 palabras) fija el nivel de cada tanda con una línea `## A1`, `## A2`, `## B1` o `## B2` en `lib/content/core-vocab.ts`, y las tandas se ordenan por nivel.
+Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1, A2, B1); B2 no tiene lista oficial y 4.000 es una cifra de uso común. Por eso se leen como referencia, no como norma. El entrenador (`/words`, 1.584 palabras) fija el nivel de cada tanda con una línea `## A1`, `## A2`, `## B1` o `## B2` en `lib/content/core-vocab.ts`, y las tandas se ordenan por nivel.
 
 ## Brechas, en orden de prioridad
 
-1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. A1, A2 y B1 están cerca; B2 avanza (61 %) pero es el que más falta. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
+1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. A1, A2 y B1 están cerca; B2 avanza (67 %) pero es el que más falta. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
 2. **Input.** Hay 41 lecturas de unidad y 8 de la biblioteca, y unos 127 minutos de diálogos con voz sintética. Camino: más textos largos por nivel (B2 a 300–500 palabras), monólogos, tres voces y distintas velocidades.
 3. **Expresión escrita.** Un ejercicio libre por unidad, corregido por IA (sin probar contra el servicio real). Camino: más consignas, con rúbrica por nivel.
 4. **Medición.** No hay test de nivel ni simulacro. Camino: simulacros con el formato de los exámenes (comprensión lectora, auditiva, escrita y oral) y un test inicial para ubicar al alumno.
