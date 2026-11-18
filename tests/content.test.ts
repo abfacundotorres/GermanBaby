@@ -295,3 +295,10 @@ test("test de nivel: 8 preguntas por nivel, opciones únicas y resultado coheren
   assert.deepEqual(placementResult({ A1: 8, A2: 6, B1: 2 }), { level: "A2", partial: true });
   assert.deepEqual(placementResult({ A1: 8, A2: 8, B1: 8, B2: 7 }), { level: "B2", partial: false });
 });
+
+test("escritura con rúbrica: consignas bien formadas y todos los niveles cubiertos", async () => {
+  const { WRITING } = await import("../lib/content/writing.ts");
+  assert.equal(new Set(WRITING.map((t) => t.id)).size, WRITING.length);
+  for (const lv of ["A1", "A2", "B1", "B2"]) assert.ok(WRITING.filter((t) => t.level === lv).length >= 3, lv);
+  for (const t of WRITING) assert.ok(t.points.length >= 3 && t.minWords < t.maxWords && t.prompt.length > 40, t.id);
+});
