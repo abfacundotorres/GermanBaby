@@ -233,6 +233,22 @@ warum|por qué|Warum bist du traurig?|¿Por qué estás triste?
 wie|cómo|Wie geht es dir?|¿Cómo estás?
 was|qué|Was ist das?|¿Qué es esto?
 wohin|adónde|Wohin gehst du?|¿Adónde vas?
+die Blume|la flor|Die Blume ist rot.|La flor es roja.
+die Chefin|la jefa|Meine Chefin ist nett.|Mi jefa es simpática.
+die Cola|la cola|Ich trinke eine Cola.|Tomo una cola.
+die Dose|la lata|Ich kaufe eine Dose Tomaten.|Compro una lata de tomates.
+die Farbe|el color|Welche Farbe magst du?|¿Qué color te gusta?
+die Gitarre|la guitarra|Er spielt Gitarre.|Él toca la guitarra.
+die Kreditkarte|la tarjeta de crédito|Ich zahle mit Kreditkarte.|Pago con tarjeta de crédito.
+die Sonne|el sol|Die Sonne scheint.|Sale el sol.
+der Apfel|la manzana|Ich esse einen Apfel.|Como una manzana.
+der Schuh|el zapato|Der Schuh ist zu klein.|El zapato es muy chico.
+das Haar|el pelo|Sie hat lange Haare.|Tiene el pelo largo.
+das Hähnchen|el pollo|Wir essen heute Hähnchen.|Hoy comemos pollo.
+das Restaurant|el restaurante|Das Restaurant ist sehr gut.|El restaurante es muy bueno.
+das Sofa|el sofá|Das Sofa ist bequem.|El sofá es cómodo.
+rufen|llamar (a gritos)|Wir wollen ein Taxi rufen.|Queremos llamar un taxi.
+vorne|adelante|Er sitzt vorne im Bus.|Está sentado adelante en el colectivo.
 ## A2
 bekommen|recibir|Wir bekommen morgen Besuch.|Mañana recibimos visitas.
 holen|ir a buscar / traer|Ich hole schnell ein Glas Wasser.|Traigo rápido un vaso de agua.
@@ -2722,6 +2738,441 @@ nichtsdestotrotz|no obstante|Nichtsdestotrotz bleibt der Plan bestehen.|No obsta
 infolgedessen|por consiguiente|Infolgedessen wurde der Termin verschoben.|Por consiguiente, se pospuso la fecha.
 umgekehrt|al revés|Es war genau umgekehrt.|Fue exactamente al revés.
 ungeachtet|sin tener en cuenta|Ungeachtet der Kritik machte er weiter.|Sin tener en cuenta las críticas, siguió.
+die Ablehnung|el rechazo|Die Ablehnung des Antrags war überraschend.|El rechazo de la solicitud fue sorpresivo.
+die Abschaffung|la abolición|Die Abschaffung der Gebühr ist beschlossen.|La abolición de la tasa está decidida.
+die Abwanderung|la emigración (de población)|Die Abwanderung junger Leute ist ein Problem.|La emigración de los jóvenes es un problema.
+die Alterung|el envejecimiento|Die Alterung der Gesellschaft stellt uns vor Fragen.|El envejecimiento de la sociedad nos plantea preguntas.
+die Amtszeit|el mandato|Die Amtszeit dauert vier Jahre.|El mandato dura cuatro años.
+die Anhörung|la audiencia|Die Anhörung findet im Parlament statt.|La audiencia se realiza en el parlamento.
+die Anklage|la acusación|Die Anklage lautet auf Betrug.|La acusación es por fraude.
+die Ankündigung|el anuncio|Die Ankündigung kam überraschend.|El anuncio fue sorpresivo.
+die Aufwertung|la revalorización|Die Aufwertung des Viertels trieb die Mieten hoch.|La revalorización del barrio subió los alquileres.
+die Auswanderung|la emigración|Die Auswanderung nach Übersee war früher häufig.|La emigración a ultramar era antes frecuente.
+die Auszeichnung|la distinción|Sie erhielt eine hohe Auszeichnung.|Recibió una alta distinción.
+die Beeinträchtigung|el perjuicio|Die Beeinträchtigung des Verkehrs ist gering.|El perjuicio al tránsito es mínimo.
+die Befragung|la encuesta / el interrogatorio|Die Befragung dauerte zwei Stunden.|La encuesta duró dos horas.
+die Belastbarkeit|la resistencia / capacidad de carga|Die Belastbarkeit der Brücke wird geprüft.|Se controla la capacidad de carga del puente.
+die Berichterstattung|la cobertura informativa|Die Berichterstattung war einseitig.|La cobertura informativa fue unilateral.
+die Besteuerung|la tributación|Die Besteuerung von Erbschaften ist umstritten.|La tributación de las herencias es controvertida.
+die Bewältigung|el manejo / la superación|Die Bewältigung der Krise dauert Jahre.|Superar la crisis lleva años.
+die Demonstration|la manifestación|Die Demonstration verlief friedlich.|La manifestación fue pacífica.
+die Denkweise|la forma de pensar|Seine Denkweise ist mir fremd.|Su forma de pensar me es ajena.
+die Dimension|la dimensión|Das Problem hat eine neue Dimension erreicht.|El problema alcanzó una nueva dimensión.
+die Dunkelziffer|la cifra negra|Die Dunkelziffer der Fälle ist hoch.|La cifra negra de casos es alta.
+die Eigeninitiative|la iniciativa propia|Wir erwarten Eigeninitiative.|Esperamos iniciativa propia.
+die Eindämmung|la contención|Die Eindämmung der Kosten gelingt nicht.|No se logra contener los costos.
+die Einordnung|la clasificación|Die Einordnung der Daten ist schwierig.|La clasificación de los datos es difícil.
+die Einsparung|el ahorro|Die Einsparung beträgt zehn Prozent.|El ahorro es del diez por ciento.
+die Einschätzung|la valoración|Meine Einschätzung der Lage ist vorsichtig.|Mi valoración de la situación es cauta.
+die Einstufung|la categorización|Die Einstufung als Gefahr ist umstritten.|La categorización como peligro es controvertida.
+die Einwilligung|el consentimiento|Dafür brauchen wir Ihre Einwilligung.|Para eso necesitamos su consentimiento.
+die Entfremdung|el distanciamiento|Die Entfremdung zwischen beiden wuchs.|El distanciamiento entre ambos creció.
+die Enthüllung|la revelación|Die Enthüllung sorgte für Aufsehen.|La revelación causó revuelo.
+die Ergänzung|el complemento|Eine Ergänzung des Textes ist nötig.|Hace falta complementar el texto.
+die Erneuerung|la renovación|Die Erneuerung der Brücke kostet Millionen.|La renovación del puente cuesta millones.
+die Erpressung|la extorsión|Das ist Erpressung!|¡Eso es extorsión!
+die Erschließung|el desarrollo (de una zona)|Die Erschließung des Gebiets beginnt bald.|El desarrollo de la zona empieza pronto.
+die Ersparnis|el ahorro (monto)|Die Ersparnis ist beträchtlich.|El ahorro es considerable.
+die Errungenschaft|el logro|Das ist eine große Errungenschaft.|Es un gran logro.
+die Fahrlässigkeit|la negligencia|Er handelte aus Fahrlässigkeit.|Actuó por negligencia.
+die Finanzierung|el financiamiento|Die Finanzierung des Projekts ist gesichert.|El financiamiento del proyecto está asegurado.
+die Fluktuation|la rotación|Die Fluktuation im Team ist hoch.|La rotación en el equipo es alta.
+die Formulierung|la formulación|Die Formulierung ist missverständlich.|La formulación se presta a malentendidos.
+die Gegenmaßnahme|la contramedida|Wir planen eine Gegenmaßnahme.|Planeamos una contramedida.
+die Gehaltserhöhung|el aumento de sueldo|Er verlangt eine Gehaltserhöhung.|Pide un aumento de sueldo.
+die Gesetzesänderung|el cambio de ley|Die Gesetzesänderung tritt im Januar in Kraft.|El cambio de ley entra en vigor en enero.
+die Gewalt|la violencia|Gewalt ist keine Lösung.|La violencia no es una solución.
+die Gewinnung|la obtención|Die Gewinnung von Energie belastet die Umwelt.|La obtención de energía daña el ambiente.
+die Grundversorgung|el abastecimiento básico|Die Grundversorgung ist gesichert.|El abastecimiento básico está asegurado.
+die Handhabung|el manejo|Die Handhabung des Geräts ist einfach.|El manejo del aparato es simple.
+die Hemmschwelle|el umbral de inhibición|Die Hemmschwelle ist im Internet niedriger.|El umbral de inhibición es más bajo en internet.
+die Hilfestellung|la ayuda|Wir bieten Hilfestellung bei der Suche.|Ofrecemos ayuda en la búsqueda.
+die Inflation|la inflación|Die Inflation liegt bei zwei Prozent.|La inflación está en dos por ciento.
+die Initiative|la iniciativa|Die Initiative ging von den Bürgern aus.|La iniciativa partió de los ciudadanos.
+die Intention|la intención|Seine Intention war gut.|Su intención era buena.
+die Intoleranz|la intolerancia|Intoleranz kann gefährlich werden.|La intolerancia puede volverse peligrosa.
+die Jugendkriminalität|la delincuencia juvenil|Die Jugendkriminalität ist zurückgegangen.|La delincuencia juvenil disminuyó.
+die Kennzeichnung|el etiquetado|Die Kennzeichnung der Produkte ist Pflicht.|El etiquetado de los productos es obligatorio.
+die Kontinuität|la continuidad|Wir brauchen Kontinuität in der Politik.|Necesitamos continuidad en la política.
+die Korruption|la corrupción|Die Korruption schadet dem Vertrauen.|La corrupción daña la confianza.
+die Kürzung|el recorte|Die Kürzung der Mittel trifft Schulen.|El recorte de fondos afecta a las escuelas.
+die Lebenserwartung|la esperanza de vida|Die Lebenserwartung steigt.|La esperanza de vida aumenta.
+die Legislaturperiode|el período legislativo|Die Legislaturperiode endet im Herbst.|El período legislativo termina en otoño.
+die Leistungsgesellschaft|la sociedad del rendimiento|Wir leben in einer Leistungsgesellschaft.|Vivimos en una sociedad del rendimiento.
+die Lieferkette|la cadena de suministro|Die Lieferkette ist unterbrochen.|La cadena de suministro está interrumpida.
+die Lockerung|la flexibilización|Die Lockerung der Regeln wird diskutiert.|Se discute flexibilizar las reglas.
+die Manipulation|la manipulación|Die Manipulation der Daten wurde entdeckt.|Se descubrió la manipulación de los datos.
+die Marktwirtschaft|la economía de mercado|Die Marktwirtschaft braucht klare Regeln.|La economía de mercado necesita reglas claras.
+die Mehrfachbelastung|la doble carga|Die Mehrfachbelastung von Eltern ist hoch.|La doble carga de los padres es alta.
+die Meinungsfreiheit|la libertad de opinión|Die Meinungsfreiheit gilt für alle.|La libertad de opinión rige para todos.
+die Missachtung|el desprecio (de normas)|Die Missachtung der Regeln wird bestraft.|El incumplimiento de las reglas se castiga.
+die Mitbestimmung|la cogestión|Die Mitbestimmung der Mitarbeiter ist gesetzlich geregelt.|La cogestión de los empleados está regulada por ley.
+die Mobilität|la movilidad|Die Mobilität der Zukunft ist elektrisch.|La movilidad del futuro es eléctrica.
+die Neuordnung|la reorganización|Die Neuordnung der Abteilungen beginnt im Mai.|La reorganización de los departamentos empieza en mayo.
+die Notlage|la situación de emergencia|Er half Menschen in Notlagen.|Ayudaba a personas en situaciones de emergencia.
+die Offenheit|la franqueza|Ich schätze ihre Offenheit.|Valoro su franqueza.
+die Organisation|la organización|Die Organisation arbeitet ehrenamtlich.|La organización trabaja de forma voluntaria.
+die Orientierung|la orientación|Ohne Orientierung fühle ich mich verloren.|Sin orientación me siento perdido.
+die Parallelgesellschaft|la sociedad paralela|Der Begriff Parallelgesellschaft ist umstritten.|El concepto de sociedad paralela es controvertido.
+die Partizipation|la participación|Die Partizipation der Jugendlichen wird gefördert.|Se fomenta la participación de los jóvenes.
+die Pressefreiheit|la libertad de prensa|Die Pressefreiheit ist ein hohes Gut.|La libertad de prensa es un bien preciado.
+die Produktivität|la productividad|Die Produktivität stieg um fünf Prozent.|La productividad subió un cinco por ciento.
+die Rahmenbedingung|la condición marco|Die Rahmenbedingungen müssen stimmen.|Las condiciones marco tienen que ser adecuadas.
+die Rechtsprechung|la jurisprudencia|Die Rechtsprechung hat sich geändert.|La jurisprudencia cambió.
+die Rücksichtnahme|la consideración|Rücksichtnahme ist im Zusammenleben wichtig.|La consideración es importante en la convivencia.
+die Sachlage|el estado de cosas|Die Sachlage ist eindeutig.|El estado de cosas es claro.
+die Sanierung|la rehabilitación|Die Sanierung des Gebäudes dauert ein Jahr.|La rehabilitación del edificio dura un año.
+die Schattenseite|el lado oscuro|Der Erfolg hat auch Schattenseiten.|El éxito también tiene su lado oscuro.
+die Schlichtung|el arbitraje|Die Schlichtung beendete den Streik.|El arbitraje puso fin a la huelga.
+die Schuldenlast|la carga de la deuda|Die Schuldenlast drückt das Land.|La carga de la deuda aplasta al país.
+die Selbstverwirklichung|la autorrealización|Viele suchen im Beruf Selbstverwirklichung.|Muchos buscan autorrealización en el trabajo.
+die Sicherung|la protección / el respaldo|Die Sicherung der Daten ist wichtig.|El respaldo de los datos es importante.
+die Sozialleistung|la prestación social|Sozialleistungen sichern das Existenzminimum.|Las prestaciones sociales aseguran el mínimo vital.
+die Spekulation|la especulación|Das sind nur Spekulationen.|Son solo especulaciones.
+die Stabilität|la estabilidad|Die Stabilität der Preise ist wichtig.|La estabilidad de los precios es importante.
+die Tagung|la jornada / el congreso|Die Tagung findet in Wien statt.|El congreso se realiza en Viena.
+die Teilzeitarbeit|el trabajo de jornada parcial|Teilzeitarbeit ist bei Eltern beliebt.|El trabajo de jornada parcial es popular entre los padres.
+die Tragweite|el alcance|Die Tragweite der Entscheidung ist enorm.|El alcance de la decisión es enorme.
+die Überalterung|el envejecimiento excesivo|Die Überalterung belastet die Rentenkasse.|El envejecimiento excesivo pesa sobre la caja de jubilaciones.
+die Übersicht|la visión de conjunto / el resumen|Die Übersicht zeigt alle Kosten.|El resumen muestra todos los costos.
+die Umstellung|el cambio / la adaptación|Die Umstellung auf Ökostrom ist teuer.|El cambio a energía ecológica es caro.
+die Umverteilung|la redistribución|Viele fordern eine Umverteilung des Reichtums.|Muchos piden redistribuir la riqueza.
+die Unterbringung|el alojamiento|Die Unterbringung der Gäste ist organisiert.|El alojamiento de los invitados está organizado.
+die Unterdrückung|la opresión|Die Unterdrückung der Opposition wurde kritisiert.|Se criticó la opresión de la oposición.
+die Unternehmenskultur|la cultura empresarial|Die Unternehmenskultur ist offen.|La cultura empresarial es abierta.
+die Unterscheidung|la distinción|Die Unterscheidung fällt nicht leicht.|La distinción no es fácil.
+die Verankerung|el arraigo / la consagración|Die Verankerung im Gesetz ist geplant.|Se planea consagrarlo en la ley.
+die Verbindlichkeit|el carácter vinculante|Die Verbindlichkeit der Regeln ist umstritten.|El carácter vinculante de las reglas es discutido.
+die Vergeltung|la represalia|Sie fürchten Vergeltung.|Temen represalias.
+die Verhandlungsbasis|la base de negociación|Das ist eine gute Verhandlungsbasis.|Es una buena base de negociación.
+die Verjährung|la prescripción|Die Verjährung tritt nach zehn Jahren ein.|La prescripción opera a los diez años.
+die Verlagerung|el traslado|Die Verlagerung der Produktion spart Kosten.|Trasladar la producción ahorra costos.
+die Vernetzung|la interconexión|Die Vernetzung der Forscher ist wichtig.|La interconexión de los investigadores es importante.
+die Verschuldung|el endeudamiento|Die Verschuldung des Staates steigt.|El endeudamiento del Estado aumenta.
+die Verschwendung|el derroche|Das ist reine Verschwendung.|Eso es puro derroche.
+die Verträglichkeit|la tolerancia (a un producto)|Die Verträglichkeit des Medikaments ist gut.|La tolerancia al medicamento es buena.
+die Verwendung|el uso|Die Verwendung von Plastik soll sinken.|El uso de plástico debería bajar.
+die Verzerrung|la distorsión|Die Umfrage zeigt eine Verzerrung.|La encuesta muestra una distorsión.
+die Vielzahl|la multitud|Es gibt eine Vielzahl von Gründen.|Hay multitud de razones.
+die Volkswirtschaft|la economía nacional|Die Volkswirtschaft wächst langsam.|La economía nacional crece despacio.
+die Vorbildfunktion|el papel de modelo|Eltern haben eine Vorbildfunktion.|Los padres tienen un papel de modelo.
+die Vorhersage|el pronóstico|Die Vorhersage war falsch.|El pronóstico fue erróneo.
+die Vorschrift|la norma|Die Vorschrift gilt für alle.|La norma rige para todos.
+die Wachstumsrate|la tasa de crecimiento|Die Wachstumsrate sinkt.|La tasa de crecimiento baja.
+die Weichenstellung|la definición del rumbo|Die Weichenstellung erfolgt jetzt.|El rumbo se define ahora.
+die Weitergabe|la transmisión|Die Weitergabe von Daten ist verboten.|La transmisión de datos está prohibida.
+die Wertvorstellung|el valor (concepción)|Wertvorstellungen ändern sich.|Las concepciones de valores cambian.
+die Wiederverwertung|el reciclaje|Die Wiederverwertung von Glas ist üblich.|El reciclaje de vidrio es habitual.
+die Willkür|la arbitrariedad|Das Urteil wirkt wie Willkür.|La sentencia parece arbitraria.
+die Wohlfahrt|el bienestar social|Die Wohlfahrt der Bürger steht im Vordergrund.|El bienestar de los ciudadanos está en primer plano.
+die Zahlungsfähigkeit|la solvencia|Die Zahlungsfähigkeit der Firma ist gefährdet.|La solvencia de la empresa está en peligro.
+die Zensur|la censura|Zensur ist in Demokratien verboten.|La censura está prohibida en las democracias.
+die Zerstörung|la destrucción|Die Zerstörung der Umwelt schreitet voran.|La destrucción del ambiente avanza.
+die Zivilcourage|el valor cívico|Es braucht Zivilcourage, um einzugreifen.|Hace falta valor cívico para intervenir.
+die Zugehörigkeit|la pertenencia|Das Gefühl der Zugehörigkeit ist wichtig.|El sentimiento de pertenencia es importante.
+die Zuspitzung|la agudización|Die Zuspitzung des Konflikts macht Sorgen.|La agudización del conflicto preocupa.
+die Zuwendung|la atención / el cariño|Kinder brauchen Zuwendung.|Los chicos necesitan atención y cariño.
+der Abbau|el desmantelamiento|Der Abbau von Stellen ist geplant.|Se planea suprimir puestos.
+der Absatz|las ventas / el párrafo|Der Absatz ist stark gestiegen.|Las ventas subieron mucho.
+der Abstieg|el descenso|Der Abstieg der Mannschaft war absehbar.|El descenso del equipo era previsible.
+der Anbieter|el proveedor|Der Anbieter hat die Preise erhöht.|El proveedor subió los precios.
+der Anlass|la ocasión / el motivo|Der Anlass für das Treffen ist ein Jubiläum.|El motivo de la reunión es un aniversario.
+der Anlauf|el impulso / el intento|Beim zweiten Anlauf hat es geklappt.|En el segundo intento salió.
+der Anschlag|el atentado|Der Anschlag erschütterte das Land.|El atentado conmocionó al país.
+der Antrieb|el impulso / la motivación|Ihm fehlt der Antrieb.|Le falta motivación.
+der Ausbau|la expansión|Der Ausbau der Radwege kommt voran.|La expansión de las ciclovías avanza.
+der Auslöser|el detonante|Der Auslöser des Streits war eine Kleinigkeit.|El detonante de la pelea fue una pavada.
+der Befürworter|el partidario|Die Befürworter des Plans sind in der Mehrheit.|Los partidarios del plan son mayoría.
+der Beleg|la prueba / el comprobante|Dafür gibt es keinen Beleg.|Para eso no hay prueba.
+der Bestand|el stock / la existencia|Der Bestand an Wohnungen ist knapp.|El stock de viviendas es escaso.
+der Beteiligte|el involucrado|Alle Beteiligten wurden informiert.|Se informó a todos los involucrados.
+der Brennpunkt|el foco de conflicto|Das Viertel gilt als sozialer Brennpunkt.|El barrio es considerado un foco de problemas sociales.
+der Dialog|el diálogo|Wir suchen den Dialog mit den Bürgern.|Buscamos el diálogo con los ciudadanos.
+der Eckpfeiler|el pilar|Bildung ist ein Eckpfeiler der Gesellschaft.|La educación es un pilar de la sociedad.
+der Einblick|la mirada hacia adentro|Der Film gibt einen Einblick in den Alltag.|La película da una mirada a la vida cotidiana.
+der Einstieg|el comienzo / la entrada|Der Einstieg ins Berufsleben ist schwer.|Entrar al mundo laboral es difícil.
+der Eklat|el escándalo|Die Sitzung endete mit einem Eklat.|La sesión terminó en escándalo.
+der Engpass|el cuello de botella|Es gibt einen Engpass bei den Fachkräften.|Hay escasez de personal calificado.
+der Entscheidungsträger|el responsable de decidir|Die Entscheidungsträger müssen handeln.|Quienes deciden tienen que actuar.
+der Erfolgsdruck|la presión por el éxito|Der Erfolgsdruck macht krank.|La presión por el éxito enferma.
+der Ernstfall|el caso de emergencia|Im Ernstfall rufen Sie die Feuerwehr.|En caso de emergencia llame a los bomberos.
+der Fachmann|el especialista|Fragen Sie einen Fachmann.|Consulte a un especialista.
+der Freiraum|el margen de libertad|Wir geben den Mitarbeitern Freiraum.|Les damos margen de libertad a los empleados.
+der Gesetzgeber|el legislador|Der Gesetzgeber muss reagieren.|El legislador debe reaccionar.
+der Gesetzesentwurf|el proyecto de ley|Der Gesetzesentwurf liegt im Parlament.|El proyecto de ley está en el parlamento.
+der Grenzfall|el caso límite|Das ist ein klarer Grenzfall.|Es un claro caso límite.
+der Grundgedanke|la idea básica|Der Grundgedanke ist einfach.|La idea básica es simple.
+der Gründer|el fundador|Der Gründer der Firma ist 80.|El fundador de la empresa tiene 80.
+der Gutachter|el perito|Der Gutachter prüft den Schaden.|El perito evalúa el daño.
+der Hauptgrund|el motivo principal|Der Hauptgrund war das Geld.|El motivo principal fue el dinero.
+der Hebel|la palanca|Hier müssen wir den Hebel ansetzen.|Acá tenemos que aplicar la palanca.
+der Höhepunkt|el punto culminante|Das Konzert war der Höhepunkt des Festivals.|El concierto fue el punto culminante del festival.
+der Indikator|el indicador|Die Zahl ist ein wichtiger Indikator.|La cifra es un indicador importante.
+der Kanon|el canon|Das Werk gehört zum literarischen Kanon.|La obra pertenece al canon literario.
+der Kernpunkt|el punto central|Das ist der Kernpunkt der Debatte.|Ese es el punto central del debate.
+der Klimawandel|el cambio climático|Der Klimawandel betrifft uns alle.|El cambio climático nos afecta a todos.
+der Kompromissvorschlag|la propuesta de compromiso|Der Kompromissvorschlag wurde angenommen.|Se aceptó la propuesta de compromiso.
+der Konsument|el consumidor|Der Konsument will Qualität.|El consumidor quiere calidad.
+der Kostenfaktor|el factor de costo|Energie ist ein großer Kostenfaktor.|La energía es un gran factor de costo.
+der Kreislauf|el ciclo / la circulación|Der Kreislauf des Wassers ist bekannt.|El ciclo del agua es conocido.
+der Krisenherd|el foco de crisis|Der Krisenherd liegt im Osten.|El foco de crisis está en el este.
+der Kurswechsel|el cambio de rumbo|Der Kurswechsel kam überraschend.|El cambio de rumbo fue sorpresivo.
+der Lebensabschnitt|la etapa de la vida|Das Studium ist ein wichtiger Lebensabschnitt.|La carrera es una etapa importante de la vida.
+der Lösungsansatz|el planteo de solución|Dieser Lösungsansatz ist neu.|Este planteo de solución es nuevo.
+der Machtkampf|la lucha de poder|Der Machtkampf dauerte Jahre.|La lucha de poder duró años.
+der Meilenstein|el hito|Das Projekt ist ein Meilenstein.|El proyecto es un hito.
+der Missstand|la irregularidad|Dieser Missstand muss aufgedeckt werden.|Esta irregularidad debe ser revelada.
+der Nährboden|el caldo de cultivo|Armut ist ein Nährboden für Gewalt.|La pobreza es caldo de cultivo para la violencia.
+der Normalfall|el caso normal|Im Normalfall dauert es zwei Tage.|En el caso normal tarda dos días.
+der Notstand|el estado de emergencia|Der Notstand wurde ausgerufen.|Se declaró el estado de emergencia.
+der Ruf|la reputación|Die Firma hat einen guten Ruf.|La empresa tiene buena reputación.
+der Rückhalt|el respaldo|Er hat den Rückhalt der Partei.|Tiene el respaldo del partido.
+der Sachverhalt|el hecho (jurídico)|Der Sachverhalt ist noch unklar.|Los hechos todavía no están claros.
+der Schadstoff|la sustancia nociva|Der Schadstoff gelangt ins Wasser.|La sustancia nociva llega al agua.
+der Schlüsselfaktor|el factor clave|Vertrauen ist ein Schlüsselfaktor.|La confianza es un factor clave.
+der Schwellenwert|el valor umbral|Der Schwellenwert wurde überschritten.|Se superó el valor umbral.
+der Skeptiker|el escéptico|Die Skeptiker bleiben in der Mehrheit.|Los escépticos siguen siendo mayoría.
+der Sozialstaat|el Estado social|Der Sozialstaat sichert die Grundversorgung.|El Estado social asegura el abastecimiento básico.
+der Stellenabbau|la supresión de puestos|Der Stellenabbau trifft viele Familien.|La supresión de puestos afecta a muchas familias.
+der Steuerzahler|el contribuyente|Der Steuerzahler trägt die Kosten.|El contribuyente carga con los costos.
+der Strukturwandel|el cambio estructural|Der Strukturwandel trifft die Region hart.|El cambio estructural golpea duro a la región.
+der Tatbestand|el hecho punible|Der Tatbestand ist erfüllt.|Se cumplen los elementos del delito.
+der Teufelskreis|el círculo vicioso|Das ist ein Teufelskreis.|Es un círculo vicioso.
+der Tiefpunkt|el punto más bajo|Das war der Tiefpunkt meiner Karriere.|Ese fue el punto más bajo de mi carrera.
+der Umschwung|el giro|Der Umschwung kam im Herbst.|El giro llegó en otoño.
+der Umweltschutz|la protección ambiental|Umweltschutz beginnt im Alltag.|La protección ambiental empieza en lo cotidiano.
+der Verbund|la asociación / el conjunto|Die Schulen arbeiten im Verbund.|Las escuelas trabajan en conjunto.
+der Verfall|la decadencia|Der Verfall der Gebäude ist sichtbar.|La decadencia de los edificios es visible.
+der Vermögenswert|el activo|Immobilien sind ein wichtiger Vermögenswert.|Los inmuebles son un activo importante.
+der Vertragspartner|la contraparte|Der Vertragspartner hat nicht gezahlt.|La contraparte no pagó.
+der Vertrauensverlust|la pérdida de confianza|Der Skandal führte zu einem Vertrauensverlust.|El escándalo llevó a una pérdida de confianza.
+der Verursacher|el causante|Der Verursacher des Schadens zahlt.|El causante del daño paga.
+der Vorbote|el presagio|Der Regen war ein Vorbote des Sturms.|La lluvia fue un presagio de la tormenta.
+der Vorrang|la prioridad|Sicherheit hat Vorrang.|La seguridad tiene prioridad.
+der Vorstoß|la iniciativa (avance)|Der Vorstoß des Ministers scheiterte.|La iniciativa del ministro fracasó.
+der Wählerwille|la voluntad de los votantes|Man muss den Wählerwillen respektieren.|Hay que respetar la voluntad de los votantes.
+der Wegfall|la supresión|Der Wegfall der Gebühr entlastet viele.|La supresión de la tasa alivia a muchos.
+der Wendepunkt|el punto de inflexión|Das Jahr 1989 war ein Wendepunkt.|El año 1989 fue un punto de inflexión.
+der Wertewandel|el cambio de valores|Der Wertewandel verändert die Gesellschaft.|El cambio de valores transforma la sociedad.
+der Wirtschaftszweig|el sector económico|Der Tourismus ist ein wichtiger Wirtschaftszweig.|El turismo es un sector económico importante.
+der Zeitdruck|la presión de tiempo|Unter Zeitdruck mache ich Fehler.|Bajo presión de tiempo cometo errores.
+der Zugriff|el acceso (a datos)|Der Zugriff auf die Daten ist beschränkt.|El acceso a los datos es limitado.
+der Zusammenbruch|el colapso|Der Zusammenbruch der Firma kam plötzlich.|El colapso de la empresa fue repentino.
+der Zwiespalt|el dilema interior|Er steckt in einem Zwiespalt.|Está en un dilema interior.
+das Ablaufdatum|la fecha de vencimiento|Das Ablaufdatum steht auf der Packung.|La fecha de vencimiento está en el paquete.
+das Abkommen|el acuerdo|Das Abkommen wurde unterzeichnet.|El acuerdo fue firmado.
+das Anforderungsprofil|el perfil requerido|Das Anforderungsprofil ist anspruchsvoll.|El perfil requerido es exigente.
+das Arbeitsverhältnis|la relación laboral|Das Arbeitsverhältnis endet im März.|La relación laboral termina en marzo.
+das Aufgabenfeld|el campo de tareas|Sein Aufgabenfeld ist breit.|Su campo de tareas es amplio.
+das Desinteresse|el desinterés|Sein Desinteresse war offensichtlich.|Su desinterés era evidente.
+das Einkommensgefälle|la brecha de ingresos|Das Einkommensgefälle zwischen Stadt und Land wächst.|La brecha de ingresos entre ciudad y campo crece.
+das Engagement|el compromiso|Wir danken für Ihr Engagement.|Agradecemos su compromiso.
+das Ermessen|la discreción|Das liegt in Ihrem Ermessen.|Eso queda a su criterio.
+das Fachwissen|el conocimiento especializado|Dafür braucht man Fachwissen.|Para eso se necesita conocimiento especializado.
+das Fehlverhalten|la mala conducta|Sein Fehlverhalten wurde bestraft.|Su mala conducta fue sancionada.
+das Gedankengut|el pensamiento (ideario)|Solches Gedankengut ist gefährlich.|Ese tipo de ideario es peligroso.
+das Gefälle|el desnivel / la brecha|Es gibt ein Gefälle zwischen Nord und Süd.|Hay una brecha entre norte y sur.
+das Gefüge|la estructura|Das soziale Gefüge verändert sich.|La estructura social cambia.
+das Hindernis|el obstáculo|Das größte Hindernis ist die Sprache.|El mayor obstáculo es el idioma.
+das Hilfsangebot|la oferta de ayuda|Das Hilfsangebot wird gut genutzt.|La oferta de ayuda se aprovecha bien.
+das Image|la imagen (pública)|Die Stadt hat ein neues Image.|La ciudad tiene una nueva imagen.
+das Jahrzehnt|la década|Das letzte Jahrzehnt brachte viele Veränderungen.|La última década trajo muchos cambios.
+das Kollektiv|el colectivo|Das Kollektiv trifft Entscheidungen gemeinsam.|El colectivo decide en conjunto.
+das Konstrukt|la construcción (abstracta)|Das ist ein theoretisches Konstrukt.|Es una construcción teórica.
+das Lebenswerk|la obra de toda una vida|Das Museum ist sein Lebenswerk.|El museo es la obra de su vida.
+das Machtgefüge|la estructura de poder|Das Machtgefüge hat sich verschoben.|La estructura de poder se desplazó.
+das Missverhältnis|la desproporción|Es gibt ein Missverhältnis zwischen Lohn und Leistung.|Hay una desproporción entre sueldo y rendimiento.
+das Mitspracherecht|el derecho a opinar|Die Eltern fordern ein Mitspracherecht.|Los padres exigen derecho a opinar.
+das Mittelmaß|la mediocridad|Er gibt sich nicht mit Mittelmaß zufrieden.|No se conforma con la mediocridad.
+das Monopol|el monopolio|Die Firma hat ein Monopol.|La empresa tiene un monopolio.
+das Nachspiel|las consecuencias|Das wird ein Nachspiel haben.|Esto va a tener consecuencias.
+das Naturschutzgebiet|la reserva natural|Das Naturschutzgebiet ist für Besucher gesperrt.|La reserva natural está cerrada a los visitantes.
+das Präsidium|la presidencia (órgano)|Das Präsidium tagt morgen.|La presidencia se reúne mañana.
+das Reformvorhaben|el proyecto de reforma|Das Reformvorhaben stößt auf Widerstand.|El proyecto de reforma encuentra resistencia.
+das Regelwerk|el reglamento|Das Regelwerk ist sehr umfangreich.|El reglamento es muy extenso.
+das Risikopotenzial|el potencial de riesgo|Das Risikopotenzial ist hoch.|El potencial de riesgo es alto.
+das Sachgebiet|el área temática|Er ist Experte auf diesem Sachgebiet.|Es experto en esta área.
+das Schlagwort|la palabra clave|Nachhaltigkeit ist das Schlagwort der Zeit.|La sostenibilidad es la palabra clave de la época.
+das Selbstverständnis|la autocomprensión|Das Selbstverständnis der Partei ändert sich.|La autocomprensión del partido cambia.
+das Stimmungsbild|el panorama de opinión|Die Umfrage liefert ein Stimmungsbild.|La encuesta da un panorama de opinión.
+das Streitthema|el tema de disputa|Geld ist ein häufiges Streitthema.|El dinero es un tema de disputa frecuente.
+das Strukturproblem|el problema estructural|Das ist ein Strukturproblem.|Es un problema estructural.
+das Symptom|el síntoma|Müdigkeit kann ein Symptom sein.|El cansancio puede ser un síntoma.
+das Unrecht|la injusticia|Er will das Unrecht wiedergutmachen.|Quiere reparar la injusticia.
+das Unterfangen|la empresa (acción arriesgada)|Das ist ein riskantes Unterfangen.|Es una empresa arriesgada.
+das Verbrechen|el crimen|Das Verbrechen wurde nie aufgeklärt.|El crimen nunca se esclareció.
+das Versäumnis|la omisión|Das war ein schweres Versäumnis.|Fue una omisión grave.
+das Vertrauensverhältnis|la relación de confianza|Das Vertrauensverhältnis ist gestört.|La relación de confianza está dañada.
+das Vorzeichen|el signo / el indicio|Die Zahl hat ein negatives Vorzeichen.|El número tiene signo negativo.
+das Wahlrecht|el derecho al voto|Das Wahlrecht gilt ab 18.|El derecho al voto rige desde los 18.
+das Wirtschaftswachstum|el crecimiento económico|Das Wirtschaftswachstum verlangsamt sich.|El crecimiento económico se desacelera.
+das Zeitalter|la era|Wir leben im digitalen Zeitalter.|Vivimos en la era digital.
+das Zusammenspiel|la interacción|Das Zusammenspiel aller Faktoren ist entscheidend.|La interacción de todos los factores es decisiva.
+absehen|prever|Das Ende lässt sich noch nicht absehen.|El final todavía no se puede prever.
+andauern|persistir|Der Streit kann noch lange andauern.|La disputa puede persistir mucho tiempo.
+anfallen|surgir (costos, trabajo)|Dafür können zusätzliche Kosten anfallen.|Para eso pueden surgir costos adicionales.
+aufarbeiten|procesar / reelaborar|Wir müssen die Vergangenheit aufarbeiten.|Tenemos que procesar el pasado.
+auffangen|amortiguar|Der Staat will die Verluste auffangen.|El Estado quiere amortiguar las pérdidas.
+aufkommen|surgir|Zweifel können jederzeit aufkommen.|Las dudas pueden surgir en cualquier momento.
+aufstocken|aumentar (una cantidad)|Wir wollen das Personal aufstocken.|Queremos aumentar el personal.
+auslagern|externalizar|Die Firma will die Produktion auslagern.|La empresa quiere externalizar la producción.
+ausschöpfen|agotar (posibilidades)|Wir müssen alle Möglichkeiten ausschöpfen.|Tenemos que agotar todas las posibilidades.
+bedingen|condicionar|Das eine kann das andere bedingen.|Una cosa puede condicionar a la otra.
+bekräftigen|reafirmar|Der Minister bekräftigte seine Position.|El ministro reafirmó su postura.
+bekunden|manifestar|Viele bekundeten ihr Interesse.|Muchos manifestaron su interés.
+belaufen|ascender a|Die Kosten belaufen sich auf 5.000 Euro.|Los costos ascienden a 5.000 euros.
+bemängeln|objetar|Die Kunden bemängeln die lange Wartezeit.|Los clientes objetan la larga espera.
+bereinigen|aclarar / depurar|Wir wollen das Missverständnis bereinigen.|Queremos aclarar el malentendido.
+bescheinigen|certificar|Der Arzt bescheinigt die Krankheit.|El médico certifica la enfermedad.
+beschwichtigen|apaciguar|Er versuchte, die Menge zu beschwichtigen.|Intentó apaciguar a la multitud.
+besiegeln|sellar|Ein Handschlag besiegelte den Vertrag.|Un apretón de manos selló el contrato.
+beteuern|asegurar enfáticamente|Er beteuert seine Unschuld.|Asegura enfáticamente su inocencia.
+bezwecken|tener por objeto|Was soll das bezwecken?|¿Qué se pretende lograr con eso?
+dokumentieren|documentar|Wir müssen alles genau dokumentieren.|Tenemos que documentarlo todo con precisión.
+drosseln|reducir (velocidad, consumo)|Die Regierung will den Verbrauch drosseln.|El gobierno quiere reducir el consumo.
+durchdringen|penetrar|Der Regen kann durch den Stoff durchdringen.|La lluvia puede penetrar la tela.
+einfordern|exigir|Er kann sein Recht einfordern.|Puede exigir su derecho.
+eingestehen|admitir|Sie muss ihren Fehler eingestehen.|Ella tiene que admitir su error.
+einschreiten|intervenir|Die Polizei musste einschreiten.|La policía tuvo que intervenir.
+einstufen|clasificar|Die Behörde will das Risiko hoch einstufen.|La autoridad quiere clasificar el riesgo como alto.
+empören|indignar|Das Urteil kann viele empören.|La sentencia puede indignar a muchos.
+entgegenkommen|ir al encuentro|Wir wollen den Kunden entgegenkommen.|Queremos ir al encuentro de los clientes.
+erarbeiten|elaborar|Wir müssen ein Konzept erarbeiten.|Tenemos que elaborar un concepto.
+erbringen|aportar / rendir|Die Firma muss den Nachweis erbringen.|La empresa debe aportar la prueba.
+ergründen|indagar|Man will die Ursache ergründen.|Se quiere indagar la causa.
+erhärten|confirmar (sospecha)|Neue Beweise können den Verdacht erhärten.|Nuevas pruebas pueden confirmar la sospecha.
+erlangen|obtener|Er will die Staatsbürgerschaft erlangen.|Quiere obtener la ciudadanía.
+erschließen|abrir / desarrollar|Neue Märkte lassen sich erschließen.|Se pueden abrir nuevos mercados.
+erstreben|aspirar a|Wir erstreben eine faire Lösung.|Aspiramos a una solución justa.
+erwirken|conseguir (por trámite)|Der Anwalt will eine Entscheidung erwirken.|El abogado quiere conseguir una resolución.
+festschreiben|dejar establecido|Man will das Recht im Gesetz festschreiben.|Se quiere dejar el derecho establecido en la ley.
+festsetzen|fijar|Das Gericht wird die Strafe festsetzen.|El tribunal va a fijar la pena.
+fortführen|continuar|Wir wollen das Projekt fortführen.|Queremos continuar el proyecto.
+gedeihen|prosperar|Pflanzen können hier gut gedeihen.|Las plantas pueden prosperar bien acá.
+gutheißen|aprobar|Ich kann sein Verhalten nicht gutheißen.|No puedo aprobar su comportamiento.
+herabsetzen|rebajar|Man will das Alter herabsetzen.|Se quiere bajar la edad.
+herausfordern|desafiar|Das Problem will uns herausfordern.|El problema nos quiere desafiar.
+hervorbringen|producir / dar origen a|Das Land kann viele Talente hervorbringen.|El país puede producir muchos talentos.
+hervorrufen|provocar|Das kann Ärger hervorrufen.|Eso puede provocar enojo.
+hinauslaufen|desembocar|Das wird auf Streit hinauslaufen.|Eso va a terminar en pelea.
+hinzuziehen|consultar / sumar|Wir sollten einen Experten hinzuziehen.|Deberíamos sumar a un experto.
+inszenieren|escenificar|Der Regisseur will das Stück neu inszenieren.|El director quiere escenificar la obra de nuevo.
+kennzeichnen|caracterizar / marcar|Man muss die Produkte kennzeichnen.|Hay que etiquetar los productos.
+lahmlegen|paralizar|Der Streik kann den Verkehr lahmlegen.|La huelga puede paralizar el tránsito.
+missachten|desobedecer|Man darf die Regeln nicht missachten.|No se deben desobedecer las reglas.
+nachholen|recuperar|Ich muss den Unterricht nachholen.|Tengo que recuperar la clase.
+nahelegen|sugerir|Das Ergebnis kann einen Wechsel nahelegen.|El resultado puede sugerir un cambio.
+protokollieren|levantar acta|Wir müssen die Sitzung protokollieren.|Tenemos que levantar acta de la reunión.
+reglementieren|reglamentar|Man will den Verkauf reglementieren.|Se quiere reglamentar la venta.
+sanieren|rehabilitar|Die Stadt will das Schulhaus sanieren.|La ciudad quiere rehabilitar la escuela.
+schmälern|mermar|Das kann seinen Verdienst schmälern.|Eso puede mermar su mérito.
+schüren|atizar|Man darf keine Angst schüren.|No se debe atizar el miedo.
+sich bewähren|probar su valor|Die Methode wird sich bewähren.|El método va a probar su valor.
+sich etablieren|establecerse|Die Firma konnte sich schnell etablieren.|La empresa pudo establecerse rápido.
+sich herausstellen|resultar|Es kann sich herausstellen, dass er recht hat.|Puede resultar que tenga razón.
+sich widersetzen|oponerse|Er wollte sich der Anordnung widersetzen.|Quiso oponerse a la orden.
+standhalten|resistir|Die Brücke soll dem Sturm standhalten.|El puente debe resistir la tormenta.
+umgehen|eludir / tratar con|Man kann die Regel nicht umgehen.|No se puede eludir la regla.
+unterbinden|impedir|Wir wollen den Missbrauch unterbinden.|Queremos impedir el abuso.
+unterschätzen|subestimar|Man darf den Aufwand nicht unterschätzen.|No se debe subestimar el esfuerzo.
+unterwerfen|someter|Er wollte sich den Regeln nicht unterwerfen.|No quiso someterse a las reglas.
+verbürgen|garantizar|Die Bank will die Schulden verbürgen.|El banco quiere avalar las deudas.
+verfehlen|no alcanzar / errar|Wir wollen das Ziel nicht verfehlen.|No queremos errar el objetivo.
+vergegenwärtigen|hacerse presente|Man sollte sich die Folgen vergegenwärtigen.|Habría que tener presentes las consecuencias.
+vergüten|remunerar|Die Überstunden werden vergütet.|Las horas extra se remuneran.
+verharmlosen|minimizar|Man darf das Risiko nicht verharmlosen.|No se debe minimizar el riesgo.
+verheimlichen|ocultar|Er wollte die Wahrheit verheimlichen.|Quiso ocultar la verdad.
+verlagern|trasladar|Die Firma will die Produktion verlagern.|La empresa quiere trasladar la producción.
+verschleiern|encubrir|Man wollte die Zahlen verschleiern.|Se quiso encubrir las cifras.
+versiegen|secarse|Die Quelle kann im Sommer versiegen.|La fuente puede secarse en verano.
+verteidigen|defender|Sie will ihre Meinung verteidigen.|Quiere defender su opinión.
+vertuschen|tapar (un asunto)|Man wollte den Skandal vertuschen.|Se quiso tapar el escándalo.
+verzögern|retrasar|Der Regen kann die Arbeiten verzögern.|La lluvia puede retrasar las obras.
+voraussagen|predecir|Niemand kann die Zukunft voraussagen.|Nadie puede predecir el futuro.
+vorenthalten|privar / negar|Man darf ihm die Information nicht vorenthalten.|No se le puede negar la información.
+vorführen|presentar / exponer|Wir wollen das Gerät vorführen.|Queremos presentar el aparato.
+vorgeben|fingir / establecer|Die Regeln werden vom Staat vorgeben.|Las reglas las establece el Estado.
+vorherrschen|predominar|Hier kann Unsicherheit vorherrschen.|Acá puede predominar la inseguridad.
+vorsehen|prever (planificar)|Das Gesetz will Strafen vorsehen.|La ley quiere prever sanciones.
+zugutekommen|beneficiar|Das Geld soll den Kindern zugutekommen.|El dinero debe beneficiar a los chicos.
+zurückhalten|retener / contener|Er konnte seine Wut kaum zurückhalten.|Apenas pudo contener su furia.
+zuwiderlaufen|ir en contra|Das kann unseren Interessen zuwiderlaufen.|Eso puede ir en contra de nuestros intereses.
+abgelegen|apartado|Das Dorf liegt abgelegen.|El pueblo está apartado.
+abwertend|despectivo|Er sprach abwertend über sie.|Habló de ella de manera despectiva.
+angespannt|tenso|Die Lage ist angespannt.|La situación está tensa.
+anmaßend|presuntuoso|Sein Ton war anmaßend.|Su tono fue presuntuoso.
+anspruchslos|poco exigente|Er ist ein anspruchsloser Gast.|Es un huésped poco exigente.
+arglos|ingenuo / confiado|Das Kind war arglos.|El chico era confiado.
+aufgeschlossen|abierto|Sie ist neuen Ideen gegenüber aufgeschlossen.|Está abierta a ideas nuevas.
+aufwändig|costoso (en esfuerzo)|Die Reparatur ist aufwändig.|La reparación es muy trabajosa.
+ausgeglichen|equilibrado|Er hat einen ausgeglichenen Charakter.|Tiene un carácter equilibrado.
+berechtigt|legítimo|Die Kritik ist berechtigt.|La crítica es legítima.
+berüchtigt|de mala fama|Das Viertel ist berüchtigt.|El barrio tiene mala fama.
+besonnen|ponderado|Sie reagierte besonnen.|Reaccionó con ponderación.
+bestürzt|consternado|Wir sind bestürzt über die Nachricht.|Estamos consternados por la noticia.
+beunruhigend|inquietante|Die Zahlen sind beunruhigend.|Las cifras son inquietantes.
+bewährt|probado|Das ist eine bewährte Methode.|Es un método probado.
+diffus|difuso|Das Bild ist noch diffus.|El panorama todavía es difuso.
+dubios|dudoso|Er macht dubiose Geschäfte.|Hace negocios dudosos.
+einvernehmlich|de común acuerdo|Die Trennung war einvernehmlich.|La separación fue de común acuerdo.
+empfindsam|sensible|Sie ist eine empfindsame Person.|Es una persona sensible.
+entgegengesetzt|opuesto|Sie haben entgegengesetzte Meinungen.|Tienen opiniones opuestas.
+entscheidungsfreudig|decidido|Der Chef ist sehr entscheidungsfreudig.|El jefe es muy decidido.
+fadenscheinig|poco convincente|Seine Ausrede war fadenscheinig.|Su excusa era poco convincente.
+fundiert|fundado|Das ist eine fundierte Kritik.|Es una crítica fundada.
+geläufig|corriente|Der Begriff ist heute geläufig.|El concepto es hoy corriente.
+glaubhaft|creíble|Seine Aussage ist glaubhaft.|Su declaración es creíble.
+gleichermaßen|por igual|Das gilt für alle gleichermaßen.|Eso rige para todos por igual.
+halbherzig|a medias|Sie versuchte es nur halbherzig.|Lo intentó solo a medias.
+heftig|fuerte / violento|Es gab eine heftige Diskussion.|Hubo una discusión violenta.
+idealistisch|idealista|Er ist ein idealistischer Lehrer.|Es un docente idealista.
+ignorant|ignorante (desconsiderado)|Sein ignorantes Verhalten ärgert uns.|Su comportamiento desconsiderado nos enoja.
+inakzeptabel|inaceptable|Das ist inakzeptabel.|Eso es inaceptable.
+inhaltlich|en cuanto al contenido|Inhaltlich gibt es keine Einwände.|En cuanto al contenido, no hay objeciones.
+intakt|intacto|Das Gebäude blieb intakt.|El edificio quedó intacto.
+irreführend|engañoso|Die Werbung ist irreführend.|La publicidad es engañosa.
+irreversibel|irreversible|Der Schaden ist irreversibel.|El daño es irreversible.
+kleinlich|mezquino|Sei bitte nicht so kleinlich.|No seas tan mezquino, por favor.
+lebensnah|cercano a la realidad|Der Unterricht ist lebensnah.|La clase está cerca de la vida real.
+lückenlos|sin lagunas|Der Bericht ist lückenlos.|El informe no tiene lagunas.
+makaber|macabro|Der Witz war makaber.|El chiste era macabro.
+problematisch|problemático|Die Lage ist problematisch.|La situación es problemática.
+scheinbar|aparente|Das ist ein scheinbarer Widerspruch.|Es una contradicción aparente.
+skrupellos|sin escrúpulos|Er ist ein skrupelloser Geschäftsmann.|Es un empresario sin escrúpulos.
+stillschweigend|tácitamente|Sie hat stillschweigend zugestimmt.|Aceptó tácitamente.
+tragfähig|sostenible (viable)|Wir brauchen eine tragfähige Lösung.|Necesitamos una solución viable.
+übermäßig|excesivo|Übermäßiger Lärm schadet der Gesundheit.|El ruido excesivo daña la salud.
+überschaubar|manejable|Der Aufwand ist überschaubar.|El esfuerzo es manejable.
+unabdingbar|imprescindible|Das ist unabdingbar.|Eso es imprescindible.
+unabsehbar|imprevisible|Die Folgen sind unabsehbar.|Las consecuencias son imprevisibles.
+unangemessen|inadecuado|Seine Reaktion war unangemessen.|Su reacción fue inadecuada.
+unbegründet|infundado|Die Angst ist unbegründet.|El miedo es infundado.
+unerheblich|irrelevante|Das ist unerheblich.|Eso es irrelevante.
+unfreiwillig|involuntario|Er wurde unfreiwillig Zeuge.|Fue testigo sin querer.
+ungehindert|sin obstáculos|Die Autos konnten ungehindert passieren.|Los autos pudieron pasar sin obstáculos.
+unlängst|hace poco|Unlängst wurde das Gesetz geändert.|Hace poco se cambió la ley.
+unmissverständlich|inequívoco|Sie sagte es unmissverständlich.|Lo dijo de forma inequívoca.
+unrealistisch|poco realista|Der Plan ist unrealistisch.|El plan es poco realista.
+unscheinbar|discreto|Das Haus ist unscheinbar.|La casa es discreta.
+unstrittig|indiscutido|Das ist unstrittig.|Eso es indiscutido.
+unverbindlich|sin compromiso|Das Angebot ist unverbindlich.|La oferta es sin compromiso.
+unverhältnismäßig|desproporcionado|Die Strafe ist unverhältnismäßig.|La pena es desproporcionada.
+unvoreingenommen|imparcial|Er hört unvoreingenommen zu.|Escucha sin prejuicios.
+verbindlich|vinculante|Die Zusage ist verbindlich.|La confirmación es vinculante.
+verbreitet|difundido|Der Irrtum ist weit verbreitet.|El error está muy difundido.
+verdächtig|sospechoso|Das Paket sah verdächtig aus.|El paquete parecía sospechoso.
+vereinzelt|aislado|Es gab vereinzelte Proteste.|Hubo protestas aisladas.
+vermeintlich|supuesto|Der vermeintliche Täter war unschuldig.|El supuesto culpable era inocente.
+verpflichtend|obligatorio|Die Teilnahme ist verpflichtend.|La participación es obligatoria.
+verschwenderisch|derrochador|Er führt ein verschwenderisches Leben.|Lleva una vida derrochadora.
+versöhnlich|conciliador|Sie schlug einen versöhnlichen Ton an.|Adoptó un tono conciliador.
+voreilig|precipitado|Triff keine voreiligen Entscheidungen.|No tomes decisiones precipitadas.
+vorläufig|provisorio|Das ist nur eine vorläufige Lösung.|Es solo una solución provisoria.
+vorteilhaft|ventajoso|Das Angebot ist vorteilhaft.|La oferta es ventajosa.
+wiederholt|reiterado|Er kam wiederholt zu spät.|Llegó tarde reiteradamente.
+willkürlich|arbitrario|Die Auswahl war willkürlich.|La selección fue arbitraria.
+zusehends|a ojos vistas|Die Lage verbessert sich zusehends.|La situación mejora a ojos vistas.
+zweckmäßig|funcional|Die Ausstattung ist zweckmäßig.|El equipamiento es funcional.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";
