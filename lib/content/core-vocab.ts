@@ -586,6 +586,136 @@ jeden Tag|todos los días|Ich lerne jeden Tag Deutsch.|Estudio alemán todos los
 jede Woche|cada semana|Wir telefonieren jede Woche.|Hablamos por teléfono cada semana.
 zweimal|dos veces|Ich war zweimal in Wien.|Estuve dos veces en Viena.
 nie mehr|nunca más|Das mache ich nie mehr.|Eso no lo hago nunca más.
+die Abreise|la partida|Die Abreise ist am Samstag.|La partida es el sábado.
+die Anschrift|la dirección postal|Bitte geben Sie Ihre Anschrift an.|Por favor, indique su dirección postal.
+die Bahnverbindung|la conexión de tren|Die Bahnverbindung nach Köln ist gut.|La conexión de tren a Colonia es buena.
+die Einkaufsliste|la lista de compras|Hast du die Einkaufsliste dabei?|¿Tenés la lista de compras?
+die Feier|la fiesta|Die Feier beginnt um acht Uhr.|La fiesta empieza a las ocho.
+die Ferien|las vacaciones (escolares)|In den Ferien fahren wir ans Meer.|En las vacaciones vamos al mar.
+die Heizung|la calefacción|Die Heizung funktioniert nicht.|La calefacción no funciona.
+die Internetseite|el sitio web|Die Internetseite ist übersichtlich.|El sitio web es claro.
+die Kleidung|la ropa|Die Kleidung ist hier günstig.|La ropa acá es barata.
+die Kurve|la curva|Vor der Kurve musst du bremsen.|Antes de la curva hay que frenar.
+die Medikamente|los medicamentos|Er muss drei Medikamente nehmen.|Tiene que tomar tres medicamentos.
+die Nachspeise|el postre|Als Nachspeise gibt es Eis.|De postre hay helado.
+die Öffnungszeiten|el horario de atención|Die Öffnungszeiten stehen an der Tür.|El horario de atención está en la puerta.
+die Packung|el paquete|Eine Packung Nudeln kostet einen Euro.|Un paquete de fideos cuesta un euro.
+die Pause|el descanso|Wir machen zehn Minuten Pause.|Hacemos diez minutos de descanso.
+die Rechnung|la factura|Die Rechnung kommt per Post.|La factura llega por correo.
+die Rezeption|la recepción|Fragen Sie bitte an der Rezeption.|Pregunte por favor en la recepción.
+die Rückfahrt|el viaje de vuelta|Die Rückfahrt dauert drei Stunden.|El viaje de vuelta dura tres horas.
+die Schmerzen|el dolor|Ich habe starke Schmerzen im Rücken.|Tengo fuertes dolores de espalda.
+die Sprechstunde|el horario de consulta|Die Sprechstunde ist von zehn bis zwölf.|El horario de consulta es de diez a doce.
+die Strecke|el trayecto|Die Strecke ist sehr lang.|El trayecto es muy largo.
+die Übung|el ejercicio|Die Übung ist schwer.|El ejercicio es difícil.
+die Vorwahl|el prefijo telefónico|Die Vorwahl von Wien ist 01.|El prefijo de Viena es 01.
+die Wanderung|la caminata|Die Wanderung dauert vier Stunden.|La caminata dura cuatro horas.
+die Wartezeit|el tiempo de espera|Die Wartezeit beträgt eine Stunde.|El tiempo de espera es de una hora.
+die Zutaten|los ingredientes|Alle Zutaten kosten zehn Euro.|Todos los ingredientes cuestan diez euros.
+der Abfall|la basura|Den Abfall trennen wir in drei Tonnen.|Separamos la basura en tres tachos.
+der Busfahrer|el chofer de colectivo|Der Busfahrer wartet auf uns.|El chofer nos espera.
+der Eintritt|la entrada (precio)|Der Eintritt für Kinder ist frei.|La entrada para chicos es gratis.
+der Fremdenführer|el guía turístico|Der Fremdenführer erklärt die Geschichte.|El guía explica la historia.
+der Geschmack|el sabor / el gusto|Der Kuchen hat einen guten Geschmack.|La torta tiene buen sabor.
+der Pass|el pasaporte|Mein Pass ist abgelaufen.|Mi pasaporte venció.
+der Plan|el plan|Hast du schon einen Plan?|¿Ya tenés un plan?
+der Prospekt|el folleto|Der Prospekt liegt an der Kasse.|El folleto está en la caja.
+der Reisende|el viajero|Alle Reisenden müssen aussteigen.|Todos los viajeros deben bajar.
+der Sänger|el cantante|Der Sänger ist sehr bekannt.|El cantante es muy conocido.
+der Sicherheitsgurt|el cinturón de seguridad|Schnall bitte den Sicherheitsgurt an.|Abrochate el cinturón de seguridad, por favor.
+der Stau|el embotellamiento|Auf der Autobahn gibt es einen Stau.|En la autopista hay un embotellamiento.
+der Stundenplan|el horario de clases|Mein Stundenplan ist voll.|Mi horario de clases está lleno.
+der Teilnehmer|el participante|Es gibt zwanzig Teilnehmer.|Hay veinte participantes.
+der Treffpunkt|el punto de encuentro|Der Treffpunkt ist vor dem Bahnhof.|El punto de encuentro es frente a la estación.
+der Umschlag|el sobre|Steck die Karte in den Umschlag.|Poné la tarjeta en el sobre.
+der Vortrag|la conferencia|Der Vortrag war sehr interessant.|La conferencia fue muy interesante.
+der Wegweiser|el cartel indicador|Der Wegweiser zeigt nach links.|El cartel indica a la izquierda.
+der Wohnort|el lugar de residencia|Bitte geben Sie Ihren Wohnort an.|Por favor, indique su lugar de residencia.
+der Zettel|el papelito|Ich schreibe es auf einen Zettel.|Lo anoto en un papelito.
+das Bargeld|el efectivo|Ich habe kein Bargeld dabei.|No tengo efectivo.
+das Dokument|el documento|Das Dokument liegt auf dem Tisch.|El documento está sobre la mesa.
+das Einkaufszentrum|el centro comercial|Das Einkaufszentrum ist sonntags geschlossen.|El centro comercial está cerrado los domingos.
+das Erlebnis|la vivencia|Die Reise war ein tolles Erlebnis.|El viaje fue una vivencia genial.
+das Gebäude|el edificio|Das Gebäude ist über hundert Jahre alt.|El edificio tiene más de cien años.
+das Getränk|la bebida|Welches Getränk möchten Sie?|¿Qué bebida desea?
+das Hotelzimmer|la habitación de hotel|Das Hotelzimmer hat einen Balkon.|La habitación de hotel tiene balcón.
+das Kopfweh|el dolor de cabeza|Ich habe seit gestern Kopfweh.|Tengo dolor de cabeza desde ayer.
+das Lokal|el local (bar, restaurante)|Das Lokal ist sehr gemütlich.|El local es muy acogedor.
+das Parkhaus|el estacionamiento cubierto|Das Parkhaus ist schon voll.|El estacionamiento ya está lleno.
+das Taxi|el taxi|Wir nehmen ein Taxi zum Flughafen.|Tomamos un taxi al aeropuerto.
+das Ufer|la orilla|Wir sitzen am Ufer des Sees.|Estamos sentados en la orilla del lago.
+das Zeichen|la señal / el signo|Das Zeichen bedeutet Gefahr.|La señal significa peligro.
+das Zuhause|el hogar|Ich vermisse mein Zuhause.|Extraño mi hogar.
+abschicken|enviar|Ich will den Brief heute abschicken.|Quiero enviar la carta hoy.
+anhalten|detenerse|Der Bus muss an der Ampel anhalten.|El colectivo tiene que detenerse en el semáforo.
+anklicken|hacer clic|Du musst den Link anklicken.|Tenés que hacer clic en el enlace.
+anschauen|mirar|Wir wollen uns den Film anschauen.|Queremos mirar la película.
+anschnallen|abrocharse el cinturón|Du musst dich anschnallen.|Tenés que abrocharte el cinturón.
+aufschreiben|anotar|Ich möchte die Adresse aufschreiben.|Quiero anotar la dirección.
+baden|bañarse|Im Sommer baden wir im See.|En verano nos bañamos en el lago.
+betreten|entrar a|Man darf den Rasen nicht betreten.|No se puede pisar el césped.
+binden|atar|Er muss sich die Schuhe binden.|Tiene que atarse los zapatos.
+blühen|florecer|Im Mai beginnen die Blumen zu blühen.|En mayo las flores empiezan a florecer.
+brechen|romper|Pass auf, sonst kann der Ast brechen.|Cuidado, o la rama se puede romper.
+brennen|arder|Das Holz will nicht brennen.|La leña no quiere arder.
+bürsten|cepillar|Du musst dir die Zähne bürsten.|Tenés que cepillarte los dientes.
+eingeben|ingresar (datos)|Sie müssen das Passwort eingeben.|Tiene que ingresar la contraseña.
+einkaufen|hacer las compras|Wir wollen am Samstag einkaufen.|Queremos hacer las compras el sábado.
+einpacken|empacar|Ich muss noch den Koffer einpacken.|Todavía tengo que armar la valija.
+einwerfen|echar|Du musst den Brief einwerfen.|Tenés que echar la carta en el buzón.
+empfehlen|recomendar|Ich kann dir dieses Lokal empfehlen.|Puedo recomendarte este local.
+filmen|filmar|Man darf hier nicht filmen.|Acá no se puede filmar.
+flüstern|susurrar|In der Bibliothek muss man flüstern.|En la biblioteca hay que susurrar.
+fotografieren|sacar fotos|Hier darf man nicht fotografieren.|Acá no se pueden sacar fotos.
+frieren|tener frío|Im Winter muss ich oft frieren.|En invierno suelo tener frío.
+funktionieren|funcionar|Der Drucker will nicht funktionieren.|La impresora no quiere funcionar.
+gähnen|bostezar|Er muss ständig gähnen.|No para de bostezar.
+hängen|colgar|Ich will das Bild an die Wand hängen.|Quiero colgar el cuadro en la pared.
+heben|levantar|Du darfst nichts Schweres heben.|No podés levantar nada pesado.
+heizen|calefaccionar|Im Winter müssen wir viel heizen.|En invierno tenemos que calefaccionar mucho.
+hinfallen|caerse|Pass auf, dass du nicht hinfallen kannst.|Cuidado, podés caerte.
+hoffen|esperar (tener esperanza)|Wir hoffen auf gutes Wetter.|Esperamos que haga buen tiempo.
+klopfen|golpear|Jemand wird an die Tür klopfen.|Alguien va a golpear la puerta.
+nachsehen|fijarse|Ich will kurz im Kalender nachsehen.|Quiero fijarme un momento en el calendario.
+reinigen|limpiar|Wir müssen die Wohnung reinigen.|Tenemos que limpiar el departamento.
+rutschen|resbalar|Auf dem Eis kann man rutschen.|En el hielo uno puede resbalar.
+schmecken|saber / gustar (comida)|Das Essen soll gut schmecken.|La comida tiene que saber bien.
+schwitzen|transpirar|Im Sommer muss man viel schwitzen.|En verano se transpira mucho.
+starten|arrancar / iniciar|Der Zug will gleich starten.|El tren está por arrancar.
+stecken|meter / estar metido|Ich will den Stecker in die Dose stecken.|Quiero meter el enchufe en el tomacorriente.
+testen|probar|Wir wollen das neue Programm testen.|Queremos probar el programa nuevo.
+treten|pisar|Du darfst nicht auf die Blumen treten.|No debés pisar las flores.
+verletzen|lastimar|Pass auf, dass du dich nicht verletzen kannst.|Cuidado, podés lastimarte.
+verpacken|empacar / envolver|Wir müssen das Geschenk verpacken.|Tenemos que envolver el regalo.
+verschlafen|quedarse dormido|Ich darf morgen nicht verschlafen.|Mañana no puedo quedarme dormido.
+verschwinden|desaparecer|Mein Schlüssel kann nicht verschwinden.|Mi llave no puede desaparecer.
+verteilen|repartir|Wir müssen die Aufgaben verteilen.|Tenemos que repartir las tareas.
+wehtun|doler|Mein Kopf kann wehtun.|Me puede doler la cabeza.
+wiegen|pesar|Der Koffer soll nicht mehr als zwanzig Kilo wiegen.|La valija no debe pesar más de veinte kilos.
+zahlen|pagar|Ich möchte bitte zahlen.|Quisiera pagar, por favor.
+zudecken|tapar|Du musst das Kind zudecken.|Tenés que tapar al chico.
+barfuß|descalzo|Im Sommer laufen wir barfuß.|En verano caminamos descalzos.
+berufstätig|que trabaja|Beide Eltern sind berufstätig.|Los dos padres trabajan.
+bewölkt|nublado|Der Himmel ist heute bewölkt.|El cielo está nublado hoy.
+erkältet|resfriado|Ich bin seit gestern erkältet.|Estoy resfriado desde ayer.
+fröhlich|alegre|Die Kinder sind fröhlich.|Los chicos están alegres.
+furchtbar|terrible|Das Wetter ist furchtbar.|El clima es terrible.
+glatt|resbaladizo / liso|Die Straße ist glatt.|La calle está resbaladiza.
+irgendwie|de algún modo|Irgendwie schaffen wir das.|De algún modo lo logramos.
+klar|claro|Das Wasser ist klar.|El agua es clara.
+knapp|justo / escaso|Die Zeit ist knapp.|El tiempo es escaso.
+komisch|raro / gracioso|Das ist ein komisches Geräusch.|Es un ruido raro.
+rutschig|resbaladizo|Der Boden ist rutschig.|El piso está resbaladizo.
+satt|lleno (de comer)|Ich bin schon satt.|Ya estoy lleno.
+schlank|delgado|Er ist groß und schlank.|Es alto y delgado.
+still|callado / quieto|Sei bitte still.|Quedate callado, por favor.
+unfreundlich|antipático|Der Kellner war unfreundlich.|El mozo fue antipático.
+dorthin|hacia allá|Wir fahren morgen dorthin.|Mañana vamos para allá.
+einmal|una vez|Ich war schon einmal dort.|Ya estuve una vez allí.
+gern|con gusto|Ich komme gern.|Vengo con gusto.
+meist|la mayoría de las veces|Am Wochenende schlafe ich meist lange.|El fin de semana la mayoría de las veces duermo mucho.
+sonst|si no / por lo demás|Beeil dich, sonst verpasst du den Zug.|Apurate, o perdés el tren.
+vorhin|hace un rato|Ich habe ihn vorhin gesehen.|Lo vi hace un rato.
 ## B1
 sich bewerben|postularse|Ich möchte mich um die Stelle bewerben.|Quiero postularme al puesto.
 vorbereiten|preparar|Wir müssen die Reise gut vorbereiten.|Tenemos que preparar bien el viaje.
@@ -1187,6 +1317,121 @@ sozusagen|por así decirlo|Das ist sozusagen mein zweites Zuhause.|Es, por así 
 spätestens|a más tardar|Ich rufe dich spätestens morgen an.|Te llamo mañana a más tardar.
 stets|siempre|Er ist stets freundlich.|Siempre es amable.
 weder|ni|Er hat weder Zeit noch Geld.|No tiene ni tiempo ni plata.
+die Absicherung|la protección / el seguro|Die Absicherung der Familie ist ihm wichtig.|Proteger a la familia le importa.
+die Anfrage|la consulta|Ich schicke Ihnen eine Anfrage per E-Mail.|Le mando una consulta por mail.
+die Ausrüstung|el equipo|Die Ausrüstung für die Wanderung ist teuer.|El equipo para la caminata es caro.
+die Berufsschule|la escuela de formación profesional|Er geht zweimal pro Woche in die Berufsschule.|Va dos veces por semana a la escuela profesional.
+die Bürgerinitiative|la iniciativa ciudadana|Eine Bürgerinitiative kämpft gegen den Lärm.|Una iniciativa ciudadana lucha contra el ruido.
+die Digitalisierung|la digitalización|Die Digitalisierung verändert die Arbeitswelt.|La digitalización cambia el mundo del trabajo.
+die Einreise|el ingreso al país|Für die Einreise brauchst du einen Pass.|Para ingresar al país necesitás un pasaporte.
+die Entsorgung|la eliminación de residuos|Die Entsorgung von Batterien ist geregelt.|La eliminación de pilas está regulada.
+die Ersatzteile|los repuestos|Ersatzteile sind schwer zu bekommen.|Los repuestos son difíciles de conseguir.
+die Frist|el plazo|Die Frist endet am Freitag.|El plazo termina el viernes.
+die Gebrauchsanweisung|el manual de uso|Lies bitte die Gebrauchsanweisung.|Leé por favor el manual de uso.
+die Gesundheitsvorsorge|la prevención de la salud|Gesundheitsvorsorge spart langfristig Kosten.|Prevenir la salud ahorra costos a largo plazo.
+die Informatik|la informática|Er studiert Informatik in Graz.|Estudia informática en Graz.
+die Kinderbetreuung|el cuidado de niños|Die Kinderbetreuung ist gut organisiert.|El cuidado de niños está bien organizado.
+die Laune|el humor|Er hat heute schlechte Laune.|Hoy está de mal humor.
+die Lücke|el hueco / la laguna|In meinem Wissen gibt es noch Lücken.|En mi conocimiento todavía hay lagunas.
+die Messe|la feria|Die Messe findet jedes Jahr statt.|La feria se hace todos los años.
+die Mischung|la mezcla|Das ist eine gute Mischung aus Sport und Kultur.|Es una buena mezcla de deporte y cultura.
+die Planung|la planificación|Die Planung der Reise dauert lange.|Planificar el viaje lleva mucho tiempo.
+die Reihe|la fila / la serie|Wir sitzen in der dritten Reihe.|Estamos sentados en la tercera fila.
+die Reinigung|la limpieza / la tintorería|Die Reinigung des Anzugs kostet zehn Euro.|La limpieza del traje cuesta diez euros.
+die Sammlung|la colección|Er hat eine große Sammlung alter Münzen.|Tiene una gran colección de monedas antiguas.
+die Sitzung|la reunión|Die Sitzung dauert zwei Stunden.|La reunión dura dos horas.
+die Störung|la falla / la perturbación|Es gibt eine Störung im Netz.|Hay una falla en la red.
+die Tagesordnung|el orden del día|Die Tagesordnung hat fünf Punkte.|El orden del día tiene cinco puntos.
+die Tätigkeit|la actividad|Seine Tätigkeit ist abwechslungsreich.|Su actividad es variada.
+die Umleitung|el desvío|Wegen der Baustelle gibt es eine Umleitung.|Por la obra hay un desvío.
+die Unterhaltung|la conversación / el entretenimiento|Die Unterhaltung war sehr interessant.|La conversación fue muy interesante.
+die Urkunde|el certificado|Er bekam eine Urkunde für den Sieg.|Recibió un certificado por la victoria.
+die Waage|la balanza|Die Waage zeigt zwei Kilo an.|La balanza marca dos kilos.
+die Wohnungssuche|la búsqueda de vivienda|Die Wohnungssuche ist in Berlin schwierig.|Buscar vivienda en Berlín es difícil.
+die Zulassung|la admisión / la habilitación|Er wartet auf die Zulassung zur Universität.|Espera la admisión a la universidad.
+der Absender|el remitente|Der Absender des Briefes ist unbekannt.|El remitente de la carta es desconocido.
+der Abstand|la distancia|Bitte halten Sie Abstand.|Por favor, mantenga la distancia.
+der Ärger|el enojo / el problema|Das gibt nur Ärger.|Eso solo trae problemas.
+der Dienst|el servicio / el turno|Heute Nacht habe ich Dienst.|Esta noche tengo turno.
+der Entschluss|la determinación|Sein Entschluss steht fest.|Su determinación es firme.
+der Gegner|el oponente|Unser Gegner spielt sehr stark.|Nuestro oponente juega muy fuerte.
+der Lehrling|el aprendiz|Der Lehrling lernt in der Werkstatt.|El aprendiz aprende en el taller.
+der Nutzer|el usuario|Jeder Nutzer braucht ein Passwort.|Cada usuario necesita una contraseña.
+der Ruhestand|la jubilación|Mein Vater geht bald in den Ruhestand.|Mi padre se jubila pronto.
+der Stoff|la tela / la materia|Der Stoff ist sehr weich.|La tela es muy suave.
+der Veranstalter|el organizador|Der Veranstalter sagt das Konzert ab.|El organizador cancela el concierto.
+der Verband|la asociación|Der Verband vertritt viele Firmen.|La asociación representa a muchas empresas.
+der Vertreter|el representante|Der Vertreter der Firma kommt morgen.|El representante de la empresa viene mañana.
+das Ehepaar|el matrimonio|Das Ehepaar wohnt im zweiten Stock.|El matrimonio vive en el segundo piso.
+das Gebiet|la zona / el área|Dieses Gebiet ist sehr ruhig.|Esta zona es muy tranquila.
+das Gelände|el terreno|Das Gelände gehört der Stadt.|El terreno es de la ciudad.
+das Kapitel|el capítulo|Das letzte Kapitel ist spannend.|El último capítulo es emocionante.
+das Lager|el depósito|Die Ware liegt im Lager.|La mercadería está en el depósito.
+das Material|el material|Das Material ist sehr stabil.|El material es muy resistente.
+das Netz|la red|Das Netz ist heute langsam.|La red está lenta hoy.
+das Personal|el personal|Das Personal ist freundlich.|El personal es amable.
+das Quartal|el trimestre|Im ersten Quartal sind die Zahlen gut.|En el primer trimestre las cifras son buenas.
+das System|el sistema|Das System ist sehr einfach.|El sistema es muy simple.
+das Tempo|el ritmo / la velocidad|Das Tempo ist mir zu schnell.|El ritmo es muy rápido para mí.
+anbauen|cultivar / ampliar|Die Bauern wollen mehr Gemüse anbauen.|Los campesinos quieren cultivar más verduras.
+antreten|iniciar / presentarse|Er will die Stelle im Mai antreten.|Quiere comenzar en el puesto en mayo.
+auslaufen|derramarse / vencer|Der Vertrag kann im Juni auslaufen.|El contrato puede vencer en junio.
+beladen|cargar|Wir müssen das Auto beladen.|Tenemos que cargar el auto.
+bemühen|esforzarse|Ich werde mich bemühen, pünktlich zu sein.|Voy a esforzarme por ser puntual.
+beneiden|envidiar|Ich beneide dich um deine Ruhe.|Te envidio por tu calma.
+drucken|imprimir|Ich muss das Formular drucken.|Tengo que imprimir el formulario.
+einbrechen|entrar a robar|Die Diebe wollen nachts einbrechen.|Los ladrones quieren entrar a robar de noche.
+einzahlen|depositar|Ich will Geld auf mein Konto einzahlen.|Quiero depositar plata en mi cuenta.
+entfallen|quedar sin efecto|Der Termin kann leider entfallen.|La cita lamentablemente puede quedar sin efecto.
+entnehmen|extraer / deducir|Dem Text lässt sich viel entnehmen.|Del texto se puede deducir mucho.
+erkälten|resfriarse|Ich will mich nicht erkälten.|No quiero resfriarme.
+gleichen|parecerse|Die Brüder gleichen sich sehr.|Los hermanos se parecen mucho.
+klagen|quejarse|Er klagt ständig über die Arbeit.|Se queja constantemente del trabajo.
+leiden|sufrir|Sie leidet an Rückenschmerzen.|Sufre de dolores de espalda.
+loswerden|deshacerse de|Ich will die alten Möbel loswerden.|Quiero deshacerme de los muebles viejos.
+mahnen|reclamar / advertir|Die Firma wird mich mahnen.|La empresa me va a reclamar el pago.
+nützen|servir / ser útil|Das kann uns nützen.|Eso nos puede servir.
+recherchieren|investigar|Ich muss im Internet recherchieren.|Tengo que investigar en internet.
+retten|salvar|Der Arzt konnte ihn retten.|El médico pudo salvarlo.
+schalten|cambiar (marcha, canal)|Du musst in den zweiten Gang schalten.|Tenés que cambiar a segunda.
+schimpfen|retar / protestar|Er wird mit mir schimpfen.|Me va a retar.
+siegen|vencer|Unsere Mannschaft will siegen.|Nuestro equipo quiere ganar.
+spüren|sentir / notar|Ich kann den Unterschied spüren.|Puedo notar la diferencia.
+stempeln|sellar|Sie müssen die Fahrkarte stempeln.|Tiene que sellar el pasaje.
+stoßen|empujar / chocar|Pass auf, dass du nicht an den Tisch stoßen musst.|Cuidado, no vayas a chocar con la mesa.
+täuschen|engañar|Der Eindruck kann täuschen.|La impresión puede engañar.
+trösten|consolar|Ich will ihn trösten.|Quiero consolarlo.
+verbrauchen|consumir|Das Auto soll weniger Benzin verbrauchen.|El auto debería consumir menos nafta.
+verdächtigen|sospechar de|Man will ihn nicht verdächtigen.|No se quiere sospechar de él.
+vererben|dejar en herencia|Sie will das Haus ihrer Tochter vererben.|Quiere dejarle la casa en herencia a su hija.
+verstauchen|torcerse|Er hat sich den Fuß verstaucht.|Se torció el pie.
+verwechseln|confundir|Man kann die beiden leicht verwechseln.|Se puede confundir fácilmente a los dos.
+zerstören|destruir|Der Sturm kann das Dach zerstören.|La tormenta puede destruir el techo.
+zurückkehren|regresar|Wir wollen im Mai zurückkehren.|Queremos regresar en mayo.
+zusagen|aceptar (una invitación)|Ich möchte für den Termin zusagen.|Quiero confirmar mi asistencia a la cita.
+albern|tonto|Das Kind ist heute sehr albern.|El chico está muy tonto hoy.
+blass|pálido|Du siehst heute sehr blass aus.|Hoy te ves muy pálido.
+blind|ciego|Er ist auf einem Auge blind.|Es ciego de un ojo.
+dicht|denso / hermético|Der Nebel ist sehr dicht.|La niebla es muy densa.
+feucht|húmedo|Die Wäsche ist noch feucht.|La ropa todavía está húmeda.
+gefroren|congelado|Der See ist gefroren.|El lago está congelado.
+grob|grosero / tosco|Er war sehr grob zu mir.|Fue muy grosero conmigo.
+harmlos|inofensivo|Der Hund ist harmlos.|El perro es inofensivo.
+herrlich|magnífico|Das Wetter ist herrlich.|El clima es magnífico.
+kräftig|fuerte|Er hat kräftige Arme.|Tiene brazos fuertes.
+mager|flaco / magro|Das Fleisch ist sehr mager.|La carne es muy magra.
+mild|templado / suave|Der Winter ist hier mild.|El invierno acá es templado.
+spitz|puntiagudo|Das Messer ist sehr spitz.|El cuchillo es muy puntiagudo.
+tot|muerto|Die Pflanze ist tot.|La planta está muerta.
+verschmutzt|contaminado|Das Wasser ist stark verschmutzt.|El agua está muy contaminada.
+wild|salvaje|Im Wald leben wilde Tiere.|En el bosque viven animales salvajes.
+eben|justamente / recién|Er ist eben angekommen.|Acaba de llegar.
+ewig|eterno|Das dauert ja ewig.|Esto dura una eternidad.
+heutzutage|hoy en día|Heutzutage haben fast alle ein Handy.|Hoy en día casi todos tienen celular.
+hinterher|después|Hinterher waren wir alle müde.|Después estábamos todos cansados.
+momentan|por el momento|Momentan habe ich keine Zeit.|Por el momento no tengo tiempo.
+seitdem|desde entonces|Seitdem habe ich ihn nicht gesehen.|Desde entonces no lo vi.
+zurzeit|actualmente|Zurzeit arbeitet er in Wien.|Actualmente trabaja en Viena.
 ## B2
 abwägen|sopesar|Wir müssen Vor- und Nachteile abwägen.|Tenemos que sopesar ventajas y desventajas.
 abschaffen|abolir|Die Stadt will die Gebühr abschaffen.|La ciudad quiere abolir la tasa.
