@@ -555,3 +555,16 @@ export function recordAi(usage: { input: number; output: number; model: string }
     return p;
   });
 }
+
+/** Marca como hechas (1 estrella, sin XP ni gemas) todas las lecciones anteriores a `key`: para empezar más adelante tras el test de nivel. */
+export function skipBefore(key: string): number {
+  const i = LESSON_ORDER.indexOf(key);
+  let n = 0;
+  update((p) => {
+    for (const k of LESSON_ORDER.slice(0, Math.max(i, 0))) {
+      if (!p.lessons[k]) { p.lessons[k] = { stars: 1, bestAccuracy: 0, completedAt: new Date().toISOString() }; n++; }
+    }
+    return p;
+  });
+  return n;
+}

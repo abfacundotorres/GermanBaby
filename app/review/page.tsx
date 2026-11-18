@@ -27,6 +27,10 @@ export default function ReviewPage() {
         ) : (
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
+        <Link href="/nivel" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>🎯 Test de nivel</b>
+          <span className="muted small">Hasta 32 preguntas de A1 a B2 para ver por dónde conviene empezar.</span>
+        </Link>
         <Link href="/exam" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📝 Simulacros de examen</b>
           <span className="muted small">Lectura, escucha y escritura con el formato de un examen de A2, B1 o B2, para ver dónde estás.</span>

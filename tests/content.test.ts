@@ -286,3 +286,12 @@ test("simulacros: textos, audios y preguntas bien formados, con respuestas dentr
     assert.ok(e.schreiben.minSentences >= 5 && e.schreiben.focus.length >= 3);
   }
 });
+
+test("test de nivel: 8 preguntas por nivel, opciones únicas y resultado coherente", async () => {
+  const { PLACEMENT, placementResult } = await import("../lib/content/placement.ts");
+  for (const lv of ["A1", "A2", "B1", "B2"]) assert.equal(PLACEMENT.filter((x) => x.level === lv).length, 8, lv);
+  for (const x of PLACEMENT) assert.ok(x.options.length === 4 && new Set(x.options).size === 4, x.q);
+  assert.equal(placementResult({ A1: 3 }).level, "A1");
+  assert.deepEqual(placementResult({ A1: 8, A2: 6, B1: 2 }), { level: "A2", partial: true });
+  assert.deepEqual(placementResult({ A1: 8, A2: 8, B1: 8, B2: 7 }), { level: "B2", partial: false });
+});
