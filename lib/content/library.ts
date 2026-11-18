@@ -213,4 +213,156 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "praktikum-hamburg", level: "B1", emoji: "⚓", topic: "Una pasantía en Hamburgo",
+    reading: {
+      title: "Ein Praktikum in Hamburg",
+      text: [
+        "Letztes Jahr habe ich drei Monate lang ein Praktikum in Hamburg gemacht. Ich habe in einer kleinen Firma gearbeitet, die Software für Reedereien entwickelt. Am Anfang war alles neu für mich: die Sprache, die Kollegen und auch das Wetter. Es hat fast jeden Tag geregnet.",
+        "Meine Aufgabe war es, Fehler in einem Programm zu suchen und die Ergebnisse aufzuschreiben. Zuerst habe ich nicht alles verstanden, weil meine Kollegen sehr schnell gesprochen haben. Aber sie waren geduldig und haben mir viel erklärt. Nach vier Wochen konnte ich schon allein arbeiten.",
+        "Nach der Arbeit bin ich oft an den Hafen gegangen. Dort habe ich die großen Schiffe beobachtet und Fischbrötchen gegessen. Am Wochenende habe ich mit zwei Kolleginnen eine Radtour gemacht. Ich habe in dieser Zeit nicht nur viel über den Beruf gelernt, sondern auch mein Deutsch deutlich verbessert.",
+      ],
+      translation: [
+        "El año pasado hice una pasantía de tres meses en Hamburgo. Trabajé en una empresa chica que desarrolla software para navieras. Al principio todo era nuevo para mí: el idioma, los colegas y también el clima. Llovió casi todos los días.",
+        "Mi tarea era buscar errores en un programa y anotar los resultados. Al principio no entendí todo, porque mis colegas hablaban muy rápido. Pero fueron pacientes y me explicaron mucho. Después de cuatro semanas ya podía trabajar solo.",
+        "Después del trabajo iba seguido al puerto. Ahí miraba los barcos grandes y comía sándwiches de pescado. El fin de semana hice un paseo en bicicleta con dos colegas. En ese tiempo no solo aprendí mucho sobre la profesión, sino que también mejoré bastante mi alemán.",
+      ],
+      questions: [
+        fi("¿Cuántos meses duró la pasantía?", ["3", "drei"], "«drei Monate lang»."),
+        c("¿Qué hacía la empresa?", ["Software para navieras", "Barcos", "Pescado", "Bicicletas"], "«Software für Reedereien»."),
+        c("¿Por qué no entendía todo al principio?", ["Los colegas hablaban muy rápido", "Era muy difícil el programa", "No tenía tiempo", "Había mucho ruido"], "«sehr schnell gesprochen»."),
+        fi("¿Después de cuántas semanas pudo trabajar solo?", ["4", "vier"], "«Nach vier Wochen»."),
+        tf("Hizo el paseo en bicicleta solo.", false, "Fue «mit zwei Kolleginnen»."),
+        c("¿Qué mejoró además de aprender sobre la profesión?", ["Su alemán", "Su inglés", "Su salud", "Su sueldo"], "«mein Deutsch deutlich verbessert»."),
+      ],
+    },
+  },
+  {
+    id: "schulsystem", level: "B1", emoji: "🎒", topic: "La escuela en Alemania",
+    reading: {
+      title: "Das deutsche Schulsystem",
+      text: [
+        "In Deutschland gehen alle Kinder mit sechs Jahren in die Grundschule. Sie dauert in den meisten Bundesländern vier Jahre. Danach müssen die Eltern und die Lehrer entscheiden, welche weiterführende Schule am besten zu dem Kind passt.",
+        "Es gibt drei klassische Schultypen: die Hauptschule, die Realschule und das Gymnasium. Nur wer das Gymnasium besucht und das Abitur besteht, kann direkt an einer Universität studieren. Viele Kritiker finden es problematisch, dass die Entscheidung schon so früh fällt.",
+        "Deshalb haben einige Länder eine Gesamtschule eingeführt. Dort lernen die Kinder länger zusammen, und der Abschluss wird später gewählt. Außerdem ist die Ausbildung in Deutschland sehr angesehen: Viele Jugendliche machen nach der Schule eine Lehre im Betrieb und gehen gleichzeitig in die Berufsschule.",
+      ],
+      translation: [
+        "En Alemania todos los chicos van a la escuela primaria a los seis años. En la mayoría de los estados dura cuatro años. Después, los padres y los docentes deben decidir qué escuela secundaria es la más adecuada para el chico.",
+        "Hay tres tipos clásicos de escuela: la Hauptschule, la Realschule y el Gymnasium. Solo quien asiste al Gymnasium y aprueba el Abitur puede estudiar directamente en una universidad. Muchos críticos consideran problemático que la decisión se tome tan temprano.",
+        "Por eso algunos estados introdujeron la escuela integrada. Allí los chicos aprenden juntos por más tiempo y el título se elige más tarde. Además, la formación profesional es muy prestigiosa en Alemania: muchos jóvenes hacen después de la escuela un aprendizaje en una empresa y van al mismo tiempo a la escuela profesional.",
+      ],
+      questions: [
+        fi("¿A qué edad empiezan la primaria?", ["6", "sechs"], "«mit sechs Jahren»."),
+        fi("¿Cuántos años dura la primaria en la mayoría de los estados?", ["4", "vier"], "«vier Jahre»."),
+        c("¿Quién puede estudiar directamente en la universidad?", ["Quien aprueba el Abitur en el Gymnasium", "Cualquier egresado", "Quien termina la Hauptschule", "Solo quien hizo una Lehre"], "«Gymnasium ... Abitur»."),
+        c("¿Qué critican muchos?", ["Que la decisión se tome tan temprano", "Que la escuela es cara", "Que hay pocos docentes", "Que el Abitur es fácil"], "«so früh fällt»."),
+        tf("En la escuela integrada se decide el título más tarde.", true, "«der Abschluss wird später gewählt»."),
+        tf("La formación profesional casi no se valora.", false, "«sehr angesehen»."),
+      ],
+    },
+  },
+  {
+    id: "fachkraefte", level: "B2", emoji: "🛠️", topic: "La falta de personal calificado",
+    reading: {
+      title: "Wer baut unsere Zukunft?",
+      text: [
+        "In vielen Branchen klagen Unternehmen seit Jahren über einen Mangel an Fachkräften. Ob Pflege, Handwerk oder Informatik: Offene Stellen bleiben monatelang unbesetzt, und ganze Projekte verzögern sich. Besonders betroffen sind kleine Betriebe auf dem Land, die mit den Gehältern und dem Angebot der Großstädte nicht mithalten können.",
+        "Die Ursachen sind vielfältig. Einerseits geht die geburtenstarke Generation in den nächsten Jahren in Rente, andererseits entscheiden sich immer mehr junge Menschen für ein Studium statt für eine Ausbildung. Hinzu kommt, dass sich die Anforderungen durch die Digitalisierung rasch verändern und viele Beschäftigte ständig weiterlernen müssen.",
+        "Die Politik versucht gegenzusteuern. Sie hat die Anerkennung ausländischer Abschlüsse vereinfacht und wirbt gezielt um Einwanderer. Kritiker bemängeln jedoch, dass die Verfahren weiterhin zu lange dauern und viele Qualifizierte frustriert wieder abreisen. Ohne bessere Arbeitsbedingungen, so ihr Argument, werde sich das Problem nicht lösen.",
+        "Einige Unternehmen gehen eigene Wege: Sie bieten flexible Arbeitszeiten, bezahlen Weiterbildungen und kümmern sich sogar um Wohnungen für neue Mitarbeiter. Ob solche Maßnahmen ausreichen, bleibt umstritten. Fest steht jedoch, dass der Wettbewerb um qualifizierte Beschäftigte in den kommenden Jahren eher zunehmen als nachlassen wird.",
+      ],
+      translation: [
+        "En muchas ramas, las empresas se quejan desde hace años de la falta de personal calificado. Sea enfermería, oficios o informática: los puestos vacantes quedan sin cubrir durante meses y proyectos enteros se retrasan. Los más afectados son los negocios chicos del campo, que no pueden competir con los sueldos y la oferta de las grandes ciudades.",
+        "Las causas son variadas. Por un lado, la generación del baby boom se jubilará en los próximos años; por otro, cada vez más jóvenes eligen una carrera universitaria en vez de una formación profesional. A eso se suma que los requisitos cambian rápido por la digitalización y que muchos empleados tienen que seguir aprendiendo constantemente.",
+        "La política intenta contrarrestarlo. Simplificó el reconocimiento de títulos extranjeros y busca atraer inmigrantes de forma dirigida. Los críticos objetan, sin embargo, que los trámites siguen durando demasiado y que muchos calificados se van frustrados. Sin mejores condiciones laborales, sostienen, el problema no se resolverá.",
+        "Algunas empresas siguen su propio camino: ofrecen horarios flexibles, pagan capacitaciones e incluso se ocupan de conseguir viviendas para los nuevos empleados. Si esas medidas alcanzan, es motivo de controversia. Lo que sí es seguro es que la competencia por empleados calificados más bien aumentará que disminuirá en los próximos años.",
+      ],
+      questions: [
+        c("¿Quiénes sufren más la falta de personal?", ["Los negocios chicos del campo", "Las grandes empresas", "Los bancos", "Las escuelas"], "«kleine Betriebe auf dem Land»."),
+        c("¿Qué elige cada vez más gente joven?", ["Una carrera universitaria", "Una formación profesional", "Trabajar en el exterior", "Un negocio propio"], "«Studium statt Ausbildung»."),
+        tf("La digitalización hace que los requisitos casi no cambien.", false, "«verändern sich rasch»."),
+        c("¿Qué critican algunos de los trámites?", ["Que duran demasiado", "Que son caros", "Que son demasiado simples", "Que se hacen solo en línea"], "«zu lange dauern»."),
+        c("¿Qué ofrecen algunas empresas?", ["Horarios flexibles y capacitaciones pagas", "Autos de la empresa", "Más vacaciones", "Acciones"], "«flexible Arbeitszeiten ... Weiterbildungen»."),
+        tf("Se espera que la competencia por calificados disminuya.", false, "«eher zunehmen als nachlassen»."),
+      ],
+    },
+  },
+  {
+    id: "ki-alltag", level: "B2", emoji: "🤖", topic: "Inteligencia artificial en la vida diaria",
+    reading: {
+      title: "Künstliche Intelligenz im Alltag",
+      text: [
+        "Vor wenigen Jahren klang künstliche Intelligenz noch nach Science-Fiction, heute begegnet sie uns fast überall. Sie schlägt uns Filme vor, übersetzt Texte, sortiert unsere E-Mails und hilft Ärzten dabei, Krankheiten auf Röntgenbildern früher zu erkennen. Viele Menschen nutzen diese Technik, ohne es überhaupt zu bemerken.",
+        "Befürworter betonen vor allem die Zeitersparnis. Routineaufgaben, für die man früher Stunden brauchte, erledigt ein Programm in Sekunden. Das könne Beschäftigte entlasten und Raum für kreative Tätigkeiten schaffen. Außerdem eröffne die Technik Menschen mit Behinderungen neue Möglichkeiten, etwa durch automatische Untertitel oder Vorlesefunktionen.",
+        "Skeptiker warnen dagegen vor mehreren Risiken. Erstens sind die Ergebnisse nicht immer zuverlässig: Programme erfinden gelegentlich Fakten, die überzeugend klingen. Zweitens lernen sie aus Daten, die Vorurteile enthalten können, und geben diese weiter. Drittens bleibt unklar, wer haftet, wenn eine automatische Entscheidung einen Schaden verursacht.",
+        "Experten raten deshalb zu einem bewussten Umgang. Man sollte Ergebnisse stets überprüfen, keine sensiblen Daten preisgeben und wichtige Entscheidungen nicht allein einer Maschine überlassen. Der Gesetzgeber arbeitet bereits an Regeln, die Transparenz und Verantwortung sicherstellen sollen. Ob sie mit dem Tempo der Entwicklung Schritt halten können, ist allerdings offen.",
+      ],
+      translation: [
+        "Hace pocos años, la inteligencia artificial sonaba todavía a ciencia ficción; hoy nos la cruzamos casi en todas partes. Nos sugiere películas, traduce textos, ordena nuestros correos y ayuda a los médicos a detectar enfermedades antes en las radiografías. Mucha gente usa esta tecnología sin siquiera notarlo.",
+        "Los defensores destacan sobre todo el ahorro de tiempo. Tareas de rutina que antes llevaban horas las resuelve un programa en segundos. Eso podría aliviar a los empleados y dejar lugar para actividades creativas. Además, la tecnología abriría nuevas posibilidades a personas con discapacidad, por ejemplo con subtítulos automáticos o funciones de lectura en voz alta.",
+        "Los escépticos, en cambio, advierten de varios riesgos. Primero, los resultados no siempre son confiables: los programas a veces inventan datos que suenan convincentes. Segundo, aprenden de datos que pueden contener prejuicios y los reproducen. Tercero, no queda claro quién responde cuando una decisión automática causa un daño.",
+        "Por eso los expertos aconsejan un uso consciente. Habría que verificar siempre los resultados, no revelar datos sensibles y no dejar las decisiones importantes solo en manos de una máquina. El legislador ya trabaja en reglas que deberían garantizar transparencia y responsabilidad. Si podrán seguir el ritmo del desarrollo, sin embargo, está abierto.",
+      ],
+      questions: [
+        c("¿Cómo ayuda la IA a los médicos?", ["Detecta enfermedades antes en radiografías", "Opera a los pacientes", "Escribe recetas", "Agenda los turnos"], "«auf Röntgenbildern früher zu erkennen»."),
+        c("¿Qué destacan los defensores?", ["El ahorro de tiempo", "El bajo costo", "La seguridad total", "La privacidad"], "«Zeitersparnis»."),
+        tf("Los programas siempre dan resultados confiables.", false, "«nicht immer zuverlässig»."),
+        c("¿Qué problema tiene aprender de datos con prejuicios?", ["Los programas pueden reproducirlos", "Los programas se vuelven lentos", "Los datos desaparecen", "Se necesitan más datos"], "«geben diese weiter»."),
+        tf("Los expertos recomiendan dejar las decisiones importantes a la máquina.", false, "«nicht allein einer Maschine überlassen»."),
+        c("¿Qué está todavía abierto?", ["Si las reglas seguirán el ritmo de la tecnología", "Si habrá leyes", "Si la IA existirá", "Si los médicos la usan"], "«ob sie mit dem Tempo ... Schritt halten können»."),
+      ],
+    },
+  },
+  {
+    id: "mieten-stadt", level: "B2", emoji: "🏙️", topic: "Alquilar en la gran ciudad",
+    reading: {
+      title: "Wohnen in der Großstadt",
+      text: [
+        "In Städten wie München, Hamburg oder Berlin ist es für viele Menschen zu einer Herausforderung geworden, eine bezahlbare Wohnung zu finden. Die Mieten sind in den letzten zehn Jahren deutlich gestiegen, während die Einkommen kaum mithalten konnten. Zu Besichtigungsterminen kommen oft Dutzende Interessenten, und wer nicht sofort alle Unterlagen vorlegt, hat kaum eine Chance.",
+        "Die Politik hat darauf mit verschiedenen Maßnahmen reagiert. In einigen Städten gilt eine Mietpreisbremse, die den Anstieg bei neuen Verträgen begrenzen soll. Kritiker bezweifeln allerdings ihre Wirkung, weil es zahlreiche Ausnahmen gibt und Verstöße selten verfolgt werden. Zudem argumentieren sie, dass Vermieter weniger investieren, wenn die Erträge sinken.",
+        "Eine andere Lösung wäre, mehr Wohnungen zu bauen. Doch Bauland ist knapp, Genehmigungen dauern lang, und die Baukosten sind stark gestiegen. Deshalb weichen viele Familien ins Umland aus und nehmen lange Pendelzeiten in Kauf. Das entlastet zwar den Wohnungsmarkt in der Stadt, belastet aber Verkehr und Umwelt.",
+        "Manche Menschen suchen alternative Wege, etwa Wohngemeinschaften im Alter oder Genossenschaften, in denen die Bewohner gemeinsam Eigentümer sind. Solche Modelle bieten oft günstigere Mieten und mehr Gemeinschaft. Sie sind allerdings noch die Ausnahme, und es braucht Zeit und Engagement, um sie umzusetzen.",
+      ],
+      translation: [
+        "En ciudades como Múnich, Hamburgo o Berlín, encontrar un departamento accesible se volvió un desafío para mucha gente. Los alquileres subieron claramente en los últimos diez años, mientras que los ingresos apenas pudieron seguirles el ritmo. A las visitas suelen llegar decenas de interesados, y quien no presenta enseguida todos los documentos casi no tiene chances.",
+        "La política respondió con distintas medidas. En algunas ciudades rige un freno a los alquileres, que debería limitar el aumento en los contratos nuevos. Los críticos dudan, sin embargo, de su efecto, porque hay numerosas excepciones y las infracciones rara vez se persiguen. Además, argumentan que los propietarios invierten menos cuando las ganancias bajan.",
+        "Otra solución sería construir más viviendas. Pero el suelo edificable es escaso, los permisos tardan y los costos de construcción subieron mucho. Por eso muchas familias se mudan a las afueras y aceptan largos tiempos de viaje. Eso alivia el mercado de la ciudad, pero carga el tránsito y el medio ambiente.",
+        "Algunas personas buscan caminos alternativos, como las viviendas compartidas en la vejez o las cooperativas, donde los habitantes son propietarios en conjunto. Estos modelos suelen ofrecer alquileres más baratos y más comunidad. Sin embargo, siguen siendo la excepción, y hace falta tiempo y compromiso para llevarlos a cabo.",
+      ],
+      questions: [
+        fi("¿En cuántos años subieron claramente los alquileres?", ["10", "zehn"], "«in den letzten zehn Jahren»."),
+        c("¿Qué hace falta para tener chances en una visita?", ["Presentar enseguida todos los documentos", "Llegar tarde", "Ofrecer más dinero", "Venir con un abogado"], "«sofort alle Unterlagen vorlegt»."),
+        c("¿Por qué dudan los críticos de la Mietpreisbremse?", ["Hay muchas excepciones y se persiguen poco las infracciones", "Es demasiado cara", "Es ilegal", "Solo rige en el campo"], "«zahlreiche Ausnahmen ... Verstöße selten verfolgt»."),
+        c("¿Qué problema tiene construir más?", ["El suelo es escaso y los permisos tardan", "Falta gente que quiera vivir", "Los alquileres bajan", "Las ciudades son chicas"], "«Bauland ist knapp, Genehmigungen dauern lang»."),
+        tf("Mudarse a las afueras alivia también el tránsito.", false, "«belastet aber Verkehr und Umwelt»."),
+        tf("Las cooperativas son hoy el modelo más común.", false, "«noch die Ausnahme»."),
+      ],
+    },
+  },
+  {
+    id: "nachhaltig-konsum", level: "B2", emoji: "🌱", topic: "Consumo sostenible",
+    reading: {
+      title: "Weniger ist mehr?",
+      text: [
+        "Immer mehr Menschen fragen sich, wie sie ihren Alltag nachhaltiger gestalten können. Sie kaufen regionale Lebensmittel, fahren Rad statt Auto oder reparieren defekte Geräte, statt sie wegzuwerfen. Dahinter steht die Einsicht, dass unsere Ressourcen begrenzt sind und der Klimawandel schon heute spürbar ist.",
+        "Allerdings ist nachhaltiger Konsum nicht immer einfach. Oft sind umweltfreundliche Produkte teurer, und nicht jeder kann sich das leisten. Hinzu kommt, dass Siegel und Werbeversprechen schwer zu durchschauen sind: Manche Firmen stellen ihre Produkte als grün dar, obwohl sich an der Herstellung kaum etwas geändert hat. Fachleute sprechen in diesem Fall von Greenwashing.",
+        "Umstritten ist auch, wie viel der Einzelne wirklich bewirken kann. Während manche betonen, dass viele kleine Entscheidungen zusammen einen großen Unterschied machen, halten andere dagegen, dass vor allem Industrie und Politik handeln müssten. Der private Verzicht lenke leicht davon ab, dass strukturelle Veränderungen notwendig seien.",
+        "Vermutlich liegt die Wahrheit in der Mitte. Wer bewusst einkauft, setzt ein Zeichen und beeinflusst langfristig das Angebot. Zugleich braucht es klare Regeln, die umweltschädliches Verhalten teurer und nachhaltiges Verhalten leichter machen. Nur im Zusammenspiel beider Ebenen lässt sich ein spürbarer Fortschritt erreichen.",
+      ],
+      translation: [
+        "Cada vez más gente se pregunta cómo puede hacer su vida diaria más sostenible. Compran alimentos regionales, andan en bicicleta en vez de auto o reparan aparatos rotos en lugar de tirarlos. Detrás está la idea de que nuestros recursos son limitados y de que el cambio climático ya se nota hoy.",
+        "Sin embargo, el consumo sostenible no siempre es fácil. Muchas veces los productos ecológicos son más caros y no todos pueden pagarlos. A eso se suma que los sellos y las promesas publicitarias son difíciles de descifrar: algunas empresas presentan sus productos como verdes, aunque en la fabricación casi no cambió nada. Los expertos hablan en ese caso de greenwashing.",
+        "También es controvertido cuánto puede lograr realmente cada persona. Mientras algunos subrayan que muchas pequeñas decisiones juntas marcan una gran diferencia, otros replican que sobre todo la industria y la política deberían actuar. La renuncia privada distraería fácilmente del hecho de que son necesarios cambios estructurales.",
+        "Probablemente la verdad esté en el medio. Quien compra con conciencia da una señal e influye a largo plazo en la oferta. Al mismo tiempo, hacen falta reglas claras que encarezcan el comportamiento dañino para el ambiente y faciliten el sostenible. Solo con la combinación de ambos niveles se puede lograr un progreso notable.",
+      ],
+      questions: [
+        c("¿Qué hacen algunos en vez de tirar aparatos rotos?", ["Los reparan", "Los venden", "Los regalan", "Los guardan"], "«reparieren defekte Geräte»."),
+        c("¿Qué dificulta el consumo sostenible?", ["Los productos ecológicos suelen ser más caros", "Hay pocas tiendas", "Está prohibido", "Nadie lo quiere"], "«oft ... teurer»."),
+        c("¿Qué es el greenwashing?", ["Presentar como verde un producto que casi no cambió", "Lavar con productos ecológicos", "Reciclar plástico", "Plantar árboles"], "«als grün dar, obwohl ... kaum etwas geändert»."),
+        c("¿Qué dicen quienes opinan que debe actuar la industria?", ["Que el sacrificio privado distrae de los cambios estructurales", "Que nadie debe comprar nada", "Que el clima no cambia", "Que las reglas sobran"], "«lenke davon ab»."),
+        tf("El texto sostiene que solo importa lo que decide cada persona.", false, "Pide actuar en ambos niveles."),
+        tf("Según el texto, se necesitan reglas más claras.", true, "«braucht es klare Regeln»."),
+      ],
+    },
+  },
 ];
