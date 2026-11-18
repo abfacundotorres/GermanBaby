@@ -302,3 +302,10 @@ test("escritura con rúbrica: consignas bien formadas y todos los niveles cubier
   for (const lv of ["A1", "A2", "B1", "B2"]) assert.ok(WRITING.filter((t) => t.level === lv).length >= 3, lv);
   for (const t of WRITING) assert.ok(t.points.length >= 3 && t.minWords < t.maxWords && t.prompt.length > 40, t.id);
 });
+
+test("expresión oral: consignas bien formadas y todos los niveles cubiertos", async () => {
+  const { SPEAKING } = await import("../lib/content/speaking.ts");
+  assert.equal(new Set(SPEAKING.map((t) => t.id)).size, SPEAKING.length);
+  for (const lv of ["A1", "A2", "B1", "B2"]) assert.ok(SPEAKING.filter((t) => t.level === lv).length >= 2, lv);
+  for (const t of SPEAKING) assert.ok(t.points.length >= 2 && t.minSeconds < t.maxSeconds && t.prompt.length > 40, t.id);
+});

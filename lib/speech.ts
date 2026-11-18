@@ -501,3 +501,108 @@ export async function diagnoseMic(report: (steps: DiagStep[]) => void): Promise<
     stopMic(stream);
   }
 }
+
+// ---------------- Expresión oral: monólogo libre ----------------
+
+export type SpeechResult = {
+  transcript: string;
+  seconds: number; // duración de la grabación
+  wordsPerMinute: number;
+  accuracy: number;
+  fluency: number;
+  pronScore: number;
+  words: WordScore[];
+  endReason: CaptureEnd;
+};
+
+/**
+ * Graba un monólogo (hasta `maxSeconds`) con reconocimiento continuo y evaluación de pronunciación sin guion.
+ * Se corta con el botón «listo», con un silencio largo o al llegar al tope.
+ */
+export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}): Promise<SpeechResult> {
+  const cfgPromise = speechConfig();
+  cfgPromise.catch(() => {});
+  const stream = await getMic();
+  let secondsSent = 0;
+  let sent = false;
+  try {
+    const { sdk, cfg } = await cfgPromise;
+    sent = true;
+    const push = sdk.AudioInputStream.createPushStream(sdk.AudioStreamFormat.getWaveFormatPCM(16000, 16, 1));
+    const recognizer = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(push));
+    setupAssessment(sdk, recognizer, "");
+
+    const parts: string[] = [];
+    const words: WordScore[] = [];
+    let accSum = 0, fluSum = 0, pronSum = 0, n = 0;
+    recognizer.recognized = (_s, e) => {
+      if (e.result.reason !== sdk.ResultReason.RecognizedSpeech || !e.result.text) return;
+      try {
+        const json = JSON.parse(e.result.properties.getProperty(sdk.PropertyId.SpeechServiceResponse_JsonResult));
+        const best = json?.NBest?.[0] ?? {};
+        const pa = best.PronunciationAssessment ?? {};
+        const ws = ((best.Words ?? []) as RawWord[]).map((w): WordScore => ({
+          word: w.Word,
+          score: w.PronunciationAssessment?.AccuracyScore ?? 0,
+          errorType: w.PronunciationAssessment?.ErrorType ?? "None",
+          phonemes: (w.Phonemes ?? []).map((ph) => ({ phoneme: ph.Phoneme ?? "?", score: ph.PronunciationAssessment?.AccuracyScore ?? 0 })),
+        }));
+        const k = Math.max(ws.length, 1);
+        accSum += (pa.AccuracyScore ?? 0) * k; fluSum += (pa.FluencyScore ?? 0) * k; pronSum += (pa.PronScore ?? 0) * k; n += k;
+        words.push(...ws);
+      } catch { /* el texto igual cuenta */ }
+      parts.push(e.result.text);
+    };
+
+    const done = new Promise<void>((resolve, reject) => {
+      recognizer.sessionStopped = () => resolve();
+      recognizer.canceled = (_s, e) => (e.reason === sdk.CancellationReason.Error ? reject(new Error(e.errorDetails || "El reconocimiento falló.")) : resolve());
+    });
+    done.catch(() => {});
+    await new Promise<void>((res, rej) => recognizer.startContinuousRecognitionAsync(res, (e) => rej(new Error(e))));
+
+    let endReason: CaptureEnd = "manual";
+    let capture;
+    try {
+      capture = await startCapture(
+        stream,
+        {
+          onPcm: (b) => push.write(b),
+          onLevel: hooks.onLevel,
+          onEnd: (reason) => { endReason = reason; push.close(); hooks.onProcessing?.(); },
+        },
+        { silenceMs: 6000, initialSilenceMs: 10000, maxMs: maxSeconds * 1000 },
+      );
+    } catch {
+      push.close();
+      await new Promise<void>((r) => recognizer.stopContinuousRecognitionAsync(() => r(), () => r()));
+      recognizer.close();
+      throw new Error("Este navegador no permite la grabación larga. Probá con Chrome.");
+    }
+    hooks.registerFinish?.(() => capture.finish());
+    try {
+      await done;
+      await new Promise<void>((r) => recognizer.stopContinuousRecognitionAsync(() => r(), () => r()));
+    } finally {
+      secondsSent = capture.bytes / 32000;
+      capture.stop();
+      recognizer.close();
+    }
+    const transcript = parts.join(" ").trim();
+    if (!transcript) throw new Error("No te escuché bien. Acercate al micrófono y probá de nuevo.");
+    const nWords = transcript.split(/\s+/).length;
+    return {
+      transcript,
+      seconds: Math.round(secondsSent),
+      wordsPerMinute: secondsSent > 0 ? Math.round((nWords / secondsSent) * 60) : 0,
+      accuracy: n ? Math.round(accSum / n) : 0,
+      fluency: n ? Math.round(fluSum / n) : 0,
+      pronScore: n ? Math.round(pronSum / n) : 0,
+      words,
+      endReason,
+    };
+  } finally {
+    stopMic(stream);
+    if (sent) recordStt(secondsSent);
+  }
+}

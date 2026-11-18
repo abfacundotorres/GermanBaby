@@ -35,6 +35,10 @@ export default function ReviewPage() {
           <b>✍️ Escritura con rúbrica</b>
           <span className="muted small">Consignas de A1 a B2 con puntos a cubrir; puntúa consigna, estructura, vocabulario y gramática.</span>
         </Link>
+        <Link href="/sprechen" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
+          <b>🗣️ Expresión oral</b>
+          <span className="muted small">Monólogos de A1 a B2: grabás, medimos fluidez y pronunciación y puntuamos el contenido.</span>
+        </Link>
         <Link href="/exam" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📝 Simulacros de examen</b>
           <span className="muted small">Lectura, escucha y escritura con el formato de un examen de A2, B1 o B2, para ver dónde estás.</span>
