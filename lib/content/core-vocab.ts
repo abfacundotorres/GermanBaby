@@ -1064,6 +1064,24 @@ ständig|constantemente|Er ruft ständig an.|Llama constantemente.
 mehrmals|varias veces|Ich habe mehrmals angerufen.|Llamé varias veces.
 anschließend|a continuación|Anschließend gehen wir essen.|A continuación vamos a comer.
 beispielsweise|por ejemplo|Beispielsweise gibt es hier einen Park.|Por ejemplo, acá hay un parque.
+die Vorstellung|la idea / la función|Ich habe keine Vorstellung davon.|No tengo idea de eso.
+die Mitteilung|el aviso / la comunicación|Ich habe eine Mitteilung bekommen.|Recibí un aviso.
+die Umgebung|los alrededores|Die Umgebung ist sehr ruhig.|Los alrededores son muy tranquilos.
+die Gesellschaft|la sociedad|Die Gesellschaft verändert sich.|La sociedad cambia.
+die Kenntnis|el conocimiento|Er hat gute Kenntnisse in Mathe.|Tiene buenos conocimientos de matemática.
+die Schwierigkeit|la dificultad|Wir haben eine Schwierigkeit.|Tenemos una dificultad.
+die Vorsicht|la precaución|Vorsicht ist besser als Nachsicht.|Más vale prevenir que curar.
+der Vertrag|el contrato|Ich unterschreibe den Vertrag.|Firmo el contrato.
+der Wunsch|el deseo|Das ist mein größter Wunsch.|Ese es mi mayor deseo.
+das Ergebnis|el resultado|Das Ergebnis ist gut.|El resultado es bueno.
+das Angebot|la oferta|Das Angebot ist sehr günstig.|La oferta es muy conveniente.
+abhängen|depender|Das kann vom Wetter abhängen.|Eso puede depender del clima.
+beabsichtigen|tener la intención de|Wir beabsichtigen, im Sommer umzuziehen.|Tenemos la intención de mudarnos en verano.
+anstrengend|agotador|Die Arbeit ist sehr anstrengend.|El trabajo es muy agotador.
+ernst|serio|Das Problem ist ernst.|El problema es serio.
+unglaublich|increíble|Das ist unglaublich.|Es increíble.
+verantwortlich|responsable|Wer ist dafür verantwortlich?|¿Quién es responsable de eso?
+womöglich|quizás|Er hat es womöglich vergessen.|Quizás se olvidó.
 ## B2
 abwägen|sopesar|Wir müssen Vor- und Nachteile abwägen.|Tenemos que sopesar ventajas y desventajas.
 abschaffen|abolir|Die Stadt will die Gebühr abschaffen.|La ciudad quiere abolir la tasa.
@@ -1749,7 +1767,6 @@ die Einsicht|el entendimiento / la comprensión|Er zeigt wenig Einsicht.|Muestra
 die Empörung|la indignación|Die Empörung ist groß.|La indignación es grande.
 die Enttäuschung|la decepción|Die Enttäuschung war riesig.|La decepción fue enorme.
 die Entfaltung|el desarrollo (pleno)|Die Entfaltung braucht Freiheit.|El desarrollo pleno necesita libertad.
-der Ernst|la seriedad|Der Ernst der Lage ist klar.|La seriedad de la situación es clara.
 die Erleichterung|el alivio|Die Erleichterung war groß.|El alivio fue grande.
 die Fehleinschätzung|el error de cálculo|Das war eine Fehleinschätzung.|Fue un error de cálculo.
 die Fürsorge|el cuidado / la asistencia|Die Fürsorge ist wichtig.|El cuidado es importante.
@@ -2130,6 +2147,36 @@ gesellschaftlich|social|Das ist ein gesellschaftliches Problem.|Es un problema s
 gewaltsam|violento|Der Konflikt wurde gewaltsam beendet.|El conflicto terminó con violencia.
 gleichgültig|indiferente|Das ist mir nicht gleichgültig.|Eso no me es indiferente.
 gleichzeitig|simultáneo|Wir kommen gleichzeitig an.|Llegamos al mismo tiempo.
+die Berücksichtigung|la consideración|Unter Berücksichtigung aller Faktoren entscheiden wir.|Decidimos tomando en cuenta todos los factores.
+die Debatte|el debate|Die Debatte war sehr lebhaft.|El debate fue muy animado.
+die Schlussfolgerung|la conclusión|Die Schlussfolgerung ist logisch.|La conclusión es lógica.
+die Vermutung|la suposición|Das ist nur eine Vermutung.|Es solo una suposición.
+die Sorgfalt|el esmero|Er arbeitet mit großer Sorgfalt.|Trabaja con mucho esmero.
+die Befugnis|la facultad|Er hat dazu keine Befugnis.|No tiene facultad para eso.
+der Bestandteil|el componente|Das ist ein wichtiger Bestandteil.|Es un componente importante.
+der Maßstab|el criterio / la escala|Das ist kein guter Maßstab.|No es un buen criterio.
+der Missbrauch|el abuso|Missbrauch muss bestraft werden.|El abuso debe ser castigado.
+der Rückgang|el descenso|Der Rückgang ist deutlich.|El descenso es evidente.
+der Zeitpunkt|el momento|Der Zeitpunkt ist ungünstig.|El momento es desfavorable.
+der Zustand|el estado|Der Zustand des Patienten ist stabil.|El estado del paciente es estable.
+das Dilemma|el dilema|Wir stehen vor einem Dilemma.|Estamos ante un dilema.
+das Phänomen|el fenómeno|Das ist ein neues Phänomen.|Es un fenómeno nuevo.
+das Wesen|la esencia / el ser|Das liegt im Wesen der Sache.|Eso está en la esencia del asunto.
+andeuten|insinuar|Er wollte etwas andeuten.|Quería insinuar algo.
+beanspruchen|reclamar / requerir|Er will das Recht beanspruchen.|Quiere reclamar el derecho.
+beeinträchtigen|perjudicar|Lärm beeinträchtigt den Schlaf.|El ruido perjudica el sueño.
+einschränken|limitar|Man muss die Kosten einschränken.|Hay que limitar los costos.
+entgegenwirken|contrarrestar|Wir wollen dem Trend entgegenwirken.|Queremos contrarrestar la tendencia.
+unterstellen|atribuir / suponer|Man unterstellt ihm böse Absichten.|Se le atribuyen malas intenciones.
+zurückgehen|disminuir|Die Zahlen können zurückgehen.|Las cifras pueden disminuir.
+auffällig|llamativo|Sein Verhalten ist auffällig.|Su comportamiento es llamativo.
+bedeutsam|significativo|Das ist ein bedeutsamer Schritt.|Es un paso significativo.
+hinreichend|suficiente|Die Beweise sind nicht hinreichend.|Las pruebas no son suficientes.
+nachhaltig|sostenible|Wir suchen eine nachhaltige Lösung.|Buscamos una solución sostenible.
+rechtmäßig|legítimo|Das ist ein rechtmäßiger Anspruch.|Es un derecho legítimo.
+vergleichbar|comparable|Die Fälle sind nicht vergleichbar.|Los casos no son comparables.
+vorrangig|prioritario|Das ist vorrangig zu behandeln.|Eso debe tratarse con prioridad.
+zwangsläufig|por fuerza|Das führt zwangsläufig zu Problemen.|Eso lleva por fuerza a problemas.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";
