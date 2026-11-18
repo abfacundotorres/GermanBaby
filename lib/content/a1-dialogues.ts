@@ -73,11 +73,11 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "Sumas",
     setting: "Lena le hace sumas a Max",
     lines: [
-      L("f", "Lena", "Wie viel ist drei plus vier?", "¿Cuánto es tres más cuatro?"),
-      L("m", "Max", "Das ist sieben!", "¡Es siete!"),
-      L("f", "Lena", "Und sechs plus vier?", "¿Y seis más cuatro?"),
-      L("m", "Max", "Zehn!", "¡Diez!"),
-      L("f", "Lena", "Sehr gut!", "¡Muy bien!"),
+      L("f", "Lena", "Max, wie viel ist drei plus vier?", "Max, ¿cuánto es tres más cuatro?"),
+      L("m", "Max", "Drei plus vier? Das ist sieben!", "¿Tres más cuatro? ¡Es siete!"),
+      L("f", "Lena", "Ja! Und sechs plus vier?", "¡Sí! ¿Y seis más cuatro?"),
+      L("m", "Max", "Das ist zehn! Wirklich!", "¡Es diez! ¡De verdad!"),
+      L("f", "Lena", "Sehr gut, Max!", "¡Muy bien, Max!"),
     ],
     questions: [
       { type: "fill", q: "¿Cuánto es tres más cuatro? (un número)", answers: ["7", "sieben"], hint: "Un número", why: "«sieben» = 7." },
@@ -92,7 +92,8 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
       L("f", "Lena", "Max, wie alt bist du?", "Max, ¿cuántos años tenés?"),
       L("m", "Max", "Ich bin acht Jahre alt. Und du?", "Tengo ocho años. ¿Y vos?"),
       L("f", "Lena", "Ich bin zehn Jahre alt.", "Tengo diez años."),
-      L("m", "Max", "Zehn? Super!", "¿Diez? ¡Genial!"),
+      L("m", "Max", "Zehn? Wirklich? Super!", "¿Diez? ¿De verdad? ¡Genial!"),
+      L("f", "Lena", "Ja, wirklich!", "¡Sí, de verdad!"),
     ],
     questions: [
       { type: "fill", q: "¿Cuántos años tiene Max? (un número)", answers: ["8", "acht"], hint: "Un número", why: "«acht Jahre alt»." },
@@ -104,7 +105,9 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "En la mesa",
     setting: "Lena y Max miran qué hay para el desayuno",
     lines: [
-      L("f", "Lena", "Das ist der Kaffee. Und das ist der Tee.", "Esto es el café. Y esto es el té."),
+      L("f", "Lena", "Max, ist das der Kaffee?", "Max, ¿esto es el café?"),
+      L("m", "Max", "Ja! Das ist der Kaffee. Und das ist der Tee.", "¡Sí! Esto es el café. Y esto es el té."),
+      L("f", "Lena", "Und das?", "¿Y esto?"),
       L("m", "Max", "Das ist das Wasser. Und das ist die Milch.", "Esto es el agua. Y esto es la leche."),
       L("f", "Lena", "Und das Brötchen? Und der Kuchen?", "¿Y el pancito? ¿Y la torta?"),
       L("m", "Max", "Das ist das Brötchen. Das ist der Kuchen!", "¡Esto es el pancito. Esto es la torta!"),
@@ -120,10 +123,11 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Lena pide en un café de Viena",
     lines: [
       L("m", "Herr Huber", "Guten Tag! Was möchten Sie?", "¡Buenas tardes! ¿Qué desea?"),
-      L("f", "Lena", "Ich möchte einen Kaffee, bitte.", "Quisiera un café, por favor."),
+      L("f", "Lena", "Guten Tag! Ich möchte einen Kaffee, bitte.", "¡Buenas tardes! Quisiera un café, por favor."),
       L("m", "Herr Huber", "Sonst noch etwas?", "¿Algo más?"),
-      L("f", "Lena", "Ja, ein Wasser. Danke!", "Sí, un agua. ¡Gracias!"),
-      L("m", "Herr Huber", "Bitte!", "¡De nada!"),
+      L("f", "Lena", "Ja, ein Wasser, bitte.", "Sí, un agua, por favor."),
+      L("m", "Herr Huber", "Bitte sehr!", "¡Aquí tiene!"),
+      L("f", "Lena", "Danke!", "¡Gracias!"),
     ],
     questions: [
       { type: "choice", q: "¿Qué pide Lena primero?", options: ["Un café", "Un té", "Una torta", "Leche"], answer: "Un café", why: "«Ich möchte einen Kaffee»." },
@@ -137,9 +141,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     lines: [
       L("f", "Lena", "Die Rechnung, bitte.", "La cuenta, por favor."),
       L("m", "Herr Huber", "Zusammen oder getrennt?", "¿Juntos o separado?"),
-      L("f", "Lena", "Zusammen.", "Juntos."),
+      L("f", "Lena", "Zusammen, bitte.", "Juntos, por favor."),
       L("m", "Herr Huber", "Das kostet fünf Euro.", "Son cinco euros."),
-      L("f", "Lena", "Stimmt so!", "¡Quédese con el cambio!"),
+      L("f", "Lena", "Hier, bitte. Stimmt so!", "Tome. ¡Quédese con el cambio!"),
+      L("m", "Herr Huber", "Danke! Tschüss!", "¡Gracias! ¡Chau!"),
     ],
     questions: [
       { type: "fill", q: "¿Cuánto cuesta? (en euros)", answers: ["5", "fünf"], hint: "Un número", why: "«fünf Euro»." },
@@ -152,9 +157,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Tom le muestra una foto a Lena",
     lines: [
       L("m", "Tom", "Das ist die Mutter. Das ist der Vater.", "Esta es la madre. Este es el padre."),
-      L("f", "Lena", "Und das ist die Schwester? Und der Bruder?", "¿Y esta es la hermana? ¿Y el hermano?"),
-      L("m", "Tom", "Ja! Das sind die Eltern und die Kinder.", "¡Sí! Son los padres y los hijos."),
-      L("f", "Lena", "Das ist eine Familie!", "¡Es una familia!"),
+      L("f", "Lena", "Und das? Ist das die Schwester?", "¿Y esta? ¿Es la hermana?"),
+      L("m", "Tom", "Ja! Und das ist der Bruder.", "¡Sí! Y este es el hermano."),
+      L("f", "Lena", "Das sind die Eltern und die Kinder.", "Son los padres y los hijos."),
+      L("m", "Tom", "Ja, das ist eine Familie!", "¡Sí, es una familia!"),
     ],
     questions: [
       { type: "choice", q: "¿Quiénes están en la foto?", options: ["Los padres y los hijos", "Solo la mamá", "Los abuelos", "Los amigos"], answer: "Los padres y los hijos", why: "«die Eltern und die Kinder»." },
@@ -167,10 +173,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Lena le muestra su familia a Tom",
     lines: [
       L("f", "Lena", "Das ist meine Mutter. Das ist mein Vater.", "Esta es mi madre. Este es mi padre."),
-      L("m", "Tom", "Und dein Bruder?", "¿Y tu hermano?"),
-      L("f", "Lena", "Das ist mein Bruder. Und das ist meine Schwester.", "Este es mi hermano. Y esta es mi hermana."),
+      L("m", "Tom", "Und das? Ist das dein Bruder?", "¿Y esto? ¿Es tu hermano?"),
+      L("f", "Lena", "Ja, das ist mein Bruder. Und das ist meine Schwester.", "Sí, es mi hermano. Y esta es mi hermana."),
       L("m", "Tom", "Hast du Geschwister?", "¿Tenés hermanos?"),
-      L("f", "Lena", "Ja, zwei.", "Sí, dos."),
+      L("f", "Lena", "Ja, zwei. Und du?", "Sí, dos. ¿Y vos?"),
     ],
     questions: [
       { type: "choice", q: "¿De quién es la familia que se muestra?", options: ["De Lena", "De Tom", "De la maestra", "De un amigo"], answer: "De Lena", why: "Lena dice «meine Mutter, mein Vater»." },
@@ -183,10 +189,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Tom y Lena comparan sus familias",
     lines: [
       L("m", "Tom", "Hast du Geschwister?", "¿Tenés hermanos?"),
-      L("f", "Lena", "Ich habe einen Bruder und eine Schwester. Und du?", "Tengo un hermano y una hermana. ¿Y vos?"),
+      L("f", "Lena", "Ja, ich habe einen Bruder und eine Schwester. Und du?", "Sí, tengo un hermano y una hermana. ¿Y vos?"),
       L("m", "Tom", "Ich habe keine Geschwister.", "No tengo hermanos."),
-      L("f", "Lena", "Wirklich?", "¿De verdad?"),
-      L("m", "Tom", "Ja, ich habe nur Eltern!", "Sí, ¡solo tengo padres!"),
+      L("f", "Lena", "Wirklich? Keine?", "¿De verdad? ¿Ninguno?"),
+      L("m", "Tom", "Nein, ich habe nur Eltern!", "No, ¡solo tengo padres!"),
     ],
     questions: [
       { type: "choice", q: "¿Qué tiene Lena?", options: ["Un hermano y una hermana", "Dos hermanas", "Solo un hermano", "Ningún hermano"], answer: "Un hermano y una hermana", why: "«einen Bruder und eine Schwester»." },
@@ -198,10 +204,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "¿Dónde vivís?",
     setting: "Lena y Tom hablan de dónde viven",
     lines: [
-      L("f", "Lena", "Wo wohnst du?", "¿Dónde vivís?"),
+      L("f", "Lena", "Wo wohnst du, Tom?", "¿Dónde vivís, Tom?"),
       L("m", "Tom", "Ich wohne in Berlin. Und du?", "Vivo en Berlín. ¿Y vos?"),
       L("f", "Lena", "Ich wohne in Buenos Aires. Ich lerne Deutsch.", "Vivo en Buenos Aires. Aprendo alemán."),
-      L("m", "Tom", "Und ich arbeite in Berlin.", "Y yo trabajo en Berlín."),
+      L("m", "Tom", "Toll! Ich arbeite in Berlin.", "¡Genial! Yo trabajo en Berlín."),
     ],
     questions: [
       { type: "choice", q: "¿Dónde vive Lena?", options: ["En Buenos Aires", "En Berlín", "En Viena", "En Madrid"], answer: "En Buenos Aires", why: "«Ich wohne in Buenos Aires»." },
@@ -213,10 +219,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "¿Qué te gusta hacer?",
     setting: "Lena y Tom hablan de sus gustos",
     lines: [
-      L("f", "Lena", "Was machst du gern?", "¿Qué te gusta hacer?"),
+      L("f", "Lena", "Was machst du gern, Tom?", "¿Qué te gusta hacer, Tom?"),
       L("m", "Tom", "Ich spiele gern Fußball. Und du?", "Me gusta jugar al fútbol. ¿Y a vos?"),
       L("f", "Lena", "Ich koche gern. Mein Bruder spielt auch Fußball.", "Me gusta cocinar. Mi hermano también juega al fútbol."),
-      L("m", "Tom", "Wo wohnt ihr?", "¿Dónde viven ustedes?"),
+      L("m", "Tom", "Super! Wo wohnt ihr?", "¡Genial! ¿Dónde viven ustedes?"),
       L("f", "Lena", "Wir wohnen in Berlin.", "Vivimos en Berlín."),
     ],
     questions: [
@@ -229,7 +235,7 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "¿Cuántos años tenés?",
     setting: "Lena y Tom hablan de su edad y sus hermanos",
     lines: [
-      L("f", "Lena", "Wie alt bist du?", "¿Cuántos años tenés?"),
+      L("f", "Lena", "Wie alt bist du, Tom?", "¿Cuántos años tenés, Tom?"),
       L("m", "Tom", "Ich bin zehn Jahre alt. Und du?", "Tengo diez años. ¿Y vos?"),
       L("f", "Lena", "Ich bin auch zehn! Hast du einen Bruder?", "¡Yo también tengo diez! ¿Tenés un hermano?"),
       L("m", "Tom", "Ja, er ist acht Jahre alt. Er hat einen Hund.", "Sí, tiene ocho años. Tiene un perro."),
@@ -245,9 +251,9 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Lena y Tom repasan los días de la semana",
     lines: [
       L("f", "Lena", "Heute ist Montag.", "Hoy es lunes."),
-      L("m", "Tom", "Und morgen? Dienstag?", "¿Y mañana? ¿Martes?"),
+      L("m", "Tom", "Und morgen? Ist morgen Dienstag?", "¿Y mañana? ¿Mañana es martes?"),
       L("f", "Lena", "Ja! Dann Mittwoch, Donnerstag und Freitag.", "¡Sí! Después miércoles, jueves y viernes."),
-      L("m", "Tom", "Und Samstag und Sonntag!", "¡Y sábado y domingo!"),
+      L("m", "Tom", "Und dann Samstag und Sonntag!", "¡Y después sábado y domingo!"),
     ],
     questions: [
       { type: "choice", q: "¿Qué día es hoy?", options: ["Lunes", "Martes", "Miércoles", "Domingo"], answer: "Lunes", why: "«Heute ist Montag»." },
@@ -259,11 +265,11 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "¿Qué hora es?",
     setting: "Lena le pregunta la hora a Tom",
     lines: [
-      L("f", "Lena", "Wie spät ist es?", "¿Qué hora es?"),
+      L("f", "Lena", "Wie spät ist es, Tom?", "¿Qué hora es, Tom?"),
       L("m", "Tom", "Es ist drei Uhr.", "Son las tres."),
-      L("f", "Lena", "Und jetzt?", "¿Y ahora?"),
+      L("f", "Lena", "Danke! Und jetzt?", "¡Gracias! ¿Y ahora?"),
       L("m", "Tom", "Jetzt ist es halb vier.", "Ahora son las tres y media."),
-      L("f", "Lena", "Danke!", "¡Gracias!"),
+      L("f", "Lena", "Oh, schon halb vier! Danke!", "¡Ah, ya son las tres y media! ¡Gracias!"),
     ],
     questions: [
       { type: "fill", q: "¿Qué hora es al principio? (número de la hora)", answers: ["3", "drei"], hint: "Un número", why: "«Es ist drei Uhr»." },
@@ -275,10 +281,10 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "¿Tenés tiempo?",
     setting: "Tom invita a Lena",
     lines: [
-      L("m", "Tom", "Hast du morgen Zeit?", "¿Tenés tiempo mañana?"),
+      L("m", "Tom", "Hast du morgen Zeit, Lena?", "¿Tenés tiempo mañana, Lena?"),
       L("f", "Lena", "Leider nicht. Aber am Wochenende habe ich Zeit.", "Lamentablemente no. Pero el fin de semana tengo tiempo."),
       L("m", "Tom", "Gut! Dann am Wochenende!", "¡Bien! ¡Entonces el fin de semana!"),
-      L("f", "Lena", "Ja, bis dann!", "¡Sí, hasta entonces!"),
+      L("f", "Lena", "Ja, gern! Bis dann!", "¡Sí, con gusto! ¡Hasta entonces!"),
     ],
     questions: [
       { type: "choice", q: "¿Cuándo tiene tiempo Lena?", options: ["El fin de semana", "Mañana", "Hoy", "Nunca"], answer: "El fin de semana", why: "«am Wochenende habe ich Zeit»." },
@@ -305,11 +311,11 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "Los abuelos",
     setting: "Lena y Max hablan de la edad de sus abuelos",
     lines: [
-      L("f", "Lena", "Wie alt ist deine Oma?", "¿Cuántos años tiene tu abuela?"),
+      L("f", "Lena", "Max, wie alt ist deine Oma?", "Max, ¿cuántos años tiene tu abuela?"),
       L("m", "Max", "Meine Oma ist siebzig Jahre alt.", "Mi abuela tiene setenta años."),
       L("f", "Lena", "Und dein Opa?", "¿Y tu abuelo?"),
       L("m", "Max", "Mein Opa ist achtzig Jahre alt.", "Mi abuelo tiene ochenta años."),
-      L("f", "Lena", "Super!", "¡Genial!"),
+      L("f", "Lena", "Wirklich? Super!", "¿De verdad? ¡Genial!"),
     ],
     questions: [
       { type: "fill", q: "¿Cuántos años tiene la abuela de Max? (un número)", answers: ["70", "siebzig"], hint: "Un número", why: "«siebzig»." },
@@ -322,8 +328,8 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     setting: "Herr Berg compra frutas y verduras",
     lines: [
       L("f", "Frau Becker", "Guten Morgen! Was möchten Sie?", "¡Buenos días! ¿Qué desea?"),
-      L("m", "Herr Berg", "Ich nehme ein Kilo Äpfel.", "Llevo un kilo de manzanas."),
-      L("f", "Frau Becker", "Das macht vier Euro.", "Son cuatro euros."),
+      L("m", "Herr Berg", "Guten Morgen! Ich nehme ein Kilo Äpfel.", "¡Buenos días! Llevo un kilo de manzanas."),
+      L("f", "Frau Becker", "Gern. Das macht vier Euro.", "Con gusto. Son cuatro euros."),
       L("m", "Herr Berg", "Und die Tomaten? Sind sie teuer?", "¿Y los tomates? ¿Son caros?"),
       L("f", "Frau Becker", "Nein, sie sind billig. Das Kilo kostet zwei Euro.", "No, son baratos. El kilo cuesta dos euros."),
       L("m", "Herr Berg", "Dann ein Kilo Tomaten, bitte!", "¡Entonces un kilo de tomates, por favor!"),
@@ -369,11 +375,11 @@ export const A1_DIALOGUES: Record<string, Dialogue> = {
     title: "Mi día",
     setting: "Tom le cuenta su día a Lena",
     lines: [
-      L("f", "Lena", "Wie ist dein Tag?", "¿Cómo es tu día?"),
+      L("f", "Lena", "Wie ist dein Tag, Tom?", "¿Cómo es tu día, Tom?"),
       L("m", "Tom", "Zuerst dusche ich. Dann frühstücke ich.", "Primero me ducho. Después desayuno."),
       L("f", "Lena", "Und danach?", "¿Y después?"),
       L("m", "Tom", "Danach lerne ich Deutsch. Um elf Uhr gehe ich schlafen.", "Después estudio alemán. A las once me voy a dormir."),
-      L("f", "Lena", "Um elf Uhr! Das ist spät.", "¡A las once! Es tarde."),
+      L("f", "Lena", "Um elf Uhr? Das ist spät!", "¿A las once? ¡Es tarde!"),
     ],
     questions: [
       { type: "choice", q: "¿Qué hace Tom primero?", options: ["Se ducha", "Desayuna", "Estudia", "Se va a dormir"], answer: "Se ducha", why: "«Zuerst dusche ich»." },
