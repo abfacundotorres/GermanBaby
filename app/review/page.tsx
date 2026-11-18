@@ -28,8 +28,8 @@ export default function ReviewPage() {
           <Link href="/" className="btn btn-block">No hay nada pendiente: volver</Link>
         )}
         <Link href="/exam" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
-          <b>📝 Simulacros de examen B2</b>
-          <span className="muted small">Lectura, escucha y escritura con el formato de un examen, para ver dónde estás.</span>
+          <b>📝 Simulacros de examen</b>
+          <span className="muted small">Lectura, escucha y escritura con el formato de un examen de A2, B1 o B2, para ver dónde estás.</span>
         </Link>
         <Link href="/library" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📖 Biblioteca de lecturas</b>

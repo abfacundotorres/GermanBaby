@@ -17,17 +17,22 @@ export default function ExamPage() {
     <main className="container stack" style={{ paddingTop: 20 }}>
       <div className="h1">📝 Simulacros</div>
       <p className="muted">
-        Pruebas con el formato de un examen de nivel B2: comprensión lectora, auditiva y expresión escrita. No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
+        Pruebas con el formato de un examen de cada nivel (A2, B1 y B2): comprensión lectora, auditiva y expresión escrita. No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
       </p>
-      {EXAMS.map((e) => (
-        <button key={e.id} className="card row" style={{ textAlign: "left" }} onClick={() => setCurrent(e)}>
-          <span style={{ fontSize: 28 }}>📝</span>
-          <span style={{ flex: 1 }}>
-            <b>{e.title}</b>
-            <span className="small muted" style={{ display: "block" }}>{e.lesen.reduce((a, t) => a + t.questions.length, 0)} preguntas de lectura · {e.hoeren.reduce((a, t) => a + t.questions.length, 0)} de escucha · 1 texto · unos 45 min</span>
-          </span>
-          <span>›</span>
-        </button>
+      {(["A2", "B1", "B2"] as const).map((lv) => (
+        <section key={lv} className="stack">
+          <div className="h2">Nivel {lv}</div>
+          {EXAMS.filter((e) => e.level === lv).map((e) => (
+            <button key={e.id} className="card row" style={{ textAlign: "left" }} onClick={() => setCurrent(e)}>
+              <span style={{ fontSize: 28 }}>📝</span>
+              <span style={{ flex: 1 }}>
+                <b>{e.title}</b>
+                <span className="small muted" style={{ display: "block" }}>{e.lesen.reduce((a, t) => a + t.questions.length, 0)} preguntas de lectura · {e.hoeren.reduce((a, t) => a + t.questions.length, 0)} de escucha · 1 texto</span>
+              </span>
+              <span>›</span>
+            </button>
+          ))}
+        </section>
       ))}
       {history.length > 0 && (
         <section className="stack">

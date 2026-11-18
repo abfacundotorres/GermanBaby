@@ -73,7 +73,7 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
     setPhase("grading");
     let w: FreeResult | null = null;
     try {
-      w = await callAi<FreeResult>("/api/free", { prompt: exam.schreiben.prompt, focus: exam.schreiben.focus, answer: text.trim(), level: "B2", minSentences: exam.schreiben.minSentences }, "correct");
+      w = await callAi<FreeResult>("/api/free", { prompt: exam.schreiben.prompt, focus: exam.schreiben.focus, answer: text.trim(), level: exam.level, minSentences: exam.schreiben.minSentences }, "correct");
     } catch { setWritingFailed(true); }
     setWriting(w);
     setPhase("result");
@@ -95,7 +95,7 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
       saveExamRecord({ id: exam.id, title: exam.title, at: Date.now(), lesen: lp, hoeren: hp, schreiben: wp, total });
       addXp(30);
     }
-    const v = examVerdict(total);
+    const v = examVerdict(total, exam.level);
     const wrong = [...lesen, ...hoeren].filter((i) => !isRight(i.q, answers[i.key]));
     return (
       <main className="container stack" style={{ paddingTop: 20 }}>

@@ -1,18 +1,269 @@
-// Simulacros tipo examen B2: comprensión lectora, auditiva y expresión escrita, con el formato y la dificultad de un examen
-// de nivel B2 pero con textos propios (no son materiales oficiales). Para sumar un simulacro, agregá una entrada.
+// Simulacros tipo examen (A2, B1 y B2): comprensión lectora, auditiva y expresión escrita, con el formato y la dificultad de un examen
+// del nivel pero con textos propios (no son materiales oficiales). Para sumar un simulacro, agregá una entrada.
 
 import type { ListenQuestion } from "../curriculum.ts";
 
 export type ExamText = { title: string; text: string[]; questions: ListenQuestion[] };
 export type ExamAudio = { title: string; setting: string; lines: { who: "f" | "m"; name: string; de: string }[]; questions: ListenQuestion[] };
 export type ExamWriting = { prompt: string; focus: string[]; minSentences: number; hint?: string };
-export type Exam = { id: string; level: "B2"; title: string; lesen: ExamText[]; hoeren: ExamAudio[]; schreiben: ExamWriting };
+export type ExamLevel = "A2" | "B1" | "B2";
+export type Exam = { id: string; level: ExamLevel; title: string; lesen: ExamText[]; hoeren: ExamAudio[]; schreiben: ExamWriting };
 
 const c = (q: string, options: string[], why: string): ListenQuestion => ({ type: "choice", q, options, answer: options[0], why });
 const tf = (q: string, answer: boolean, why: string): ListenQuestion => ({ type: "tf", q, answer, why });
 const fi = (q: string, answers: string[], why: string): ListenQuestion => ({ type: "fill", q, answers, hint: "un número", why });
 
 export const EXAMS: Exam[] = [
+  {
+    id: "a2-1",
+    level: "A2",
+    title: "Simulacro A2 · 1",
+    lesen: [
+      {
+        title: "Meine neue Stadt",
+        text: [
+          "Ich heiße Lara und wohne seit drei Monaten in Hamburg. Früher habe ich in einem kleinen Dorf gewohnt, aber ich wollte in einer großen Stadt arbeiten. Jetzt arbeite ich in einem Café in der Nähe vom Hafen. Die Arbeit gefällt mir, aber ich muss oft bis spät abends bleiben. Am Sonntag habe ich frei. Dann fahre ich mit dem Fahrrad zum Wasser oder besuche meine Freundin Eva. Sie wohnt auch in Hamburg, aber auf der anderen Seite der Stadt. Die Fahrt dauert fast eine Stunde. Meine Eltern vermisse ich ein bisschen, deshalb rufe ich sie jeden Abend an.",
+        ],
+        questions: [
+          fi("¿Hace cuántos meses vive Lara en Hamburgo?", ["3", "drei"], "«seit drei Monaten»."),
+          c("¿Dónde trabaja Lara?", ["En un café", "En una oficina", "En el puerto", "En una escuela"], "«in einem Café»."),
+          tf("Lara tiene libres los domingos.", true, "«Am Sonntag habe ich frei»."),
+          c("¿Cuánto dura el viaje a lo de Eva?", ["Casi una hora", "Diez minutos", "Dos horas", "Media hora"], "«fast eine Stunde»."),
+          tf("Lara llama a sus padres todas las noches.", true, "«jeden Abend»."),
+        ],
+      },
+      {
+        title: "Hinweis im Schwimmbad",
+        text: [
+          "Achtung! Das Schwimmbad ist vom 10. bis 17. Juli geschlossen. In dieser Zeit wird das Becken renoviert. Das Kinderbecken bleibt geöffnet, aber nur von 10 bis 14 Uhr. Ab dem 18. Juli sind wir wieder von 8 bis 20 Uhr für Sie da.",
+        ],
+        questions: [
+          fi("¿Desde qué día de julio vuelve a abrir la pileta?", ["18", "achtzehn"], "«Ab dem 18. Juli»."),
+          c("¿Qué queda abierto durante las obras?", ["La pileta de los chicos, de 10 a 14", "Toda la pileta de 8 a 20", "El bufet", "Nada"], "«Das Kinderbecken bleibt geöffnet, aber nur von 10 bis 14 Uhr»."),
+          tf("La pileta está cerrada todo el mes de julio.", false, "«vom 10. bis 17. Juli»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Im Café",
+        setting: "Un cliente pide en un café",
+        lines: [
+          { who: "f", name: "Kellnerin", de: "Guten Tag! Was darf es sein?" },
+          { who: "m", name: "Gast", de: "Einen Kaffee und ein Stück Apfelkuchen, bitte." },
+          { who: "f", name: "Kellnerin", de: "Gern. Möchten Sie Sahne zum Kuchen?" },
+          { who: "m", name: "Gast", de: "Ja, bitte. Und haben Sie auch Wasser?" },
+          { who: "f", name: "Kellnerin", de: "Ja, mit oder ohne Kohlensäure?" },
+          { who: "m", name: "Gast", de: "Ohne, bitte. Was macht das zusammen?" },
+          { who: "f", name: "Kellnerin", de: "Der Kaffee kostet drei Euro, der Kuchen vier Euro fünfzig und das Wasser zwei Euro. Das macht neun Euro fünfzig." },
+          { who: "m", name: "Gast", de: "Hier sind zehn Euro. Stimmt so." },
+        ],
+        questions: [
+          c("¿Qué pide con el café?", ["Torta de manzana", "Torta de chocolate", "Un sándwich", "Helado"], "«ein Stück Apfelkuchen»."),
+          tf("Quiere crema con la torta.", true, "«Ja, bitte»."),
+          c("¿Qué agua pide?", ["Sin gas", "Con gas", "Con limón", "Caliente"], "«Ohne, bitte»."),
+          fi("¿Cuánto es el total en euros?", ["9,50", "9.50", "9,5"], "«neun Euro fünfzig»."),
+          tf("El cliente espera recibir vuelto.", false, "«Stimmt so»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un mail corto a un amigo: invitalo a tu cumpleaños el sábado. Decile a qué hora es, dónde y qué puede traer.",
+      focus: ["Einladung (Ich möchte dich einladen)", "Uhrzeit und Ort", "mitbringen / Bitte"],
+      minSentences: 5,
+      hint: "Empezá con «Hallo …» y terminá con «Viele Grüße».",
+    },
+  },
+  {
+    id: "a2-2",
+    level: "A2",
+    title: "Simulacro A2 · 2",
+    lesen: [
+      {
+        title: "Ein Wochenende in Wien",
+        text: [
+          "Am Freitagabend sind wir mit dem Zug nach Wien gefahren. Das Hotel liegt direkt im Zentrum, und das Zimmer ist groß und hell. Am Samstag haben wir ein Museum besucht und danach in einem kleinen Restaurant Schnitzel gegessen. Das Essen war sehr gut, aber ein bisschen teuer. Am Abend sind wir müde, aber glücklich ins Bett gegangen. Am Sonntag hat es leider geregnet, deshalb sind wir nicht in den Park gegangen. Stattdessen haben wir im Hotel gefrühstückt und noch ein Café besucht. Um fünf Uhr sind wir wieder nach Hause gefahren.",
+        ],
+        questions: [
+          c("¿Cómo viajaron a Viena?", ["En tren", "En auto", "En avión", "En colectivo"], "«mit dem Zug»."),
+          tf("La habitación del hotel es chica.", false, "«groß und hell»."),
+          c("¿Qué comieron el sábado?", ["Milanesa (Schnitzel)", "Pizza", "Pescado", "Ensalada"], "«Schnitzel gegessen»."),
+          tf("El domingo no fueron al parque porque llovió.", true, "«es hat geregnet, deshalb… nicht in den Park»."),
+          fi("¿A qué hora volvieron a casa?", ["5", "fünf", "17"], "«Um fünf Uhr»."),
+        ],
+      },
+      {
+        title: "Wohnungsanzeige",
+        text: [
+          "Zu vermieten: Zwei-Zimmer-Wohnung, 55 Quadratmeter, dritter Stock, mit Balkon. Miete 620 Euro warm. Ab dem 1. Oktober frei. Keine Haustiere. Besichtigung am Samstag um 11 Uhr.",
+        ],
+        questions: [
+          fi("¿Cuántos euros es el alquiler?", ["620", "sechshundertzwanzig"], "«620 Euro warm»."),
+          c("¿Desde cuándo está libre?", ["Desde el 1 de octubre", "Desde hoy", "Desde el sábado", "Desde el 1 de noviembre"], "«Ab dem 1. Oktober frei»."),
+          tf("Se aceptan mascotas.", false, "«Keine Haustiere»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Verabredung zum Kino",
+        setting: "Ben llama a su amiga Mia",
+        lines: [
+          { who: "m", name: "Ben", de: "Hallo Mia, hier ist Ben. Hast du am Samstag Zeit?" },
+          { who: "f", name: "Mia", de: "Hallo Ben! Am Samstagvormittag muss ich einkaufen, aber am Nachmittag habe ich frei." },
+          { who: "m", name: "Ben", de: "Super. Ich möchte ins Kino gehen. Es gibt einen neuen Film um sechzehn Uhr dreißig." },
+          { who: "f", name: "Mia", de: "Gern. Wo treffen wir uns?" },
+          { who: "m", name: "Ben", de: "Vor dem Kino, um Viertel nach vier. Die Karten kaufe ich schon online." },
+          { who: "f", name: "Mia", de: "Danke! Soll ich etwas mitbringen?" },
+          { who: "m", name: "Ben", de: "Nein, aber vielleicht etwas zu trinken. Danach können wir noch etwas essen gehen." },
+          { who: "f", name: "Mia", de: "Gute Idee. Dann bis Samstag!" },
+        ],
+        questions: [
+          c("¿Qué quiere hacer Ben el sábado?", ["Ir al cine", "Ir a comer", "Ir de compras", "Ir a nadar"], "«Ich möchte ins Kino gehen»."),
+          c("¿A qué hora se encuentran?", ["A las cuatro y cuarto", "A las cuatro y media", "A las cinco", "A las tres"], "«um Viertel nach vier»."),
+          tf("Mia tiene libre todo el sábado.", false, "«Am Samstagvormittag muss ich einkaufen»."),
+          c("¿A qué hora empieza la película?", ["16:30", "16:15", "17:30", "15:30"], "«sechzehn Uhr dreißig»."),
+          tf("Ben ya compra las entradas por internet.", true, "«Die Karten kaufe ich schon online»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un mail a la dueña de un departamento en alquiler: te interesa verlo. Preguntá por el precio y pedí una cita para visitarlo.",
+      focus: ["Anrede", "Fragen (Wie viel kostet…? / Ist … noch frei?)", "Terminwunsch (Kann ich…?)"],
+      minSentences: 5,
+      hint: "Tono formal: «Sehr geehrte Frau …».",
+    },
+  },
+  {
+    id: "b1-1",
+    level: "B1",
+    title: "Simulacro B1 · 1",
+    lesen: [
+      {
+        title: "Ein neuer Job",
+        text: [
+          "Vor sechs Monaten habe ich meinen Job gewechselt, und ich muss sagen: Es war die beste Entscheidung des Jahres. In meiner alten Firma habe ich zehn Stunden am Tag vor dem Computer gesessen und kaum mit Kollegen gesprochen. Obwohl das Gehalt gut war, habe ich mich jeden Morgen ziemlich gequält. Jetzt arbeite ich in einem kleinen Team, in dem alle zusammen Mittagspause machen. Mein Chef fragt uns nach unserer Meinung, bevor er etwas entscheidet. Natürlich verdiene ich weniger, und der Weg zur Arbeit ist länger geworden. Dafür gehe ich abends nicht mehr müde und genervt nach Hause. Wenn ich ehrlich bin, hätte ich den Schritt schon viel früher wagen sollen. Mein Rat an alle, die unzufrieden sind: Wartet nicht zu lange, denn Angst vor Veränderung hält uns oft länger fest als ein schlechter Job.",
+        ],
+        questions: [
+          c("¿Cuándo cambió de trabajo?", ["Hace seis meses", "Hace un año", "Hace un mes", "Hace dos años"], "«Vor sechs Monaten»."),
+          tf("En la empresa anterior hablaba mucho con sus colegas.", false, "«kaum mit Kollegen gesprochen»."),
+          c("¿Qué le gusta del equipo nuevo?", ["Que el jefe pregunta la opinión antes de decidir", "Que gana más", "Que queda más cerca", "Que trabaja menos horas"], "«Mein Chef fragt uns nach unserer Meinung»."),
+          tf("En el trabajo nuevo gana más que antes.", false, "«Natürlich verdiene ich weniger»."),
+          c("¿Qué lamenta?", ["No haber dado el paso antes", "Haber dejado a sus colegas", "Haber cambiado de ciudad", "Haber aceptado menos sueldo"], "«hätte ich den Schritt schon viel früher wagen sollen»."),
+          c("¿Qué aconseja?", ["No esperar demasiado", "Cambiar de ciudad", "Pedir un aumento", "Hacer un curso"], "«Wartet nicht zu lange»."),
+        ],
+      },
+      {
+        title: "Sprachkurs im Abendprogramm",
+        text: [
+          "Sprachkurs Deutsch B1 – Abendkurs: Beginn am 12. September, dienstags und donnerstags von 18.30 bis 20.45 Uhr. Dauer: 10 Wochen. Kosten: 290 Euro (Bücher nicht inbegriffen). Anmeldung bis zum 1. September im Sekretariat oder online. Bei weniger als sechs Teilnehmern kann der Kurs nicht stattfinden; dann erhalten Sie Ihr Geld zurück.",
+        ],
+        questions: [
+          fi("¿Cuántas semanas dura el curso?", ["10", "zehn"], "«Dauer: 10 Wochen»."),
+          c("¿Qué no está incluido en el precio?", ["Los libros", "Las clases", "La matrícula", "El examen"], "«Bücher nicht inbegriffen»."),
+          tf("La inscripción vence el 12 de septiembre.", false, "«bis zum 1. September»."),
+          c("¿Qué pasa si hay menos de seis participantes?", ["No se dicta y se devuelve el dinero", "Se dicta igual", "Se pasa a otro horario", "Se cobra más"], "«nicht stattfinden… Geld zurück»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Wohnungsbesichtigung",
+        setting: "Herr Arslan visita un departamento con la dueña",
+        lines: [
+          { who: "f", name: "Frau Lenz", de: "Guten Tag, Herr Arslan. Schön, dass Sie pünktlich sind. Kommen Sie herein." },
+          { who: "m", name: "Herr Arslan", de: "Guten Tag, Frau Lenz. Die Gegend ist wirklich ruhig." },
+          { who: "f", name: "Frau Lenz", de: "Ja, das ist einer der Vorteile. Die Wohnung hat zwei Zimmer und liegt im dritten Stock. Leider gibt es keinen Aufzug." },
+          { who: "m", name: "Herr Arslan", de: "Das ist kein Problem, ich bin sportlich. Wie hoch sind die Nebenkosten?" },
+          { who: "f", name: "Frau Lenz", de: "Die Miete beträgt sechshundertzwanzig Euro kalt, dazu kommen hundertzwanzig Euro Nebenkosten. Heizung und Wasser sind schon dabei." },
+          { who: "m", name: "Herr Arslan", de: "Das ist etwas mehr, als ich eingeplant hatte, aber die Küche ist ja schon eingebaut." },
+          { who: "f", name: "Frau Lenz", de: "Genau. Wenn Sie möchten, können Sie auch den Keller mitbenutzen. Dort gibt es einen Platz für Ihr Fahrrad." },
+          { who: "m", name: "Herr Arslan", de: "Das wäre perfekt. Wie lange läuft der Mietvertrag?" },
+          { who: "f", name: "Frau Lenz", de: "Mindestens zwei Jahre. Sie müssten außerdem eine Kaution von drei Monatsmieten zahlen." },
+          { who: "m", name: "Herr Arslan", de: "Gut, ich überlege es mir über das Wochenende und rufe Sie am Montag an." },
+        ],
+        questions: [
+          c("¿En qué piso queda el departamento?", ["En el tercero", "En el primero", "En el segundo", "En el quinto"], "«im dritten Stock»."),
+          tf("El edificio tiene ascensor.", false, "«Leider gibt es keinen Aufzug»."),
+          fi("¿Cuántos euros son los gastos?", ["120", "hundertzwanzig"], "«hundertzwanzig Euro Nebenkosten»."),
+          c("¿Qué puede hacer con el sótano?", ["Guardar su bicicleta", "Alquilarlo aparte", "Usarlo como taller", "Nada"], "«Platz für Ihr Fahrrad»."),
+          c("¿Cuánto dura como mínimo el contrato?", ["Dos años", "Un año", "Seis meses", "Cinco años"], "«Mindestens zwei Jahre»."),
+          c("¿Qué hará Herr Arslan?", ["Lo pensará y llamará el lunes", "Firmará ahora", "Pedirá un descuento", "Rechazará la oferta"], "«rufe Sie am Montag an»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un mail a un amigo: contale que cambiaste de trabajo o de casa (lo que prefieras), explicá por qué lo hiciste y cómo te sentís.",
+      focus: ["Perfekt / Präteritum für Vergangenes", "weil / obwohl / damit", "eine persönliche Bewertung"],
+      minSentences: 6,
+      hint: "Mail informal: «Hallo …», «Liebe Grüße».",
+    },
+  },
+  {
+    id: "b1-2",
+    level: "B1",
+    title: "Simulacro B1 · 2",
+    lesen: [
+      {
+        title: "Radfahren in der Stadt",
+        text: [
+          "Immer mehr Menschen in der Stadt steigen vom Auto aufs Fahrrad um. Der Grund ist einfach: Im Stau verliert man viel Zeit, und einen Parkplatz zu finden ist oft schwierig. Mit dem Rad kommt man meistens schneller ans Ziel, und man tut etwas für die Gesundheit. Allerdings ist das Radfahren nicht überall ungefährlich. Viele Straßen haben keine eigenen Radwege, sodass man sich den Platz mit Autos teilen muss. Besonders bei Regen oder im Winter sind viele Radfahrer unsicher. Deshalb fordern Verbände seit Jahren, dass die Stadt mehr sichere Wege baut. Die Stadtverwaltung antwortet, dass das nicht so schnell geht, weil dafür Straßen verengt werden müssten und das Geld fehle. Bis sich etwas ändert, raten Experten, immer einen Helm zu tragen und gut sichtbare Kleidung anzuziehen.",
+        ],
+        questions: [
+          c("¿Por qué cambian a la bicicleta muchas personas?", ["Por el tránsito y la dificultad de estacionar", "Por el precio de la nafta", "Por el clima", "Por obligación"], "«Im Stau verliert man viel Zeit… Parkplatz»."),
+          tf("En bici se llega casi siempre más despacio.", false, "«meistens schneller ans Ziel»."),
+          c("¿Qué problema tiene andar en bici?", ["Muchas calles no tienen ciclovía", "Las bicis son caras", "No hay dónde dejarlas", "Hay muchas cuestas"], "«keine eigenen Radwege»."),
+          tf("Las asociaciones están conformes con la situación.", false, "«fordern Verbände seit Jahren»."),
+          c("¿Por qué tarda la construcción de ciclovías, según la ciudad?", ["Hay que angostar calles y falta dinero", "Faltan obreros", "Hay protestas", "Falta el permiso"], "«Straßen verengt… Geld fehle»."),
+          c("¿Qué recomiendan los expertos mientras tanto?", ["Usar casco y ropa bien visible", "No usar la bici de noche", "Ir por la vereda", "Cambiar de ruta"], "«Helm… gut sichtbare Kleidung»."),
+        ],
+      },
+      {
+        title: "E-Mail vom Nachbarn",
+        text: [
+          "Liebe Frau Weber, leider muss ich Ihnen schreiben, dass ich am Samstag um zwei Uhr nachts wieder Musik aus Ihrer Wohnung gehört habe. Ich habe schon beim letzten Mal geklopft, aber niemand hat geöffnet. Ich verstehe, dass man manchmal feiern möchte, aber ich muss um sechs Uhr zur Arbeit aufstehen. Könnten Sie bitte nach zweiundzwanzig Uhr leiser sein? Falls es ein Problem gibt, können wir gern in Ruhe sprechen. Viele Grüße, Thomas Kern",
+        ],
+        questions: [
+          c("¿De qué se queja Herr Kern?", ["De la música de noche", "De las visitas", "De un perro", "De la basura"], "«Musik aus Ihrer Wohnung»."),
+          fi("¿A qué hora de la noche escuchó la música?", ["2", "zwei"], "«um zwei Uhr nachts»."),
+          tf("La última vez golpeó y le abrieron.", false, "«niemand hat geöffnet»."),
+          c("¿Qué le pide?", ["Que haga menos ruido después de las 22", "Que no haga fiestas", "Que se mude", "Que le pague"], "«nach zweiundzwanzig Uhr leiser»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Einladung zum Vorstellungsgespräch",
+        setting: "Frau Dietz, de una empresa, llama a Herr Vogel",
+        lines: [
+          { who: "f", name: "Frau Dietz", de: "Guten Tag, Herr Vogel, hier ist Dietz von der Firma Nordwerk. Sie haben sich bei uns als Lagerleiter beworben." },
+          { who: "m", name: "Herr Vogel", de: "Ja, guten Tag, Frau Dietz. Schön, dass Sie anrufen." },
+          { who: "f", name: "Frau Dietz", de: "Wir haben Ihre Unterlagen gelesen und möchten Sie gern zu einem Gespräch einladen." },
+          { who: "m", name: "Herr Vogel", de: "Das freut mich sehr. Wann wäre das möglich?" },
+          { who: "f", name: "Frau Dietz", de: "Am Mittwoch, den zwölften, um zehn Uhr, oder am Donnerstag um vierzehn Uhr. Das Gespräch dauert etwa eine Stunde." },
+          { who: "m", name: "Herr Vogel", de: "Mittwoch passt mir gut. Wo muss ich hinkommen?" },
+          { who: "f", name: "Frau Dietz", de: "In unsere Zentrale in der Hafenstraße vierzehn. Fragen Sie am Empfang nach mir. Bitte bringen Sie Ihre Zeugnisse mit." },
+          { who: "m", name: "Herr Vogel", de: "Gern. Gibt es einen Parkplatz?" },
+          { who: "f", name: "Frau Dietz", de: "Ja, direkt hinter dem Gebäude, aber nur für Besucher. Ein Schild zeigt Ihnen den Weg." },
+          { who: "m", name: "Herr Vogel", de: "Perfekt. Dann bis Mittwoch, Frau Dietz. Vielen Dank für den Anruf." },
+        ],
+        questions: [
+          c("¿A qué puesto se postuló?", ["Jefe de depósito", "Contador", "Chofer", "Vendedor"], "«als Lagerleiter beworben»."),
+          c("¿Qué día y hora elige?", ["El miércoles 12 a las 10", "El jueves a las 14", "El lunes a las 9", "El viernes a las 11"], "«Mittwoch passt mir gut»."),
+          fi("¿Cuántas horas dura la entrevista, aproximadamente?", ["1", "eine", "ein", "einer"], "«etwa eine Stunde»."),
+          fi("¿Qué número tiene el edificio en la calle Hafenstraße?", ["14", "vierzehn"], "«Hafenstraße vierzehn»."),
+          tf("El estacionamiento es para todos.", false, "«nur für Besucher»."),
+          c("¿Qué tiene que llevar?", ["Sus certificados", "Una foto", "Un currículum nuevo", "Su documento solamente"], "«Bitte bringen Sie Ihre Zeugnisse mit»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un mail a tu docente de alemán: no podés ir a la próxima clase. Explicá el motivo, pedí el material de esa clase y proponé cómo podés recuperarla.",
+      focus: ["Anrede und Grußformel (formell)", "Grund mit weil / da", "höfliche Bitte (Könnten Sie…?)"],
+      minSentences: 6,
+      hint: "Tono formal pero cercano: «Sehr geehrte Frau …».",
+    },
+  },
   {
     id: "b2-1",
     level: "B2",

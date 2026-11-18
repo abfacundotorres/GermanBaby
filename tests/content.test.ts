@@ -272,15 +272,17 @@ test("biblioteca de lecturas: formato, traducción párrafo a párrafo y pregunt
 test("simulacros: textos, audios y preguntas bien formados, con respuestas dentro de las opciones", async () => {
   const { EXAMS } = await import("../lib/content/exams.ts");
   assert.equal(new Set(EXAMS.map((e) => e.id)).size, EXAMS.length);
+  for (const lv of ["A2", "B1", "B2"]) assert.ok(EXAMS.some((e) => e.level === lv), `falta un simulacro de ${lv}`);
   for (const e of EXAMS) {
+    const min = e.level === "B2" ? { l: 10, h: 6, lines: 10 } : e.level === "B1" ? { l: 8, h: 5, lines: 10 } : { l: 8, h: 5, lines: 8 };
     const qs = [...e.lesen.flatMap((t) => t.questions), ...e.hoeren.flatMap((t) => t.questions)];
-    assert.ok(e.lesen.flatMap((t) => t.questions).length >= 10, `${e.id}: pocas preguntas de lectura`);
-    assert.ok(e.hoeren.flatMap((t) => t.questions).length >= 6, `${e.id}: pocas preguntas de escucha`);
+    assert.ok(e.lesen.flatMap((t) => t.questions).length >= min.l, `${e.id}: pocas preguntas de lectura`);
+    assert.ok(e.hoeren.flatMap((t) => t.questions).length >= min.h, `${e.id}: pocas preguntas de escucha`);
     for (const q of qs) {
       if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length && q.options.length >= 3, `${e.id}: opciones mal armadas: ${q.q}`);
       if (q.type === "fill") assert.ok(q.answers.length > 0 && q.answers.every((a) => matchFill(a, q.answers)));
     }
-    for (const t of e.hoeren) assert.ok(t.lines.length >= 10 && new Set(t.lines.map((l) => l.who)).size === 2, `${e.id}: el audio necesita dos voces`);
-    assert.ok(e.schreiben.minSentences >= 6 && e.schreiben.focus.length >= 3);
+    for (const t of e.hoeren) assert.ok(t.lines.length >= min.lines && new Set(t.lines.map((l) => l.who)).size === 2, `${e.id}: el audio necesita dos voces`);
+    assert.ok(e.schreiben.minSentences >= 5 && e.schreiben.focus.length >= 3);
   }
 });

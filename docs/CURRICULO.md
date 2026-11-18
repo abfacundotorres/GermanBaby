@@ -39,7 +39,7 @@ Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1,
 1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. A1, A2 y B1 están cerca; B2 avanza (80 %) pero es el que más falta. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
 2. **Input.** Hay 41 lecturas de unidad y 8 de la biblioteca, y unos 127 minutos de diálogos con voz sintética. Camino: más textos largos por nivel (B2 a 300–500 palabras), monólogos, tres voces y distintas velocidades.
 3. **Expresión escrita.** Un ejercicio libre por unidad, corregido por IA (sin probar contra el servicio real). Camino: más consignas, con rúbrica por nivel.
-4. **Medición.** Hay 2 simulacros de B2 (lectura, escucha y escritura). Faltan simulacros de A2 y B1, la expresión oral y un test inicial para ubicar al alumno.
+4. **Medición.** Hay 6 simulacros (2 de A2, 2 de B1, 2 de B2) con lectura, escucha y escritura. Faltan la expresión oral y un test inicial para ubicar al alumno, y más variantes por nivel.
 5. **Habla.** Pronunciación con Azure y charla de rol con Claude; ninguno probado en vivo. Es lo primero que hay que validar con uso real.
 
 ## Criterio de «nivel completo» (propuesto)
@@ -50,5 +50,5 @@ Un nivel se da por completo cuando cumple todo:
 - Todas las estructuras de la lista de arriba, con lección, ejercicios y práctica extra.
 - Volumen de lectura acumulado: A1 1.000, A2 3.000, B1 8.000, B2 20.000 palabras.
 - Escucha: diálogos, escuchas largas y, desde B1, monólogos.
-- Un simulacro del nivel resuelto con el 70 % o más.
+- Un simulacro del nivel resuelto con el 70 % o más (`/exam`).
 - `npm test` y `npm run bot -- --all` en verde.
