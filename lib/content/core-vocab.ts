@@ -1082,6 +1082,111 @@ ernst|serio|Das Problem ist ernst.|El problema es serio.
 unglaublich|increíble|Das ist unglaublich.|Es increíble.
 verantwortlich|responsable|Wer ist dafür verantwortlich?|¿Quién es responsable de eso?
 womöglich|quizás|Er hat es womöglich vergessen.|Quizás se olvidó.
+die Aussprache|la pronunciación|Seine Aussprache ist sehr klar.|Su pronunciación es muy clara.
+die Befürchtung|el temor|Meine Befürchtung war falsch.|Mi temor era infundado.
+die Begeisterung|el entusiasmo|Die Begeisterung der Kinder war groß.|El entusiasmo de los chicos era grande.
+die Einrichtung|el mobiliario / la institución|Die Einrichtung der Wohnung ist modern.|El mobiliario del departamento es moderno.
+die Freiwilligkeit|el carácter voluntario|Die Teilnahme beruht auf Freiwilligkeit.|La participación es de carácter voluntario.
+die Heimat|la tierra natal|Ich vermisse meine Heimat.|Extraño mi tierra.
+die Hilfsbereitschaft|la disposición a ayudar|Ihre Hilfsbereitschaft hat mich beeindruckt.|Su disposición a ayudar me impresionó.
+die Mitarbeit|la colaboración|Wir danken für Ihre Mitarbeit.|Agradecemos su colaboración.
+die Stimmung|el ambiente / el ánimo|Die Stimmung auf der Party war toll.|El ambiente en la fiesta era genial.
+die Trennung|la separación|Die Trennung war für beide schwer.|La separación fue difícil para los dos.
+die Unterstützung|el apoyo|Ich brauche deine Unterstützung.|Necesito tu apoyo.
+die Vergangenheit|el pasado|Wir sprechen nicht über die Vergangenheit.|No hablamos del pasado.
+die Verständigung|el entendimiento|Die Verständigung mit den Nachbarn klappt gut.|El entendimiento con los vecinos anda bien.
+die Wohngemeinschaft|el departamento compartido|Ich lebe in einer Wohngemeinschaft.|Vivo en un departamento compartido.
+die Zustimmung|la aprobación|Dafür brauchen wir deine Zustimmung.|Para eso necesitamos tu aprobación.
+der Abschied|la despedida|Der Abschied fiel uns schwer.|La despedida nos costó.
+der Ausländer|el extranjero|Als Ausländer braucht man ein Visum.|Como extranjero se necesita una visa.
+der Bewohner|el habitante|Die Bewohner des Hauses sind freundlich.|Los habitantes de la casa son amables.
+der Mitarbeiter|el empleado|Jeder Mitarbeiter bekommt einen Schlüssel.|Cada empleado recibe una llave.
+der Ort|el lugar|Das ist ein schöner Ort zum Wohnen.|Es un lindo lugar para vivir.
+der Rentner|el jubilado|Mein Onkel ist seit zwei Jahren Rentner.|Mi tío es jubilado desde hace dos años.
+der Rückweg|el camino de vuelta|Auf dem Rückweg kaufen wir Brot.|En el camino de vuelta compramos pan.
+der Schritt|el paso|Das ist ein wichtiger Schritt.|Es un paso importante.
+der Tipp|el consejo|Hast du einen Tipp für mich?|¿Tenés un consejo para mí?
+der Verkehr|el tránsito|Heute ist viel Verkehr.|Hoy hay mucho tránsito.
+der Vorgang|el proceso|Der Vorgang dauert nur wenige Minuten.|El proceso dura solo unos minutos.
+der Zeitraum|el período|In diesem Zeitraum ist das Büro geschlossen.|En ese período la oficina está cerrada.
+der Zugang|el acceso|Der Zugang zum Gebäude ist barrierefrei.|El acceso al edificio no tiene barreras.
+das Abenteuer|la aventura|Die Reise war ein echtes Abenteuer.|El viaje fue una verdadera aventura.
+das Bewerbungsgespräch|la entrevista de trabajo|Morgen habe ich ein Bewerbungsgespräch.|Mañana tengo una entrevista de trabajo.
+das Ende|el final|Am Ende war alles gut.|Al final todo salió bien.
+das Handwerk|el oficio|Er hat ein Handwerk gelernt.|Aprendió un oficio.
+das Lebensmittel|el alimento|Lebensmittel sind teurer geworden.|Los alimentos se encarecieron.
+das Mitglied|el miembro|Sie ist Mitglied im Sportverein.|Es miembro del club deportivo.
+das Niveau|el nivel|Das Niveau des Kurses ist hoch.|El nivel del curso es alto.
+das Recht|el derecho|Jeder hat das Recht auf Bildung.|Todos tienen derecho a la educación.
+das Schicksal|el destino|Das war einfach Schicksal.|Eso fue simplemente el destino.
+das Thema|el tema|Das Thema interessiert mich sehr.|El tema me interesa mucho.
+das Umfeld|el entorno|Ein gutes Umfeld hilft beim Lernen.|Un buen entorno ayuda a aprender.
+aufregen|alterarse / enfurecer|Du solltest dich nicht so aufregen.|No deberías alterarte tanto.
+befinden|encontrarse|Das Hotel befindet sich im Zentrum.|El hotel se encuentra en el centro.
+eignen|ser apto|Dieses Messer eignet sich nicht für Brot.|Este cuchillo no sirve para el pan.
+entstehen|surgir|Hier entsteht ein neues Viertel.|Aquí surge un barrio nuevo.
+ermitteln|averiguar|Die Polizei muss den Täter ermitteln.|La policía debe identificar al culpable.
+garantieren|garantizar|Wir garantieren pünktliche Lieferung.|Garantizamos la entrega puntual.
+gestalten|diseñar / organizar|Sie gestaltet den Garten selbst.|Ella diseña el jardín ella misma.
+lohnen|valer la pena|Der Ausflug lohnt sich.|La excursión vale la pena.
+raten|aconsejar|Ich rate dir, früh zu kommen.|Te aconsejo venir temprano.
+verreisen|irse de viaje|Wir wollen im Sommer verreisen.|Queremos irnos de viaje en verano.
+verwandeln|transformar|Der Regen verwandelt die Straße in einen Fluss.|La lluvia transforma la calle en un río.
+verzeihen|perdonar|Kannst du mir verzeihen?|¿Podés perdonarme?
+vorstellen|presentar / imaginar|Darf ich Ihnen meinen Kollegen vorstellen?|¿Puedo presentarle a mi colega?
+zurechtkommen|arreglárselas|Ich will allein gut zurechtkommen.|Quiero arreglármelas bien solo.
+altmodisch|anticuado|Sein Anzug ist altmodisch.|Su traje es anticuado.
+angenehm|agradable|Die Temperatur ist angenehm.|La temperatura es agradable.
+arbeitslos|desempleado|Er war ein Jahr lang arbeitslos.|Estuvo desempleado un año.
+ausländisch|extranjero|Wir haben ausländische Gäste.|Tenemos invitados extranjeros.
+außergewöhnlich|extraordinario|Das war ein außergewöhnlicher Abend.|Fue una noche extraordinaria.
+befreundet|amigo|Wir sind seit Jahren befreundet.|Somos amigos desde hace años.
+begeistert|entusiasmado|Die Kinder sind begeistert.|Los chicos están entusiasmados.
+behindert|con discapacidad|Der Eingang ist für behinderte Menschen geeignet.|La entrada es apta para personas con discapacidad.
+beschäftigt|ocupado|Ich bin heute sehr beschäftigt.|Hoy estoy muy ocupado.
+besorgt|preocupado|Seine Mutter ist besorgt.|Su madre está preocupada.
+bisherig|hasta ahora / anterior|Die bisherigen Ergebnisse sind gut.|Los resultados hasta ahora son buenos.
+durchschnittlich|promedio|Die durchschnittliche Miete liegt bei 800 Euro.|El alquiler promedio es de 800 euros.
+einheimisch|local|Wir probieren einheimische Gerichte.|Probamos platos locales.
+entfernt|lejano|Das Dorf ist weit entfernt.|El pueblo está muy lejos.
+erlaubt|permitido|Rauchen ist hier nicht erlaubt.|Aquí no está permitido fumar.
+erwachsen|adulto|Ihre Kinder sind schon erwachsen.|Sus hijos ya son adultos.
+europäisch|europeo|Das ist eine europäische Regel.|Es una regla europea.
+extrem|extremo|Im Winter ist es hier extrem kalt.|En invierno acá hace un frío extremo.
+fähig|capaz|Er ist zu allem fähig.|Es capaz de todo.
+gebildet|culto|Sie ist eine sehr gebildete Frau.|Es una mujer muy culta.
+geduldig|paciente|Die Lehrerin ist sehr geduldig.|La docente es muy paciente.
+gesellig|sociable|Mein Bruder ist gesellig.|Mi hermano es sociable.
+gleichberechtigt|con igualdad de derechos|Frauen und Männer sind gleichberechtigt.|Mujeres y hombres tienen los mismos derechos.
+häufig|frecuente|Er kommt häufig zu spät.|Llega tarde con frecuencia.
+heimlich|a escondidas|Sie hat heimlich geweint.|Lloró a escondidas.
+kostenlos|gratis|Der Eintritt ist kostenlos.|La entrada es gratis.
+kürzlich|recientemente|Ich habe ihn kürzlich gesehen.|Lo vi hace poco.
+lässig|despreocupado|Er geht lässig durch die Stadt.|Camina despreocupado por la ciudad.
+nervös|nervioso|Vor der Prüfung bin ich immer nervös.|Antes del examen siempre estoy nervioso.
+rechtzeitig|a tiempo|Wir sind rechtzeitig angekommen.|Llegamos a tiempo.
+reif|maduro|Die Äpfel sind schon reif.|Las manzanas ya están maduras.
+schüchtern|tímido|Sie ist sehr schüchtern.|Es muy tímida.
+tolerant|tolerante|Meine Eltern sind tolerant.|Mis padres son tolerantes.
+üblich|habitual|Das ist hier so üblich.|Acá es lo habitual.
+unbedingt|sin falta|Du musst unbedingt kommen.|Tenés que venir sin falta.
+ungewöhnlich|inusual|Das ist ein ungewöhnlicher Name.|Es un nombre inusual.
+unterwegs|en camino|Wir sind noch unterwegs.|Todavía estamos en camino.
+vernünftig|sensato|Das ist ein vernünftiger Plan.|Es un plan sensato.
+vorbereitet|preparado|Ich bin gut vorbereitet.|Estoy bien preparado.
+witzig|gracioso|Dein Freund ist wirklich witzig.|Tu amigo es muy gracioso.
+wütend|furioso|Er war wütend auf mich.|Estaba furioso conmigo.
+angesichts|ante / en vista de|Angesichts der Lage warten wir ab.|En vista de la situación, esperamos.
+anscheinend|aparentemente|Anscheinend ist niemand zu Hause.|Aparentemente no hay nadie en casa.
+ansonsten|por lo demás|Ansonsten ist alles in Ordnung.|Por lo demás, todo está en orden.
+derzeit|actualmente|Derzeit wohne ich in Wien.|Actualmente vivo en Viena.
+dennoch|aun así|Es regnete, dennoch gingen wir spazieren.|Llovía, aun así salimos a caminar.
+genauso|igual / de la misma manera|Ich sehe das genauso.|Lo veo igual.
+sowohl|tanto|Sowohl er als auch sie kommen mit.|Tanto él como ella vienen.
+sozusagen|por así decirlo|Das ist sozusagen mein zweites Zuhause.|Es, por así decirlo, mi segundo hogar.
+spätestens|a más tardar|Ich rufe dich spätestens morgen an.|Te llamo mañana a más tardar.
+stets|siempre|Er ist stets freundlich.|Siempre es amable.
+weder|ni|Er hat weder Zeit noch Geld.|No tiene ni tiempo ni plata.
 ## B2
 abwägen|sopesar|Wir müssen Vor- und Nachteile abwägen.|Tenemos que sopesar ventajas y desventajas.
 abschaffen|abolir|Die Stadt will die Gebühr abschaffen.|La ciudad quiere abolir la tasa.
@@ -2177,6 +2282,201 @@ rechtmäßig|legítimo|Das ist ein rechtmäßiger Anspruch.|Es un derecho legít
 vergleichbar|comparable|Die Fälle sind nicht vergleichbar.|Los casos no son comparables.
 vorrangig|prioritario|Das ist vorrangig zu behandeln.|Eso debe tratarse con prioridad.
 zwangsläufig|por fuerza|Das führt zwangsläufig zu Problemen.|Eso lleva por fuerza a problemas.
+die Abgrenzung|la delimitación|Die Abgrenzung der beiden Begriffe fällt schwer.|Delimitar los dos conceptos cuesta.
+die Abschreckung|la disuasión|Hohe Strafen dienen der Abschreckung.|Las penas altas sirven para disuadir.
+die Akzeptanz|la aceptación|Die Akzeptanz neuer Regeln braucht Zeit.|La aceptación de nuevas reglas lleva tiempo.
+die Alternative|la alternativa|Es gibt keine echte Alternative.|No hay una alternativa real.
+die Analyse|el análisis|Die Analyse zeigt klare Ergebnisse.|El análisis muestra resultados claros.
+die Anerkennung|el reconocimiento|Sie bekam viel Anerkennung für ihre Arbeit.|Recibió mucho reconocimiento por su trabajo.
+die Argumentation|la argumentación|Seine Argumentation ist logisch aufgebaut.|Su argumentación está construida con lógica.
+die Aufklärung|la información / el esclarecimiento|Die Aufklärung über Risiken ist wichtig.|Informar sobre los riesgos es importante.
+die Auflage|la condición impuesta|Die Genehmigung kommt mit strengen Auflagen.|La autorización viene con condiciones estrictas.
+die Aufmerksamkeit|la atención|Das Thema findet wenig Aufmerksamkeit.|El tema recibe poca atención.
+die Ausbeutung|la explotación|Die Ausbeutung von Arbeitern ist verboten.|La explotación de trabajadores está prohibida.
+die Ausgrenzung|la exclusión|Ausgrenzung beginnt oft in der Schule.|La exclusión suele empezar en la escuela.
+die Barriere|la barrera|Sprache kann eine Barriere sein.|El idioma puede ser una barrera.
+die Begrenzung|el límite|Es gibt eine Begrenzung der Teilnehmerzahl.|Hay un límite en la cantidad de participantes.
+die Benachteiligung|la desventaja / la discriminación|Niemand darf eine Benachteiligung erfahren.|Nadie debe sufrir discriminación.
+die Beschränkung|la restricción|Die Beschränkung gilt nur nachts.|La restricción rige solo de noche.
+die Betonung|el énfasis|Die Betonung liegt auf der ersten Silbe.|El acento está en la primera sílaba.
+die Beweisführung|la demostración|Die Beweisführung war lückenlos.|La demostración fue impecable.
+die Chance|la oportunidad|Jeder verdient eine zweite Chance.|Todos merecen una segunda oportunidad.
+die Dringlichkeit|la urgencia|Die Dringlichkeit des Problems ist klar.|La urgencia del problema es evidente.
+die Effizienz|la eficiencia|Die Effizienz der Abläufe soll steigen.|La eficiencia de los procesos debe aumentar.
+die Eigenverantwortung|la responsabilidad propia|Wir setzen auf Eigenverantwortung.|Apostamos a la responsabilidad individual.
+die Einbürgerung|la naturalización|Die Einbürgerung dauert mehrere Monate.|La naturalización lleva varios meses.
+die Einmischung|la intromisión|Wir lehnen jede Einmischung ab.|Rechazamos cualquier intromisión.
+die Entlastung|el alivio|Die Steuerreform bringt eine Entlastung.|La reforma tributaria trae un alivio.
+die Entscheidungsfreiheit|la libertad de decisión|Jeder hat Entscheidungsfreiheit.|Todos tienen libertad de decisión.
+die Erwerbstätigkeit|la actividad laboral|Die Erwerbstätigkeit der Frauen nimmt zu.|La actividad laboral de las mujeres aumenta.
+die Forschung|la investigación|Die Forschung braucht mehr Geld.|La investigación necesita más dinero.
+die Gefährdung|el peligro|Es besteht keine Gefährdung der Gesundheit.|No hay peligro para la salud.
+die Gewaltfreiheit|la no violencia|Der Protest setzte auf Gewaltfreiheit.|La protesta apostó por la no violencia.
+die Handlungsfähigkeit|la capacidad de acción|Die Handlungsfähigkeit der Regierung ist begrenzt.|La capacidad de acción del gobierno es limitada.
+die Hervorhebung|el realce|Die Hervorhebung wichtiger Stellen hilft beim Lernen.|Resaltar pasajes importantes ayuda a aprender.
+die Hintergrundinformation|la información de contexto|Der Artikel liefert viel Hintergrundinformation.|El artículo da mucha información de contexto.
+die Infrastruktur|la infraestructura|Die Infrastruktur auf dem Land ist schwach.|La infraestructura en el campo es débil.
+die Integration|la integración|Sprache ist der Schlüssel zur Integration.|El idioma es la clave de la integración.
+die Interpretation|la interpretación|Das Gedicht erlaubt mehrere Interpretationen.|El poema admite varias interpretaciones.
+die Kernaussage|el mensaje central|Die Kernaussage des Textes ist einfach.|El mensaje central del texto es simple.
+die Klarstellung|la aclaración|Eine Klarstellung ist nötig.|Hace falta una aclaración.
+die Kompetenz|la competencia|Soziale Kompetenz ist im Beruf wichtig.|La competencia social es importante en el trabajo.
+die Lebensgrundlage|la base de subsistencia|Das Meer ist ihre Lebensgrundlage.|El mar es su base de subsistencia.
+die Lehre|la enseñanza / la doctrina|Aus der Krise ziehen wir eine Lehre.|De la crisis sacamos una enseñanza.
+die Mehrwertsteuer|el IVA|Die Mehrwertsteuer wurde erhöht.|Se subió el IVA.
+die Migration|la migración|Migration prägt die Geschichte Europas.|La migración marca la historia de Europa.
+die Mitverantwortung|la corresponsabilidad|Wir tragen Mitverantwortung für das Ergebnis.|Tenemos corresponsabilidad por el resultado.
+die Nachfolge|la sucesión|Die Nachfolge in der Firma ist geregelt.|La sucesión en la empresa está resuelta.
+die Nachhaltigkeit|la sostenibilidad|Nachhaltigkeit ist ein wichtiges Ziel.|La sostenibilidad es un objetivo importante.
+die Normalität|la normalidad|Langsam kehrt Normalität zurück.|De a poco vuelve la normalidad.
+die Obergrenze|el tope|Es gibt eine Obergrenze für die Kosten.|Hay un tope para los costos.
+die Prävention|la prevención|Prävention ist besser als Behandlung.|La prevención es mejor que el tratamiento.
+die Priorität|la prioridad|Sicherheit hat Priorität.|La seguridad tiene prioridad.
+die Provokation|la provocación|Das war eine bewusste Provokation.|Fue una provocación deliberada.
+die Qualifikation|la calificación|Seine Qualifikation reicht für die Stelle.|Su calificación alcanza para el puesto.
+die Realität|la realidad|Die Realität sieht anders aus.|La realidad es distinta.
+die Rechtfertigung|la justificación|Dafür gibt es keine Rechtfertigung.|Para eso no hay justificación.
+die Reihenfolge|el orden / la secuencia|Die Reihenfolge der Aufgaben ist egal.|El orden de las tareas da igual.
+die Relevanz|la relevancia|Die Relevanz des Themas ist unbestritten.|La relevancia del tema es indiscutible.
+die Reputation|la reputación|Die Firma hat eine gute Reputation.|La empresa tiene buena reputación.
+die Schwelle|el umbral|Die Schwelle zum Einstieg ist niedrig.|El umbral de entrada es bajo.
+die Selbstständigkeit|la autonomía / el trabajo independiente|Sie träumt von der Selbstständigkeit.|Sueña con trabajar por su cuenta.
+die Spaltung|la división|Die Spaltung der Gesellschaft macht Sorgen.|La división de la sociedad preocupa.
+die Steuerung|el control / la dirección|Die Steuerung des Projekts liegt bei ihr.|La conducción del proyecto está a su cargo.
+die Struktur|la estructura|Der Text hat eine klare Struktur.|El texto tiene una estructura clara.
+die Transparenz|la transparencia|Wir fordern mehr Transparenz.|Pedimos más transparencia.
+die Überlastung|la sobrecarga|Die Überlastung der Mitarbeiter ist ein Problem.|La sobrecarga de los empleados es un problema.
+die Überprüfung|la verificación|Eine Überprüfung der Zahlen ist nötig.|Hace falta verificar las cifras.
+die Überzeugungskraft|el poder de convicción|Ihre Rede hatte große Überzeugungskraft.|Su discurso tuvo gran poder de convicción.
+die Umgangsform|los modales|Gute Umgangsformen sind wichtig.|Los buenos modales son importantes.
+die Ungleichheit|la desigualdad|Die soziale Ungleichheit wächst.|La desigualdad social crece.
+die Verallgemeinerung|la generalización|Das ist eine unzulässige Verallgemeinerung.|Es una generalización inadmisible.
+die Verantwortlichkeit|la responsabilidad (competencia)|Die Verantwortlichkeiten sind klar verteilt.|Las responsabilidades están claramente repartidas.
+die Verbreitung|la difusión|Die Verbreitung von Falschmeldungen schadet.|La difusión de noticias falsas perjudica.
+die Verfügbarkeit|la disponibilidad|Die Verfügbarkeit der Ware ist begrenzt.|La disponibilidad del producto es limitada.
+die Vergütung|la remuneración|Die Vergütung richtet sich nach der Erfahrung.|La remuneración depende de la experiencia.
+die Verhältnismäßigkeit|la proporcionalidad|Die Verhältnismäßigkeit der Maßnahme ist fraglich.|La proporcionalidad de la medida es dudosa.
+die Verknüpfung|el vínculo|Die Verknüpfung der Daten ist problematisch.|El cruce de los datos es problemático.
+die Verlässlichkeit|la fiabilidad|Wir schätzen seine Verlässlichkeit.|Valoramos su fiabilidad.
+die Vermittlung|la mediación|Die Vermittlung zwischen beiden Seiten gelang.|La mediación entre ambas partes tuvo éxito.
+die Verschärfung|el endurecimiento|Die Verschärfung der Regeln stößt auf Kritik.|El endurecimiento de las reglas recibe críticas.
+die Versorgung|el abastecimiento|Die Versorgung mit Wasser ist gesichert.|El abastecimiento de agua está asegurado.
+die Verteilung|la distribución|Die Verteilung des Geldes ist ungerecht.|La distribución del dinero es injusta.
+die Verweigerung|la negativa|Seine Verweigerung überraschte alle.|Su negativa sorprendió a todos.
+die Vorgabe|la pauta|Wir halten uns an die Vorgaben.|Nos atenemos a las pautas.
+die Vorreiterrolle|el papel de pionero|Das Land übernimmt die Vorreiterrolle.|El país asume el papel de pionero.
+die Wahrscheinlichkeit|la probabilidad|Die Wahrscheinlichkeit für Regen ist hoch.|La probabilidad de lluvia es alta.
+die Wettbewerbsfähigkeit|la competitividad|Die Wettbewerbsfähigkeit der Firma sinkt.|La competitividad de la empresa baja.
+die Widerlegung|la refutación|Die Widerlegung der These gelang schnell.|La refutación de la tesis fue rápida.
+die Wirksamkeit|la eficacia|Die Wirksamkeit des Mittels ist belegt.|La eficacia del remedio está comprobada.
+die Zuordnung|la asignación|Die Zuordnung der Daten ist fehlerhaft.|La asignación de los datos es errónea.
+die Zusammenfassung|el resumen|Schreib bitte eine kurze Zusammenfassung.|Escribí por favor un resumen corto.
+der Anreiz|el incentivo|Steuern setzen einen Anreiz zum Sparen.|Los impuestos crean un incentivo para ahorrar.
+der Anstieg|el aumento|Der Anstieg der Preise ist spürbar.|El aumento de los precios se nota.
+der Appell|el llamado|Der Appell an die Bürger blieb ohne Wirkung.|El llamado a los ciudadanos no tuvo efecto.
+der Aspekt|el aspecto|Das ist ein wichtiger Aspekt.|Es un aspecto importante.
+der Begriff|el concepto|Der Begriff ist schwer zu erklären.|El concepto es difícil de explicar.
+der Betrag|el monto|Der Betrag wird abgebucht.|El monto se debita.
+der Diskurs|el discurso (debate)|Der öffentliche Diskurs hat sich verändert.|El debate público cambió.
+der Entwurf|el borrador|Der Entwurf wird noch überarbeitet.|El borrador todavía se está revisando.
+der Ertrag|el rendimiento|Der Ertrag der Ernte war gering.|El rendimiento de la cosecha fue bajo.
+der Faktor|el factor|Zeit ist ein entscheidender Faktor.|El tiempo es un factor decisivo.
+der Fehlschluss|la falacia|Das ist ein logischer Fehlschluss.|Es una falacia lógica.
+der Gegenpol|el polo opuesto|Er bildet den Gegenpol zu seinem Bruder.|Es el polo opuesto de su hermano.
+der Handlungsbedarf|la necesidad de actuar|Es besteht dringender Handlungsbedarf.|Hay una urgente necesidad de actuar.
+der Hinweis|la indicación|Beachten Sie bitte den Hinweis.|Tenga en cuenta la indicación.
+der Kontext|el contexto|Im Kontext ergibt der Satz Sinn.|En contexto, la frase tiene sentido.
+der Konsens|el consenso|Wir haben einen Konsens erreicht.|Alcanzamos un consenso.
+der Kontrast|el contraste|Der Kontrast zwischen beiden ist groß.|El contraste entre ambos es grande.
+der Kritiker|el crítico|Die Kritiker sind in der Minderheit.|Los críticos son minoría.
+der Lebensstil|el estilo de vida|Ein gesunder Lebensstil schützt vor Krankheiten.|Un estilo de vida sano protege de enfermedades.
+der Leitfaden|la guía|Der Leitfaden erklärt jeden Schritt.|La guía explica cada paso.
+der Mehrwert|el valor agregado|Das Angebot bietet einen echten Mehrwert.|La oferta da un verdadero valor agregado.
+der Mittelpunkt|el centro|Das Kind steht im Mittelpunkt.|El niño está en el centro.
+der Rückschritt|el retroceso|Das wäre ein Rückschritt.|Eso sería un retroceso.
+der Trend|la tendencia|Der Trend geht zu mehr Homeoffice.|La tendencia va hacia más home office.
+der Überblick|la visión de conjunto|Ich verschaffe mir einen Überblick.|Me hago una idea general.
+der Urheber|el autor (de una obra)|Der Urheber des Fotos ist unbekannt.|El autor de la foto es desconocido.
+der Verdienst|el ingreso|Sein Verdienst reicht für die Miete.|Su ingreso alcanza para el alquiler.
+der Vorbehalt|la reserva|Ich habe Vorbehalte gegen den Plan.|Tengo reservas sobre el plan.
+der Zeitgeist|el espíritu de la época|Das passt zum Zeitgeist.|Eso encaja con el espíritu de la época.
+der Zusammenschluss|la fusión / la asociación|Der Zusammenschluss der Firmen wurde genehmigt.|Se aprobó la fusión de las empresas.
+das Fazit|la conclusión|Mein Fazit ist positiv.|Mi conclusión es positiva.
+das Grundrecht|el derecho fundamental|Die Meinungsfreiheit ist ein Grundrecht.|La libertad de opinión es un derecho fundamental.
+das Kriterium|el criterio|Preis ist nicht das einzige Kriterium.|El precio no es el único criterio.
+das Leitbild|la visión rectora|Das Leitbild der Schule betont Respekt.|La visión rectora de la escuela destaca el respeto.
+das Merkmal|la característica|Ein typisches Merkmal ist die Farbe.|Una característica típica es el color.
+das Motiv|el motivo|Das Motiv der Tat ist unklar.|El motivo del hecho no está claro.
+das Paradox|la paradoja|Das ist ein echtes Paradox.|Es una verdadera paradoja.
+das Plädoyer|el alegato|Sein Plädoyer überzeugte die Jury.|Su alegato convenció al jurado.
+das Potenzial|el potencial|Das Projekt hat großes Potenzial.|El proyecto tiene gran potencial.
+das Prinzip|el principio|Das Prinzip ist einfach.|El principio es simple.
+das Privileg|el privilegio|Bildung ist kein Privileg.|La educación no es un privilegio.
+das Resultat|el resultado|Das Resultat überraschte uns.|El resultado nos sorprendió.
+das Selbstbild|la autoimagen|Ihr Selbstbild hat sich verändert.|Su autoimagen cambió.
+das Spannungsfeld|el campo de tensión|Er arbeitet im Spannungsfeld von Politik und Wirtschaft.|Trabaja en el campo de tensión entre política y economía.
+das Stereotyp|el estereotipo|Das Stereotyp stimmt nicht.|El estereotipo no es cierto.
+das Tabu|el tabú|Über Geld zu reden ist ein Tabu.|Hablar de plata es un tabú.
+das Umdenken|el cambio de mentalidad|Es braucht ein Umdenken in der Politik.|Hace falta un cambio de mentalidad en la política.
+abweichen|desviarse|Die Ergebnisse können stark abweichen.|Los resultados pueden desviarse mucho.
+anfechten|impugnar|Sie will das Urteil anfechten.|Quiere impugnar la sentencia.
+anknüpfen|retomar|Wir können an das Gespräch anknüpfen.|Podemos retomar la conversación.
+anprangern|denunciar públicamente|Die Zeitung will die Missstände anprangern.|El diario quiere denunciar los abusos.
+außer Acht lassen|dejar de lado|Man darf diesen Punkt nicht außer Acht lassen.|No se debe dejar de lado este punto.
+befragen|consultar / interrogar|Wir wollen hundert Personen befragen.|Queremos encuestar a cien personas.
+begünstigen|favorecer|Das Wetter kann die Ernte begünstigen.|El clima puede favorecer la cosecha.
+berufen|nombrar / apelar a|Sie wurde in die Kommission berufen.|La nombraron en la comisión.
+beziffern|cuantificar|Man kann den Schaden schwer beziffern.|El daño es difícil de cuantificar.
+deuten|interpretar|Wie soll man dieses Zeichen deuten?|¿Cómo hay que interpretar esta señal?
+durchschauen|ver a través de|Er kann sie leicht durchschauen.|Puede calarla fácilmente.
+entkräften|desvirtuar|Das Gutachten kann den Vorwurf entkräften.|El peritaje puede desvirtuar la acusación.
+entlarven|desenmascarar|Der Bericht will den Betrug entlarven.|El informe quiere desenmascarar el fraude.
+erfordern|requerir|Diese Aufgabe erfordert viel Geduld.|Esta tarea requiere mucha paciencia.
+erproben|probar|Wir wollen das Verfahren erproben.|Queremos probar el procedimiento.
+gewichten|ponderar|Man muss die Argumente gewichten.|Hay que ponderar los argumentos.
+offenlegen|revelar|Die Firma muss ihre Zahlen offenlegen.|La empresa debe revelar sus cifras.
+relativieren|relativizar|Man sollte das Ergebnis relativieren.|Habría que relativizar el resultado.
+sich stützen|apoyarse|Er will sich auf Studien stützen.|Quiere apoyarse en estudios.
+überdenken|reconsiderar|Wir sollten den Plan überdenken.|Deberíamos reconsiderar el plan.
+verallgemeinern|generalizar|Man darf nicht verallgemeinern.|No se debe generalizar.
+vorwerfen|reprochar|Man kann ihm nichts vorwerfen.|No se le puede reprochar nada.
+zugestehen|conceder|Ich muss ihm das zugestehen.|Tengo que concederle eso.
+abstrakt|abstracto|Das Thema ist sehr abstrakt.|El tema es muy abstracto.
+aktiv|activo|Er ist politisch aktiv.|Es políticamente activo.
+alltäglich|cotidiano|Das ist eine alltägliche Situation.|Es una situación cotidiana.
+angebracht|apropiado|Vorsicht ist hier angebracht.|Aquí corresponde tener cuidado.
+angesehen|respetado|Sie ist eine angesehene Ärztin.|Es una médica respetada.
+anhaltend|persistente|Der anhaltende Regen macht Probleme.|La lluvia persistente causa problemas.
+anstößig|ofensivo|Der Text enthält anstößige Wörter.|El texto contiene palabras ofensivas.
+ausschlaggebend|decisivo|Das war der ausschlaggebende Grund.|Ese fue el motivo decisivo.
+bahnbrechend|revolucionario|Das ist eine bahnbrechende Entdeckung.|Es un descubrimiento revolucionario.
+bedingt|condicionado|Die Erlaubnis ist bedingt gültig.|El permiso es válido con condiciones.
+befangen|parcial|Der Richter galt als befangen.|Se consideró parcial al juez.
+beispielhaft|ejemplar|Ihr Einsatz ist beispielhaft.|Su dedicación es ejemplar.
+bemerkenswert|notable|Das ist ein bemerkenswertes Ergebnis.|Es un resultado notable.
+bestimmend|determinante|Das Thema ist bestimmend für die Debatte.|El tema es determinante para el debate.
+eindringlich|enfático|Er warnte eindringlich vor den Folgen.|Advirtió con insistencia sobre las consecuencias.
+einschneidend|drástico|Das waren einschneidende Veränderungen.|Fueron cambios drásticos.
+engagiert|comprometido|Sie ist eine engagierte Lehrerin.|Es una docente comprometida.
+erfahrungsgemäß|según la experiencia|Erfahrungsgemäß dauert das länger.|Según la experiencia, eso tarda más.
+folgenreich|de graves consecuencias|Das war ein folgenreicher Fehler.|Fue un error de graves consecuencias.
+gravierend|grave|Das ist ein gravierender Unterschied.|Es una diferencia grave.
+heikel|delicado|Das ist ein heikles Thema.|Es un tema delicado.
+herkömmlich|convencional|Herkömmliche Methoden reichen nicht.|Los métodos convencionales no alcanzan.
+nachvollziehbar|comprensible|Seine Entscheidung ist nachvollziehbar.|Su decisión es comprensible.
+offenkundig|evidente|Das ist offenkundig falsch.|Es evidentemente falso.
+pauschal|generalizado|Man darf nicht pauschal urteilen.|No se debe juzgar de manera generalizada.
+ungerecht|injusto|Das Urteil ist ungerecht.|La sentencia es injusta.
+unumstritten|indiscutido|Sein Talent ist unumstritten.|Su talento es indiscutido.
+verhältnismäßig|relativamente|Die Preise sind verhältnismäßig niedrig.|Los precios son relativamente bajos.
+vielschichtig|complejo / multifacético|Das Problem ist vielschichtig.|El problema es multifacético.
+zukunftsweisend|que marca el rumbo|Das ist ein zukunftsweisendes Projekt.|Es un proyecto que marca el rumbo.
+zweifelhaft|dudoso|Die Quelle ist zweifelhaft.|La fuente es dudosa.
+gegebenenfalls|llegado el caso|Gegebenenfalls rufen wir Sie an.|Llegado el caso, lo llamamos.
+nichtsdestotrotz|no obstante|Nichtsdestotrotz bleibt der Plan bestehen.|No obstante, el plan se mantiene.
+infolgedessen|por consiguiente|Infolgedessen wurde der Termin verschoben.|Por consiguiente, se pospuso la fecha.
+umgekehrt|al revés|Es war genau umgekehrt.|Fue exactamente al revés.
+ungeachtet|sin tener en cuenta|Ungeachtet der Kritik machte er weiter.|Sin tener en cuenta las críticas, siguió.
 `;
 
 export type CoreLevel = "A1" | "A2" | "B1" | "B2";
