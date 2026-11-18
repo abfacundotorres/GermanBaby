@@ -10,7 +10,7 @@ const MAX_CLIPS = 400; // ~15-30 KB cada uno → unos pocos MB
 
 type Clip = { key: string; blob: Blob; at: number };
 
-export const clipKey = (voice: string, slow: boolean, text: string) => `${voice}|${slow ? "slow" : "norm"}|${text}`;
+export const clipKey = (voice: string, slow: boolean | "fast", text: string) => `${voice}|${slow === "fast" ? "fast" : slow ? "slow" : "norm"}|${text}`;
 
 let dbPromise: Promise<IDBDatabase | null> | null = null;
 function open(): Promise<IDBDatabase | null> {

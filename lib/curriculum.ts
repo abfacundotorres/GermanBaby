@@ -76,7 +76,7 @@ export type GrammarRule = {
   examples?: { de: string; es: string }[];
 };
 
-export type Speaker = "f" | "m"; // f = voz de mujer, m = voz de hombre
+export type Speaker = "f" | "m" | "f2" | "m2"; // f/m = voces principales; f2/m2 = tercera voz (conversaciones de tres)
 export type DialogueLine = { who: Speaker; name: string; de: string; es: string };
 /** Pregunta de comprensión. `why` explica dónde estaba la respuesta. */
 export type ListenQuestion =

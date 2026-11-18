@@ -309,3 +309,14 @@ test("expresión oral: consignas bien formadas y todos los niveles cubiertos", a
   for (const lv of ["A1", "A2", "B1", "B2"]) assert.ok(SPEAKING.filter((t) => t.level === lv).length >= 2, lv);
   for (const t of SPEAKING) assert.ok(t.points.length >= 2 && t.minSeconds < t.maxSeconds && t.prompt.length > 40, t.id);
 });
+
+test("escucha libre: monólogos de una voz, conversaciones de tres y preguntas bien armadas", async () => {
+  const { LISTENING } = await import("../lib/content/listening.ts");
+  assert.equal(new Set(LISTENING.map((t) => t.id)).size, LISTENING.length);
+  for (const t of LISTENING) {
+    const voices = new Set(t.dialogue.lines.map((l) => l.who)).size;
+    assert.equal(voices, t.kind === "monolog" ? 1 : 3, `${t.id}: cantidad de voces`);
+    assert.ok(t.dialogue.questions.length >= 5 && t.dialogue.lines.length >= 5, t.id);
+    for (const q of t.dialogue.questions) if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length, `${t.id}: ${q.q}`);
+  }
+});

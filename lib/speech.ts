@@ -114,13 +114,17 @@ async function playBlob(blob: Blob, untilEnd = false) {
   if (untilEnd) await ended;
 }
 
+/** Velocidad: false = normal, true = lento, "fast" = rápido. */
+export type SpeakSpeed = boolean | "fast";
+const RATE = (s: SpeakSpeed) => (s === "fast" ? "+15%" : s ? "-35%" : "-5%");
+
 /** Pide el audio a Azure (sin reproducirlo) y devuelve el MP3. */
-async function synthesize(text: string, voice: string, slow: boolean): Promise<Blob> {
+async function synthesize(text: string, voice: string, slow: SpeakSpeed): Promise<Blob> {
   const { sdk, cfg } = await speechConfig();
   const synth = new sdk.SpeechSynthesizer(cfg, null as unknown as import("microsoft-cognitiveservices-speech-sdk").AudioConfig);
   const ssml =
     `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="de-DE">` +
-    `<voice name="${voice}"><prosody rate="${slow ? "-35%" : "-5%"}">${escapeXml(text)}</prosody></voice></speak>`;
+    `<voice name="${voice}"><prosody rate="${RATE(slow)}">${escapeXml(text)}</prosody></voice></speak>`;
   return new Promise<Blob>((resolve, reject) => {
     synth.speakSsmlAsync(
       ssml,
@@ -140,7 +144,7 @@ async function synthesize(text: string, voice: string, slow: boolean): Promise<B
 }
 
 /** Audio de una frase: del caché del dispositivo o, si no está, de Azure (y lo guarda). */
-async function getAudio(text: string, voice: string, slow: boolean): Promise<Blob> {
+async function getAudio(text: string, voice: string, slow: SpeakSpeed): Promise<Blob> {
   const key = clipKey(voice, slow, text);
   const cached = await getClip(key);
   if (cached) return cached;
@@ -149,12 +153,12 @@ async function getAudio(text: string, voice: string, slow: boolean): Promise<Blo
   return blob;
 }
 
-function browserSpeak(text: string, slow: boolean, untilEnd = false) {
+function browserSpeak(text: string, slow: SpeakSpeed, untilEnd = false) {
   return new Promise<void>((resolve) => {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
     u.lang = "de-DE";
-    u.rate = slow ? 0.6 : 0.95;
+    u.rate = slow === "fast" ? 1.2 : slow ? 0.6 : 0.95;
     u.onend = u.onerror = () => resolve();
     window.speechSynthesis.speak(u);
     // Algunos navegadores no avisan cuando terminan (o no tienen voz alemana): no quedarse esperando.
@@ -175,7 +179,7 @@ export async function speak(text: string, opts: { slow?: boolean; voice?: string
   }
 }
 
-export const DIALOGUE_VOICES = { f: "de-DE-KatjaNeural", m: "de-DE-ConradNeural" } as const;
+export const DIALOGUE_VOICES = { f: "de-DE-KatjaNeural", m: "de-DE-ConradNeural", f2: "de-DE-AmalaNeural", m2: "de-DE-KillianNeural" } as const;
 
 /** Corta lo que esté sonando, incluida una secuencia de diálogo. */
 export function stopSpeaking() {
@@ -190,10 +194,10 @@ export function stopSpeaking() {
  * Termina cuando acaba el diálogo o cuando se llama a stopSpeaking().
  */
 export async function speakDialogue(
-  lines: { text: string; who: "f" | "m" }[],
-  opts: { slow?: boolean; onLine?: (i: number) => void } = {},
+  lines: { text: string; who: keyof typeof DIALOGUE_VOICES }[],
+  opts: { slow?: SpeakSpeed; onLine?: (i: number) => void } = {},
 ) {
-  const slow = !!opts.slow;
+  const slow = opts.slow ?? false;
   const gen = ++playGen;
   currentAudio?.pause();
   let azure = true;

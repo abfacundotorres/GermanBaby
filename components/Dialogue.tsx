@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Dialogue } from "@/lib/curriculum";
-import { DIALOGUE_VOICES, speak, speakDialogue, stopSpeaking } from "@/lib/speech";
+import { DIALOGUE_VOICES, speak, speakDialogue, stopSpeaking, type SpeakSpeed } from "@/lib/speech";
 import { glossFor } from "@/lib/gloss";
 
-const ICON = { f: "👩", m: "👨" } as const;
+const ICON = { f: "👩", m: "👨", f2: "👵", m2: "🧔" } as const;
 
 /** Reproductor de un diálogo con dos voces. El texto queda oculto hasta que `reveal` es verdadero. */
 export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: { dialogue: Dialogue; autoPlay?: boolean; reveal?: boolean }) {
@@ -16,7 +16,7 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
 
   const stop = () => { run.current++; stopSpeaking(); setState("idle"); setLine(-1); };
 
-  const play = async (slow: boolean) => {
+  const play = async (slow: SpeakSpeed) => {
     const mine = ++run.current;
     setState("playing");
     setBlocked(false);
@@ -57,6 +57,7 @@ export function DialoguePlayer({ dialogue, autoPlay = false, reveal = false }: {
           <>
             <button className="btn btn-round btn-primary" style={{ width: 80, height: 80, fontSize: 34 }} onClick={() => play(false)} aria-label="Escuchar el diálogo">▶</button>
             <button className="btn btn-round" onClick={() => play(true)} aria-label="Escuchar el diálogo lento" title="Lento">🐢</button>
+            <button className="btn btn-round" onClick={() => play("fast")} aria-label="Escuchar el diálogo rápido" title="Rápido">⚡</button>
           </>
         ) : (
           <button className="btn btn-round" style={{ width: 80, height: 80, fontSize: 30 }} onClick={stop} aria-label="Parar">⏹</button>
