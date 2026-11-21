@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  vorgelesen: "leyó en voz alta", fliegt: "vuela / va en avión", fliegen: "volar / ir en avión", schlaft: "duermen (ustedes)", bedaure: "lamento", letzter: "último", ausgeben: "gastar",
   ja: "sí", auch: "también", hier: "acá / aquí", schon: "ya", also: "entonces", genau: "exacto",
   super: "genial", toll: "genial", schade: "qué pena", oh: "¡ay!", ah: "¡ah!", perfekt: "perfecto",
   willkommen: "bienvenido/a", problem: "problema", kein: "ningún / no… (un)", alle: "todos",
@@ -151,6 +152,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
+  "lisa",
   "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse", "rudolf",
 ]);
 

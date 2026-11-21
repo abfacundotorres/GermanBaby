@@ -30,7 +30,7 @@ Lo que el nivel **no** garantiza por sí solo: el B2 se mide con un examen, y en
 | A1 | 588 | 650 | 90 % |
 | A2 | 1.144 | 1.300 | 88 % |
 | B1 | 1.912 | 2.400 | 80 % |
-| B2 | 3.207 | 4.000 | 80 % |
+| B2 | 4.239 | 4.000 | 106 % |
 
 Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1, A2, B1); B2 no tiene lista oficial y 4.000 es una cifra de uso común. Por eso se leen como referencia, no como norma. El entrenador (`/words`, 2.121 palabras) fija el nivel de cada tanda con una línea `## A1`, `## A2`, `## B1` o `## B2` en `lib/content/core-vocab.ts`, y las tandas se ordenan por nivel.
 

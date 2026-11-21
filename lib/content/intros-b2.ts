@@ -375,4 +375,91 @@ export const INTROS_B2: Record<string, LessonNotes> = {
   },
   "pruefung-b2/lesen": reading("der Umsatz, deutlich"),
   "pruefung-b2/practica": practice("presentaciones, gráficas y cartas del lector"),
+
+  // ---------- Orden de las palabras
+  "satzbau-b2/dativ-akkusativ": {
+    intro: [
+      "En español el orden de «se lo doy» es fijo, pero en alemán depende de si los complementos son sustantivos o pronombres. Con dos sustantivos, el dativo (a quién) va antes que el acusativo (qué): «Ich gebe dem Kind das Buch».",
+      "Si hay un pronombre, va antes que el sustantivo. Si hay dos pronombres, el acusativo va primero: «Ich gebe es ihm», nunca «ihm es».",
+    ],
+    summary: [
+      "Dos sustantivos: dativo – acusativo.",
+      "Un pronombre: va antes del sustantivo.",
+      "Dos pronombres: acusativo – dativo (es ihm).",
+    ],
+  },
+  "satzbau-b2/tekamolo": {
+    intro: [
+      "Dentro de la oración, los datos adicionales siguen un orden habitual: cuándo (Temporal), por qué (Kausal), cómo (Modal) y dónde (Lokal). Se recuerda como «TeKaMoLo»: «Ich fahre morgen mit dem Zug nach Berlin».",
+      "«nicht» va al final si niega toda la oración (antes del participio) y justo antes de lo que niega si niega una parte: «Ich fahre nicht nach Berlin, sondern nach Wien».",
+    ],
+    summary: [
+      "Cuándo – por qué – cómo – dónde.",
+      "nicht al final: niega toda la oración.",
+      "nicht antes de una parte: niega solo esa parte.",
+    ],
+  },
+  "satzbau-b2/erste-stelle": {
+    intro: [
+      "El verbo conjugado va siempre en segundo lugar, pero el primero es libre: un complemento, un adverbio o una subordinada entera pueden ir al comienzo para enfatizar, y el sujeto pasa detrás del verbo.",
+      "«es» ocupa a veces el primer lugar como lugar vacío («Es wurde viel getanzt»); si otra cosa va primero, «es» desaparece. Con «Es ist wichtig, dass…», «es» anticipa la subordinada que viene al final.",
+    ],
+    summary: [
+      "El verbo conjugado, siempre en segundo lugar.",
+      "El primer lugar enfatiza: complemento, adverbio o subordinada.",
+      "«es» anticipa una subordinada o llena el primer lugar.",
+    ],
+  },
+  "satzbau-b2/satzbau-regeln": {
+    intro: [
+      "Esta lección junta las reglas de orden: dativo y acusativo, tiempo-causa-modo-lugar con «nicht», y el primer lugar de la oración.",
+    ],
+    summary: [
+      "Dativo y acusativo: pronombres primero; con dos pronombres, acusativo antes que dativo.",
+      "Cuándo – por qué – cómo – dónde; nicht antes de lo que niega.",
+      "Verbo segundo; el primer lugar es libre.",
+    ],
+  },
+  // ---------- Infinitivo y futuro
+  "infinitiv-futur/modal-zu": {
+    intro: [
+      "Algunos verbos piden otro verbo en infinitivo con «zu»: «brauchen» (con «nicht»), «scheinen», «pflegen», «drohen», «versprechen». En español se dice «no hace falta», «parece», «suele»: en alemán se construye con estos verbos y «zu».",
+      "Con verbos separables, «zu» va entre el prefijo y el verbo: «einzuladen», «anzurufen».",
+    ],
+    summary: [
+      "brauchen nicht zu · scheinen zu · pflegen zu · drohen zu · versprechen zu.",
+      "Separables: ein-zu-laden, an-zu-rufen.",
+    ],
+  },
+  "infinitiv-futur/um-ohne-statt": {
+    intro: [
+      "Para decir «para», «sin» y «en lugar de» seguidos de un verbo se usan «um … zu», «ohne … zu» y «(an)statt … zu», siempre que el sujeto sea el mismo en las dos partes.",
+      "Si los sujetos son distintos hay que usar una subordinada: «damit» para la finalidad y «ohne dass» para la ausencia.",
+    ],
+    summary: [
+      "Mismo sujeto: um… zu · ohne… zu · (an)statt… zu.",
+      "Sujetos distintos: damit · ohne dass.",
+    ],
+  },
+  "infinitiv-futur/futur": {
+    intro: [
+      "El futuro I (werden + infinitivo) sirve para promesas, intenciones y suposiciones sobre el presente: «Er wird jetzt zu Hause sein». El futuro II (werden + participio + haben/sein) supone algo del pasado: «Er wird es vergessen haben».",
+      "En el habla se suele usar el presente para el futuro; estas formas aparecen sobre todo para suponer o para marcar una acción terminada antes de un momento futuro.",
+    ],
+    summary: [
+      "Futuro I: werden + infinitivo.",
+      "Futuro II: werden + participio + haben/sein.",
+      "Ambos pueden expresar suposición.",
+    ],
+  },
+  "infinitiv-futur/infinitiv-regeln": {
+    intro: [
+      "Esta lección resume el infinitivo con «zu», las construcciones con «um», «ohne» y «statt», y los dos futuros.",
+    ],
+    summary: [
+      "zu + infinitivo tras brauchen, scheinen, pflegen, drohen, versprechen.",
+      "Mismo sujeto: infinitivo; sujetos distintos: damit / ohne dass.",
+      "Futuro I y II.",
+    ],
+  },
 };
