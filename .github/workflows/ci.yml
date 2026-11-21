@@ -17,3 +17,10 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - name: Prueba de humo de la interfaz
+        run: |
+          npm i --no-save playwright
+          npx playwright install --with-deps chromium
+          (ALLOW_OPEN_API=1 npx next start -p 3100 &)
+          npx wait-on -t 60000 http://localhost:3100/login || sleep 10
+          npm run smoke -- --url http://localhost:3100

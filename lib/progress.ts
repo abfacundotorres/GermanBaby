@@ -3,10 +3,10 @@
 // Progreso local (un solo usuario): se guarda en localStorage.
 
 import { useSyncExternalStore } from "react";
-import { BONUS_PREV, LESSON_ORDER } from "./curriculum";
-import type { MistakeInput } from "./mistakes";
-import type { Step } from "./session";
-import { costUsd } from "./pricing";
+import { BONUS_PREV, LESSON_ORDER } from "./curriculum.ts";
+import type { MistakeInput } from "./mistakes.ts";
+import type { Step } from "./session.ts";
+import { costUsd } from "./pricing.ts";
 
 export type SrsItem = { box: number; due: string }; // due = YYYY-MM-DD
 
@@ -464,13 +464,30 @@ export function setSetting<K extends "sound" | "voice" | "dailyGoal" | "aiDailyL
   });
 }
 
-export const exportProgress = () => JSON.stringify(load());
+// Historiales que viven aparte del progreso (solo en este dispositivo): simulacros y escritura/oral con rúbrica.
+const EXTRA_KEYS = { exams: "germanbaby.exams.v1", writing: "germanbaby.writing.v1" } as const;
+
+/** Copia de seguridad: el progreso más los historiales de simulacros y de rúbrica. */
+export function exportProgress() {
+  const extras: Record<string, unknown> = {};
+  for (const [name, key] of Object.entries(EXTRA_KEYS)) {
+    try { const v = JSON.parse(localStorage.getItem(key) ?? "null"); if (Array.isArray(v)) extras[name] = v; } catch { /* sin historial */ }
+  }
+  return JSON.stringify({ ...load(), extras });
+}
 
 export function importProgress(text: string): boolean {
   try {
     const raw = JSON.parse(text);
     if (typeof raw !== "object" || raw === null || typeof raw.xp !== "number" || typeof raw.lessons !== "object") return false;
-    save(normalize(raw));
+    const { extras: _extras, ...rest } = raw; // los historiales no forman parte del progreso
+    void _extras;
+    save(normalize(rest));
+    // Los historiales de la copia reemplazan a los actuales, pero solo si vienen en la copia.
+    for (const [name, key] of Object.entries(EXTRA_KEYS)) {
+      const v = raw.extras?.[name];
+      if (Array.isArray(v)) { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* sin espacio */ } }
+    }
     return true;
   } catch {
     return false;

@@ -91,6 +91,8 @@ La app funciona sin claves, con menos funciones: el audio usa la voz del navegad
 
 `npm run bot` resuelve las lecciones por la interfaz (con las respuestas del propio currículo) y avisa si alguna no se puede terminar, si una respuesta correcta se marca mal o si falta el resumen final. Corre la app en otra terminal (`npm run dev`) y, la primera vez, instalá Playwright: `npm i -D playwright` y `npx playwright install chromium`. Variantes: `npm run bot -- --practice`, `--unit cafe`, `--lesson cafe/bestellen` o `--all`. Si la app tiene `ACCESS_CODE`, pasalo con `--code` o con la variable `BOT_ACCESS_CODE`. Comprueba que el contenido es coherente y resoluble, no la corrección del alemán.
 
+`npm run smoke` es la prueba de humo de la interfaz: abre las 12 pantallas en un Chromium real, recorre el test de nivel, la escritura con rúbrica (con la IA simulada), la expresión oral sin micrófono, la escucha de tres voces y la biblioteca, y falla si hay un error de JavaScript. Necesita la app corriendo (`npm run build` y `npx next start -p 3100`) y Playwright; el CI de GitHub la corre en cada push. Uso: `npm run smoke -- --url http://localhost:3100`.
+
 ## Estructura
 
 ```

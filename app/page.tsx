@@ -8,6 +8,7 @@ import { speak } from "@/lib/speech";
 import { sfx } from "@/lib/sfx";
 import Mascot from "@/components/Mascot";
 import Quests from "@/components/Quests";
+import Practice from "@/components/Practice";
 
 const COLORS: [string, string][] = [
   ["#d99a14", "#a8730a"], ["#3b9ae1", "#2672b0"], ["#9b6bdf", "#7b4cc0"], ["#e0597a", "#b83d5e"],
@@ -73,6 +74,8 @@ export default function Home() {
       </button>
 
       <Quests />
+
+      <Practice />
 
       {UNITS.map((unit, ui) => {
         const [uc, ucd] = COLORS[ui % COLORS.length];
