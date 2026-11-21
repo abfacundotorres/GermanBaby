@@ -29,7 +29,7 @@ export default function ReviewPage() {
         )}
         <Link href="/nivel" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>🎯 Test de nivel</b>
-          <span className="muted small">Hasta 48 preguntas de A1 a B2 para ver por dónde conviene empezar.</span>
+          <span className="muted small">Hasta 60 preguntas (gramática, vocabulario y escucha) de A1 a B2 para ver por dónde conviene empezar.</span>
         </Link>
         <Link href="/schreiben" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>✍️ Escritura con rúbrica</b>

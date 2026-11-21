@@ -74,18 +74,22 @@ await page.getByRole("button", { name: "Entendido" }).click();
 check(await visible(page.locator("button.option").first()), "la biblioteca abre un texto con preguntas");
 
 // 7) «No me acuerdo»: en una lección con escritura se puede ver la respuesta sin corrección.
-await page.goto(URL + "/lesson/hallo/gruesse", { waitUntil: "networkidle" });
 let gaveUp = false;
-for (let n = 0; n < 80 && !gaveUp; n++) {
-  if (await page.getByText("No me acuerdo").count()) {
-    await page.getByText("No me acuerdo").click();
-    gaveUp = await visible(page.getByText(/Así se (escribe|dice|arma)/));
-    break;
+// Se elige siempre la primera opción, así que a veces se agotan los corazones antes de llegar a un ejercicio de escribir: se reintenta.
+for (let attempt = 0; attempt < 4 && !gaveUp; attempt++) {
+  await page.goto(URL + "/lesson/hallo/gruesse", { waitUntil: "networkidle" });
+  for (let n = 0; n < 60 && !gaveUp; n++) {
+    if (await page.getByText("No me acuerdo").count()) {
+      await page.getByText("No me acuerdo").click({ timeout: 3000 }).catch(() => {});
+      gaveUp = await visible(page.getByText(/Así se (escribe|dice|arma)/));
+      break;
+    }
+    const next = page.getByRole("button", { name: /continuar|entendido|siguiente|empezar|ver el texto/i }).first();
+    if (await next.count()) await next.click({ timeout: 1500 }).catch(() => {});
+    else if (await page.locator("button.option").count()) await page.locator("button.option").first().click({ timeout: 1500 }).catch(() => {});
+    else if (await page.getByText(/Volver|Salir/).count() && (await page.getByText(/corazones|Sin vidas|Se acabaron/i).count())) break;
+    await page.waitForTimeout(100);
   }
-  const next = page.getByRole("button", { name: /continuar|entendido|siguiente|empezar|ver el texto/i }).first();
-  if (await next.count()) await next.click().catch(() => {});
-  else if (await page.locator("button.option").count()) await page.locator("button.option").first().click().catch(() => {});
-  await page.waitForTimeout(120);
 }
 check(gaveUp, "«No me acuerdo» muestra la respuesta correcta");
 

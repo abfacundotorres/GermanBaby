@@ -1,10 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PLACEMENT, PLACEMENT_PASS, levelSettled, placementResult, type PlacementLevel } from "@/lib/content/placement";
 import { UNITS, lessonKey } from "@/lib/curriculum";
-import { skipBefore, undoSkip } from "@/lib/progress";
+import { skipBefore, undoSkip, useProgress } from "@/lib/progress";
+import { speak, stopSpeaking } from "@/lib/speech";
 
 const LEVELS: PlacementLevel[] = ["A1", "A2", "B1", "B2"];
 
@@ -22,17 +23,37 @@ export default function NivelPage() {
   const [picked, setPicked] = useState<string | null>(null);
   const [skipped, setSkipped] = useState<string[] | null>(null);
 
+  const prog = useProgress();
+  const [listenTally, setListenTally] = useState({ c: 0, w: 0 });
+  const [plays, setPlays] = useState(0);
   const q = PLACEMENT[i];
   const options = useMemo(() => (q ? shuffled(q.options) : []), [q]);
+
+  // Las preguntas de escucha suenan solas al aparecer (y se pueden repetir hasta 3 veces).
+  const playQ = () => {
+    if (!q?.listen) return;
+    setPlays((n) => n + 1);
+    stopSpeaking();
+    void speak(q.listen, { voice: prog.voice }).catch(() => {});
+  };
+  useEffect(() => {
+    setPlays(0);
+    if (step === "test" && q?.listen) {
+      const t = setTimeout(() => { setPlays(1); stopSpeaking(); void speak(q.listen!, { voice: prog.voice }).catch(() => {}); }, 400);
+      return () => { clearTimeout(t); stopSpeaking(); };
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i, step]);
 
   function answer(o: string) {
     if (picked) return;
     setPicked(o);
   }
-  function next() {
-    const right = picked === q.options[0];
+  function next(skipped = false) {
+    const right = !skipped && picked === q.options[0];
+    if (q.listen && !skipped) setListenTally((l) => ({ c: l.c + (right ? 1 : 0), w: l.w + (right ? 0 : 1) }));
     const cur = tally[q.level] ?? { c: 0, w: 0 };
-    const t = { c: cur.c + (right ? 1 : 0), w: cur.w + (right ? 0 : 1) };
+    const t = skipped ? cur : { c: cur.c + (right ? 1 : 0), w: cur.w + (right ? 0 : 1) };
     setTally({ ...tally, [q.level]: t });
     setPicked(null);
     // Un nivel se cierra apenas queda aprobado o ya no se puede aprobar; si no se aprobó, la prueba termina.
@@ -49,7 +70,7 @@ export default function NivelPage() {
       <main className="container stack" style={{ paddingTop: 20 }}>
         <div className="h1">🎯 Test de nivel</div>
         <p className="muted">
-          Hasta 48 preguntas de gramática y vocabulario, de A1 a B2, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
+          Hasta 60 preguntas de gramática, vocabulario y escucha (con sonido), de A1 a B2, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
         </p>
         <button className="btn btn-primary btn-block" onClick={() => setStep("test")}>Empezar</button>
         <Link href="/review" className="btn btn-block">Volver</Link>
@@ -73,6 +94,7 @@ export default function NivelPage() {
           ))}
         </div>
         <p className="muted">
+          {listenTally.c + listenTally.w >= 3 && listenTally.c / (listenTally.c + listenTally.w) < 0.5 && " Tu comprensión oral salió más baja que tu gramática: practicá con la escucha libre."}
           {r.partial ? `Te recomiendo empezar por ${startLevel}.` : "Aprobaste todos los niveles: pasá a los simulacros de B2 y al nivel C1."}
           {" "}Es una estimación de gramática y vocabulario: no mide comprensión oral ni expresión.
         </p>
@@ -96,6 +118,12 @@ export default function NivelPage() {
     <main className="container stack" style={{ paddingTop: 20 }}>
       <div className="small muted">Nivel {q.level} · pregunta {i + 1} de {PLACEMENT.length}</div>
       <div className="h2">{q.q}</div>
+      {q.listen && (
+        <div className="row" style={{ gap: 8 }}>
+          <button className="btn btn-round btn-primary" style={{ width: 64, height: 64, fontSize: 26 }} disabled={plays >= 3 || !!picked} onClick={playQ} aria-label="Escuchar la frase">🔊</button>
+          <span className="small muted">{plays >= 3 ? "Ya no quedan escuchas." : `Podés escucharla ${3 - plays} ${3 - plays === 1 ? "vez" : "veces"} más.`}</span>
+        </div>
+      )}
       <div className="stack">
         {options.map((o) => {
           const right = o === q.options[0];
@@ -103,10 +131,11 @@ export default function NivelPage() {
           return <button key={o} className="card" style={{ textAlign: "left", ...style }} onClick={() => answer(o)}>{o}</button>;
         })}
       </div>
+      {q.listen && !picked && <button className="btn btn-block" onClick={() => next(true)}>No puedo escuchar: saltear esta pregunta</button>}
       {picked && (
         <>
           <p className="muted small">{picked === q.options[0] ? "✅ " : "❌ "}{q.why}</p>
-          <button className="btn btn-primary btn-block" onClick={next}>Siguiente</button>
+          <button className="btn btn-primary btn-block" onClick={() => next()}>Siguiente</button>
         </>
       )}
     </main>

@@ -287,13 +287,16 @@ test("simulacros: textos, audios y preguntas bien formados, con respuestas dentr
   }
 });
 
-test("test de nivel: 8 preguntas por nivel, opciones únicas y resultado coherente", async () => {
+test("test de nivel: 15 preguntas por nivel (3 de escucha), opciones únicas y resultado coherente", async () => {
   const { PLACEMENT, placementResult } = await import("../lib/content/placement.ts");
-  for (const lv of ["A1", "A2", "B1", "B2"]) assert.equal(PLACEMENT.filter((x) => x.level === lv).length, 12, lv);
+  for (const lv of ["A1", "A2", "B1", "B2"]) {
+    assert.equal(PLACEMENT.filter((x) => x.level === lv).length, 15, lv);
+    assert.equal(PLACEMENT.filter((x) => x.level === lv && x.listen).length, 3, `${lv}: escuchas`);
+  }
   for (const x of PLACEMENT) assert.ok(x.options.length === 4 && new Set(x.options).size === 4, x.q);
   assert.equal(placementResult({ A1: 3 }).level, "A1");
-  assert.deepEqual(placementResult({ A1: 12, A2: 9, B1: 2 }), { level: "A2", partial: true });
-  assert.deepEqual(placementResult({ A1: 12, A2: 12, B1: 10, B2: 8 }), { level: "B2", partial: false });
+  assert.deepEqual(placementResult({ A1: 14, A2: 11, B1: 2 }), { level: "A2", partial: true });
+  assert.deepEqual(placementResult({ A1: 15, A2: 15, B1: 12, B2: 10 }), { level: "B2", partial: false });
 });
 
 test("escritura con rúbrica: consignas bien formadas y todos los niveles cubiertos", async () => {
