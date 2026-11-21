@@ -4,14 +4,16 @@ import { useEffect, useRef, useState } from "react";
 import type { Exam } from "@/lib/content/exams";
 import type { ListenQuestion } from "@/lib/curriculum";
 import { matchFill } from "@/lib/text";
-import { speakDialogue, stopSpeaking } from "@/lib/speech";
+import { assessSpeech, MicError, prewarmSpeech, speakDialogue, SpeechNotConfigured, stopSpeaking, type SpeechResult } from "@/lib/speech";
+import { SPEAKING } from "@/lib/content/speaking";
+import type { RubricResult } from "@/app/api/rubric/route";
 import { callAi } from "@/lib/ai";
 import { checkFree, countSentences } from "@/lib/freecheck";
 import { addXp } from "@/lib/progress";
 import { examVerdict, saveExamRecord } from "@/lib/examhistory";
 import type { FreeResult } from "@/app/api/free/route";
 
-type Phase = "lesen" | "hoeren" | "schreiben" | "grading" | "result";
+type Phase = "lesen" | "hoeren" | "schreiben" | "sprechen" | "grading" | "result";
 type Item = { key: string; q: ListenQuestion; part: string };
 
 const MAX_PLAYS = 2;
@@ -49,6 +51,20 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
   const [writing, setWriting] = useState<FreeResult | null>(null);
   const [writingFailed, setWritingFailed] = useState(false);
   const finished = useRef(false);
+  // Expresión oral: una consigna del nivel del simulacro (siempre la misma para el mismo simulacro).
+  const speakTask = (() => {
+    const pool = SPEAKING.filter((t) => t.level === exam.level);
+    const h = [...exam.id].reduce((n, ch) => n + ch.charCodeAt(0), 0);
+    return pool[h % pool.length];
+  })();
+  const [recPhase, setRecPhase] = useState<"idle" | "listening" | "processing" | "grading">("idle");
+  const [level, setLevel] = useState(0);
+  const [speech, setSpeech] = useState<SpeechResult | null>(null);
+  const [rubric, setRubric] = useState<RubricResult | null>(null);
+  const [speakError, setSpeakError] = useState("");
+  const [speakFailed, setSpeakFailed] = useState(false);
+  const finishRef = useRef<(() => void) | null>(null);
+  useEffect(() => { if (phase === "sprechen") prewarmSpeech(); }, [phase]);
 
   const lesen: Item[] = exam.lesen.flatMap((t, ti) => t.questions.map((q, qi) => ({ key: `l${ti}.${qi}`, q, part: t.title })));
   const hoeren: Item[] = exam.hoeren.flatMap((t, ti) => t.questions.map((q, qi) => ({ key: `h${ti}.${qi}`, q, part: t.title })));
@@ -66,6 +82,25 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
     setPlaying(null);
   };
 
+  const record = async () => {
+    setRecPhase("listening"); setSpeakError("");
+    let s: SpeechResult;
+    try {
+      s = await assessSpeech(speakTask.maxSeconds, { onLevel: setLevel, onProcessing: () => setRecPhase("processing"), registerFinish: (f) => { finishRef.current = f; } });
+    } catch (e) {
+      setSpeakError(e instanceof SpeechNotConfigured ? "La expresión oral necesita Azure Speech." : e instanceof MicError ? e.message : (e as Error).message || "No pude usar el micrófono.");
+      setRecPhase("idle"); setLevel(0); finishRef.current = null;
+      return;
+    }
+    setSpeech(s); setLevel(0); finishRef.current = null; setRecPhase("grading");
+    try {
+      setRubric(await callAi<RubricResult>("/api/rubric", { prompt: speakTask.prompt, genre: speakTask.genre, register: speakTask.register, points: speakTask.points, minWords: speakTask.minSeconds, maxWords: speakTask.maxSeconds, answer: s.transcript, level: speakTask.level, spoken: true, seconds: s.seconds }, "correct"));
+    } catch { setSpeakFailed(true); }
+    window.scrollTo(0, 0);
+    setPhase("result");
+  };
+  const skipSpeaking = () => { setSpeech(null); setRubric(null); window.scrollTo(0, 0); setPhase("result"); };
+
   const local = checkFree(text, exam.schreiben.minSentences);
   const enough = countSentences(text) >= exam.schreiben.minSentences;
 
@@ -76,7 +111,8 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
       w = await callAi<FreeResult>("/api/free", { prompt: exam.schreiben.prompt, focus: exam.schreiben.focus, answer: text.trim(), level: exam.level, minSentences: exam.schreiben.minSentences }, "correct");
     } catch { setWritingFailed(true); }
     setWriting(w);
-    setPhase("result");
+    window.scrollTo(0, 0);
+    setPhase("sprechen");
   };
 
   if (phase === "grading") {
@@ -88,11 +124,15 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
     const h = hoeren.filter((i) => isRight(i.q, answers[i.key])).length;
     const lp = pct(l, lesen.length), hp = pct(h, hoeren.length);
     const wp = writing ? (writing.verdict === "correct" && writing.usedFocus ? 100 : writing.verdict === "incorrect" ? 40 : 75) : null;
-    const parts = [lp, hp, ...(wp !== null ? [wp] : [])];
+    // Oral: 70 % contenido (rúbrica sobre 20) y 30 % voz (promedio de fluidez y precisión de Azure).
+    const sp = speech && rubric
+      ? Math.round(0.7 * ((rubric.task.score + rubric.structure.score + rubric.vocab.score + rubric.grammar.score) / 20) * 100 + 0.3 * ((speech.fluency + speech.accuracy) / 2))
+      : null;
+    const parts = [lp, hp, ...(wp !== null ? [wp] : []), ...(sp !== null ? [sp] : [])];
     const total = Math.round(parts.reduce((a, b) => a + b, 0) / parts.length);
     if (!finished.current) {
       finished.current = true;
-      saveExamRecord({ id: exam.id, title: exam.title, at: Date.now(), lesen: lp, hoeren: hp, schreiben: wp, total });
+      saveExamRecord({ id: exam.id, title: exam.title, at: Date.now(), lesen: lp, hoeren: hp, schreiben: wp, sprechen: sp, total });
       addXp(30);
     }
     const v = examVerdict(total, exam.level);
@@ -109,9 +149,19 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
           <div>📖 Lectura: <b>{lp} %</b> ({l} de {lesen.length})</div>
           <div>🎧 Escucha: <b>{hp} %</b> ({h} de {hoeren.length})</div>
           <div>✍️ Escritura: <b>{wp === null ? "sin corregir" : `${wp} %`}</b></div>
-          {writingFailed && <div className="small muted">No pude corregir el texto con IA. El total cuenta solo lectura y escucha.</div>}
+          <div>🗣️ Expresión oral: <b>{sp === null ? (speech ? "sin puntuar" : "no entregada") : `${sp} %`}</b>{speech && <span className="small muted"> · fluidez {speech.fluency}, precisión {speech.accuracy}, {speech.wordsPerMinute} palabras/min</span>}</div>
+          {writingFailed && <div className="small muted">No pude corregir el texto con IA. El total no cuenta la escritura.</div>}
+          {speakFailed && <div className="small muted">No pude puntuar la parte oral con IA. El total no la cuenta.</div>}
           <div className="small muted">Es la prueba de la app, no un puntaje oficial. La referencia de aprobación de los exámenes oficiales es de 60 % por módulo.</div>
         </div>
+        {rubric && (
+          <div className="card stack" style={{ gap: 6, textAlign: "left" }}>
+            <b>Parte oral: {rubric.task.score + rubric.structure.score + rubric.vocab.score + rubric.grammar.score}/20 de contenido</b>
+            <div className="small">Consigna {rubric.task.score}/5 · Estructura {rubric.structure.score}/5 · Vocabulario {rubric.vocab.score}/5 · Gramática {rubric.grammar.score}/5</div>
+            {rubric.missingPoints.length > 0 && <div className="small">💡 Faltó cubrir: {rubric.missingPoints.join(" · ")}.</div>}
+            <div className="small muted">{rubric.feedback}</div>
+          </div>
+        )}
         {writing && (
           <div className="card stack" style={{ gap: 6, textAlign: "left" }}>
             <b>Tu texto, corregido</b>
@@ -139,8 +189,8 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
     );
   }
 
-  const steps: Phase[] = ["lesen", "hoeren", "schreiben"];
-  const label = { lesen: "📖 Lectura", hoeren: "🎧 Escucha", schreiben: "✍️ Escritura" } as const;
+  const steps: Phase[] = ["lesen", "hoeren", "schreiben", "sprechen"];
+  const label = { lesen: "📖 Lectura", hoeren: "🎧 Escucha", schreiben: "✍️ Escritura", sprechen: "🗣️ Oral" } as const;
   return (
     <main className="container stack" style={{ paddingTop: 16 }}>
       <div className="row" style={{ justifyContent: "space-between" }}>
@@ -198,7 +248,33 @@ export function ExamRunner({ exam, onExit }: { exam: Exam; onExit: () => void })
           <button className="btn btn-primary btn-block" disabled={!enough || local.blockers.length > 0} onClick={() => void submit()}>
             {enough ? "Entregar y ver el resultado" : `Faltan frases (${countSentences(text)}/${exam.schreiben.minSentences})`}
           </button>
-          <button className="btn btn-block" onClick={() => { setWritingFailed(false); setWriting(null); setPhase("result"); }}>Entregar sin escribir</button>
+          <button className="btn btn-block" onClick={() => { setWritingFailed(false); setWriting(null); window.scrollTo(0, 0); setPhase("sprechen"); }}>Entregar sin escribir</button>
+        </>
+      )}
+
+      {phase === "sprechen" && (
+        <>
+          <div className="card stack" style={{ gap: 8, textAlign: "left" }}>
+            <div className="prompt-label">Hablá en alemán ({speakTask.minSeconds}–{speakTask.maxSeconds} segundos)</div>
+            <div>{speakTask.prompt}</div>
+            <div className="small muted">Cubrí: {speakTask.points.join(" · ")}.</div>
+          </div>
+          <div className="center">
+            <button
+              className={`btn btn-round btn-mic ${recPhase === "listening" ? "recording" : ""}`}
+              style={recPhase === "listening" ? { boxShadow: `0 0 0 ${6 + level * 26}px rgba(214,69,61,0.28)` } : undefined}
+              onClick={() => (recPhase === "listening" ? finishRef.current?.() : void record())}
+              disabled={recPhase === "processing" || recPhase === "grading"}
+              aria-label={recPhase === "listening" ? "Terminé" : "Grabar"}
+            >
+              {recPhase === "processing" || recPhase === "grading" ? <span className="spinner" /> : recPhase === "listening" ? "✓" : "🎤"}
+            </button>
+          </div>
+          <div className="muted small center">
+            {recPhase === "listening" ? "Grabando… tocá ✓ cuando termines." : recPhase === "processing" ? "Analizando tu voz…" : recPhase === "grading" ? "Puntuando el contenido…" : "Tocá el micrófono y hablá. Es la parte oral del simulacro."}
+          </div>
+          {speakError && <div className="notice" style={{ textAlign: "left" }}>{speakError}</div>}
+          {recPhase === "idle" && <button className="btn btn-block" onClick={skipSpeaking}>Entregar sin la parte oral</button>}
         </>
       )}
     </main>

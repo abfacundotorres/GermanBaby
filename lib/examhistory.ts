@@ -1,7 +1,7 @@
 // Historial de simulacros: se guarda solo en este dispositivo (no se sincroniza).
 const KEY = "germanbaby.exams.v1";
 
-export type ExamRecord = { id: string; title: string; at: number; lesen: number; hoeren: number; schreiben: number | null; total: number };
+export type ExamRecord = { id: string; title: string; at: number; lesen: number; hoeren: number; schreiben: number | null; sprechen?: number | null; total: number };
 
 export function loadExamHistory(): ExamRecord[] {
   try {

@@ -89,7 +89,18 @@ for (let n = 0; n < 80 && !gaveUp; n++) {
 }
 check(gaveUp, "«No me acuerdo» muestra la respuesta correcta");
 
-// 8) Inicio: la sección Practicar está.
+// 8) Simulacro: recorre las cuatro partes; sin micrófono se puede entregar sin la oral.
+await page.goto(URL + "/exam", { waitUntil: "networkidle" });
+await page.getByText("Simulacro A2 · 3").click();
+await page.getByRole("button", { name: /Siguiente: escucha/ }).click();
+await page.getByRole("button", { name: /Siguiente: escritura/ }).click();
+await page.fill("textarea", "Hallo Paul. Ich habe jetzt eine neue Wohnung in der Stadt. Sie hat drei Zimmer und einen Balkon. Die Küche ist leider klein. Kommst du am Samstag zu mir? Ich koche für dich.");
+await page.getByRole("button", { name: /Entregar y ver el resultado/ }).click();
+const oral = await visible(page.getByText(/Hablá en alemán/));
+await page.getByRole("button", { name: /Entregar sin la parte oral/ }).click();
+check(oral && (await visible(page.getByText(/no entregada/))), "el simulacro pasa por la parte oral y muestra el resultado");
+
+// 9) Inicio: la sección Practicar está.
 await page.goto(URL + "/", { waitUntil: "networkidle" });
 check(await visible(page.getByText("Escribir").first()), "el inicio muestra los atajos de práctica");
 

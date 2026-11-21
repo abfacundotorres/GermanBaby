@@ -17,7 +17,7 @@ export default function ExamPage() {
     <main className="container stack" style={{ paddingTop: 20 }}>
       <div className="h1">📝 Simulacros</div>
       <p className="muted">
-        Pruebas con el formato de un examen de cada nivel (A2, B1 y B2): comprensión lectora, auditiva y expresión escrita. No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
+        Pruebas con el formato de un examen de cada nivel (A2, B1 y B2): comprensión lectora, auditiva, expresión escrita y expresión oral (esta última con micrófono, opcional). No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
       </p>
       {(["A2", "B1", "B2"] as const).map((lv) => (
         <section key={lv} className="stack">
@@ -40,7 +40,7 @@ export default function ExamPage() {
           {history.map((r) => (
             <div key={r.at} className="card" style={{ textAlign: "left" }}>
               <b>{r.title}</b> · {r.total} % <span className="small muted">({new Date(r.at).toLocaleDateString("es-AR")})</span>
-              <div className="small muted">Lectura {r.lesen} % · Escucha {r.hoeren} % · Escritura {r.schreiben === null ? "–" : `${r.schreiben} %`}</div>
+              <div className="small muted">Lectura {r.lesen} % · Escucha {r.hoeren} % · Escritura {r.schreiben === null ? "–" : `${r.schreiben} %`} · Oral {r.sprechen == null ? "–" : `${r.sprechen} %`}</div>
             </div>
           ))}
         </section>
