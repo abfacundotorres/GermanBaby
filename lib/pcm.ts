@@ -43,3 +43,16 @@ export class Resampler {
     return Int16Array.from(out);
   }
 }
+
+/** Une trozos de audio PCM de 16 bits, mono y 16 kHz en un WAV que el navegador sabe reproducir. */
+export function pcmToWav(chunks: ArrayBuffer[], sampleRate = 16000): Blob {
+  const dataLen = chunks.reduce((n, c) => n + c.byteLength, 0);
+  const head = new ArrayBuffer(44);
+  const v = new DataView(head);
+  const str = (o: number, s: string) => { for (let i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i)); };
+  str(0, "RIFF"); v.setUint32(4, 36 + dataLen, true); str(8, "WAVE");
+  str(12, "fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, sampleRate, true); v.setUint32(28, sampleRate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+  str(36, "data"); v.setUint32(40, dataLen, true);
+  return new Blob([head, ...chunks], { type: "audio/wav" });
+}

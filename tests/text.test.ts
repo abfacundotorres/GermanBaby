@@ -75,3 +75,16 @@ test("alignWords: marca lo que se dijo distinto, lo que faltó y lo que sobró",
   const diff = alignWords("Wie heißt du", "Wie heißen du").find((a) => a.kind === "diff");
   assert.deepEqual([diff?.ref, diff?.heard], ["heißt", "heißen"]);
 });
+
+test("pcmToWav: cabecera WAV correcta y tamaño de los datos", async () => {
+  const { pcmToWav } = await import("../lib/pcm.ts");
+  const blob = pcmToWav([new ArrayBuffer(3200), new ArrayBuffer(1600)]);
+  assert.equal(blob.size, 44 + 4800);
+  const bytes = new Uint8Array(await blob.arrayBuffer());
+  const dv = new DataView(bytes.buffer);
+  assert.equal(String.fromCharCode(...bytes.slice(0, 4)), "RIFF");
+  assert.equal(String.fromCharCode(...bytes.slice(8, 12)), "WAVE");
+  assert.equal(dv.getUint32(24, true), 16000);
+  assert.equal(dv.getUint32(40, true), 4800);
+  assert.equal(blob.type, "audio/wav");
+});

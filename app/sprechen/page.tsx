@@ -116,7 +116,7 @@ export default function SprechenPage() {
           </>
         )}
         {error && <div className="small" style={{ color: "var(--bad, #c0392b)" }}>⚠️ {error}</div>}
-        <PronunciationReport compact result={{ recognized: speech.transcript, pronScore: speech.pronScore, accuracy: speech.accuracy, fluency: speech.fluency, completeness: 100, words: speech.words }} />
+        <PronunciationReport compact result={{ recognized: speech.transcript, pronScore: speech.pronScore, accuracy: speech.accuracy, fluency: speech.fluency, completeness: 100, words: speech.words, audio: speech.audio }} />
         {phase === "idle" && <button className="btn btn-primary btn-block" onClick={back}>Volver a las consignas</button>}
         {phase === "idle" && <button className="btn btn-block" onClick={() => { setSpeech(null); setRubric(null); setError(""); }}>Grabar de nuevo</button>}
       </main>

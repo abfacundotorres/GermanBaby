@@ -5,6 +5,7 @@
 
 import { getProgress, recordStt, recordTts } from "./progress";
 import { startCapture, type CaptureEnd } from "./capture";
+import { pcmToWav } from "./pcm";
 import { clipKey, getClip, putClip } from "./audiocache";
 
 type SDK = typeof import("microsoft-cognitiveservices-speech-sdk");
@@ -243,6 +244,8 @@ export type PronunciationResult = {
   mode?: "rapido" | "compatible";
   latencyMs?: number;
   endReason?: CaptureEnd;
+  /** Tu grabación (solo en memoria, no se guarda): para escucharte y comparar. Solo en la grabación rápida. */
+  audio?: Blob;
 };
 
 /** Ganchos de la interfaz durante una grabación. */
@@ -354,6 +357,7 @@ async function recognizeFast(
 
   let endedAt = 0;
   let endReason: CaptureEnd | undefined;
+  const chunks: ArrayBuffer[] = [];
   const resultPromise = new Promise<RecognitionResult>((resolve, reject) => recognizer.recognizeOnceAsync(resolve, (e) => reject(new Error(e))));
   resultPromise.catch(() => {});
 
@@ -362,7 +366,7 @@ async function recognizeFast(
     capture = await startCapture(
       stream,
       {
-        onPcm: (b) => push.write(b),
+        onPcm: (b) => { chunks.push(b); push.write(b); },
         onLevel: hooks.onLevel,
         onEnd: (reason) => {
           endedAt = Date.now();
@@ -386,6 +390,7 @@ async function recognizeFast(
     result.mode = "rapido";
     result.latencyMs = endedAt ? Date.now() - endedAt : undefined;
     result.endReason = endReason;
+    result.audio = pcmToWav(chunks);
     return { result, seconds: capture.bytes / 32000 };
   } finally {
     capture.stop();
@@ -517,6 +522,7 @@ export type SpeechResult = {
   pronScore: number;
   words: WordScore[];
   endReason: CaptureEnd;
+  audio?: Blob; // tu grabación, solo en memoria
 };
 
 /**
@@ -537,6 +543,7 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
     setupAssessment(sdk, recognizer, "");
 
     let stopWaiting: () => void = () => {};
+    const chunks: ArrayBuffer[] = [];
     const parts: string[] = [];
     const words: WordScore[] = [];
     let accSum = 0, fluSum = 0, pronSum = 0, n = 0;
@@ -575,7 +582,7 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
       capture = await startCapture(
         stream,
         {
-          onPcm: (b) => push.write(b),
+          onPcm: (b) => { chunks.push(b); push.write(b); },
           onLevel: hooks.onLevel,
           onEnd: (reason) => { endReason = reason; push.close(); stopWaiting(); hooks.onProcessing?.(); },
         },
@@ -610,6 +617,7 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
       pronScore: n ? Math.round(pronSum / n) : 0,
       words,
       endReason,
+      audio: pcmToWav(chunks),
     };
   } finally {
     stopMic(stream);

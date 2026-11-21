@@ -4,6 +4,7 @@ import type { PronunciationResult, WordScore } from "@/lib/speech";
 import { speak, stopSpeaking } from "@/lib/speech";
 import { alignWords } from "@/lib/text";
 import { useProgress } from "@/lib/progress";
+import { useEffect, useRef, useState } from "react";
 import { tipsFor } from "@/lib/phonemeTips";
 
 const lvl = (s: number) => (s >= 80 ? "lvl-good" : s >= 60 ? "lvl-mid" : "lvl-bad");
@@ -28,7 +29,25 @@ export function PronunciationReport({ result, compact = false, reference }: { re
   const align = reference ? alignWords(reference, result.recognized) : null;
   const differs = align?.some((a) => a.kind !== "same") ?? false;
 
+  // Tu grabación (solo en memoria): se reproduce para compararla con el modelo.
+  const [mine, setMine] = useState<"idle" | "playing">("idle");
+  const urlRef = useRef<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => () => { audioRef.current?.pause(); if (urlRef.current) URL.revokeObjectURL(urlRef.current); }, []);
+  const playMine = () => {
+    if (!result.audio) return;
+    stopSpeaking();
+    audioRef.current?.pause();
+    if (!urlRef.current) urlRef.current = URL.createObjectURL(result.audio);
+    const a = new Audio(urlRef.current);
+    audioRef.current = a;
+    a.onended = a.onpause = a.onerror = () => setMine("idle");
+    setMine("playing");
+    void a.play().catch(() => setMine("idle"));
+  };
+
   const say = (word: string, slow: boolean) => {
+    audioRef.current?.pause();
     stopSpeaking();
     void speak(clean(word), { voice: p.voice, slow }).catch(() => {});
   };
@@ -41,6 +60,20 @@ export function PronunciationReport({ result, compact = false, reference }: { re
           <div className="score"><b>{result.accuracy}</b><span className="small">Precisión</span></div>
           <div className="score"><b>{result.fluency}</b><span className="small">Fluidez</span></div>
           <div className="score"><b>{result.completeness}</b><span className="small">Completitud</span></div>
+        </div>
+      )}
+
+      {result.audio && (
+        <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+          <button className="btn" onClick={mine === "playing" ? () => audioRef.current?.pause() : playMine} aria-label="Escuchar tu grabación">
+            {mine === "playing" ? "⏹ Parar" : "▶ Escuchá tu voz"}
+          </button>
+          {reference && (
+            <button className="btn" onClick={() => { audioRef.current?.pause(); stopSpeaking(); void speak(reference, { voice: p.voice }).catch(() => {}); }} aria-label="Escuchar el modelo">
+              🔊 Escuchá el modelo
+            </button>
+          )}
+          <span className="small muted">Comparalos. Tu grabación no se guarda.</span>
         </div>
       )}
 
