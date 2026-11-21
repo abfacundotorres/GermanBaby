@@ -26,7 +26,7 @@ export default function SchreibenPage() {
       <main className="container stack" style={{ paddingTop: 20 }}>
         <div className="h1">✍️ Escritura con rúbrica</div>
         <p className="muted">Consignas por nivel con puntos de contenido, registro y largo. La corrección puntúa cuatro criterios de 0 a 5 y usa IA.</p>
-        {(["A1", "A2", "B1", "B2"] as const).map((lv) => (
+        {(["A1", "A2", "B1", "B2", "C1"] as const).map((lv) => (
           <section key={lv} className="stack">
             <div className="h2">Nivel {lv}</div>
             {WRITING.filter((t) => t.level === lv).map((t) => {

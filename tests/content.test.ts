@@ -260,7 +260,7 @@ test("biblioteca de lecturas: formato, traducción párrafo a párrafo y pregunt
     assert.equal(r.text.length, r.translation.length, `${t.id}: un párrafo, una traducción`);
     assert.ok(r.questions.length >= 5, `${t.id}: pocas preguntas`);
     const n = r.text.join(" ").split(/\s+/).length;
-    const min = t.level === "A2" ? 60 : t.level === "B1" ? 100 : 160;
+    const min = t.level === "A2" ? 60 : t.level === "B1" ? 100 : t.level === "B2" ? 160 : 300;
     assert.ok(n >= min, `${t.id}: texto muy corto (${n} palabras)`);
     for (const q of r.questions) {
       if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length, `${t.id}: opciones mal armadas: ${q.q}`);
@@ -322,4 +322,14 @@ test("escucha libre: monólogos de una voz, conversaciones de tres y preguntas b
     assert.ok(t.dialogue.questions.length >= 5 && t.dialogue.lines.length >= 5, t.id);
     for (const q of t.dialogue.questions) if (q.type === "choice") assert.ok(q.options.includes(q.answer) && new Set(q.options).size === q.options.length, `${t.id}: ${q.q}`);
   }
+});
+
+test("C1 de práctica libre: biblioteca, escucha libre, escritura y expresión oral", async () => {
+  const { LIBRARY } = await import("../lib/content/library.ts");
+  const { LISTENING } = await import("../lib/content/listening.ts");
+  const { WRITING } = await import("../lib/content/writing.ts");
+  const { SPEAKING } = await import("../lib/content/speaking.ts");
+  assert.ok(LIBRARY.filter((t) => t.level === "C1").length >= 3, "lecturas C1");
+  assert.ok(LISTENING.some((t) => t.level === "C1" && t.kind === "monolog") && LISTENING.some((t) => t.level === "C1" && t.kind === "dreier"), "escuchas C1");
+  assert.ok(WRITING.filter((t) => t.level === "C1").length >= 2 && SPEAKING.filter((t) => t.level === "C1").length >= 2, "consignas C1");
 });

@@ -3,7 +3,7 @@
 
 import type { Dialogue, DialogueLine, ListenQuestion, Speaker } from "../curriculum.ts";
 
-export type ListenLevel = "A2" | "B1" | "B2";
+export type ListenLevel = "A2" | "B1" | "B2" | "C1";
 export type ListenKind = "monolog" | "dreier";
 export type ListenPiece = { id: string; level: ListenLevel; kind: ListenKind; emoji: string; topic: string; dialogue: Dialogue };
 
@@ -140,6 +140,53 @@ export const LISTENING: ListenPiece[] = [
         tf("Herr Lang rechaza cualquier prueba.", false, "Aceptaría «einen Versuch von einem Jahr»."),
         c("¿Con qué condición acepta Herr Lang la prueba?", ["Que los estacionamientos de las afueras sean más baratos", "Que no haya excepciones", "Que dure cinco años", "Que lo pague la ciudad"], "«wenn die Parkhäuser am Rand günstiger werden»."),
         c("¿Cómo termina el debate?", ["Con un posible proyecto piloto", "Sin acuerdo alguno", "Con una votación", "Con la prohibición total"], "«Ein Pilotprojekt wäre ein vernünftiger Kompromiss»."),
+      ],
+    },
+  },
+  {
+    id: "wissenschaft-vertrauen", level: "C1", kind: "monolog", emoji: "🔬", topic: "Ciencia y confianza pública",
+    dialogue: {
+      title: "Warum Wissenschaft Vertrauen braucht", setting: "Un fragmento de una conferencia pública sobre comunicación científica",
+      lines: [
+        L("m", "Professor", "Meine Damen und Herren, wenn wir über das Vertrauen in die Wissenschaft sprechen, müssen wir zunächst ein verbreitetes Missverständnis ausräumen: Wissenschaft liefert keine endgültigen Wahrheiten, sondern die jeweils am besten belegten Erklärungen.", "Señoras y señores, cuando hablamos de la confianza en la ciencia, primero debemos disipar un malentendido muy difundido: la ciencia no entrega verdades definitivas, sino las explicaciones mejor respaldadas en cada momento."),
+        L("m", "Professor", "Das ist keine Schwäche, sondern ihr Kernprinzip. Eine Aussage gilt so lange, bis sie widerlegt wird, und gerade diese Bereitschaft zur Selbstkorrektur unterscheidet wissenschaftliches Wissen von bloßer Überzeugung.", "Eso no es una debilidad, sino su principio central. Una afirmación vale hasta que se la refuta, y justamente esa disposición a corregirse distingue el conocimiento científico de la mera convicción."),
+        L("m", "Professor", "In der öffentlichen Debatte wirkt dieselbe Eigenschaft jedoch oft verunsichernd. Wenn sich Empfehlungen im Laufe einer Krise ändern, entsteht schnell der Eindruck, die Experten wüssten nicht, wovon sie sprechen.", "En el debate público, sin embargo, esa misma característica suele generar inseguridad. Cuando las recomendaciones cambian en el curso de una crisis, enseguida surge la impresión de que los expertos no saben de qué hablan."),
+        L("m", "Professor", "Hier liegt eine Verantwortung der Wissenschaftler selbst. Sie sollten Unsicherheiten nicht verschweigen, aber auch nicht so darstellen, dass ein Rest von Unwissen als völlige Ahnungslosigkeit erscheint.", "Aquí hay una responsabilidad de los propios científicos. No deberían ocultar las incertidumbres, pero tampoco presentarlas de modo que un resto de desconocimiento parezca total ignorancia."),
+        L("m", "Professor", "Studien zeigen, dass Vertrauen vor allem dort entsteht, wo Forschende transparent arbeiten, ihre Interessen offenlegen und Fehler eingestehen. Das Gegenteil, nämlich überzogene Gewissheit, zerstört Glaubwürdigkeit nachhaltiger als jeder Irrtum.", "Los estudios muestran que la confianza surge sobre todo donde los investigadores trabajan con transparencia, declaran sus intereses y admiten errores. Lo contrario, es decir, la certeza exagerada, destruye la credibilidad de forma más duradera que cualquier error."),
+        L("m", "Professor", "Zugleich darf die Gesellschaft nicht erwarten, dass Wissenschaft ihr politische Entscheidungen abnimmt. Sie kann Folgen abschätzen, aber nicht vorgeben, welche Ziele wir verfolgen sollen. Diese Abwägung bleibt Sache der Demokratie.", "Al mismo tiempo, la sociedad no debe esperar que la ciencia le quite las decisiones políticas. Puede estimar consecuencias, pero no fijar qué objetivos debemos perseguir. Esa ponderación sigue siendo asunto de la democracia."),
+        L("m", "Professor", "Ich möchte daher mit einem Appell schließen: Wer Wissenschaft ernst nimmt, sollte sie weder als Orakel verehren noch als Meinung unter vielen abtun. Er sollte sie als einen Prozess verstehen, der Fehler korrigiert und uns deshalb im Laufe der Zeit verlässlich weiterbringt.", "Quiero por eso terminar con un llamado: quien toma en serio la ciencia no debería venerarla como un oráculo ni descartarla como una opinión entre muchas. Debería entenderla como un proceso que corrige errores y que, por eso, con el tiempo nos hace avanzar de manera confiable."),
+      ],
+      questions: [
+        c("¿Qué malentendido quiere disipar el profesor?", ["Que la ciencia entrega verdades definitivas", "Que la ciencia es cara", "Que la ciencia no se corrige", "Que los científicos mienten"], "«keine endgültigen Wahrheiten»."),
+        c("¿Qué distingue al conocimiento científico de la convicción?", ["La disposición a corregirse", "El uso de datos", "La edad de las teorías", "El prestigio de los autores"], "«Bereitschaft zur Selbstkorrektur»."),
+        c("¿Por qué genera inseguridad que cambien las recomendaciones?", ["Parece que los expertos no saben de qué hablan", "Porque son más caras", "Porque son ilegales", "Porque nadie las lee"], "«wüssten nicht, wovon sie sprechen»."),
+        c("¿Qué daña más la credibilidad según los estudios?", ["La certeza exagerada", "Admitir errores", "La transparencia", "Declarar intereses"], "«überzogene Gewissheit»."),
+        c("¿Qué no debería esperar la sociedad de la ciencia?", ["Que le quite las decisiones políticas", "Que estime consecuencias", "Que corrija errores", "Que investigue"], "«politische Entscheidungen abnimmt»."),
+        c("¿Cómo propone entender la ciencia al final?", ["Como un proceso que corrige errores", "Como un oráculo", "Como una opinión más", "Como un negocio"], "«Prozess, der Fehler korrigiert»."),
+      ],
+    },
+  },
+  {
+    id: "gentechnik-debatte", level: "C1", kind: "dreier", emoji: "🌾", topic: "Debate sobre biotecnología agrícola",
+    dialogue: {
+      title: "Gentechnik auf dem Acker?", setting: "Una moderadora conduce un debate entre un genetista y una agricultora orgánica",
+      lines: [
+        L("f", "Moderatorin", "Guten Abend. Heute diskutieren wir, ob gentechnisch veränderte Pflanzen in der europäischen Landwirtschaft erlaubt werden sollten. Herr Dr. Brandt, Sie plädieren dafür.", "Buenas noches. Hoy discutimos si las plantas modificadas genéticamente deberían permitirse en la agricultura europea. Doctor Brandt, usted está a favor."),
+        L("m", "Dr. Brandt", "Ja, weil neue Züchtungstechniken Pflanzen hervorbringen können, die Dürre oder Schädlinge besser überstehen und damit weniger Pestizide benötigen. Das ist angesichts des Klimawandels kein Luxus, sondern eine Chance.", "Sí, porque las nuevas técnicas de cría pueden producir plantas que soportan mejor la sequía o las plagas y por lo tanto necesitan menos pesticidas. Frente al cambio climático eso no es un lujo, sino una oportunidad."),
+        L("f2", "Frau Sommer", "Ich halte das für kurzsichtig. Viele dieser Versprechen haben sich in der Praxis nicht erfüllt, und die Patente liegen bei wenigen Konzernen. Wir Landwirte würden uns in eine Abhängigkeit begeben, aus der wir kaum noch herauskämen.", "Yo lo considero cortoplacista. Muchas de esas promesas no se cumplieron en la práctica y las patentes están en manos de pocas corporaciones. Los agricultores nos pondríamos en una dependencia de la que apenas podríamos salir."),
+        L("m", "Dr. Brandt", "Das Patentproblem ist real, aber es lässt sich politisch regeln, etwa durch öffentliche Forschung. Die Technik an sich ist nicht das Problem. Die Sicherheit der Pflanzen wird in mehrjährigen Verfahren geprüft.", "El problema de las patentes es real, pero puede regularse políticamente, por ejemplo con investigación pública. La técnica en sí no es el problema. La seguridad de las plantas se verifica en procedimientos de varios años."),
+        L("f2", "Frau Sommer", "Geprüft wird, was man vorher zu prüfen weiß. Ich fürchte vor allem langfristige Folgen für die Artenvielfalt. Pollen kennt keine Feldgrenzen, und wer ökologisch wirtschaftet, riskiert, dass seine Ernte verunreinigt wird.", "Se verifica lo que se sabe de antemano que hay que verificar. Lo que más temo son las consecuencias a largo plazo para la biodiversidad. El polen no conoce los límites de los campos, y quien produce de forma orgánica corre el riesgo de que su cosecha se contamine."),
+        L("f", "Moderatorin", "Herr Brandt, wie lässt sich das verhindern?", "Doctor Brandt, ¿cómo puede evitarse eso?"),
+        L("m", "Dr. Brandt", "Durch Pufferzonen und klare Haftungsregeln: Wer Schaden verursacht, muss ihn ersetzen. Außerdem sollten wir differenzieren. Eine Pflanze, die mit einer präzisen Methode einen Gendefekt repariert, ist etwas anderes als ein Eingriff, der fremde Gene einbaut.", "Con zonas de amortiguación y reglas claras de responsabilidad: quien causa daño debe repararlo. Además deberíamos diferenciar. Una planta a la que se le corrige un defecto genético con un método preciso es algo distinto de una intervención que incorpora genes ajenos."),
+        L("f2", "Frau Sommer", "Diese Unterscheidung ist wichtig, da stimme ich zu. Ich würde mir wünschen, dass wir zuerst die Alternativen ausschöpfen: andere Fruchtfolgen, robustere alte Sorten, weniger Verschwendung. Erst danach sollten wir über neue Eingriffe reden.", "Esa distinción es importante, en eso estoy de acuerdo. Me gustaría que primero agotáramos las alternativas: otras rotaciones de cultivos, variedades antiguas más robustas, menos desperdicio. Recién después deberíamos hablar de nuevas intervenciones."),
+      ],
+      questions: [
+        c("¿Qué argumento principal da el genetista a favor?", ["Plantas que resisten mejor sequía y plagas y requieren menos pesticidas", "Plantas más baratas de transportar", "Mayor sabor", "Menos trabajo para los agricultores"], "«Dürre oder Schädlinge ... weniger Pestizide»."),
+        c("¿Qué teme la agricultora respecto de los agricultores?", ["Quedar en dependencia de pocas corporaciones con patentes", "Perder los subsidios", "Tener que usar más agua", "No poder exportar"], "«Patente ... wenige Konzerne ... Abhängigkeit»."),
+        c("¿Cómo propone el genetista resolver el problema de las patentes?", ["Con regulación política e investigación pública", "Eliminando la técnica", "Con más impuestos", "No lo considera un problema"], "«politisch regeln ... öffentliche Forschung»."),
+        c("¿Qué riesgo concreto menciona la agricultora?", ["Que el polen contamine la cosecha orgánica", "Que suba el precio de las semillas", "Que falten trabajadores", "Que caiga la producción"], "«Pollen kennt keine Feldgrenzen»."),
+        c("¿Qué distinción introduce el genetista?", ["Entre corregir un defecto genético con precisión y agregar genes ajenos", "Entre campos grandes y chicos", "Entre plantas de verano e invierno", "Entre semillas caras y baratas"], "«Gendefekt repariert ... fremde Gene»."),
+        c("¿Qué pide la agricultora antes de recurrir a nuevas intervenciones?", ["Agotar alternativas como otras rotaciones y variedades antiguas", "Más investigación privada", "Prohibir los pesticidas ya", "Importar más alimentos"], "«Alternativen ausschöpfen»."),
       ],
     },
   },

@@ -8,7 +8,7 @@ import type { Step } from "@/lib/session";
 import { LessonPlayer } from "@/components/LessonPlayer";
 import { shuffle } from "@/lib/text";
 
-const LEVELS = ["A2", "B1", "B2"] as const;
+const LEVELS = ["A2", "B1", "B2", "C1"] as const;
 const keyOf = (t: LibraryText) => `library/${t.id}`;
 const wordCount = (t: LibraryText) => t.reading.text.join(" ").split(/\s+/).length;
 

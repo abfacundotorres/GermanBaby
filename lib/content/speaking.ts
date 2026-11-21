@@ -1,7 +1,7 @@
 // Consignas de expresión oral: monólogos de 30 segundos a 2 minutos. Se graban, se transcriben con Azure y se puntúan
 // con la misma rúbrica que la escritura (/api/rubric), más fluidez y pronunciación medidas por Azure.
 
-export type SpeakingLevel = "A1" | "A2" | "B1" | "B2";
+export type SpeakingLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type SpeakingTask = {
   id: string; level: SpeakingLevel; emoji: string; title: string;
   genre: string; register: "du" | "Sie" | "neutral";
@@ -44,4 +44,10 @@ export const SPEAKING: SpeakingTask[] = [
   { id: "s-b2-vortrag", level: "B2", emoji: "🎤", title: "Mini presentación", genre: "Exposición", register: "neutral",
     prompt: "Dá una exposición breve sobre un tema que conozcas bien: introducí el tema, desarrollá dos ideas y cerrá con tu valoración.",
     points: ["introducción del tema", "dos ideas desarrolladas", "ejemplos", "valoración final"], minSeconds: 90, maxSeconds: 150, tip: "Ich möchte heute über … sprechen; Zunächst …; Abschließend …" },
+  { id: "s-c1-streitgespraech", level: "C1", emoji: "⚖️", title: "Posición matizada", genre: "Argumentación", register: "neutral",
+    prompt: "Presentá tu posición sobre la afirmación «Las redes sociales hacen más daño que bien a la democracia». Matizá: reconocé lo que sí aportan, explicá tu reserva principal y terminá con una propuesta concreta.",
+    points: ["posición clara desde el inicio", "reconocimiento de aspectos positivos", "reserva principal fundamentada con un ejemplo", "propuesta concreta", "cierre que retoma la tesis"], minSeconds: 100, maxSeconds: 170, tip: "Einerseits … Gleichwohl …; Meines Erachtens …; Ich plädiere dafür, dass …" },
+  { id: "s-c1-vortrag", level: "C1", emoji: "🎓", title: "Exposición con estructura", genre: "Exposición", register: "neutral",
+    prompt: "Dá una exposición de unos dos minutos sobre un fenómeno social o científico que te interese: presentá el tema, explicá causas y consecuencias, discutí una limitación o controversia y concluí con tu valoración.",
+    points: ["introducción que enmarca el tema", "causas y consecuencias explicadas", "una controversia o limitación discutida", "valoración final fundamentada", "estructura reconocible con conectores"], minSeconds: 110, maxSeconds: 180, tip: "Ich möchte Ihnen … vorstellen; Ursächlich dafür ist …; Zu den Folgen zählt …; Abschließend lässt sich festhalten …" },
 ];

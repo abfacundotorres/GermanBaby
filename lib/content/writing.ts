@@ -1,7 +1,7 @@
 // Consignas de escritura con rúbrica por nivel. Cada una pide cubrir unos puntos de contenido, en un registro y con un largo mínimo.
 // La corrección (/api/rubric) puntúa cuatro criterios de 0 a 5. Para sumar una consigna, agregá una entrada.
 
-export type WritingLevel = "A1" | "A2" | "B1" | "B2";
+export type WritingLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type WritingTask = {
   id: string; level: WritingLevel; emoji: string; title: string;
   genre: string; // tipo de texto
@@ -66,4 +66,10 @@ export const WRITING: WritingTask[] = [
   { id: "b2-vortrag", level: "B2", emoji: "🎤", title: "Resumen de una charla", genre: "Resumen y opinión", register: "neutral",
     prompt: "Asististe a una charla sobre «El trabajo remoto en el futuro». Escribí un resumen de tres ideas posibles de la charla y tu valoración personal.",
     points: ["tres ideas principales", "conexión lógica entre ellas", "valoración personal fundamentada", "conclusión"], minWords: 150, maxWords: 250, tip: "Der Referent betonte, dass …; Besonders interessant fand ich …; Konjunktiv I para el discurso indirecto." },
+  { id: "c1-essay", level: "C1", emoji: "✒️", title: "Ensayo argumentativo", genre: "Ensayo", register: "neutral",
+    prompt: "«El progreso tecnológico hace a las sociedades más libres.» Escribí un ensayo: tesis, dos líneas de argumentación con ejemplos, una contraposición matizada y una conclusión que vaya más allá de repetir lo dicho.",
+    points: ["tesis clara en la introducción", "dos líneas de argumentación con ejemplos", "contraargumento tratado con matices", "conclusión que aporta una valoración propia", "conectores y progresión lógica"], minWords: 250, maxWords: 380, tip: "Zunächst … Dem steht entgegen, dass …; Dennoch lässt sich festhalten, dass …; nominalización y subordinadas variadas." },
+  { id: "c1-stellungnahme", level: "C1", emoji: "🏛️", title: "Toma de posición formal", genre: "Carta formal argumentativa", register: "Sie",
+    prompt: "El concejo de tu ciudad quiere cerrar una biblioteca barrial para ahorrar costos. Escribí una carta formal a la comisión: reconocé el problema de costos, argumentá por qué conviene mantenerla, proponé alternativas de financiación y pedí una respuesta.",
+    points: ["reconocer la situación y el motivo del concejo", "al menos dos argumentos en contra del cierre", "una propuesta concreta de financiación o uso alternativo", "pedido de respuesta o reunión", "registro formal coherente en todo el texto"], minWords: 220, maxWords: 340, tip: "Sehr geehrte Damen und Herren, … Ich möchte darauf hinweisen, dass …; Konjunktiv II para proponer; cierre formal." },
 ];

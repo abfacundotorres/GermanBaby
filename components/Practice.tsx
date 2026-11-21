@@ -9,7 +9,7 @@ import { WRITING } from "@/lib/content/writing";
 import { levelFromProgress } from "@/lib/level";
 import { dueItems, useProgress } from "@/lib/progress";
 
-const ORDER = ["A1", "A2", "B1", "B2"] as const;
+const ORDER = ["A1", "A2", "B1", "B2", "C1"] as const;
 type Lv = (typeof ORDER)[number];
 
 /** Primer elemento del nivel pedido; si no hay, el del nivel más cercano hacia arriba. Rota por día. */
@@ -39,7 +39,7 @@ export default function Practice() {
 
   const today = useMemo(() => {
     const raw = levelFromProgress(p.lessons);
-    const lv: Lv = raw === "C1" ? "B2" : raw;
+    const lv: Lv = raw;
     const w = pick(WRITING, lv, day), s = pick(SPEAKING, lv, day), l = pick(LISTENING, lv === "A1" ? "A2" : lv, day), r = pick(LIBRARY, lv === "A1" ? "A2" : lv, day);
     const opts = [
       w && { href: "/schreiben", ico: w.emoji, kind: "Escritura", title: w.title, lv: w.level },

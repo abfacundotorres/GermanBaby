@@ -61,7 +61,7 @@ export default function SprechenPage() {
       <main className="container stack" style={{ paddingTop: 20 }}>
         <div className="h1">🗣️ Expresión oral</div>
         <p className="muted">Monólogos de medio minuto a dos minutos. Grabás, se transcribe y se mide fluidez y pronunciación (Azure); después se puntúa el contenido con la misma rúbrica de escritura (IA).</p>
-        {(["A1", "A2", "B1", "B2"] as const).map((lv) => (
+        {(["A1", "A2", "B1", "B2", "C1"] as const).map((lv) => (
           <section key={lv} className="stack">
             <div className="h2">Nivel {lv}</div>
             {SPEAKING.filter((t) => t.level === lv).map((t) => {
