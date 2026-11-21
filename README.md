@@ -102,7 +102,7 @@ app/
   review/                      repaso espaciado
   mixed/                       repaso mezclado de varias unidades (sin IA)
   words/                       entrenador de vocabulario por frecuencia (sin IA)
-  library/                     biblioteca de lecturas graduadas, A2 a B2 (sin IA)
+  library/                     biblioteca de lecturas graduadas, A1 a C1 (sin IA)
   nivel/                       test de nivel inicial (hasta 75 preguntas A1–C1 con escucha, adaptativo, sin IA) con salto opcional
   schreiben/                   escritura con rúbrica (17 consignas A1–C1, corrige /api/rubric)
   sprechen/                    expresión oral: monólogos grabados, Azure mide la voz y /api/rubric puntúa el contenido

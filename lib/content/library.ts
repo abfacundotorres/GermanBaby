@@ -999,4 +999,108 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-ausland", level: "B1", emoji: "🌍", topic: "Un año en el exterior",
+    reading: {
+      title: "Ein Jahr im Ausland",
+      text: [
+        "Viele junge Menschen träumen davon, nach der Schule oder dem Studium ein Jahr im Ausland zu verbringen. Manche arbeiten dort in einem Café, andere machen ein Praktikum oder helfen als Freiwillige in einem sozialen Projekt. Ein solches Jahr kostet allerdings Geld und verlangt eine gute Vorbereitung.",
+        "Wer ins Ausland geht, muss zuerst klären, wo er wohnen wird und ob er ein Visum braucht. Außerdem sollte man sich über die Krankenversicherung informieren, denn im Ausland gelten oft andere Regeln als zu Hause. Viele Organisationen bieten Beratung an und helfen bei den Formularen.",
+        "Am Anfang erleben fast alle einen Kulturschock. Das Essen, die Sprache und die Gewohnheiten sind plötzlich anders, und man vermisst Familie und Freunde. Nach einigen Wochen gewöhnen sich die meisten jedoch an die neue Umgebung und finden neue Freunde.",
+        "Am Ende sind sich die meisten Rückkehrer einig: Die Erfahrung hat sie selbstständiger und offener gemacht. Sie sprechen besser Fremdsprachen und haben gelernt, mit Problemen umzugehen. Wer darüber nachdenkt, sollte also nicht zu lange zögern, sondern einfach anfangen zu planen.",
+      ],
+      translation: [
+        "Muchos jóvenes sueñan con pasar un año en el exterior después de la escuela o la universidad. Algunos trabajan allí en un café, otros hacen una pasantía o ayudan como voluntarios en un proyecto social. Un año así cuesta dinero, sin embargo, y exige una buena preparación.",
+        "Quien se va al exterior primero debe aclarar dónde vivirá y si necesita una visa. Además conviene informarse sobre el seguro de salud, porque en el exterior suelen regir otras reglas que en casa. Muchas organizaciones ofrecen asesoramiento y ayudan con los formularios.",
+        "Al principio casi todos viven un choque cultural. La comida, el idioma y las costumbres son de pronto distintos, y se extraña a la familia y los amigos. Después de unas semanas, sin embargo, la mayoría se acostumbra al nuevo entorno y hace amigos nuevos.",
+        "Al final la mayoría de los que vuelven coinciden: la experiencia los hizo más independientes y abiertos. Hablan mejor idiomas extranjeros y aprendieron a manejar problemas. Quien lo piensa no debería dudar demasiado, sino empezar a planificar.",
+      ],
+      questions: [
+        c("¿Qué actividades se mencionan para un año en el exterior?", ["Trabajar en un café, hacer pasantías o ser voluntario", "Solo estudiar", "Solo viajar", "Solo trabajar en una fábrica"], "«Café ... Praktikum ... Freiwillige»."),
+        c("¿Qué hay que aclarar antes de partir?", ["Dónde vivir y si hace falta visa", "Qué ropa llevar", "Cuánto dura el vuelo", "Qué idioma se habla"], "«wo er wohnen wird ... Visum»."),
+        tf("Las reglas del seguro de salud son siempre las mismas en todos los países.", false, "«gelten oft andere Regeln»."),
+        c("¿Qué viven casi todos al principio?", ["Un choque cultural", "Una gran alegría", "Una enfermedad", "Aburrimiento"], "«Kulturschock»."),
+        c("¿Qué pasa después de unas semanas?", ["La mayoría se acostumbra y hace amigos", "Todos vuelven", "Nadie se acostumbra", "Los amigos viajan"], "«gewöhnen sich ... neue Freunde»."),
+        c("¿Qué ganan los que vuelven?", ["Independencia, apertura e idiomas", "Más dinero", "Un título", "Un trabajo fijo"], "«selbstständiger und offener»."),
+      ],
+    },
+  },
+  {
+    id: "b1-laerm", level: "B1", emoji: "🔊", topic: "Ruido en el edificio",
+    reading: {
+      title: "Streit um den Lärm",
+      text: [
+        "In einem Mietshaus in Köln gibt es seit Monaten Streit zwischen zwei Familien. Die Familie im zweiten Stock hat zwei kleine Kinder, die tagsüber laut spielen und manchmal auch am Abend noch durch die Wohnung laufen. Die älteren Nachbarn im ersten Stock fühlen sich dadurch gestört und haben sich schon mehrmals beschwert.",
+        "Zuerst haben sie nur an der Tür geklingelt und höflich gebeten, leiser zu sein. Als sich nichts änderte, haben sie einen Brief geschrieben und schließlich sogar den Vermieter angerufen. Die Eltern waren verärgert, weil sie meinten, dass Kinder nun einmal Lärm machen und das normal sei.",
+        "Der Vermieter hat daraufhin ein Treffen organisiert, bei dem beide Seiten ihre Sicht schildern konnten. Das Gespräch war zunächst angespannt, aber am Ende fanden alle einen Kompromiss: Nach zwanzig Uhr sollen die Kinder nicht mehr herumrennen, dafür wollen die Nachbarn tagsüber toleranter sein.",
+        "Wichtig ist bei solchen Konflikten, dass man früh und ruhig miteinander spricht, bevor sich der Ärger aufstaut. Wer sich in die Lage des anderen versetzt, versteht oft schneller, worum es geht, und findet leichter eine Lösung, mit der beide leben können.",
+      ],
+      translation: [
+        "En un edificio de alquiler de Colonia hay desde hace meses una disputa entre dos familias. La familia del segundo piso tiene dos chicos pequeños que juegan fuerte durante el día y a veces todavía corren por el departamento a la noche. Los vecinos mayores del primer piso se sienten molestos por eso y ya se quejaron varias veces.",
+        "Al principio solo tocaron el timbre y pidieron con educación que hicieran menos ruido. Como nada cambiaba, escribieron una carta e incluso llamaron al propietario. Los padres se enojaron porque opinaban que los chicos hacen ruido y que eso es normal.",
+        "El propietario organizó entonces una reunión en la que ambas partes pudieron exponer su punto de vista. La conversación fue tensa al principio, pero al final todos llegaron a un compromiso: después de las veinte horas los chicos ya no deben correr; a cambio, los vecinos quieren ser más tolerantes durante el día.",
+        "En estos conflictos es importante hablar temprano y con calma antes de que se acumule el enojo. Quien se pone en el lugar del otro suele entender más rápido de qué se trata y encuentra con más facilidad una solución con la que ambos puedan vivir.",
+      ],
+      questions: [
+        c("¿Cuál es el origen del conflicto?", ["El ruido de los chicos del segundo piso", "Una pérdida de llaves", "El estacionamiento", "Una mascota"], "«laut spielen»."),
+        c("¿Qué hicieron primero los vecinos mayores?", ["Tocar el timbre y pedir con educación", "Llamar a la policía", "Mudarse", "Escribir al diario"], "«geklingelt und höflich gebeten»."),
+        c("¿Por qué se enojaron los padres?", ["Pensaban que el ruido de los chicos es normal", "No les gustaba el edificio", "No conocían a los vecinos", "No tenían tiempo"], "«Kinder nun einmal Lärm machen»."),
+        c("¿Qué organizó el propietario?", ["Una reunión con ambas partes", "Una mudanza", "Una renovación", "Una multa"], "«Treffen organisiert»."),
+        fi("¿A partir de qué hora (en horas) no deben correr los chicos?", ["20", "zwanzig"], "«Nach zwanzig Uhr»."),
+        c("¿Qué consejo da el texto?", ["Hablar temprano y con calma", "Ignorar el problema", "Escribir cartas anónimas", "Evitar a los vecinos"], "«früh und ruhig miteinander sprechen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-gesund-essen", level: "B1", emoji: "🥗", topic: "Comer sano",
+    reading: {
+      title: "Gesund essen im Alltag",
+      text: [
+        "Gesund zu essen ist nicht so schwer, wie viele denken. Ernährungsexperten empfehlen, täglich Obst und Gemüse zu essen, am besten fünf Portionen. Dazu kommen Vollkornprodukte, Hülsenfrüchte und gelegentlich Fisch. Fleisch und Süßigkeiten sollte man dagegen nur in kleinen Mengen genießen.",
+        "Im Alltag scheitern gute Vorsätze oft an der Zeit. Wer nach der Arbeit müde nach Hause kommt, greift schnell zu Pizza oder Fast Food. Hilfreich ist es deshalb, am Wochenende zu planen und einige Gerichte vorzukochen. So hat man auch an stressigen Tagen etwas Gesundes im Kühlschrank.",
+        "Auch das Trinken spielt eine wichtige Rolle. Wasser oder ungesüßter Tee sind die beste Wahl, während zuckerhaltige Getränke viele unnötige Kalorien enthalten. Wer außerdem langsam isst und nicht vor dem Fernseher, merkt besser, wann er satt ist.",
+        "Ganz verzichten muss niemand auf seine Lieblingsspeisen. Entscheidend ist die Balance: Wer meistens gesund isst, kann sich ab und zu ein Stück Kuchen oder ein Eis ohne schlechtes Gewissen gönnen. Strenge Diäten sind dagegen selten dauerhaft erfolgreich.",
+      ],
+      translation: [
+        "Comer sano no es tan difícil como mucha gente piensa. Los expertos en nutrición recomiendan comer fruta y verdura todos los días, lo mejor cinco porciones. A eso se suman los productos integrales, las legumbres y, de vez en cuando, pescado. La carne y los dulces, en cambio, conviene disfrutarlos solo en pequeñas cantidades.",
+        "En la vida cotidiana los buenos propósitos suelen fracasar por falta de tiempo. Quien llega cansado a casa después del trabajo recurre rápido a la pizza o la comida rápida. Ayuda por eso planificar el fin de semana y dejar algunos platos cocinados de antemano. Así, incluso en los días de estrés, hay algo sano en la heladera.",
+        "También la bebida cumple un papel importante. El agua o el té sin azúcar son la mejor opción, mientras que las bebidas azucaradas tienen muchas calorías innecesarias. Quien además come despacio y no frente al televisor se da cuenta mejor de cuándo está satisfecho.",
+        "Nadie tiene que renunciar del todo a sus comidas favoritas. Lo decisivo es el equilibrio: quien come sano la mayor parte del tiempo puede darse el gusto de un pedazo de torta o un helado de vez en cuando, sin culpa. Las dietas estrictas, en cambio, rara vez tienen éxito duradero.",
+      ],
+      questions: [
+        fi("¿Cuántas porciones de fruta y verdura se recomiendan por día?", ["5", "fünf"], "«fünf Portionen»."),
+        c("¿Cómo conviene tratar la carne y los dulces?", ["En pequeñas cantidades", "Diariamente", "Evitarlos totalmente", "Solo de noche"], "«nur in kleinen Mengen»."),
+        c("¿Qué ayuda cuando falta tiempo?", ["Cocinar algunos platos por adelantado el fin de semana", "Comer afuera siempre", "Saltear comidas", "Comprar suplementos"], "«vorzukochen»."),
+        c("¿Cuál es la mejor bebida?", ["Agua o té sin azúcar", "Gaseosas", "Jugos azucarados", "Café con leche"], "«Wasser oder ungesüßter Tee»."),
+        tf("El texto dice que hay que renunciar por completo a las comidas favoritas.", false, "«Ganz verzichten muss niemand»."),
+        c("¿Qué piensa de las dietas estrictas?", ["Rara vez tienen éxito duradero", "Son la única solución", "Son más rápidas", "Son obligatorias"], "«selten dauerhaft erfolgreich»."),
+      ],
+    },
+  },
+  {
+    id: "b1-online-lernen", level: "B1", emoji: "💻", topic: "Aprender en línea",
+    reading: {
+      title: "Lernen im Internet",
+      text: [
+        "Immer mehr Menschen lernen online: Sprachen, Programmieren oder sogar ganze Studiengänge. Der größte Vorteil ist die Flexibilität. Man kann zu jeder Zeit und an jedem Ort lernen, braucht keinen langen Weg zur Schule und kann das Tempo selbst bestimmen. Auch die Kosten sind oft niedriger als bei einem Präsenzkurs.",
+        "Allerdings haben Online-Kurse auch Nachteile. Wer allein vor dem Bildschirm sitzt, hat es schwerer, sich zu motivieren, und viele brechen einen Kurs nach wenigen Wochen ab. Außerdem fehlt oft der direkte Kontakt zu anderen Lernenden und zu den Lehrkräften, was besonders beim Sprechenlernen ein Problem sein kann.",
+        "Um erfolgreich zu lernen, empfehlen Fachleute feste Lernzeiten und konkrete Ziele. Hilfreich sind auch virtuelle Lerngruppen, in denen man sich austauschen und gegenseitig motivieren kann. Manche Kurse kombinieren Videos mit Live-Unterricht, sodass Fragen sofort geklärt werden können.",
+        "Online-Lernen ist deshalb keine Konkurrenz zum klassischen Unterricht, sondern eine gute Ergänzung. Wer Disziplin mitbringt und die richtigen Angebote auswählt, kann viel erreichen und gleichzeitig Zeit und Geld sparen.",
+      ],
+      translation: [
+        "Cada vez más gente aprende en línea: idiomas, programación o incluso carreras enteras. La mayor ventaja es la flexibilidad. Se puede aprender en cualquier momento y lugar, no hace falta un largo camino hasta la escuela y uno mismo determina el ritmo. También los costos suelen ser menores que en un curso presencial.",
+        "Sin embargo, los cursos en línea también tienen desventajas. Quien está solo frente a la pantalla se motiva con más dificultad y muchos abandonan el curso después de pocas semanas. Además, a menudo falta el contacto directo con otros alumnos y con los docentes, lo cual puede ser un problema sobre todo para aprender a hablar.",
+        "Para aprender con éxito, los expertos recomiendan horarios fijos y metas concretas. Ayudan también los grupos de estudio virtuales, en los que se puede intercambiar y motivarse mutuamente. Algunos cursos combinan videos con clases en vivo, de modo que las preguntas se aclaran enseguida.",
+        "Aprender en línea no es por eso una competencia de la enseñanza clásica, sino un buen complemento. Quien tiene disciplina y elige las ofertas adecuadas puede lograr mucho y ahorrar tiempo y dinero a la vez.",
+      ],
+      questions: [
+        c("¿Cuál es la mayor ventaja del aprendizaje en línea?", ["La flexibilidad", "El título", "La compañía", "La nota"], "«Flexibilität»."),
+        c("¿Qué pasa con muchos alumnos en línea?", ["Abandonan tras pocas semanas", "Aprueban todo", "Se mudan", "Cambian de curso"], "«brechen einen Kurs nach wenigen Wochen ab»."),
+        c("¿Por qué puede ser un problema aprender a hablar en línea?", ["Falta el contacto directo con otros", "No hay vocabulario", "El audio es malo", "No hay profesores"], "«direkte Kontakt»."),
+        c("¿Qué recomiendan los expertos?", ["Horarios fijos y metas concretas", "Estudiar solo de noche", "Evitar los grupos", "Estudiar sin pausas"], "«feste Lernzeiten und konkrete Ziele»."),
+        c("¿Cómo combinan algunos cursos formatos?", ["Videos y clases en vivo", "Libros y exámenes", "Música y juegos", "Solo chat"], "«Videos mit Live-Unterricht»."),
+        c("¿Cómo califica el texto el aprendizaje en línea?", ["Como un buen complemento de la enseñanza clásica", "Como un reemplazo total", "Como una pérdida de tiempo", "Como algo solo para jóvenes"], "«gute Ergänzung»."),
+      ],
+    },
+  },
 ];

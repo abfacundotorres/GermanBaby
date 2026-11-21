@@ -40,7 +40,7 @@ export default function Practice() {
   const today = useMemo(() => {
     const raw = levelFromProgress(p.lessons);
     const lv: Lv = raw;
-    const w = pick(WRITING, lv, day), s = pick(SPEAKING, lv, day), l = pick(LISTENING, lv === "A1" ? "A2" : lv, day), r = pick(LIBRARY, lv === "A1" ? "A2" : lv, day);
+    const w = pick(WRITING, lv, day), s = pick(SPEAKING, lv, day), l = pick(LISTENING, lv, day), r = pick(LIBRARY, lv, day);
     const opts = [
       w && { href: "/schreiben", ico: w.emoji, kind: "Escritura", title: w.title, lv: w.level },
       s && { href: "/sprechen", ico: s.emoji, kind: "Expresión oral", title: s.title, lv: s.level },

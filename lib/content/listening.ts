@@ -3,7 +3,7 @@
 
 import type { Dialogue, DialogueLine, ListenQuestion, Speaker } from "../curriculum.ts";
 
-export type ListenLevel = "A2" | "B1" | "B2" | "C1";
+export type ListenLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type ListenKind = "monolog" | "dreier";
 export type ListenPiece = { id: string; level: ListenLevel; kind: ListenKind; emoji: string; topic: string; dialogue: Dialogue };
 
@@ -187,6 +187,139 @@ export const LISTENING: ListenPiece[] = [
         c("¿Qué riesgo concreto menciona la agricultora?", ["Que el polen contamine la cosecha orgánica", "Que suba el precio de las semillas", "Que falten trabajadores", "Que caiga la producción"], "«Pollen kennt keine Feldgrenzen»."),
         c("¿Qué distinción introduce el genetista?", ["Entre corregir un defecto genético con precisión y agregar genes ajenos", "Entre campos grandes y chicos", "Entre plantas de verano e invierno", "Entre semillas caras y baratas"], "«Gendefekt repariert ... fremde Gene»."),
         c("¿Qué pide la agricultora antes de recurrir a nuevas intervenciones?", ["Agotar alternativas como otras rotaciones y variedades antiguas", "Más investigación privada", "Prohibir los pesticidas ya", "Importar más alimentos"], "«Alternativen ausschöpfen»."),
+      ],
+    },
+  },
+  {
+    id: "a1-anrufbeantworter", level: "A1", kind: "monolog", emoji: "☎️", topic: "Mensaje en el contestador",
+    dialogue: {
+      title: "Eine Nachricht für Tom", setting: "Lena deja un mensaje de voz",
+      lines: [
+        L("f", "Lena", "Hallo Tom, hier ist Lena. Ich bin heute im Café.", "Hola Tom, soy Lena. Hoy estoy en el café."),
+        L("f", "Lena", "Das Café heißt Sonne und ist in der Hauptstraße.", "El café se llama Sonne y queda en la calle principal."),
+        L("f", "Lena", "Ich bin dort von drei bis fünf Uhr.", "Estoy ahí de tres a cinco."),
+        L("f", "Lena", "Hast du Zeit? Dann komm bitte vorbei.", "¿Tenés tiempo? Entonces pasá, por favor."),
+        L("f", "Lena", "Meine Nummer ist null eins sieben null, eins zwei drei. Tschüss!", "Mi número es 0170, 123. ¡Chau!"),
+      ],
+      questions: [
+        c("¿Cómo se llama el café?", ["Sonne", "Mond", "Stern", "Blume"], "«Das Café heißt Sonne»."),
+        c("¿Dónde queda?", ["En la calle principal", "En el parque", "En la estación", "En el centro comercial"], "«in der Hauptstraße»."),
+        fi("¿Hasta qué hora está Lena allí?", ["5", "fünf", "17"], "«von drei bis fünf Uhr»."),
+        tf("Lena quiere que Tom pase por el café.", true, "«Dann komm bitte vorbei»."),
+        c("¿Qué deja al final?", ["Su número de teléfono", "Su dirección", "Su nombre completo", "Su correo"], "«Meine Nummer»."),
+      ],
+    },
+  },
+  {
+    id: "a1-fruehstueck", level: "A1", kind: "dreier", emoji: "🥐", topic: "El desayuno en familia",
+    dialogue: {
+      title: "Am Frühstückstisch", setting: "Una madre, un padre y su hijo desayunan",
+      lines: [
+        L("f", "Mutter", "Guten Morgen! Was möchtet ihr essen?", "¡Buen día! ¿Qué quieren comer?"),
+        L("m", "Vater", "Ich möchte ein Brötchen und einen Kaffee, bitte.", "Quiero un pancito y un café, por favor."),
+        L("m2", "Jonas", "Ich möchte ein Ei und Milch.", "Yo quiero un huevo y leche."),
+        L("f", "Mutter", "Möchtest du auch Brot, Jonas?", "¿Querés también pan, Jonas?"),
+        L("m2", "Jonas", "Nein, danke. Ich habe keinen Hunger.", "No, gracias. No tengo hambre."),
+        L("m", "Vater", "Wie spät ist es? Ich muss um acht Uhr los.", "¿Qué hora es? Tengo que salir a las ocho."),
+        L("f", "Mutter", "Es ist halb acht. Du hast noch Zeit.", "Son las siete y media. Todavía tenés tiempo."),
+        L("m2", "Jonas", "Tschüss, Papa! Bis heute Abend!", "¡Chau, papá! ¡Hasta la noche!"),
+      ],
+      questions: [
+        c("¿Qué quiere el padre?", ["Un pancito y un café", "Un huevo y leche", "Té y torta", "Jugo"], "«ein Brötchen und einen Kaffee»."),
+        c("¿Qué quiere Jonas?", ["Un huevo y leche", "Pan y café", "Torta", "Nada"], "«ein Ei und Milch»."),
+        tf("Jonas quiere pan.", false, "«Nein, danke»."),
+        c("¿A qué hora tiene que salir el padre?", ["A las ocho", "A las siete", "A las nueve", "A las diez"], "«um acht Uhr los»."),
+        c("¿Qué hora es?", ["Las siete y media", "Las ocho", "Las seis y media", "Las nueve"], "«halb acht»."),
+      ],
+    },
+  },
+  {
+    id: "a1-party", level: "A1", kind: "dreier", emoji: "🎂", topic: "Organizar una fiesta",
+    dialogue: {
+      title: "Eine Party für Anna", setting: "Tres amigos organizan una fiesta de cumpleaños",
+      lines: [
+        L("f", "Lena", "Am Samstag hat Anna Geburtstag. Wir machen eine Party!", "El sábado es el cumpleaños de Anna. ¡Hacemos una fiesta!"),
+        L("m", "Tom", "Gute Idee! Wann beginnt die Party?", "¡Buena idea! ¿Cuándo empieza la fiesta?"),
+        L("f", "Lena", "Um sieben Uhr, bei mir zu Hause.", "A las siete, en mi casa."),
+        L("m2", "Max", "Was brauchen wir? Ich kaufe Getränke.", "¿Qué necesitamos? Yo compro bebidas."),
+        L("m", "Tom", "Ich bringe einen Kuchen mit.", "Yo traigo una torta."),
+        L("f", "Lena", "Super! Ich koche Nudeln und mache einen Salat.", "¡Genial! Yo cocino fideos y hago una ensalada."),
+        L("m2", "Max", "Und die Musik? Ich habe eine Gitarre.", "¿Y la música? Yo tengo una guitarra."),
+        L("f", "Lena", "Perfekt. Bis Samstag!", "Perfecto. ¡Hasta el sábado!"),
+      ],
+      questions: [
+        c("¿Qué día es la fiesta?", ["El sábado", "El domingo", "El viernes", "El lunes"], "«Am Samstag»."),
+        fi("¿A qué hora empieza?", ["7", "sieben", "19"], "«Um sieben Uhr»."),
+        c("¿Dónde es?", ["En la casa de Lena", "En un restaurante", "En el parque", "En lo de Anna"], "«bei mir zu Hause»."),
+        c("¿Qué trae Tom?", ["Una torta", "Bebidas", "Una guitarra", "Fideos"], "«einen Kuchen»."),
+        c("¿Qué hace Max por la música?", ["Trae una guitarra", "Compra un radio", "Pone un disco", "Nada"], "«Ich habe eine Gitarre»."),
+      ],
+    },
+  },
+  {
+    id: "a2-stadtfuehrung", level: "A2", kind: "monolog", emoji: "🗺️", topic: "Visita guiada por la ciudad",
+    dialogue: {
+      title: "Eine Stadtführung", setting: "Una guía recibe a un grupo de turistas",
+      lines: [
+        L("f", "Führerin", "Herzlich willkommen in Regensburg! Mein Name ist Julia, und ich zeige Ihnen heute die Altstadt.", "¡Bienvenidos a Ratisbona! Me llamo Julia y hoy les mostraré el casco antiguo."),
+        L("f", "Führerin", "Die Führung dauert zwei Stunden. Wir beginnen hier am Dom und gehen dann zur Steinernen Brücke.", "La visita dura dos horas. Empezamos aquí en la catedral y luego vamos al Puente de Piedra."),
+        L("f", "Führerin", "Die Brücke ist fast neunhundert Jahre alt. Sie ist eine der ältesten in Deutschland.", "El puente tiene casi novecientos años. Es uno de los más antiguos de Alemania."),
+        L("f", "Führerin", "Danach machen wir eine Pause von zwanzig Minuten. Dort gibt es ein Café mit regionalen Spezialitäten.", "Después hacemos una pausa de veinte minutos. Allí hay un café con especialidades regionales."),
+        L("f", "Führerin", "Am Ende gehen wir zum Rathaus. Dort können Sie Postkarten und Souvenirs kaufen. Bitte bleiben Sie in der Gruppe!", "Al final vamos al ayuntamiento. Allí pueden comprar postales y recuerdos. ¡Por favor, permanezcan en el grupo!"),
+      ],
+      questions: [
+        c("¿Cuánto dura la visita?", ["Dos horas", "Una hora", "Tres horas", "Media hora"], "«zwei Stunden»."),
+        c("¿Dónde empieza?", ["En la catedral", "En el puente", "En el ayuntamiento", "En un café"], "«am Dom»."),
+        c("¿Qué antigüedad tiene el puente?", ["Casi novecientos años", "Cien años", "Quinientos años", "Dos mil años"], "«fast neunhundert Jahre»."),
+        fi("¿Cuántos minutos dura la pausa?", ["20", "zwanzig"], "«zwanzig Minuten»."),
+        c("¿Qué se puede comprar en el ayuntamiento?", ["Postales y recuerdos", "Comida", "Entradas de teatro", "Libros viejos"], "«Postkarten und Souvenirs»."),
+      ],
+    },
+  },
+  {
+    id: "a2-kinoabend", level: "A2", kind: "dreier", emoji: "🎬", topic: "Planear una salida al cine",
+    dialogue: {
+      title: "Wohin gehen wir heute Abend?", setting: "Tres amigos se ponen de acuerdo para ir al cine",
+      lines: [
+        L("f", "Mia", "Hat jemand Lust, heute Abend ins Kino zu gehen?", "¿Alguien tiene ganas de ir hoy al cine?"),
+        L("m", "Paul", "Ja, gern! Aber ich möchte keinen Horrorfilm sehen. Davon kann ich nachts nicht schlafen.", "¡Sí, con gusto! Pero no quiero ver una película de terror. Con eso no puedo dormir de noche."),
+        L("m2", "Ben", "Wie wäre es mit einer Komödie? Im Kino läuft eine neue deutsche Komödie.", "¿Qué tal una comedia? En el cine hay una nueva comedia alemana."),
+        L("f", "Mia", "Das klingt gut. Um wie viel Uhr beginnt der Film?", "Suena bien. ¿A qué hora empieza la película?"),
+        L("m2", "Ben", "Um halb neun. Wir können vorher noch eine Pizza essen.", "A las ocho y media. Antes podemos comer una pizza."),
+        L("m", "Paul", "Dann treffen wir uns um sieben vor der Pizzeria am Marktplatz.", "Entonces nos encontramos a las siete frente a la pizzería de la plaza del mercado."),
+        L("f", "Mia", "Einverstanden. Wer kauft die Karten?", "De acuerdo. ¿Quién compra las entradas?"),
+        L("m2", "Ben", "Ich buche sie im Internet. Sie kosten zehn Euro pro Person.", "Yo las reservo por internet. Cuestan diez euros por persona."),
+      ],
+      questions: [
+        c("¿Qué tipo de película NO quiere ver Paul?", ["De terror", "De comedia", "De acción", "Un documental"], "«keinen Horrorfilm»."),
+        c("¿Qué proponen en su lugar?", ["Una comedia alemana", "Una película de acción", "Un drama", "Una película de dibujos"], "«deutsche Komödie»."),
+        c("¿A qué hora empieza la película?", ["20:30", "19:00", "21:00", "18:30"], "«halb neun»."),
+        c("¿Dónde se encuentran?", ["Frente a la pizzería de la plaza", "En el cine", "En lo de Paul", "En la estación"], "«vor der Pizzeria am Marktplatz»."),
+        fi("¿Cuántos euros cuesta cada entrada?", ["10", "zehn"], "«zehn Euro pro Person»."),
+      ],
+    },
+  },
+  {
+    id: "a2-elternabend", level: "A2", kind: "dreier", emoji: "🏫", topic: "Reunión de padres",
+    dialogue: {
+      title: "Der Elternabend", setting: "Una maestra habla con dos padres sobre la excursión de la clase",
+      lines: [
+        L("f", "Frau Klein", "Guten Abend, schön, dass Sie gekommen sind. Wir sprechen heute über die Klassenfahrt im Juni.", "Buenas noches, qué bueno que hayan venido. Hoy hablamos del viaje de la clase en junio."),
+        L("m", "Herr Roth", "Wohin fahren die Kinder denn?", "¿Adónde van los chicos?"),
+        L("f", "Frau Klein", "In ein Jugendhaus in den Bergen. Wir bleiben vier Tage, von Montag bis Donnerstag.", "A una casa juvenil en las montañas. Nos quedamos cuatro días, de lunes a jueves."),
+        L("f2", "Frau Weber", "Und was kostet das?", "¿Y cuánto cuesta?"),
+        L("f", "Frau Klein", "Hundertachtzig Euro pro Kind, mit Essen und Programm. Wer Hilfe braucht, kann einen Zuschuss beantragen.", "Ciento ochenta euros por chico, con comida y programa. Quien necesite ayuda puede pedir un subsidio."),
+        L("m", "Herr Roth", "Das ist in Ordnung. Müssen die Kinder etwas mitbringen?", "Está bien. ¿Tienen que llevar algo los chicos?"),
+        L("f", "Frau Klein", "Ja, feste Schuhe, eine Regenjacke und einen Schlafsack. Handys sind nicht erlaubt.", "Sí, zapatos firmes, una campera impermeable y una bolsa de dormir. Los celulares no están permitidos."),
+        L("f2", "Frau Weber", "Mein Sohn wird nicht begeistert sein, aber ich finde die Regel gut.", "Mi hijo no va a estar entusiasmado, pero la regla me parece buena."),
+      ],
+      questions: [
+        c("¿Cuándo es el viaje?", ["En junio", "En mayo", "En julio", "En septiembre"], "«im Juni»."),
+        fi("¿Cuántos días dura?", ["4", "vier"], "«vier Tage»."),
+        fi("¿Cuántos euros cuesta por chico?", ["180", "hundertachtzig"], "«Hundertachtzig Euro»."),
+        c("¿Qué pueden pedir quienes necesitan ayuda?", ["Un subsidio", "Un préstamo", "Un descuento en el colegio", "Nada"], "«Zuschuss»."),
+        c("¿Qué NO está permitido?", ["Los celulares", "La campera impermeable", "Los zapatos firmes", "La bolsa de dormir"], "«Handys sind nicht erlaubt»."),
+        c("¿Qué opina la señora Weber de la regla?", ["Que le parece buena", "Que le parece mala", "Que es injusta", "Que no la entiende"], "«ich finde die Regel gut»."),
       ],
     },
   },
