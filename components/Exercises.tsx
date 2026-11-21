@@ -27,6 +27,7 @@ export type Outcome = {
   detail?: ReactNode;
   bonusXp?: number;
   achievement?: string;
+  gaveUp?: boolean; // «no me acuerdo»: se muestra la respuesta, vuelve al final, pero no resta un corazón
   // Para el registro de errores:
   answer?: string;
   expected?: string;
@@ -218,7 +219,17 @@ export function Build({ step, locked, onResult }: Props<StepOf<"build">>) {
         ))}
       </div>
       {!locked && <button className="btn btn-primary btn-block" disabled={!chosen.length} onClick={check}>Comprobar</button>}
+      {!locked && <GiveUp disabled={false} onGiveUp={() => onResult({ status: "bad", gaveUp: true, title: "Así se arma", detail: <>Correcto: <b>{step.answer}</b></>, answer: "", expected: step.answer, category: "orden de palabras" })} />}
     </div>
+  );
+}
+
+/** «No me acuerdo»: muestra la respuesta sin pasar por la corrección. El ejercicio vuelve al final, pero no resta un corazón. */
+function GiveUp({ disabled, onGiveUp }: { disabled: boolean; onGiveUp: () => void }) {
+  return (
+    <button type="button" className="btn btn-block" disabled={disabled} onClick={onGiveUp} style={{ opacity: 0.85 }}>
+      🤷 No me acuerdo · ver la respuesta
+    </button>
   );
 }
 
@@ -262,6 +273,7 @@ export function Dictation({ step, locked, onResult }: Props<StepOf<"dictation">>
       <div style={{ margin: "10px 0" }}><AudioButtons text={step.de} autoPlay size="big" /></div>
       <GermanInput value={value} onChange={setValue} onSubmit={check} disabled={locked} placeholder="Escribí en alemán…" />
       {!locked && <button className="btn btn-primary btn-block" disabled={!value.trim()} onClick={check}>Comprobar</button>}
+      {!locked && <GiveUp disabled={false} onGiveUp={() => onResult({ status: "bad", gaveUp: true, title: "Así se escribe", detail: <>Era: <b>{step.de}</b> ({step.es})</>, answer: "", expected: step.de, category: "ortografía" })} />}
     </div>
   );
 }
@@ -344,6 +356,13 @@ export function Write({ step, locked, onResult }: Props<StepOf<"write">>) {
         <button className="btn btn-primary btn-block" disabled={!value.trim() || loading} onClick={check}>
           {loading ? <><span className="spinner" /> Corrigiendo…</> : "Comprobar"}
         </button>
+      )}
+      {!locked && (
+        <GiveUp disabled={loading} onGiveUp={() => onResult({
+          status: "bad", gaveUp: true, title: "Así se dice",
+          detail: <>Se dice: <b>{step.references[0]}</b>{step.references.length > 1 && <><br /><span className="small muted">También: {step.references.slice(1, 3).join(" · ")}</span></>}</>,
+          answer: "", expected: step.references[0], category: "vocabulario",
+        })} />
       )}
     </div>
   );
@@ -537,7 +556,7 @@ export function Speak({ step, locked, onResult }: Props<StepOf<"speak">>) {
           </div>
         </div>
       )}
-      {result && <PronunciationReport result={result} />}
+      {result && <PronunciationReport result={result} reference={step.de} />}
       {!locked && result && result.pronScore < PASS_SCORE && (
         <div className="row" style={{ justifyContent: "center" }}>
           <span className="muted small">Necesitás {PASS_SCORE} para aprobar. Escuchá de nuevo y probá otra vez.</span>

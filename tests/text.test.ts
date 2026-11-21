@@ -64,3 +64,14 @@ test("producción libre: la revisión local frena el español, las repeticiones 
   assert.equal(tips.tips.length, 2);
   assert.deepEqual(checkFree("", 3), { blockers: [], tips: [] });
 });
+
+test("alignWords: marca lo que se dijo distinto, lo que faltó y lo que sobró", async () => {
+  const { alignWords } = await import("../lib/text.ts");
+  const kinds = (r: string, h: string) => alignWords(r, h).map((a) => a.kind).join(",");
+  assert.equal(kinds("Ich möchte einen Kaffee", "ich möchte einen Kaffee."), "same,same,same,same");
+  assert.equal(kinds("Ich möchte einen Kaffee", "Ich möchte einen Kaffe"), "same,same,same,diff");
+  assert.equal(kinds("Ich möchte einen Kaffee", "Ich möchte Kaffee"), "same,same,missing,same");
+  assert.equal(kinds("Ich möchte einen Kaffee", "Ich möchte einen großen Kaffee"), "same,same,same,extra,same");
+  const diff = alignWords("Wie heißt du", "Wie heißen du").find((a) => a.kind === "diff");
+  assert.deepEqual([diff?.ref, diff?.heard], ["heißt", "heißen"]);
+});

@@ -235,8 +235,7 @@ function Session({
     } else if (o.status === "bad") {
       newCombo = 0;
       setCombo(0);
-      sfx.wrong();
-      setHearts((h) => Math.max(0, h - 1));
+      if (o.gaveUp) sfx.almost(); else { sfx.wrong(); setHearts((h) => Math.max(0, h - 1)); }
       // El ejercicio vuelve al final de la lección (una sola vez).
       if (firstTry) {
         setQueue((q) => [...q, step]);

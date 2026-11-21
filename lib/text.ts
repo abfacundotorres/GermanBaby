@@ -79,3 +79,42 @@ export function matchFill(input: string, answers: string[]) {
   const n = norm(input);
   return n !== "" && answers.some((a) => norm(a) === n);
 }
+
+export type WordAlign = { kind: "same" | "diff" | "missing" | "extra"; ref?: string; heard?: string };
+
+const bare = (w: string) => w.toLowerCase().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+
+/**
+ * Alinea las palabras de la frase que había que decir con las que reconoció Azure.
+ * «same» coincide, «diff» es otra palabra en el mismo lugar, «missing» no se dijo y «extra» sobra.
+ */
+export function alignWords(reference: string, heard: string): WordAlign[] {
+  const r = reference.split(/\s+/).filter(Boolean);
+  const h = heard.split(/\s+/).filter(Boolean);
+  const sub = (a: string, b: string) => {
+    const x = bare(a), y = bare(b);
+    if (x === y) return 0;
+    return 0.6 + (0.4 * levenshtein(x, y)) / Math.max(x.length, y.length, 1);
+  };
+  const D = Array.from({ length: r.length + 1 }, () => new Array<number>(h.length + 1).fill(0));
+  for (let i = 1; i <= r.length; i++) D[i][0] = i;
+  for (let j = 1; j <= h.length; j++) D[0][j] = j;
+  for (let i = 1; i <= r.length; i++)
+    for (let j = 1; j <= h.length; j++)
+      D[i][j] = Math.min(D[i - 1][j - 1] + sub(r[i - 1], h[j - 1]), D[i - 1][j] + 1, D[i][j - 1] + 1);
+  const out: WordAlign[] = [];
+  let i = r.length, j = h.length;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && Math.abs(D[i][j] - (D[i - 1][j - 1] + sub(r[i - 1], h[j - 1]))) < 1e-9) {
+      out.push({ kind: sub(r[i - 1], h[j - 1]) === 0 ? "same" : "diff", ref: r[i - 1], heard: h[j - 1] });
+      i--; j--;
+    } else if (i > 0 && Math.abs(D[i][j] - (D[i - 1][j] + 1)) < 1e-9) {
+      out.push({ kind: "missing", ref: r[i - 1] });
+      i--;
+    } else {
+      out.push({ kind: "extra", heard: h[j - 1] });
+      j--;
+    }
+  }
+  return out.reverse();
+}
