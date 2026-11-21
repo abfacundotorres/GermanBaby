@@ -104,10 +104,10 @@ app/
   words/                       entrenador de vocabulario por frecuencia (sin IA)
   library/                     biblioteca de lecturas graduadas, A1 a C1 (sin IA)
   nivel/                       test de nivel inicial (hasta 75 preguntas A1–C1 con escucha, adaptativo, sin IA) con salto opcional
-  schreiben/                   escritura con rúbrica (17 consignas A1–C1, corrige /api/rubric)
+  schreiben/                   escritura con rúbrica (24 consignas A1–C1, corrige /api/rubric)
   sprechen/                    expresión oral: monólogos grabados, Azure mide la voz y /api/rubric puntúa el contenido
   hoeren/                      escucha libre: monólogos y conversaciones de tres voces, a tres velocidades (sin IA)
-  exam/                        simulacros tipo examen A2 a C1: lectura, escucha, escritura y oral
+  exam/                        simulacros tipo examen A1 a C1: lectura, escucha, escritura y oral
   chat/[unitId]                charla de rol
   api/speech-token             clave Azure → token de 10 min
   api/correct                  corrección de traducciones (Claude)

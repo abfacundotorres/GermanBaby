@@ -45,7 +45,7 @@ export default function ReviewPage() {
         </Link>
         <Link href="/exam" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📝 Simulacros de examen</b>
-          <span className="muted small">Lectura, escucha, escritura y oral con el formato de un examen de A2 a C1, para ver dónde estás.</span>
+          <span className="muted small">Lectura, escucha, escritura y oral con el formato de un examen de A1 a C1, para ver dónde estás.</span>
         </Link>
         <Link href="/library" className="card stack" style={{ textAlign: "left", textDecoration: "none", color: "inherit" }}>
           <b>📖 Biblioteca de lecturas</b>

@@ -6,7 +6,7 @@ import type { ListenQuestion } from "../curriculum.ts";
 export type ExamText = { title: string; text: string[]; questions: ListenQuestion[] };
 export type ExamAudio = { title: string; setting: string; lines: { who: "f" | "m"; name: string; de: string }[]; questions: ListenQuestion[] };
 export type ExamWriting = { prompt: string; focus: string[]; minSentences: number; hint?: string };
-export type ExamLevel = "A2" | "B1" | "B2" | "C1";
+export type ExamLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type Exam = { id: string; level: ExamLevel; title: string; lesen: ExamText[]; hoeren: ExamAudio[]; schreiben: ExamWriting };
 
 const c = (q: string, options: string[], why: string): ListenQuestion => ({ type: "choice", q, options, answer: options[0], why });
@@ -14,6 +14,127 @@ const tf = (q: string, answer: boolean, why: string): ListenQuestion => ({ type:
 const fi = (q: string, answers: string[], why: string): ListenQuestion => ({ type: "fill", q, answers, hint: "un número", why });
 
 export const EXAMS: Exam[] = [
+  {
+    id: "a1-1",
+    level: "A1",
+    title: "Simulacro A1 · 1",
+    lesen: [
+      {
+        title: "Eine E-Mail von Anna",
+        text: [
+          "Hallo Paul! Ich bin jetzt in Wien. Ich wohne in einem kleinen Hotel. Das Zimmer ist schön, aber nicht groß. Das Frühstück ist von sieben bis zehn Uhr. Ich esse Brot, Käse und Obst. Morgen besuche ich ein Museum. Es kostet acht Euro. Kommst du auch? Viele Grüße, Anna",
+        ],
+        questions: [
+          c("¿Dónde vive Anna ahora?", ["En un hotel en Viena", "En su casa", "En Berlín", "En un departamento"], "«in einem kleinen Hotel»."),
+          tf("El cuarto es grande.", false, "«nicht groß»."),
+          fi("¿Hasta qué hora es el desayuno?", ["10", "zehn"], "«von sieben bis zehn Uhr»."),
+          c("¿Qué hace mañana?", ["Visita un museo", "Va al cine", "Trabaja", "Viaja a Berlín"], "«besuche ich ein Museum»."),
+          fi("¿Cuánto cuesta el museo (euros)?", ["8", "acht"], "«acht Euro»."),
+        ],
+      },
+      {
+        title: "Speisekarte",
+        text: [
+          "Café Sonne. Kaffee: 2,50 Euro. Tee: 2 Euro. Wasser: 1,50 Euro. Brötchen mit Käse: 3 Euro. Kuchen: 3,50 Euro. Suppe: 4 Euro. Von Montag bis Freitag geöffnet: 8 bis 18 Uhr. Am Wochenende geschlossen.",
+        ],
+        questions: [
+          c("¿Qué cuesta 4 euros?", ["La sopa", "El café", "La torta", "El té"], "«Suppe: 4 Euro»."),
+          fi("¿Cuántos euros cuesta el té?", ["2", "zwei"], "«Tee: 2 Euro»."),
+          tf("El café abre los sábados.", false, "«Am Wochenende geschlossen»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Im Café",
+        setting: "Lena pide en un café",
+        lines: [
+          { who: "m", name: "Kellner", de: "Guten Tag! Was möchten Sie?" },
+          { who: "f", name: "Lena", de: "Ich möchte einen Kaffee und ein Stück Kuchen, bitte." },
+          { who: "m", name: "Kellner", de: "Gern. Möchten Sie auch ein Wasser?" },
+          { who: "f", name: "Lena", de: "Nein, danke. Nur den Kaffee und den Kuchen." },
+          { who: "m", name: "Kellner", de: "Das macht sechs Euro." },
+          { who: "f", name: "Lena", de: "Hier sind zehn Euro." },
+          { who: "m", name: "Kellner", de: "Danke! Hier sind vier Euro zurück." },
+          { who: "f", name: "Lena", de: "Vielen Dank. Tschüss!" },
+        ],
+        questions: [
+          c("¿Qué pide Lena?", ["Café y torta", "Té y pan", "Agua y sopa", "Jugo"], "«einen Kaffee und ein Stück Kuchen»."),
+          tf("Lena también pide agua.", false, "«Nein, danke»."),
+          fi("¿Cuánto cuesta en total (euros)?", ["6", "sechs"], "«sechs Euro»."),
+          fi("¿Cuánto vuelto le dan (euros)?", ["4", "vier"], "«vier Euro zurück»."),
+          c("¿Con cuánto paga?", ["Diez euros", "Cinco euros", "Veinte euros", "Seis euros"], "«zehn Euro»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribile una carta corta a un amigo: contá cómo te llamás, dónde vivís, qué hacés los fines de semana y preguntale cómo está.",
+      focus: ["sich vorstellen (Ich heiße … Ich wohne in …)", "Wochenende (Am Samstag …)", "eine Frage (Wie geht es dir?)"],
+      minSentences: 4,
+      hint: "Frases cortas. Saludo, tus datos, algo del fin de semana, una pregunta y despedida.",
+    },
+  },
+  {
+    id: "a1-2",
+    level: "A1",
+    title: "Simulacro A1 · 2",
+    lesen: [
+      {
+        title: "Meine Woche",
+        text: [
+          "Ich heiße Tom. Am Montag und am Mittwoch habe ich Deutschkurs von neun bis elf Uhr. Am Dienstag arbeite ich im Supermarkt. Am Donnerstag spiele ich Fußball mit Freunden. Am Freitag koche ich Nudeln für meine Familie. Am Wochenende schlafe ich lange und gehe spazieren.",
+        ],
+        questions: [
+          c("¿Cuándo tiene curso de alemán?", ["Lunes y miércoles", "Martes y jueves", "Viernes", "Sábado"], "«Am Montag und am Mittwoch»."),
+          c("¿Qué hace el martes?", ["Trabaja en el supermercado", "Juega al fútbol", "Cocina", "Estudia"], "«Am Dienstag arbeite ich im Supermarkt»."),
+          c("¿Qué cocina el viernes?", ["Fideos", "Sopa", "Pescado", "Pizza"], "«Nudeln»."),
+          tf("El fin de semana duerme hasta tarde.", true, "«schlafe ich lange»."),
+          fi("¿A qué hora termina el curso?", ["11", "elf"], "«von neun bis elf Uhr»."),
+        ],
+      },
+      {
+        title: "Postkarte aus Hamburg",
+        text: [
+          "Liebe Oma, viele Grüße aus Hamburg! Das Wetter ist schön, die Sonne scheint. Heute gehen wir an den Hafen und essen Fisch. Morgen fahren wir mit dem Zug nach Berlin. Wir sind zu viert: Mama, Papa, mein Bruder und ich. Bis bald! Dein Max",
+        ],
+        questions: [
+          c("¿Desde dónde escribe Max?", ["Desde Hamburgo", "Desde Berlín", "Desde Viena", "Desde Múnich"], "«aus Hamburg»."),
+          c("¿Qué hacen hoy?", ["Van al puerto y comen pescado", "Van a Berlín", "Van al cine", "Descansan"], "«an den Hafen und essen Fisch»."),
+          c("¿Cómo viajan a Berlín?", ["En tren", "En avión", "En auto", "En colectivo"], "«mit dem Zug»."),
+          fi("¿Cuántas personas son?", ["4", "vier"], "«zu viert»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Am Bahnhof",
+        setting: "Paul pregunta por un tren",
+        lines: [
+          { who: "m", name: "Paul", de: "Entschuldigung, wann fährt der Zug nach München?" },
+          { who: "f", name: "Frau", de: "Um zehn Uhr dreißig, auf Gleis vier." },
+          { who: "m", name: "Paul", de: "Und was kostet die Fahrkarte?" },
+          { who: "f", name: "Frau", de: "Eine Fahrkarte kostet zwanzig Euro." },
+          { who: "m", name: "Paul", de: "Wie lange dauert die Fahrt?" },
+          { who: "f", name: "Frau", de: "Etwa drei Stunden." },
+          { who: "m", name: "Paul", de: "Danke schön! Wo kann ich die Fahrkarte kaufen?" },
+          { who: "f", name: "Frau", de: "Dort, am Schalter, neben dem Café." },
+        ],
+        questions: [
+          c("¿A qué hora sale el tren a Múnich?", ["10:30", "10:00", "11:30", "9:30"], "«zehn Uhr dreißig»."),
+          c("¿De qué vía sale?", ["Vía 4", "Vía 3", "Vía 10", "Vía 2"], "«Gleis vier»."),
+          fi("¿Cuántos euros cuesta el pasaje?", ["20", "zwanzig"], "«zwanzig Euro»."),
+          fi("¿Cuántas horas dura el viaje?", ["3", "drei"], "«drei Stunden»."),
+          c("¿Dónde se compra el pasaje?", ["En la boletería, al lado del café", "En el tren", "En internet", "En el hotel"], "«am Schalter, neben dem Café»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí una postal a un amigo: contá dónde estás de vacaciones, cómo es el tiempo, qué hacés hoy y qué vas a hacer mañana.",
+      focus: ["Ort und Wetter (Ich bin in … Das Wetter ist …)", "heute und morgen (Heute gehe ich … Morgen …)", "Gruß am Ende"],
+      minSentences: 4,
+      hint: "Frases cortas con «ich» y verbos en presente; saludo y despedida.",
+    },
+  },
   {
     id: "a2-1",
     level: "A2",

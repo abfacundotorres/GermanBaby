@@ -17,9 +17,9 @@ export default function ExamPage() {
     <main className="container stack" style={{ paddingTop: 20 }}>
       <div className="h1">📝 Simulacros</div>
       <p className="muted">
-        Pruebas con el formato de un examen de cada nivel (A2, B1, B2 y C1): comprensión lectora, auditiva, expresión escrita y expresión oral (esta última con micrófono, opcional). No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
+        Pruebas con el formato de un examen de cada nivel (A1, A2, B1, B2 y C1): comprensión lectora, auditiva, expresión escrita y expresión oral (esta última con micrófono, opcional). No hay ayudas ni corrección hasta el final, y cada audio se escucha dos veces. Sirven para ver dónde estás; no son materiales oficiales.
       </p>
-      {(["A2", "B1", "B2", "C1"] as const).map((lv) => (
+      {(["A1", "A2", "B1", "B2", "C1"] as const).map((lv) => (
         <section key={lv} className="stack">
           <div className="h2">Nivel {lv}</div>
           {EXAMS.filter((e) => e.level === lv).map((e) => (

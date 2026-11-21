@@ -95,7 +95,7 @@ check(gaveUp, "«No me acuerdo» muestra la respuesta correcta");
 
 // 8b) El simulacro de C1 está en la lista.
 await page.goto(URL + "/exam", { waitUntil: "networkidle" });
-check(await visible(page.getByText("Simulacro C1 · 2")), "la lista de simulacros incluye C1");
+check((await visible(page.getByText("Simulacro C1 · 2"))) && (await visible(page.getByText("Simulacro A1 · 1"))), "la lista de simulacros incluye A1 y C1");
 
 // 8) Simulacro: recorre las cuatro partes; sin micrófono se puede entregar sin la oral.
 await page.goto(URL + "/exam", { waitUntil: "networkidle" });
