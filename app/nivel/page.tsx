@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PLACEMENT, PLACEMENT_PASS, placementResult, type PlacementLevel } from "@/lib/content/placement";
 import { UNITS, lessonKey } from "@/lib/curriculum";
-import { skipBefore } from "@/lib/progress";
+import { skipBefore, undoSkip } from "@/lib/progress";
 
 const LEVELS: PlacementLevel[] = ["A1", "A2", "B1", "B2"];
 
@@ -19,7 +19,7 @@ export default function NivelPage() {
   const [i, setI] = useState(0);
   const [scores, setScores] = useState<Partial<Record<PlacementLevel, number>>>({});
   const [picked, setPicked] = useState<string | null>(null);
-  const [skipped, setSkipped] = useState<number | null>(null);
+  const [skipped, setSkipped] = useState<string[] | null>(null);
 
   const q = PLACEMENT[i];
   const options = useMemo(() => (q ? shuffled(q.options) : []), [q]);
@@ -76,7 +76,12 @@ export default function NivelPage() {
             Empezar desde {startLevel} (marca lo anterior como hecho)
           </button>
         )}
-        {skipped !== null && <div className="card">Listo: {skipped} lecciones marcadas. Volvé a «Aprender».</div>}
+        {skipped !== null && (
+          <div className="card stack">
+            <div>Listo: {skipped.length} lecciones marcadas. Volvé a «Aprender».</div>
+            {skipped.length > 0 && <button className="btn" onClick={() => { undoSkip(skipped); setSkipped(null); }}>Deshacer</button>}
+          </div>
+        )}
         <Link href="/" className="btn btn-block">Ir a Aprender</Link>
       </main>
     );

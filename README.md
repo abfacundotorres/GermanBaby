@@ -101,6 +101,10 @@ app/
   mixed/                       repaso mezclado de varias unidades (sin IA)
   words/                       entrenador de vocabulario por frecuencia (sin IA)
   library/                     biblioteca de lecturas graduadas, A2 a B2 (sin IA)
+  nivel/                       test de nivel inicial (32 preguntas A1–B2, sin IA) con salto opcional
+  schreiben/                   escritura con rúbrica (15 consignas A1–B2, corrige /api/rubric)
+  sprechen/                    expresión oral: monólogos grabados, Azure mide la voz y /api/rubric puntúa el contenido
+  hoeren/                      escucha libre: monólogos y conversaciones de tres voces, a tres velocidades (sin IA)
   exam/                        simulacros tipo examen A2, B1 y B2: lectura, escucha y escritura
   chat/[unitId]                charla de rol
   api/speech-token             clave Azure → token de 10 min
@@ -108,6 +112,7 @@ app/
   api/chat                     turno de conversación (Claude)
   api/practice                 práctica personalizada de errores (Claude)
   api/free                     corrección de la producción libre (Claude)
+  api/rubric                   puntuación con rúbrica de escritura y expresión oral (Claude)
   api/sync                     progreso en la nube (Upstash Redis)
   api/login                    código de acceso, con límite de intentos
 scripts/                       check.mjs (prueba tus claves) y solve-lessons.mjs (el bot)

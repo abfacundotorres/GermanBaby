@@ -6,6 +6,7 @@ import { LIBRARY, type LibraryText } from "@/lib/content/library";
 import { completeLesson, useProgress } from "@/lib/progress";
 import type { Step } from "@/lib/session";
 import { LessonPlayer } from "@/components/LessonPlayer";
+import { shuffle } from "@/lib/text";
 
 const LEVELS = ["A2", "B1", "B2"] as const;
 const keyOf = (t: LibraryText) => `library/${t.id}`;
@@ -15,7 +16,8 @@ function stepsFor(t: LibraryText): Step[] {
   const r = t.reading;
   return [
     { kind: "section", emoji: t.emoji, title: r.title, text: "Leé el texto con calma y respondé las preguntas. Después vas a ver la traducción." },
-    ...r.questions.map((question, i): Step => ({ kind: "readq", reading: r, question, n: i + 1, total: r.questions.length })),
+    // La respuesta correcta está primera en los datos: se mezclan las opciones para que no quede siempre arriba.
+    ...r.questions.map((question, i): Step => ({ kind: "readq", reading: r, question: question.type === "choice" ? { ...question, options: shuffle(question.options) } : question, n: i + 1, total: r.questions.length })),
   ];
 }
 

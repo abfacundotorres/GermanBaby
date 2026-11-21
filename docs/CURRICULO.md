@@ -36,11 +36,12 @@ Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1,
 
 ## Brechas, en orden de prioridad
 
-1. **Vocabulario.** Es lo más lejos de la meta, sobre todo en B2. A1, A2 y B1 están cerca; B2 avanza (80 %) pero es el que más falta. Camino: más tandas del entrenador (hasta 3.500 palabras acumuladas en A1–B2) y vocabulario temático por unidad.
-2. **Input.** Hay 41 lecturas de unidad y 8 de la biblioteca, y unos 127 minutos de diálogos con voz sintética. Camino: más textos largos por nivel (B2 a 300–500 palabras), monólogos, tres voces y distintas velocidades.
-3. **Expresión escrita.** Un ejercicio libre por unidad, corregido por IA (sin probar contra el servicio real). Camino: más consignas, con rúbrica por nivel.
-4. **Medición.** Hay 6 simulacros (2 de A2, 2 de B1, 2 de B2) con lectura, escucha y escritura. Faltan la expresión oral y un test inicial para ubicar al alumno, y más variantes por nivel.
-5. **Habla.** Pronunciación con Azure y charla de rol con Claude; ninguno probado en vivo. Es lo primero que hay que validar con uso real.
+1. **Vocabulario.** Cubierto en lo esencial: el entrenador tiene unas 3.160 palabras y la cobertura acumulada (`npm run report`) es A1 93 %, A2 97 %, B1 95 % y B2 106 % contra las metas. Lo que queda son unas 30–40 palabras por nivel en A1 y A2 y unas 130 en B1; las candidatas comunes ya están casi agotadas, así que conviene un método nuevo (lista de frecuencia real o temas puntuales).
+2. **Input.** 41 lecturas de unidad, 18 de la biblioteca (las de B2 llegan a ~300 palabras), 17 escuchas largas de unidad y 6 escuchas libres (3 monólogos y 3 conversaciones de tres voces, a velocidad lenta, normal o rápida). Faltan textos de 400–500 palabras y más monólogos y tres voces.
+3. **Expresión escrita.** Un ejercicio libre por unidad más 15 consignas con rúbrica (`/schreiben`, cuatro criterios de 0 a 5). Falta sumar consignas y probar `/api/rubric` contra el servicio real.
+4. **Expresión oral.** 11 monólogos A1–B2 (`/sprechen`): Azure mide fluidez y precisión y la rúbrica puntúa el contenido. Sin probar en vivo, y sin puntaje oral dentro de los simulacros.
+5. **Medición.** 6 simulacros (2 de A2, 2 de B1, 2 de B2) con lectura, escucha y escritura, y un test de nivel inicial (`/nivel`, 32 preguntas de gramática y vocabulario, sin escucha ni expresión). Faltan más variantes de simulacros y un test de nivel con escucha.
+6. **Habla.** Pronunciación con Azure y charla de rol con Claude; ninguno probado en vivo. Es lo primero que hay que validar con uso real.
 
 ## Criterio de «nivel completo» (propuesto)
 

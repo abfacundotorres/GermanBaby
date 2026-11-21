@@ -6,9 +6,9 @@ import { LISTENING, type ListenPiece } from "@/lib/content/listening";
 import { completeLesson, useProgress } from "@/lib/progress";
 import type { Step } from "@/lib/session";
 import { LessonPlayer } from "@/components/LessonPlayer";
+import { shuffle } from "@/lib/text";
 
 const keyOf = (t: ListenPiece) => `hoeren/${t.id}`;
-const shuffle = <T,>(a: T[]) => [...a].sort(() => Math.random() - 0.5);
 
 function stepsFor(t: ListenPiece): Step[] {
   const d = t.dialogue;

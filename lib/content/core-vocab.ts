@@ -689,7 +689,7 @@ gähnen|bostezar|Er muss ständig gähnen.|No para de bostezar.
 hängen|colgar|Ich will das Bild an die Wand hängen.|Quiero colgar el cuadro en la pared.
 heben|levantar|Du darfst nichts Schweres heben.|No podés levantar nada pesado.
 heizen|calefaccionar|Im Winter müssen wir viel heizen.|En invierno tenemos que calefaccionar mucho.
-hinfallen|caerse|Pass auf, dass du nicht hinfallen kannst.|Cuidado, podés caerte.
+hinfallen|caerse|Vorsicht, ich will nicht hinfallen.|Cuidado, no quiero caerme.
 hoffen|esperar (tener esperanza)|Wir hoffen auf gutes Wetter.|Esperamos que haga buen tiempo.
 klopfen|golpear|Jemand wird an die Tür klopfen.|Alguien va a golpear la puerta.
 nachsehen|fijarse|Ich will kurz im Kalender nachsehen.|Quiero fijarme un momento en el calendario.
@@ -701,10 +701,10 @@ starten|arrancar / iniciar|Der Zug will gleich starten.|El tren está por arranc
 stecken|meter / estar metido|Ich will den Stecker in die Dose stecken.|Quiero meter el enchufe en el tomacorriente.
 testen|probar|Wir wollen das neue Programm testen.|Queremos probar el programa nuevo.
 treten|pisar|Du darfst nicht auf die Blumen treten.|No debés pisar las flores.
-verletzen|lastimar|Pass auf, dass du dich nicht verletzen kannst.|Cuidado, podés lastimarte.
+verletzen|lastimar|Du solltest dich nicht verletzen.|No deberías lastimarte.
 verpacken|empacar / envolver|Wir müssen das Geschenk verpacken.|Tenemos que envolver el regalo.
 verschlafen|quedarse dormido|Ich darf morgen nicht verschlafen.|Mañana no puedo quedarme dormido.
-verschwinden|desaparecer|Mein Schlüssel kann nicht verschwinden.|Mi llave no puede desaparecer.
+verschwinden|desaparecer|Die Sonne wird bald hinter den Wolken verschwinden.|El sol va a desaparecer pronto detrás de las nubes.
 verteilen|repartir|Wir müssen die Aufgaben verteilen.|Tenemos que repartir las tareas.
 wehtun|doler|Mein Kopf kann wehtun.|Me puede doler la cabeza.
 wiegen|pesar|Der Koffer soll nicht mehr als zwanzig Kilo wiegen.|La valija no debe pesar más de veinte kilos.
@@ -1414,7 +1414,7 @@ schimpfen|retar / protestar|Er wird mit mir schimpfen.|Me va a retar.
 siegen|vencer|Unsere Mannschaft will siegen.|Nuestro equipo quiere ganar.
 spüren|sentir / notar|Ich kann den Unterschied spüren.|Puedo notar la diferencia.
 stempeln|sellar|Sie müssen die Fahrkarte stempeln.|Tiene que sellar el pasaje.
-stoßen|empujar / chocar|Pass auf, dass du nicht an den Tisch stoßen musst.|Cuidado, no vayas a chocar con la mesa.
+stoßen|empujar / chocar|Ich will nicht an den Tisch stoßen.|No quiero chocar con la mesa.
 täuschen|engañar|Der Eindruck kann täuschen.|La impresión puede engañar.
 trösten|consolar|Ich will ihn trösten.|Quiero consolarlo.
 verbrauchen|consumir|Das Auto soll weniger Benzin verbrauchen.|El auto debería consumir menos nafta.
@@ -2617,7 +2617,7 @@ die Verbreitung|la difusión|Die Verbreitung von Falschmeldungen schadet.|La dif
 die Verfügbarkeit|la disponibilidad|Die Verfügbarkeit der Ware ist begrenzt.|La disponibilidad del producto es limitada.
 die Vergütung|la remuneración|Die Vergütung richtet sich nach der Erfahrung.|La remuneración depende de la experiencia.
 die Verhältnismäßigkeit|la proporcionalidad|Die Verhältnismäßigkeit der Maßnahme ist fraglich.|La proporcionalidad de la medida es dudosa.
-die Verknüpfung|el vínculo|Die Verknüpfung der Daten ist problematisch.|El cruce de los datos es problemático.
+die Verknüpfung|la vinculación|Die Verknüpfung der Daten ist problematisch.|La vinculación de los datos es problemática.
 die Verlässlichkeit|la fiabilidad|Wir schätzen seine Verlässlichkeit.|Valoramos su fiabilidad.
 die Vermittlung|la mediación|Die Vermittlung zwischen beiden Seiten gelang.|La mediación entre ambas partes tuvo éxito.
 die Verschärfung|el endurecimiento|Die Verschärfung der Regeln stößt auf Kritik.|El endurecimiento de las reglas recibe críticas.
@@ -3091,7 +3091,7 @@ verzögern|retrasar|Der Regen kann die Arbeiten verzögern.|La lluvia puede retr
 voraussagen|predecir|Niemand kann die Zukunft voraussagen.|Nadie puede predecir el futuro.
 vorenthalten|privar / negar|Man darf ihm die Information nicht vorenthalten.|No se le puede negar la información.
 vorführen|presentar / exponer|Wir wollen das Gerät vorführen.|Queremos presentar el aparato.
-vorgeben|fingir / establecer|Die Regeln werden vom Staat vorgeben.|Las reglas las establece el Estado.
+vorgeben|establecer / fingir|Der Staat will die Regeln vorgeben.|El Estado quiere establecer las reglas.
 vorherrschen|predominar|Hier kann Unsicherheit vorherrschen.|Acá puede predominar la inseguridad.
 vorsehen|prever (planificar)|Das Gesetz will Strafen vorsehen.|La ley quiere prever sanciones.
 zugutekommen|beneficiar|Das Geld soll den Kindern zugutekommen.|El dinero debe beneficiar a los chicos.
@@ -3106,7 +3106,7 @@ arglos|ingenuo / confiado|Das Kind war arglos.|El chico era confiado.
 aufgeschlossen|abierto|Sie ist neuen Ideen gegenüber aufgeschlossen.|Está abierta a ideas nuevas.
 aufwändig|costoso (en esfuerzo)|Die Reparatur ist aufwändig.|La reparación es muy trabajosa.
 ausgeglichen|equilibrado|Er hat einen ausgeglichenen Charakter.|Tiene un carácter equilibrado.
-berechtigt|legítimo|Die Kritik ist berechtigt.|La crítica es legítima.
+berechtigt|legítimo|Seine Sorge ist berechtigt.|Su preocupación es legítima.
 berüchtigt|de mala fama|Das Viertel ist berüchtigt.|El barrio tiene mala fama.
 besonnen|ponderado|Sie reagierte besonnen.|Reaccionó con ponderación.
 bestürzt|consternado|Wir sind bestürzt über die Nachricht.|Estamos consternados por la noticia.

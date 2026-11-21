@@ -557,12 +557,24 @@ export function recordAi(usage: { input: number; output: number; model: string }
 }
 
 /** Marca como hechas (1 estrella, sin XP ni gemas) todas las lecciones anteriores a `key`: para empezar más adelante tras el test de nivel. */
-export function skipBefore(key: string): number {
+export function skipBefore(key: string): string[] {
   const i = LESSON_ORDER.indexOf(key);
-  let n = 0;
+  const marked: string[] = [];
   update((p) => {
     for (const k of LESSON_ORDER.slice(0, Math.max(i, 0))) {
-      if (!p.lessons[k]) { p.lessons[k] = { stars: 1, bestAccuracy: 0, completedAt: new Date().toISOString() }; n++; }
+      if (!p.lessons[k]) { p.lessons[k] = { stars: 1, bestAccuracy: 0, completedAt: new Date().toISOString() }; marked.push(k); }
+    }
+    return p;
+  });
+  return marked;
+}
+
+/** Deshace `skipBefore`: quita solo las lecciones marcadas que no se hicieron después (siguen con precisión 0). */
+export function undoSkip(keys: string[]): number {
+  let n = 0;
+  update((p) => {
+    for (const k of keys) {
+      if (p.lessons[k] && p.lessons[k].bestAccuracy === 0 && p.lessons[k].stars === 1) { delete p.lessons[k]; n++; }
     }
     return p;
   });

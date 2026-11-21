@@ -32,7 +32,7 @@ export const PLACEMENT: PlacementQ[] = [
   q("B1", "Ich interessiere mich ___ Geschichte.", ["für", "an", "auf", "mit"], "«sich interessieren für»."),
   q("B1", "Ich habe keine Lust, heute ins Kino ___.", ["zu gehen", "gehen", "zu gegangen", "geht"], "Infinitivo con «zu» después de «Lust»."),
   q("B2", "Das Projekt, ___ Ergebnisse alle überraschten, wurde gestoppt.", ["dessen", "deren", "das", "dem"], "Relativo en genitivo neutro: dessen."),
-  q("B2", "___ der hohen Kosten entschied sich die Firma für das Projekt.", ["Trotz", "Wegen", "Statt", "Während"], "«Trotz» + genitivo = a pesar de."),
+  q("B2", "___ der hohen Kosten entschied sich die Firma für das Projekt.", ["Trotz", "Obwohl", "Weil", "Damit"], "Solo «trotz» lleva genitivo: obwohl, weil y damit abren una subordinada."),
   q("B2", "Er hätte früher anrufen ___.", ["sollen", "sollte", "gesollt", "soll"], "Konjunktiv II del pasado con modal: hätte ... sollen."),
   q("B2", "Die Preise sollen nächstes Jahr ___ werden.", ["erhöht", "erhöhen", "erhöhte", "erhöhend"], "Passiv con modal: participio + werden."),
   q("B2", "Je mehr man übt, ___ besser wird man.", ["desto", "so", "als", "wie"], "Estructura «je ... desto»."),

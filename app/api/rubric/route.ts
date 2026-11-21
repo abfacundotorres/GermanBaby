@@ -10,7 +10,7 @@ const Body = z.object({
   points: z.array(z.string().max(160)).max(8),
   minWords: z.number().int().min(1).max(400),
   maxWords: z.number().int().min(1).max(600),
-  answer: z.string().min(1).max(3000),
+  answer: z.string().min(1).max(6000),
   level: LevelSchema.default("A1"),
   spoken: z.boolean().default(false), // el texto es la transcripción de una grabación
   seconds: z.number().int().min(0).max(900).default(0),

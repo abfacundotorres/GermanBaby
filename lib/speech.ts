@@ -536,6 +536,7 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
     const recognizer = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(push));
     setupAssessment(sdk, recognizer, "");
 
+    let stopWaiting: () => void = () => {};
     const parts: string[] = [];
     const words: WordScore[] = [];
     let accSum = 0, fluSum = 0, pronSum = 0, n = 0;
@@ -558,7 +559,10 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
       parts.push(e.result.text);
     };
 
+    let closeTimer: ReturnType<typeof setTimeout> | undefined;
     const done = new Promise<void>((resolve, reject) => {
+      // Si al cortar el audio Azure no cierra la sesión en 15 s, seguimos con lo reconocido hasta ahora.
+      stopWaiting = () => { closeTimer = setTimeout(resolve, 15000); };
       recognizer.sessionStopped = () => resolve();
       recognizer.canceled = (_s, e) => (e.reason === sdk.CancellationReason.Error ? reject(new Error(e.errorDetails || "El reconocimiento falló.")) : resolve());
     });
@@ -573,7 +577,7 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
         {
           onPcm: (b) => push.write(b),
           onLevel: hooks.onLevel,
-          onEnd: (reason) => { endReason = reason; push.close(); hooks.onProcessing?.(); },
+          onEnd: (reason) => { endReason = reason; push.close(); stopWaiting(); hooks.onProcessing?.(); },
         },
         { silenceMs: 6000, initialSilenceMs: 10000, maxMs: maxSeconds * 1000 },
       );
@@ -586,8 +590,10 @@ export async function assessSpeech(maxSeconds: number, hooks: RecordHooks = {}):
     hooks.registerFinish?.(() => capture.finish());
     try {
       await done;
+      clearTimeout(closeTimer);
       await new Promise<void>((r) => recognizer.stopContinuousRecognitionAsync(() => r(), () => r()));
     } finally {
+      clearTimeout(closeTimer);
       secondsSent = capture.bytes / 32000;
       capture.stop();
       recognizer.close();
