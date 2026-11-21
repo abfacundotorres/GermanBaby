@@ -1,7 +1,7 @@
 // Test de nivel inicial: 15 preguntas por nivel (12 de gramática y vocabulario y 3 de escucha), de A1 a B2, de gramática y vocabulario en contexto.
 // La primera opción es la correcta (la pantalla las mezcla).
 
-export type PlacementLevel = "A1" | "A2" | "B1" | "B2";
+export type PlacementLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type PlacementQ = { level: PlacementLevel; q: string; options: string[]; why: string; listen?: string };
 
 const q = (level: PlacementLevel, text: string, options: string[], why: string): PlacementQ => ({ level, q: text, options, why });
@@ -69,10 +69,25 @@ const RAW: PlacementQ[] = [
   lq("B2", "Obwohl die Studie viele Mängel aufweist, wurde sie in den Medien breit zitiert.", ["Aunque el estudio tiene muchas fallas, fue citado ampliamente en los medios", "Como el estudio tiene fallas, no se lo citó en los medios", "Los medios criticaron el estudio por citarlo mal", "Los medios publicaron un estudio sin fallas"]),
   lq("B2", "Hätte die Regierung früher reagiert, wäre der Schaden deutlich geringer gewesen.", ["Si el gobierno hubiera reaccionado antes, el daño habría sido mucho menor", "El gobierno reaccionó antes y por eso el daño fue menor", "Si el daño fuera menor, el gobierno reaccionaría", "El gobierno no reaccionó porque el daño era menor"]),
   lq("B2", "Die Verhandlungen scheiterten, weil keine der Parteien zu Zugeständnissen bereit war.", ["Las negociaciones fracasaron porque ninguna parte estaba dispuesta a hacer concesiones", "Las negociaciones tuvieron éxito porque ambas partes cedieron", "Las partes negociaron concesiones para evitar el fracaso", "Las negociaciones se postergaron porque faltaban partes"]),
+  q("C1", "Die Maßnahmen, ___ Wirksamkeit umstritten ist, wurden verlängert.", ["deren", "dessen", "die", "denen"], "Relativo en genitivo plural: deren."),
+  q("C1", "Er tat so, ___ er nichts bemerkt hätte.", ["als ob", "als dass", "so dass", "obwohl"], "«als ob» + Konjunktiv II introduce una comparación irreal."),
+  q("C1", "___ seiner Verdienste wurde er nie ausgezeichnet.", ["Ungeachtet", "Aufgrund", "Dank", "Anlässlich"], "«Ungeachtet» + genitivo = sin tener en cuenta; el resto no encaja con «nie»."),
+  q("C1", "Das Gesetz soll noch vor der Sommerpause ___ werden.", ["verabschiedet", "verabschieden", "verabschiedete", "verabschiedend"], "Passiv con modal: participio + werden."),
+  q("C1", "Sie bedauerte, nicht früher ___ zu haben.", ["eingegriffen", "eingreifen", "eingegriffene", "einzugreifen"], "Infinitivo perfecto: participio + zu haben."),
+  q("C1", "Der Sprecher erklärte, die Verhandlungen ___ gescheitert.", ["seien", "sind", "waren", "werden"], "En el discurso indirecto formal se usa el Konjunktiv I: seien."),
+  q("C1", "Die ___ Entwicklung bereitet vielen Sorgen.", ["anhaltende", "anhaltenden", "anhaltend", "angehaltene"], "Participio de presente como adjetivo: die anhaltende."),
+  q("C1", "Es bleibt abzuwarten, ___ sich die Lage entspannt.", ["ob", "dass", "wenn", "falls"], "Pregunta indirecta con duda: ob."),
+  q("C1", "Er wies ___ hin, dass die Frist abläuft.", ["darauf", "davon", "dafür", "dazu"], "«hinweisen auf» → darauf + dass."),
+  q("C1", "Hätte er das Risiko erkannt, ___ er anders entschieden.", ["hätte", "würde", "wäre", "hat"], "Irreal del pasado: hätte ... entschieden."),
+  q("C1", "Wir bitten um Verständnis, ___ der Betrieb vorübergehend eingeschränkt ist.", ["dass", "ob", "was", "damit"], "Subordinada con «dass» después de «Verständnis»."),
+  q("C1", "Selten ___ ein Plan so schnell umgesetzt worden.", ["ist", "hat", "sind", "wird"], "Inversión después de «selten»: ist ... umgesetzt worden."),
+  lq("C1", "Obgleich die Prognosen vorsichtig formuliert waren, löste der Bericht eine hitzige Debatte aus.", ["Aunque los pronósticos estaban formulados con cautela, el informe desató un debate acalorado", "Como los pronósticos eran cautelosos, el informe no provocó ningún debate", "El informe formuló pronósticos para evitar un debate", "Los pronósticos fueron cautelosos porque el debate era acalorado"]),
+  lq("C1", "Dem Vorschlag zufolge sollen Pendler künftig einen Teil der Fahrtkosten steuerlich absetzen können.", ["Según la propuesta, quienes viajan a diario podrán deducir de impuestos parte de los costos del viaje", "Según la propuesta, quienes viajan a diario deberán pagar impuestos por los costos del viaje", "La propuesta prohíbe deducir los costos del viaje", "La propuesta reembolsa todos los costos del viaje"]),
+  lq("C1", "Wäre das Abkommen früher zustande gekommen, hätte sich die Krise womöglich vermeiden lassen.", ["Si el acuerdo se hubiera logrado antes, quizás se habría evitado la crisis", "El acuerdo se logró a tiempo y la crisis se evitó", "Como la crisis se evitó, el acuerdo llegó antes", "El acuerdo no llegó porque la crisis era inevitable"]),
 ];
 
 /** Las 3 de escucha van intercaladas (puestos 3, 6 y 9 de cada nivel; el cierre adaptativo exige al menos 10 respuestas) para que el cierre adaptativo no las salteé. */
-export const PLACEMENT: PlacementQ[] = (["A1", "A2", "B1", "B2"] as const).flatMap((lv) => {
+export const PLACEMENT: PlacementQ[] = (["A1", "A2", "B1", "B2", "C1"] as const).flatMap((lv) => {
   const g = RAW.filter((x) => x.level === lv && !x.listen);
   const l = RAW.filter((x) => x.level === lv && x.listen);
   return g.flatMap((x, k) => [x, ...([1, 3, 5].includes(k) ? [l[[1, 3, 5].indexOf(k)]] : [])]);
@@ -85,7 +100,7 @@ export const levelSettled = (correct: number, wrong: number) => correct >= PLACE
 
 /** Resultado a partir de los aciertos por nivel (los niveles no rendidos quedan sin definir). */
 export function placementResult(scores: Partial<Record<PlacementLevel, number>>): { level: PlacementLevel; partial: boolean } {
-  const order: PlacementLevel[] = ["A1", "A2", "B1", "B2"];
+  const order: PlacementLevel[] = ["A1", "A2", "B1", "B2", "C1"];
   let reached: PlacementLevel = "A1";
   let all = true;
   for (const lv of order) {

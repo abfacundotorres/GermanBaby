@@ -750,4 +750,74 @@ export const EXAMS: Exam[] = [
       hint: "Registro formal y argumentación ordenada; evitá repetir estructuras y usá subordinadas y nominalizaciones.",
     },
   },
+  {
+    id: "c1-3",
+    level: "C1",
+    title: "Simulacro C1 · 3",
+    lesen: [
+      {
+        title: "Künstliche Intelligenz und das Urheberrecht",
+        text: [
+          "Systeme der künstlichen Intelligenz, die Texte, Bilder oder Musik erzeugen, lernen anhand riesiger Mengen bestehender Werke. Autoren, Illustratoren und Musiker sehen darin eine unerlaubte Nutzung ihrer Arbeit und fordern Vergütung. Die Entwickler der Systeme entgegnen, das Lernen aus vorhandenen Werken sei mit dem Studium durch einen Menschen vergleichbar und stelle keine Kopie dar.",
+          "Juristisch ist die Lage unübersichtlich. Das Urheberrecht schützt Werke, die eine persönliche geistige Schöpfung darstellen, und setzt nach herrschender Auffassung einen menschlichen Urheber voraus. Ob ein maschinell erzeugtes Ergebnis geschützt werden kann, ist daher fraglich. Ebenso offen ist, ob das Training mit geschützten Werken unter bestehende Ausnahmen für Forschung und Text- und Data-Mining fällt oder einer Erlaubnis bedarf.",
+          "Politisch zeichnen sich unterschiedliche Lösungswege ab. Manche schlagen vor, Urheber die Möglichkeit zu geben, der Nutzung ihrer Werke zu widersprechen. Andere wollen Anbieter verpflichten, offenzulegen, womit sie ihre Systeme trainiert haben, damit Rechteinhaber überhaupt prüfen können, ob ihre Werke betroffen sind. Wieder andere denken an pauschale Abgaben, aus denen Kreative entschädigt werden.",
+          "Wirtschaftlich steht viel auf dem Spiel. Strenge Regeln könnten Innovationen bremsen und Entwickler in Länder mit lockereren Bestimmungen abwandern lassen. Zu lasche Regeln dagegen würden die Verhandlungsposition von Kreativen schwächen, deren Arbeit die Grundlage der Systeme bildet. Der Gesetzgeber muss also zwischen dem Schutz geistigen Eigentums und dem Interesse an technischem Fortschritt abwägen.",
+        ],
+        questions: [
+          c("¿Qué reclaman autores y artistas?", ["Una compensación por el uso de sus obras", "Que se prohíban las máquinas", "Que se cierren las editoriales", "Que se baje el precio de sus obras"], "«fordern Vergütung»."),
+          c("¿Cómo responden los desarrolladores?", ["Que aprender de obras existentes es comparable al estudio humano y no es copiar", "Que no usan obras de nadie", "Que pagarán todo", "Que se trata de un error"], "«mit dem Studium durch einen Menschen vergleichbar»."),
+          c("¿Qué presupone el derecho de autor según la opinión dominante?", ["Un autor humano", "Un contrato", "Una máquina", "Un editor"], "«einen menschlichen Urheber»."),
+          tf("El texto afirma que está claro si el entrenamiento cae bajo las excepciones existentes.", false, "Es «ebenso offen»."),
+          c("¿Qué propone una de las soluciones políticas?", ["Obligar a los proveedores a revelar con qué entrenaron sus sistemas", "Prohibir el entrenamiento", "Eliminar el derecho de autor", "Limitar la cantidad de obras"], "«offenzulegen, womit sie ihre Systeme trainiert haben»."),
+          c("¿Qué riesgo traerían las reglas demasiado estrictas?", ["Frenar la innovación y que los desarrolladores migren", "Aumentar la creatividad", "Reducir los precios", "Eliminar la competencia"], "«Innovationen bremsen ... abwandern»."),
+          c("¿Qué debe hacer el legislador según el texto?", ["Equilibrar la protección de la propiedad intelectual y el progreso técnico", "Elegir solo la protección", "Elegir solo el progreso", "Esperar sin actuar"], "«zwischen ... abwägen»."),
+        ],
+      },
+      {
+        title: "Kommentar: Lernen ohne Noten?",
+        text: [
+          "Einige Schulen experimentieren damit, Noten in den unteren Klassen durch ausführliche Rückmeldungen zu ersetzen. Befürworter verweisen darauf, dass Ziffern den Blick auf den Lernfortschritt verengen und Kinder früh in Gewinner und Verlierer einteilen. Das Argument überzeugt nur teilweise: Rückmeldungen sind aufwendig, und wer sie schreibt, ist nicht davor gefeit, ebenfalls zu werten. Entscheidend ist weniger das Instrument als die Haltung, mit der Lehrkräfte Leistung beurteilen, nämlich nachvollziehbar, ermutigend und an klaren Kriterien orientiert.",
+        ],
+        questions: [
+          c("¿Qué experimentan algunas escuelas?", ["Reemplazar notas por devoluciones detalladas", "Eliminar la escuela", "Tomar más exámenes", "Cambiar el calendario"], "«Noten ... durch ausführliche Rückmeldungen»."),
+          c("¿Qué argumentan los defensores?", ["Que las notas estrechan la mirada y dividen en ganadores y perdedores", "Que son caras", "Que no existen", "Que cuestan tiempo a los chicos"], "«Gewinner und Verlierer»."),
+          c("¿Qué opina el autor del argumento?", ["Que convence solo en parte", "Que es totalmente falso", "Que es indiscutible", "Que no entiende"], "«überzeugt nur teilweise»."),
+          tf("Para el autor lo decisivo es el instrumento y no la actitud al evaluar.", false, "«weniger das Instrument als die Haltung»."),
+          c("¿Cómo debería ser la evaluación según el autor?", ["Comprensible, alentadora y basada en criterios claros", "Rápida y severa", "Anónima", "Solo oral"], "«nachvollziehbar, ermutigend ... klaren Kriterien»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Diskussion: Mietpreisbremse",
+        setting: "Un moderador conversa con una experta en política de vivienda sobre el límite a los alquileres",
+        lines: [
+          { who: "m", name: "Moderator", de: "Frau Dr. Winkler, in vielen Großstädten gilt eine Mietpreisbremse. Hat sie ihr Ziel erreicht?" },
+          { who: "f", name: "Dr. Winkler", de: "Nur teilweise. In Gebieten, in denen sie konsequent kontrolliert wird, ist der Anstieg bei Neuvermietungen etwas gebremst worden. Vielerorts wird sie aber umgangen, weil Mieter ihre Rechte nicht kennen oder scheuen, sie einzufordern." },
+          { who: "m", name: "Moderator", de: "Kritiker sagen, die Bremse verhindere Neubau." },
+          { who: "f", name: "Dr. Winkler", de: "Dieser Zusammenhang ist plausibel, aber schwer zu belegen. Neubauten sind ohnehin von der Regelung ausgenommen, sodass sie die Investitionen nicht unmittelbar betrifft. Das größere Problem sind lange Genehmigungsverfahren und hohe Baukosten." },
+          { who: "m", name: "Moderator", de: "Was würden Sie stattdessen empfehlen?" },
+          { who: "f", name: "Dr. Winkler", de: "Keine Einzelmaßnahme, sondern ein Bündel: mehr Bauland, schnellere Verfahren, Förderung gemeinnütziger Anbieter und gezielte Unterstützung für Haushalte mit niedrigem Einkommen. Eine Mietbegrenzung kann Zeit verschaffen, ersetzt aber keinen Bau." },
+          { who: "m", name: "Moderator", de: "Und wie sieht es mit dem Argument aus, dass Vermieter weniger in die Instandhaltung investieren?" },
+          { who: "f", name: "Dr. Winkler", de: "Dieses Risiko besteht, vor allem bei kleinen Eigentümern mit knapper Kalkulation. Deshalb schlagen manche Fachleute vor, Modernisierungen steuerlich zu fördern, solange die Mieten dadurch nicht unverhältnismäßig steigen." },
+          { who: "m", name: "Moderator", de: "Ein Kompromiss, der beide Seiten ernst nimmt." },
+          { who: "f", name: "Dr. Winkler", de: "So würde ich es nennen. Wohnungspolitik scheitert meist dann, wenn sie nur einer Seite etwas verspricht." },
+        ],
+        questions: [
+          c("¿Cuánto logró el límite a los alquileres según la experta?", ["Solo en parte", "Todo lo que se proponía", "Nada", "Más de lo esperado"], "«Nur teilweise»."),
+          c("¿Por qué se lo elude en muchos lugares?", ["Los inquilinos desconocen sus derechos o temen reclamarlos", "Porque es ilegal", "Porque los propietarios lo piden", "Porque no hay propietarios"], "«Rechte nicht kennen oder scheuen»."),
+          c("¿Qué dice sobre la relación entre el límite y la construcción?", ["Es plausible pero difícil de demostrar; las obras nuevas están exceptuadas", "Está comprobada", "No existe", "Solo ocurre en el campo"], "«plausibel, aber schwer zu belegen ... ausgenommen»."),
+          c("¿Qué problema mayor menciona?", ["Los trámites largos y los altos costos de construcción", "La falta de inquilinos", "El clima", "El precio del suelo en el campo"], "«lange Genehmigungsverfahren und hohe Baukosten»."),
+          c("¿Qué recomienda en lugar de una sola medida?", ["Un conjunto de medidas, con más terreno y apoyo focalizado", "Eliminar el límite", "Prohibir alquileres", "Subir los impuestos a todos"], "«ein Bündel»."),
+          c("¿Qué propone sobre las modernizaciones?", ["Fomentarlas con impuestos siempre que los alquileres no suban desproporcionadamente", "Prohibirlas", "Que las paguen los inquilinos", "Dejarlas sin regla"], "«steuerlich zu fördern, solange ... unverhältnismäßig»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un comentario para un sitio de noticias: una ciudad quiere instalar cámaras con reconocimiento facial en el espacio público para mejorar la seguridad. Presentá tu postura, discutí ventajas y riesgos para los derechos de las personas y proponé condiciones para un uso aceptable.",
+      focus: ["klare Position in der Einleitung", "Abwägung von Sicherheit und Freiheitsrechten", "Gegenargument mit Entkräftung", "konkrete Bedingungen (Konjunktiv II, Passiv, Nominalstil)"],
+      minSentences: 10,
+      hint: "Ordená tu argumentación: tesis, razones, objeción con respuesta y propuesta final; buscá variedad de estructuras.",
+    },
+  },
 ];

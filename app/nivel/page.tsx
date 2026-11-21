@@ -7,7 +7,7 @@ import { UNITS, lessonKey } from "@/lib/curriculum";
 import { skipBefore, undoSkip, useProgress } from "@/lib/progress";
 import { speak, stopSpeaking } from "@/lib/speech";
 
-const LEVELS: PlacementLevel[] = ["A1", "A2", "B1", "B2"];
+const LEVELS: PlacementLevel[] = ["A1", "A2", "B1", "B2", "C1"];
 
 function shuffled<T>(a: T[]): T[] {
   const b = [...a];
@@ -70,7 +70,7 @@ export default function NivelPage() {
       <main className="container stack" style={{ paddingTop: 20 }}>
         <div className="h1">🎯 Test de nivel</div>
         <p className="muted">
-          Hasta 60 preguntas de gramática, vocabulario y escucha (con sonido), de A1 a B2, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
+          Hasta 75 preguntas de gramática, vocabulario y escucha (con sonido), de A1 a C1, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
         </p>
         <button className="btn btn-primary btn-block" onClick={() => setStep("test")}>Empezar</button>
         <Link href="/review" className="btn btn-block">Volver</Link>
@@ -82,7 +82,7 @@ export default function NivelPage() {
     const r = placementResult(scores);
     // Primera lección de la primera unidad del nivel siguiente al aprobado (o de A1 si no aprobó nada).
     const passedA1 = (scores.A1 ?? 0) >= PLACEMENT_PASS;
-    const startLevel: PlacementLevel = !passedA1 ? "A1" : r.partial ? LEVELS[LEVELS.indexOf(r.level) + 1] : "B2";
+    const startLevel: PlacementLevel = !passedA1 ? "A1" : r.partial ? LEVELS[LEVELS.indexOf(r.level) + 1] : "C1";
     const unit = UNITS.find((u) => (u.level ?? "A1") === startLevel);
     const key = unit ? lessonKey(unit.id, unit.lessons[0].id) : null;
     return (
@@ -95,7 +95,7 @@ export default function NivelPage() {
         </div>
         <p className="muted">
           {listenTally.c + listenTally.w >= 3 && listenTally.c / (listenTally.c + listenTally.w) < 0.5 && " Tu comprensión oral salió más baja que tu gramática: practicá con la escucha libre."}
-          {r.partial ? `Te recomiendo empezar por ${startLevel}.` : "Aprobaste todos los niveles: pasá a los simulacros de B2 y al nivel C1."}
+          {r.partial ? `Te recomiendo empezar por ${startLevel}.` : "Aprobaste todos los niveles hasta C1: pasá a los simulacros de C1 y a la práctica libre."}
           {" "}Es una estimación de gramática y vocabulario: no mide comprensión oral ni expresión.
         </p>
         {key && skipped === null && startLevel !== "A1" && (
