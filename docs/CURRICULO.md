@@ -36,7 +36,7 @@ Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1,
 
 ## Brechas, en orden de prioridad
 
-1. **Vocabulario.** Cubierto en lo esencial: el entrenador tiene unas 3.160 palabras y la cobertura acumulada (`npm run report`) es A1 93 %, A2 97 %, B1 95 % y B2 106 % contra las metas. Lo que queda son unas 30–40 palabras por nivel en A1 y A2 y unas 130 en B1; las candidatas comunes ya están casi agotadas, así que conviene un método nuevo (lista de frecuencia real o temas puntuales).
+1. **Vocabulario.** Cubierto en lo esencial: el entrenador tiene unas 3.690 palabras (522 de ellas de C1, vocabulario de registro culto y escrito) y la cobertura acumulada (`npm run report`) es A1 93 %, A2 99 %, B1 95 % y B2 106 % contra las metas; C1 no tiene meta de referencia. Lo que queda son unas 30–40 palabras por nivel en A1 y A2 y unas 130 en B1; las candidatas comunes ya están casi agotadas, así que conviene un método nuevo (lista de frecuencia real o temas puntuales).
 2. **Input.** 41 lecturas de unidad, 24 de la biblioteca (B2 y C1 de 300–400 palabras), 17 escuchas largas de unidad y 8 escuchas libres (4 monólogos y 4 conversaciones de tres voces, hasta C1, a velocidad lenta, normal o rápida). Faltan más monólogos y conversaciones de tres voces.
 3. **Expresión escrita.** Un ejercicio libre por unidad más 17 consignas con rúbrica (hasta C1) (`/schreiben`, cuatro criterios de 0 a 5). Falta sumar consignas.
 4. **Expresión oral.** 13 monólogos A1–C1 (`/sprechen`): Azure mide fluidez y precisión y la rúbrica puntúa el contenido. Los simulacros incluyen una cuarta parte oral opcional (consigna del nivel, 70 % contenido y 30 % voz).

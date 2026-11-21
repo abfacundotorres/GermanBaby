@@ -1,6 +1,6 @@
 // Entrenador de vocabulario: palabras muy frecuentes, en orden de aparición, que el currículo no enseña como palabra suelta.
 // Formato por línea: alemán | español | ejemplo | traducción del ejemplo. Los sustantivos llevan artículo.
-// Se estudian de a 10 (app/words) y entran al repaso espaciado. Una línea «## A1» (o A2, B1, B2) fija el nivel de las que siguen; las tandas se ordenan por nivel.
+// Se estudian de a 10 (app/words) y entran al repaso espaciado. Una línea «## A1» (o A2, B1, B2, C1) fija el nivel de las que siguen; las tandas se ordenan por nivel.
 
 import type { Vocab } from "../curriculum.ts";
 
@@ -3173,9 +3173,532 @@ wiederholt|reiterado|Er kam wiederholt zu spät.|Llegó tarde reiteradamente.
 willkürlich|arbitrario|Die Auswahl war willkürlich.|La selección fue arbitraria.
 zusehends|a ojos vistas|Die Lage verbessert sich zusehends.|La situación mejora a ojos vistas.
 zweckmäßig|funcional|Die Ausstattung ist zweckmäßig.|El equipamiento es funcional.
+## C1
+die Abhandlung|el tratado|Er verfasste eine Abhandlung über die Aufklärung.|Redactó un tratado sobre la Ilustración.
+die Ablösung|el relevo / la sustitución|Die Ablösung des Chefs kam überraschend.|El relevo del jefe fue sorpresivo.
+die Abrechnung|el ajuste de cuentas / la liquidación|Die Rede war eine scharfe Abrechnung mit der Regierung.|El discurso fue un duro ajuste de cuentas con el gobierno.
+die Affinität|la afinidad|Sie hat eine Affinität zu klassischer Musik.|Tiene afinidad por la música clásica.
+die Ambivalenz|la ambivalencia|Seine Ambivalenz gegenüber dem Plan war spürbar.|Su ambivalencia ante el plan era notoria.
+die Anfälligkeit|la propensión / la vulnerabilidad|Die Anfälligkeit für Fehler ist hoch.|La propensión a errores es alta.
+die Angemessenheit|la adecuación|Die Angemessenheit der Strafe wurde geprüft.|Se examinó la adecuación de la pena.
+die Anmaßung|la presunción|Das ist eine Anmaßung ohnegleichen.|Eso es una presunción sin igual.
+die Ansiedlung|el establecimiento (de empresas, población)|Die Ansiedlung neuer Firmen soll gefördert werden.|Se quiere fomentar el establecimiento de nuevas empresas.
+die Anspielung|la alusión|Er machte eine Anspielung auf ihre Vergangenheit.|Hizo una alusión a su pasado.
+die Anteilnahme|la condolencia / el interés compasivo|Wir danken für Ihre Anteilnahme.|Agradecemos sus condolencias.
+die Arroganz|la arrogancia|Seine Arroganz stößt viele ab.|Su arrogancia aleja a muchos.
+die Aufarbeitung|la elaboración (de un pasado)|Die Aufarbeitung der Geschichte dauert an.|La elaboración de la historia continúa.
+die Auflösung|la disolución / la resolución|Die Auflösung des Vertrags wurde beantragt.|Se solicitó la disolución del contrato.
+die Aufrichtigkeit|la sinceridad|Ich schätze seine Aufrichtigkeit.|Valoro su sinceridad.
+die Ausgewogenheit|el equilibrio / la imparcialidad|Die Ausgewogenheit der Berichterstattung wurde gelobt.|Se elogió el equilibrio de la cobertura.
+die Ausprägung|la manifestación / el grado|Das Phänomen zeigt regional unterschiedliche Ausprägungen.|El fenómeno muestra manifestaciones distintas según la región.
+die Ausrichtung|la orientación|Die politische Ausrichtung der Partei hat sich verschoben.|La orientación política del partido se desplazó.
+die Autonomie|la autonomía|Die Region fordert mehr Autonomie.|La región exige más autonomía.
+die Befangenheit|la parcialidad|Der Richter wurde wegen Befangenheit abgelehnt.|El juez fue recusado por parcialidad.
+die Befindlichkeit|el estado de ánimo|Man darf persönliche Befindlichkeiten nicht überbewerten.|No hay que sobrevalorar los estados de ánimo personales.
+die Beherrschung|el autocontrol / el dominio|Er verlor die Beherrschung.|Perdió el autocontrol.
+die Beliebigkeit|la arbitrariedad|Die Beliebigkeit der Kriterien ist erschreckend.|La arbitrariedad de los criterios es alarmante.
+die Bereicherung|el enriquecimiento|Die Vielfalt ist eine Bereicherung für die Stadt.|La diversidad es un enriquecimiento para la ciudad.
+die Besinnung|la reflexión / el conocimiento|Nach dem Unfall kam er schnell zur Besinnung.|Tras el accidente recobró pronto el conocimiento.
+die Besonnenheit|la ecuanimidad|Sie handelte mit großer Besonnenheit.|Actuó con gran ecuanimidad.
+die Betroffenheit|la consternación|Die Nachricht löste große Betroffenheit aus.|La noticia causó gran consternación.
+die Beweislast|la carga de la prueba|Die Beweislast liegt beim Kläger.|La carga de la prueba recae en el demandante.
+die Bürde|la carga|Er trägt die Bürde der Verantwortung.|Carga con el peso de la responsabilidad.
+die Demut|la humildad|Sie sprach mit Demut über ihren Erfolg.|Habló con humildad de su éxito.
+die Differenzierung|la diferenciación|Die Debatte braucht mehr Differenzierung.|El debate necesita más matices.
+die Disposition|la predisposición|Eine genetische Disposition erhöht das Risiko.|Una predisposición genética aumenta el riesgo.
+die Divergenz|la divergencia|Die Divergenz der Meinungen ist groß.|La divergencia de opiniones es grande.
+die Dominanz|el predominio|Die Dominanz weniger Konzerne beunruhigt.|El predominio de pocas corporaciones inquieta.
+die Doppelmoral|la doble moral|Man warf ihr Doppelmoral vor.|Le reprocharon doble moral.
+die Eigendynamik|la dinámica propia|Der Prozess entwickelte eine Eigendynamik.|El proceso desarrolló una dinámica propia.
+die Eigenheit|la peculiaridad|Jede Region hat ihre Eigenheiten.|Cada región tiene sus peculiaridades.
+die Einbettung|la integración / el encuadre|Die Einbettung der Studie in den Kontext fehlt.|Falta el encuadre del estudio en su contexto.
+die Eindeutigkeit|la inequivocidad|Die Eindeutigkeit des Ergebnisses überrascht.|La claridad del resultado sorprende.
+die Einseitigkeit|la parcialidad (unilateralidad)|Die Einseitigkeit des Berichts wurde kritisiert.|Se criticó la unilateralidad del informe.
+die Elite|la élite|Die Elite des Landes traf sich in Davos.|La élite del país se reunió en Davos.
+die Emanzipation|la emancipación|Die Emanzipation der Frauen veränderte die Gesellschaft.|La emancipación de las mujeres cambió la sociedad.
+die Entbehrung|la privación|Die Familie litt unter Entbehrungen.|La familia sufría privaciones.
+die Entmündigung|la tutela / el paternalismo|Viele empfinden das Gesetz als Entmündigung.|Muchos sienten la ley como paternalismo.
+die Entrüstung|la indignación|Die Entrüstung über das Urteil war groß.|La indignación por la sentencia fue grande.
+die Erblast|la carga heredada|Die Erblast der Vorgänger belastet die Regierung.|La carga heredada de los predecesores pesa sobre el gobierno.
+die Ernüchterung|el desengaño|Auf die Euphorie folgte Ernüchterung.|A la euforia siguió el desengaño.
+die Erosion|la erosión|Die Erosion des Vertrauens beschleunigt sich.|La erosión de la confianza se acelera.
+die Erschütterung|la conmoción|Die Nachricht löste Erschütterung aus.|La noticia provocó conmoción.
+die Essenz|la esencia|Das ist die Essenz seiner Philosophie.|Esa es la esencia de su filosofía.
+die Etablierung|el establecimiento|Die Etablierung neuer Standards dauert Jahre.|El establecimiento de nuevos estándares lleva años.
+die Evidenz|la evidencia|Die Evidenz spricht für diese These.|La evidencia respalda esta tesis.
+die Exklusivität|la exclusividad|Die Exklusivität des Angebots hat ihren Preis.|La exclusividad de la oferta tiene su precio.
+die Fehlentwicklung|la evolución errónea|Wir müssen Fehlentwicklungen frühzeitig erkennen.|Debemos detectar a tiempo las evoluciones erróneas.
+die Fixierung|la fijación|Seine Fixierung auf Zahlen ist auffällig.|Su fijación con las cifras es llamativa.
+die Flüchtigkeit|la fugacidad|Die Flüchtigkeit des Ruhms ist bekannt.|La fugacidad de la fama es conocida.
+die Fragilität|la fragilidad|Die Fragilität des Friedens bleibt bestehen.|La fragilidad de la paz persiste.
+die Freizügigkeit|la libre circulación|Die Freizügigkeit gilt innerhalb der Union.|La libre circulación rige dentro de la Unión.
+die Furcht|el temor|Furcht lähmte die Verhandlungspartner.|El temor paralizó a los negociadores.
+die Gebundenheit|la vinculación|Die Gebundenheit an Traditionen schränkt ein.|La vinculación a las tradiciones limita.
+die Geringschätzung|el desprecio|Er sprach mit Geringschätzung von seinen Kollegen.|Habló con desprecio de sus colegas.
+die Gesinnung|la ideología / el pensamiento|Man beurteilte ihn nach seiner Gesinnung.|Lo juzgaron por su manera de pensar.
+die Gewichtung|la ponderación|Die Gewichtung der Kriterien ist umstritten.|La ponderación de los criterios es discutida.
+die Glorifizierung|la glorificación|Die Glorifizierung der Vergangenheit ist gefährlich.|La glorificación del pasado es peligrosa.
+die Grauzone|la zona gris|Rechtlich bewegt sich das in einer Grauzone.|Jurídicamente esto se mueve en una zona gris.
+die Gratwanderung|el equilibrio precario|Die Verhandlung war eine Gratwanderung.|La negociación fue un equilibrio precario.
+die Grundhaltung|la actitud básica|Seine Grundhaltung ist skeptisch.|Su actitud básica es escéptica.
+die Gültigkeit|la validez|Die Gültigkeit des Vertrags wird bestritten.|Se discute la validez del contrato.
+die Hegemonie|la hegemonía|Die Hegemonie der Großmächte schwindet.|La hegemonía de las grandes potencias se debilita.
+die Heuchelei|la hipocresía|Das ist reine Heuchelei.|Eso es pura hipocresía.
+die Hybris|la soberbia|Seine Hybris wurde ihm zum Verhängnis.|Su soberbia fue su perdición.
+die Imitation|la imitación|Das Bild ist nur eine Imitation.|El cuadro es solo una imitación.
+die Immunität|la inmunidad|Abgeordnete genießen Immunität.|Los diputados gozan de inmunidad.
+die Indifferenz|la indiferencia|Ihre Indifferenz verletzte ihn.|Su indiferencia lo hirió.
+die Integrität|la integridad|Seine Integrität steht außer Frage.|Su integridad está fuera de duda.
+die Intransparenz|la opacidad|Die Intransparenz des Verfahrens wurde kritisiert.|Se criticó la opacidad del procedimiento.
+die Ironie|la ironía|Seine Ironie wurde nicht von allen verstanden.|Su ironía no fue entendida por todos.
+die Kapitulation|la capitulación|Die Kapitulation beendete den Krieg.|La capitulación puso fin a la guerra.
+die Kausalität|la causalidad|Die Kausalität zwischen beiden Ereignissen ist unklar.|La causalidad entre ambos hechos no está clara.
+die Klientel|la clientela|Die Partei bedient vor allem ihre Klientel.|El partido atiende sobre todo a su clientela.
+die Koexistenz|la coexistencia|Die Koexistenz beider Systeme ist möglich.|La coexistencia de ambos sistemas es posible.
+die Kohärenz|la coherencia|Dem Plan fehlt es an Kohärenz.|Al plan le falta coherencia.
+die Konfrontation|la confrontación|Eine direkte Konfrontation wollte er vermeiden.|Quería evitar una confrontación directa.
+die Konsolidierung|la consolidación|Die Konsolidierung des Haushalts hat Vorrang.|La consolidación del presupuesto tiene prioridad.
+die Konvention|la convención|Er brach mit allen Konventionen.|Rompió con todas las convenciones.
+die Kulisse|el decorado|Die Altstadt bildet die Kulisse des Films.|El casco antiguo es el decorado de la película.
+die Legitimation|la legitimación|Dem Verfahren fehlt die demokratische Legitimation.|Al procedimiento le falta legitimación democrática.
+die Lethargie|la letargia|Eine gewisse Lethargie hatte das Land erfasst.|Cierta letargia se había apoderado del país.
+die Linderung|el alivio|Die Salbe brachte Linderung.|La pomada trajo alivio.
+die Loyalität|la lealtad|Seine Loyalität zur Firma ist unbestritten.|Su lealtad a la empresa es indiscutible.
+die Machbarkeit|la viabilidad|Die Machbarkeit des Projekts wird geprüft.|Se examina la viabilidad del proyecto.
+die Marginalisierung|la marginación|Die Marginalisierung ganzer Gruppen ist ein Risiko.|La marginación de grupos enteros es un riesgo.
+die Mäßigung|la moderación|Der Präsident rief zur Mäßigung auf.|El presidente llamó a la moderación.
+die Metapher|la metáfora|Die Metapher des Hauses taucht immer wieder auf.|La metáfora de la casa aparece una y otra vez.
+die Mündigkeit|la mayoría de edad (autonomía)|Die Mündigkeit der Bürger ist die Basis der Demokratie.|La autonomía de los ciudadanos es la base de la democracia.
+die Nachlässigkeit|el descuido|Der Unfall geschah aus Nachlässigkeit.|El accidente ocurrió por descuido.
+die Nachsicht|la indulgencia|Haben Sie bitte Nachsicht mit mir.|Tenga indulgencia conmigo, por favor.
+die Naivität|la ingenuidad|Ihre Naivität ist rührend.|Su ingenuidad es conmovedora.
+die Nostalgie|la nostalgia|Mit Nostalgie erinnert er sich an die Kindheit.|Recuerda la infancia con nostalgia.
+die Nuance|el matiz|Es kommt auf jede Nuance an.|Cada matiz importa.
+die Objektivität|la objetividad|Die Objektivität des Gutachtens wurde angezweifelt.|Se puso en duda la objetividad del peritaje.
+die Ohnmacht|la impotencia / el desmayo|Er empfand Ohnmacht angesichts der Lage.|Sintió impotencia ante la situación.
+die Polarisierung|la polarización|Die Polarisierung der Gesellschaft nimmt zu.|La polarización de la sociedad aumenta.
+die Prämisse|la premisa|Die Prämisse des Arguments ist falsch.|La premisa del argumento es falsa.
+die Prekarität|la precariedad|Die Prekarität vieler Arbeitsverhältnisse wächst.|La precariedad de muchas relaciones laborales crece.
+die Propaganda|la propaganda|Der Sender verbreitet Propaganda.|La emisora difunde propaganda.
+die Quintessenz|la quintaesencia|Die Quintessenz des Vortrags war einfach.|La conclusión esencial de la charla era simple.
+die Rationalität|la racionalidad|Er appellierte an die Rationalität der Zuhörer.|Apeló a la racionalidad de los oyentes.
+die Redlichkeit|la honradez|Ihre Redlichkeit wird allgemein geschätzt.|Su honradez es apreciada por todos.
+die Reibung|la fricción|Zwischen beiden Abteilungen gibt es Reibungen.|Hay fricciones entre ambos departamentos.
+die Resignation|la resignación|Resignation machte sich breit.|Se extendió la resignación.
+die Resilienz|la resiliencia|Resilienz hilft, Krisen zu bewältigen.|La resiliencia ayuda a superar crisis.
+die Restriktion|la restricción|Die Restriktionen wurden gelockert.|Las restricciones se flexibilizaron.
+die Rhetorik|la retórica|Seine Rhetorik war überzeugend.|Su retórica era convincente.
+die Sachlichkeit|la objetividad (tono objetivo)|Er bat um Sachlichkeit in der Debatte.|Pidió objetividad en el debate.
+die Schieflage|el desequilibrio|Der Haushalt gerät in Schieflage.|El presupuesto entra en desequilibrio.
+die Schlichtheit|la sencillez|Die Schlichtheit des Raums beeindruckt.|La sencillez de la sala impresiona.
+die Schnittmenge|la intersección|Die Schnittmenge beider Programme ist gering.|La intersección de ambos programas es pequeña.
+die Selbstkritik|la autocrítica|Es fehlte an Selbstkritik.|Faltó autocrítica.
+die Selbstüberschätzung|la sobreestimación de sí mismo|Selbstüberschätzung führte zum Scheitern.|La sobreestimación de sí mismo llevó al fracaso.
+die Sensibilität|la sensibilidad|Das Thema erfordert Sensibilität.|El tema exige sensibilidad.
+die Souveränität|la soberanía / el aplomo|Sie meisterte die Situation mit Souveränität.|Resolvió la situación con aplomo.
+die Spezialisierung|la especialización|Die Spezialisierung auf ein Fach ist üblich.|La especialización en una materia es habitual.
+die Standhaftigkeit|la firmeza|Man lobte ihre Standhaftigkeit.|Elogiaron su firmeza.
+die Stigmatisierung|la estigmatización|Die Stigmatisierung Betroffener muss enden.|La estigmatización de los afectados debe terminar.
+die Suggestion|la sugestión|Die Suggestion wirkte stärker als Fakten.|La sugestión actuó más que los hechos.
+die Symbiose|la simbiosis|Beide Branchen leben in Symbiose.|Ambos sectores viven en simbiosis.
+die Synthese|la síntesis|Das Werk ist eine Synthese verschiedener Stile.|La obra es una síntesis de diversos estilos.
+die Täuschung|el engaño|Die Täuschung flog schnell auf.|El engaño se descubrió pronto.
+die Teilhabe|la participación (en la sociedad)|Bildung ermöglicht gesellschaftliche Teilhabe.|La educación permite la participación social.
+die Trägheit|la inercia|Die Trägheit der Verwaltung ärgert viele.|La inercia de la administración enoja a muchos.
+die Überheblichkeit|la altivez|Seine Überheblichkeit macht ihn unbeliebt.|Su altivez lo vuelve impopular.
+die Überlieferung|la tradición transmitida|Nach der Überlieferung gründete er die Stadt.|Según la tradición, él fundó la ciudad.
+die Überspitzung|la exageración|Die Überspitzung schadet der Argumentation.|La exageración daña la argumentación.
+die Umdeutung|la reinterpretación|Die Umdeutung der Geschichte ist problematisch.|La reinterpretación de la historia es problemática.
+die Unbefangenheit|la naturalidad|Er sprach mit kindlicher Unbefangenheit.|Habló con naturalidad infantil.
+die Unschärfe|la imprecisión|Die Unschärfe der Begriffe erschwert die Debatte.|La imprecisión de los términos dificulta el debate.
+die Unvereinbarkeit|la incompatibilidad|Die Unvereinbarkeit beider Ziele ist offenkundig.|La incompatibilidad de ambos objetivos es evidente.
+die Unwägbarkeit|la incertidumbre|Das Projekt birgt viele Unwägbarkeiten.|El proyecto encierra muchas incertidumbres.
+die Urteilskraft|el criterio / el juicio|Ihm fehlt die nötige Urteilskraft.|Le falta el criterio necesario.
+die Verbundenheit|la vinculación afectiva|Er spürte eine tiefe Verbundenheit mit der Heimat.|Sintió un profundo vínculo con la tierra natal.
+die Verdrängung|la represión / el desplazamiento|Die Verdrängung unangenehmer Wahrheiten hilft nicht.|Reprimir verdades incómodas no ayuda.
+die Verflechtung|el entrelazamiento|Die Verflechtung von Politik und Wirtschaft ist eng.|El entrelazamiento de política y economía es estrecho.
+die Vergänglichkeit|la fugacidad|Das Gedicht handelt von der Vergänglichkeit.|El poema trata de la fugacidad.
+die Verklärung|la idealización|Die Verklärung der Kindheit ist weit verbreitet.|La idealización de la infancia está muy difundida.
+die Verknappung|la escasez|Die Verknappung des Angebots treibt die Preise.|La escasez de la oferta empuja los precios.
+die Verleumdung|la calumnia|Er klagte wegen Verleumdung.|Demandó por calumnia.
+die Verlockung|la tentación|Der Verlockung konnte er nicht widerstehen.|No pudo resistir la tentación.
+die Vermarktung|la comercialización|Die Vermarktung des Produkts beginnt im Herbst.|La comercialización del producto empieza en otoño.
+die Verrohung|el embrutecimiento|Man beklagt die Verrohung der Sprache.|Se lamenta el embrutecimiento del lenguaje.
+die Versuchung|la tentación|Die Versuchung, aufzugeben, war groß.|La tentación de rendirse era grande.
+die Verwahrlosung|el abandono|Die Verwahrlosung des Viertels schreitet voran.|El abandono del barrio avanza.
+die Vorherrschaft|el predominio|Die Vorherrschaft der Konzerne wird kritisiert.|Se critica el predominio de las corporaciones.
+die Voreingenommenheit|el prejuicio|Er urteilte ohne Voreingenommenheit.|Juzgó sin prejuicios.
+die Weitsicht|la visión de futuro|Dem Plan fehlt es an Weitsicht.|Al plan le falta visión de futuro.
+die Widerstandsfähigkeit|la resistencia|Die Widerstandsfähigkeit der Wirtschaft wurde getestet.|Se puso a prueba la resistencia de la economía.
+die Wiederherstellung|el restablecimiento|Die Wiederherstellung der Ordnung dauerte Wochen.|El restablecimiento del orden llevó semanas.
+die Zäsur|la cesura / el punto de quiebre|Das Jahr 1989 bildet eine Zäsur.|El año 1989 marca un punto de quiebre.
+die Zerrissenheit|la escisión interior|Die Zerrissenheit der Partei war offensichtlich.|La división interna del partido era evidente.
+die Zersplitterung|la fragmentación|Die Zersplitterung der Opposition nützt der Regierung.|La fragmentación de la oposición beneficia al gobierno.
+die Zweckentfremdung|el uso indebido (con otro fin)|Die Zweckentfremdung von Wohnraum ist verboten.|Destinar viviendas a otro fin está prohibido.
+der Abgrund|el abismo|Das Land stand am Rand des Abgrunds.|El país estaba al borde del abismo.
+der Anachronismus|el anacronismo|Die Regel ist ein Anachronismus.|La regla es un anacronismo.
+der Anhaltspunkt|el indicio|Es gibt keine Anhaltspunkte für einen Betrug.|No hay indicios de fraude.
+der Ansporn|el estímulo|Das Lob war ihm ein Ansporn.|El elogio fue un estímulo para él.
+der Aufruhr|el tumulto|Die Entscheidung löste Aufruhr aus.|La decisión provocó un tumulto.
+der Ausweg|la salida|Es gibt keinen einfachen Ausweg.|No hay una salida fácil.
+der Beigeschmack|el regusto|Der Sieg hatte einen bitteren Beigeschmack.|La victoria tuvo un regusto amargo.
+der Betrachter|el observador|Je nach Betrachter wirkt das Bild anders.|Según el observador, el cuadro se ve distinto.
+der Dünkel|la presunción|Sein Dünkel ist unerträglich.|Su presunción es insoportable.
+der Egoismus|el egoísmo|Egoismus zerstört das Vertrauen.|El egoísmo destruye la confianza.
+der Eifer|el empeño|Mit Eifer ging er ans Werk.|Se puso a trabajar con empeño.
+der Einwurf|la objeción (intervención)|Ein Einwurf aus dem Publikum unterbrach ihn.|Una intervención del público lo interrumpió.
+der Erfahrungsschatz|el bagaje de experiencia|Ihr Erfahrungsschatz ist unbezahlbar.|Su bagaje de experiencia es invaluable.
+der Erklärungsansatz|el planteo explicativo|Dieser Erklärungsansatz überzeugt nicht.|Este planteo explicativo no convence.
+der Fatalismus|el fatalismo|Fatalismus lähmt jede Initiative.|El fatalismo paraliza toda iniciativa.
+der Fehlgriff|el desacierto|Die Ernennung war ein Fehlgriff.|El nombramiento fue un desacierto.
+der Gegenentwurf|la contrapropuesta|Die Opposition legte einen Gegenentwurf vor.|La oposición presentó una contrapropuesta.
+der Geltungsdrang|la necesidad de lucirse|Sein Geltungsdrang ist ermüdend.|Su necesidad de lucirse es agotadora.
+der Gesinnungswandel|el cambio de convicciones|Sein Gesinnungswandel überraschte alle.|Su cambio de convicciones sorprendió a todos.
+der Hochmut|la soberbia|Hochmut kommt vor dem Fall.|La soberbia precede a la caída.
+der Idealismus|el idealismo|Ihr Idealismus beeindruckt.|Su idealismo impresiona.
+der Impetus|el ímpetu|Mit neuem Impetus ging er ans Werk.|Con nuevo ímpetu se puso manos a la obra.
+der Irrglaube|la creencia errónea|Das ist ein weit verbreiteter Irrglaube.|Es una creencia errónea muy difundida.
+der Irrweg|el camino equivocado|Das war ein Irrweg.|Fue un camino equivocado.
+der Katalysator|el catalizador|Die Krise wirkte als Katalysator.|La crisis actuó como catalizador.
+der Kleinmut|la pusilanimidad|Kleinmut verhindert jeden Fortschritt.|La pusilanimidad impide todo progreso.
+der Kniff|el truco|Er kennt jeden Kniff.|Conoce todos los trucos.
+der Kontrapunkt|el contrapunto|Der Text setzt einen Kontrapunkt zur Debatte.|El texto aporta un contrapunto al debate.
+der Lackmustest|la prueba de fuego|Die Wahl wird zum Lackmustest.|La elección será la prueba de fuego.
+der Lebensentwurf|el proyecto de vida|Jeder hat einen anderen Lebensentwurf.|Cada uno tiene un proyecto de vida distinto.
+der Leitgedanke|la idea rectora|Der Leitgedanke des Programms ist Gerechtigkeit.|La idea rectora del programa es la justicia.
+der Makel|la mancha / el defecto|Der Skandal blieb ein Makel.|El escándalo quedó como una mancha.
+der Mehrheitswille|la voluntad de la mayoría|Der Mehrheitswille muss respektiert werden.|Hay que respetar la voluntad de la mayoría.
+der Missklang|la disonancia|Ein Missklang trübte die Feier.|Una disonancia empañó la fiesta.
+der Mitläufer|el seguidor sin convicción|Viele waren nur Mitläufer.|Muchos eran solo seguidores sin convicción.
+der Mythos|el mito|Der Mythos hält sich hartnäckig.|El mito persiste tercamente.
+der Nimbus|el aura|Der Nimbus des Unfehlbaren schwand.|El aura de infalible se desvaneció.
+der Opportunismus|el oportunismo|Man warf ihm Opportunismus vor.|Le reprocharon oportunismo.
+der Pragmatismus|el pragmatismo|Pragmatismus kennzeichnet seine Politik.|El pragmatismo caracteriza su política.
+der Reiz|el atractivo|Der Reiz des Neuen lässt schnell nach.|El atractivo de lo nuevo decae rápido.
+der Rückzug|la retirada|Der Rückzug der Truppen begann im Mai.|La retirada de las tropas empezó en mayo.
+der Scheideweg|la encrucijada|Das Land steht am Scheideweg.|El país está en una encrucijada.
+der Schleier|el velo|Ein Schleier von Nebel lag über dem Tal.|Un velo de niebla cubría el valle.
+der Schlüsselbegriff|el concepto clave|Nachhaltigkeit ist der Schlüsselbegriff.|La sostenibilidad es el concepto clave.
+der Schulterschluss|el cierre de filas|Es kam zu einem Schulterschluss der Parteien.|Hubo un cierre de filas de los partidos.
+der Seitenhieb|la indirecta|Er verteilte einen Seitenhieb gegen den Kollegen.|Lanzó una indirecta contra el colega.
+der Sprengstoff|el material explosivo (fig.)|Das Thema birgt sozialen Sprengstoff.|El tema encierra material explosivo social.
+der Stachel|el aguijón|Die Kritik saß wie ein Stachel.|La crítica se clavó como un aguijón.
+der Stellvertreter|el suplente|Der Stellvertreter übernahm die Leitung.|El suplente asumió la dirección.
+der Stolperstein|el obstáculo|Die Finanzierung wurde zum Stolperstein.|La financiación se volvió un obstáculo.
+der Tenor|el tono general|Der Tenor der Berichte ist positiv.|El tono general de los informes es positivo.
+der Überdruss|el hartazgo|Ein gewisser Überdruss machte sich breit.|Se extendió cierto hartazgo.
+der Umbau|la reestructuración|Der Umbau der Verwaltung ist geplant.|Se planea la reestructuración de la administración.
+der Untergang|la caída / el hundimiento|Der Untergang des Reiches kam schleichend.|La caída del imperio fue gradual.
+der Unterton|el matiz (tono implícito)|In seiner Stimme lag ein bitterer Unterton.|En su voz había un matiz amargo.
+der Vorwand|el pretexto|Er nutzte die Krankheit als Vorwand.|Usó la enfermedad como pretexto.
+der Wegbereiter|el precursor|Er gilt als Wegbereiter der Moderne.|Se lo considera precursor de la modernidad.
+der Wendehals|el veleta (oportunista)|Man nannte ihn einen Wendehals.|Lo llamaron veleta.
+der Wesenszug|el rasgo de carácter|Ehrgeiz ist ihr prägender Wesenszug.|La ambición es su rasgo de carácter más marcado.
+der Widerhall|el eco|Die Rede fand großen Widerhall.|El discurso tuvo gran eco.
+der Wirkungskreis|el ámbito de acción|Sein Wirkungskreis ist begrenzt.|Su ámbito de acción es limitado.
+der Zielkonflikt|el conflicto de objetivos|Es besteht ein Zielkonflikt zwischen Kosten und Qualität.|Hay un conflicto de objetivos entre costo y calidad.
+der Zugzwang|la obligación de actuar|Die Regierung geriet in Zugzwang.|El gobierno se vio obligado a actuar.
+der Zwischenruf|la interrupción (grito)|Ein Zwischenruf unterbrach die Rede.|Una interrupción cortó el discurso.
+das Ansinnen|la pretensión|Sein Ansinnen wurde abgelehnt.|Su pretensión fue rechazada.
+das Bekenntnis|la profesión de fe / el compromiso declarado|Die Partei legte ein klares Bekenntnis zur Demokratie ab.|El partido hizo una clara declaración a favor de la democracia.
+das Dasein|la existencia|Er führte ein bescheidenes Dasein.|Llevó una existencia modesta.
+das Elend|la miseria|Das Elend der Flüchtlinge ist groß.|La miseria de los refugiados es grande.
+das Fiasko|el fiasco|Die Veranstaltung endete im Fiasko.|El evento terminó en un fiasco.
+das Fundament|el cimiento|Vertrauen ist das Fundament jeder Beziehung.|La confianza es el cimiento de toda relación.
+das Gebaren|el comportamiento (ostentoso)|Sein Gebaren war unangemessen.|Su comportamiento fue inapropiado.
+das Gedankenspiel|el ejercicio mental|Das ist nur ein Gedankenspiel.|Es solo un ejercicio mental.
+das Geltungsbedürfnis|la necesidad de reconocimiento|Sein Geltungsbedürfnis kennt keine Grenzen.|Su necesidad de reconocimiento no tiene límites.
+das Gleichnis|la parábola|Er erklärte es in einem Gleichnis.|Lo explicó en una parábola.
+das Hirngespinst|la quimera|Das Projekt blieb ein Hirngespinst.|El proyecto quedó en una quimera.
+das Idiom|el modismo|Dieses Idiom ist schwer zu übersetzen.|Este modismo es difícil de traducir.
+das Kuriosum|la curiosidad|Das Museum zeigt viele Kuriosa.|El museo muestra muchas curiosidades.
+das Lippenbekenntnis|la declaración de boquilla|Die Zusagen blieben Lippenbekenntnisse.|Las promesas quedaron en declaraciones de boquilla.
+das Machtwort|el golpe de autoridad|Der Chef sprach ein Machtwort.|El jefe puso fin a la discusión con su autoridad.
+das Manko|la carencia|Das größte Manko ist die fehlende Erfahrung.|La mayor carencia es la falta de experiencia.
+das Narrativ|el relato|Das Narrativ der Regierung wird bezweifelt.|Se duda del relato del gobierno.
+das Naturell|el temperamento|Sie hat ein sonniges Naturell.|Tiene un temperamento soleado.
+das Pathos|el patetismo|Seine Rede war voller Pathos.|Su discurso estaba lleno de patetismo.
+das Refugium|el refugio|Der Garten ist ihr Refugium.|El jardín es su refugio.
+das Regulativ|el mecanismo regulador|Der Markt dient als Regulativ.|El mercado actúa como mecanismo regulador.
+das Ressentiment|el resentimiento|Sein Ressentiment gegen die Elite ist bekannt.|Su resentimiento contra la élite es conocido.
+das Rückgrat|la columna vertebral / el carácter|Er hat Rückgrat bewiesen.|Demostró tener carácter.
+das Sammelsurium|el revoltijo|Das Zimmer war ein Sammelsurium alter Möbel.|La habitación era un revoltijo de muebles viejos.
+das Signal|la señal|Das Ergebnis sendet ein deutliches Signal.|El resultado envía una señal clara.
+das Surrogat|el sucedáneo|Der Ersatz blieb ein Surrogat.|El reemplazo quedó como un sucedáneo.
+das Verhängnis|la perdición|Sein Leichtsinn wurde ihm zum Verhängnis.|Su imprudencia fue su perdición.
+das Vermächtnis|el legado|Sein Vermächtnis wirkt bis heute nach.|Su legado sigue vigente hasta hoy.
+das Wagnis|la osadía|Die Gründung war ein Wagnis.|La fundación fue una osadía.
+das Wechselspiel|la interacción|Das Wechselspiel von Angebot und Nachfrage bestimmt den Preis.|La interacción entre oferta y demanda determina el precio.
+das Zerrbild|la imagen distorsionada|Der Film zeichnet ein Zerrbild der Realität.|La película pinta una imagen distorsionada de la realidad.
+das Zwielicht|la penumbra / ambigüedad|Der Fall steht im Zwielicht.|El caso está en una zona ambigua.
+abtun|descartar / quitar importancia|Man darf Kritik nicht einfach abtun.|No se debe descartar la crítica sin más.
+abverlangen|exigir|Der Beruf kann einem viel abverlangen.|La profesión puede exigir mucho.
+anecken|chocar (con otros)|Er will mit seiner Meinung nicht anecken.|No quiere chocar con su opinión.
+anfachen|avivar|Der Vorfall kann die Debatte neu anfachen.|El incidente puede avivar el debate de nuevo.
+anmahnen|reclamar / advertir|Die Opposition will mehr Transparenz anmahnen.|La oposición quiere reclamar más transparencia.
+anspornen|incentivar|Das Lob soll ihn anspornen.|El elogio debe incentivarlo.
+aufbegehren|rebelarse|Die Bürger wollen gegen die Willkür aufbegehren.|Los ciudadanos quieren rebelarse contra la arbitrariedad.
+aufbürden|cargar (con algo)|Man darf den Kindern nicht alle Lasten aufbürden.|No se debe cargar a los chicos con todas las cargas.
+aufhorchen|prestar atención de golpe|Das ließ die Zuhörer aufhorchen.|Eso hizo que los oyentes prestaran atención de golpe.
+aufrütteln|sacudir (conciencias)|Der Bericht soll die Öffentlichkeit aufrütteln.|El informe quiere sacudir a la opinión pública.
+aufwiegen|compensar|Der Gewinn kann die Verluste nicht aufwiegen.|La ganancia no puede compensar las pérdidas.
+ausblenden|dejar de lado|Man darf die Risiken nicht ausblenden.|No se deben dejar de lado los riesgos.
+ausharren|perseverar / aguantar|Sie mussten stundenlang in der Kälte ausharren.|Tuvieron que aguantar horas en el frío.
+auskosten|saborear|Wir wollen den Moment voll auskosten.|Queremos saborear el momento por completo.
+ausloten|sondear|Wir wollen die Möglichkeiten ausloten.|Queremos sondear las posibilidades.
+ausufern|desbordarse|Die Diskussion kann leicht ausufern.|La discusión puede desbordarse fácilmente.
+beanstanden|objetar|Der Prüfer will die Rechnung beanstanden.|El auditor quiere objetar la factura.
+beargwöhnen|recelar de|Man beargwöhnte jeden seiner Schritte.|Se recelaba de cada uno de sus pasos.
+bedrängen|presionar / acosar|Man darf Zeugen nicht bedrängen.|No se debe presionar a los testigos.
+beflügeln|dar alas|Der Erfolg kann das ganze Team beflügeln.|El éxito puede dar alas a todo el equipo.
+beherzigen|tomar a pecho|Ich werde deinen Rat beherzigen.|Voy a tomar tu consejo a pecho.
+beipflichten|asentir|Dem kann ich nur beipflichten.|Solo puedo asentir a eso.
+beirren|hacer dudar|Er ließ sich nicht beirren.|No se dejó hacer dudar.
+bejahen|afirmar|Die Mehrheit würde die Frage bejahen.|La mayoría respondería afirmativamente a la pregunta.
+beschönigen|edulcorar|Man sollte die Lage nicht beschönigen.|No habría que edulcorar la situación.
+besinnen|reflexionar|Wir sollten uns auf unsere Stärken besinnen.|Deberíamos recordar nuestras fortalezas.
+bevormunden|tratar con paternalismo|Niemand will sich bevormunden lassen.|Nadie quiere que lo traten con paternalismo.
+bewerkstelligen|lograr (llevar a cabo)|Wie wollen Sie das bewerkstelligen?|¿Cómo piensa lograrlo?
+bezichtigen|acusar|Man wollte ihn der Lüge bezichtigen.|Se lo quería acusar de mentir.
+brandmarken|estigmatizar|Man darf Menschen nicht pauschal brandmarken.|No se debe estigmatizar a las personas en bloque.
+bündeln|concentrar|Wir sollten unsere Kräfte bündeln.|Deberíamos concentrar nuestras fuerzas.
+distanzieren|distanciarse|Er musste sich von der Aussage distanzieren.|Tuvo que distanciarse de la declaración.
+durchblicken|dar a entender|Er ließ durchblicken, dass er gehen wolle.|Dio a entender que quería irse.
+einbüßen|perder|Das Land kann an Einfluss einbüßen.|El país puede perder influencia.
+einebnen|nivelar|Man will Unterschiede nicht einebnen.|No se quiere nivelar las diferencias.
+einfließen|incorporarse|Ihre Erfahrungen sollen in den Bericht einfließen.|Sus experiencias deben incorporarse al informe.
+einlenken|ceder|Die Regierung musste schließlich einlenken.|El gobierno tuvo que ceder finalmente.
+einschleusen|infiltrar|Man wollte Agenten einschleusen.|Se quería infiltrar agentes.
+einschüchtern|intimidar|Wir lassen uns nicht einschüchtern.|No nos dejamos intimidar.
+einweihen|poner al tanto|Er wollte sie in den Plan einweihen.|Quiso ponerla al tanto del plan.
+entfachen|encender / desatar|Der Vorschlag könnte einen Streit entfachen.|La propuesta podría desatar una disputa.
+entgleisen|descarrilarse|Die Debatte drohte zu entgleisen.|El debate amenazaba con descarrilarse.
+entrüsten|indignar|Das Urteil kann viele entrüsten.|La sentencia puede indignar a muchos.
+entschärfen|desactivar / suavizar|Man will den Konflikt entschärfen.|Se quiere desactivar el conflicto.
+entwerten|desvalorizar|Die Inflation kann Ersparnisse entwerten.|La inflación puede desvalorizar los ahorros.
+erahnen|vislumbrar|Man kann die Folgen nur erahnen.|Las consecuencias solo se pueden vislumbrar.
+erdulden|soportar|Er musste viel Leid erdulden.|Tuvo que soportar mucho sufrimiento.
+ereifern|acalorarse|Er neigt dazu, sich schnell zu ereifern.|Tiende a acalorarse rápido.
+ergattern|conseguir (con suerte)|Wir konnten noch zwei Karten ergattern.|Pudimos conseguir todavía dos entradas.
+ergehen|irle a uno|Wie mag es ihr ergehen?|¿Cómo le irá?
+erhellen|esclarecer|Die Studie kann den Zusammenhang erhellen.|El estudio puede esclarecer la relación.
+erkämpfen|conquistar (luchando)|Sie mussten sich ihre Rechte erkämpfen.|Tuvieron que conquistar sus derechos luchando.
+ernüchtern|desilusionar|Das Ergebnis kann ernüchtern.|El resultado puede desilusionar.
+erpressen|extorsionar|Man wollte ihn damit erpressen.|Se lo quería extorsionar con eso.
+erschleichen|obtener con engaños|Er wollte sich das Vertrauen erschleichen.|Quería obtener la confianza con engaños.
+erübrigen|resultar innecesario|Eine Antwort erübrigt sich.|Una respuesta resulta innecesaria.
+fehlschlagen|fracasar|Der Versuch kann fehlschlagen.|El intento puede fracasar.
+frönen|entregarse a|Er will seinem Hobby frönen.|Quiere entregarse a su pasatiempo.
+geißeln|fustigar|Der Autor will die Zustände geißeln.|El autor quiere fustigar la situación.
+gebieten|ordenar / exigir|Die Vernunft gebietet Vorsicht.|La razón exige prudencia.
+glorifizieren|glorificar|Man darf Gewalt nicht glorifizieren.|No se debe glorificar la violencia.
+heraufbeschwören|provocar / invocar|Das könnte eine Krise heraufbeschwören.|Eso podría provocar una crisis.
+herabwürdigen|denigrar|Niemand darf andere herabwürdigen.|Nadie debe denigrar a otros.
+herleiten|derivar|Man kann das aus dem Gesetz herleiten.|Eso se puede derivar de la ley.
+hinwegsetzen|pasar por alto|Man kann sich nicht über Regeln hinwegsetzen.|No se puede pasar por alto las reglas.
+hinwegtäuschen|disimular|Der Erfolg kann über die Probleme hinwegtäuschen.|El éxito puede disimular los problemas.
+honorieren|reconocer / retribuir|Das Unternehmen will Leistung honorieren.|La empresa quiere reconocer el rendimiento.
+instrumentalisieren|instrumentalizar|Man darf das Leid nicht instrumentalisieren.|No se debe instrumentalizar el sufrimiento.
+kaschieren|disimular|Er versuchte, seine Unsicherheit zu kaschieren.|Intentó disimular su inseguridad.
+kontrastieren|contrastar|Der Film will Arm und Reich kontrastieren.|La película quiere contrastar pobres y ricos.
+kultivieren|cultivar (cuidar)|Sie wollte die Freundschaft kultivieren.|Quería cultivar la amistad.
+lancieren|lanzar|Die Firma will ein neues Produkt lancieren.|La empresa quiere lanzar un producto nuevo.
+legitimieren|legitimar|Eine Wahl kann die Macht legitimieren.|Una elección puede legitimar el poder.
+lockern|aflojar / flexibilizar|Man will die Regeln lockern.|Se quiere flexibilizar las reglas.
+marginalisieren|marginar|Man darf Minderheiten nicht marginalisieren.|No se debe marginar a las minorías.
+monieren|objetar|Der Rechnungshof will die Ausgaben monieren.|El tribunal de cuentas quiere objetar los gastos.
+nachempfinden|comprender (sentir con)|Ich kann deine Enttäuschung nachempfinden.|Puedo comprender tu decepción.
+niederschlagen|reflejarse|Die Reform wird sich in den Preisen niederschlagen.|La reforma se reflejará en los precios.
+polarisieren|polarizar|Das Thema kann die Gesellschaft polarisieren.|El tema puede polarizar a la sociedad.
+postulieren|postular|Der Autor will eine neue Theorie postulieren.|El autor quiere postular una nueva teoría.
+profilieren|labrar un perfil|Er will sich als Experte profilieren.|Quiere labrarse un perfil de experto.
+provozieren|provocar|Er wollte mit der Aussage provozieren.|Quería provocar con la declaración.
+schlichten|mediar / zanjar|Ein Vermittler soll den Streit schlichten.|Un mediador debe zanjar la disputa.
+sich abzeichnen|perfilarse|Eine Lösung beginnt sich abzuzeichnen.|Una solución empieza a perfilarse.
+sich anmaßen|atreverse (presuntuosamente)|Ich will mir kein Urteil anmaßen.|No quiero arrogarme un juicio.
+sich auflehnen|sublevarse|Das Volk wollte sich gegen die Obrigkeit auflehnen.|El pueblo quería sublevarse contra la autoridad.
+sich ausbreiten|extenderse|Die Krankheit kann sich rasch ausbreiten.|La enfermedad puede extenderse rápido.
+sich entfremden|alejarse (distanciarse)|Beide begannen, sich zu entfremden.|Ambos empezaron a alejarse.
+sich hervortun|destacarse|Er wollte sich als Redner hervortun.|Quería destacarse como orador.
+sich verselbstständigen|cobrar vida propia|Der Prozess kann sich verselbstständigen.|El proceso puede cobrar vida propia.
+skizzieren|esbozar|Ich möchte kurz die Lage skizzieren.|Quiero esbozar brevemente la situación.
+strapazieren|desgastar|Das kann die Geduld strapazieren.|Eso puede desgastar la paciencia.
+sträuben|resistirse|Er wollte sich gegen die Änderung sträuben.|Quería resistirse al cambio.
+tarnen|camuflar|Man wollte die Absicht tarnen.|Se quería camuflar la intención.
+tilgen|saldar / borrar|Das Land will seine Schulden tilgen.|El país quiere saldar sus deudas.
+trüben|enturbiar|Nichts soll die Freude trüben.|Nada debe empañar la alegría.
+überhandnehmen|proliferar|Die Bürokratie darf nicht überhandnehmen.|La burocracia no debe proliferar.
+überlagern|superponerse|Alte Konflikte können neue überlagern.|Los viejos conflictos pueden superponerse a los nuevos.
+überspitzen|exagerar|Man sollte die Aussage nicht überspitzen.|No habría que exagerar la afirmación.
+umdeuten|reinterpretar|Man wollte die Ereignisse umdeuten.|Se quería reinterpretar los hechos.
+umwälzen|trastocar|Die Erfindung sollte die Wirtschaft umwälzen.|El invento iba a trastocar la economía.
+unterminieren|socavar|Das kann das Vertrauen unterminieren.|Eso puede socavar la confianza.
+unterwandern|infiltrar (minar)|Man wollte die Organisation unterwandern.|Se quería infiltrar la organización.
+verblassen|desvanecerse|Die Erinnerung kann mit der Zeit verblassen.|El recuerdo puede desvanecerse con el tiempo.
+verfälschen|falsear|Man darf Daten nicht verfälschen.|No se deben falsear los datos.
+verhehlen|ocultar|Er konnte seine Enttäuschung nicht verhehlen.|No pudo ocultar su decepción.
+verklären|idealizar|Man neigt dazu, die Vergangenheit zu verklären.|Se tiende a idealizar el pasado.
+verkraften|sobrellevar|Sie konnte den Verlust kaum verkraften.|Apenas pudo sobrellevar la pérdida.
+verkümmern|atrofiarse|Talente können ohne Förderung verkümmern.|Los talentos pueden atrofiarse sin apoyo.
+verleugnen|negar (renegar)|Er wollte seine Herkunft nicht verleugnen.|No quería renegar de su origen.
+verlocken|tentar|Das Angebot kann viele verlocken.|La oferta puede tentar a muchos.
+verschleppen|dilatar|Man darf das Verfahren nicht verschleppen.|No se debe dilatar el procedimiento.
+verschmelzen|fundirse|Beide Kulturen können verschmelzen.|Ambas culturas pueden fundirse.
+verstetigen|consolidar (hacer continuo)|Man will die Entwicklung verstetigen.|Se quiere consolidar la evolución.
+verüben|cometer|Er wollte das Verbrechen nicht verüben.|No quería cometer el crimen.
+verwerfen|descartar|Wir mussten den Plan verwerfen.|Tuvimos que descartar el plan.
+verzerren|distorsionar|Das kann das Ergebnis verzerren.|Eso puede distorsionar el resultado.
+vorwegnehmen|anticipar|Ich möchte das Ergebnis nicht vorwegnehmen.|No quiero anticipar el resultado.
+walten|regir|Hier soll Vernunft walten.|Aquí debe regir la razón.
+zementieren|afianzar (cementar)|Das Gesetz könnte die Ungleichheit zementieren.|La ley podría afianzar la desigualdad.
+zerfallen|desintegrarse|Das Reich begann zu zerfallen.|El imperio empezó a desintegrarse.
+zersetzen|corroer|Misstrauen kann ein Team zersetzen.|La desconfianza puede corroer a un equipo.
+zugrunde legen|tomar como base|Wir wollen diese Zahlen zugrunde legen.|Queremos tomar estas cifras como base.
+zutage treten|salir a la luz|Der Konflikt begann zutage zu treten.|El conflicto empezó a salir a la luz.
+abgeklärt|sereno (con experiencia)|Mit den Jahren wurde er abgeklärt.|Con los años se volvió sereno.
+abgestumpft|insensibilizado|Sie wirkte abgestumpft gegenüber dem Leid.|Parecía insensibilizada ante el sufrimiento.
+abstrus|descabellado|Seine Theorie klingt abstrus.|Su teoría suena descabellada.
+akribisch|minucioso|Sie arbeitet akribisch.|Trabaja con minuciosidad.
+allgegenwärtig|omnipresente|Werbung ist heute allgegenwärtig.|La publicidad es hoy omnipresente.
+ambivalent|ambivalente|Er hat ein ambivalentes Verhältnis zur Heimat.|Tiene una relación ambivalente con su tierra.
+anachronistisch|anacrónico|Die Regel wirkt anachronistisch.|La regla parece anacrónica.
+anrüchig|de dudosa reputación|Das Geschäft war anrüchig.|El negocio era de dudosa reputación.
+arglistig|malicioso|Er wurde arglistig getäuscht.|Fue engañado con malicia.
+aufrichtig|sincero|Ich danke Ihnen aufrichtig.|Le agradezco sinceramente.
+ausgedehnt|extenso|Wir machten einen ausgedehnten Spaziergang.|Dimos un largo paseo.
+ausschweifend|desmedido|Er führte ein ausschweifendes Leben.|Llevó una vida desmedida.
+beachtlich|considerable|Das ist ein beachtlicher Erfolg.|Es un éxito considerable.
+befremdlich|extraño (desconcertante)|Sein Verhalten wirkte befremdlich.|Su comportamiento resultó desconcertante.
+beklemmend|opresivo|Die Stille war beklemmend.|El silencio era opresivo.
+beliebig|cualquiera / arbitrario|Man kann beliebige Beispiele wählen.|Se pueden elegir ejemplos cualesquiera.
+bestechend|cautivador|Das Argument ist bestechend einfach.|El argumento es cautivadoramente simple.
+beschaulich|apacible|Das Dorf wirkt beschaulich.|El pueblo parece apacible.
+betulich|ceremonioso (lento y solícito)|Sie sprach in betulichem Ton.|Habló en un tono ceremonioso.
+bigott|fanático (beato)|Er gilt als bigott.|Se lo considera fanático.
+brisant|candente|Das Thema ist politisch brisant.|El tema es políticamente candente.
+bürokratisch|burocrático|Das Verfahren ist sehr bürokratisch.|El trámite es muy burocrático.
+diskret|discreto|Wir behandeln das diskret.|Lo tratamos con discreción.
+doktrinär|doctrinario|Seine Haltung ist doktrinär.|Su postura es doctrinaria.
+drastisch|drástico|Die Preise stiegen drastisch.|Los precios subieron drásticamente.
+eigennützig|interesado|Sein Motiv war eigennützig.|Su motivo era interesado.
+eingefleischt|empedernido|Er ist ein eingefleischter Junggeselle.|Es un soltero empedernido.
+eingefahren|rutinario / anquilosado|Die Abläufe sind eingefahren.|Los procesos están anquilosados.
+elementar|elemental|Das ist eine elementare Voraussetzung.|Es un requisito elemental.
+engstirnig|de miras estrechas|Er ist ein engstirniger Mensch.|Es una persona de miras estrechas.
+entlegen|remoto|Das Dorf liegt in einer entlegenen Gegend.|El pueblo está en una zona remota.
+erbittert|encarnizado|Es gab erbitterten Widerstand.|Hubo una resistencia encarnizada.
+ergiebig|fructífero|Die Diskussion war sehr ergiebig.|La discusión fue muy fructífera.
+erlesen|selecto|Es gab erlesene Weine.|Había vinos selectos.
+ernüchternd|desalentador|Das Ergebnis ist ernüchternd.|El resultado es desalentador.
+eigensinnig|terco|Das Kind ist eigensinnig.|El chico es terco.
+fahrig|nervioso (distraído)|Er wirkte fahrig und unkonzentriert.|Parecía nervioso y distraído.
+fatalistisch|fatalista|Er hat eine fatalistische Einstellung.|Tiene una actitud fatalista.
+festgefahren|estancado|Die Verhandlungen sind festgefahren.|Las negociaciones están estancadas.
+filigran|delicado (finamente trabajado)|Das Muster ist filigran.|El diseño es delicado y fino.
+fragil|frágil|Der Frieden ist fragil.|La paz es frágil.
+gediegen|sólido / de calidad|Das Haus ist gediegen eingerichtet.|La casa está amueblada con buen gusto.
+geflissentlich|deliberadamente|Er überhörte geflissentlich die Frage.|Ignoró deliberadamente la pregunta.
+gehaltvoll|sustancioso|Das war ein gehaltvolles Gespräch.|Fue una conversación sustanciosa.
+gemeinnützig|de utilidad pública|Der Verein ist gemeinnützig.|La asociación es de utilidad pública.
+genügsam|frugal|Sie ist ein genügsamer Mensch.|Es una persona frugal.
+gewieft|astuto|Er ist ein gewiefter Verhandler.|Es un negociador astuto.
+grundverschieden|radicalmente distinto|Ihre Ansichten sind grundverschieden.|Sus puntos de vista son radicalmente distintos.
+gutgläubig|crédulo|Sie ist leider gutgläubig.|Lamentablemente es crédula.
+halsstarrig|obstinado|Er blieb halsstarrig bei seiner Meinung.|Siguió obstinado en su opinión.
+hanebüchen|disparatado|Das ist ein hanebüchener Unsinn.|Eso es un disparate total.
+hellsichtig|perspicaz|Sie hat hellsichtig vor der Entwicklung gewarnt.|Advirtió con perspicacia sobre la evolución.
+hinterhältig|pérfido|Das war ein hinterhältiger Angriff.|Fue un ataque pérfido.
+homogen|homogéneo|Die Gruppe ist nicht homogen.|El grupo no es homogéneo.
+hochtrabend|grandilocuente|Er sprach in hochtrabenden Worten.|Habló con palabras grandilocuentes.
+immens|inmenso|Der Schaden ist immens.|El daño es inmenso.
+indifferent|indiferente|Er blieb indifferent.|Se mantuvo indiferente.
+inhaltsleer|vacío de contenido|Die Rede war inhaltsleer.|El discurso estaba vacío de contenido.
+inkonsequent|inconsecuente|Seine Politik ist inkonsequent.|Su política es inconsecuente.
+instabil|inestable|Die Lage bleibt instabil.|La situación sigue inestable.
+intrinsisch|intrínseco|Intrinsische Motivation hält länger an.|La motivación intrínseca dura más.
+irrational|irracional|Seine Angst ist irrational.|Su miedo es irracional.
+kleinkariert|mezquino / de mente estrecha|Das ist doch kleinkariert.|Eso es mezquino.
+kompromisslos|intransigente|Sie verfolgt kompromisslos ihr Ziel.|Persigue su meta sin concesiones.
+konträr|opuesto|Sie vertreten konträre Positionen.|Defienden posiciones opuestas.
+kryptisch|críptico|Seine Antwort war kryptisch.|Su respuesta fue críptica.
+kurzlebig|efímero|Der Trend war kurzlebig.|La tendencia fue efímera.
+labil|lábil|Seine Gesundheit ist labil.|Su salud es frágil.
+lapidar|lapidario|Er antwortete lapidar.|Respondió de manera lapidaria.
+latent|latente|Die Gefahr ist latent vorhanden.|El peligro está presente de forma latente.
+leichtfertig|ligero (imprudente)|Das war eine leichtfertige Entscheidung.|Fue una decisión imprudente.
+lethargisch|letárgico|Er wirkte lethargisch.|Parecía letárgico.
+nachdrücklich|enfático|Er forderte nachdrücklich eine Antwort.|Exigió enfáticamente una respuesta.
+nebulös|nebuloso|Die Pläne bleiben nebulös.|Los planes siguen siendo nebulosos.
+nonchalant|desenfadado|Er antwortete nonchalant.|Respondió con desenfado.
+obsolet|obsoleto|Die Technik ist inzwischen obsolet.|La técnica ya es obsoleta.
+opportun|oportuno|Das hielt er für opportun.|Lo consideraba oportuno.
+pedantisch|pedante|Sie ist geradezu pedantisch.|Es casi pedante.
+pikant|picante (atrevido)|Das Detail ist pikant.|El detalle es picante.
+plakativ|simplista (llamativo)|Die Darstellung ist plakativ.|La presentación es simplista.
+prekär|precario|Die Lage ist prekär.|La situación es precaria.
+pragmatisch|pragmático|Wir suchen eine pragmatische Lösung.|Buscamos una solución pragmática.
+profund|profundo|Er verfügt über profunde Kenntnisse.|Posee conocimientos profundos.
+rudimentär|rudimentario|Seine Kenntnisse sind rudimentär.|Sus conocimientos son rudimentarios.
+sakrosankt|sacrosanto|Nichts ist sakrosankt.|Nada es sacrosanto.
+salopp|informal (campechano)|Er drückt sich salopp aus.|Se expresa de manera campechana.
+schlagkräftig|contundente|Das ist ein schlagkräftiges Argument.|Es un argumento contundente.
+schwammig|vago|Die Formulierung ist schwammig.|La formulación es vaga.
+selbstgerecht|pagado de sí mismo|Sein Ton ist selbstgerecht.|Su tono es de quien se cree en lo cierto.
+sperrig|difícil (voluminoso)|Der Begriff ist sperrig.|El término es engorroso.
+spröde|áspero (seco)|Sie wirkt spröde.|Parece áspera.
+stringent|estricto (coherente)|Die Argumentation ist stringent.|La argumentación es rigurosa.
+subtil|sutil|Die Kritik war subtil.|La crítica fue sutil.
+tiefsinnig|profundo (reflexivo)|Das ist ein tiefsinniger Gedanke.|Es un pensamiento profundo.
+trivial|trivial|Das ist keine triviale Frage.|No es una pregunta trivial.
+überschwänglich|efusivo|Er lobte sie überschwänglich.|La elogió de manera efusiva.
+überzogen|exagerado|Die Forderung ist überzogen.|La exigencia es exagerada.
+unbeirrt|imperturbable|Sie ging unbeirrt weiter.|Siguió adelante imperturbable.
+undurchsichtig|opaco|Das Geschäft ist undurchsichtig.|El negocio es opaco.
+unerbittlich|implacable|Der Winter war unerbittlich.|El invierno fue implacable.
+unergründlich|insondable|Sein Motiv bleibt unergründlich.|Su motivo sigue siendo insondable.
+unwägbar|imprevisible|Die Folgen sind unwägbar.|Las consecuencias son imprevisibles.
+verbissen|obstinado (tenaz)|Er kämpfte verbissen.|Luchó con obstinación.
+verfänglich|capcioso|Die Frage war verfänglich.|La pregunta era capciosa.
+verhängnisvoll|fatal|Das war ein verhängnisvoller Fehler.|Fue un error fatal.
+vermessen|presuntuoso|Es wäre vermessen, das zu behaupten.|Sería presuntuoso afirmar eso.
+verschwommen|borroso|Das Bild ist verschwommen.|La imagen está borrosa.
+verwerflich|reprobable|Das Verhalten ist verwerflich.|El comportamiento es reprobable.
+verworren|enmarañado|Die Lage ist verworren.|La situación es enmarañada.
+vordergründig|superficial|Das ist nur eine vordergründige Erklärung.|Es solo una explicación superficial.
+vorschnell|precipitado|Triff keine vorschnellen Urteile.|No emitas juicios precipitados.
+wankelmütig|voluble|Er ist wankelmütig.|Es voluble.
+weitsichtig|con visión de futuro|Das war eine weitsichtige Entscheidung.|Fue una decisión con visión de futuro.
+widerborstig|reacio|Das Kind ist widerborstig.|El chico es reacio.
+wohlwollend|benévolo|Er sprach wohlwollend über das Projekt.|Habló con benevolencia del proyecto.
+zaghaft|vacilante|Sie begann zaghaft zu sprechen.|Empezó a hablar con vacilación.
+zwiespältig|ambivalente (dividido)|Ich habe zwiespältige Gefühle.|Tengo sentimientos encontrados.
+abermals|una vez más|Er scheiterte abermals.|Fracasó una vez más.
+allenfalls|a lo sumo|Das reicht allenfalls für einen Tag.|Eso alcanza a lo sumo para un día.
+andernorts|en otro lugar|Andernorts sieht es anders aus.|En otros lugares la situación es distinta.
+bisweilen|a veces|Bisweilen ist Schweigen klüger.|A veces callar es más sabio.
+demzufolge|en consecuencia|Demzufolge muss der Plan geändert werden.|En consecuencia, hay que cambiar el plan.
+einstweilen|por ahora|Einstweilen bleibt alles beim Alten.|Por ahora todo sigue igual.
+gemeinhin|por lo general|Das gilt gemeinhin als sicher.|Eso se considera por lo general seguro.
+gleichwohl|no obstante|Gleichwohl bleibt die Frage offen.|No obstante, la pregunta sigue abierta.
+hierzulande|en nuestro país|Hierzulande ist das unüblich.|En nuestro país eso no es habitual.
+mithin|por lo tanto|Mithin ist die Behauptung falsch.|Por lo tanto, la afirmación es falsa.
+mitnichten|en absoluto|Das ist mitnichten der Fall.|Eso no es en absoluto así.
+nunmehr|a partir de ahora|Die Regel gilt nunmehr für alle.|La regla rige a partir de ahora para todos.
+partout|a toda costa|Er wollte partout nicht nachgeben.|No quería ceder de ningún modo.
+seinerzeit|en su momento|Das wurde seinerzeit heftig diskutiert.|Eso se discutió con intensidad en su momento.
+sodann|a continuación|Sodann folgt die Abstimmung.|A continuación sigue la votación.
+sonstig|restante / demás|Sonstige Kosten sind nicht enthalten.|Los demás costos no están incluidos.
+stellenweise|en algunos puntos|Stellenweise ist das Eis dünn.|En algunos puntos el hielo es fino.
+vorderhand|por el momento|Vorderhand besteht kein Grund zur Sorge.|Por el momento no hay motivo de preocupación.
+zuallererst|antes que nada|Zuallererst möchte ich danken.|Antes que nada quiero agradecer.
+der Gemeinplatz|el lugar común|Das ist nur ein Gemeinplatz.|Eso es solo un lugar común.
+das Vakuum|el vacío|Es entstand ein Vakuum an der Spitze.|Surgió un vacío en la cima.
+ausklammern|excluir (de la discusión)|Man will das Thema nicht ausklammern.|No se quiere excluir el tema.
+hervortreten|destacarse|Sie wird bald hervortreten.|Pronto se va a destacar.
+hintergehen|engañar (a espaldas)|Er wollte sie nie hintergehen.|Nunca quiso engañarla a sus espaldas.
 `;
 
-export type CoreLevel = "A1" | "A2" | "B1" | "B2";
+export type CoreLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 
 /** Palabras del entrenador, en orden de estudio. `unitId: "core"` las distingue de las del currículo; `level` es el nivel al que cuentan. */
 export const CORE_VOCAB: (Vocab & { unitId: string; level: CoreLevel })[] = (() => {
