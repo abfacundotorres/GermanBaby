@@ -406,4 +406,208 @@ export const EXAMS: Exam[] = [
       hint: "Tono formal: «Sehr geehrte Damen und Herren», «Hiermit möchte ich mich beschweren».",
     },
   },
+  {
+    id: "a2-3",
+    level: "A2",
+    title: "Simulacro A2 · 3",
+    lesen: [
+      {
+        title: "Eine Einladung",
+        text: [
+          "Liebe Mara, am 14. Juni feiern wir den Abschied von unserem Nachbarn Jonas. Er zieht nach Köln, weil er dort eine neue Arbeit gefunden hat. Die Feier beginnt um 17 Uhr im Garten hinter dem Haus. Wenn es regnet, feiern wir im Hausflur im Erdgeschoss.",
+          "Wir grillen Würstchen und Gemüse. Bitte bring einen Salat oder einen Kuchen mit, die Getränke besorgen wir. Jonas wünscht sich keine Geschenke, aber wir sammeln Geld für ein Fotobuch mit Bildern aus den letzten Jahren. Wer mitmachen möchte, gibt bis zum 10. Juni bei mir Bescheid. Herzliche Grüße, Elke",
+        ],
+        questions: [
+          c("¿Por qué se muda Jonas?", ["Encontró un nuevo trabajo", "Se casa", "Quiere vivir solo", "Estudia en Colonia"], "«eine neue Arbeit gefunden»."),
+          fi("¿A qué hora empieza la fiesta?", ["17", "5", "fünf", "siebzehn"], "«um 17 Uhr»."),
+          c("¿Dónde se festeja si llueve?", ["En el pasillo de la planta baja", "En el jardín", "En un restaurante", "En lo de Jonas"], "«im Hausflur im Erdgeschoss»."),
+          c("¿Qué se pide que traiga Mara?", ["Una ensalada o una torta", "Bebidas", "Carne", "Un regalo"], "«einen Salat oder einen Kuchen»."),
+          tf("Los invitados deben llevar un regalo.", false, "«wünscht sich keine Geschenke»."),
+        ],
+      },
+      {
+        title: "Stundenplan Deutschkurs",
+        text: [
+          "Der Intensivkurs A2 findet von Montag bis Donnerstag statt. Der Unterricht beginnt um 9 Uhr und endet um 12:30 Uhr, mit einer Pause von zwanzig Minuten. Am Freitag gibt es keinen Unterricht, aber im Lernzentrum können Sie von 10 bis 14 Uhr kostenlos mit Tutoren üben. Der Kurs dauert sechs Wochen und kostet 480 Euro. Das Buch ist im Preis nicht enthalten.",
+        ],
+        questions: [
+          c("¿Qué días hay clases?", ["De lunes a jueves", "De lunes a viernes", "Solo los fines de semana", "Martes y viernes"], "«von Montag bis Donnerstag»."),
+          fi("¿Cuántos minutos dura la pausa?", ["20", "zwanzig"], "«zwanzig Minuten»."),
+          tf("El viernes se puede practicar gratis en el centro de aprendizaje.", true, "«kostenlos mit Tutoren üben»."),
+          fi("¿Cuántas semanas dura el curso?", ["6", "sechs"], "«sechs Wochen»."),
+          tf("El libro está incluido en el precio.", false, "«nicht enthalten»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Beim Arzt anrufen",
+        setting: "Tim llama a un consultorio para pedir un turno",
+        lines: [
+          { who: "f", name: "Praxis", de: "Praxis Dr. Lehmann, guten Morgen." },
+          { who: "m", name: "Tim", de: "Guten Morgen, hier Tim Roth. Ich habe seit drei Tagen starke Halsschmerzen und möchte einen Termin." },
+          { who: "f", name: "Praxis", de: "Haben Sie auch Fieber?" },
+          { who: "m", name: "Tim", de: "Ja, gestern Abend hatte ich achtunddreißig Grad." },
+          { who: "f", name: "Praxis", de: "Dann können Sie heute noch kommen. Um halb elf oder um Viertel nach drei?" },
+          { who: "m", name: "Tim", de: "Um halb elf geht leider nicht, da muss ich arbeiten. Dann lieber um Viertel nach drei." },
+          { who: "f", name: "Praxis", de: "In Ordnung. Bitte bringen Sie Ihre Versichertenkarte mit." },
+          { who: "m", name: "Tim", de: "Mache ich. Muss ich etwas bezahlen?" },
+          { who: "f", name: "Praxis", de: "Nein, die Krankenkasse zahlt. Nur wenn Sie ein Rezept brauchen, kostet das fünf Euro." },
+          { who: "m", name: "Tim", de: "Alles klar, vielen Dank. Bis später!" },
+        ],
+        questions: [
+          c("¿Qué síntoma tiene Tim?", ["Dolor de garganta", "Dolor de cabeza", "Tos", "Dolor de espalda"], "«Halsschmerzen»."),
+          fi("¿Cuántos grados de fiebre tuvo?", ["38", "achtunddreißig"], "«achtunddreißig Grad»."),
+          c("¿Por qué no elige el turno de las diez y media?", ["Tiene que trabajar", "Está muy lejos", "Duerme", "No tiene seguro"], "«da muss ich arbeiten»."),
+          c("¿A qué hora es su turno?", ["15:15", "10:30", "15:30", "14:15"], "«Viertel nach drei»."),
+          c("¿Qué tiene que llevar?", ["La tarjeta del seguro", "El pasaporte", "Dinero en efectivo", "Un análisis"], "«Versichertenkarte»."),
+          fi("¿Cuánto cuesta la receta en euros?", ["5", "fünf"], "«fünf Euro»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribile a un amigo: te mudaste a un departamento nuevo. Contale cómo es (ubicación, habitaciones), qué te gusta y qué no, e invitalo a visitarte el sábado.",
+      focus: ["Wohnung beschreiben (Es gibt…, Die Wohnung hat…)", "Meinung (Mir gefällt…, Leider…)", "Einladung (Kommst du am Samstag?)"],
+      minSentences: 5,
+      hint: "Saludo informal, descripción, opinión, invitación y despedida.",
+    },
+  },
+  {
+    id: "b1-3",
+    level: "B1",
+    title: "Simulacro B1 · 3",
+    lesen: [
+      {
+        title: "Weniger Fleisch essen",
+        text: [
+          "In den letzten Jahren essen viele Menschen in Deutschland bewusst weniger Fleisch. Manche verzichten ganz darauf, andere legen einen fleischfreien Tag pro Woche ein. Die Gründe sind unterschiedlich: Für die einen steht die Gesundheit im Vordergrund, für die anderen der Klimaschutz oder das Wohl der Tiere.",
+          "Der Handel hat darauf reagiert. In fast jedem Supermarkt gibt es heute Produkte aus Soja, Erbsen oder Pilzen, die wie Fleisch schmecken sollen. Allerdings sind sie oft teurer als normales Fleisch, und Ernährungsexperten weisen darauf hin, dass sie viel Salz enthalten können.",
+          "Fleisch zu essen ist für viele noch immer ein Teil der Kultur, besonders bei Festen und Familienessen. Wer sich vegetarisch ernährt, muss deshalb manchmal erklären, warum. Trotzdem gilt der Trend als stabil: Umfragen zeigen, dass vor allem junge Menschen ihre Gewohnheiten ändern wollen.",
+        ],
+        questions: [
+          c("¿Qué hacen algunas personas además de dejar la carne por completo?", ["Un día por semana sin carne", "Solo comen pescado", "Comen más carne los domingos", "Cocinan menos"], "«einen fleischfreien Tag pro Woche»."),
+          c("¿Qué razones menciona el texto?", ["Salud, clima y bienestar animal", "Precio y sabor", "Falta de tiempo", "Moda y publicidad"], "«Gesundheit ... Klimaschutz ... Wohl der Tiere»."),
+          tf("Los sustitutos de la carne son siempre más baratos.", false, "«oft teurer»."),
+          c("¿Qué advierten los expertos?", ["Que pueden contener mucha sal", "Que no tienen proteínas", "Que son peligrosos", "Que engordan más"], "«viel Salz»."),
+          c("¿Quiénes quieren cambiar más sus hábitos?", ["Los jóvenes", "Los mayores", "Las familias con chicos", "Los deportistas"], "«vor allem junge Menschen»."),
+          tf("Comer carne ya no tiene ningún peso cultural.", false, "«noch immer ein Teil der Kultur»."),
+        ],
+      },
+      {
+        title: "Mail an den Vermieter",
+        text: [
+          "Sehr geehrter Herr Krüger, seit zwei Wochen funktioniert die Heizung in meinem Schlafzimmer nicht mehr. Ich habe bereits versucht, sie zu entlüften, aber ohne Erfolg. Da die Nächte inzwischen kalt sind, bitte ich Sie, bis spätestens Freitag einen Techniker zu schicken. Wenn die Reparatur nicht bald erfolgt, muss ich die Miete mindern. Ich bin am Mittwoch und Donnerstag nach 16 Uhr zu Hause. Mit freundlichen Grüßen, Laura Weiss",
+        ],
+        questions: [
+          c("¿Qué problema tiene Laura?", ["La calefacción del dormitorio no funciona", "Hay una gotera", "No hay agua caliente", "La puerta no cierra"], "«Heizung in meinem Schlafzimmer»."),
+          c("¿Qué intentó ella antes de escribir?", ["Purgar la calefacción", "Llamar a un técnico", "Cambiar el termostato", "Mudarse"], "«entlüften»."),
+          c("¿Qué pide?", ["Que mande un técnico antes del viernes", "Que baje el alquiler ya", "Que ella misma la arregle", "Un nuevo departamento"], "«bis spätestens Freitag einen Techniker»."),
+          c("¿Qué hará si no se repara?", ["Reducir el alquiler", "Denunciarlo", "Mudarse", "No pagar nada"], "«die Miete mindern»."),
+          tf("Laura está en casa los lunes por la mañana.", false, "Solo «Mittwoch und Donnerstag nach 16 Uhr»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Wohnungsbesichtigung",
+        setting: "Una pareja visita un departamento con la propietaria",
+        lines: [
+          { who: "f", name: "Frau Lindner", de: "Guten Tag, kommen Sie herein. Die Wohnung liegt im dritten Stock, einen Aufzug gibt es leider nicht." },
+          { who: "m", name: "Herr Aksoy", de: "Das ist kein Problem. Wie groß ist die Wohnung genau?" },
+          { who: "f", name: "Frau Lindner", de: "Sie hat siebzig Quadratmeter und drei Zimmer. Das Wohnzimmer geht zum Balkon, die Küche ist separat." },
+          { who: "m", name: "Herr Aksoy", de: "Schön hell. Wie hoch ist die Miete?" },
+          { who: "f", name: "Frau Lindner", de: "Neunhundertzwanzig Euro warm, also mit Heizung und Wasser. Strom kommt noch dazu." },
+          { who: "m", name: "Herr Aksoy", de: "Und wie weit ist es bis zur nächsten Haltestelle?" },
+          { who: "f", name: "Frau Lindner", de: "Etwa fünf Minuten zu Fuß. Die Bahn fährt alle zehn Minuten ins Zentrum." },
+          { who: "m", name: "Herr Aksoy", de: "Dürfen wir einen Hund halten? Wir haben einen kleinen." },
+          { who: "f", name: "Frau Lindner", de: "Kleine Hunde sind erlaubt, aber ich brauche vorher eine Genehmigung vom Hausbesitzer. Das dauert höchstens eine Woche." },
+          { who: "m", name: "Herr Aksoy", de: "Gut. Wann könnten wir einziehen?" },
+          { who: "f", name: "Frau Lindner", de: "Ab dem ersten Oktober. Wenn Sie die Wohnung nehmen wollen, schicken Sie mir bis Freitag Ihre Unterlagen." },
+        ],
+        questions: [
+          c("¿En qué piso está el departamento?", ["En el tercero, sin ascensor", "En el segundo, con ascensor", "En la planta baja", "En el cuarto, sin ascensor"], "«dritten Stock ... keinen Aufzug»."),
+          fi("¿Cuántos metros cuadrados tiene?", ["70", "siebzig"], "«siebzig Quadratmeter»."),
+          fi("¿Cuántos euros cuesta el alquiler con calefacción y agua?", ["920", "neunhundertzwanzig"], "«neunhundertzwanzig Euro warm»."),
+          c("¿Cuánto tarda caminando hasta la parada?", ["Cinco minutos", "Diez minutos", "Quince minutos", "Una hora"], "«fünf Minuten zu Fuß»."),
+          c("¿Qué necesitan para tener el perro?", ["La autorización del propietario del edificio", "Pagar un depósito", "Nada", "Un certificado veterinario"], "«Genehmigung vom Hausbesitzer»."),
+          c("¿Qué deben enviar hasta el viernes?", ["Sus documentos", "El primer alquiler", "Una carta de recomendación", "Fotos del perro"], "«Ihre Unterlagen»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Un colega te pidió cambiar de turno el viernes. Escribile un mail informal: decile que no podés, explicá por qué, ofrecé una alternativa y proponé cómo resolver el problema.",
+      focus: ["Ablehnung höflich formulieren (Leider kann ich nicht…)", "Begründung mit weil/denn", "Alternative vorschlagen (Wie wäre es, wenn…)", "Konjunktiv II (könnte, würde)"],
+      minSentences: 6,
+      hint: "Saludo, respuesta clara, motivo, alternativa y cierre amable.",
+    },
+  },
+  {
+    id: "b2-3",
+    level: "B2",
+    title: "Simulacro B2 · 3",
+    lesen: [
+      {
+        title: "Das Ende der Bargeldgesellschaft?",
+        text: [
+          "Deutschland galt lange als Land der Bargeldzahler. Während in Skandinavien selbst am Kiosk mit dem Handy bezahlt wird, zückten die Deutschen im Supermarkt am liebsten Münzen und Scheine. Doch die Gewohnheiten ändern sich: Seit einigen Jahren nimmt der Anteil der Kartenzahlungen stetig zu, und die Corona-Pandemie hat diese Entwicklung noch einmal beschleunigt.",
+          "Befürworter des digitalen Bezahlens betonen die Bequemlichkeit und die Hygiene. Zudem lassen sich Zahlungen leichter nachverfolgen, was Steuerbetrug und Geldwäsche erschweren soll. Kritiker halten dagegen, dass dadurch eine umfassende Überwachung des Konsumverhaltens möglich werde. Ältere Menschen und Personen ohne Konto könnten zudem benachteiligt werden, wenn Bargeld verschwindet.",
+          "Auch ein technisches Risiko wird genannt: Fällt bei einem Stromausfall das Netz aus, kann niemand mehr bezahlen. Verbraucherschützer fordern deshalb, dass Geschäfte Bargeld weiterhin akzeptieren müssen. Die Politik hat bisher keine Pflicht eingeführt, plant jedoch, den Zugang zu Geldautomaten auch auf dem Land zu sichern.",
+          "Wahrscheinlich wird sich keine der beiden Seiten vollständig durchsetzen. Wahrscheinlicher ist ein Nebeneinander, in dem jeder je nach Situation die passende Zahlungsart wählt. Entscheidend wird sein, dass niemand ausgeschlossen wird, nur weil er sich für die eine oder die andere entscheidet.",
+        ],
+        questions: [
+          c("¿Cómo se caracteriza a Alemania en el texto?", ["Como un país tradicionalmente de pagos en efectivo", "Como pionero del pago digital", "Como un país sin bancos", "Como un país sin tarjetas"], "«Land der Bargeldzahler»."),
+          tf("La pandemia frenó el aumento de los pagos con tarjeta.", false, "«noch einmal beschleunigt»."),
+          c("¿Qué ventaja del pago digital se menciona junto con la comodidad?", ["La higiene", "El menor costo", "El anonimato", "La velocidad del banco"], "«Bequemlichkeit und die Hygiene»."),
+          c("¿Qué temen los críticos?", ["Una vigilancia amplia del consumo", "Que suban los precios", "Que desaparezcan los bancos", "Que haya menos tiendas"], "«umfassende Überwachung»."),
+          c("¿Quiénes podrían quedar en desventaja?", ["Los mayores y quienes no tienen cuenta", "Los turistas", "Los comerciantes grandes", "Los jóvenes"], "«Ältere Menschen und Personen ohne Konto»."),
+          c("¿Qué riesgo técnico se menciona?", ["Que sin electricidad no se pueda pagar", "Que se pierdan las tarjetas", "Que fallen los cajeros siempre", "Que haya fraude masivo"], "«Stromausfall»."),
+          c("¿Qué reclaman los defensores del consumidor?", ["Que los comercios sigan aceptando efectivo", "Que se prohíba el efectivo", "Que se baje la comisión", "Que haya más cajeros en ciudades"], "«Bargeld weiterhin akzeptieren»."),
+          c("¿Qué escenario probable plantea el texto?", ["Una convivencia de ambos medios de pago", "El triunfo total del efectivo", "El fin de las tarjetas", "Una ley única"], "«Nebeneinander»."),
+        ],
+      },
+      {
+        title: "Kommentar: Praktikum ohne Bezahlung?",
+        text: [
+          "Immer mehr junge Menschen absolvieren nach dem Studium unbezahlte Praktika, in der Hoffnung, danach eine feste Stelle zu bekommen. Das Argument der Unternehmen lautet, die Praktikanten lernten schließlich etwas. Doch wer einen Praktikanten wie einen Mitarbeiter einsetzt, sollte ihn auch wie einen bezahlen. Sonst können sich nur diejenigen ein solches Praktikum leisten, deren Eltern sie unterstützen, und die Chancengleichheit bleibt auf der Strecke.",
+        ],
+        questions: [
+          c("¿Qué postura defiende el comentario?", ["Que las pasantías deberían pagarse", "Que las pasantías no sirven", "Que deben ser más largas", "Que solo deben hacerlas becados"], "«auch wie einen bezahlen»."),
+          c("¿Qué argumento dan las empresas?", ["Que los pasantes aprenden", "Que no tienen presupuesto", "Que es la ley", "Que es una costumbre"], "«die Praktikanten lernten schließlich etwas»."),
+          tf("Según el texto, las pasantías sin pago favorecen la igualdad de oportunidades.", false, "«die Chancengleichheit bleibt auf der Strecke»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Podiumsgespräch: Homeoffice",
+        setting: "Una moderadora y un experto en trabajo hablan sobre el home office",
+        lines: [
+          { who: "f", name: "Moderatorin", de: "Herr Dr. Berger, viele Firmen holen ihre Mitarbeiter wieder ins Büro zurück. Ist das Homeoffice ein Auslaufmodell?" },
+          { who: "m", name: "Dr. Berger", de: "Keineswegs. Die Studien zeigen, dass die Produktivität im Homeoffice im Durchschnitt nicht sinkt, sondern bei konzentrierter Einzelarbeit sogar steigt." },
+          { who: "f", name: "Moderatorin", de: "Aber leidet nicht die Zusammenarbeit im Team?" },
+          { who: "m", name: "Dr. Berger", de: "Das ist tatsächlich die größte Schwäche. Spontane Gespräche am Kaffeeautomaten lassen sich digital kaum ersetzen, und gerade für Neue ist es schwer, sich ins Team einzufinden." },
+          { who: "f", name: "Moderatorin", de: "Was empfehlen Sie den Unternehmen also?" },
+          { who: "m", name: "Dr. Berger", de: "Ein Mischmodell: zwei bis drei Tage im Büro für Abstimmungen und Teamarbeit, den Rest zu Hause. Wichtig ist, dass die Regeln für alle gelten und nicht nur für Führungskräfte." },
+          { who: "f", name: "Moderatorin", de: "Und wie sieht es mit der Belastung der Beschäftigten aus?" },
+          { who: "m", name: "Dr. Berger", de: "Viele berichten, dass die Grenze zwischen Arbeit und Freizeit verschwimmt. Wer abends noch E-Mails beantwortet, riskiert auf Dauer Erschöpfung. Unternehmen sollten deshalb klare Zeiten vereinbaren, in denen niemand erreichbar sein muss." },
+          { who: "f", name: "Moderatorin", de: "Gibt es denn auch einen ökologischen Nutzen?" },
+          { who: "m", name: "Dr. Berger", de: "Ja, weniger Pendeln spart Emissionen. Allerdings muss man das Heizen und den Strom zu Hause gegenrechnen. Unterm Strich ist die Bilanz positiv, aber nicht so deutlich, wie oft behauptet wird." },
+        ],
+        questions: [
+          c("¿Qué dice el experto sobre la productividad en el home office?", ["No baja y en trabajo individual concentrado incluso sube", "Baja siempre", "No hay estudios", "Sube solo para jefes"], "«nicht sinkt ... sogar steigt»."),
+          c("¿Cuál es la mayor debilidad que menciona?", ["La colaboración espontánea en el equipo", "El costo del internet", "La falta de sueldo", "La seguridad de los datos"], "«Zusammenarbeit ... Kaffeeautomat»."),
+          c("¿Qué modelo recomienda?", ["Dos o tres días en la oficina y el resto en casa", "Todo remoto", "Todo presencial", "Solo los lunes en casa"], "«zwei bis drei Tage im Büro»."),
+          tf("Las reglas del modelo deberían valer solo para los empleados, no para los jefes.", false, "«für alle gelten und nicht nur für Führungskräfte»."),
+          c("¿Qué riesgo señala para los empleados?", ["Agotamiento por el límite difuso entre trabajo y tiempo libre", "Aislamiento total", "Pérdida del empleo", "Problemas de visión"], "«Grenze ... verschwimmt ... Erschöpfung»."),
+          c("¿Cómo califica el beneficio ecológico?", ["Positivo, pero no tan claro como se afirma", "Enorme", "Nulo", "Negativo"], "«positiv, aber nicht so deutlich»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un comentario para un blog: ¿es positivo que cada vez más servicios públicos (trámites, citas médicas) sean solo digitales? Presentá tu postura, dos argumentos, una objeción con tu respuesta y una conclusión.",
+      focus: ["Einleitung und eigene Position (Meiner Ansicht nach…)", "zwei Argumente mit Beispiel", "Gegenargument und Entkräftung (zwar… aber / dem lässt sich entgegenhalten…)", "Schluss mit Fazit oder Forderung"],
+      minSentences: 8,
+      hint: "Estructura clara con introducción, argumentos, objeción y cierre; conectores de B2.",
+    },
+  },
 ];
