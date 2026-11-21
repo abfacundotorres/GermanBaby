@@ -107,7 +107,7 @@ app/
   schreiben/                   escritura con rúbrica (17 consignas A1–C1, corrige /api/rubric)
   sprechen/                    expresión oral: monólogos grabados, Azure mide la voz y /api/rubric puntúa el contenido
   hoeren/                      escucha libre: monólogos y conversaciones de tres voces, a tres velocidades (sin IA)
-  exam/                        simulacros tipo examen A2, B1 y B2: lectura, escucha y escritura
+  exam/                        simulacros tipo examen A2 a C1: lectura, escucha, escritura y oral
   chat/[unitId]                charla de rol
   api/speech-token             clave Azure → token de 10 min
   api/correct                  corrección de traducciones (Claude)

@@ -40,7 +40,7 @@ Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1,
 2. **Input.** 41 lecturas de unidad, 24 de la biblioteca (B2 y C1 de 300–400 palabras), 17 escuchas largas de unidad y 8 escuchas libres (4 monólogos y 4 conversaciones de tres voces, hasta C1, a velocidad lenta, normal o rápida). Faltan más monólogos y conversaciones de tres voces.
 3. **Expresión escrita.** Un ejercicio libre por unidad más 17 consignas con rúbrica (hasta C1) (`/schreiben`, cuatro criterios de 0 a 5). Falta sumar consignas.
 4. **Expresión oral.** 13 monólogos A1–C1 (`/sprechen`): Azure mide fluidez y precisión y la rúbrica puntúa el contenido. Los simulacros incluyen una cuarta parte oral opcional (consigna del nivel, 70 % contenido y 30 % voz).
-5. **Medición.** 9 simulacros (3 de A2, 3 de B1, 3 de B2) con lectura, escucha y escritura, y un test de nivel inicial (`/nivel`, hasta 60 preguntas de gramática, vocabulario y escucha (15 por nivel, adaptativo), sin expresión). El test de nivel incluye 3 preguntas de escucha por nivel; no mide expresión.
+5. **Medición.** 11 simulacros (3 de A2, 3 de B1, 3 de B2 y 2 de C1) con lectura, escucha y escritura, y un test de nivel inicial (`/nivel`, hasta 60 preguntas de gramática, vocabulario y escucha (15 por nivel, adaptativo), sin expresión). El test de nivel incluye 3 preguntas de escucha por nivel; no mide expresión.
 6. **Habla.** Pronunciación con Azure y charla de rol con Claude; ninguno probado en vivo. Es lo primero que hay que validar con uso real.
 
 ## Criterio de «nivel completo» (propuesto)

@@ -21,8 +21,8 @@ export function saveExamRecord(r: ExamRecord) {
 }
 
 /** Lectura aproximada del puntaje total. La referencia de aprobación de los exámenes oficiales es del 60 % por módulo. */
-export function examVerdict(total: number, level: "A2" | "B1" | "B2" = "B2"): { title: string; detail: string } {
-  const below = { A2: "A1", B1: "A2", B2: "B1" }[level];
+export function examVerdict(total: number, level: "A2" | "B1" | "B2" | "C1" = "B2"): { title: string; detail: string } {
+  const below = { A2: "A1", B1: "A2", B2: "B1", C1: "B2" }[level];
   if (total >= 75) return { title: `${level} sólido en este simulacro`, detail: "Estás por encima de la referencia de aprobación. Seguí variando los temas." };
   if (total >= 60) return { title: `Cerca de ${level}`, detail: `Estás en la referencia de aprobación, con poco margen. Repasá las preguntas falladas y el vocabulario de ${level}.` };
   if (total >= 40) return { title: `${below} alto`, detail: `Entendés lo esencial, pero todavía faltan vocabulario y estructuras de ${level}. Más lectura y escucha ayudan mucho.` };

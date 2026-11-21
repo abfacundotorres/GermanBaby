@@ -93,6 +93,10 @@ for (let attempt = 0; attempt < 4 && !gaveUp; attempt++) {
 }
 check(gaveUp, "«No me acuerdo» muestra la respuesta correcta");
 
+// 8b) El simulacro de C1 está en la lista.
+await page.goto(URL + "/exam", { waitUntil: "networkidle" });
+check(await visible(page.getByText("Simulacro C1 · 2")), "la lista de simulacros incluye C1");
+
 // 8) Simulacro: recorre las cuatro partes; sin micrófono se puede entregar sin la oral.
 await page.goto(URL + "/exam", { waitUntil: "networkidle" });
 await page.getByText("Simulacro A2 · 3").click();

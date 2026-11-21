@@ -6,7 +6,7 @@ import type { ListenQuestion } from "../curriculum.ts";
 export type ExamText = { title: string; text: string[]; questions: ListenQuestion[] };
 export type ExamAudio = { title: string; setting: string; lines: { who: "f" | "m"; name: string; de: string }[]; questions: ListenQuestion[] };
 export type ExamWriting = { prompt: string; focus: string[]; minSentences: number; hint?: string };
-export type ExamLevel = "A2" | "B1" | "B2";
+export type ExamLevel = "A2" | "B1" | "B2" | "C1";
 export type Exam = { id: string; level: ExamLevel; title: string; lesen: ExamText[]; hoeren: ExamAudio[]; schreiben: ExamWriting };
 
 const c = (q: string, options: string[], why: string): ListenQuestion => ({ type: "choice", q, options, answer: options[0], why });
@@ -608,6 +608,146 @@ export const EXAMS: Exam[] = [
       focus: ["Einleitung und eigene Position (Meiner Ansicht nach…)", "zwei Argumente mit Beispiel", "Gegenargument und Entkräftung (zwar… aber / dem lässt sich entgegenhalten…)", "Schluss mit Fazit oder Forderung"],
       minSentences: 8,
       hint: "Estructura clara con introducción, argumentos, objeción y cierre; conectores de B2.",
+    },
+  },
+  {
+    id: "c1-1",
+    level: "C1",
+    title: "Simulacro C1 · 1",
+    lesen: [
+      {
+        title: "Arbeit als Sinnstifterin?",
+        text: [
+          "Lange galt Erwerbsarbeit in modernen Gesellschaften als Dreh- und Angelpunkt der Identität. Auf die Frage „Was machen Sie beruflich?“ antwortet man nicht nur mit einer Tätigkeit, sondern mit einer Selbstbeschreibung. Wer Arbeit hat, gehört dazu; wer keine hat, muss sich rechtfertigen. Diese Verknüpfung von Beruf und Selbstwert ist historisch betrachtet relativ jung und keineswegs selbstverständlich.",
+          "In den vergangenen Jahren mehren sich die Anzeichen, dass sie bröckelt. Umfragen zufolge wünschen sich vor allem jüngere Beschäftigte eine strikte Trennung zwischen Arbeits- und Privatleben und sind seltener bereit, ihre Freizeit für eine Karriere zu opfern. Manche Beobachter deuten das als Ausdruck mangelnden Ehrgeizes, andere als vernünftige Reaktion auf eine Arbeitswelt, die in vielen Branchen Erreichbarkeit rund um die Uhr verlangt und dennoch keine Sicherheit garantiert.",
+          "Soziologen warnen allerdings davor, die Entwicklung zu verallgemeinern. Wer in einem erfüllenden Beruf arbeitet, erlebt Arbeit weiterhin als Quelle von Sinn und Anerkennung. Die Ernüchterung betrifft eher Tätigkeiten, die als austauschbar oder bedeutungslos empfunden werden. Ob es um „Arbeit“ an sich geht oder um die Bedingungen, unter denen sie stattfindet, ist deshalb eine offene Frage.",
+          "Fest steht, dass die Verhandlungsposition der Beschäftigten dort gestärkt ist, wo Fachkräfte knapp sind. Unternehmen reagieren mit flexibleren Arbeitszeiten, Homeoffice und Sabbaticals. Ob diese Angebote aus Überzeugung oder aus Not gemacht werden, wird sich erst in einer Phase wirtschaftlicher Schwäche zeigen, in der sich zeigen dürfte, wie belastbar die neuen Gewohnheiten tatsächlich sind.",
+        ],
+        questions: [
+          c("¿Qué afirma el texto sobre la relación entre trabajo e identidad?", ["Que es históricamente reciente y no se da por sentada", "Que existió siempre", "Que desapareció por completo", "Que solo existe en el campo"], "«historisch betrachtet relativ jung»."),
+          c("¿Qué desean sobre todo los empleados más jóvenes según las encuestas?", ["Una separación estricta entre trabajo y vida privada", "Trabajar más horas", "Menos vacaciones", "Un sueldo fijo"], "«strikte Trennung»."),
+          c("¿Cómo interpretan algunos observadores ese cambio?", ["Como falta de ambición", "Como un error estadístico", "Como un fenómeno solo urbano", "Como producto de la moda"], "«mangelnden Ehrgeizes»."),
+          c("¿Qué matiz aportan los sociólogos?", ["Que quien tiene un trabajo satisfactorio sigue encontrándole sentido", "Que nadie encuentra sentido en el trabajo", "Que todos quieren trabajar menos", "Que solo importa el sueldo"], "«erfüllenden Beruf»."),
+          tf("La desilusión afecta sobre todo a tareas percibidas como intercambiables o sin sentido.", true, "«austauschbar oder bedeutungslos»."),
+          c("¿Dónde es más fuerte la posición negociadora de los empleados?", ["Donde faltan profesionales", "Donde hay desempleo alto", "En empresas muy grandes", "En el sector público"], "«wo Fachkräfte knapp sind»."),
+          c("¿Cuándo se verá si las nuevas costumbres son sólidas?", ["En una fase de debilidad económica", "En diez años", "Con una nueva ley", "Nunca"], "«Phase wirtschaftlicher Schwäche»."),
+        ],
+      },
+      {
+        title: "Leserbrief: Mehr Mut zur Pause",
+        text: [
+          "Sehr geehrte Redaktion, Ihr Artikel über die angebliche Arbeitsmüdigkeit der jungen Generation hat mich geärgert. Es ist zu einfach, Menschen Faulheit vorzuwerfen, die lediglich nicht bereit sind, sich dauerhaft zu verausgaben. Wer jahrelang überlastet arbeitet, sinkt in der Leistung und wird häufiger krank, was am Ende auch den Unternehmen schadet. Ich plädiere deshalb nicht für weniger Engagement, sondern für eine Arbeitskultur, in der Pausen als Voraussetzung produktiven Arbeitens gelten und nicht als Schwäche.",
+        ],
+        questions: [
+          c("¿Qué le molestó a la autora?", ["Que se acuse de pereza a los jóvenes", "El precio del diario", "La longitud del artículo", "La falta de datos"], "«Faulheit vorzuwerfen»."),
+          c("¿Qué consecuencia atribuye a la sobrecarga prolongada?", ["Menor rendimiento y más enfermedades", "Más ganancias", "Más vacaciones", "Mejor ánimo"], "«sinkt in der Leistung ... häufiger krank»."),
+          tf("La autora pide menos compromiso laboral.", false, "No «für weniger Engagement»."),
+          c("¿Qué propone?", ["Una cultura que vea las pausas como condición para trabajar bien", "Prohibir las pausas", "Trabajar solo de noche", "Reducir salarios"], "«Pausen als Voraussetzung»."),
+          c("¿Cuál es el tono general del texto?", ["Crítico y argumentativo", "Humorístico", "Neutral y descriptivo", "Resignado"], "Una carta que critica y argumenta."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Interview: Mehrsprachigkeit in der Schule",
+        setting: "Una periodista entrevista a un profesor de lingüística sobre enseñanza bilingüe",
+        lines: [
+          { who: "f", name: "Moderatorin", de: "Herr Professor Keller, immer mehr Schulen bieten zweisprachigen Unterricht an. Hält die Forschung das für sinnvoll?" },
+          { who: "m", name: "Prof. Keller", de: "Grundsätzlich ja, allerdings mit einer wichtigen Einschränkung. Der Erfolg hängt weniger vom Modell als von der Qualität der Umsetzung ab." },
+          { who: "f", name: "Moderatorin", de: "Was heißt das konkret?" },
+          { who: "m", name: "Prof. Keller", de: "Lehrkräfte müssen beide Sprachen sicher beherrschen und das Fach so unterrichten, dass die Kinder nicht überfordert werden. Wenn der Fachinhalt unter der Sprache leidet, ist niemandem geholfen." },
+          { who: "f", name: "Moderatorin", de: "Gibt es denn Nachteile für Kinder, die zu Hause eine dritte Sprache sprechen?" },
+          { who: "m", name: "Prof. Keller", de: "Im Gegenteil, die Herkunftssprache sollte ausdrücklich gefördert werden. Wer sie gut beherrscht, lernt weitere Sprachen leichter, weil er bereits über ein Gespür für Strukturen verfügt." },
+          { who: "f", name: "Moderatorin", de: "Dennoch fürchten manche Eltern, dass die Kinder weder die eine noch die andere Sprache richtig lernen." },
+          { who: "m", name: "Prof. Keller", de: "Diese Sorge ist verständlich, aber sie lässt sich empirisch kaum belegen. Zwar zeigen sich anfangs kleine Verzögerungen im Wortschatz einzelner Sprachen, doch gleichen sich diese später aus, sofern der Input in beiden Sprachen ausreichend ist." },
+          { who: "f", name: "Moderatorin", de: "Und welchen Rat geben Sie Eltern, die ihre Kinder zweisprachig erziehen möchten?" },
+          { who: "m", name: "Prof. Keller", de: "Konsequenz und Gelassenheit. Eine Person, eine Sprache ist ein bewährtes Prinzip, aber wichtiger als jede Regel ist, dass die Kinder die Sprachen mit positiven Erlebnissen verbinden und nicht mit Druck." },
+        ],
+        questions: [
+          c("¿De qué depende según el profesor el éxito de la enseñanza bilingüe?", ["De la calidad de la implementación", "Del tamaño de la escuela", "De la edad de los chicos", "Del idioma elegido"], "«Qualität der Umsetzung»."),
+          c("¿Qué advierte sobre los contenidos de las materias?", ["Que no deben sufrir por culpa del idioma", "Que deben ser más fáciles", "Que se enseñen solo en alemán", "Que se eliminen"], "«Fachinhalt unter der Sprache leidet»."),
+          c("¿Qué dice sobre la lengua de origen en casa?", ["Que debe fomentarse expresamente", "Que debe evitarse", "Que confunde a los chicos", "Que es irrelevante"], "«ausdrücklich gefördert»."),
+          c("¿Qué miedo tienen algunos padres?", ["Que los chicos no aprendan bien ninguna de las dos lenguas", "Que aprendan demasiado rápido", "Que olviden las matemáticas", "Que cueste demasiado"], "«weder die eine noch die andere»."),
+          tf("El profesor afirma que ese miedo está confirmado empíricamente.", false, "«empirisch kaum belegen»."),
+          c("¿Qué consejo da a los padres al final?", ["Consecuencia y serenidad, asociando las lenguas con experiencias positivas", "Corregir cada error", "Empezar recién a los diez años", "Usar solo libros de texto"], "«Konsequenz und Gelassenheit»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí un texto argumentativo para una revista: «¿Debería la edad de jubilación depender del tipo de trabajo?» Presentá una tesis, analizá argumentos a favor y en contra, discutí al menos una consecuencia social y concluí con una valoración propia.",
+      focus: ["Einleitung mit klarer These", "Abwägung von Pro und Kontra (einerseits … andererseits; zwar … jedoch)", "gesellschaftliche Folgen (Nominalisierungen, Passiv)", "Schlussfolgerung mit eigener Wertung (Konjunktiv II, Partizipialkonstruktionen)"],
+      minSentences: 10,
+      hint: "Mostrá variedad sintáctica: subordinadas, nominalización y conectores de contraste; cuidá la coherencia entre párrafos.",
+    },
+  },
+  {
+    id: "c1-2",
+    level: "C1",
+    title: "Simulacro C1 · 2",
+    lesen: [
+      {
+        title: "Erinnerungskultur im digitalen Zeitalter",
+        text: [
+          "Wie erinnert sich eine Gesellschaft an ihre Geschichte, wenn die letzten Zeitzeugen sterben? Diese Frage stellt sich in vielen Ländern mit wachsender Dringlichkeit. Jahrzehntelang prägten persönliche Berichte von Überlebenden das kollektive Gedächtnis; Schulklassen hörten ihnen zu, Gedenkveranstaltungen gaben ihnen Raum. Mit dem Tod der Generation verändert sich der Charakter des Erinnerns: Aus gelebter Erfahrung wird vermitteltes Wissen.",
+          "Digitale Technologien eröffnen dafür neue Möglichkeiten. Interviews werden als dreidimensionale Aufnahmen konserviert, mit denen Schüler per Sprachsteuerung Fragen stellen können, die Antworten werden aus Hunderten von Stunden Material zusammengesetzt. Archive stellen Dokumente online bereit und machen sie weltweit zugänglich. Befürworter sehen darin die Chance, die Stimmen der Zeitzeugen zu bewahren und neuen Generationen auf vertraute Weise nahezubringen.",
+          "Kritiker wenden ein, dass die Technik die Erinnerung zur Ware machen könnte. Ein Hologramm vermittle den Eindruck von Unmittelbarkeit, ersetze aber nicht die Begegnung mit einem Menschen, die Unruhe stiftet und zum Nachdenken zwingt. Zudem berge die Verbreitung historischer Bilder in sozialen Netzwerken Risiken: Ohne Kontext lassen sie sich leicht für Propaganda umdeuten oder verharmlosen.",
+          "Pädagogen plädieren daher für einen reflektierten Umgang. Die digitale Quelle sollte Ausgangspunkt, nicht Endpunkt der Auseinandersetzung sein. Wer lernt, Quellen zu prüfen, Perspektiven zu vergleichen und Widersprüche auszuhalten, erwirbt eine Kompetenz, die über den historischen Gegenstand hinausreicht. Erinnerung wird dann weniger zur Pflicht als zur Fähigkeit, die Gegenwart kritisch zu betrachten.",
+        ],
+        questions: [
+          c("¿Qué cambia con la muerte de los últimos testigos?", ["El recuerdo pasa de experiencia vivida a saber transmitido", "Se olvida la historia", "Se prohíben las ceremonias", "Los archivos se cierran"], "«gelebter Erfahrung ... vermitteltes Wissen»."),
+          c("¿Qué permiten las grabaciones tridimensionales?", ["Hacer preguntas por voz a una persona grabada", "Viajar en el tiempo", "Traducir idiomas", "Escribir libros"], "«per Sprachsteuerung Fragen stellen»."),
+          c("¿Qué ventaja ven los defensores de estas tecnologías?", ["Preservar las voces y acercarlas a nuevas generaciones", "Reducir los costos", "Eliminar los museos", "Evitar los debates"], "«Stimmen ... bewahren»."),
+          c("¿Qué objeción plantean los críticos?", ["Que la tecnología puede convertir el recuerdo en mercancía", "Que es demasiado compleja", "Que es ilegal", "Que no atrae a los jóvenes"], "«Erinnerung zur Ware»."),
+          c("¿Qué riesgo tienen las imágenes históricas sin contexto en las redes?", ["Que se reinterpreten para propaganda o se minimicen", "Que se pierdan", "Que se censuren", "Que cuesten dinero"], "«für Propaganda umdeuten oder verharmlosen»."),
+          c("¿Qué proponen los pedagogos?", ["Que la fuente digital sea punto de partida, no final", "Que se prohíba lo digital", "Que se use solo libros", "Que se olviden las fuentes"], "«Ausgangspunkt, nicht Endpunkt»."),
+          tf("Para los pedagogos, la competencia crítica sirve solo para la historia.", false, "«über den historischen Gegenstand hinaus»."),
+        ],
+      },
+      {
+        title: "Kommentar: Weniger Autos, mehr Stadt?",
+        text: [
+          "Die Idee autofreier Innenstädte wird gern als ideologisches Projekt abgetan, doch die Erfahrungen vieler Städte sprechen eine andere Sprache. Wo Straßen für Fußgänger und Radfahrer freigegeben wurden, haben Geschäfte häufig mehr Umsatz gemacht, nicht weniger, und der Lärm ist deutlich gesunken. Die eigentliche Herausforderung besteht nicht im Verbot, sondern darin, Alternativen so attraktiv zu gestalten, dass der Umstieg als Gewinn empfunden wird. Wer nur verbietet, ohne etwas anzubieten, schafft Widerstand, aber keine Veränderung.",
+        ],
+        questions: [
+          c("¿Cómo califica el autor la idea de centros sin autos?", ["Como una propuesta respaldada por experiencias de muchas ciudades", "Como un proyecto ideológico sin base", "Como un riesgo para el comercio", "Como una moda pasajera"], "«Erfahrungen ... sprechen eine andere Sprache»."),
+          c("¿Qué observó el comercio donde se liberaron calles?", ["Muchas veces más ventas", "Menos ventas", "Cierres masivos", "Ningún cambio"], "«mehr Umsatz gemacht»."),
+          c("¿Cuál es el verdadero desafío según el autor?", ["Que las alternativas sean tan atractivas que el cambio se vea como ganancia", "Prohibir los autos cuanto antes", "Construir más estacionamientos", "Bajar los impuestos"], "«Alternativen so attraktiv»."),
+          tf("El autor cree que prohibir sin ofrecer alternativas genera cambio.", false, "«schafft Widerstand, aber keine Veränderung»."),
+          c("¿Qué postura general tiene el texto?", ["Favorable, pero con condiciones", "Totalmente contraria", "Indiferente", "Humorística"], "Defiende la idea con matices."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Gespräch: Grundeinkommen",
+        setting: "Un moderador conversa con una economista sobre el ingreso básico",
+        lines: [
+          { who: "m", name: "Moderator", de: "Frau Dr. Albrecht, das bedingungslose Grundeinkommen wird seit Jahren diskutiert. Sie haben Pilotprojekte ausgewertet. Was ist das Ergebnis?" },
+          { who: "f", name: "Dr. Albrecht", de: "Zunächst eine Einschränkung: Die meisten Projekte waren klein und zeitlich begrenzt, sodass sich Schlüsse auf ein dauerhaftes System nur vorsichtig ziehen lassen." },
+          { who: "m", name: "Moderator", de: "Dennoch gibt es Tendenzen?" },
+          { who: "f", name: "Dr. Albrecht", de: "Ja. Entgegen der verbreiteten Sorge haben die Teilnehmer ihre Arbeitszeit kaum reduziert. Viele nutzten die finanzielle Sicherheit für Weiterbildung oder für die Gründung eines kleinen Unternehmens." },
+          { who: "m", name: "Moderator", de: "Gleichwohl bleibt die Finanzierung die zentrale Frage." },
+          { who: "f", name: "Dr. Albrecht", de: "Richtig. Ein flächendeckendes Grundeinkommen würde enorme Summen erfordern und müsste durch höhere Steuern oder den Abbau bestehender Sozialleistungen gegenfinanziert werden. Hier gehen die Meinungen auseinander." },
+          { who: "m", name: "Moderator", de: "Befürchten Kritiker nicht, dass ein Grundeinkommen die Eigeninitiative schwächt?" },
+          { who: "f", name: "Dr. Albrecht", de: "Das ist das häufigste Argument, aber die Daten stützen es bislang nicht. Interessanter finde ich die Wirkung auf Gesundheit und Zufriedenheit, die in mehreren Studien positiv ausfiel, besonders bei Menschen in unsicheren Arbeitsverhältnissen." },
+          { who: "m", name: "Moderator", de: "Würden Sie das Modell also empfehlen?" },
+          { who: "f", name: "Dr. Albrecht", de: "Ich würde zunächst gezielte Erweiterungen bestehender Leistungen erproben, bevor man das gesamte System umstellt. Ein schrittweises Vorgehen erlaubt es, aus Fehlern zu lernen, ohne ein ganzes Land zum Experiment zu machen." },
+        ],
+        questions: [
+          c("¿Qué limitación señala la economista sobre los proyectos piloto?", ["Fueron pequeños y de duración limitada", "Fueron demasiado caros", "No tuvieron participantes", "Se hicieron solo en ciudades grandes"], "«klein und zeitlich begrenzt»."),
+          c("¿Cómo cambiaron los participantes su horario de trabajo?", ["Casi no lo redujeron", "Dejaron de trabajar", "Lo duplicaron", "No hay datos"], "«kaum reduziert»."),
+          c("¿Para qué usaron muchos la seguridad económica?", ["Para capacitarse o fundar una pequeña empresa", "Para viajar", "Para comprar casas", "Para dejar el país"], "«Weiterbildung ... kleines Unternehmen»."),
+          c("¿Cuál es la cuestión central según el moderador?", ["La financiación", "La edad de los beneficiarios", "El nombre del programa", "La cantidad de proyectos"], "«Finanzierung»."),
+          c("¿Qué efecto positivo menciona además?", ["En la salud y la satisfacción", "En la inflación", "En el turismo", "En la natalidad"], "«Gesundheit und Zufriedenheit»."),
+          c("¿Qué recomienda al final?", ["Probar primero ampliaciones focalizadas de prestaciones existentes", "Aplicarlo ya en todo el país", "Abandonar la idea", "Esperar diez años sin hacer nada"], "«gezielte Erweiterungen bestehender Leistungen»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí una carta de lectores al diario: has leído que muchas universidades quieren reemplazar parte de los exámenes por trabajos escritos y evaluación continua. Expresá tu postura, evaluá ventajas y riesgos, y proponé cómo implementarlo de forma justa.",
+      focus: ["Bezug auf den Artikel und klare Positionierung", "Vor- und Nachteile abwägen (differenzierte Argumentation)", "konkreter Vorschlag (Konjunktiv II, Modalverben)", "formale Höflichkeit und Schlussformel"],
+      minSentences: 10,
+      hint: "Registro formal y argumentación ordenada; evitá repetir estructuras y usá subordinadas y nominalizaciones.",
     },
   },
 ];
