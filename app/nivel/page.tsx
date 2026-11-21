@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { PLACEMENT, PLACEMENT_PASS, placementResult, type PlacementLevel } from "@/lib/content/placement";
+import { PLACEMENT, PLACEMENT_PASS, levelSettled, placementResult, type PlacementLevel } from "@/lib/content/placement";
 import { UNITS, lessonKey } from "@/lib/curriculum";
 import { skipBefore, undoSkip } from "@/lib/progress";
 
@@ -17,7 +17,8 @@ function shuffled<T>(a: T[]): T[] {
 export default function NivelPage() {
   const [step, setStep] = useState<"intro" | "test" | "done">("intro");
   const [i, setI] = useState(0);
-  const [scores, setScores] = useState<Partial<Record<PlacementLevel, number>>>({});
+  const [tally, setTally] = useState<Partial<Record<PlacementLevel, { c: number; w: number }>>>({});
+  const scores = Object.fromEntries(Object.entries(tally).map(([lv, t]) => [lv, t.c])) as Partial<Record<PlacementLevel, number>>;
   const [picked, setPicked] = useState<string | null>(null);
   const [skipped, setSkipped] = useState<string[] | null>(null);
 
@@ -30,13 +31,17 @@ export default function NivelPage() {
   }
   function next() {
     const right = picked === q.options[0];
-    const s = { ...scores, [q.level]: (scores[q.level] ?? 0) + (right ? 1 : 0) };
-    setScores(s);
+    const cur = tally[q.level] ?? { c: 0, w: 0 };
+    const t = { c: cur.c + (right ? 1 : 0), w: cur.w + (right ? 0 : 1) };
+    setTally({ ...tally, [q.level]: t });
     setPicked(null);
-    const nextQ = PLACEMENT[i + 1];
-    // Si terminó un bloque con pocos aciertos, la prueba termina: no tiene sentido seguir con niveles más altos.
-    if (!nextQ || (nextQ.level !== q.level && (s[q.level] ?? 0) < PLACEMENT_PASS)) { setStep("done"); return; }
-    setI(i + 1);
+    // Un nivel se cierra apenas queda aprobado o ya no se puede aprobar; si no se aprobó, la prueba termina.
+    let j = i + 1;
+    if (levelSettled(t.c, t.w)) while (j < PLACEMENT.length && PLACEMENT[j].level === q.level) j++;
+    const nextQ = PLACEMENT[j];
+    const levelOver = !nextQ || nextQ.level !== q.level;
+    if (!nextQ || (levelOver && t.c < PLACEMENT_PASS)) { setStep("done"); return; }
+    setI(j);
   }
 
   if (step === "intro") {
@@ -44,7 +49,7 @@ export default function NivelPage() {
       <main className="container stack" style={{ paddingTop: 20 }}>
         <div className="h1">🎯 Test de nivel</div>
         <p className="muted">
-          Hasta 32 preguntas de gramática y vocabulario, de A1 a B2, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
+          Hasta 48 preguntas de gramática y vocabulario, de A1 a B2, sin ayudas. Termina sola cuando un nivel te resulta difícil. Al final te sugiero por dónde empezar.
         </p>
         <button className="btn btn-primary btn-block" onClick={() => setStep("test")}>Empezar</button>
         <Link href="/review" className="btn btn-block">Volver</Link>
@@ -64,7 +69,7 @@ export default function NivelPage() {
         <div className="h1">Tu nivel: {passedA1 ? r.level : "A1 (inicio)"}</div>
         <div className="card stack">
           {LEVELS.filter((lv) => scores[lv] !== undefined).map((lv) => (
-            <div key={lv}>{lv}: <b>{scores[lv]}/8</b> {(scores[lv] ?? 0) >= PLACEMENT_PASS ? "✅" : "· para reforzar"}</div>
+            <div key={lv}>{lv}: <b>{tally[lv]!.c} de {tally[lv]!.c + tally[lv]!.w}</b> {(scores[lv] ?? 0) >= PLACEMENT_PASS ? "✅" : "· para reforzar"}</div>
           ))}
         </div>
         <p className="muted">

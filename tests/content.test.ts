@@ -289,11 +289,11 @@ test("simulacros: textos, audios y preguntas bien formados, con respuestas dentr
 
 test("test de nivel: 8 preguntas por nivel, opciones únicas y resultado coherente", async () => {
   const { PLACEMENT, placementResult } = await import("../lib/content/placement.ts");
-  for (const lv of ["A1", "A2", "B1", "B2"]) assert.equal(PLACEMENT.filter((x) => x.level === lv).length, 8, lv);
+  for (const lv of ["A1", "A2", "B1", "B2"]) assert.equal(PLACEMENT.filter((x) => x.level === lv).length, 12, lv);
   for (const x of PLACEMENT) assert.ok(x.options.length === 4 && new Set(x.options).size === 4, x.q);
   assert.equal(placementResult({ A1: 3 }).level, "A1");
-  assert.deepEqual(placementResult({ A1: 8, A2: 6, B1: 2 }), { level: "A2", partial: true });
-  assert.deepEqual(placementResult({ A1: 8, A2: 8, B1: 8, B2: 7 }), { level: "B2", partial: false });
+  assert.deepEqual(placementResult({ A1: 12, A2: 9, B1: 2 }), { level: "A2", partial: true });
+  assert.deepEqual(placementResult({ A1: 12, A2: 12, B1: 10, B2: 8 }), { level: "B2", partial: false });
 });
 
 test("escritura con rúbrica: consignas bien formadas y todos los niveles cubiertos", async () => {
