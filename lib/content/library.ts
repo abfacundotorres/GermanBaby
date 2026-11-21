@@ -3,7 +3,7 @@
 
 import type { Reading, ListenQuestion } from "../curriculum.ts";
 
-export type LibraryLevel = "A2" | "B1" | "B2" | "C1";
+export type LibraryLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 export type LibraryText = { id: string; level: LibraryLevel; emoji: string; topic: string; reading: Reading };
 
 const c = (q: string, options: string[], why: string): ListenQuestion => ({ type: "choice", q, options, answer: options[0], why });
@@ -686,6 +686,316 @@ export const LIBRARY: LibraryText[] = [
         c("¿Qué advierten los críticos?", ["Que no es una panacea y las instalaciones deben mantenerse", "Que no funciona nunca", "Que es demasiado barata", "Que causa más calor"], "«kein Allheilmittel»."),
         tf("Según el texto, la adaptación al clima reemplaza la protección del clima.", false, "«ersetzt nicht den Klimaschutz»."),
         c("¿Qué cambio de costumbres menciona al final?", ["Repensar los grandes estacionamientos sellados", "Dejar de usar agua", "Comer menos carne", "Dejar de viajar"], "«großer versiegelter Parkplätze»."),
+      ],
+    },
+  },
+  {
+    id: "a1-mein-tag", level: "A1", emoji: "☀️", topic: "Mi día",
+    reading: {
+      title: "Mein Tag",
+      text: ["Ich heiße Lena. Ich stehe um sieben Uhr auf. Dann dusche ich und frühstücke. Ich trinke Kaffee und esse ein Brötchen. Um acht Uhr gehe ich zur Arbeit. Ich arbeite in einem Büro. Am Abend koche ich Suppe und sehe fern. Um elf Uhr gehe ich schlafen."],
+      translation: ["Me llamo Lena. Me levanto a las siete. Después me ducho y desayuno. Tomo café y como un pancito. A las ocho voy al trabajo. Trabajo en una oficina. A la noche cocino sopa y miro tele. A las once me voy a dormir."],
+      questions: [
+        fi("¿A qué hora se levanta Lena?", ["7", "sieben"], "«um sieben Uhr»."),
+        c("¿Qué toma en el desayuno?", ["Café", "Té", "Leche", "Agua"], "«Ich trinke Kaffee»."),
+        c("¿Dónde trabaja?", ["En una oficina", "En un café", "En una escuela", "En su casa"], "«in einem Büro»."),
+        c("¿Qué cocina a la noche?", ["Sopa", "Pizza", "Pescado", "Arroz"], "«koche ich Suppe»."),
+        fi("¿A qué hora se va a dormir?", ["11", "elf"], "«Um elf Uhr»."),
+      ],
+    },
+  },
+  {
+    id: "a1-familie", level: "A1", emoji: "👨‍👩‍👧", topic: "Mi familia",
+    reading: {
+      title: "Meine Familie",
+      text: ["Das ist meine Familie. Mein Vater heißt Peter und meine Mutter heißt Anna. Mein Vater ist Arzt. Er ist vierzig Jahre alt. Meine Mutter ist Lehrerin. Ich habe einen Bruder und eine Schwester. Mein Bruder heißt Tom. Er ist zehn Jahre alt. Meine Schwester ist klein. Sie ist drei. Wir haben auch einen Hund. Er heißt Max."],
+      translation: ["Esta es mi familia. Mi padre se llama Peter y mi madre se llama Anna. Mi padre es médico. Tiene cuarenta años. Mi madre es maestra. Tengo un hermano y una hermana. Mi hermano se llama Tom. Tiene diez años. Mi hermana es chica. Tiene tres. También tenemos un perro. Se llama Max."],
+      questions: [
+        c("¿Qué es el padre?", ["Médico", "Maestro", "Cocinero", "Chofer"], "«Mein Vater ist Arzt»."),
+        fi("¿Cuántos años tiene el padre?", ["40", "vierzig"], "«vierzig Jahre alt»."),
+        fi("¿Cuántos años tiene Tom?", ["10", "zehn"], "«zehn Jahre alt»."),
+        tf("La hermana es grande.", false, "«Meine Schwester ist klein»."),
+        c("¿Cómo se llama el perro?", ["Max", "Tom", "Peter", "Hans"], "«Er heißt Max»."),
+      ],
+    },
+  },
+  {
+    id: "a1-cafe", level: "A1", emoji: "☕", topic: "En el café",
+    reading: {
+      title: "Im Café",
+      text: ["Anna und Tom sind im Café. Anna möchte einen Tee und ein Stück Kuchen. Tom möchte einen Kaffee und ein Brötchen. Der Kellner bringt die Getränke. Der Tee kostet drei Euro. Der Kaffee kostet zwei Euro. Das Brötchen kostet ein Euro. Tom zahlt. Er gibt zehn Euro. Der Kellner sagt: Danke!"],
+      translation: ["Anna y Tom están en el café. Anna quiere un té y un pedazo de torta. Tom quiere un café y un pancito. El mozo trae las bebidas. El té cuesta tres euros. El café cuesta dos euros. El pancito cuesta un euro. Tom paga. Da diez euros. El mozo dice: ¡Gracias!"],
+      questions: [
+        c("¿Qué quiere Anna?", ["Un té y una torta", "Un café y un pancito", "Una limonada", "Agua"], "«einen Tee und ein Stück Kuchen»."),
+        fi("¿Cuánto cuesta el té (euros)?", ["3", "drei"], "«Der Tee kostet drei Euro»."),
+        fi("¿Cuánto cuesta el café (euros)?", ["2", "zwei"], "«Der Kaffee kostet zwei Euro»."),
+        c("¿Quién paga?", ["Tom", "Anna", "El mozo", "Nadie"], "«Tom zahlt»."),
+        fi("¿Cuántos euros da Tom?", ["10", "zehn"], "«Er gibt zehn Euro»."),
+      ],
+    },
+  },
+  {
+    id: "a1-wetter", level: "A1", emoji: "🌦️", topic: "El tiempo",
+    reading: {
+      title: "Das Wetter heute",
+      text: ["Heute ist das Wetter schön. Die Sonne scheint, und es ist warm. Es sind zwanzig Grad. Am Nachmittag gehen wir in den Park. Wir spielen Fußball. Morgen regnet es. Es ist kalt, nur zehn Grad. Dann bleiben wir zu Hause und lesen Bücher."],
+      translation: ["Hoy el tiempo es lindo. Sale el sol y hace calor. Hay veinte grados. A la tarde vamos al parque. Jugamos al fútbol. Mañana llueve. Hace frío, solo diez grados. Entonces nos quedamos en casa y leemos libros."],
+      questions: [
+        c("¿Cómo está el tiempo hoy?", ["Lindo", "Feo", "Con nieve", "Con viento"], "«Das Wetter ist schön»."),
+        fi("¿Cuántos grados hay hoy?", ["20", "zwanzig"], "«zwanzig Grad»."),
+        c("¿Qué hacen a la tarde?", ["Van al parque", "Van al cine", "Duermen", "Estudian"], "«gehen wir in den Park»."),
+        c("¿Qué tiempo hace mañana?", ["Llueve", "Sol", "Nieve", "Calor"], "«Morgen regnet es»."),
+        c("¿Qué hacen mañana?", ["Leen libros en casa", "Juegan al fútbol", "Van de paseo", "Cocinan afuera"], "«lesen Bücher»."),
+      ],
+    },
+  },
+  {
+    id: "a1-zimmer", level: "A1", emoji: "🛏️", topic: "Mi cuarto",
+    reading: {
+      title: "Mein Zimmer",
+      text: ["Das ist mein Zimmer. Es ist nicht groß, aber schön. Im Zimmer gibt es ein Bett, einen Tisch und einen Stuhl. Auf dem Tisch liegen Bücher und mein Computer. Neben dem Bett steht eine Lampe. An der Wand hängt ein Bild. Das Fenster ist groß. Ich mag mein Zimmer."],
+      translation: ["Este es mi cuarto. No es grande, pero es lindo. En el cuarto hay una cama, una mesa y una silla. Sobre la mesa hay libros y mi computadora. Al lado de la cama hay una lámpara. En la pared cuelga un cuadro. La ventana es grande. Me gusta mi cuarto."],
+      questions: [
+        tf("El cuarto es grande.", false, "«nicht groß»."),
+        c("¿Qué hay sobre la mesa?", ["Libros y una computadora", "Una lámpara", "Un cuadro", "Comida"], "«Bücher und mein Computer»."),
+        c("¿Dónde está la lámpara?", ["Al lado de la cama", "Sobre la mesa", "En la pared", "En la silla"], "«Neben dem Bett»."),
+        c("¿Qué cuelga de la pared?", ["Un cuadro", "Una lámpara", "Un reloj", "Un espejo"], "«hängt ein Bild»."),
+        tf("La ventana es chica.", false, "«Das Fenster ist groß»."),
+      ],
+    },
+  },
+  {
+    id: "a1-einkaufen", level: "A1", emoji: "🛒", topic: "De compras",
+    reading: {
+      title: "Einkaufen",
+      text: ["Am Samstag gehe ich einkaufen. Ich brauche Brot, Milch und Äpfel. Das Brot kostet zwei Euro. Die Milch kostet einen Euro. Die Äpfel kosten drei Euro. Zusammen sind das sechs Euro. Ich habe zehn Euro. Die Verkäuferin gibt mir vier Euro zurück. Dann gehe ich nach Hause."],
+      translation: ["El sábado voy de compras. Necesito pan, leche y manzanas. El pan cuesta dos euros. La leche cuesta un euro. Las manzanas cuestan tres euros. En total son seis euros. Tengo diez euros. La vendedora me devuelve cuatro euros. Después me voy a casa."],
+      questions: [
+        c("¿Cuándo va de compras?", ["El sábado", "El lunes", "El viernes", "El domingo"], "«Am Samstag»."),
+        c("¿Qué necesita?", ["Pan, leche y manzanas", "Carne y verdura", "Café y torta", "Agua y queso"], "«Brot, Milch und Äpfel»."),
+        fi("¿Cuántos euros son en total?", ["6", "sechs"], "«sechs Euro»."),
+        fi("¿Cuántos euros tiene ella?", ["10", "zehn"], "«zehn Euro»."),
+        fi("¿Cuántos euros le devuelven?", ["4", "vier"], "«vier Euro zurück»."),
+      ],
+    },
+  },
+  {
+    id: "a1-wochenende", level: "A1", emoji: "🎈", topic: "El fin de semana",
+    reading: {
+      title: "Am Wochenende",
+      text: ["Am Samstag schlafe ich lange. Um zehn Uhr frühstücke ich. Danach treffe ich meine Freunde. Wir gehen ins Kino und sehen einen Film. Am Abend essen wir Pizza. Am Sonntag besuche ich meine Oma. Sie wohnt in der Nähe. Wir trinken Tee und essen Kuchen. Das ist schön."],
+      translation: ["El sábado duermo hasta tarde. A las diez desayuno. Después me encuentro con mis amigos. Vamos al cine y vemos una película. A la noche comemos pizza. El domingo visito a mi abuela. Vive cerca. Tomamos té y comemos torta. Es lindo."],
+      questions: [
+        c("¿Qué hace el sábado a la mañana?", ["Duerme hasta tarde", "Trabaja", "Estudia", "Hace deporte"], "«schlafe ich lange»."),
+        c("¿Adónde van los amigos?", ["Al cine", "Al parque", "Al museo", "A un café"], "«ins Kino»."),
+        c("¿Qué comen a la noche?", ["Pizza", "Sopa", "Pescado", "Ensalada"], "«Pizza»."),
+        c("¿A quién visita el domingo?", ["A su abuela", "A su hermano", "A su amigo", "A su jefe"], "«meine Oma»."),
+        tf("La abuela vive lejos.", false, "«in der Nähe»."),
+      ],
+    },
+  },
+  {
+    id: "a1-brief", level: "A1", emoji: "✉️", topic: "Una carta a un amigo",
+    reading: {
+      title: "Ein Brief an einen Freund",
+      text: ["Lieber Paul, ich bin jetzt in Berlin. Ich wohne in einer kleinen Wohnung. Sie hat zwei Zimmer und eine Küche. Die Stadt ist groß und schön. Ich lerne Deutsch. Der Kurs ist am Montag und am Mittwoch. Das Essen hier ist gut. Kommst du bald? Viele Grüße, Mia"],
+      translation: ["Querido Paul: ahora estoy en Berlín. Vivo en un departamento chico. Tiene dos ambientes y una cocina. La ciudad es grande y linda. Estudio alemán. El curso es los lunes y los miércoles. La comida acá es buena. ¿Venís pronto? Muchos saludos, Mia"],
+      questions: [
+        c("¿Dónde está Mia?", ["En Berlín", "En Viena", "En Zúrich", "En Madrid"], "«in Berlin»."),
+        fi("¿Cuántos ambientes tiene el departamento?", ["2", "zwei"], "«zwei Zimmer»."),
+        c("¿Qué estudia?", ["Alemán", "Inglés", "Música", "Arte"], "«Ich lerne Deutsch»."),
+        c("¿Qué días es el curso?", ["Lunes y miércoles", "Martes y jueves", "Viernes", "Todos los días"], "«Montag und Mittwoch»."),
+        c("¿Qué le pregunta a Paul?", ["Si va a venir pronto", "Si habla alemán", "Si tiene trabajo", "Si tiene hambre"], "«Kommst du bald?»."),
+      ],
+    },
+  },
+  {
+    id: "a2-arzt", level: "A2", emoji: "🩺", topic: "En el médico",
+    reading: {
+      title: "Beim Arzt",
+      text: [
+        "Seit drei Tagen habe ich Kopfschmerzen und Husten. Gestern hatte ich auch Fieber, achtunddreißig Grad. Deshalb gehe ich heute zum Arzt. In der Praxis muss ich zuerst meine Versichertenkarte abgeben und im Wartezimmer warten. Nach zwanzig Minuten ruft mich die Ärztin.",
+        "Die Ärztin untersucht mich und fragt, ob ich Allergien habe. Ich sage, dass ich gegen Penicillin allergisch bin. Sie sagt, dass es eine Erkältung ist, nicht die Grippe. Ich bekomme ein Rezept für Hustensaft und soll viel Tee trinken. Ich muss drei Tage zu Hause bleiben. In der Apotheke kaufe ich die Medikamente und gehe sofort ins Bett.",
+      ],
+      translation: [
+        "Desde hace tres días tengo dolor de cabeza y tos. Ayer también tuve fiebre, treinta y ocho grados. Por eso hoy voy al médico. En el consultorio primero tengo que entregar mi tarjeta del seguro y esperar en la sala de espera. Después de veinte minutos me llama la doctora.",
+        "La doctora me examina y me pregunta si tengo alergias. Digo que soy alérgico a la penicilina. Dice que es un resfrío, no la gripe. Me da una receta para jarabe para la tos y tengo que tomar mucho té. Debo quedarme tres días en casa. En la farmacia compro los medicamentos y me voy enseguida a la cama.",
+      ],
+      questions: [
+        fi("¿Desde hace cuántos días tiene síntomas?", ["3", "drei"], "«Seit drei Tagen»."),
+        fi("¿Cuántos grados de fiebre tuvo?", ["38", "achtunddreißig"], "«achtunddreißig Grad»."),
+        c("¿Qué tiene que entregar en el consultorio?", ["Su tarjeta del seguro", "Un análisis", "El pasaporte", "Dinero"], "«Versichertenkarte»."),
+        c("¿A qué es alérgico?", ["A la penicilina", "Al polen", "Al polvo", "A los gatos"], "«Penicillin»."),
+        c("¿Qué diagnóstico le dan?", ["Un resfrío", "La gripe", "Una infección grave", "Alergia"], "«eine Erkältung»."),
+        fi("¿Cuántos días debe quedarse en casa?", ["3", "drei"], "«drei Tage»."),
+      ],
+    },
+  },
+  {
+    id: "a2-ausflug", level: "A2", emoji: "🚵", topic: "Una excursión",
+    reading: {
+      title: "Ein Ausflug an den See",
+      text: [
+        "Am Sonntag haben wir einen Ausflug an den See gemacht. Wir sind früh um acht Uhr mit dem Zug gefahren. Die Fahrt hat eine Stunde gedauert. Am Bahnhof haben wir Fahrräder gemietet und sind zum See gefahren. Das Wetter war schön, die Sonne hat geschienen.",
+        "Am See haben wir ein Picknick gemacht. Wir hatten Brot, Käse, Obst und Getränke mitgebracht. Danach sind einige von uns geschwommen, aber das Wasser war noch ziemlich kalt. Am Nachmittag sind wir um den See gewandert. Das hat zwei Stunden gedauert.",
+        "Um fünf Uhr sind wir müde, aber glücklich zum Bahnhof zurückgefahren. Im Zug habe ich fast geschlafen. Es war ein wunderschöner Tag, und wir wollen bald wieder einen Ausflug machen.",
+      ],
+      translation: [
+        "El domingo hicimos una excursión al lago. Salimos temprano, a las ocho, en tren. El viaje duró una hora. En la estación alquilamos bicicletas y fuimos hasta el lago. El tiempo era lindo, brillaba el sol.",
+        "En el lago hicimos un picnic. Habíamos traído pan, queso, fruta y bebidas. Después algunos nadaron, pero el agua estaba todavía bastante fría. A la tarde caminamos alrededor del lago. Duró dos horas.",
+        "A las cinco volvimos cansados pero contentos a la estación. En el tren casi me dormí. Fue un día hermoso y queremos volver a hacer una excursión pronto.",
+      ],
+      questions: [
+        fi("¿A qué hora salieron?", ["8", "acht"], "«um acht Uhr»."),
+        fi("¿Cuánto duró el viaje en tren (horas)?", ["1", "eine", "ein"], "«eine Stunde»."),
+        c("¿Qué alquilaron en la estación?", ["Bicicletas", "Un auto", "Un bote", "Un colectivo"], "«Fahrräder gemietet»."),
+        c("¿Cómo estaba el agua?", ["Bastante fría", "Caliente", "Congelada", "Sucia"], "«ziemlich kalt»."),
+        fi("¿Cuántas horas caminaron alrededor del lago?", ["2", "zwei"], "«zwei Stunden»."),
+        c("¿Cómo volvieron?", ["Cansados pero contentos", "Enojados", "Aburridos", "Mojados"], "«müde, aber glücklich»."),
+      ],
+    },
+  },
+  {
+    id: "a2-stadt", level: "A2", emoji: "🏙️", topic: "Mi ciudad",
+    reading: {
+      title: "Meine Stadt",
+      text: [
+        "Ich wohne in einer mittelgroßen Stadt im Süden Deutschlands. Sie hat ungefähr zweihunderttausend Einwohner. In der Mitte gibt es eine schöne Altstadt mit kleinen Straßen, Cafés und einer alten Kirche. Samstags findet dort ein Markt statt, auf dem man frisches Obst und Gemüse kaufen kann.",
+        "Die Stadt hat auch ein gutes Verkehrsnetz. Man kann mit dem Bus, der Straßenbahn oder dem Fahrrad überall hinkommen, und ein Auto braucht man nicht. Im Sommer sitzen viele Leute am Fluss, grillen oder gehen schwimmen.",
+        "Ich mag meine Stadt, weil sie ruhig, aber nicht langweilig ist. Es gibt ein Kino, ein Theater und viele Konzerte. Nur die Mieten sind leider ziemlich hoch. Trotzdem möchte ich hier bleiben.",
+      ],
+      translation: [
+        "Vivo en una ciudad de tamaño mediano en el sur de Alemania. Tiene unos doscientos mil habitantes. En el centro hay un casco antiguo lindo con calles chicas, cafés y una iglesia vieja. Los sábados hay allí un mercado donde se puede comprar fruta y verdura frescas.",
+        "La ciudad también tiene una buena red de transporte. Se puede llegar a cualquier lado en colectivo, tranvía o bicicleta y no hace falta auto. En verano mucha gente se sienta junto al río, hace asados o va a nadar.",
+        "Me gusta mi ciudad porque es tranquila pero no aburrida. Hay un cine, un teatro y muchos conciertos. Lo único malo es que los alquileres son bastante altos. Aun así, quiero quedarme acá.",
+      ],
+      questions: [
+        c("¿Dónde queda la ciudad?", ["En el sur de Alemania", "En el norte", "En Austria", "En Suiza"], "«im Süden Deutschlands»."),
+        fi("¿Cuántos habitantes tiene aproximadamente (miles)?", ["200", "zweihundert", "zweihunderttausend", "200000"], "«zweihunderttausend»."),
+        c("¿Qué hay los sábados en el casco antiguo?", ["Un mercado", "Un concierto", "Una feria de libros", "Una carrera"], "«ein Markt»."),
+        tf("Hace falta auto para moverse.", false, "«ein Auto braucht man nicht»."),
+        c("¿Qué hace la gente en verano junto al río?", ["Hace asados o nada", "Pesca", "Trabaja", "Pinta"], "«grillen oder gehen schwimmen»."),
+        c("¿Qué es lo negativo?", ["Los alquileres altos", "El ruido", "El clima", "La falta de cultura"], "«Mieten ... hoch»."),
+      ],
+    },
+  },
+  {
+    id: "a2-kollegen", level: "A2", emoji: "👥", topic: "Colegas nuevos",
+    reading: {
+      title: "Mein erster Tag im neuen Job",
+      text: [
+        "Heute war mein erster Tag in der neuen Firma. Ich war ein bisschen nervös, aber alle waren sehr freundlich. Um neun Uhr hat mich meine Chefin, Frau Berger, im Büro begrüßt. Sie hat mir mein Büro gezeigt und mir den Computer und den Schlüssel gegeben.",
+        "Danach habe ich meine Kollegen kennengelernt. Es gibt zwölf Mitarbeiter in meiner Abteilung. Mit Herrn Yilmaz, der neben mir sitzt, habe ich Mittag gegessen. Er hat mir erklärt, wie die Kantine funktioniert und wo es den besten Kaffee gibt.",
+        "Am Nachmittag musste ich viele Formulare ausfüllen und zwei Kurse zur Sicherheit besuchen. Um fünf Uhr war der Tag zu Ende. Ich war müde, aber zufrieden. Morgen beginne ich endlich mit der richtigen Arbeit.",
+      ],
+      translation: [
+        "Hoy fue mi primer día en la nueva empresa. Estaba un poco nervioso, pero todos fueron muy amables. A las nueve me recibió mi jefa, la señora Berger, en la oficina. Me mostró mi lugar y me dio la computadora y la llave.",
+        "Después conocí a mis colegas. Hay doce empleados en mi departamento. Almorcé con el señor Yilmaz, que se sienta a mi lado. Me explicó cómo funciona el comedor y dónde está el mejor café.",
+        "A la tarde tuve que completar muchos formularios y asistir a dos cursos de seguridad. A las cinco terminó el día. Estaba cansado pero conforme. Mañana empiezo por fin con el trabajo de verdad.",
+      ],
+      questions: [
+        c("¿Cómo se sentía al principio?", ["Un poco nervioso", "Muy tranquilo", "Enojado", "Aburrido"], "«ein bisschen nervös»."),
+        c("¿Quién lo recibió?", ["Su jefa, la señora Berger", "Un colega", "El director", "Un cliente"], "«meine Chefin, Frau Berger»."),
+        fi("¿Cuántos empleados hay en el departamento?", ["12", "zwölf"], "«zwölf Mitarbeiter»."),
+        c("¿Con quién almorzó?", ["Con el señor Yilmaz", "Con la jefa", "Solo", "Con un cliente"], "«Mit Herrn Yilmaz»."),
+        c("¿Qué hizo a la tarde?", ["Completó formularios y asistió a cursos", "Se fue temprano", "Atendió clientes", "Viajó"], "«Formulare ... Kurse»."),
+        fi("¿A qué hora terminó el día?", ["5", "fünf", "17"], "«Um fünf Uhr»."),
+      ],
+    },
+  },
+  {
+    id: "a2-urlaub-meer", level: "A2", emoji: "🌊", topic: "Vacaciones en el mar",
+    reading: {
+      title: "Urlaub am Meer",
+      text: [
+        "Letzten August waren wir zwei Wochen in Italien. Wir haben ein kleines Apartment direkt am Meer gemietet. Vom Balkon aus konnten wir morgens das Wasser sehen. Jeden Tag sind wir zum Strand gegangen, haben gebadet und in der Sonne gelegen.",
+        "Das Essen war wunderbar. Abends haben wir in kleinen Restaurants Pasta und frischen Fisch gegessen, und zum Nachtisch gab es immer Eis. An zwei Tagen haben wir auch Ausflüge gemacht, einmal in eine alte Stadt und einmal auf eine kleine Insel.",
+        "Am letzten Abend waren wir ein bisschen traurig, weil der Urlaub zu Ende war. Aber wir haben schon beschlossen, nächstes Jahr wieder dorthin zu fahren. Nur die Rückfahrt im Stau war nicht so schön.",
+      ],
+      translation: [
+        "En agosto pasado estuvimos dos semanas en Italia. Alquilamos un pequeño departamento justo frente al mar. Desde el balcón podíamos ver el agua por las mañanas. Todos los días fuimos a la playa, nos bañamos y tomamos sol.",
+        "La comida fue maravillosa. A la noche comíamos en restaurantes chicos pasta y pescado fresco, y de postre siempre había helado. Dos días también hicimos excursiones, una a una ciudad antigua y otra a una isla chica.",
+        "La última noche estábamos un poco tristes porque las vacaciones terminaban. Pero ya decidimos volver el año que viene. Solo el viaje de vuelta con embotellamiento no fue tan lindo.",
+      ],
+      questions: [
+        fi("¿Cuántas semanas estuvieron?", ["2", "zwei"], "«zwei Wochen»."),
+        c("¿Dónde se alojaron?", ["En un departamento frente al mar", "En un hotel grande", "En una carpa", "En lo de amigos"], "«Apartment direkt am Meer»."),
+        c("¿Qué comían a la noche?", ["Pasta y pescado fresco", "Carne asada", "Sopa", "Comida rápida"], "«Pasta und frischen Fisch»."),
+        c("¿Qué visitaron en las excursiones?", ["Una ciudad antigua y una isla", "Una montaña y un lago", "Un museo y un zoológico", "Una fábrica"], "«alte Stadt ... Insel»."),
+        c("¿Qué fue lo menos lindo del viaje?", ["La vuelta con embotellamiento", "La comida", "El clima", "El departamento"], "«Rückfahrt im Stau»."),
+        tf("Piensan volver el año que viene.", true, "«nächstes Jahr wieder dorthin»."),
+      ],
+    },
+  },
+  {
+    id: "a2-sport", level: "A2", emoji: "🏃", topic: "Deporte y salud",
+    reading: {
+      title: "Mehr Bewegung im Alltag",
+      text: [
+        "Viele Menschen sitzen den ganzen Tag, im Büro, im Auto oder zu Hause vor dem Fernseher. Dabei sagen Ärzte, dass wir uns jeden Tag mindestens dreißig Minuten bewegen sollten. Man muss dafür nicht ins Fitnessstudio gehen. Es reicht, mit dem Fahrrad zur Arbeit zu fahren oder die Treppe statt den Aufzug zu nehmen.",
+        "Auch kleine Spaziergänge nach dem Essen sind gut für die Gesundheit. Wer regelmäßig Sport macht, schläft besser, hat mehr Energie und ist seltener krank. Am besten sucht man sich eine Sportart, die Spaß macht, zum Beispiel Schwimmen, Tanzen oder Wandern, denn dann bleibt man länger dabei.",
+        "Natürlich braucht es am Anfang etwas Disziplin. Hilfreich ist es, feste Zeiten zu planen und gemeinsam mit Freunden zu trainieren. Nach ein paar Wochen merken die meisten, dass sie sich viel besser fühlen und nicht mehr darauf verzichten wollen.",
+      ],
+      translation: [
+        "Mucha gente pasa todo el día sentada, en la oficina, en el auto o en casa frente al televisor. Los médicos dicen, sin embargo, que deberíamos movernos al menos treinta minutos por día. Para eso no hace falta ir al gimnasio. Alcanza con ir al trabajo en bicicleta o usar la escalera en vez del ascensor.",
+        "También las caminatas cortas después de comer son buenas para la salud. Quien hace deporte con regularidad duerme mejor, tiene más energía y se enferma menos. Lo mejor es elegir un deporte que divierta, por ejemplo natación, baile o senderismo, porque así uno lo mantiene por más tiempo.",
+        "Por supuesto, al principio hace falta algo de disciplina. Ayuda planificar horarios fijos y entrenar con amigos. Después de unas semanas, la mayoría nota que se siente mucho mejor y ya no quiere renunciar a eso.",
+      ],
+      questions: [
+        fi("¿Cuántos minutos por día recomiendan los médicos como mínimo?", ["30", "dreißig"], "«mindestens dreißig Minuten»."),
+        tf("Para moverse hace falta ir al gimnasio.", false, "«nicht ins Fitnessstudio gehen»."),
+        c("¿Qué ejemplos se dan de movimiento cotidiano?", ["Ir en bicicleta y usar la escalera", "Correr maratones", "Levantar pesas", "Jugar al fútbol"], "«Fahrrad ... Treppe»."),
+        c("¿Qué beneficios menciona?", ["Dormir mejor, más energía y enfermarse menos", "Ganar dinero", "Perder el apetito", "Tener más tiempo libre"], "«schläft besser ... seltener krank»."),
+        c("¿Qué deporte conviene elegir?", ["Uno que divierta", "El más difícil", "El más caro", "El de moda"], "«die Spaß macht»."),
+        c("¿Qué ayuda al principio?", ["Planificar horarios y entrenar con amigos", "Comprar equipo caro", "Entrenar solo de noche", "Hacer dieta"], "«feste Zeiten ... mit Freunden»."),
+      ],
+    },
+  },
+  {
+    id: "a2-handy", level: "A2", emoji: "📱", topic: "Comprar un celular",
+    reading: {
+      title: "Ein neues Handy",
+      text: [
+        "Mein altes Handy war schon fünf Jahre alt. Der Akku hielt nur noch wenige Stunden, und das Display hatte einen Sprung. Deshalb bin ich letzte Woche in ein Elektrogeschäft gegangen, um ein neues zu kaufen. Der Verkäufer hat mir verschiedene Modelle gezeigt.",
+        "Ich wollte ein Handy mit einer guten Kamera und viel Speicher, aber nicht zu teuer. Das erste Modell kostete sechshundert Euro, das war mir zu viel. Das zweite war für vierhundert Euro viel besser für mich. Der Verkäufer hat auch eine Schutzhülle empfohlen, und ich habe zwei Jahre Garantie bekommen.",
+        "Zu Hause habe ich meine Daten vom alten Gerät auf das neue übertragen. Das hat fast eine Stunde gedauert. Jetzt bin ich sehr zufrieden: Das Handy ist schnell, und die Fotos sind richtig gut.",
+      ],
+      translation: [
+        "Mi celular viejo ya tenía cinco años. La batería duraba solo unas pocas horas y la pantalla tenía una grieta. Por eso fui la semana pasada a un negocio de electrónica para comprar uno nuevo. El vendedor me mostró distintos modelos.",
+        "Quería un celular con buena cámara y mucha memoria, pero no demasiado caro. El primer modelo costaba seiscientos euros, eso era demasiado para mí. El segundo, a cuatrocientos euros, me convenía mucho más. El vendedor también recomendó una funda protectora y me dieron dos años de garantía.",
+        "En casa pasé mis datos del aparato viejo al nuevo. Eso llevó casi una hora. Ahora estoy muy conforme: el celular es rápido y las fotos son realmente buenas.",
+      ],
+      questions: [
+        c("¿Qué problemas tenía el celular viejo?", ["Batería corta y pantalla rota", "No tenía cámara", "Era muy pesado", "No tenía memoria"], "«Akku ... Sprung im Display»."),
+        fi("¿Cuántos euros costaba el primer modelo?", ["600", "sechshundert"], "«sechshundert Euro»."),
+        fi("¿Cuántos euros costó el que eligió?", ["400", "vierhundert"], "«vierhundert Euro»."),
+        c("¿Qué le recomendó el vendedor además?", ["Una funda protectora", "Un cargador extra", "Un seguro de vida", "Auriculares"], "«Schutzhülle»."),
+        fi("¿Cuántos años de garantía recibió?", ["2", "zwei"], "«zwei Jahre Garantie»."),
+        c("¿Cuánto tardó en pasar los datos?", ["Casi una hora", "Cinco minutos", "Un día", "Dos horas"], "«fast eine Stunde»."),
+      ],
+    },
+  },
+  {
+    id: "a2-missverstaendnis", level: "A2", emoji: "🤔", topic: "Un malentendido",
+    reading: {
+      title: "Ein Missverständnis",
+      text: [
+        "Letzte Woche hatte ich mit meiner Freundin Lisa ein Missverständnis. Wir wollten uns am Freitag um sieben Uhr vor dem Kino treffen. Ich war pünktlich da und habe zwanzig Minuten gewartet, aber Lisa kam nicht. Ich habe sie angerufen, aber sie hat nicht geantwortet.",
+        "Später habe ich verstanden, was passiert war. Lisa hatte gedacht, dass wir uns vor dem anderen Kino in der Hauptstraße treffen. Sie hat dort auch auf mich gewartet. Wir haben beide gedacht, dass der andere nicht kommt, und waren ein bisschen sauer.",
+        "Am nächsten Tag haben wir telefoniert und herzlich gelacht. Jetzt schreiben wir immer genau, wo und wann wir uns treffen. Das Missverständnis war eigentlich nicht schlimm, aber wir haben daraus gelernt.",
+      ],
+      translation: [
+        "La semana pasada tuve un malentendido con mi amiga Lisa. Habíamos quedado en encontrarnos el viernes a las siete frente al cine. Yo llegué puntual y esperé veinte minutos, pero Lisa no vino. La llamé, pero no contestó.",
+        "Más tarde entendí lo que había pasado. Lisa había pensado que nos encontrábamos frente al otro cine, el de la calle principal. Ella también me esperó allí. Los dos pensamos que el otro no venía y nos enojamos un poco.",
+        "Al día siguiente hablamos por teléfono y nos reímos de corazón. Ahora siempre escribimos con precisión dónde y cuándo nos encontramos. El malentendido en realidad no fue grave, pero aprendimos de él.",
+      ],
+      questions: [
+        fi("¿A qué hora habían quedado?", ["7", "sieben", "19"], "«um sieben Uhr»."),
+        fi("¿Cuántos minutos esperó?", ["20", "zwanzig"], "«zwanzig Minuten»."),
+        c("¿Por qué no se encontraron?", ["Fueron a cines distintos", "Lisa se olvidó", "Llovía", "El cine estaba cerrado"], "«vor dem anderen Kino»."),
+        c("¿Cómo se sintieron al principio?", ["Un poco enojados", "Muy contentos", "Tristes", "Aburridos"], "«ein bisschen sauer»."),
+        c("¿Cómo terminó?", ["Se rieron por teléfono", "Dejaron de hablarse", "Se encontraron esa noche", "Se mudaron"], "«herzlich gelacht»."),
+        c("¿Qué hacen ahora?", ["Escriben con precisión dónde y cuándo", "Se llaman antes", "Van al mismo cine", "No quedan más"], "«genau, wo und wann»."),
       ],
     },
   },
