@@ -27,7 +27,7 @@ const pageErrors = [];
 page.on("pageerror", (e) => pageErrors.push(e.message));
 
 // 1) Todas las pantallas responden.
-for (const p of ["/", "/review", "/library", "/words", "/exam", "/mixed", "/glosario", "/perfil", "/nivel", "/schreiben", "/sprechen", "/hoeren"]) {
+for (const p of ["/", "/review", "/library", "/words", "/exam", "/mixed", "/glosario", "/perfil", "/nivel", "/progreso", "/schreiben", "/sprechen", "/hoeren"]) {
   const r = await page.goto(URL + p, { waitUntil: "networkidle" });
   check(r?.status() === 200, `${p} responde 200`);
 }
@@ -107,6 +107,10 @@ await page.getByRole("button", { name: /Entregar y ver el resultado/ }).click();
 const oral = await visible(page.getByText(/Hablá en alemán/));
 await page.getByRole("button", { name: /Entregar sin la parte oral/ }).click();
 check(oral && (await visible(page.getByText(/no entregada/))), "el simulacro pasa por la parte oral y muestra el resultado");
+
+// 8c) Mi nivel: muestra los cinco niveles con sus condiciones.
+await page.goto(URL + "/progreso", { waitUntil: "networkidle" });
+check((await visible(page.getByText("Mi nivel").first())) && (await page.getByText(/^C1/).count()) > 0, "«Mi nivel» muestra los niveles");
 
 // 9) Inicio: la sección Practicar está.
 await page.goto(URL + "/", { waitUntil: "networkidle" });

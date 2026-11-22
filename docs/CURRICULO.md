@@ -45,6 +45,8 @@ Metas: orden de magnitud de las listas de los exámenes del Goethe-Institut (A1,
 
 ## Criterio de «nivel completo» (propuesto)
 
+La app lo mide en `/progreso` («Mi nivel») sobre lo que ofrece en cada nivel; las cifras de abajo son la referencia de contenido, no del alumno.
+
 Un nivel se da por completo cuando cumple todo:
 
 - Vocabulario acumulado ≥ 95 % de la meta (currículo + entrenador).

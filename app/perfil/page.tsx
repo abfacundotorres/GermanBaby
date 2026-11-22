@@ -9,6 +9,7 @@ import { speak } from "@/lib/speech";
 import { AZURE_FREE, azureCost } from "@/lib/pricing";
 import { syncNow, useSyncStatus } from "@/lib/sync";
 import { sfx } from "@/lib/sfx";
+import Link from "next/link";
 import Mascot from "@/components/Mascot";
 import MicTest from "@/components/MicTest";
 
@@ -102,6 +103,12 @@ export default function Perfil() {
         <div className="muted small">{p.xp - from}/{to - from} XP para el nivel {level + 1}</div>
         <div className="progress big" style={{ width: "100%" }}><div style={{ width: `${((p.xp - from) / (to - from)) * 100}%` }} /></div>
       </section>
+
+      <Link href="/progreso" className="card row" style={{ textDecoration: "none", color: "inherit", textAlign: "left" }}>
+        <span style={{ fontSize: 28 }}>📊</span>
+        <span style={{ flex: 1 }}><b>Mi nivel</b><span className="small muted" style={{ display: "block" }}>Cuánto completaste de cada nivel, de A1 a C1.</span></span>
+        <span>›</span>
+      </Link>
 
       <div className="grid2 keep">
         <div className="card center"><div className="h2">🔥 {currentStreak(p)}</div><div className="muted small">Racha actual (mejor: {p.stats.bestStreak})</div></div>

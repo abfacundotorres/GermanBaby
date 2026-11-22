@@ -28,6 +28,7 @@ const TOOLS = [
   { href: "/library", ico: "📖", name: "Leer" },
   { href: "/words", ico: "📚", name: "Palabras" },
   { href: "/exam", ico: "📝", name: "Simulacros" },
+  { href: "/progreso", ico: "📊", name: "Mi nivel" },
 ];
 
 /** «Practicar»: una sugerencia distinta cada día según tu nivel y atajos a todo lo que no es el camino de lecciones. */
