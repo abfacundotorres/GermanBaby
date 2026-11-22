@@ -1103,4 +1103,148 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-wohnungssuche", level: "B1", emoji: "🔑", topic: "Buscar departamento",
+    reading: {
+      title: "Auf Wohnungssuche",
+      text: [
+        "Eine passende Wohnung zu finden ist in vielen deutschen Städten ein Geduldsspiel. Auf den Online-Portalen erscheinen täglich neue Angebote, doch oft sind sie schon nach wenigen Stunden vergeben. Wer sich bewerben will, muss deshalb schnell reagieren und eine vollständige Mappe bereithalten.",
+        "Zu den üblichen Unterlagen gehören eine Kopie des Ausweises, ein Nachweis über das Einkommen und eine Bescheinigung des bisherigen Vermieters, dass keine Mietschulden bestehen. Manche Vermieter verlangen außerdem eine Bürgschaft oder eine Kaution von bis zu drei Monatsmieten.",
+        "Bei der Besichtigung sollte man auf Details achten: Funktionieren die Fenster? Gibt es Schimmel? Wie hoch sind die Nebenkosten? Wer unsicher ist, fragt lieber einmal mehr. Und wer die Wohnung wirklich will, bedankt sich nach dem Termin kurz per Mail und bekräftigt sein Interesse.",
+      ],
+      translation: [
+        "Encontrar un departamento adecuado es en muchas ciudades alemanas un juego de paciencia. En los portales en línea aparecen todos los días ofertas nuevas, pero muchas veces ya están adjudicadas a las pocas horas. Quien quiere postularse debe por eso reaccionar rápido y tener lista una carpeta completa.",
+        "Entre los documentos habituales están una copia del documento de identidad, un comprobante de ingresos y una constancia del propietario anterior de que no hay deudas de alquiler. Algunos propietarios piden además un aval o una garantía de hasta tres meses de alquiler.",
+        "En la visita conviene fijarse en los detalles: ¿funcionan las ventanas? ¿Hay moho? ¿Cuánto son los gastos adicionales? Quien tenga dudas, mejor que pregunte una vez más. Y quien realmente quiere el departamento agradece brevemente por mail después de la cita y reafirma su interés.",
+      ],
+      questions: [
+        c("¿Por qué hay que reaccionar rápido?", ["Las ofertas se adjudican a las pocas horas", "Los portales cierran por la noche", "Hay pocos portales", "Los precios suben cada día"], "«schon nach wenigen Stunden vergeben»."),
+        c("¿Qué documento prueba que no hay deudas de alquiler?", ["Una constancia del propietario anterior", "El contrato de trabajo", "Una copia del pasaporte", "La factura de luz"], "«Bescheinigung des bisherigen Vermieters»."),
+        c("¿Cuánto pueden pedir de garantía algunos propietarios?", ["Hasta tres meses de alquiler", "Un mes", "Un año", "Nada"], "«bis zu drei Monatsmieten»."),
+        c("¿Qué conviene revisar en la visita?", ["Ventanas, moho y gastos adicionales", "El color de las paredes", "El nombre del vecino", "La marca de la cocina"], "«Fenster ... Schimmel ... Nebenkosten»."),
+        tf("Después de la visita no se recomienda escribir al propietario.", false, "Se recomienda agradecer por mail."),
+        c("¿Qué le conviene hacer a quien no está seguro?", ["Preguntar una vez más", "Callarse", "Firmar de todos modos", "Llevar a un abogado"], "«fragt lieber einmal mehr»."),
+      ],
+    },
+  },
+  {
+    id: "b1-vorstellungsgespraech", level: "B1", emoji: "🤝", topic: "La entrevista de trabajo",
+    reading: {
+      title: "Das Vorstellungsgespräch",
+      text: [
+        "Ein Vorstellungsgespräch ist für viele Bewerber aufregend. Die wichtigste Regel lautet: gut vorbereitet sein. Wer sich vorher über die Firma informiert hat, kann gezielte Fragen stellen und zeigt, dass er sich wirklich interessiert. Außerdem sollte man typische Fragen üben, zum Beispiel: Warum möchten Sie bei uns arbeiten?",
+        "Auch der erste Eindruck zählt. Man sollte pünktlich kommen, passend gekleidet sein und freundlich grüßen. Während des Gesprächs ist es wichtig, ehrlich zu antworten und konkrete Beispiele aus der eigenen Erfahrung zu nennen. Schwächen muss man nicht verstecken, aber man sollte erklären, wie man daran arbeitet.",
+        "Am Ende des Gesprächs fragt der Arbeitgeber meist, ob es noch Fragen gibt. Es ist klug, jetzt etwas zu fragen, etwa nach den Aufgaben im Team oder den Entwicklungsmöglichkeiten. Und nach dem Termin ist eine kurze Dankesmail ein guter Abschluss.",
+      ],
+      translation: [
+        "Una entrevista de trabajo resulta emocionante para muchos candidatos. La regla más importante dice: estar bien preparado. Quien se informó antes sobre la empresa puede hacer preguntas dirigidas y muestra que realmente se interesa. Además conviene practicar preguntas típicas, por ejemplo: ¿Por qué quiere trabajar con nosotros?",
+        "También cuenta la primera impresión. Hay que llegar puntual, estar vestido de forma adecuada y saludar con amabilidad. Durante la conversación es importante responder con sinceridad y dar ejemplos concretos de la propia experiencia. No hace falta esconder las debilidades, pero hay que explicar cómo se trabaja en ellas.",
+        "Al final de la entrevista el empleador suele preguntar si hay más preguntas. Es inteligente preguntar ahora algo, por ejemplo por las tareas del equipo o las posibilidades de desarrollo. Y después de la cita, un breve mail de agradecimiento es un buen cierre.",
+      ],
+      questions: [
+        c("¿Cuál es la regla más importante?", ["Estar bien preparado", "Llegar tarde", "Hablar poco", "Llevar regalos"], "«gut vorbereitet sein»."),
+        c("¿Qué demuestra quien se informó sobre la empresa?", ["Que realmente se interesa", "Que es tímido", "Que no tiene experiencia", "Que busca otro trabajo"], "«zeigt, dass er sich wirklich interessiert»."),
+        c("¿Qué conviene hacer con las debilidades?", ["Explicar cómo se trabaja en ellas", "Esconderlas siempre", "Negarlas", "Culpar a otros"], "«erklären, wie man daran arbeitet»."),
+        tf("Hay que responder con ejemplos concretos de la propia experiencia.", true, "«konkrete Beispiele»."),
+        c("¿Qué conviene hacer cuando preguntan si hay más preguntas?", ["Hacer una pregunta, por ejemplo sobre las tareas", "Decir que no", "Hablar del sueldo primero", "Irse"], "«jetzt etwas zu fragen»."),
+        c("¿Qué es un buen cierre después de la cita?", ["Un breve mail de agradecimiento", "Una llamada diaria", "Una carta de reclamo", "Nada"], "«kurze Dankesmail»."),
+      ],
+    },
+  },
+  {
+    id: "b1-muell", level: "B1", emoji: "♻️", topic: "Separar la basura",
+    reading: {
+      title: "Müll trennen in Deutschland",
+      text: [
+        "In Deutschland ist das Trennen von Müll eine Selbstverständlichkeit. In den meisten Haushalten gibt es mehrere Tonnen: eine für Papier, eine für Bioabfälle, eine für Verpackungen und eine für den Restmüll. Glas wird getrennt nach Farben in Containern gesammelt, die oft in der Nähe stehen.",
+        "Auch Pfandflaschen gehören zu diesem System. Auf Plastik- und Glasflaschen zahlt man beim Kauf ein paar Cent Pfand, den man im Supermarkt zurückbekommt, wenn man die Flasche abgibt. So landen viele Flaschen nicht im Müll, sondern werden wiederverwendet oder recycelt.",
+        "Für Neuankömmlinge kann das System verwirrend sein, denn die Regeln unterscheiden sich von Stadt zu Stadt. Wer unsicher ist, findet auf den Internetseiten der Gemeinde eine Liste, was in welche Tonne gehört. Nachbarn helfen oft gern weiter, wenn man freundlich fragt.",
+      ],
+      translation: [
+        "En Alemania separar la basura es algo que se da por sentado. En la mayoría de los hogares hay varios tachos: uno para papel, uno para residuos orgánicos, uno para envases y uno para los residuos restantes. El vidrio se junta por colores en contenedores que suelen estar cerca.",
+        "También las botellas con depósito forman parte de este sistema. Por las botellas de plástico y de vidrio se paga al comprar unos centavos de depósito, que se recuperan en el supermercado al entregar la botella. Así, muchas botellas no terminan en la basura, sino que se reutilizan o se reciclan.",
+        "Para los recién llegados el sistema puede resultar confuso, porque las reglas difieren de una ciudad a otra. Quien tenga dudas encuentra en los sitios web del municipio una lista de qué va en cada tacho. Los vecinos suelen ayudar con gusto si se les pregunta con amabilidad.",
+      ],
+      questions: [
+        c("¿Cuántos tipos de tacho se mencionan?", ["Cuatro", "Dos", "Seis", "Uno"], "Papel, orgánico, envases y resto."),
+        c("¿Cómo se junta el vidrio?", ["Separado por colores en contenedores", "En el tacho de papel", "En bolsas negras", "En cada casa"], "«getrennt nach Farben in Containern»."),
+        c("¿Qué ocurre con las botellas con depósito?", ["Se devuelve el depósito al entregarlas", "Se tiran", "Se venden a otros", "Se regalan"], "«Pfand zurückbekommt»."),
+        tf("Las reglas son idénticas en todas las ciudades.", false, "«unterscheiden sich von Stadt zu Stadt»."),
+        c("¿Dónde se encuentra la lista de qué va en cada tacho?", ["En el sitio web del municipio", "En el supermercado", "En el diario", "En el correo"], "«Internetseiten der Gemeinde»."),
+        c("¿Quiénes suelen ayudar a los recién llegados?", ["Los vecinos", "Los policías", "Los bancos", "Los médicos"], "«Nachbarn»."),
+      ],
+    },
+  },
+  {
+    id: "b1-weihnachtsmarkt", level: "B1", emoji: "🎄", topic: "El mercado navideño",
+    reading: {
+      title: "Der Weihnachtsmarkt",
+      text: [
+        "Ab Ende November verwandeln sich viele deutsche Stadtzentren in Weihnachtsmärkte. Zwischen kleinen Holzhütten duftet es nach gebrannten Mandeln, Lebkuchen und Glühwein, und überall hängen Lichter. Die Tradition geht auf das Mittelalter zurück, und einige Märkte, wie der in Nürnberg, sind weltberühmt.",
+        "An den Ständen kann man Geschenke, Kerzen, Weihnachtsschmuck und Kunsthandwerk kaufen. Viele Besucher kommen aber vor allem wegen der Atmosphäre: Man trifft sich nach der Arbeit mit Freunden, trinkt etwas Warmes und hört Musik. Für Kinder gibt es oft ein Karussell oder eine Krippe.",
+        "Der Glühwein wird in Tassen ausgeschenkt, für die man Pfand zahlt. Wer die Tasse zurückgibt, bekommt das Geld wieder; viele Besucher behalten sie jedoch als Erinnerung. Für alle, die keinen Alkohol trinken, gibt es Kinderpunsch, der mit Fruchtsaft zubereitet wird.",
+      ],
+      translation: [
+        "A partir de fines de noviembre muchos centros de ciudades alemanas se transforman en mercados navideños. Entre pequeñas casillas de madera huele a almendras tostadas, pan de especias y vino caliente, y por todas partes cuelgan luces. La tradición se remonta a la Edad Media y algunos mercados, como el de Núremberg, son famosos en el mundo.",
+        "En los puestos se pueden comprar regalos, velas, adornos navideños y artesanías. Muchos visitantes, sin embargo, van sobre todo por el ambiente: uno se encuentra con amigos después del trabajo, toma algo caliente y escucha música. Para los chicos suele haber una calesita o un pesebre.",
+        "El vino caliente se sirve en tazas por las que se paga un depósito. Quien devuelve la taza recibe el dinero; muchos visitantes, sin embargo, la guardan de recuerdo. Para quienes no toman alcohol hay un ponche infantil que se prepara con jugo de frutas.",
+      ],
+      questions: [
+        c("¿Cuándo empiezan los mercados navideños?", ["A fines de noviembre", "En enero", "En octubre", "En marzo"], "«Ab Ende November»."),
+        c("¿A qué huele en los mercados?", ["A almendras tostadas, pan de especias y vino caliente", "A pescado", "A café y tabaco", "A flores"], "«gebrannten Mandeln, Lebkuchen und Glühwein»."),
+        c("¿Por qué van muchos visitantes?", ["Por el ambiente", "Por los precios bajos", "Por los museos", "Por el trabajo"], "«wegen der Atmosphäre»."),
+        c("¿Qué se paga además del vino caliente?", ["Un depósito por la taza", "Una entrada", "Un impuesto", "Nada"], "«für die man Pfand zahlt»."),
+        tf("Quien devuelve la taza no recupera el dinero.", false, "«bekommt das Geld wieder»."),
+        c("¿Qué hay para quienes no toman alcohol?", ["Ponche infantil con jugo de frutas", "Té helado", "Cerveza sin alcohol", "Nada"], "«Kinderpunsch»."),
+      ],
+    },
+  },
+  {
+    id: "b1-schlaf", level: "B1", emoji: "😴", topic: "Dormir bien",
+    reading: {
+      title: "Wie viel Schlaf brauchen wir?",
+      text: [
+        "Die meisten Erwachsenen brauchen sieben bis neun Stunden Schlaf pro Nacht. Wer dauerhaft weniger schläft, kann sich schlechter konzentrieren, ist schneller gereizt und wird öfter krank. Trotzdem geben viele Menschen an, zu wenig zu schlafen, weil sie abends lange arbeiten oder vor dem Bildschirm sitzen.",
+        "Für einen guten Schlaf gibt es einfache Tipps. Man sollte jeden Tag zur gleichen Zeit ins Bett gehen und aufstehen, das Schlafzimmer kühl und dunkel halten und abends keinen starken Kaffee mehr trinken. Auch das Handy gehört nicht ins Bett, denn das helle Licht macht munter.",
+        "Wer trotzdem schlecht schläft, sollte nicht zu lange im Bett liegen bleiben und grübeln. Besser ist es, kurz aufzustehen, etwas Ruhiges zu tun und erst wieder ins Bett zu gehen, wenn man müde ist. Hält das Problem über Wochen an, kann ein Arztbesuch sinnvoll sein.",
+      ],
+      translation: [
+        "La mayoría de los adultos necesita de siete a nueve horas de sueño por noche. Quien duerme menos de forma constante se concentra peor, se irrita más rápido y se enferma más seguido. Aun así, mucha gente dice dormir poco, porque trabaja hasta tarde a la noche o se queda frente a la pantalla.",
+        "Para dormir bien hay consejos simples. Conviene acostarse y levantarse todos los días a la misma hora, mantener el dormitorio fresco y oscuro y no tomar café fuerte a la noche. Tampoco el celular debe estar en la cama, porque la luz intensa mantiene despierto.",
+        "Quien igual duerme mal no debería quedarse mucho tiempo en la cama dando vueltas a los pensamientos. Es mejor levantarse un rato, hacer algo tranquilo y volver a la cama recién cuando se tenga sueño. Si el problema dura semanas, puede ser sensato ir al médico.",
+      ],
+      questions: [
+        c("¿Cuántas horas de sueño necesita la mayoría de los adultos?", ["De siete a nueve", "De cuatro a cinco", "De diez a doce", "Tres"], "«sieben bis neun Stunden»."),
+        c("¿Qué le pasa a quien duerme poco de forma constante?", ["Se concentra peor y se enferma más", "Rinde más", "Se vuelve más tranquilo", "Nada"], "«schlechter konzentrieren ... öfter krank»."),
+        c("¿Cómo debe ser el dormitorio?", ["Fresco y oscuro", "Caliente y luminoso", "Ruidoso", "Con televisión"], "«kühl und dunkel»."),
+        tf("El celular ayuda a dormir mejor.", false, "«das helle Licht macht munter»."),
+        c("¿Qué conviene si no se puede dormir?", ["Levantarse un rato y hacer algo tranquilo", "Mirar el celular en la cama", "Tomar café", "Seguir dando vueltas"], "«kurz aufzustehen, etwas Ruhiges zu tun»."),
+        c("¿Cuándo puede ser sensato ir al médico?", ["Si el problema dura semanas", "Si se duerme una noche mal", "Nunca", "Solo en vacaciones"], "«über Wochen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-budget", level: "B1", emoji: "💶", topic: "Planificar el presupuesto",
+    reading: {
+      title: "Mit dem Geld auskommen",
+      text: [
+        "Viele junge Erwachsene wissen am Ende des Monats nicht, wohin ihr Geld verschwunden ist. Ein Haushaltsbuch kann helfen: Man schreibt auf, was man einnimmt und was man ausgibt. Schon nach wenigen Wochen erkennt man, welche Posten besonders teuer sind, zum Beispiel Miete, Essen im Restaurant oder Abonnements.",
+        "Eine einfache Regel ist die Aufteilung in drei Teile: etwa die Hälfte des Einkommens für feste Kosten wie Miete und Versicherungen, ein Drittel für Freizeit und Wünsche und der Rest zum Sparen. Wer das konsequent umsetzt, baut nach und nach eine kleine Reserve auf.",
+        "Hilfreich ist es auch, größere Ausgaben zu planen, statt spontan zu kaufen. Bevor man etwas Teures bestellt, kann man ein paar Tage warten und sich fragen, ob man es wirklich braucht. Oft vergeht die Lust, und man spart Geld, ohne sich einschränken zu müssen.",
+      ],
+      translation: [
+        "Muchos jóvenes adultos no saben a fin de mes adónde se fue su dinero. Un libro de cuentas del hogar puede ayudar: se anota lo que se recibe y lo que se gasta. Después de pocas semanas se reconoce cuáles son los rubros especialmente caros, por ejemplo alquiler, comidas en restaurantes o suscripciones.",
+        "Una regla simple es dividir en tres partes: aproximadamente la mitad del ingreso para costos fijos como alquiler y seguros, un tercio para tiempo libre y deseos y el resto para ahorrar. Quien lo aplica con constancia arma de a poco una pequeña reserva.",
+        "También ayuda planificar los gastos grandes en vez de comprar de manera espontánea. Antes de pedir algo caro, se puede esperar unos días y preguntarse si realmente se necesita. A menudo se pasan las ganas y se ahorra dinero sin tener que privarse de nada.",
+      ],
+      questions: [
+        c("¿Qué ayuda a saber adónde va el dinero?", ["Un libro de cuentas del hogar", "Una tarjeta nueva", "Más trabajo", "Un préstamo"], "«Haushaltsbuch»."),
+        c("¿Cuál de estos es un rubro típicamente caro?", ["El alquiler", "El agua", "Los zapatos viejos", "El pan"], "«Miete»."),
+        c("¿Qué parte del ingreso va a costos fijos según la regla?", ["Aproximadamente la mitad", "Un décimo", "Todo", "Nada"], "«etwa die Hälfte»."),
+        c("¿Para qué va el resto?", ["Para ahorrar", "Para regalar", "Para viajar", "Para deudas"], "«der Rest zum Sparen»."),
+        c("¿Qué se recomienda antes de comprar algo caro?", ["Esperar unos días", "Comprarlo ya", "Pedir un préstamo", "Pagar en efectivo"], "«ein paar Tage warten»."),
+        tf("Según el texto, ahorrar exige privarse siempre de todo.", false, "«ohne sich einschränken zu müssen»."),
+      ],
+    },
+  },
 ];
