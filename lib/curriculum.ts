@@ -42,7 +42,9 @@ import { UNITS_C1_PART5 } from "./content/c1-part5.ts";
 import { UNITS_C1_PART6 } from "./content/c1-part6.ts";
 import { READINGS_C1 } from "./content/readings-c1.ts";
 import { PRACTICE_C1 } from "./content/practice-c1.ts";
+import { PRACTICE_A1 } from "./content/practice-a1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
+import { LONG_LISTENINGS_A2 } from "./content/long-listening-a2.ts";
 import { THEMATIC, THEMATIC_B1 } from "./content/thematic.ts";
 
 export type Vocab = {
@@ -367,7 +369,7 @@ for (const u of UNITS) {
   if (r && !u.lessons.some((l) => l.id === r.id)) u.lessons.push(r);
 }
 // Práctica extra opcional (A2 y B1), después de la lectura.
-const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_C1 };
+const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A1, ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_C1 };
 for (const u of UNITS) {
   const pr = PRACTICE[u.id];
   if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
@@ -375,7 +377,7 @@ for (const u of UNITS) {
   const fp = FREE_PROMPTS[u.id];
   if (pr && fp && !pr.exercises.some((e) => e.kind === "free")) pr.exercises.push({ kind: "free", ...fp });
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
-  const long = LONG_LISTENINGS[u.id];
+  const long = LONG_LISTENINGS[u.id] ?? LONG_LISTENINGS_A2[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
   // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
   const them = THEMATIC[u.id] ?? THEMATIC_B1[u.id];

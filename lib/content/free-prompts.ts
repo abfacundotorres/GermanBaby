@@ -4,7 +4,10 @@
 
 export type FreePrompt = { prompt: string; focus: string[]; minSentences: number; hint?: string };
 
+import { FREE_PROMPTS_A1 } from "./practice-a1.ts";
+
 export const FREE_PROMPTS: Record<string, FreePrompt> = {
+  ...FREE_PROMPTS_A1,
   // ---------- A2
   vergangenheit: { prompt: "Contá cómo era tu vida hace unos años: dónde vivías, qué hacías y qué no podías hacer.", focus: ["war / hatte / konnte / musste", "früher o vor … Jahren", "seit"], minSentences: 3 },
   gesundheit: { prompt: "Contale a un médico cómo te sentís: qué te duele, desde cuándo y qué hacés para mejorar.", focus: ["tut weh / Ich habe …", "un verbo reflexivo", "un imperativo (Sie)"], minSentences: 3 },

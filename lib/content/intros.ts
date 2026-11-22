@@ -2,12 +2,14 @@
 // Clave: «unidad/lección». Se asignan a Lesson.intro y Lesson.summary al armar el currículo.
 // `intro` se muestra antes de practicar; `summary`, en el resumen final de la lección.
 
-import { READING_TIP, INTROS_A2, type LessonNotes } from "./intros-a2.ts";
+import { READING_TIP, PRACTICE_TIP, INTROS_A2, type LessonNotes } from "./intros-a2.ts";
 import { INTROS_B1 } from "./intros-b1.ts";
 import { INTROS_B2 } from "./intros-b2.ts";
 import { INTROS_AUSSPRACHE } from "./intros-aussprache.ts";
 import { INTROS_C1 } from "./intros-c1.ts";
 export type { LessonNotes };
+
+const LONG_TIP_A2 = "Esta es una escucha larga: una conversación de 9 o 10 líneas, con más datos que un diálogo común. No hace falta entender cada palabra: escuchá una vez para captar la idea general, y después respondé las preguntas. Podés volver a escucharla, con 🐢 para ir más lento. Al final se muestra el texto con su traducción.";
 
 export const INTROS: Record<string, LessonNotes> = {
   // ---------- Unidad 1: ¡Hallo!
@@ -564,6 +566,34 @@ export const INTROS: Record<string, LessonNotes> = {
     ],
   },
   "pruefung/lesen": { intro: [READING_TIP], summary: ["Aprendiste palabras para estudiar: die Stunde, das Wort, schwer, üben."] },
+
+  // ---------- Escuchas largas de A2
+  ...Object.fromEntries(
+    Object.entries({
+      "vergangenheit/escucha-larga": "una infancia en el campo",
+      "gesundheit/escucha-larga": "una consulta médica",
+      "kleidung/escucha-larga": "la compra de una campera",
+      "gruende/escucha-larga": "llegar tarde y dar razones",
+      "geschenke/escucha-larga": "elegir un regalo",
+      "ort/escucha-larga": "amoblar un cuarto",
+      "reise/escucha-larga": "reservar un hotel",
+      "arbeit/escucha-larga": "una entrevista de trabajo",
+      "pruefung-a2/escucha-larga": "fijar una cita por teléfono",
+    }).map(([k, topic]): [string, LessonNotes] => [k, { intro: [LONG_TIP_A2], summary: [`Escuchaste una conversación larga sobre ${topic}.`] }]),
+  ),
+
+  // ---------- Prácticas extra de A1
+  ...Object.fromEntries(
+    Object.entries({
+      "alltag/practica": "las horas, los verbos separables y «dann»",
+      "wohnung/practica": "los ambientes, los muebles y «es gibt»",
+      "stadt/practica": "los lugares, el camino y el dativo",
+      "essen/practica": "las comidas, «gern» y los verbos que cambian",
+      "modal/practica": "können, wollen y müssen",
+      "perfekt/practica": "el Perfekt con haben y sein",
+      "pruefung/practica": "los meses, las fechas y los datos personales",
+    }).map(([k, topic]): [string, LessonNotes] => [k, { intro: [PRACTICE_TIP], summary: [`Repasaste lo de la unidad: ${topic}.`] }]),
+  ),
 };
 
 Object.assign(INTROS, INTROS_A2, INTROS_B1, INTROS_B2, INTROS_AUSSPRACHE, INTROS_C1);

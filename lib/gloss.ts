@@ -3,6 +3,8 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  land: "campo / país", tiere: "animales", katzen: "gatos", bester: "mejor", gezogen: "mudado", freunde: "amigos", oft: "seguido", aufs: "al (campo)", fehlt: "falta / le pasa", hals: "garganta / cuello", grad: "grados", mund: "boca", rot: "rojo/a", medikamente: "medicamentos", darf: "puedo / puede (permiso)", warme: "abrigada / cálida", dunkelblau: "azul oscuro", beliebt: "popular", rabatt: "descuento", streik: "huelga", gab: "hubo", signalen: "señales", genommen: "tomado", losgehen: "salir", besprechung: "reunión", anrufst: "llamás", fangen: "empezar (fangen an)", geschmack: "gusto", flur: "pasillo", zimmers: "del cuarto", decke: "manta / techo", meerblick: "vista al mar", reservieren: "reservar", hundertzwanzig: "ciento veinte", sonnig: "soleado", inbegriffen: "incluido", stornieren: "cancelar", reserviere: "reservo", beruflich: "laboralmente", verkäuferin: "vendedora", buchhandlung: "librería", lese: "leo", aufhören: "terminar", verdiene: "gano", schicken: "enviar", salon: "peluquería", haarschnitt: "corte de pelo", ungefähr: "aproximadamente",
+  trinke: "tomo", zur: "al / a la", arbeit: "trabajo", wann: "cuándo", stehst: "te levantás", isst: "comés / come", gibt: "hay (es gibt)", balkon: "balcón", neben: "al lado de", dem: "el / la (dativo)", kann: "puedo / puede", minuten: "minutos", können: "podemos / pueden", stück: "pedazo", film: "película", brief: "carta", gebacken: "horneé / hecho al horno", freunden: "amigos", fünften: "quinto",
   vorgelesen: "leyó en voz alta", fliegt: "vuela / va en avión", fliegen: "volar / ir en avión", schlaft: "duermen (ustedes)", bedaure: "lamento", letzter: "último", ausgeben: "gastar",
   ja: "sí", auch: "también", hier: "acá / aquí", schon: "ya", also: "entonces", genau: "exacto",
   super: "genial", toll: "genial", schade: "qué pena", oh: "¡ay!", ah: "¡ah!", perfekt: "perfecto",
@@ -152,7 +154,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "lisa",
+  "kern", "lindner",  "becker", "berger",  "lisa",
   "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse", "rudolf",
 ]);
 
