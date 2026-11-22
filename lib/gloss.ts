@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  studium: "estudios / carrera", bald: "pronto", kurz: "corto / poco", nüsse: "nueces", verletzt: "lastimó / lastimado", winter: "invierno", finger: "dedo", hängt: "cuelga", bewahren: "guardar / conservar", mantel: "abrigo", dabei: "con(migo/vos), presente", hunden: "perros", vorbei: "pasado / terminado", ärgert: "enoja", lärm: "ruido", überraschung: "sorpresa", gespannt: "con curiosidad", strahlst: "brillás", wettbewerb: "concurso", begrüßt: "saluda", torte: "torta", brennen: "arden", luftballons: "globos", paar: "pareja", tannenbaum: "árbol de Navidad", gastgeberin: "anfitriona", taschen: "bolsas", online: "en línea", darfst: "podés (permiso)", laptop: "notebook", bewerbe: "me postulo", kantine: "comedor", füllen: "llenar (füllen aus)",
   land: "campo / país", tiere: "animales", katzen: "gatos", bester: "mejor", gezogen: "mudado", freunde: "amigos", oft: "seguido", aufs: "al (campo)", fehlt: "falta / le pasa", hals: "garganta / cuello", grad: "grados", mund: "boca", rot: "rojo/a", medikamente: "medicamentos", darf: "puedo / puede (permiso)", warme: "abrigada / cálida", dunkelblau: "azul oscuro", beliebt: "popular", rabatt: "descuento", streik: "huelga", gab: "hubo", signalen: "señales", genommen: "tomado", losgehen: "salir", besprechung: "reunión", anrufst: "llamás", fangen: "empezar (fangen an)", geschmack: "gusto", flur: "pasillo", zimmers: "del cuarto", decke: "manta / techo", meerblick: "vista al mar", reservieren: "reservar", hundertzwanzig: "ciento veinte", sonnig: "soleado", inbegriffen: "incluido", stornieren: "cancelar", reserviere: "reservo", beruflich: "laboralmente", verkäuferin: "vendedora", buchhandlung: "librería", lese: "leo", aufhören: "terminar", verdiene: "gano", schicken: "enviar", salon: "peluquería", haarschnitt: "corte de pelo", ungefähr: "aproximadamente",
   trinke: "tomo", zur: "al / a la", arbeit: "trabajo", wann: "cuándo", stehst: "te levantás", isst: "comés / come", gibt: "hay (es gibt)", balkon: "balcón", neben: "al lado de", dem: "el / la (dativo)", kann: "puedo / puede", minuten: "minutos", können: "podemos / pueden", stück: "pedazo", film: "película", brief: "carta", gebacken: "horneé / hecho al horno", freunden: "amigos", fünften: "quinto",
   vorgelesen: "leyó en voz alta", fliegt: "vuela / va en avión", fliegen: "volar / ir en avión", schlaft: "duermen (ustedes)", bedaure: "lamento", letzter: "último", ausgeben: "gastar",
@@ -154,7 +155,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
-  "kern", "lindner",  "becker", "berger",  "lisa",
+  "köln", "spanien",  "kern", "lindner",  "becker", "berger",  "lisa",
   "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse", "rudolf",
 ]);
 

@@ -69,7 +69,6 @@ die Sprache|el idioma|Ich lerne eine neue Sprache.|Aprendo un idioma nuevo.
 das Dorf|el pueblo|Wir wohnen in einem Dorf.|Vivimos en un pueblo.
 das Flugzeug|el avión|Das Flugzeug ist schon da.|El avión ya está acá.
 das Schiff|el barco|Das Schiff fährt um acht.|El barco sale a las ocho.
-die Firma|la empresa|Die Firma sucht neue Leute.|La empresa busca gente nueva.
 der Preis|el precio|Der Preis ist sehr gut.|El precio es muy bueno.
 die Zahl|el número (cantidad)|Die Zahl ist zu hoch.|El número es demasiado alto.
 die Nummer|el número (de teléfono)|Wie ist deine Nummer?|¿Cuál es tu número?
@@ -112,13 +111,10 @@ das Dach|el techo|Das Dach ist neu.|El techo es nuevo.
 die Wand|la pared|Das Bild hängt an der Wand.|El cuadro cuelga de la pared.
 der Boden|el piso (suelo)|Der Boden ist nass.|El piso está mojado.
 die Treppe|la escalera|Die Treppe ist steil.|La escalera es empinada.
-der Aufzug|el ascensor|Der Aufzug ist kaputt.|El ascensor está roto.
 die Toilette|el baño (inodoro)|Wo ist die Toilette?|¿Dónde está el baño?
 die Dusche|la ducha|Die Dusche ist im Bad.|La ducha está en el baño.
 das Handtuch|la toalla|Das Handtuch ist nass.|La toalla está mojada.
 die Karte|la tarjeta / el mapa|Hast du eine Karte?|¿Tenés una tarjeta?
-das Paket|el paquete|Das Paket kommt morgen.|El paquete llega mañana.
-das Ticket|el pasaje / la entrada|Das Ticket kostet zehn Euro.|El pasaje cuesta diez euros.
 die Fahrt|el viaje (trayecto)|Die Fahrt dauert eine Stunde.|El viaje dura una hora.
 das Ziel|la meta / el destino|Das Ziel ist nicht mehr weit.|El destino ya no está lejos.
 die Gesundheit|la salud|Gesundheit ist wichtig.|La salud es importante.
@@ -132,8 +128,6 @@ die Nase|la nariz|Meine Nase ist rot.|Mi nariz está roja.
 das Herz|el corazón|Das Herz schlägt schnell.|El corazón late rápido.
 der Körper|el cuerpo|Der Körper braucht Wasser.|El cuerpo necesita agua.
 die Liebe|el amor|Die Liebe ist wichtig.|El amor es importante.
-die Angst|el miedo|Ich habe keine Angst.|No tengo miedo.
-die Freude|la alegría|Das macht mir große Freude.|Eso me da mucha alegría.
 der Spaß|la diversión|Das macht Spaß.|Eso es divertido.
 der Streit|la pelea|Der Streit war laut.|La pelea fue fuerte.
 die Wäsche|la ropa (para lavar)|Die Wäsche ist noch nass.|La ropa todavía está mojada.
@@ -144,7 +138,6 @@ der Student|el estudiante|Der Student lernt viel.|El estudiante estudia mucho.
 der Mantel|el abrigo|Der Mantel ist zu warm.|El abrigo es demasiado abrigado.
 die Brille|los anteojos|Meine Brille ist kaputt.|Mis anteojos están rotos.
 der Markt|el mercado|Der Markt ist am Samstag.|El mercado es el sábado.
-die Kasse|la caja|Die Kasse ist dort.|La caja está allá.
 der Kunde|el cliente|Der Kunde wartet.|El cliente espera.
 das Ding|la cosa (objeto)|Was ist das für ein Ding?|¿Qué cosa es esa?
 die Sache|el asunto / la cosa|Das ist eine wichtige Sache.|Es un asunto importante.
@@ -281,15 +274,11 @@ erzählen|contar (una historia)|Wir erzählen eine Geschichte.|Contamos una hist
 kennen|conocer (algo o a alguien)|Wir kennen die Stadt gut.|Conocemos bien la ciudad.
 kennenlernen|conocer (a alguien nuevo)|Ich möchte dich kennenlernen.|Quiero conocerte.
 verlassen|dejar / abandonar|Wir verlassen das Haus um acht.|Salimos de la casa a las ocho.
-verpassen|perder (un tren)|Wir verpassen den Zug.|Perdemos el tren.
 ankommen|llegar|Wann wollen wir ankommen?|¿Cuándo queremos llegar?
 abfahren|salir (un vehículo)|Der Zug soll um acht abfahren.|El tren tiene que salir a las ocho.
-einsteigen|subir (a un vehículo)|Bitte nicht einsteigen!|¡Por favor, no subir!
-aussteigen|bajar (de un vehículo)|Wir müssen in Köln aussteigen.|Tenemos que bajar en Colonia.
 reservieren|reservar|Wir reservieren einen Tisch.|Reservamos una mesa.
 bestellen|pedir (encargar)|Wir bestellen zwei Kaffee.|Pedimos dos cafés.
 ausgeben|gastar (dinero)|Ich will nicht so viel Geld ausgeben.|No quiero gastar tanta plata.
-verdienen|ganar (dinero)|Wir verdienen nicht viel.|No ganamos mucho.
 leihen|prestar / pedir prestado|Kannst du mir deinen Stift leihen?|¿Me prestás tu lapicera?
 schenken|regalar|Wir schenken ihr ein Buch.|Le regalamos un libro.
 gewinnen|ganar (una competencia)|Wir gewinnen das Spiel.|Ganamos el partido.
@@ -305,8 +294,6 @@ riechen|oler|Hier riecht es nach Kaffee.|Acá huele a café.
 fühlen|sentir|Wir fühlen uns hier wohl.|Nos sentimos bien acá.
 wünschen|desear|Wir wünschen dir viel Glück.|Te deseamos mucha suerte.
 erreichen|alcanzar / llegar a|Wir erreichen den Bahnhof um neun.|Llegamos a la estación a las nueve.
-der Kollege|el colega|Mein Kollege kommt aus Polen.|Mi colega es de Polonia.
-der Chef|el jefe|Der Chef ist heute nicht da.|El jefe hoy no está.
 die Aufgabe|la tarea / el ejercicio|Die Aufgabe ist nicht schwer.|El ejercicio no es difícil.
 das Projekt|el proyecto|Das Projekt dauert ein Jahr.|El proyecto dura un año.
 der Lohn|el salario|Der Lohn ist zu niedrig.|El salario es demasiado bajo.
@@ -317,17 +304,13 @@ das Heft|el cuaderno|Mein Heft liegt auf dem Tisch.|Mi cuaderno está sobre la m
 der Stift|la lapicera / el lápiz|Hast du einen Stift?|¿Tenés una lapicera?
 die Tafel|el pizarrón|Der Lehrer schreibt an die Tafel.|El docente escribe en el pizarrón.
 das Wörterbuch|el diccionario|Ich brauche ein Wörterbuch.|Necesito un diccionario.
-das Formular|el formulario|Bitte füllen Sie das Formular aus.|Por favor, complete el formulario.
-die Unterschrift|la firma|Hier fehlt Ihre Unterschrift.|Acá falta su firma.
 die Kamera|la cámara|Die Kamera ist neu.|La cámara es nueva.
 das Radio|la radio|Das Radio läuft den ganzen Tag.|La radio anda todo el día.
 das Programm|el programa|Das Programm beginnt um acht.|El programa empieza a las ocho.
 das Konzert|el concierto|Das Konzert war wunderbar.|El concierto fue maravilloso.
 das Theater|el teatro|Wir gehen ins Theater.|Vamos al teatro.
 das Kino|el cine|Das Kino ist um die Ecke.|El cine está a la vuelta.
-die Hochzeit|el casamiento|Die Hochzeit ist im Mai.|El casamiento es en mayo.
 der Besuch|la visita|Wir haben heute Besuch.|Hoy tenemos visitas.
-der Nachbar|el vecino|Mein Nachbar ist sehr freundlich.|Mi vecino es muy amable.
 das Gesetz|la ley|Das Gesetz ist neu.|La ley es nueva.
 die Politik|la política|Ich interessiere mich für Politik.|Me interesa la política.
 die Gegend|la zona|Die Gegend ist sehr ruhig.|La zona es muy tranquila.
@@ -365,7 +348,6 @@ die Entwicklung|el desarrollo|Die Entwicklung ist positiv.|El desarrollo es posi
 die Veränderung|el cambio|Die Veränderung ist groß.|El cambio es grande.
 der Vorschlag|la propuesta|Das ist ein guter Vorschlag.|Es una buena propuesta.
 der Gedanke|el pensamiento|Der Gedanke gefällt mir.|El pensamiento me gusta.
-das Gefühl|el sentimiento / la sensación|Ich habe ein gutes Gefühl.|Tengo un buen presentimiento.
 die Stimme|la voz|Deine Stimme klingt müde.|Tu voz suena cansada.
 das Gespräch|la conversación|Das Gespräch war kurz.|La conversación fue corta.
 die Diskussion|la discusión|Die Diskussion war lang.|La discusión fue larga.
@@ -475,7 +457,6 @@ sich unterhalten|conversar|Wir unterhalten uns gern mit Leuten.|Nos gusta conver
 diskutieren|discutir (un tema)|Wir diskutieren das morgen.|Eso lo discutimos mañana.
 berichten|informar / contar|Wir berichten über das Wetter.|Informamos sobre el clima.
 mitteilen|comunicar|Wir möchten Ihnen etwas mitteilen.|Queremos comunicarle algo.
-gratulieren|felicitar|Wir gratulieren dir zum Geburtstag.|Te felicitamos por tu cumpleaños.
 küssen|besar|Die beiden küssen sich.|Los dos se besan.
 umarmen|abrazar|Wir umarmen unsere Oma.|Abrazamos a nuestra abuela.
 vermissen|extrañar|Wir vermissen dich sehr.|Te extrañamos mucho.
@@ -507,7 +488,6 @@ der Topf|la olla|Der Topf ist zu klein.|La olla es demasiado chica.
 die Waschmaschine|el lavarropas|Die Waschmaschine ist neu.|El lavarropas es nuevo.
 der Staubsauger|la aspiradora|Der Staubsauger ist laut.|La aspiradora es ruidosa.
 die Mülltonne|el tacho de basura|Die Mülltonne steht vor dem Haus.|El tacho está frente a la casa.
-der Flur|el pasillo / el hall|Im Flur hängt ein Spiegel.|En el pasillo hay un espejo colgado.
 die Garage|la cochera|Das Auto steht in der Garage.|El auto está en la cochera.
 die Wiese|el prado|Die Kinder spielen auf der Wiese.|Los chicos juegan en el prado.
 das Gras|el pasto|Das Gras ist nass.|El pasto está mojado.
@@ -522,12 +502,10 @@ die Tankstelle|la estación de servicio|Die Tankstelle ist gleich da vorne.|La e
 die Werkstatt|el taller|Das Auto ist in der Werkstatt.|El auto está en el taller.
 der Marktplatz|la plaza del mercado|Der Marktplatz ist im Zentrum.|La plaza del mercado está en el centro.
 der Briefkasten|el buzón|Der Briefkasten ist leer.|El buzón está vacío.
-die Briefmarke|la estampilla|Ich brauche eine Briefmarke.|Necesito una estampilla.
 die Bäckerei|la panadería|Die Bäckerei öffnet um sechs.|La panadería abre a las seis.
 der Friseur|el peluquero|Ich gehe morgen zum Friseur.|Mañana voy a la peluquería.
 die Jugendherberge|el albergue juvenil|Die Jugendherberge ist günstig.|El albergue juvenil es barato.
 der Campingplatz|el camping|Der Campingplatz liegt am See.|El camping queda junto al lago.
-der Flughafen|el aeropuerto|Der Flughafen ist weit weg.|El aeropuerto queda lejos.
 der Hafen|el puerto|Im Hafen liegen viele Schiffe.|En el puerto hay muchos barcos.
 die Autobahn|la autopista|Auf der Autobahn ist viel Verkehr.|En la autopista hay mucho tráfico.
 der Bäcker|el panadero|Der Bäcker steht um vier auf.|El panadero se levanta a las cuatro.
@@ -548,9 +526,6 @@ die Schulter|el hombro|Die Schulter ist steif.|El hombro está duro.
 der Magen|el estómago|Mein Magen tut weh.|Me duele el estómago.
 die Erkältung|el resfrío|Ich habe eine Erkältung.|Tengo un resfrío.
 der Schnupfen|el catarro|Ich habe Schnupfen.|Tengo la nariz tapada.
-die Grippe|la gripe|Die Grippe dauert eine Woche.|La gripe dura una semana.
-die Allergie|la alergia|Ich habe eine Allergie.|Tengo una alergia.
-das Pflaster|la curita|Ich brauche ein Pflaster.|Necesito una curita.
 die Sekunde|el segundo|Warte bitte eine Sekunde.|Esperá un segundo, por favor.
 der Nachmittag|la tarde|Am Nachmittag habe ich frei.|A la tarde estoy libre.
 der Mittag|el mediodía|Am Mittag essen wir zusammen.|Al mediodía comemos juntos.
@@ -616,7 +591,6 @@ die Medikamente|los medicamentos|Er muss drei Medikamente nehmen.|Tiene que toma
 die Nachspeise|el postre|Als Nachspeise gibt es Eis.|De postre hay helado.
 die Öffnungszeiten|el horario de atención|Die Öffnungszeiten stehen an der Tür.|El horario de atención está en la puerta.
 die Packung|el paquete|Eine Packung Nudeln kostet einen Euro.|Un paquete de fideos cuesta un euro.
-die Pause|el descanso|Wir machen zehn Minuten Pause.|Hacemos diez minutos de descanso.
 die Rechnung|la factura|Die Rechnung kommt per Post.|La factura llega por correo.
 die Rezeption|la recepción|Fragen Sie bitte an der Rezeption.|Pregunte por favor en la recepción.
 die Rückfahrt|el viaje de vuelta|Die Rückfahrt dauert drei Stunden.|El viaje de vuelta dura tres horas.
@@ -701,7 +675,6 @@ starten|arrancar / iniciar|Der Zug will gleich starten.|El tren está por arranc
 stecken|meter / estar metido|Ich will den Stecker in die Dose stecken.|Quiero meter el enchufe en el tomacorriente.
 testen|probar|Wir wollen das neue Programm testen.|Queremos probar el programa nuevo.
 treten|pisar|Du darfst nicht auf die Blumen treten.|No debés pisar las flores.
-verletzen|lastimar|Du solltest dich nicht verletzen.|No deberías lastimarte.
 verpacken|empacar / envolver|Wir müssen das Geschenk verpacken.|Tenemos que envolver el regalo.
 verschlafen|quedarse dormido|Ich darf morgen nicht verschlafen.|Mañana no puedo quedarme dormido.
 verschwinden|desaparecer|Die Sonne wird bald hinter den Wolken verschwinden.|El sol va a desaparecer pronto detrás de las nubes.
@@ -733,12 +706,10 @@ meist|la mayoría de las veces|Am Wochenende schlafe ich meist lange.|El fin de 
 sonst|si no / por lo demás|Beeil dich, sonst verpasst du den Zug.|Apurate, o perdés el tren.
 vorhin|hace un rato|Ich habe ihn vorhin gesehen.|Lo vi hace un rato.
 ## B1
-sich bewerben|postularse|Ich möchte mich um die Stelle bewerben.|Quiero postularme al puesto.
 vorbereiten|preparar|Wir müssen die Reise gut vorbereiten.|Tenemos que preparar bien el viaje.
 teilnehmen|participar|Wir wollen am Kurs teilnehmen.|Queremos participar del curso.
 sich entschuldigen|disculparse|Ich muss mich bei ihr entschuldigen.|Tengo que disculparme con ella.
 sich beschweren|quejarse|Wir wollen uns beim Hotel beschweren.|Queremos quejarnos con el hotel.
-sich ärgern|enojarse|Ich ärgere mich oft über den Lärm.|Me enojo seguido por el ruido.
 sich kümmern|ocuparse|Wir kümmern uns um die Kinder.|Nos ocupamos de los chicos.
 sich erinnern|acordarse|Ich kann mich nicht erinnern.|No me puedo acordar.
 verbinden|conectar / unir|Die Brücke verbindet zwei Städte.|El puente une dos ciudades.
@@ -748,7 +719,6 @@ verbessern|mejorar|Wir wollen unser Deutsch verbessern.|Queremos mejorar nuestro
 verkaufen|vender|Wir verkaufen das alte Auto.|Vendemos el auto viejo.
 vermieten|alquilar (dar en alquiler)|Sie wollen die Wohnung vermieten.|Quieren alquilar el departamento.
 mieten|alquilar (tomar en alquiler)|Wir mieten ein Zimmer.|Alquilamos una habitación.
-umziehen|mudarse|Wir wollen nächstes Jahr umziehen.|Queremos mudarnos el año que viene.
 abgeben|entregar|Man muss die Schlüssel abgeben.|Hay que entregar las llaves.
 annehmen|aceptar / suponer|Ich möchte den Vorschlag annehmen.|Quiero aceptar la propuesta.
 ablehnen|rechazar|Wir müssen das Angebot ablehnen.|Tenemos que rechazar la oferta.
@@ -790,7 +760,6 @@ teilen|compartir / dividir|Wir teilen das Zimmer.|Compartimos el cuarto.
 übernehmen|asumir / hacerse cargo|Wir übernehmen die Kosten.|Nos hacemos cargo de los costos.
 überprüfen|revisar / verificar|Wir überprüfen die Zahlen.|Verificamos los números.
 übersetzen|traducir|Kannst du das bitte übersetzen?|¿Podés traducir esto, por favor?
-unterschreiben|firmar|Hier müssen Sie unterschreiben.|Acá tiene que firmar.
 unterstützen|apoyar|Wir unterstützen dein Projekt.|Apoyamos tu proyecto.
 untersuchen|examinar / investigar|Der Arzt will mich untersuchen.|El médico me quiere examinar.
 verbreiten|difundir|Die Nachricht verbreitet sich schnell.|La noticia se difunde rápido.
@@ -853,7 +822,6 @@ die Ordnung|el orden|In meinem Zimmer ist Ordnung.|En mi cuarto hay orden.
 der Raum|el espacio / la sala|Der Raum ist zu klein.|La sala es demasiado chica.
 die Reaktion|la reacción|Seine Reaktion war schnell.|Su reacción fue rápida.
 die Rolle|el papel|Das spielt keine große Rolle.|Eso no tiene gran importancia.
-die Sorge|la preocupación|Ich mache mir Sorgen.|Estoy preocupado.
 der Stress|el estrés|Ich habe viel Stress.|Tengo mucho estrés.
 der Umgang|el trato|Der Umgang mit Kindern macht Spaß.|El trato con los chicos es divertido.
 die Ursache|la causa|Die Ursache ist noch unklar.|La causa todavía no está clara.
@@ -909,7 +877,6 @@ sinnvoll|con sentido / útil|Das ist eine sinnvolle Idee.|Es una idea con sentid
 sorgfältig|cuidadoso|Er arbeitet sehr sorgfältig.|Trabaja con mucho cuidado.
 spürbar|perceptible|Die Veränderung ist spürbar.|El cambio se nota.
 teilweise|en parte|Das stimmt nur teilweise.|Eso es cierto solo en parte.
-überrascht|sorprendido|Ich bin überrascht.|Estoy sorprendido.
 unabhängig|independiente|Sie will unabhängig sein.|Quiere ser independiente.
 verschieden|distinto / diverso|Wir haben verschiedene Meinungen.|Tenemos opiniones distintas.
 verständlich|comprensible|Das ist gut verständlich.|Eso es fácil de entender.
@@ -946,7 +913,6 @@ immerhin|al menos / algo es algo|Immerhin hat es nicht geregnet.|Al menos no llo
 allerdings|eso sí|Es ist schön, allerdings teuer.|Es lindo, eso sí, caro.
 jedenfalls|en todo caso|Jedenfalls bin ich bereit.|En todo caso, estoy listo.
 übrigens|por cierto|Übrigens habe ich gestern angerufen.|Por cierto, ayer llamé.
-abschließen|cerrar con llave / concluir|Wir müssen die Tür abschließen.|Tenemos que cerrar la puerta con llave.
 abnehmen|bajar de peso / sacar|Ich möchte fünf Kilo abnehmen.|Quiero bajar cinco kilos.
 anbieten|ofrecer|Wir können Ihnen einen Kaffee anbieten.|Le podemos ofrecer un café.
 ansehen|mirar / ver|Wir wollen uns die Stadt ansehen.|Queremos ver la ciudad.
@@ -1075,8 +1041,6 @@ die Demokratie|la democracia|Die Demokratie braucht Mitbestimmung.|La democracia
 die Armut|la pobreza|Die Armut nimmt zu.|La pobreza aumenta.
 der Reichtum|la riqueza|Reichtum macht nicht glücklich.|La riqueza no hace feliz.
 die Arbeitslosigkeit|el desempleo|Die Arbeitslosigkeit sinkt.|El desempleo baja.
-die Jugend|la juventud|Die Jugend hat viele Fragen.|La juventud tiene muchas preguntas.
-das Alter|la edad / la vejez|Im Alter will ich reisen.|De viejo quiero viajar.
 das Ehrenamt|el trabajo voluntario|Das Ehrenamt macht viel Freude.|El trabajo voluntario da mucha alegría.
 die Spende|la donación|Wir brauchen jede Spende.|Necesitamos cada donación.
 die Veranstaltung|el evento|Die Veranstaltung beginnt um acht.|El evento empieza a las ocho.
@@ -1089,12 +1053,10 @@ das Ausland|el exterior|Er arbeitet im Ausland.|Trabaja en el exterior.
 der Tourist|el turista|Die Touristen fotografieren alles.|Los turistas fotografían todo.
 die Nachrichten|las noticias|Ich schaue jeden Abend die Nachrichten.|Miro las noticias todas las noches.
 das Fernsehen|la televisión|Im Fernsehen läuft ein Film.|En la televisión pasan una película.
-die Sendung|el programa (de TV / radio)|Die Sendung ist sehr beliebt.|El programa es muy popular.
 das Netzwerk|la red|Das Netzwerk ist langsam.|La red está lenta.
 die Erfindung|el invento|Das Telefon war eine große Erfindung.|El teléfono fue un gran invento.
 der Link|el enlace|Ich schicke dir den Link.|Te mando el enlace.
 die Behandlung|el tratamiento|Die Behandlung dauert zwei Wochen.|El tratamiento dura dos semanas.
-die Untersuchung|el examen (médico) / la investigación|Die Untersuchung war kurz.|El examen fue corto.
 der Patient|el paciente|Der Patient wartet.|El paciente espera.
 die Diät|la dieta|Ich mache eine Diät.|Estoy a dieta.
 das Gewicht|el peso|Mein Gewicht ist gut.|Mi peso está bien.
@@ -1114,12 +1076,10 @@ das Klima|el clima (general)|Das Klima ändert sich.|El clima está cambiando.
 die Katastrophe|la catástrofe|Die Katastrophe war schrecklich.|La catástrofe fue terrible.
 der Unterricht|la clase / la enseñanza|Der Unterricht beginnt um acht.|La clase empieza a las ocho.
 die Kenntnisse|los conocimientos|Seine Kenntnisse sind sehr gut.|Sus conocimientos son muy buenos.
-der Reisepass|el pasaporte|Mein Reisepass ist abgelaufen.|Mi pasaporte venció.
 das Visum|la visa|Ich brauche ein Visum.|Necesito una visa.
 die Reservierung|la reserva|Die Reservierung gilt bis acht Uhr.|La reserva vale hasta las ocho.
 der Aufenthalt|la estadía|Der Aufenthalt dauert eine Woche.|La estadía dura una semana.
 der Fahrplan|el horario (de transporte)|Der Fahrplan hängt am Bahnhof.|El horario está colgado en la estación.
-der Bahnsteig|el andén|Der Zug steht auf Bahnsteig drei.|El tren está en el andén tres.
 die Hinfahrt|el viaje de ida|Die Hinfahrt dauert drei Stunden.|El viaje de ida dura tres horas.
 die Sehenswürdigkeit|la atracción turística|Die Sehenswürdigkeiten sind alle in der Altstadt.|Las atracciones están todas en el casco antiguo.
 das Souvenir|el souvenir|Ich kaufe ein Souvenir.|Compro un souvenir.
@@ -1133,7 +1093,6 @@ der Einkauf|la compra|Der Einkauf dauert eine Stunde.|La compra lleva una hora.
 der Einkaufswagen|el carrito de compras|Der Einkaufswagen ist voll.|El carrito está lleno.
 die Verpackung|el envase / el embalaje|Die Verpackung ist aus Papier.|El envase es de papel.
 der Kassenzettel|el ticket de compra|Den Kassenzettel bitte aufheben.|Por favor, guarde el ticket.
-die Quittung|el recibo|Ich brauche eine Quittung.|Necesito un recibo.
 die Reklamation|el reclamo (por un producto)|Die Reklamation wurde angenommen.|El reclamo fue aceptado.
 der Umtausch|el cambio (de un producto)|Der Umtausch ist kostenlos.|El cambio es gratis.
 die Ansicht|la opinión / la vista|Ich bin anderer Ansicht.|Soy de otra opinión.
@@ -1217,7 +1176,6 @@ die Gesellschaft|la sociedad|Die Gesellschaft verändert sich.|La sociedad cambi
 die Kenntnis|el conocimiento|Er hat gute Kenntnisse in Mathe.|Tiene buenos conocimientos de matemática.
 die Schwierigkeit|la dificultad|Wir haben eine Schwierigkeit.|Tenemos una dificultad.
 die Vorsicht|la precaución|Vorsicht ist besser als Nachsicht.|Más vale prevenir que curar.
-der Vertrag|el contrato|Ich unterschreibe den Vertrag.|Firmo el contrato.
 der Wunsch|el deseo|Das ist mein größter Wunsch.|Ese es mi mayor deseo.
 das Ergebnis|el resultado|Das Ergebnis ist gut.|El resultado es bueno.
 das Angebot|la oferta|Das Angebot ist sehr günstig.|La oferta es muy conveniente.
@@ -1246,7 +1204,6 @@ die Zustimmung|la aprobación|Dafür brauchen wir deine Zustimmung.|Para eso nec
 der Abschied|la despedida|Der Abschied fiel uns schwer.|La despedida nos costó.
 der Ausländer|el extranjero|Als Ausländer braucht man ein Visum.|Como extranjero se necesita una visa.
 der Bewohner|el habitante|Die Bewohner des Hauses sind freundlich.|Los habitantes de la casa son amables.
-der Mitarbeiter|el empleado|Jeder Mitarbeiter bekommt einen Schlüssel.|Cada empleado recibe una llave.
 der Ort|el lugar|Das ist ein schöner Ort zum Wohnen.|Es un lindo lugar para vivir.
 der Rentner|el jubilado|Mein Onkel ist seit zwei Jahren Rentner.|Mi tío es jubilado desde hace dos años.
 der Rückweg|el camino de vuelta|Auf dem Rückweg kaufen wir Brot.|En el camino de vuelta compramos pan.
@@ -1367,7 +1324,6 @@ die Wohnungssuche|la búsqueda de vivienda|Die Wohnungssuche ist in Berlin schwi
 die Zulassung|la admisión / la habilitación|Er wartet auf die Zulassung zur Universität.|Espera la admisión a la universidad.
 der Absender|el remitente|Der Absender des Briefes ist unbekannt.|El remitente de la carta es desconocido.
 der Abstand|la distancia|Bitte halten Sie Abstand.|Por favor, mantenga la distancia.
-der Ärger|el enojo / el problema|Das gibt nur Ärger.|Eso solo trae problemas.
 der Dienst|el servicio / el turno|Heute Nacht habe ich Dienst.|Esta noche tengo turno.
 der Entschluss|la determinación|Sein Entschluss steht fest.|Su determinación es firme.
 der Gegner|el oponente|Unser Gegner spielt sehr stark.|Nuestro oponente juega muy fuerte.
@@ -1397,10 +1353,8 @@ bemühen|esforzarse|Ich werde mich bemühen, pünktlich zu sein.|Voy a esforzarm
 beneiden|envidiar|Ich beneide dich um deine Ruhe.|Te envidio por tu calma.
 drucken|imprimir|Ich muss das Formular drucken.|Tengo que imprimir el formulario.
 einbrechen|entrar a robar|Die Diebe wollen nachts einbrechen.|Los ladrones quieren entrar a robar de noche.
-einzahlen|depositar|Ich will Geld auf mein Konto einzahlen.|Quiero depositar plata en mi cuenta.
 entfallen|quedar sin efecto|Der Termin kann leider entfallen.|La cita lamentablemente puede quedar sin efecto.
 entnehmen|extraer / deducir|Dem Text lässt sich viel entnehmen.|Del texto se puede deducir mucho.
-erkälten|resfriarse|Ich will mich nicht erkälten.|No quiero resfriarme.
 gleichen|parecerse|Die Brüder gleichen sich sehr.|Los hermanos se parecen mucho.
 klagen|quejarse|Er klagt ständig über die Arbeit.|Se queja constantemente del trabajo.
 leiden|sufrir|Sie leidet an Rückenschmerzen.|Sufre de dolores de espalda.
@@ -2078,7 +2032,6 @@ das Kennzeichen|la patente|Das Kennzeichen ist nicht lesbar.|La patente no se pu
 der Rucksack|la mochila|Mein Rucksack ist schwer.|Mi mochila es pesada.
 das Handgepäck|el equipaje de mano|Das Handgepäck ist begrenzt.|El equipaje de mano es limitado.
 der Zwischenstopp|la escala|Wir haben einen Zwischenstopp in Wien.|Tenemos una escala en Viena.
-die Passkontrolle|el control de pasaportes|Die Passkontrolle dauert lange.|El control de pasaportes tarda mucho.
 die Pauschalreise|el viaje con paquete|Die Pauschalreise ist günstig.|El viaje con paquete es barato.
 die Rundreise|el circuito turístico|Wir machen eine Rundreise.|Hacemos un circuito turístico.
 die Halbpension|la media pensión|Die Halbpension kostet extra.|La media pensión cuesta extra.
@@ -2381,7 +2334,6 @@ die Abwechslung|la variedad / el cambio|Wir brauchen Abwechslung.|Necesitamos va
 der Abschnitt|el tramo / el apartado|Der Abschnitt ist kurz.|El apartado es corto.
 die Altstadt|el casco antiguo|Die Altstadt ist wunderschön.|El casco antiguo es hermosísimo.
 die Anlage|la instalación / el complejo|Die Anlage ist sehr groß.|La instalación es muy grande.
-die Anmeldung|la inscripción|Die Anmeldung läuft online.|La inscripción es en línea.
 die Anreise|la llegada (viaje)|Die Anreise dauert zwei Tage.|El viaje de llegada dura dos días.
 die Anstrengung|el esfuerzo|Die Anstrengung hat sich gelohnt.|El esfuerzo valió la pena.
 die Anwendung|la aplicación|Die Anwendung ist einfach.|La aplicación es simple.

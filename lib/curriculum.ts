@@ -46,6 +46,7 @@ import { PRACTICE_A1 } from "./content/practice-a1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
 import { LONG_LISTENINGS_A2 } from "./content/long-listening-a2.ts";
 import { THEMATIC, THEMATIC_B1 } from "./content/thematic.ts";
+import { THEMATIC_A2 } from "./content/thematic-a2.ts";
 
 export type Vocab = {
   de: string;
@@ -380,7 +381,7 @@ for (const u of UNITS) {
   const long = LONG_LISTENINGS[u.id] ?? LONG_LISTENINGS_A2[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
   // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
-  const them = THEMATIC[u.id] ?? THEMATIC_B1[u.id];
+  const them = THEMATIC[u.id] ?? THEMATIC_B1[u.id] ?? THEMATIC_A2[u.id];
   if (them && !u.lessons.some((l) => l.id === them.id)) u.lessons.push(them);
 }
 
