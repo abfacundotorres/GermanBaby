@@ -45,6 +45,7 @@ import { PRACTICE_C1 } from "./content/practice-c1.ts";
 import { PRACTICE_A1 } from "./content/practice-a1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
 import { LONG_LISTENINGS_A2 } from "./content/long-listening-a2.ts";
+import { LONG_LISTENINGS_A1 } from "./content/long-listening-a1.ts";
 import { THEMATIC, THEMATIC_B1 } from "./content/thematic.ts";
 import { THEMATIC_A2 } from "./content/thematic-a2.ts";
 
@@ -378,7 +379,7 @@ for (const u of UNITS) {
   const fp = FREE_PROMPTS[u.id];
   if (pr && fp && !pr.exercises.some((e) => e.kind === "free")) pr.exercises.push({ kind: "free", ...fp });
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
-  const long = LONG_LISTENINGS[u.id] ?? LONG_LISTENINGS_A2[u.id];
+  const long = LONG_LISTENINGS[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
   // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
   const them = THEMATIC[u.id] ?? THEMATIC_B1[u.id] ?? THEMATIC_A2[u.id];

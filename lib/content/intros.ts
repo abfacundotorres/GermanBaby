@@ -567,6 +567,18 @@ export const INTROS: Record<string, LessonNotes> = {
   },
   "pruefung/lesen": { intro: [READING_TIP], summary: ["Aprendiste palabras para estudiar: die Stunde, das Wort, schwer, üben."] },
 
+  // ---------- Escuchas largas de A1
+  ...Object.fromEntries(
+    Object.entries({
+      "wohnung/escucha-larga": "ver un departamento",
+      "stadt/escucha-larga": "preguntar el camino",
+      "essen/escucha-larga": "pedir en un restaurante",
+      "modal/escucha-larga": "organizar un fin de semana",
+      "perfekt/escucha-larga": "contar lo que pasó en la semana",
+      "pruefung/escucha-larga": "dar datos personales en una oficina",
+    }).map(([k, topic]): [string, LessonNotes] => [k, { intro: [LONG_TIP_A2], summary: [`Escuchaste una conversación larga sobre ${topic}.`] }]),
+  ),
+
   // ---------- Escuchas largas de A2
   ...Object.fromEntries(
     Object.entries({
@@ -585,6 +597,13 @@ export const INTROS: Record<string, LessonNotes> = {
   // ---------- Prácticas extra de A1
   ...Object.fromEntries(
     Object.entries({
+      "hallo/practica": "los saludos y presentarse",
+      "zahlen/practica": "los números y la edad",
+      "cafe/practica": "pedir en un café",
+      "familie/practica": "la familia y «mein»",
+      "verben/practica": "los verbos con ich, du, er y wir",
+      "zeit/practica": "los días, la hora y las citas",
+      "markt/practica": "los números hasta 100 y los precios",
       "alltag/practica": "las horas, los verbos separables y «dann»",
       "wohnung/practica": "los ambientes, los muebles y «es gibt»",
       "stadt/practica": "los lugares, el camino y el dativo",
