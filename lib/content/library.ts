@@ -2083,4 +2083,124 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-arztbesuch", level: "B1", emoji: "🩺", topic: "Ir al médico",
+    reading: {
+      title: "Beim Arzt",
+      text: [
+        "Wer in Deutschland krank ist, ruft zuerst in der Praxis an und macht einen Termin aus. Bei starken Schmerzen kann man auch ohne Termin kommen, muss dann aber oft lange im Wartezimmer sitzen. Man bringt die Versichertenkarte mit, denn ohne sie wird die Behandlung nicht automatisch bezahlt.",
+        "Im Gespräch beschreibt man, wo es wehtut und seit wann die Beschwerden bestehen. Der Arzt untersucht den Patienten und stellt Fragen, zum Beispiel, ob man Medikamente nimmt oder Allergien hat. Manchmal schickt er zu einem Facharzt oder bestellt einen Bluttest.",
+        "Am Ende bekommt man oft ein Rezept, das man in der Apotheke einlöst. Wer wegen Krankheit nicht arbeiten kann, braucht eine Krankschreibung für den Arbeitgeber. Bei kleinen Problemen hilft manchmal auch der Apotheker mit einem Rat, ohne dass man in die Praxis gehen muss.",
+      ],
+      translation: [
+        "Quien está enfermo en Alemania llama primero al consultorio y pide un turno. Con dolores fuertes también se puede ir sin turno, pero entonces muchas veces hay que esperar mucho en la sala de espera. Se lleva la tarjeta del seguro, porque sin ella el tratamiento no se paga automáticamente.",
+        "En la charla se describe dónde duele y desde cuándo existen las molestias. El médico examina al paciente y hace preguntas, por ejemplo si toma medicamentos o tiene alergias. A veces lo manda a un especialista o pide un análisis de sangre.",
+        "Al final muchas veces uno recibe una receta, que se canjea en la farmacia. Quien no puede trabajar por enfermedad necesita un certificado médico para el empleador. Con problemas chicos a veces también ayuda el farmacéutico con un consejo, sin tener que ir al consultorio.",
+      ],
+      questions: [
+        c("¿Qué se hace primero cuando uno está enfermo?", ["Llamar al consultorio y pedir turno", "Ir a la farmacia", "Esperar una semana", "Escribir una carta"], "«ruft zuerst in der Praxis an»."),
+        c("¿Por qué hay que llevar la tarjeta del seguro?", ["Sin ella el tratamiento no se paga automáticamente", "Para sacar fotos", "Para viajar", "Para entrar al edificio"], "«ohne sie wird die Behandlung nicht automatisch bezahlt»."),
+        c("¿Qué hace el médico durante la consulta?", ["Examina y hace preguntas", "Cocina", "Cobra en efectivo", "Llama al empleador"], "«untersucht ... stellt Fragen»."),
+        c("¿Dónde se canjea la receta?", ["En la farmacia", "En el banco", "En el correo", "En la escuela"], "«in der Apotheke»."),
+        c("¿Para qué sirve la Krankschreibung?", ["Para avisar al empleador", "Para viajar", "Para pagar menos", "Para alquilar"], "«für den Arbeitgeber»."),
+        tf("Con dolores fuertes no se puede ir sin turno.", false, "«kann man auch ohne Termin kommen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-handyvertrag", level: "B1", emoji: "📱", topic: "El contrato del celular",
+    reading: {
+      title: "Ein neuer Handyvertrag",
+      text: [
+        "Markus braucht einen neuen Handyvertrag, weil sein alter Vertrag bald endet. Im Internet findet er viele Angebote, aber die Preise sind schwer zu vergleichen. Manche Tarife sind am Anfang sehr billig und werden nach einem Jahr teurer.",
+        "Er achtet deshalb auf mehrere Dinge: wie viel Datenvolumen im Monat enthalten ist, wie lange die Mindestlaufzeit dauert und wie schnell man kündigen kann. Ein Freund hat ihm erzählt, dass man bei vielen Verträgen drei Monate vor dem Ende kündigen muss, sonst verlängert sich der Vertrag automatisch.",
+        "Am Ende entscheidet sich Markus für einen Tarif ohne lange Bindung. Er bezahlt etwas mehr pro Monat, aber er ist flexibler. Den alten Vertrag kündigt er noch heute per E-Mail und schickt zur Sicherheit auch einen Brief, damit er später einen Beweis hat.",
+      ],
+      translation: [
+        "Markus necesita un contrato de celular nuevo porque su contrato viejo termina pronto. En internet encuentra muchas ofertas, pero los precios son difíciles de comparar. Algunos planes son muy baratos al principio y después de un año se vuelven más caros.",
+        "Por eso se fija en varias cosas: cuántos datos incluye por mes, cuánto dura el plazo mínimo y qué tan rápido se puede dar de baja. Un amigo le contó que en muchos contratos hay que darse de baja tres meses antes del final, si no el contrato se renueva automáticamente.",
+        "Al final Markus se decide por un plan sin compromiso largo. Paga un poco más por mes, pero es más flexible. El contrato viejo lo cancela hoy mismo por correo electrónico y para estar seguro manda también una carta, para tener después una prueba.",
+      ],
+      questions: [
+        c("¿Por qué busca Markus un contrato nuevo?", ["Su contrato viejo termina pronto", "Perdió el celular", "Se mudó", "Quiere regalarlo"], "«sein alter Vertrag bald endet»."),
+        c("¿Qué problema tienen algunos planes?", ["Se vuelven más caros después de un año", "No tienen señal", "Son gratis", "No incluyen llamadas"], "«nach einem Jahr teurer»."),
+        c("¿Cuándo hay que darse de baja en muchos contratos?", ["Tres meses antes del final", "El último día", "Un año después", "Nunca"], "«drei Monate vor dem Ende»."),
+        c("¿Qué pasa si no se da de baja a tiempo?", ["El contrato se renueva automáticamente", "Se cancela solo", "Es gratis", "Se pierde el número"], "«verlängert sich ... automatisch»."),
+        c("¿Qué plan elige al final?", ["Uno sin compromiso largo", "El más barato de todos", "El más largo", "Ninguno"], "«ohne lange Bindung»."),
+        tf("Markus cancela solamente por teléfono.", false, "Cancela por e-mail y además manda una carta."),
+      ],
+    },
+  },
+  {
+    id: "b1-ehrenamt", level: "B1", emoji: "🤲", topic: "El trabajo voluntario",
+    reading: {
+      title: "Ehrenamtlich helfen",
+      text: [
+        "In Deutschland engagieren sich Millionen Menschen ehrenamtlich, das heißt, sie arbeiten freiwillig und ohne Bezahlung. Sie helfen in der Feuerwehr, in Sportvereinen, in Kirchengemeinden oder bei der Tafel, wo Lebensmittel an Menschen mit wenig Geld verteilt werden.",
+        "Die Gründe sind sehr unterschiedlich. Manche wollen etwas für die Gesellschaft tun, andere möchten neue Leute kennenlernen oder Erfahrungen für den Beruf sammeln. Ältere Menschen finden durch ein Ehrenamt oft eine neue Aufgabe, wenn sie nicht mehr arbeiten.",
+        "Ein Ehrenamt braucht Zeit und Verlässlichkeit, denn andere verlassen sich auf einen. Trotzdem sagen die meisten, dass sie viel zurückbekommen: Dankbarkeit, Freundschaften und das Gefühl, gebraucht zu werden. Wer anfangen möchte, kann sich bei der Gemeinde oder im Internet über offene Stellen informieren.",
+      ],
+      translation: [
+        "En Alemania millones de personas se comprometen de forma voluntaria, es decir, trabajan libremente y sin paga. Ayudan en los bomberos, en clubes deportivos, en parroquias o en el banco de alimentos, donde se reparte comida a gente con poco dinero.",
+        "Los motivos son muy distintos. Algunos quieren hacer algo por la sociedad, otros quieren conocer gente nueva o juntar experiencia para el trabajo. Las personas mayores muchas veces encuentran en el voluntariado una nueva tarea cuando ya no trabajan.",
+        "Un voluntariado requiere tiempo y confiabilidad, porque otros cuentan con uno. Aun así, la mayoría dice que recibe mucho a cambio: gratitud, amistades y la sensación de ser necesario. Quien quiere empezar puede informarse sobre puestos libres en el municipio o en internet.",
+      ],
+      questions: [
+        c("¿Qué significa «ehrenamtlich»?", ["Voluntariamente y sin paga", "Con un sueldo alto", "De noche", "En el extranjero"], "«freiwillig und ohne Bezahlung»."),
+        c("¿Qué se hace en la Tafel?", ["Se reparte comida a gente con poco dinero", "Se vende ropa", "Se enseña alemán", "Se arreglan autos"], "«Lebensmittel ... verteilt»."),
+        c("¿Qué buscan algunos voluntarios?", ["Conocer gente y juntar experiencia", "Ganar mucho dinero", "Evitar a otros", "Dormir más"], "«neue Leute kennenlernen ... Erfahrungen»."),
+        c("¿Qué encuentran muchas personas mayores?", ["Una nueva tarea", "Un auto", "Un departamento", "Una deuda"], "«eine neue Aufgabe»."),
+        c("¿Qué necesita un voluntariado?", ["Tiempo y confiabilidad", "Un título", "Mucho dinero", "Un auto"], "«Zeit und Verlässlichkeit»."),
+        tf("Casi nadie recibe algo a cambio del voluntariado.", false, "«viel zurückbekommen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-anmeldung", level: "B1", emoji: "🏛️", topic: "Registrarse en el municipio",
+    reading: {
+      title: "Die Anmeldung",
+      text: [
+        "Wer nach Deutschland zieht oder innerhalb des Landes umzieht, muss sich innerhalb von zwei Wochen beim Einwohnermeldeamt anmelden. Das ist Pflicht, und ohne diese Anmeldung bekommt man zum Beispiel kein Konto bei vielen Banken und keine Steuernummer.",
+        "Für den Termin braucht man den Reisepass oder den Ausweis und eine Bestätigung vom Vermieter, auf der steht, dass man in der Wohnung wohnt. Oft muss man das Formular vorher online oder vor Ort ausfüllen. Die Termine sind in großen Städten schnell vergeben, deshalb sollte man früh nachschauen.",
+        "Nach der Anmeldung erhält man eine Meldebescheinigung. Sie ist wichtig, weil man sie bei vielen Ämtern, bei der Krankenkasse und beim Arbeitgeber vorzeigen muss. Wer sich später wieder abmeldet, zum Beispiel beim Umzug ins Ausland, sollte das nicht vergessen.",
+      ],
+      translation: [
+        "Quien se muda a Alemania o se muda dentro del país tiene que registrarse dentro de dos semanas en la oficina de registro de residentes. Es obligatorio y sin este registro no se consigue, por ejemplo, una cuenta en muchos bancos ni un número de impuestos.",
+        "Para el turno se necesita el pasaporte o el documento de identidad y una confirmación del propietario donde figura que uno vive en el departamento. Muchas veces hay que llenar el formulario antes, en línea o en el lugar. En las ciudades grandes los turnos se agotan rápido, por eso conviene mirar con anticipación.",
+        "Después del registro uno recibe un certificado de residencia. Es importante porque hay que mostrarlo en muchas oficinas, en la obra social y ante el empleador. Quien más tarde se da de baja, por ejemplo al mudarse al exterior, no debería olvidarlo.",
+      ],
+      questions: [
+        c("¿En cuánto tiempo hay que registrarse?", ["Dentro de dos semanas", "Dentro de un año", "En un día", "Cuando se quiera"], "«innerhalb von zwei Wochen»."),
+        c("¿Qué pasa sin el registro?", ["Es difícil abrir una cuenta bancaria", "Nada", "Se recibe un premio", "Se viaja gratis"], "«kein Konto bei vielen Banken»."),
+        c("¿Qué hay que llevar al turno?", ["Documento y confirmación del propietario", "Solo dinero", "Una foto del auto", "El diploma"], "«Reisepass ... Bestätigung vom Vermieter»."),
+        c("¿Por qué conviene mirar los turnos con anticipación?", ["Se agotan rápido en ciudades grandes", "Son gratis", "Son de noche", "Cierran en verano"], "«schnell vergeben»."),
+        c("¿Qué se recibe después del registro?", ["Un certificado de residencia", "Una llave", "Un pasaje", "Un contrato"], "«Meldebescheinigung»."),
+        tf("Al mudarse al exterior no hace falta darse de baja.", false, "«sollte das nicht vergessen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-nachrichten", level: "B1", emoji: "📰", topic: "Cómo nos informamos",
+    reading: {
+      title: "Wie informieren wir uns?",
+      text: [
+        "Früher lasen die meisten Menschen morgens die Zeitung oder sahen abends die Nachrichten im Fernsehen. Heute informieren sich viele vor allem mit dem Handy, oft über soziale Netzwerke oder Apps. Das ist bequem, weil man die Meldungen überall und sofort lesen kann.",
+        "Der Nachteil ist, dass im Internet auch falsche oder übertriebene Informationen verbreitet werden. Eine Nachricht, die viele Leute teilen, ist nicht automatisch wahr. Deshalb sollte man prüfen, wer die Quelle ist und ob auch andere seriöse Medien darüber berichten.",
+        "Experten empfehlen, mehrere verschiedene Quellen zu nutzen und nicht nur das zu lesen, was die eigene Meinung bestätigt. Außerdem hilft es, die Nachrichten nicht ständig zu verfolgen, denn zu viele schlechte Meldungen machen müde und besorgt. Eine feste Zeit am Tag reicht oft völlig aus.",
+      ],
+      translation: [
+        "Antes la mayoría de la gente leía el diario por la mañana o veía las noticias por la noche en la televisión. Hoy muchos se informan sobre todo con el celular, muchas veces por redes sociales o aplicaciones. Es cómodo, porque se pueden leer las noticias en cualquier lugar y enseguida.",
+        "La desventaja es que en internet también se difunde información falsa o exagerada. Una noticia que mucha gente comparte no es automáticamente verdadera. Por eso conviene verificar quién es la fuente y si otros medios serios también informan sobre eso.",
+        "Los expertos recomiendan usar varias fuentes distintas y no leer solo lo que confirma la propia opinión. Además ayuda no seguir las noticias todo el tiempo, porque demasiadas noticias malas cansan y preocupan. Un horario fijo por día muchas veces alcanza perfectamente.",
+      ],
+      questions: [
+        c("¿Cómo se informan hoy muchas personas?", ["Con el celular", "Solo con el diario", "Por carta", "Por radio de onda corta"], "«vor allem mit dem Handy»."),
+        c("¿Qué ventaja tiene eso?", ["Se puede leer en cualquier lugar y enseguida", "Es más barato siempre", "No hay publicidad", "Es más lento"], "«überall und sofort»."),
+        c("¿Cuál es el problema de internet?", ["Circula información falsa o exagerada", "Es muy caro", "No hay noticias", "Es aburrido"], "«falsche oder übertriebene Informationen»."),
+        c("¿Qué conviene verificar?", ["Quién es la fuente", "El color de la página", "La hora", "El tamaño del texto"], "«wer die Quelle ist»."),
+        c("¿Qué recomiendan los expertos?", ["Usar varias fuentes distintas", "Usar una sola fuente", "No leer nada", "Leer solo opiniones propias"], "«mehrere verschiedene Quellen»."),
+        tf("Seguir las noticias todo el tiempo es lo mejor.", false, "«zu viele schlechte Meldungen machen müde»."),
+      ],
+    },
+  },
 ];
