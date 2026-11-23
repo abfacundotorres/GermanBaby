@@ -663,4 +663,71 @@ export const LISTENING: ListenPiece[] = [
       ],
     },
   },
+  {
+    id: "b1-reisebuero", level: "B1", kind: "dreier", emoji: "🧳", topic: "En la agencia de viajes",
+    dialogue: {
+      title: "Im Reisebüro", setting: "Una pareja y una empleada eligen unas vacaciones",
+      lines: [
+        L("f", "Angestellte", "Guten Tag! Wohin möchten Sie denn in den Urlaub fahren?", "¡Buen día! ¿Adónde quieren ir de vacaciones?"),
+        L("f2", "Frau Lutz", "Wir wollen eine Woche ans Meer, am liebsten nach Italien.", "Queremos ir una semana al mar, preferentemente a Italia."),
+        L("m", "Herr Lutz", "Aber nicht zu teuer. Wir haben ein Budget von zwölfhundert Euro für uns beide.", "Pero no demasiado caro. Tenemos un presupuesto de mil doscientos euros para los dos."),
+        L("f", "Angestellte", "Dann empfehle ich Ihnen Rimini. Das Hotel liegt direkt am Strand, und das Frühstück ist inklusive.", "Entonces les recomiendo Rímini. El hotel está directamente en la playa y el desayuno está incluido."),
+        L("f2", "Frau Lutz", "Wie kommen wir dorthin? Mit dem Flugzeug?", "¿Cómo llegamos? ¿En avión?"),
+        L("f", "Angestellte", "Ja, der Flug dauert nur neunzig Minuten. Aber Sie können auch mit dem Zug fahren, das ist billiger.", "Sí, el vuelo dura solo noventa minutos. Pero también pueden ir en tren, es más barato."),
+        L("m", "Herr Lutz", "Wir nehmen lieber das Flugzeug. Können wir morgen Bescheid geben?", "Preferimos el avión. ¿Podemos avisar mañana?"),
+        L("f", "Angestellte", "Natürlich. Das Angebot gilt noch bis Freitag.", "Por supuesto. La oferta rige hasta el viernes."),
+      ],
+      questions: [
+        c("¿Adónde quieren ir?", ["Al mar, a Italia", "A la montaña", "A una ciudad", "A España"], "«ans Meer ... Italien»."),
+        fi("¿Cuántos euros es el presupuesto?", ["1200", "zwölfhundert"], "«zwölfhundert Euro»."),
+        c("¿Qué incluye el hotel?", ["El desayuno", "La cena", "El pasaje", "El spa"], "«Frühstück ist inklusive»."),
+        c("¿Cuánto dura el vuelo?", ["Noventa minutos", "Dos horas", "Cuatro horas", "Treinta minutos"], "«neunzig Minuten»."),
+        c("¿Cómo prefieren viajar?", ["En avión", "En tren", "En auto", "En barco"], "«lieber das Flugzeug»."),
+        c("¿Hasta cuándo rige la oferta?", ["Hasta el viernes", "Hasta el lunes", "Hasta hoy", "Hasta el sábado"], "«bis Freitag»."),
+      ],
+    },
+  },
+  {
+    id: "b1-radio-wochenende", level: "B1", kind: "monolog", emoji: "📻", topic: "Tips para el fin de semana",
+    dialogue: {
+      title: "Das Wochenende in der Stadt", setting: "Un conductor de radio recomienda actividades para el fin de semana",
+      lines: [
+        L("m", "Moderator", "Guten Morgen, liebe Hörerinnen und Hörer! Hier sind unsere Tipps für das Wochenende.", "¡Buen día, queridas oyentes y queridos oyentes! Estos son nuestros consejos para el fin de semana."),
+        L("m", "Moderator", "Am Samstag findet im Stadtpark ein großer Flohmarkt statt. Er beginnt um neun Uhr, und der Eintritt ist frei.", "El sábado hay una gran feria de pulgas en el parque de la ciudad. Empieza a las nueve y la entrada es gratuita."),
+        L("m", "Moderator", "Am Abend spielt eine Band im Kulturzentrum. Karten kosten zwölf Euro und sind an der Abendkasse erhältlich.", "Por la noche toca una banda en el centro cultural. Las entradas cuestan doce euros y se consiguen en la boletería."),
+        L("m", "Moderator", "Am Sonntag wird das Wetter leider schlechter. Es soll regnen, deshalb empfehle ich einen Besuch im Museum, wo es gerade eine neue Ausstellung gibt.", "El domingo el tiempo lamentablemente empeora. Debería llover, por eso recomiendo una visita al museo, donde hay justo una nueva exposición."),
+        L("m", "Moderator", "Ich wünsche Ihnen ein schönes Wochenende, und bleiben Sie dran: Gleich kommt die Verkehrsmeldung.", "Les deseo un lindo fin de semana y quédense: enseguida viene el informe de tránsito."),
+      ],
+      questions: [
+        c("¿Qué hay el sábado en el parque?", ["Una feria de pulgas", "Un concierto", "Una carrera", "Una exposición"], "«Flohmarkt»."),
+        c("¿A qué hora empieza?", ["A las nueve", "A las diez", "A las ocho", "Al mediodía"], "«um neun Uhr»."),
+        fi("¿Cuántos euros cuesta la entrada del concierto?", ["12", "zwölf"], "«zwölf Euro»."),
+        c("¿Cómo estará el tiempo el domingo?", ["Lluvioso", "Soleado", "Nevado", "Ventoso"], "«regnen»."),
+        c("¿Qué se recomienda hacer el domingo?", ["Visitar el museo", "Ir al parque", "Ir a la playa", "Quedarse en casa"], "«Besuch im Museum»."),
+      ],
+    },
+  },
+  {
+    id: "b1-mitbewohner", level: "B1", kind: "dreier", emoji: "🛋️", topic: "Reglas de la casa compartida",
+    dialogue: {
+      title: "Eine Besprechung in der WG", setting: "Tres compañeros de departamento acuerdan reglas de limpieza",
+      lines: [
+        L("f", "Nina", "Wir müssen mal über den Putzplan reden. In der Küche sieht es schlimm aus.", "Tenemos que hablar del plan de limpieza. La cocina está terrible."),
+        L("m", "Jonas", "Du hast recht. Ich schlage vor, dass jeder eine Woche lang für Küche und Bad zuständig ist.", "Tenés razón. Propongo que cada uno se encargue una semana de la cocina y el baño."),
+        L("f2", "Lea", "Das finde ich gut. Aber wer bringt den Müll raus?", "Me parece bien. ¿Pero quién saca la basura?"),
+        L("m", "Jonas", "Das kann abwechselnd jeden Tag eine andere Person machen.", "Eso puede hacerlo cada día otra persona, por turnos."),
+        L("f", "Nina", "Und was ist mit dem Geschirr? Manchmal steht es tagelang im Waschbecken.", "¿Y qué pasa con la vajilla? A veces queda días en la pileta."),
+        L("f2", "Lea", "Wer etwas benutzt hat, spült es direkt ab. Das ist die einfachste Regel.", "Quien usó algo lo lava enseguida. Esa es la regla más simple."),
+        L("m", "Jonas", "Einverstanden. Ich schreibe alles auf und hänge den Plan an die Kühlschranktür.", "De acuerdo. Lo escribo todo y cuelgo el plan en la puerta de la heladera."),
+      ],
+      questions: [
+        c("¿Qué problema hay?", ["La cocina está sucia", "Falta dinero", "Hay ruido", "Hay una gotera"], "«In der Küche sieht es schlimm aus»."),
+        c("¿Qué propone Jonas?", ["Que cada uno se encargue una semana de cocina y baño", "Contratar limpieza", "Limpiar solo él", "Cambiar de casa"], "«eine Woche lang ... zuständig»."),
+        c("¿Cómo se reparte la basura?", ["Cada día otra persona", "Siempre Nina", "Siempre Lea", "Una vez por semana"], "«abwechselnd jeden Tag»."),
+        c("¿Qué regla propone Lea para la vajilla?", ["Quien la usa, la lava enseguida", "Lavar los domingos", "Usar platos descartables", "Lavar al día siguiente"], "«direkt abspült»."),
+        c("¿Dónde colgará Jonas el plan?", ["En la puerta de la heladera", "En el baño", "En su habitación", "En la entrada"], "«Kühlschranktür»."),
+        tf("Nadie está de acuerdo con las reglas.", false, "«Einverstanden»."),
+      ],
+    },
+  },
 ];

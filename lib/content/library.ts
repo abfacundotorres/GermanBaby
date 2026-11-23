@@ -1891,4 +1891,196 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-neue-stadt", level: "B1", emoji: "🏙️", topic: "Mudarse a otra ciudad",
+    reading: {
+      title: "Umzug in eine neue Stadt",
+      text: [
+        "Vor zwei Jahren bin ich wegen eines neuen Jobs von Dresden nach Frankfurt gezogen. Am Anfang war alles fremd: Ich kannte keine Straße, keinen Supermarkt und keinen einzigen Menschen. Abends saß ich oft allein in meiner kleinen Wohnung und fragte mich, ob die Entscheidung richtig war.",
+        "Nach ein paar Wochen habe ich beschlossen, aktiv zu werden. Ich habe mich in einem Sportverein angemeldet und bin zu einem Treffen für Neuankömmlinge gegangen. Dort habe ich Leute aus der ganzen Welt kennengelernt, die in der gleichen Situation waren wie ich. Wir haben uns bald regelmäßig getroffen und gemeinsam die Stadt erkundet.",
+        "Heute fühle ich mich in Frankfurt zu Hause. Ich habe Freunde gefunden, eine Lieblingsbäckerei und einen Weg zur Arbeit, den ich mit dem Fahrrad fahre. Ich würde jedem raten, die Angst vor dem Neuen nicht zu groß werden zu lassen. Die ersten Monate sind schwer, aber sie lohnen sich.",
+      ],
+      translation: [
+        "Hace dos años me mudé de Dresde a Fráncfort por un nuevo trabajo. Al principio todo era ajeno: no conocía ninguna calle, ningún supermercado ni a una sola persona. Por la noche me sentaba muchas veces solo en mi pequeño departamento y me preguntaba si la decisión había sido correcta.",
+        "Después de unas semanas decidí ponerme en acción. Me anoté en un club deportivo y fui a una reunión para recién llegados. Allí conocí gente de todo el mundo que estaba en la misma situación que yo. Pronto nos encontrábamos regularmente y explorábamos juntos la ciudad.",
+        "Hoy me siento en casa en Fráncfort. Encontré amigos, una panadería favorita y un camino al trabajo que hago en bicicleta. Le aconsejaría a cualquiera que no deje crecer demasiado el miedo a lo nuevo. Los primeros meses son difíciles, pero valen la pena.",
+      ],
+      questions: [
+        c("¿Por qué se mudó el autor?", ["Por un nuevo trabajo", "Por estudios", "Por su familia", "Por el clima"], "«wegen eines neuen Jobs»."),
+        c("¿Cómo se sentía al principio?", ["Extraño y solo", "Feliz", "Aburrido", "Enfermo"], "«alles fremd ... allein»."),
+        c("¿Qué hizo para conocer gente?", ["Se anotó en un club y fue a una reunión", "Se mudó otra vez", "Cambió de trabajo", "Llamó a viejos amigos"], "«Sportverein ... Treffen für Neuankömmlinge»."),
+        tf("Las personas de la reunión venían todas de la misma ciudad.", false, "«aus der ganzen Welt»."),
+        c("¿Cómo va al trabajo hoy?", ["En bicicleta", "En auto", "En tren", "A pie"], "«mit dem Fahrrad»."),
+        c("¿Qué aconseja?", ["No dejar crecer el miedo a lo nuevo", "Quedarse siempre", "Mudarse seguido", "Vivir solo"], "«Angst vor dem Neuen nicht zu groß»."),
+      ],
+    },
+  },
+  {
+    id: "b1-bahn-verspaetung", level: "B1", emoji: "🚉", topic: "Retrasos del tren",
+    reading: {
+      title: "Schon wieder Verspätung",
+      text: [
+        "Letzte Woche wollte ich mit dem Zug nach Hamburg fahren, um einen wichtigen Termin wahrzunehmen. Am Bahnhof stand auf der Anzeigetafel, dass mein Zug zwanzig Minuten Verspätung hat. Kurz danach wurden es dreißig, dann fünfundvierzig. Schließlich wurde die Fahrt ganz gestrichen.",
+        "Ich ging zum Informationsschalter, wo eine lange Schlange stand. Die Mitarbeiterin erklärte mir freundlich, dass wegen eines Signalfehlers mehrere Züge ausfielen. Sie schlug mir eine andere Verbindung mit zwei Umstiegen vor und gab mir ein Formular, mit dem ich einen Teil des Fahrpreises zurückbekommen konnte.",
+        "Am Ende kam ich mit zwei Stunden Verspätung an und konnte den Termin nur noch telefonisch wahrnehmen. Ich war ärgerlich, aber ich habe gelernt, dass man bei wichtigen Reisen einen Zeitpuffer einplanen sollte. Außerdem ist es hilfreich, die Bahn-App zu benutzen, weil sie Änderungen sofort anzeigt.",
+      ],
+      translation: [
+        "La semana pasada quería viajar en tren a Hamburgo para ir a una cita importante. En la estación el tablero indicaba que mi tren tenía veinte minutos de retraso. Poco después fueron treinta, luego cuarenta y cinco. Finalmente se canceló el viaje por completo.",
+        "Fui al mostrador de información, donde había una larga fila. La empleada me explicó amablemente que por una falla de señales se cancelaban varios trenes. Me propuso otra conexión con dos trasbordos y me dio un formulario con el que podía recuperar una parte del precio del pasaje.",
+        "Al final llegué con dos horas de retraso y solo pude atender la cita por teléfono. Estaba enojado, pero aprendí que en viajes importantes hay que prever un margen de tiempo. Además es útil usar la aplicación del tren, porque muestra los cambios enseguida.",
+      ],
+      questions: [
+        c("¿Para qué quería viajar a Hamburgo?", ["Para una cita importante", "Para vacaciones", "Para visitar amigos", "Para comprar"], "«wichtigen Termin»."),
+        c("¿Qué pasó con el tren?", ["Se canceló después de varios retrasos", "Llegó a horario", "Cambió de vía", "Se llenó"], "«ganz gestrichen»."),
+        c("¿Cuál fue la causa?", ["Una falla de señales", "Mal clima", "Una huelga", "Un accidente"], "«Signalfehler»."),
+        c("¿Qué le dio la empleada?", ["Otra conexión y un formulario de reembolso", "Una cena", "Un hotel", "Un taxi"], "«Formular ... Fahrpreis zurück»."),
+        c("¿Cómo asistió a la cita?", ["Por teléfono", "En persona", "No asistió", "Por video"], "«telefonisch»."),
+        c("¿Qué consejo da?", ["Prever margen de tiempo y usar la aplicación", "Viajar en auto", "No viajar", "Reservar hotel"], "«Zeitpuffer ... Bahn-App»."),
+      ],
+    },
+  },
+  {
+    id: "b1-kochen-gemeinsam", level: "B1", emoji: "🍲", topic: "Cocinar en grupo",
+    reading: {
+      title: "Gemeinsam kochen",
+      text: [
+        "In meiner Wohngemeinschaft kochen wir jeden Sonntag zusammen. Jeder bringt etwas mit, und am Ende essen wir alle am großen Tisch in der Küche. Das hat sich als beste Methode erwiesen, um miteinander in Kontakt zu bleiben, auch wenn jeder unter der Woche viel zu tun hat.",
+        "Wir wechseln uns bei der Auswahl des Rezepts ab. Letzte Woche war Marta dran, die aus Spanien kommt, und sie hat eine Paella gemacht. Ich habe den Salat vorbereitet, und Tom hat den Nachtisch gekauft. Es hat zwar etwas länger gedauert als geplant, aber das Ergebnis war ausgezeichnet.",
+        "Das gemeinsame Kochen spart außerdem Geld, weil man größere Mengen billiger einkaufen kann. Man lernt neue Gerichte kennen und entdeckt, wie andere Länder essen. Wer will, darf auch Freunde einladen. Manchmal sitzen wir mit zehn Leuten am Tisch und reden bis spät in die Nacht.",
+      ],
+      translation: [
+        "En mi departamento compartido cocinamos juntos todos los domingos. Cada uno trae algo y al final comemos todos en la gran mesa de la cocina. Eso resultó ser el mejor método para mantenernos en contacto, aunque cada uno tenga mucho que hacer entre semana.",
+        "Nos turnamos para elegir la receta. La semana pasada le tocó a Marta, que viene de España, y preparó una paella. Yo preparé la ensalada y Tom compró el postre. Es cierto que tardó algo más de lo planeado, pero el resultado fue excelente.",
+        "Cocinar juntos además ahorra dinero, porque se pueden comprar cantidades mayores más barato. Uno aprende platos nuevos y descubre cómo comen otros países. Quien quiere puede invitar también a amigos. A veces somos diez personas en la mesa y charlamos hasta tarde en la noche.",
+      ],
+      questions: [
+        c("¿Cuándo cocinan juntos?", ["Todos los domingos", "Todos los viernes", "Cada día", "Una vez al mes"], "«jeden Sonntag»."),
+        c("¿Para qué sirve, según el autor?", ["Para mantenerse en contacto", "Para ahorrar tiempo", "Para aprender alemán", "Para bajar de peso"], "«in Kontakt zu bleiben»."),
+        c("¿Qué preparó Marta?", ["Una paella", "Una ensalada", "Un postre", "Una sopa"], "«eine Paella»."),
+        c("¿Qué compró Tom?", ["El postre", "El pan", "La carne", "El vino"], "«Nachtisch gekauft»."),
+        c("¿Por qué ahorran dinero?", ["Compran cantidades grandes más barato", "Cocinan menos", "Usan sobras", "Comen afuera"], "«größere Mengen billiger»."),
+        tf("No se permite invitar amigos.", false, "«Wer will, darf auch Freunde einladen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-urlaub-berge", level: "B1", emoji: "⛰️", topic: "Vacaciones en la montaña",
+    reading: {
+      title: "Eine Woche in den Bergen",
+      text: [
+        "Im Sommer haben meine Frau und ich eine Woche in den Alpen verbracht. Wir haben ein kleines Zimmer in einem Gasthaus gemietet, das mitten im Wald lag. Morgens gab es ein einfaches Frühstück mit Brot, Käse und frischer Milch von den Kühen aus der Nachbarschaft.",
+        "Jeden Tag haben wir eine Wanderung gemacht. Die erste Tour war leicht, doch am dritten Tag sind wir auf einen Gipfel gestiegen, der mehr als zweitausend Meter hoch ist. Der Aufstieg dauerte vier Stunden, aber die Aussicht war es wert. Wir sahen Berge, Seen und sogar ein paar Gämsen.",
+        "Das Wetter war meistens gut, nur an einem Nachmittag hat es heftig geregnet, sodass wir im Gasthaus bleiben mussten. Wir haben Karten gespielt und mit anderen Gästen geplaudert. Am Ende der Woche waren wir müde, aber richtig erholt. Nächstes Jahr wollen wir wieder hinfahren.",
+      ],
+      translation: [
+        "En el verano mi esposa y yo pasamos una semana en los Alpes. Alquilamos una pequeña habitación en una posada que estaba en medio del bosque. Por la mañana había un desayuno sencillo con pan, queso y leche fresca de las vacas del vecindario.",
+        "Cada día hicimos una caminata. La primera excursión fue fácil, pero el tercer día subimos a una cima de más de dos mil metros. La subida duró cuatro horas, pero la vista valió la pena. Vimos montañas, lagos e incluso algunas gamuzas.",
+        "El tiempo fue casi siempre bueno, solo una tarde llovió fuerte, así que tuvimos que quedarnos en la posada. Jugamos a las cartas y charlamos con otros huéspedes. Al final de la semana estábamos cansados pero realmente descansados. El año que viene queremos volver allí.",
+      ],
+      questions: [
+        c("¿Dónde pasaron las vacaciones?", ["En los Alpes", "En la playa", "En una ciudad", "En el campo llano"], "«in den Alpen»."),
+        c("¿Dónde se alojaron?", ["En una posada en el bosque", "En un hotel grande", "En una carpa", "En casa de amigos"], "«Gasthaus ... im Wald»."),
+        c("¿Qué desayunaban?", ["Pan, queso y leche fresca", "Huevos", "Cereales", "Fruta"], "«Brot, Käse ... Milch»."),
+        c("¿Cuánto duró la subida del tercer día?", ["Cuatro horas", "Dos horas", "Un día", "Seis horas"], "«vier Stunden»."),
+        c("¿Qué pasó una tarde?", ["Llovió fuerte y se quedaron en la posada", "Nevó", "Se perdieron", "Se enfermaron"], "«heftig geregnet»."),
+        tf("Piensan no volver más.", false, "«Nächstes Jahr wollen wir wieder»."),
+      ],
+    },
+  },
+  {
+    id: "b1-neue-sprache", level: "B1", emoji: "📚", topic: "Aprender un idioma",
+    reading: {
+      title: "Eine Sprache lernen",
+      text: [
+        "Eine neue Sprache zu lernen ist anstrengend, aber auch sehr spannend. Wenn man mit Erwachsenen spricht, hört man oft den Satz, dass man als Kind viel leichter lernt. Das stimmt teilweise, aber Erwachsene haben dafür andere Vorteile: Sie können gezielt üben und wissen, warum sie lernen.",
+        "Wichtig ist vor allem Regelmäßigkeit. Wer jeden Tag zwanzig Minuten übt, kommt weiter als jemand, der einmal pro Woche drei Stunden lernt. Außerdem hilft es, die Sprache im Alltag zu benutzen: Filme ohne Untertitel schauen, Podcasts hören oder mit Muttersprachlern sprechen. Fehler sind dabei völlig normal und gehören zum Lernen dazu.",
+        "Viele Lernende verlieren nach einiger Zeit die Motivation, weil sie das Gefühl haben, nicht mehr voranzukommen. Dann kann es helfen, sich kleine Ziele zu setzen, zum Beispiel einen kurzen Text zu schreiben oder ein Gespräch von fünf Minuten zu führen. Jeder erreichte Schritt zeigt, dass der Aufwand sich lohnt.",
+      ],
+      translation: [
+        "Aprender un idioma nuevo es agotador, pero también muy interesante. Cuando se habla con adultos se oye a menudo la frase de que de niño se aprende mucho más fácil. Eso es en parte cierto, pero los adultos tienen a cambio otras ventajas: pueden practicar de forma dirigida y saben por qué aprenden.",
+        "Lo más importante es sobre todo la regularidad. Quien practica veinte minutos por día avanza más que quien estudia tres horas una vez por semana. Además ayuda usar el idioma en la vida diaria: mirar películas sin subtítulos, escuchar podcasts o hablar con hablantes nativos. Los errores son aquí completamente normales y forman parte del aprendizaje.",
+        "Muchos estudiantes pierden después de un tiempo la motivación porque sienten que ya no avanzan. Entonces puede ayudar ponerse metas chicas, por ejemplo escribir un texto corto o mantener una conversación de cinco minutos. Cada paso logrado muestra que el esfuerzo vale la pena.",
+      ],
+      questions: [
+        c("¿Qué ventaja tienen los adultos?", ["Pueden practicar de forma dirigida y saben por qué aprenden", "Aprenden más rápido", "Tienen más tiempo", "Tienen más memoria"], "«gezielt üben ... warum»."),
+        c("¿Qué es más importante?", ["La regularidad", "La velocidad", "El libro", "La edad"], "«Regelmäßigkeit»."),
+        c("¿Qué rinde más?", ["Veinte minutos por día", "Tres horas por semana", "Una hora al mes", "Un día entero"], "«zwanzig Minuten»."),
+        c("¿Qué actividades se sugieren?", ["Películas sin subtítulos, podcasts y charlas", "Solo gramática", "Solo diccionarios", "Solo exámenes"], "«Filme ohne Untertitel»."),
+        tf("Los errores son un problema que hay que evitar a toda costa.", false, "«völlig normal»."),
+        c("¿Qué ayuda cuando se pierde la motivación?", ["Ponerse metas chicas", "Dejar de estudiar", "Cambiar de idioma", "Estudiar más horas"], "«kleine Ziele»."),
+      ],
+    },
+  },
+  {
+    id: "b1-nachbarschaft", level: "B1", emoji: "🏘️", topic: "Los vecinos",
+    reading: {
+      title: "Gute Nachbarn",
+      text: [
+        "Ein gutes Verhältnis zu den Nachbarn ist für viele Menschen sehr wichtig. In meinem Haus gibt es zwölf Wohnungen, und die meisten Bewohner kennen sich. Wir grüßen uns im Treppenhaus, und manchmal helfen wir uns gegenseitig, zum Beispiel wenn jemand im Urlaub ist und die Blumen gegossen werden müssen.",
+        "Es gibt aber auch Regeln, die man beachten muss. Zwischen zwanzig und sieben Uhr soll man Rücksicht auf die Ruhe nehmen, und am Sonntag darf man nicht laut arbeiten oder Musik hören. Wer eine Feier plant, sollte die Nachbarn vorher informieren und sich eventuell sogar mit einem kleinen Kuchen entschuldigen.",
+        "Manchmal gibt es trotzdem Streit, etwa wegen Lärm oder Müll. In solchen Fällen ist es am besten, direkt und freundlich zu reden, bevor man den Vermieter einschaltet. Meistens lassen sich Probleme mit einem kurzen Gespräch lösen, und danach ist die Stimmung im Haus wieder entspannt.",
+      ],
+      translation: [
+        "Una buena relación con los vecinos es muy importante para mucha gente. En mi edificio hay doce departamentos y la mayoría de los habitantes se conocen. Nos saludamos en la escalera y a veces nos ayudamos mutuamente, por ejemplo cuando alguien está de vacaciones y hay que regar las plantas.",
+        "Pero también hay reglas que respetar. Entre las ocho de la noche y las siete de la mañana hay que respetar la tranquilidad y el domingo no se puede trabajar ruidosamente ni escuchar música alta. Quien planea una fiesta debería avisar antes a los vecinos y tal vez incluso disculparse con una pequeña torta.",
+        "A veces hay igual discusiones, por ejemplo por ruido o basura. En esos casos lo mejor es hablar de manera directa y amable antes de involucrar al dueño. Casi siempre los problemas se resuelven con una charla corta y después el ambiente en el edificio vuelve a ser relajado.",
+      ],
+      questions: [
+        c("¿Cuántos departamentos hay en el edificio?", ["Doce", "Diez", "Veinte", "Seis"], "«zwölf Wohnungen»."),
+        c("¿En qué se ayudan los vecinos?", ["Por ejemplo, regando plantas en vacaciones", "Pagando alquiler", "Cocinando", "Limpiando autos"], "«Blumen gegossen»."),
+        c("¿Cuándo hay que respetar la tranquilidad?", ["Entre las ocho de la noche y las siete de la mañana", "Solo los domingos", "Siempre", "Solo al mediodía"], "«zwischen zwanzig und sieben Uhr»."),
+        c("¿Qué conviene hacer antes de una fiesta?", ["Avisar a los vecinos", "Pedir permiso al intendente", "Cerrar ventanas", "Invitar a todos"], "«Nachbarn vorher informieren»."),
+        c("¿Qué hacer ante un conflicto?", ["Hablar directo y amable antes de llamar al dueño", "Llamar a la policía", "Mudarse", "Ignorarlo"], "«direkt und freundlich»."),
+        tf("Los problemas casi nunca se resuelven hablando.", false, "«Meistens lassen sich Probleme ... lösen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-gesund-schlafen", level: "B1", emoji: "😴", topic: "Dormir bien",
+    reading: {
+      title: "Besser schlafen",
+      text: [
+        "Viele Menschen schlafen schlecht, und das hat Folgen für die Gesundheit und die Stimmung. Wer über längere Zeit zu wenig schläft, kann sich schlechter konzentrieren, wird schneller krank und ist oft gereizt. Erwachsene brauchen im Durchschnitt sieben bis acht Stunden Schlaf pro Nacht.",
+        "Es gibt einfache Tipps, die helfen können. Man sollte jeden Tag zur gleichen Zeit ins Bett gehen und aufstehen, auch am Wochenende. Das Schlafzimmer sollte dunkel, ruhig und nicht zu warm sein. Am Abend ist es besser, auf Kaffee, schwere Mahlzeiten und Bildschirme zu verzichten, denn das blaue Licht von Handy und Fernseher hält uns wach.",
+        "Wenn man trotzdem nicht einschlafen kann, hilft es manchmal, aufzustehen und etwas Ruhiges zu tun, zum Beispiel ein Buch zu lesen. Wer dauerhaft Probleme hat, sollte mit seinem Arzt sprechen, denn manchmal steckt eine Krankheit oder starker Stress dahinter. Guter Schlaf ist keine Zeitverschwendung, sondern eine wichtige Grundlage für den ganzen Tag.",
+      ],
+      translation: [
+        "Mucha gente duerme mal y eso tiene consecuencias para la salud y el ánimo. Quien duerme muy poco durante un tiempo prolongado se concentra peor, se enferma más rápido y suele estar irritable. Los adultos necesitan en promedio de siete a ocho horas de sueño por noche.",
+        "Hay consejos simples que pueden ayudar. Hay que acostarse y levantarse todos los días a la misma hora, también los fines de semana. El dormitorio debería estar oscuro, tranquilo y no demasiado caliente. Por la noche es mejor evitar el café, las comidas pesadas y las pantallas, porque la luz azul del celular y del televisor nos mantiene despiertos.",
+        "Si igual no se puede conciliar el sueño, a veces ayuda levantarse y hacer algo tranquilo, por ejemplo leer un libro. Quien tiene problemas de forma duradera debería hablar con su médico, porque a veces hay una enfermedad o un estrés fuerte detrás. Dormir bien no es una pérdida de tiempo sino una base importante para todo el día.",
+      ],
+      questions: [
+        c("¿Cuántas horas necesita un adulto, en promedio?", ["Siete a ocho", "Cuatro a cinco", "Diez a doce", "Seis a siete"], "«sieben bis acht Stunden»."),
+        c("¿Qué consecuencia tiene dormir poco?", ["Peor concentración y más enfermedades", "Más energía", "Más hambre", "Mejor humor"], "«schlechter konzentrieren ... krank»."),
+        c("¿Cómo debería ser el dormitorio?", ["Oscuro, tranquilo y no muy caliente", "Luminoso", "Ruidoso", "Cálido"], "«dunkel, ruhig und nicht zu warm»."),
+        c("¿Qué conviene evitar de noche?", ["Café, comidas pesadas y pantallas", "Leer", "Caminar", "Bañarse"], "«Kaffee, schwere Mahlzeiten und Bildschirme»."),
+        c("¿Qué hacer si no se puede dormir?", ["Levantarse y leer algo tranquilo", "Tomar café", "Mirar televisión", "Trabajar"], "«ein Buch zu lesen»."),
+        tf("Dormir bien es una pérdida de tiempo.", false, "«keine Zeitverschwendung»."),
+      ],
+    },
+  },
+  {
+    id: "b1-ausbildung", level: "B1", emoji: "🛠️", topic: "Formación profesional",
+    reading: {
+      title: "Eine Ausbildung machen",
+      text: [
+        "In Deutschland entscheiden sich viele junge Menschen nach der Schule nicht für ein Studium, sondern für eine Ausbildung. Dabei arbeiten sie im Betrieb und gehen gleichzeitig ein bis zwei Tage pro Woche in die Berufsschule. Man nennt das „duale Ausbildung“, weil man an zwei Orten lernt: in der Praxis und in der Theorie.",
+        "Die Ausbildung dauert je nach Beruf zwei bis dreieinhalb Jahre. Schon während dieser Zeit verdienen die Auszubildenden Geld, auch wenn das Gehalt noch niedriger ist als bei einem fertigen Mitarbeiter. Am Ende gibt es eine Prüfung, und wer sie besteht, bekommt ein anerkanntes Zeugnis und hat oft gute Chancen auf eine feste Stelle.",
+        "Es gibt mehr als dreihundert Ausbildungsberufe, vom Bäcker über die Krankenpflegerin bis zum Mechatroniker. Wer später weiterkommen möchte, kann eine Weiterbildung machen oder sogar noch studieren. Viele Firmen suchen heute dringend Nachwuchs, deshalb lohnt es sich, früh nach einem Ausbildungsplatz zu suchen und Praktika zu machen.",
+      ],
+      translation: [
+        "En Alemania muchos jóvenes no eligen después del colegio una carrera universitaria sino una formación profesional. En ella trabajan en la empresa y van al mismo tiempo uno o dos días por semana a la escuela profesional. Se llama «formación dual» porque se aprende en dos lugares: en la práctica y en la teoría.",
+        "La formación dura, según la profesión, de dos a tres años y medio. Ya durante ese tiempo los aprendices ganan dinero, aunque el sueldo sea todavía más bajo que el de un empleado terminado. Al final hay un examen y quien lo aprueba recibe un certificado reconocido y suele tener buenas chances de un puesto fijo.",
+        "Hay más de trescientas profesiones de formación, desde panadero, pasando por enfermera, hasta mecatrónico. Quien después quiere avanzar puede hacer una capacitación o incluso estudiar. Muchas empresas buscan hoy urgentemente nuevos profesionales, por eso vale la pena buscar temprano un lugar de formación y hacer pasantías.",
+      ],
+      questions: [
+        c("¿Qué significa «formación dual»?", ["Aprender en la empresa y en la escuela profesional", "Aprender dos idiomas", "Estudiar de noche", "Trabajar dos empleos"], "«an zwei Orten»."),
+        c("¿Cuántos días por semana van a la escuela profesional?", ["Uno o dos", "Cinco", "Cada día", "Ninguno"], "«ein bis zwei Tage»."),
+        c("¿Cuánto dura la formación?", ["De dos a tres años y medio", "Seis meses", "Cinco años", "Un mes"], "«zwei bis dreieinhalb Jahre»."),
+        tf("Los aprendices no reciben dinero.", false, "«verdienen die Auszubildenden Geld»."),
+        c("¿Qué se recibe al aprobar el examen?", ["Un certificado reconocido", "Un auto", "Un premio", "Nada"], "«anerkanntes Zeugnis»."),
+        c("¿Qué conviene hacer para conseguir un lugar?", ["Buscar temprano y hacer pasantías", "Esperar", "Viajar", "Estudiar solo"], "«früh ... Praktika»."),
+      ],
+    },
+  },
 ];
