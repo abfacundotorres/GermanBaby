@@ -8,10 +8,10 @@ import type { Lesson, ListenQuestion, Vocab, HandExercise } from "../curriculum.
 type L = ["f" | "m", string, string, string];
 type Cloze = Extract<HandExercise, { kind: "cloze" }>;
 
-const w = (de: string, es: string, emoji: string, exDe: string, exEs: string, note?: string): Vocab => ({ de, es, emoji, example: { de: exDe, es: exEs }, ...(note ? { note } : {}) });
+export const w = (de: string, es: string, emoji: string, exDe: string, exEs: string, note?: string): Vocab => ({ de, es, emoji, example: { de: exDe, es: exEs }, ...(note ? { note } : {}) });
 const cz = (sentence: string, es: string, options: string[], answer: string, explanation: string): Cloze => ({ kind: "cloze", sentence, es, options, answer, explanation, category: "vocabulario" });
 
-const thema = (
+export const thema = (
   title: string,
   icon: string,
   goal: string,

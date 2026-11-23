@@ -6,7 +6,7 @@ import type { Lesson, ListenQuestion, Vocab, HandExercise } from "../curriculum.
 
 type Cloze = Extract<HandExercise, { kind: "cloze" }>;
 const cz = (sentence: string, es: string, options: string[], answer: string, explanation: string): Cloze => ({ kind: "cloze", sentence, es, options, answer, explanation });
-const reading = (
+export const reading = (
   title: string,
   goal: string,
   vocab: Vocab[],

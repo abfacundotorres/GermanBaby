@@ -55,3 +55,5 @@ Un nivel se da por completo cuando cumple todo:
 - Escucha: diálogos, escuchas largas y, desde B1, monólogos.
 - Un simulacro del nivel resuelto con el 70 % o más (`/exam`).
 - `npm test` y `npm run bot -- --all` en verde.
+
+**Lecciones bonus de B2 de estructura.** Las unidades `satzbau-b2` e `infinitiv-futur` tienen ahora lectura, práctica (con producción libre), escucha larga y vocabulario temático (tránsito y multas; propósitos y proyectos), en `lib/content/b2-extras.ts`. Las palabras de esas lecciones no pueden repetir las del entrenador (`core-vocab.ts`) ni las de otras lecciones.

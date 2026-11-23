@@ -5,7 +5,7 @@ import type { Lesson, ListenQuestion } from "../curriculum.ts";
 
 type L = ["f" | "m", string, string, string];
 
-const listening = (title: string, goal: string, dTitle: string, setting: string, lines: L[], questions: ListenQuestion[]): Lesson => ({
+export const listening = (title: string, goal: string, dTitle: string, setting: string, lines: L[], questions: ListenQuestion[]): Lesson => ({
   id: "escucha-larga",
   title: `Escucha larga: ${title}`,
   goal,
