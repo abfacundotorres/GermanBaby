@@ -2203,4 +2203,124 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-fuehrerschein", level: "B1", emoji: "🚗", topic: "El carné de conducir",
+    reading: {
+      title: "Der Führerschein",
+      text: [
+        "In Deutschland ist der Führerschein teuer. Wer ihn machen möchte, muss sich bei einer Fahrschule anmelden und bezahlt oft zwischen zweitausend und dreitausend Euro. Darin sind der theoretische Unterricht, die Fahrstunden und die Prüfungsgebühren enthalten, aber nicht der Erste-Hilfe-Kurs und der Sehtest, die man extra machen muss.",
+        "Zuerst lernt man die Verkehrsregeln und die vielen Schilder. Danach folgt die theoretische Prüfung am Computer, bei der man nur wenige Fehler machen darf. Erst wenn man sie besteht, beginnt der praktische Teil. Dort sind einige Pflichtstunden vorgeschrieben, zum Beispiel Fahrten auf der Autobahn und im Dunkeln.",
+        "Viele junge Leute sagen, dass sich das Geld lohnt, weil man auf dem Land ohne Auto kaum zurechtkommt. In großen Städten dagegen verzichten immer mehr Menschen darauf, denn Bus, Bahn und Fahrrad sind dort oft schneller und billiger. Wer die Prüfung nicht besteht, darf sie nach einiger Zeit wiederholen.",
+      ],
+      translation: [
+        "En Alemania el carné de conducir es caro. Quien quiere sacarlo tiene que inscribirse en una autoescuela y muchas veces paga entre dos mil y tres mil euros. Ahí están incluidas las clases teóricas, las clases de manejo y las tasas del examen, pero no el curso de primeros auxilios ni el examen de la vista, que hay que hacer aparte.",
+        "Primero se aprenden las reglas de tránsito y las muchas señales. Después viene el examen teórico en computadora, en el que solo se pueden cometer pocos errores. Recién cuando se aprueba empieza la parte práctica. Ahí hay algunas horas obligatorias, por ejemplo viajes por la autopista y de noche.",
+        "Muchos jóvenes dicen que vale la pena el dinero, porque en el campo casi no se arregla uno sin auto. En las ciudades grandes, en cambio, cada vez más gente renuncia a él, porque el colectivo, el tren y la bicicleta suelen ser más rápidos y baratos. Quien no aprueba el examen puede repetirlo después de un tiempo.",
+      ],
+      questions: [
+        c("¿Cuánto cuesta el carné, más o menos?", ["Entre dos mil y tres mil euros", "Cien euros", "Treinta euros", "Diez mil euros"], "«zwischen zweitausend und dreitausend Euro»."),
+        c("¿Qué NO está incluido en el precio?", ["El curso de primeros auxilios y el examen de la vista", "Las clases de manejo", "Las clases teóricas", "Las tasas del examen"], "«nicht der Erste-Hilfe-Kurs und der Sehtest»."),
+        c("¿Qué viene primero?", ["La teoría y el examen en computadora", "La autopista", "El manejo de noche", "La compra del auto"], "«Zuerst ... Regeln ... Prüfung am Computer»."),
+        c("¿Qué horas obligatorias hay en la práctica?", ["Autopista y de noche", "Solo estacionar", "Solo en el campo", "Ninguna"], "«Autobahn und im Dunkeln»."),
+        c("¿Por qué vale la pena en el campo?", ["Sin auto es difícil arreglarse", "Hay mucho tránsito", "Es obligatorio", "Es gratis"], "«auf dem Land ohne Auto kaum zurechtkommt»."),
+        tf("En las ciudades grandes cada vez más gente renuncia al carné.", true, "«verzichten immer mehr Menschen darauf»."),
+      ],
+    },
+  },
+  {
+    id: "b1-haustiere", level: "B1", emoji: "🐕", topic: "Mascotas en un departamento",
+    reading: {
+      title: "Haustiere in der Mietwohnung",
+      text: [
+        "Viele Deutsche haben ein Haustier, am häufigsten eine Katze oder einen Hund. Wer zur Miete wohnt, muss aber zuerst in den Mietvertrag schauen. Kleine Tiere wie Fische, Hamster oder Vögel darf man in der Regel immer halten, bei Hunden und Katzen dagegen kann der Vermieter die Erlaubnis verweigern.",
+        "Ein Hund braucht viel Zeit und Aufmerksamkeit. Man muss mehrmals am Tag mit ihm spazieren gehen, auch bei Regen oder im Winter. Außerdem zahlt man eine Hundesteuer, und viele Städte verlangen, dass der Hund an der Leine geführt wird. Wer den ganzen Tag arbeitet, sollte sich gut überlegen, ob ein Hund passt.",
+        "Auch die Nachbarn spielen eine Rolle. Bellt der Hund oft laut, kann es schnell Streit im Haus geben. Deshalb ist es sinnvoll, vorher mit allen zu sprechen. Zum Glück gibt es heute viele Tierheime, in denen man Tiere findet, die ein neues Zuhause suchen, und das ist oft besser, als ein Tier zu kaufen.",
+      ],
+      translation: [
+        "Muchos alemanes tienen una mascota, con más frecuencia un gato o un perro. Pero quien vive de alquiler tiene que mirar primero el contrato de alquiler. Los animales chicos como peces, hámsteres o pájaros por lo general siempre se pueden tener; con perros y gatos, en cambio, el propietario puede negar el permiso.",
+        "Un perro necesita mucho tiempo y atención. Hay que salir a pasear con él varias veces por día, también con lluvia o en invierno. Además se paga un impuesto por el perro y muchas ciudades exigen que se lo lleve con correa. Quien trabaja todo el día debería pensar bien si un perro le conviene.",
+        "También los vecinos tienen un papel. Si el perro ladra fuerte con frecuencia, puede haber rápido una pelea en el edificio. Por eso tiene sentido hablar antes con todos. Por suerte hoy hay muchos refugios de animales donde se encuentran animales que buscan un nuevo hogar, y eso muchas veces es mejor que comprar uno.",
+      ],
+      questions: [
+        c("¿Qué hay que mirar primero si se vive de alquiler?", ["El contrato de alquiler", "El precio del perro", "El jardín", "El barrio"], "«in den Mietvertrag schauen»."),
+        c("¿Qué animales se pueden tener por lo general?", ["Peces, hámsteres y pájaros", "Solo perros", "Solo gatos", "Ninguno"], "«Fische, Hamster oder Vögel»."),
+        c("¿Qué debe hacer quien tiene un perro?", ["Salir a pasear varias veces por día", "Dejarlo solo todo el día", "Comprarle un jardín", "Nada especial"], "«mehrmals am Tag ... spazieren»."),
+        c("¿Qué se paga por un perro?", ["Un impuesto", "Una multa fija", "Nada", "Un alquiler extra siempre"], "«Hundesteuer»."),
+        c("¿Qué problema puede causar un perro que ladra?", ["Peleas con los vecinos", "Más calor", "Menos luz", "Más impuestos"], "«Streit im Haus»."),
+        tf("Comprar un animal es siempre mejor que adoptarlo de un refugio.", false, "Adoptar «ist oft besser»."),
+      ],
+    },
+  },
+  {
+    id: "b1-online-bestellen", level: "B1", emoji: "📦", topic: "Compras por internet",
+    reading: {
+      title: "Einkaufen im Internet",
+      text: [
+        "Immer mehr Menschen bestellen Kleidung, Bücher oder Elektrogeräte im Internet. Das ist bequem, denn man kann zu jeder Zeit einkaufen und muss nicht in ein Geschäft gehen. Außerdem lassen sich die Preise leicht vergleichen, und oft findet man Angebote, die im Laden nicht zu haben sind.",
+        "Es gibt aber auch Nachteile. Man kann die Ware nicht anfassen oder anprobieren, deshalb passt ein Kleidungsstück manchmal nicht. In Deutschland hat man zum Glück vierzehn Tage Zeit, um bestellte Waren ohne Begründung zurückzuschicken. Das Geld bekommt man dann zurück, manchmal muss man aber die Rücksendekosten selbst tragen.",
+        "Vorsicht ist bei sehr billigen Angeboten angebracht, denn dahinter stecken manchmal Betrüger. Man sollte nur bei Shops kaufen, die ein Impressum und Bewertungen haben, und am besten eine sichere Zahlungsart wählen. Wer außerdem bedenkt, wie viel Verpackungsmüll entsteht, kauft vielleicht öfter wieder im Laden um die Ecke.",
+      ],
+      translation: [
+        "Cada vez más gente pide ropa, libros o electrodomésticos por internet. Es cómodo, porque se puede comprar a cualquier hora y no hace falta ir a un negocio. Además los precios se comparan fácil y muchas veces se encuentran ofertas que no hay en el local.",
+        "Pero también hay desventajas. No se puede tocar ni probar la mercancía, por eso a veces una prenda no queda bien. En Alemania, por suerte, se tienen catorce días para devolver sin explicación la mercancía pedida. Después se recupera el dinero, aunque a veces hay que pagar uno mismo los costos de envío de devolución.",
+        "Hay que tener cuidado con las ofertas muy baratas, porque detrás a veces hay estafadores. Conviene comprar solo en tiendas que tengan aviso legal y valoraciones y, lo mejor, elegir una forma de pago segura. Quien además piensa en cuánto residuo de embalaje se genera, quizás vuelva a comprar más seguido en el negocio de la esquina.",
+      ],
+      questions: [
+        c("¿Qué ventaja tiene comprar por internet?", ["Se puede comprar a cualquier hora", "Se prueba la ropa", "Siempre es gratis", "No hay precios"], "«zu jeder Zeit»."),
+        c("¿Qué problema tiene la ropa en internet?", ["No se puede probar y a veces no queda bien", "Siempre es cara", "Es de mala calidad", "No existe"], "«nicht ... anprobieren»."),
+        c("¿Cuántos días hay para devolver?", ["Catorce", "Tres", "Un año", "Ninguno"], "«vierzehn Tage»."),
+        c("¿Quién paga a veces la devolución?", ["El comprador", "El correo", "El estado", "Nadie"], "«Rücksendekosten selbst tragen»."),
+        c("¿Qué hay que revisar antes de comprar en una tienda desconocida?", ["Que tenga aviso legal y valoraciones", "Que sea muy barata", "Que no tenga fotos", "Que no pida pago"], "«Impressum und Bewertungen»."),
+        tf("Las ofertas muy baratas nunca son un problema.", false, "«Vorsicht ... Betrüger»."),
+      ],
+    },
+  },
+  {
+    id: "b1-nationalpark", level: "B1", emoji: "🌲", topic: "Los parques nacionales",
+    reading: {
+      title: "Natur schützen",
+      text: [
+        "In Deutschland gibt es sechzehn Nationalparks, zum Beispiel den Bayerischen Wald, die Sächsische Schweiz und das Wattenmeer an der Nordsee. In diesen Gebieten darf sich die Natur weitgehend frei entwickeln. Man baut dort keine Straßen und keine Fabriken, und Tiere und Pflanzen sollen möglichst ungestört leben.",
+        "Besucher sind willkommen, müssen sich aber an Regeln halten. Man darf nur auf den markierten Wegen gehen, keine Blumen pflücken und keinen Müll liegen lassen. Hunde müssen oft an der Leine bleiben, und an manchen Orten ist Zelten verboten. Diese Regeln schützen empfindliche Lebensräume, zum Beispiel Brutplätze von seltenen Vögeln.",
+        "Viele Nationalparks bieten Führungen an, bei denen Ranger Tiere und Pflanzen erklären. So lernen vor allem Kinder, warum Naturschutz wichtig ist. Gleichzeitig sind die Parks ein Gewinn für die Region, weil sie Touristen anziehen und Arbeitsplätze schaffen. Streit gibt es manchmal trotzdem, wenn Anwohner mehr Freiheit für Landwirtschaft und Holzarbeit wünschen.",
+      ],
+      translation: [
+        "En Alemania hay dieciséis parques nacionales, por ejemplo el Bosque Bávaro, la Suiza Sajona y el Mar de Frisia en el Mar del Norte. En esas zonas la naturaleza puede desarrollarse en gran medida libremente. Ahí no se construyen calles ni fábricas y los animales y las plantas deben vivir lo más tranquilos posible.",
+        "Los visitantes son bienvenidos, pero tienen que respetar reglas. Solo se puede caminar por los senderos marcados, no se pueden cortar flores ni dejar basura. Los perros muchas veces tienen que ir con correa y en algunos lugares está prohibido acampar. Estas reglas protegen hábitats sensibles, por ejemplo los sitios de cría de aves raras.",
+        "Muchos parques nacionales ofrecen visitas guiadas en las que los guardaparques explican animales y plantas. Así sobre todo los chicos aprenden por qué es importante proteger la naturaleza. Al mismo tiempo los parques son una ganancia para la región, porque atraen turistas y crean empleos. A veces igual hay conflictos, cuando los vecinos quieren más libertad para la agricultura y la explotación de madera.",
+      ],
+      questions: [
+        c("¿Cuántos parques nacionales hay en Alemania?", ["Dieciséis", "Tres", "Cien", "Uno"], "«sechzehn Nationalparks»."),
+        c("¿Qué no se construye en esas zonas?", ["Calles y fábricas", "Senderos", "Carteles", "Miradores"], "«keine Straßen und keine Fabriken»."),
+        c("¿Qué está prohibido para los visitantes?", ["Cortar flores y dejar basura", "Caminar", "Sacar fotos", "Respirar"], "«keine Blumen pflücken ... Müll»."),
+        c("¿Para qué sirven las reglas?", ["Para proteger hábitats sensibles", "Para ganar dinero", "Para cerrar el parque", "Para evitar turistas"], "«schützen empfindliche Lebensräume»."),
+        c("¿Qué hacen los guardaparques en las visitas guiadas?", ["Explican animales y plantas", "Venden comida", "Cobran multas", "Cortan árboles"], "«Tiere und Pflanzen erklären»."),
+        tf("Los parques no traen ningún beneficio económico a la región.", false, "«Touristen anziehen und Arbeitsplätze schaffen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-stress-sport", level: "B1", emoji: "🏃", topic: "Estrés y deporte",
+    reading: {
+      title: "Gegen den Stress",
+      text: [
+        "Viele Berufstätige fühlen sich heute gestresst. Sie müssen ständig erreichbar sein, haben viele Termine und wenig Zeit für sich selbst. Auf Dauer kann Stress krank machen: Man schläft schlecht, hat Kopfschmerzen und kann sich nicht mehr gut konzentrieren. Deshalb ist es wichtig, rechtzeitig etwas dagegen zu tun.",
+        "Eine einfache Möglichkeit ist Bewegung. Schon ein Spaziergang von dreißig Minuten kann helfen, den Kopf freizubekommen. Wer lieber etwas Intensiveres macht, kann laufen, schwimmen oder tanzen. Wichtig ist nicht, besonders gut zu sein, sondern regelmäßig und mit Freude Sport zu treiben, am besten zwei- bis dreimal pro Woche.",
+        "Auch kleine Pausen im Alltag tun gut. Man sollte das Handy öfter ausschalten, genug schlafen und mit Freunden über Probleme sprechen. Hilft das alles nicht, ist es kein Zeichen von Schwäche, professionelle Hilfe zu suchen. Wer früh reagiert, kann verhindern, dass aus normalem Stress eine ernste Erkrankung wird.",
+      ],
+      translation: [
+        "Hoy muchos trabajadores se sienten estresados. Tienen que estar siempre disponibles, tienen muchos compromisos y poco tiempo para sí mismos. A la larga el estrés puede enfermar: se duerme mal, hay dolores de cabeza y ya no se puede concentrar bien. Por eso es importante hacer algo a tiempo.",
+        "Una posibilidad simple es el movimiento. Ya una caminata de treinta minutos puede ayudar a despejar la cabeza. Quien prefiere algo más intenso puede correr, nadar o bailar. Lo importante no es ser especialmente bueno, sino hacer deporte con regularidad y con alegría, lo mejor dos o tres veces por semana.",
+        "También hacen bien las pausas chicas en el día a día. Conviene apagar más seguido el celular, dormir lo suficiente y hablar de los problemas con amigos. Si nada de eso ayuda, buscar ayuda profesional no es una señal de debilidad. Quien reacciona temprano puede evitar que el estrés normal se convierta en una enfermedad seria.",
+      ],
+      questions: [
+        c("¿Por qué se estresan muchos trabajadores?", ["Tienen que estar siempre disponibles y tienen poco tiempo", "Duermen demasiado", "Tienen muchas vacaciones", "No tienen celular"], "«ständig erreichbar ... wenig Zeit»."),
+        c("¿Qué puede causar el estrés a la larga?", ["Mal sueño y dolores de cabeza", "Más fuerza", "Más tiempo libre", "Mejor memoria"], "«schlecht schlafen ... Kopfschmerzen»."),
+        c("¿Cuánto dura la caminata que menciona el texto?", ["Treinta minutos", "Cinco minutos", "Cinco horas", "Un día"], "«dreißig Minuten»."),
+        c("¿Qué es lo importante del deporte?", ["Hacerlo con regularidad y con alegría", "Ser el mejor", "Hacerlo una vez por año", "Ganar premios"], "«regelmäßig und mit Freude»."),
+        c("¿Qué conviene hacer con el celular?", ["Apagarlo más seguido", "Usarlo toda la noche", "Venderlo", "Romperlo"], "«Handy öfter ausschalten»."),
+        tf("Buscar ayuda profesional es una señal de debilidad.", false, "«kein Zeichen von Schwäche»."),
+      ],
+    },
+  },
 ];
