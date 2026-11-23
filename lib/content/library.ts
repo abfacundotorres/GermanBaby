@@ -1397,4 +1397,124 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-fahrrad-stadt", level: "B1", emoji: "🚲", topic: "En bicicleta por la ciudad",
+    reading: {
+      title: "Mit dem Fahrrad durch die Stadt",
+      text: [
+        "In vielen deutschen Städten fahren immer mehr Menschen mit dem Fahrrad zur Arbeit. Es ist schneller als das Auto, wenn es viel Verkehr gibt, und man spart Geld für Benzin und Parkplatz. Außerdem bewegt man sich an der frischen Luft, was gut für die Gesundheit ist.",
+        "Trotzdem gibt es auch Probleme. Nicht überall gibt es sichere Radwege, und an manchen Kreuzungen müssen Radfahrer gefährlich zwischen Autos fahren. Wichtig sind deshalb ein Helm, Licht am Fahrrad und ein gutes Schloss, denn Fahrräder werden oft gestohlen.",
+        "Viele Städte bauen deshalb neue Radwege und Abstellplätze. Wer kein eigenes Fahrrad besitzt, kann an vielen Orten eins leihen und nach der Fahrt an einer anderen Station zurückgeben. So kommt man auch ohne Auto bequem durch die Stadt.",
+      ],
+      translation: [
+        "En muchas ciudades alemanas cada vez más gente va al trabajo en bicicleta. Es más rápido que el auto cuando hay mucho tránsito y se ahorra el dinero de la nafta y del estacionamiento. Además uno se mueve al aire libre, lo cual es bueno para la salud.",
+        "Aun así hay problemas. No en todas partes hay ciclovías seguras y en algunas esquinas los ciclistas tienen que pasar de forma peligrosa entre autos. Por eso son importantes un casco, luz en la bicicleta y un buen candado, porque las bicicletas se roban con frecuencia.",
+        "Muchas ciudades construyen por eso nuevas ciclovías y estacionamientos para bicicletas. Quien no tiene bicicleta propia puede alquilar una en muchos lugares y devolverla después del viaje en otra estación. Así se llega cómodamente por la ciudad también sin auto.",
+      ],
+      questions: [
+        c("¿Cuándo es la bicicleta más rápida que el auto?", ["Cuando hay mucho tránsito", "Siempre", "Cuando llueve", "De noche"], "«wenn es viel Verkehr gibt»."),
+        c("¿Qué ahorra quien usa bicicleta?", ["Nafta y estacionamiento", "Tiempo de descanso", "Ropa", "Comida"], "«Benzin und Parkplatz»."),
+        c("¿Qué problema se menciona?", ["No hay ciclovías seguras en todas partes", "No hay bicicletas", "Está prohibido", "Son muy caras"], "«Nicht überall ... sichere Radwege»."),
+        c("¿Qué es importante tener?", ["Casco, luz y un buen candado", "Un auto", "Un mapa", "Una campera"], "«Helm, Licht ... Schloss»."),
+        tf("Las bicicletas rara vez se roban.", false, "«werden oft gestohlen»."),
+        c("¿Qué pueden hacer quienes no tienen bicicleta?", ["Alquilar una y devolverla en otra estación", "Comprar una de segunda mano", "Pedir prestado", "Ir a pie"], "«leihen und ... zurückgeben»."),
+      ],
+    },
+  },
+  {
+    id: "b1-puenktlichkeit", level: "B1", emoji: "⏰", topic: "La puntualidad",
+    reading: {
+      title: "Pünktlichkeit in Deutschland",
+      text: [
+        "Pünktlichkeit gilt in Deutschland als wichtige Tugend. Wer zu einem Termin, einem Vorstellungsgespräch oder einem Treffen mit Freunden kommt, sollte lieber ein paar Minuten früher da sein als zu spät. Bei der Arbeit beginnen Besprechungen meist genau zur angegebenen Zeit.",
+        "Wer sich verspätet, sollte rechtzeitig Bescheid sagen und sich entschuldigen, am besten mit einer kurzen Nachricht. Das zeigt Respekt gegenüber den anderen und ihrer Zeit. Bei privaten Einladungen ist es etwas anders: Zu einer Party darf man oft zehn bis fünfzehn Minuten später kommen, aber nicht zu einem Abendessen.",
+        "Auch öffentliche Verkehrsmittel werden meist als pünktlich erwartet, obwohl die Realität manchmal anders aussieht. Verspätungen der Bahn sind ein häufiges Thema, über das sich viele Menschen ärgern. Deshalb planen viele einen Zeitpuffer ein, wenn sie einen wichtigen Termin haben.",
+      ],
+      translation: [
+        "La puntualidad se considera en Alemania una virtud importante. Quien va a una cita, a una entrevista de trabajo o a un encuentro con amigos debería llegar unos minutos antes en lugar de tarde. En el trabajo las reuniones suelen empezar exactamente a la hora indicada.",
+        "Quien se atrasa debería avisar a tiempo y disculparse, mejor con un mensaje corto. Eso muestra respeto hacia los demás y su tiempo. En las invitaciones privadas es algo distinto: a una fiesta muchas veces se puede llegar de diez a quince minutos más tarde, pero no a una cena.",
+        "También se espera que los transportes públicos sean puntuales, aunque la realidad a veces es distinta. Los retrasos del tren son un tema frecuente, por el que mucha gente se enoja. Por eso muchos prevén un margen de tiempo cuando tienen una cita importante.",
+      ],
+      questions: [
+        c("¿Cómo se considera la puntualidad en Alemania?", ["Una virtud importante", "Algo sin importancia", "Un defecto", "Una moda"], "«wichtige Tugend»."),
+        c("¿Qué conviene hacer ante una cita?", ["Llegar unos minutos antes", "Llegar tarde", "Llegar justo a la hora", "Llamar antes"], "«ein paar Minuten früher»."),
+        c("¿Qué hay que hacer si uno se atrasa?", ["Avisar a tiempo y disculparse", "No decir nada", "Cancelar", "Llegar sin avisar"], "«Bescheid sagen und sich entschuldigen»."),
+        c("¿A qué se puede llegar más tarde, según el texto?", ["A una fiesta", "A una cena", "A una entrevista", "A una reunión de trabajo"], "«zu einer Party ... zehn bis fünfzehn Minuten»."),
+        c("¿Qué tema es frecuente respecto del tren?", ["Los retrasos", "Los precios bajos", "Los asientos", "La limpieza"], "«Verspätungen der Bahn»."),
+        c("¿Qué hacen muchos para citas importantes?", ["Prevén un margen de tiempo", "Viajan de noche", "Evitan el tren", "Salen tarde"], "«Zeitpuffer»."),
+      ],
+    },
+  },
+  {
+    id: "b1-verein", level: "B1", emoji: "⚽", topic: "Las asociaciones",
+    reading: {
+      title: "Im Verein sein",
+      text: [
+        "In Deutschland gibt es mehr als neunzigtausend Sportvereine, und fast jeder dritte Einwohner ist Mitglied in einem. Es gibt aber auch Vereine für Musik, Schach, Gärtnern oder Briefmarkensammler. Man zahlt einen kleinen Beitrag, meist ein paar Euro im Monat, und darf dafür an allen Aktivitäten teilnehmen.",
+        "Für Neuankömmlinge sind Vereine eine gute Möglichkeit, Leute kennenzulernen und die Sprache zu üben. Viele bieten Probetrainings an, sodass man erst einmal ausprobieren kann, ob es einem gefällt. Außerdem gibt es oft Veranstaltungen wie Feste oder Ausflüge, bei denen sich die Mitglieder besser kennenlernen.",
+        "Die meisten Vereine werden von Freiwilligen geleitet, die in ihrer Freizeit Training geben, Termine planen oder Feste organisieren. Wer Zeit hat, kann sich auch selbst engagieren. So entsteht ein Gefühl der Gemeinschaft, das vielen Menschen im Alltag wichtig ist.",
+      ],
+      translation: [
+        "En Alemania hay más de noventa mil clubes deportivos y casi uno de cada tres habitantes es socio de alguno. También hay asociaciones de música, ajedrez, jardinería o coleccionistas de sellos. Se paga una cuota chica, por lo general unos pocos euros por mes, y a cambio se puede participar en todas las actividades.",
+        "Para los recién llegados, las asociaciones son una buena manera de conocer gente y practicar el idioma. Muchas ofrecen entrenamientos de prueba, de modo que uno puede probar primero si le gusta. Además suele haber eventos como fiestas o excursiones en los que los socios se conocen mejor.",
+        "La mayoría de las asociaciones están dirigidas por voluntarios que en su tiempo libre dan entrenamiento, planifican fechas u organizan fiestas. Quien tiene tiempo también puede comprometerse. Así surge un sentimiento de comunidad que a mucha gente le importa en la vida cotidiana.",
+      ],
+      questions: [
+        c("¿Cuántos habitantes son socios de un club, aproximadamente?", ["Casi uno de cada tres", "Casi todos", "Uno de cada diez", "Casi nadie"], "«fast jeder dritte Einwohner»."),
+        c("¿Qué se paga normalmente?", ["Una cuota chica mensual", "Una gran suma anual", "Nada", "Solo por actividad"], "«kleiner Beitrag ... im Monat»."),
+        c("¿Por qué son útiles para los recién llegados?", ["Para conocer gente y practicar el idioma", "Para conseguir trabajo", "Para ahorrar", "Para viajar"], "«Leute kennenzulernen und die Sprache zu üben»."),
+        c("¿Qué ofrecen muchas asociaciones antes de asociarse?", ["Entrenamientos de prueba", "Descuentos", "Regalos", "Seguros"], "«Probetrainings»."),
+        c("¿Quiénes dirigen la mayoría de las asociaciones?", ["Voluntarios", "El Estado", "Empresas", "Los vecinos pagos"], "«von Freiwilligen geleitet»."),
+        tf("En las asociaciones solo se puede hacer deporte.", false, "También música, ajedrez, jardinería, sellos."),
+      ],
+    },
+  },
+  {
+    id: "b1-zugreise", level: "B1", emoji: "🚆", topic: "Viajar en tren",
+    reading: {
+      title: "Mit der Bahn reisen",
+      text: [
+        "Eine Reise mit dem Zug ist in Deutschland bequem, aber man sollte ein paar Dinge wissen. Fahrkarten kauft man am Automaten, am Schalter oder bequem im Internet. Wer früh bucht, bekommt oft einen günstigen Sparpreis, der allerdings meist nur für einen bestimmten Zug gilt.",
+        "Auf dem Bahnsteig zeigt eine Anzeigetafel, wann und von welchem Gleis der Zug abfährt. Besonders bei Verspätungen oder Gleisänderungen lohnt es sich, die Anzeigen aufmerksam zu verfolgen. Wer umsteigen muss, sollte genug Zeit einplanen, denn Anschlusszüge warten nicht immer.",
+        "Im Zug kann man in der Regel einen beliebigen freien Platz nehmen, außer man hat vorher eine Sitzplatzreservierung gekauft. Für lange Fahrten ist sie empfehlenswert, vor allem am Wochenende und zu Ferienzeiten, wenn die Züge sehr voll sind. Und wer mit Fahrrad oder Hund reist, muss meist eine eigene Karte lösen.",
+      ],
+      translation: [
+        "Un viaje en tren es cómodo en Alemania, pero conviene saber algunas cosas. Los pasajes se compran en la máquina, en la boletería o cómodamente por internet. Quien reserva temprano recibe muchas veces un precio de oferta conveniente, que sin embargo suele valer solo para un tren determinado.",
+        "En el andén un panel indica cuándo y de qué vía sale el tren. Especialmente con retrasos o cambios de vía vale la pena seguir los avisos con atención. Quien tiene que hacer trasbordo debería prever suficiente tiempo, porque los trenes de conexión no siempre esperan.",
+        "En el tren se puede tomar por lo general cualquier asiento libre, salvo que antes se haya comprado una reserva de asiento. Para viajes largos se la recomienda, sobre todo los fines de semana y en vacaciones, cuando los trenes van muy llenos. Y quien viaja con bicicleta o perro suele tener que sacar un pasaje aparte.",
+      ],
+      questions: [
+        c("¿Dónde se compran los pasajes?", ["En la máquina, en la boletería o en internet", "Solo en el tren", "Solo en internet", "En el kiosco"], "«Automaten ... Schalter ... Internet»."),
+        c("¿Qué suele valer el precio de oferta?", ["Solo para un tren determinado", "Para cualquier tren", "Solo para niños", "Solo los domingos"], "«nur für einen bestimmten Zug»."),
+        c("¿Qué indica el panel del andén?", ["Hora y vía de salida", "El precio", "El clima", "El nombre del conductor"], "«wann und von welchem Gleis»."),
+        c("¿Qué hay que prever si hay que hacer trasbordo?", ["Suficiente tiempo", "Dinero extra", "Una reserva", "Comida"], "«genug Zeit einplanen»."),
+        c("¿Cuándo se recomienda reservar asiento?", ["En viajes largos, fines de semana y vacaciones", "Siempre", "Nunca", "Solo de noche"], "«lange Fahrten ... Wochenende»."),
+        c("¿Qué pasa con quien viaja con bicicleta o perro?", ["Suele tener que sacar un pasaje aparte", "Viaja gratis", "No puede subir", "Paga la mitad"], "«eigene Karte lösen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-supermarkt-preise", level: "B1", emoji: "🛒", topic: "Comparar precios",
+    reading: {
+      title: "Beim Einkaufen Geld sparen",
+      text: [
+        "Im Supermarkt kann man mit einigen Tricks viel Geld sparen. Zuerst lohnt sich ein Blick auf den Preis pro Kilo oder Liter, der unter dem Verkaufspreis steht. So erkennt man, welche Packung wirklich günstiger ist, auch wenn sie auf den ersten Blick größer oder kleiner aussieht.",
+        "Die Eigenmarken der Supermärkte sind oft billiger als bekannte Marken, und die Qualität ist meistens gleich gut. Außerdem gibt es jede Woche Sonderangebote, die man in den Prospekten oder in Apps findet. Wer vorher eine Einkaufsliste schreibt, kauft weniger Unnötiges und wirft weniger Lebensmittel weg.",
+        "Obst und Gemüse sind auf dem Markt oder direkt beim Bauern manchmal frischer und günstiger, besonders in der Saison. Gegen Ende des Tages werden in vielen Läden Waren reduziert, die bald ablaufen. Wer flexibel ist, kann dann sehr günstig einkaufen, ohne auf Qualität zu verzichten.",
+      ],
+      translation: [
+        "En el supermercado se puede ahorrar mucho dinero con algunos trucos. Primero conviene mirar el precio por kilo o por litro, que está debajo del precio de venta. Así se reconoce qué paquete es realmente más barato, aunque a primera vista parezca más grande o más chico.",
+        "Las marcas propias de los supermercados suelen ser más baratas que las marcas conocidas y la calidad por lo general es igual de buena. Además hay cada semana ofertas especiales que se encuentran en los folletos o en aplicaciones. Quien escribe antes una lista de compras compra menos cosas innecesarias y tira menos alimentos.",
+        "Frutas y verduras en el mercado o directamente al productor son a veces más frescas y baratas, sobre todo en temporada. Hacia el final del día, en muchos negocios se rebajan productos que están por vencer. Quien es flexible puede comprar entonces muy barato sin renunciar a la calidad.",
+      ],
+      questions: [
+        c("¿Qué conviene mirar para saber qué paquete es más barato?", ["El precio por kilo o litro", "El tamaño", "El color", "La marca"], "«Preis pro Kilo oder Liter»."),
+        c("¿Cómo suelen ser las marcas propias?", ["Más baratas y de calidad parecida", "Más caras", "De peor calidad", "Iguales en precio"], "«oft billiger ... Qualität ... gleich gut»."),
+        c("¿Dónde se encuentran las ofertas semanales?", ["En folletos y aplicaciones", "En la caja", "En el diario solamente", "En la radio"], "«Prospekten oder in Apps»."),
+        c("¿Qué beneficio tiene la lista de compras?", ["Se compra menos innecesario y se tira menos comida", "Se compra más", "Se gasta más rápido", "Ninguno"], "«weniger Unnötiges»."),
+        c("¿Dónde puede ser más fresca y barata la verdura?", ["En el mercado o directo al productor", "En el supermercado siempre", "Congelada", "En latas"], "«auf dem Markt oder direkt beim Bauern»."),
+        c("¿Qué pasa hacia el final del día en muchos negocios?", ["Se rebajan productos por vencer", "Suben los precios", "Cierran temprano", "No hay productos"], "«Waren reduziert»."),
+      ],
+    },
+  },
 ];
