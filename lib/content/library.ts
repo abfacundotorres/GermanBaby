@@ -2323,4 +2323,134 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-pendeln", level: "B1", emoji: "🚉", topic: "Viajar al trabajo todos los días",
+    reading: {
+      title: "Pendler",
+      text: [
+        "Millionen Deutsche fahren jeden Tag zur Arbeit in eine andere Stadt. Man nennt sie Pendler. Manche wohnen auf dem Land, weil die Mieten dort niedriger sind, und arbeiten in der Stadt, wo es mehr Stellen gibt. Andere haben ein Haus im Grünen gekauft und nehmen dafür einen längeren Weg in Kauf.",
+        "Die meisten Pendler fahren mit dem Auto, aber viele nutzen auch Bahn oder Bus. Wer zwei Stunden pro Tag unterwegs ist, verliert viel Zeit und gibt außerdem viel Geld für Benzin oder Fahrkarten aus. Einen Teil der Kosten kann man bei der Steuererklärung angeben, wenn man den Weg zur Arbeit nachweisen kann.",
+        "Im Zug haben manche Pendler eine feste Routine. Sie lesen, hören Musik oder arbeiten schon am Laptop. Das hilft, die Zeit sinnvoll zu nutzen. Auf der Autobahn dagegen ärgert man sich oft über Staus, und eine Baustelle kann den Morgen komplett durcheinanderbringen.",
+        "Seit es mehr Home-Office gibt, pendeln viele nur noch an zwei oder drei Tagen pro Woche. Das spart Zeit und schont die Umwelt. Trotzdem bleibt ein Problem: Wenn das Angebot an Zügen schlecht ist, sind Menschen auf dem Land weiterhin auf das Auto angewiesen.",
+      ],
+      translation: [
+        "Millones de alemanes viajan todos los días a trabajar a otra ciudad. Se los llama «Pendler». Algunos viven en el campo porque los alquileres son más bajos, y trabajan en la ciudad, donde hay más puestos. Otros compraron una casa en zona verde y por eso aceptan un camino más largo.",
+        "La mayoría viaja en auto, pero muchos usan también el tren o el colectivo. Quien está dos horas por día en camino pierde mucho tiempo y además gasta mucho dinero en nafta o en pasajes. Una parte de los costos se puede declarar en la declaración de impuestos, si se puede comprobar el trayecto al trabajo.",
+        "En el tren algunos viajeros tienen una rutina fija. Leen, escuchan música o ya trabajan en la notebook. Eso ayuda a aprovechar bien el tiempo. En la autopista, en cambio, uno se enoja seguido por los embotellamientos, y una obra puede desordenar por completo la mañana.",
+        "Desde que hay más trabajo en casa, muchos viajan solo dos o tres días por semana. Eso ahorra tiempo y cuida el ambiente. Aun así queda un problema: si la oferta de trenes es mala, la gente del campo sigue dependiendo del auto.",
+      ],
+      questions: [
+        c("¿Qué es un «Pendler»?", ["Alguien que viaja todos los días a trabajar a otra ciudad", "Un turista", "Un estudiante", "Un jubilado"], "«fahren jeden Tag zur Arbeit in eine andere Stadt»."),
+        c("¿Por qué algunos viven en el campo?", ["Los alquileres son más bajos", "Hay más puestos", "Hay más trenes", "Es obligatorio"], "«Mieten dort niedriger»."),
+        c("¿Qué costos se pueden declarar?", ["Una parte del trayecto al trabajo", "Todo el sueldo", "La comida", "Las vacaciones"], "«Teil der Kosten ... Weg zur Arbeit»."),
+        c("¿Qué hacen algunos en el tren?", ["Leen, escuchan música o trabajan", "Duermen siempre", "Cocinan", "Juegan al fútbol"], "«lesen, hören Musik oder arbeiten»."),
+        c("¿Qué problema hay en la autopista?", ["Los embotellamientos y las obras", "Los peajes gratis", "La falta de autos", "El silencio"], "«Staus ... Baustelle»."),
+        tf("Con el Home-Office muchos viajan menos días a la semana.", true, "«nur noch an zwei oder drei Tagen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-klima-alltag", level: "B1", emoji: "🌡️", topic: "El clima y la vida diaria",
+    reading: {
+      title: "Das Wetter ändert sich",
+      text: [
+        "In den letzten Jahren sind die Sommer in Deutschland heißer und trockener geworden. Im Juli erreichen die Temperaturen manchmal vierzig Grad, und das war früher sehr selten. Viele Menschen merken das im Alltag: Wohnungen heizen sich auf, und nachts ist es kaum möglich, gut zu schlafen.",
+        "Auch die Landwirtschaft spürt die Veränderungen. Wenn es wochenlang nicht regnet, wachsen Getreide und Gemüse schlechter, und die Ernte fällt kleiner aus. Dafür kommt es im Herbst oder Winter manchmal zu starken Regenfällen, die Flüsse über die Ufer treten lassen und Straßen überschwemmen.",
+        "Viele Städte versuchen, sich anzupassen. Sie pflanzen mehr Bäume, damit es im Sommer Schatten gibt, und bauen Brunnen, an denen man Wasser trinken kann. Neue Häuser werden so geplant, dass sie weniger Hitze aufnehmen, und manche Dächer bekommen eine Begrünung.",
+        "Auch jeder Einzelne kann etwas tun. Wer weniger Auto fährt, Strom spart und weniger Fleisch isst, verringert den eigenen Beitrag zum Klimawandel. Natürlich löst das nicht alle Probleme, aber viele kleine Entscheidungen zusammen können einen Unterschied machen.",
+      ],
+      translation: [
+        "En los últimos años los veranos en Alemania se han vuelto más calurosos y secos. En julio las temperaturas llegan a veces a cuarenta grados, y antes eso era muy raro. Mucha gente lo nota en el día a día: los departamentos se calientan y de noche casi no se puede dormir bien.",
+        "También la agricultura siente los cambios. Cuando no llueve durante semanas, los cereales y las verduras crecen peor y la cosecha es más chica. En cambio, en otoño o en invierno a veces hay lluvias fuertes que hacen desbordar los ríos e inundan las calles.",
+        "Muchas ciudades intentan adaptarse. Plantan más árboles para que haya sombra en verano y construyen fuentes donde se puede tomar agua. Las casas nuevas se planifican para absorber menos calor y algunos techos reciben vegetación.",
+        "También cada uno puede hacer algo. Quien maneja menos, ahorra electricidad y come menos carne reduce su propio aporte al cambio climático. Por supuesto, eso no resuelve todos los problemas, pero muchas decisiones pequeñas juntas pueden marcar la diferencia.",
+      ],
+      questions: [
+        c("¿Cómo son los veranos de los últimos años?", ["Más calurosos y secos", "Más fríos", "Más cortos", "Más húmedos"], "«heißer und trockener»."),
+        c("¿Qué problema notan las personas en sus casas?", ["Los departamentos se calientan", "Hay demasiada luz", "Hace frío", "Hay ruido"], "«Wohnungen heizen sich auf»."),
+        c("¿Qué pasa con la cosecha cuando no llueve?", ["Es más chica", "Es más grande", "No cambia", "Se vende más"], "«Ernte fällt kleiner aus»."),
+        c("¿Qué hacen las ciudades?", ["Plantan árboles y construyen fuentes", "Cierran las calles", "Prohíben los techos", "Venden agua"], "«mehr Bäume ... Brunnen»."),
+        c("¿Qué puede hacer cada persona?", ["Manejar menos y ahorrar electricidad", "Comprar más autos", "No hacer nada", "Comer más carne"], "«weniger Auto fahren, Strom sparen»."),
+        tf("Los cuarenta grados en julio eran antes muy frecuentes.", false, "«früher sehr selten»."),
+      ],
+    },
+  },
+  {
+    id: "b1-mehrsprachig", level: "B1", emoji: "🗣️", topic: "Crecer con varios idiomas",
+    reading: {
+      title: "Zwei Sprachen, zwei Welten",
+      text: [
+        "Immer mehr Kinder in Deutschland wachsen mit zwei oder mehr Sprachen auf. Oft spricht die Familie zu Hause eine andere Sprache als die Schule oder der Kindergarten. Früher dachten manche Leute, das sei für Kinder zu schwierig. Heute weiß man, dass Kinder mehrere Sprachen ohne Problem lernen können.",
+        "Wichtig ist, dass die Eltern in der Sprache sprechen, in der sie sich am wohlsten fühlen. So bekommen die Kinder einen reichen Wortschatz und lernen, Gefühle genau auszudrücken. Wenn Eltern aus Unsicherheit die Sprache wechseln, ist das für das Kind oft weniger natürlich.",
+        "Mehrsprachige Menschen haben im Beruf Vorteile, denn viele Firmen suchen Mitarbeiter, die mit Kunden aus anderen Ländern sprechen können. Außerdem fällt es ihnen oft leichter, noch eine weitere Sprache zu lernen, weil sie schon wissen, wie Sprachen funktionieren.",
+        "Es gibt aber auch Herausforderungen. Manchmal mischen Kinder die Sprachen in einem Satz oder haben in einer Sprache einen kleineren Wortschatz. Das ist normal und kein Grund zur Sorge. Mit Büchern, Gesprächen und Kontakt zu anderen Sprechern wächst der Wortschatz in beiden Sprachen.",
+      ],
+      translation: [
+        "Cada vez más chicos en Alemania crecen con dos o más idiomas. Muchas veces la familia habla en casa un idioma distinto al de la escuela o el jardín. Antes algunos pensaban que eso era demasiado difícil para los chicos. Hoy se sabe que los chicos pueden aprender varios idiomas sin problema.",
+        "Es importante que los padres hablen en el idioma en que se sienten más cómodos. Así los chicos obtienen un vocabulario rico y aprenden a expresar los sentimientos con precisión. Si los padres cambian de idioma por inseguridad, eso muchas veces resulta menos natural para el chico.",
+        "Las personas multilingües tienen ventajas en el trabajo, porque muchas empresas buscan empleados que puedan hablar con clientes de otros países. Además, muchas veces les resulta más fácil aprender un idioma más, porque ya saben cómo funcionan los idiomas.",
+        "También hay desafíos. A veces los chicos mezclan los idiomas en una oración o tienen menos vocabulario en uno de ellos. Eso es normal y no es motivo de preocupación. Con libros, conversaciones y contacto con otros hablantes el vocabulario crece en ambos idiomas.",
+      ],
+      questions: [
+        c("¿Qué se pensaba antes sobre los chicos bilingües?", ["Que era demasiado difícil para ellos", "Que era imposible", "Que era mejor", "Que era gratis"], "«das sei für Kinder zu schwierig»."),
+        c("¿En qué idioma conviene que hablen los padres?", ["En el que se sienten más cómodos", "Siempre en alemán", "En ninguno", "En inglés"], "«in der sie sich am wohlsten fühlen»."),
+        c("¿Qué ventaja tienen en el trabajo?", ["Pueden hablar con clientes de otros países", "Ganan menos", "Trabajan menos", "No necesitan estudiar"], "«Kunden aus anderen Ländern»."),
+        c("¿Por qué les resulta más fácil aprender otro idioma?", ["Ya saben cómo funcionan los idiomas", "Tienen más tiempo", "Es más barato", "Es obligatorio"], "«wissen, wie Sprachen funktionieren»."),
+        c("¿Qué es normal en los chicos bilingües?", ["Mezclar idiomas en una oración", "No hablar nunca", "Hablar solo en voz baja", "Olvidar ambos"], "«mischen ... in einem Satz»."),
+        tf("Mezclar los idiomas es siempre un motivo de preocupación.", false, "«kein Grund zur Sorge»."),
+      ],
+    },
+  },
+  {
+    id: "b1-geburtstag", level: "B1", emoji: "🎂", topic: "Los cumpleaños en Alemania",
+    reading: {
+      title: "Geburtstag feiern",
+      text: [
+        "In Deutschland ist der Geburtstag ein wichtiger Tag, und es gibt einige feste Regeln. Eine davon lautet, dass man nicht vor dem Geburtstag gratuliert, denn das bringt angeblich Pech. Deshalb schreiben Freunde und Familie oft erst um Mitternacht oder am Morgen des Tages eine Nachricht.",
+        "Wer Geburtstag hat, ist meistens selbst der Gastgeber. Man lädt Freunde und Familie ein und bereitet Kaffee und Kuchen oder ein Essen vor. In der Arbeit bringt das Geburtstagskind oft einen Kuchen oder Süßigkeiten für alle Kollegen mit, statt Geschenke zu bekommen.",
+        "Bei runden Geburtstagen wie dem dreißigsten, fünfzigsten oder sechzigsten wird besonders groß gefeiert, manchmal in einem Restaurant oder einem gemieteten Saal. Die Gäste bringen Geschenke mit, meistens etwas Kleines wie Blumen, eine Flasche Wein oder ein Buch.",
+        "Für Kinder gibt es eine Party mit Spielen und einem Kuchen mit Kerzen. Das Kind darf sich dabei etwas wünschen und die Kerzen ausblasen. Wenn alle Kerzen mit einem Atemzug ausgehen, soll der Wunsch in Erfüllung gehen. Das ist ein beliebter Brauch, den fast jedes Kind kennt.",
+      ],
+      translation: [
+        "En Alemania el cumpleaños es un día importante y hay algunas reglas fijas. Una de ellas dice que no se felicita antes del cumpleaños, porque supuestamente trae mala suerte. Por eso los amigos y la familia muchas veces escriben un mensaje recién a medianoche o a la mañana de ese día.",
+        "Quien cumple años suele ser él mismo el anfitrión. Se invita a amigos y familia y se prepara café y torta o una comida. En el trabajo, el cumpleañero muchas veces lleva una torta o golosinas para todos los colegas, en lugar de recibir regalos.",
+        "En los cumpleaños redondos como el treinta, el cincuenta o el sesenta se festeja especialmente en grande, a veces en un restaurante o en un salón alquilado. Los invitados traen regalos, casi siempre algo chico como flores, una botella de vino o un libro.",
+        "Para los chicos hay una fiesta con juegos y una torta con velitas. El chico puede pedir un deseo y soplar las velas. Si todas las velas se apagan de un soplido, el deseo se debe cumplir. Es una costumbre querida que casi todos los chicos conocen.",
+      ],
+      questions: [
+        c("¿Cuándo no se debe felicitar?", ["Antes del cumpleaños", "El mismo día", "A la tarde", "Nunca se felicita"], "«nicht vor dem Geburtstag»."),
+        c("¿Por qué?", ["Trae mala suerte", "Es caro", "Es aburrido", "Es ilegal"], "«bringt angeblich Pech»."),
+        c("¿Quién suele ser el anfitrión?", ["El cumpleañero", "Los invitados", "Los vecinos", "El jefe"], "«selbst der Gastgeber»."),
+        c("¿Qué lleva el cumpleañero al trabajo?", ["Una torta o golosinas", "Un auto", "Flores para el jefe", "Nada"], "«einen Kuchen oder Süßigkeiten»."),
+        c("¿Qué regalan los invitados, por lo general?", ["Algo chico como flores o un libro", "Un auto", "Una casa", "Dinero en bolsas"], "«Blumen, eine Flasche Wein oder ein Buch»."),
+        tf("Si todas las velas se apagan con un soplido, el deseo debe cumplirse.", true, "«soll der Wunsch in Erfüllung gehen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-nebenjob", level: "B1", emoji: "💼", topic: "Trabajos de estudiantes",
+    reading: {
+      title: "Neben dem Studium arbeiten",
+      text: [
+        "Viele Studenten in Deutschland arbeiten neben dem Studium, um ihr Leben zu bezahlen. Die Miete ist in vielen Städten hoch, und nicht alle Familien können ihre Kinder voll unterstützen. Manche Studenten bekommen staatliche Hilfe, das BAföG, aber der Betrag reicht oft nicht für alle Kosten.",
+        "Typische Nebenjobs sind Kellnern, Nachhilfe geben, in einem Lager arbeiten oder an der Universität helfen. Ein Vorteil von Stellen an der Uni ist, dass die Arbeitszeiten flexibel sind. Außerdem lernt man dort Leute kennen und bekommt Einblicke in die Forschung.",
+        "Es gibt Grenzen: Wer im Semester mehr als zwanzig Stunden pro Woche arbeitet, gilt rechtlich nicht mehr in erster Linie als Student und muss mehr Abgaben zahlen. In den Semesterferien dürfen Studenten dagegen länger arbeiten, deshalb sind Ferienjobs besonders beliebt.",
+        "Ein Nebenjob hat Vor- und Nachteile. Er bringt Geld und Erfahrung, kostet aber auch Zeit, die man zum Lernen braucht. Manche Studenten brauchen deshalb ein Semester länger. Wer klug plant und realistisch bleibt, findet meistens eine Lösung, die zu seiner Situation passt.",
+      ],
+      translation: [
+        "Muchos estudiantes en Alemania trabajan además de estudiar para pagar su vida. El alquiler es alto en muchas ciudades y no todas las familias pueden apoyar completamente a sus hijos. Algunos estudiantes reciben ayuda del estado, el BAföG, pero el monto muchas veces no alcanza para todos los gastos.",
+        "Los trabajos típicos son de mozo, dar clases particulares, trabajar en un depósito o ayudar en la universidad. Una ventaja de los puestos en la universidad es que los horarios son flexibles. Además se conoce gente y se obtiene una mirada de la investigación.",
+        "Hay límites: quien trabaja más de veinte horas por semana durante el semestre ya no cuenta legalmente en primer lugar como estudiante y debe pagar más aportes. En las vacaciones del semestre, en cambio, los estudiantes pueden trabajar más, por eso los trabajos de vacaciones son especialmente populares.",
+        "Un trabajo extra tiene ventajas y desventajas. Trae dinero y experiencia, pero también cuesta tiempo que se necesita para estudiar. Algunos estudiantes por eso necesitan un semestre más. Quien planifica con criterio y se mantiene realista suele encontrar una solución que se adapte a su situación.",
+      ],
+      questions: [
+        c("¿Por qué trabajan muchos estudiantes?", ["Para pagar su vida", "Para aburrirse menos", "Por obligación legal", "Para viajar"], "«um ihr Leben zu bezahlen»."),
+        c("¿Qué es el BAföG?", ["Una ayuda del estado", "Un trabajo", "Una universidad", "Un seguro"], "«staatliche Hilfe»."),
+        c("¿Qué ventaja tiene trabajar en la universidad?", ["Horarios flexibles y contactos", "Siempre paga más", "No hay trabajo", "Es obligatorio"], "«Arbeitszeiten flexibel»."),
+        c("¿Qué pasa si se trabaja más de veinte horas por semana en el semestre?", ["Hay que pagar más aportes", "Se recibe un premio", "Se cierra la universidad", "Nada"], "«muss mehr Abgaben zahlen»."),
+        c("¿Cuándo se puede trabajar más?", ["En las vacaciones del semestre", "Solo de noche", "Nunca", "En el examen"], "«Semesterferien»."),
+        tf("Un trabajo extra nunca afecta el tiempo de estudio.", false, "«kostet aber auch Zeit»."),
+      ],
+    },
+  },
 ];
