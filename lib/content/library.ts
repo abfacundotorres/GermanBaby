@@ -2799,4 +2799,130 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "a2-fahrrad-kaputt", level: "A2", emoji: "🚲", topic: "La bicicleta rota",
+    reading: {
+      title: "Das Fahrrad ist kaputt",
+      text: [
+        "Heute Morgen wollte Jonas mit dem Fahrrad zur Arbeit fahren. Aber das Hinterrad war platt. Er hatte keine Zeit, es zu reparieren, deshalb nahm er den Bus. Der Bus war voll, und Jonas musste stehen.",
+        "Am Abend ging er in eine Werkstatt. Der Mechaniker sagte: Ein neuer Schlauch kostet zehn Euro. Das war nicht teuer. Jonas konnte nach einer Stunde sein Fahrrad abholen. Morgen fährt er wieder mit dem Rad, und er nimmt immer eine Pumpe mit.",
+      ],
+      translation: [
+        "Esta mañana Jonas quería ir al trabajo en bicicleta. Pero la rueda de atrás estaba pinchada. No tenía tiempo para repararla, por eso tomó el colectivo. El colectivo estaba lleno y Jonas tuvo que ir parado.",
+        "A la tarde fue a un taller. El mecánico dijo: Una cámara nueva cuesta diez euros. No era caro. Jonas pudo retirar su bicicleta después de una hora. Mañana vuelve a ir en bici y siempre lleva un inflador.",
+      ],
+      questions: [
+        c("¿Qué problema tenía la bicicleta?", ["La rueda de atrás estaba pinchada", "No tenía frenos", "No tenía luz", "Estaba robada"], "«das Hinterrad war platt»."),
+        c("¿Cómo fue Jonas al trabajo?", ["En colectivo", "En auto", "A pie", "En tren"], "«nahm er den Bus»."),
+        fi("¿Cuántos euros cuesta la cámara nueva?", ["10", "zehn"], "«zehn Euro»."),
+        c("¿Cuánto tardó en estar lista?", ["Una hora", "Una semana", "Un día", "Un minuto"], "«nach einer Stunde»."),
+        tf("Jonas ya no usará más la bicicleta.", false, "«fährt er wieder mit dem Rad»."),
+      ],
+    },
+  },
+  {
+    id: "a2-einladung", level: "A2", emoji: "💌", topic: "Una invitación",
+    reading: {
+      title: "Eine Einladung zum Essen",
+      text: [
+        "Hallo Lena, am Samstag habe ich eine kleine Party in meiner Wohnung. Ich koche für acht Personen und möchte auch dich einladen. Die Party beginnt um sieben Uhr abends. Hast du Zeit? Ich freue mich sehr, wenn du kommst.",
+        "Bitte bring nichts mit, ich habe schon alles. Nur ein Getränk darfst du gern mitbringen. Wenn du kein Fleisch isst, sag mir bitte Bescheid, dann mache ich etwas anderes. Meine Adresse ist Lindenstraße 12, im dritten Stock. Viele Grüße, Marco.",
+      ],
+      translation: [
+        "Hola Lena, el sábado tengo una fiestita en mi departamento. Cocino para ocho personas y quiero invitarte también a vos. La fiesta empieza a las siete de la tarde. ¿Tenés tiempo? Me alegro mucho si venís.",
+        "Por favor no traigas nada, ya tengo todo. Solo una bebida podés traer con gusto. Si no comés carne, avisame por favor y entonces hago otra cosa. Mi dirección es Lindenstraße 12, en el tercer piso. Muchos saludos, Marco.",
+      ],
+      questions: [
+        c("¿Qué día es la fiesta?", ["El sábado", "El domingo", "El lunes", "El viernes"], "«am Samstag»."),
+        fi("¿Para cuántas personas cocina Marco?", ["8", "acht"], "«acht Personen»."),
+        c("¿A qué hora empieza?", ["A las siete de la tarde", "A las tres", "A las diez", "A mediodía"], "«um sieben Uhr abends»."),
+        c("¿Qué puede traer Lena?", ["Una bebida", "Una torta", "Comida", "Nada en absoluto"], "«ein Getränk»."),
+        c("¿En qué piso vive Marco?", ["En el tercero", "En el primero", "En el quinto", "En la planta baja"], "«im dritten Stock»."),
+      ],
+    },
+  },
+  {
+    id: "a2-supermarkt-liste", level: "A2", emoji: "🛒", topic: "La lista del supermercado",
+    reading: {
+      title: "Die Einkaufsliste",
+      text: [
+        "Familie Berger kauft jeden Samstag im Supermarkt ein. Vorher schreibt die Mutter eine Liste: Milch, Brot, Eier, Käse, Äpfel und Nudeln. Das ist wichtig, denn sonst vergisst sie immer etwas. Sie nimmt auch eine große Tasche mit.",
+        "Im Supermarkt sind die Preise diese Woche günstig. Die Äpfel kosten nur einen Euro pro Kilo. An der Kasse zahlt die Mutter mit Karte. Zu Hause räumen alle zusammen die Sachen in den Kühlschrank. Dann gibt es Nudeln mit Käse zum Mittagessen.",
+      ],
+      translation: [
+        "La familia Berger compra todos los sábados en el supermercado. Antes la madre escribe una lista: leche, pan, huevos, queso, manzanas y fideos. Eso es importante, porque si no siempre se olvida de algo. También lleva una bolsa grande.",
+        "En el supermercado los precios esta semana están baratos. Las manzanas cuestan solo un euro el kilo. En la caja la madre paga con tarjeta. En casa todos juntos guardan las cosas en la heladera. Después hay fideos con queso para el almuerzo.",
+      ],
+      questions: [
+        c("¿Cuándo compran?", ["Todos los sábados", "Todos los lunes", "Una vez por año", "Nunca"], "«jeden Samstag»."),
+        c("¿Por qué escribe una lista la madre?", ["Si no, se olvida de algo", "Porque es obligatorio", "Porque le gusta escribir", "Para el banco"], "«sonst vergisst sie ... etwas»."),
+        fi("¿Cuánto cuestan las manzanas por kilo (en euros)?", ["1", "ein", "einen"], "«einen Euro pro Kilo»."),
+        c("¿Cómo paga la madre?", ["Con tarjeta", "En efectivo", "Con cheque", "No paga"], "«mit Karte»."),
+        c("¿Qué comen al mediodía?", ["Fideos con queso", "Pizza", "Sopa", "Pescado"], "«Nudeln mit Käse»."),
+      ],
+    },
+  },
+  {
+    id: "a2-neuer-job", level: "A2", emoji: "👔", topic: "El primer día de trabajo",
+    reading: {
+      title: "Der erste Arbeitstag",
+      text: [
+        "Heute ist der erste Arbeitstag von Sophie in einer neuen Firma. Sie ist ein bisschen nervös. Um neun Uhr trifft sie ihre Chefin, Frau Keller. Die Chefin zeigt ihr das Büro und stellt ihr die Kollegen vor. Alle sind sehr freundlich.",
+        "Dann bekommt Sophie einen Computer und einen Schlüssel. Am Vormittag lernt sie das Programm der Firma kennen. In der Mittagspause essen alle zusammen in der Kantine. Am Nachmittag macht Sophie schon die erste kleine Aufgabe. Um fünf Uhr geht sie müde, aber froh nach Hause.",
+      ],
+      translation: [
+        "Hoy es el primer día de trabajo de Sophie en una empresa nueva. Está un poco nerviosa. A las nueve se encuentra con su jefa, la señora Keller. La jefa le muestra la oficina y le presenta a los colegas. Todos son muy amables.",
+        "Después Sophie recibe una computadora y una llave. A la mañana conoce el programa de la empresa. En el descanso del mediodía todos comen juntos en el comedor. A la tarde Sophie ya hace la primera tarea chica. A las cinco se va a casa cansada pero contenta.",
+      ],
+      questions: [
+        c("¿Cómo se siente Sophie al principio?", ["Un poco nerviosa", "Enojada", "Aburrida", "Triste"], "«ein bisschen nervös»."),
+        c("¿Con quién se encuentra a las nueve?", ["Con su jefa", "Con su madre", "Con un cliente", "Con un médico"], "«ihre Chefin, Frau Keller»."),
+        c("¿Qué recibe Sophie?", ["Una computadora y una llave", "Un auto", "Un celular", "Un contrato nuevo"], "«einen Computer und einen Schlüssel»."),
+        c("¿Dónde comen al mediodía?", ["En el comedor", "En un restaurante", "En casa", "En el parque"], "«in der Kantine»."),
+        fi("¿A qué hora se va a casa?", ["5", "fünf", "17"], "«um fünf Uhr»."),
+      ],
+    },
+  },
+  {
+    id: "a2-wetter-reise", level: "A2", emoji: "⛅", topic: "Planear un viaje",
+    reading: {
+      title: "Eine Reise planen",
+      text: [
+        "Im Sommer möchte Clara mit ihrer Freundin nach Italien fahren. Sie sucht im Internet nach Zügen und Hotels. Die Reise mit dem Zug dauert zehn Stunden, aber sie ist billiger als ein Flug. Außerdem kann man im Zug schlafen oder lesen.",
+        "Das Hotel liegt nicht weit vom Strand. Ein Zimmer für zwei Personen kostet siebzig Euro pro Nacht. Clara bucht fünf Nächte. Im Juli ist es dort sehr heiß, deshalb nimmt sie leichte Kleidung, einen Hut und Sonnencreme mit. Sie freut sich schon auf das Meer.",
+      ],
+      translation: [
+        "En el verano Clara quiere viajar a Italia con su amiga. Busca trenes y hoteles en internet. El viaje en tren dura diez horas, pero es más barato que un vuelo. Además se puede dormir o leer en el tren.",
+        "El hotel queda cerca de la playa. Una habitación para dos personas cuesta setenta euros por noche. Clara reserva cinco noches. En julio allá hace mucho calor, por eso lleva ropa liviana, un sombrero y protector solar. Ya se alegra por el mar.",
+      ],
+      questions: [
+        c("¿Adónde quiere viajar Clara?", ["A Italia", "A España", "A Francia", "A Austria"], "«nach Italien»."),
+        fi("¿Cuántas horas dura el viaje en tren?", ["10", "zehn"], "«zehn Stunden»."),
+        c("¿Qué ventaja tiene el tren?", ["Es más barato que un vuelo", "Es más rápido", "Es gratis", "Es más caliente"], "«billiger als ein Flug»."),
+        fi("¿Cuántos euros cuesta la habitación por noche?", ["70", "siebzig"], "«siebzig Euro pro Nacht»."),
+        c("¿Qué lleva Clara?", ["Ropa liviana, sombrero y protector solar", "Un abrigo", "Un paraguas", "Esquíes"], "«leichte Kleidung, einen Hut und Sonnencreme»."),
+      ],
+    },
+  },
+  {
+    id: "a2-nachbar-hilfe", level: "A2", emoji: "🤝", topic: "Ayuda entre vecinos",
+    reading: {
+      title: "Hilfe vom Nachbarn",
+      text: [
+        "Herr Schmidt ist achtzig Jahre alt und wohnt allein im zweiten Stock. Er kann nicht mehr gut laufen. Seine Nachbarin Frau Yilmaz kauft jede Woche für ihn ein. Sie bringt ihm Brot, Milch und Obst.",
+        "Dafür lädt Herr Schmidt sie manchmal zum Tee ein. Er erzählt ihr Geschichten aus seinem Leben. Er war früher Busfahrer in Hamburg. Frau Yilmaz hört gern zu. Beide sagen, dass sie sich im Haus nicht mehr allein fühlen. So hilft man sich in einem guten Haus.",
+      ],
+      translation: [
+        "El señor Schmidt tiene ochenta años y vive solo en el segundo piso. Ya no puede caminar bien. Su vecina, la señora Yilmaz, hace las compras para él cada semana. Le trae pan, leche y fruta.",
+        "A cambio, el señor Schmidt a veces la invita a tomar té. Le cuenta historias de su vida. Antes era chofer de colectivo en Hamburgo. A la señora Yilmaz le gusta escuchar. Los dos dicen que ya no se sienten solos en el edificio. Así se ayuda uno en un buen edificio.",
+      ],
+      questions: [
+        fi("¿Cuántos años tiene el señor Schmidt?", ["80", "achtzig"], "«achtzig Jahre alt»."),
+        c("¿Qué problema tiene?", ["No puede caminar bien", "No oye", "No tiene dinero", "No tiene casa"], "«nicht mehr gut laufen»."),
+        c("¿Quién hace las compras para él?", ["La vecina", "Su hijo", "Un empleado", "Nadie"], "«Frau Yilmaz kauft ... ein»."),
+        c("¿Qué hace él a cambio?", ["La invita a tomar té y le cuenta historias", "Le paga", "Le regala una casa", "Nada"], "«lädt ... zum Tee ein»."),
+        c("¿Qué era antes?", ["Chofer de colectivo", "Médico", "Maestro", "Cocinero"], "«Busfahrer in Hamburg»."),
+      ],
+    },
+  },
 ];
