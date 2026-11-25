@@ -2679,4 +2679,124 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "a1-hobbys", level: "A1", emoji: "🎸", topic: "Mis pasatiempos",
+    reading: {
+      title: "Meine Hobbys",
+      text: ["Ich heiße Paul und ich bin zwanzig Jahre alt. Am Wochenende habe ich viel Zeit. Ich spiele gern Gitarre. Ich spiele auch Fußball mit meinen Freunden. Am Samstag gehen wir in den Park. Am Sonntag lese ich ein Buch und höre Musik. Ich schwimme nicht gern. Das Wasser ist kalt."],
+      translation: ["Me llamo Paul y tengo veinte años. En el fin de semana tengo mucho tiempo. Me gusta tocar la guitarra. También juego al fútbol con mis amigos. El sábado vamos al parque. El domingo leo un libro y escucho música. No me gusta nadar. El agua está fría."],
+      questions: [
+        fi("¿Cuántos años tiene Paul?", ["20", "zwanzig"], "«zwanzig Jahre alt»."),
+        c("¿Qué instrumento toca?", ["La guitarra", "El piano", "La flauta", "El violín"], "«Gitarre»."),
+        c("¿Con quién juega al fútbol?", ["Con sus amigos", "Con su hermano", "Con su padre", "Solo"], "«mit meinen Freunden»."),
+        c("¿Adónde van el sábado?", ["Al parque", "Al cine", "A la playa", "Al museo"], "«in den Park»."),
+        tf("A Paul le gusta nadar.", false, "«Ich schwimme nicht gern»."),
+      ],
+    },
+  },
+  {
+    id: "a1-restaurant", level: "A1", emoji: "🍝", topic: "En el restaurante",
+    reading: {
+      title: "Im Restaurant",
+      text: ["Heute essen Sara und Jan im Restaurant. Sie sitzen am Fenster. Der Kellner bringt die Speisekarte. Sara nimmt eine Suppe und einen Salat. Jan nimmt Fisch mit Reis. Sie trinken Wasser. Das Essen ist sehr gut. Am Ende bezahlt Jan. Es kostet vierundzwanzig Euro. Sara sagt: Das war schön!"],
+      translation: ["Hoy Sara y Jan comen en el restaurante. Están sentados junto a la ventana. El mozo trae la carta. Sara pide una sopa y una ensalada. Jan pide pescado con arroz. Toman agua. La comida está muy rica. Al final paga Jan. Cuesta veinticuatro euros. Sara dice: ¡Qué lindo estuvo!"],
+      questions: [
+        c("¿Dónde están sentados?", ["Junto a la ventana", "Junto a la puerta", "Afuera", "En la cocina"], "«am Fenster»."),
+        c("¿Qué pide Sara?", ["Una sopa y una ensalada", "Pescado", "Pizza", "Solo agua"], "«eine Suppe und einen Salat»."),
+        c("¿Qué pide Jan?", ["Pescado con arroz", "Una sopa", "Pasta", "Carne"], "«Fisch mit Reis»."),
+        c("¿Qué toman?", ["Agua", "Vino", "Cerveza", "Jugo"], "«Sie trinken Wasser»."),
+        fi("¿Cuántos euros cuesta?", ["24", "vierundzwanzig"], "«vierundzwanzig Euro»."),
+      ],
+    },
+  },
+  {
+    id: "a1-schule", level: "A1", emoji: "🏫", topic: "Mi escuela",
+    reading: {
+      title: "Meine Schule",
+      text: ["Ich gehe in die Schule. Sie ist nicht weit von meinem Haus. Der Unterricht beginnt um acht Uhr. Wir haben Mathe, Englisch und Sport. Meine Lehrerin heißt Frau Braun. Sie ist nett. In der Pause esse ich ein Brot mit Käse. Um ein Uhr ist die Schule aus. Dann gehe ich nach Hause."],
+      translation: ["Voy a la escuela. No queda lejos de mi casa. La clase empieza a las ocho. Tenemos matemática, inglés y educación física. Mi maestra se llama señora Braun. Es simpática. En el recreo como un pan con queso. A la una termina la escuela. Entonces me voy a casa."],
+      questions: [
+        c("¿Queda lejos la escuela?", ["No", "Sí, muy lejos", "Está en otra ciudad", "No se sabe"], "«nicht weit»."),
+        fi("¿A qué hora empieza la clase?", ["8", "acht"], "«um acht Uhr»."),
+        c("¿Cómo se llama la maestra?", ["Frau Braun", "Frau Müller", "Frau Klein", "Frau Weiß"], "«Frau Braun»."),
+        c("¿Qué come en el recreo?", ["Un pan con queso", "Una manzana", "Una torta", "Una sopa"], "«Brot mit Käse»."),
+        fi("¿A qué hora termina la escuela?", ["1", "13", "ein"], "«um ein Uhr»."),
+      ],
+    },
+  },
+  {
+    id: "a1-mein-haus", level: "A1", emoji: "🏠", topic: "Mi casa",
+    reading: {
+      title: "Mein Haus",
+      text: ["Wir wohnen in einem kleinen Haus. Es hat fünf Zimmer. Im Wohnzimmer gibt es ein Sofa und einen Tisch. Die Küche ist groß. Dort essen wir. Oben sind drei Schlafzimmer und ein Bad. Hinter dem Haus ist ein Garten. Dort spielt unser Hund. Ich finde unser Haus sehr schön."],
+      translation: ["Vivimos en una casa chica. Tiene cinco habitaciones. En el living hay un sofá y una mesa. La cocina es grande. Ahí comemos. Arriba hay tres dormitorios y un baño. Detrás de la casa hay un jardín. Ahí juega nuestro perro. Me parece que nuestra casa es muy linda."],
+      questions: [
+        fi("¿Cuántas habitaciones tiene la casa?", ["5", "fünf"], "«fünf Zimmer»."),
+        c("¿Qué hay en el living?", ["Un sofá y una mesa", "Una cama", "Una ducha", "Una bicicleta"], "«ein Sofa und einen Tisch»."),
+        c("¿Cómo es la cocina?", ["Grande", "Chica", "Oscura", "Vieja"], "«Die Küche ist groß»."),
+        fi("¿Cuántos dormitorios hay arriba?", ["3", "drei"], "«drei Schlafzimmer»."),
+        c("¿Quién juega en el jardín?", ["El perro", "El gato", "Los chicos", "El padre"], "«spielt unser Hund»."),
+      ],
+    },
+  },
+  {
+    id: "a1-geburtstag-a1", level: "A1", emoji: "🎁", topic: "Mi cumpleaños",
+    reading: {
+      title: "Mein Geburtstag",
+      text: ["Morgen ist mein Geburtstag. Ich werde zehn Jahre alt. Meine Freunde kommen zu mir nach Hause. Meine Mutter backt einen Kuchen. Er ist groß und hat zehn Kerzen. Ich bekomme ein Fahrrad von meinem Vater. Das ist mein Wunsch. Wir essen, spielen und singen. Ich freue mich sehr!"],
+      translation: ["Mañana es mi cumpleaños. Cumplo diez años. Mis amigos vienen a mi casa. Mi madre hornea una torta. Es grande y tiene diez velitas. Mi padre me regala una bicicleta. Es mi deseo. Comemos, jugamos y cantamos. ¡Estoy muy contento!"],
+      questions: [
+        c("¿Cuándo es el cumpleaños?", ["Mañana", "Hoy", "Ayer", "El domingo"], "«Morgen»."),
+        fi("¿Cuántos años cumple?", ["10", "zehn"], "«zehn Jahre alt»."),
+        c("¿Quién hornea la torta?", ["La madre", "El padre", "El hermano", "La abuela"], "«Meine Mutter backt»."),
+        c("¿Qué regalo recibe?", ["Una bicicleta", "Un libro", "Un perro", "Un juego"], "«ein Fahrrad»."),
+        tf("Los amigos no vienen a la fiesta.", false, "«Meine Freunde kommen»."),
+      ],
+    },
+  },
+  {
+    id: "a1-bahnhof", level: "A1", emoji: "🚉", topic: "En la estación",
+    reading: {
+      title: "Am Bahnhof",
+      text: ["Maria steht am Bahnhof. Sie möchte nach Berlin fahren. Sie kauft eine Fahrkarte. Die Fahrkarte kostet dreißig Euro. Der Zug fährt um zehn Uhr ab. Er ist pünktlich. Maria sucht Gleis fünf. Dort wartet der Zug schon. Sie steigt ein und findet einen Platz am Fenster. Die Reise dauert vier Stunden."],
+      translation: ["María está en la estación. Quiere viajar a Berlín. Compra un pasaje. El pasaje cuesta treinta euros. El tren sale a las diez. Es puntual. María busca la vía cinco. Ahí el tren ya está esperando. Sube y encuentra un asiento junto a la ventana. El viaje dura cuatro horas."],
+      questions: [
+        c("¿Adónde quiere viajar María?", ["A Berlín", "A Viena", "A Hamburgo", "A Múnich"], "«nach Berlin»."),
+        fi("¿Cuántos euros cuesta el pasaje?", ["30", "dreißig"], "«dreißig Euro»."),
+        fi("¿A qué hora sale el tren?", ["10", "zehn"], "«um zehn Uhr»."),
+        fi("¿En qué vía está el tren?", ["5", "fünf"], "«Gleis fünf»."),
+        c("¿Dónde se sienta?", ["Junto a la ventana", "Junto a la puerta", "Al fondo", "En el pasillo"], "«am Fenster»."),
+      ],
+    },
+  },
+  {
+    id: "a1-im-park", level: "A1", emoji: "🌳", topic: "En el parque",
+    reading: {
+      title: "Im Park",
+      text: ["Heute ist das Wetter schön. Die Sonne scheint und es ist warm. Familie Weber geht in den Park. Die Kinder spielen Ball. Der Vater liest eine Zeitung. Die Mutter macht Fotos. Sie essen Äpfel und trinken Saft. Ein Hund läuft über die Wiese. Um fünf Uhr gehen sie nach Hause. Alle sind müde, aber glücklich."],
+      translation: ["Hoy el tiempo está lindo. Brilla el sol y hace calor. La familia Weber va al parque. Los chicos juegan a la pelota. El padre lee un diario. La madre saca fotos. Comen manzanas y toman jugo. Un perro corre por el césped. A las cinco se van a casa. Todos están cansados, pero felices."],
+      questions: [
+        c("¿Cómo está el tiempo?", ["Lindo y cálido", "Frío", "Lluvioso", "Con nieve"], "«schön ... warm»."),
+        c("¿Qué hacen los chicos?", ["Juegan a la pelota", "Leen", "Duermen", "Nadan"], "«spielen Ball»."),
+        c("¿Qué hace el padre?", ["Lee un diario", "Saca fotos", "Cocina", "Corre"], "«liest eine Zeitung»."),
+        c("¿Qué comen y toman?", ["Manzanas y jugo", "Torta y café", "Pan y leche", "Pizza y agua"], "«Äpfel ... Saft»."),
+        fi("¿A qué hora se van a casa?", ["5", "fünf", "17"], "«um fünf Uhr»."),
+      ],
+    },
+  },
+  {
+    id: "a1-telefon", level: "A1", emoji: "📞", topic: "Una llamada",
+    reading: {
+      title: "Ein Anruf",
+      text: ["Tom ruft seine Freundin Lisa an. Das Telefon klingelt zweimal. Dann sagt Lisa: Hallo, hier ist Lisa. Tom fragt: Hast du morgen Zeit? Lisa sagt: Ja, ab drei Uhr. Tom möchte mit ihr ins Kino gehen. Der Film beginnt um fünf Uhr. Lisa findet die Idee gut. Sie treffen sich um halb fünf vor dem Kino. Lisa freut sich sehr auf den Abend. Dann sagen sie: Tschüss, bis morgen!"],
+      translation: ["Tom llama a su amiga Lisa. El teléfono suena dos veces. Entonces Lisa dice: Hola, habla Lisa. Tom pregunta: ¿Tenés tiempo mañana? Lisa dice: Sí, desde las tres. Tom quiere ir con ella al cine. La película empieza a las cinco. A Lisa le parece buena la idea. Se encuentran a las cuatro y media frente al cine. Lisa está muy contenta con la noche. Entonces dicen: ¡Chau, hasta mañana!"],
+      questions: [
+        c("¿A quién llama Tom?", ["A Lisa", "A su madre", "A su jefe", "A un médico"], "«seine Freundin Lisa»."),
+        fi("¿Cuántas veces suena el teléfono?", ["2", "zwei", "zweimal"], "«zweimal»."),
+        c("¿Desde cuándo tiene tiempo Lisa?", ["Desde las tres", "Desde las dos", "Desde las seis", "Desde la mañana"], "«ab drei Uhr»."),
+        fi("¿A qué hora empieza la película?", ["5", "fünf", "17"], "«um fünf Uhr»."),
+        c("¿Dónde se encuentran?", ["Frente al cine", "En el café", "En la escuela", "En el parque"], "«vor dem Kino»."),
+      ],
+    },
+  },
 ];
