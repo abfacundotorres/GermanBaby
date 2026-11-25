@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  wahrscheinlich: "probablemente", startet: "arranca", unsinn: "tonterías", beantwortet: "respondido",
   entwurf: "borrador", stammt: "proviene", statistischen: "estadístico (dativo)", amts: "de la oficina", lebensmitteln: "alimentos", haushalte: "hogares", mitglieder: "miembros", verhalten: "comportamiento", hinweis: "indicación / aviso", ergänze: "agrego", absatz: "párrafo", konkrete: "concretos", erwähnen: "mencionar", vorsichtig: "con cuidado", formuliert: "formulado", fassung: "versión",
   tue: "hago", hinunterging: "bajaba", schreck: "susto", angemacht: "prendido", redest: "hablás", katastrophe: "catástrofe", naja: "bueno / en fin",
   geärgert: "enojó", gerettet: "salvó", zufall: "casualidad", trafen: "encontramos",
