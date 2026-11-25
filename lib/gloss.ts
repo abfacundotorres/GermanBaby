@@ -3,6 +3,11 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  spar: "ahorrá", wegzulegen: "apartar / guardar", verdienst: "ganás", lachen: "reír", stift: "lápiz / lapicera",
+  genauso: "igual / lo mismo", untertitel: "subtítulos", aufzugeben: "rendirse", hausaufgaben: "tarea", nachgeholt: "recuperado", schreibe: "escribo", denken: "pensar", stört: "molesta",
+  darin: "ahí dentro", ärgerlich: "fastidioso", busses: "del colectivo", fahrer: "conductor", fahrers: "del conductor", schirm: "paraguas",
+  ärgerst: "te enojás", politik: "política", kümmerst: "te ocupás", unseren: "nuestro (acusativo)", nämlich: "justamente / es decir", kochkurs: "curso de cocina", einzuladen: "invitar",
+  formellen: "formal (acusativo)", fängt: "empieza", zusammenfassen: "resumir", sätzen: "frases (dativo plural)",
   wartenden: "que esperan (participio I)", reisenden: "viajeros", halle: "salón / hall", dicht: "impermeable / cerrado", gekostet: "costó", wartesaal: "sala de espera", kaffeeautomaten: "máquina de café", bewohnern: "habitantes (dativo plural)", gespendeten: "donados", eingang: "entrada", dahinter: "detrás", beantworten: "responder", regenschirm: "paraguas",
   eingerichtet: "amoblado / instalado", möbel: "muebles", geliefert: "entregado", budget: "presupuesto", angefangen: "empezado", umzug: "mudanza", kisten: "cajas", umgestellt: "reubicado / cambiado", geregelt: "arreglado", geholt: "buscado / conseguido",
   bereitest: "preparás", vortrag: "exposición", geübt: "practicado", angehört: "escuchado", schrecklich: "horrible", denselben: "el mismo", satz: "frase / oración", schema: "esquema", wichtigsten: "más importantes", wortschatz: "vocabulario", umschreibst: "parafraseás", leserbrief: "carta del lector", verliere: "pierdo", punkte: "puntos", begründest: "fundamentás", empfehlung: "recomendación", probiere: "pruebo", probeprüfung: "simulacro de examen",

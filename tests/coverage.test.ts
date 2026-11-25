@@ -30,7 +30,7 @@ test("escuchas largas: cada clave corresponde a una unidad real (si no, se ignor
   }
 });
 
-test("cobertura: A2 a C1 traen lectura, práctica y vocabulario; A2 y B2 también escucha larga", () => {
+test("cobertura: A2 a C1 traen lectura, práctica y vocabulario; A2, B1 y B2 también escucha larga", () => {
   for (const u of UNITS) {
     const lv = lvOf(u);
     if (lv === "A1" || /^aussprache/.test(u.id)) continue;
@@ -38,7 +38,7 @@ test("cobertura: A2 a C1 traen lectura, práctica y vocabulario; A2 y B2 tambié
     for (const need of ["lesen", "practica", "wortschatz"]) {
       assert.ok(b.includes(need), `${u.id}: falta la lección «${need}»`);
     }
-    if (lv === "A2" || lv === "B2") assert.ok(b.includes("escucha-larga"), `${u.id}: falta la escucha larga`);
+    if (lv === "A2" || lv === "B1" || lv === "B2") assert.ok(b.includes("escucha-larga"), `${u.id}: falta la escucha larga`);
   }
 });
 
