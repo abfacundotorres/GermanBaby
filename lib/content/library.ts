@@ -2925,4 +2925,220 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "a2-umzug", level: "A2", emoji: "📦", topic: "La mudanza",
+    reading: {
+      title: "Der Umzug",
+      text: [
+        "Am Samstag ziehen Ben und Mia in eine neue Wohnung. Die alte Wohnung war zu klein, und die Miete war zu hoch. Die neue Wohnung hat drei Zimmer und einen Balkon. Sie liegt im Zentrum, nicht weit vom Bahnhof.",
+        "Schon seit einer Woche packen sie Kisten. Bücher, Kleider und Geschirr sind in vielen Kartons. Drei Freunde helfen ihnen beim Tragen, und ein Freund hat einen großen Lieferwagen. Das Sofa ist sehr schwer, und sie tragen es zu viert in den dritten Stock.",
+        "Am Abend sind alle müde. Mia bestellt Pizza für alle, denn die Küche ist noch nicht fertig. Sie sitzen auf dem Boden zwischen den Kartons und lachen. Morgen räumen Ben und Mia die Sachen in die Schränke. Sie sind froh, dass sie jetzt mehr Platz haben.",
+      ],
+      translation: [
+        "El sábado Ben y Mia se mudan a un departamento nuevo. El departamento viejo era demasiado chico y el alquiler demasiado alto. El nuevo tiene tres ambientes y un balcón. Queda en el centro, no lejos de la estación.",
+        "Hace una semana que empacan cajas. Libros, ropa y vajilla están en muchas cajas. Tres amigos los ayudan a cargar y un amigo tiene una camioneta grande. El sofá es muy pesado y lo llevan entre cuatro hasta el tercer piso.",
+        "A la noche todos están cansados. Mia pide pizza para todos, porque la cocina todavía no está lista. Se sientan en el piso entre las cajas y se ríen. Mañana Ben y Mia acomodan las cosas en los placares. Están contentos de tener ahora más lugar.",
+      ],
+      questions: [
+        c("¿Por qué se mudan?", ["El departamento era chico y caro", "Les gustaba el barrio", "Ganaron un premio", "Los echaron"], "«zu klein ... Miete zu hoch»."),
+        c("¿Qué tiene el nuevo departamento?", ["Tres ambientes y un balcón", "Un jardín", "Una piscina", "Cinco ambientes"], "«drei Zimmer und einen Balkon»."),
+        fi("¿Cuántos amigos los ayudan a cargar?", ["3", "drei"], "«Drei Freunde»."),
+        c("¿Qué hacen a la noche?", ["Piden pizza", "Cocinan", "Salen a bailar", "Duermen enseguida"], "«bestellt Pizza»."),
+        c("¿Por qué no cocinan?", ["La cocina todavía no está lista", "No tienen hambre", "No hay comida", "Es tarde"], "«Küche ist noch nicht fertig»."),
+        tf("El sofá es liviano.", false, "«sehr schwer»."),
+      ],
+    },
+  },
+  {
+    id: "a2-krank", level: "A2", emoji: "🤒", topic: "Estar enfermo",
+    reading: {
+      title: "Ich bin krank",
+      text: [
+        "Seit gestern fühlt sich Peter nicht gut. Er hat Fieber, Halsschmerzen und Husten. In der Nacht hat er kaum geschlafen. Heute Morgen ruft er seinen Chef an und sagt, dass er nicht arbeiten kann. Der Chef sagt: Gute Besserung! Bleib zu Hause.",
+        "Am Vormittag geht Peter zum Arzt. Im Wartezimmer sitzen viele Leute, und er muss eine Stunde warten. Der Arzt untersucht ihn und sagt: Das ist eine Grippe. Du musst drei Tage im Bett bleiben, viel Tee trinken und Tabletten nehmen. Peter bekommt auch ein Rezept.",
+        "Danach geht er in die Apotheke und kauft die Medizin. Zu Hause legt er sich ins Bett. Seine Mutter ruft an und fragt, ob er etwas braucht. Peter sagt, dass er nur Ruhe braucht. Nach drei Tagen fühlt er sich besser und kann wieder arbeiten.",
+      ],
+      translation: [
+        "Desde ayer Peter no se siente bien. Tiene fiebre, dolor de garganta y tos. Durante la noche casi no durmió. Hoy a la mañana llama a su jefe y dice que no puede trabajar. El jefe dice: ¡Que te mejores! Quedate en casa.",
+        "A la mañana Peter va al médico. En la sala de espera hay mucha gente y tiene que esperar una hora. El médico lo examina y dice: Es una gripe. Tenés que quedarte tres días en cama, tomar mucho té y tomar pastillas. Peter recibe también una receta.",
+        "Después va a la farmacia y compra la medicina. En casa se acuesta en la cama. Su madre llama y pregunta si necesita algo. Peter dice que solo necesita descanso. Después de tres días se siente mejor y puede volver a trabajar.",
+      ],
+      questions: [
+        c("¿Qué síntomas tiene Peter?", ["Fiebre, dolor de garganta y tos", "Dolor de pie", "Dolor de muelas", "Mareos"], "«Fieber, Halsschmerzen und Husten»."),
+        c("¿A quién llama primero?", ["A su jefe", "A su madre", "A un amigo", "A la farmacia"], "«ruft seinen Chef an»."),
+        fi("¿Cuántas horas espera en el consultorio?", ["1", "eine", "ein"], "«eine Stunde warten»."),
+        c("¿Qué diagnóstico recibe?", ["Gripe", "Alergia", "Fractura", "Nada"], "«Das ist eine Grippe»."),
+        fi("¿Cuántos días tiene que quedarse en cama?", ["3", "drei"], "«drei Tage»."),
+        tf("Peter se siente mejor después de tres días.", true, "«nach drei Tagen fühlt er sich besser»."),
+      ],
+    },
+  },
+  {
+    id: "a2-kochen", level: "A2", emoji: "🍳", topic: "Cocinar juntos",
+    reading: {
+      title: "Wir kochen zusammen",
+      text: [
+        "Am Sonntag kocht Familie Roth zusammen. Das ist eine schöne Tradition. Der Vater macht die Soße, die Mutter schneidet das Gemüse, und die Kinder decken den Tisch. Heute gibt es Spaghetti mit Tomatensoße und einen grünen Salat.",
+        "Zuerst kocht man das Wasser in einem großen Topf. Dann gibt man etwas Salz und die Spaghetti hinein. Sie müssen zehn Minuten kochen. Während die Nudeln kochen, mischt der Sohn den Salat mit Öl und Essig. Die Tochter bringt die Teller und die Gläser.",
+        "Endlich ist alles fertig, und die Familie setzt sich an den Tisch. Es riecht sehr gut. Alle essen mit Appetit und erzählen von ihrer Woche. Nach dem Essen waschen die Kinder das Geschirr ab. Der Vater sagt: Nächsten Sonntag kochen wir Fisch!",
+      ],
+      translation: [
+        "El domingo la familia Roth cocina junta. Es una linda tradición. El padre hace la salsa, la madre corta la verdura y los chicos ponen la mesa. Hoy hay espaguetis con salsa de tomate y una ensalada verde.",
+        "Primero se hierve el agua en una olla grande. Después se agrega un poco de sal y los espaguetis. Tienen que hervir diez minutos. Mientras los fideos hierven, el hijo mezcla la ensalada con aceite y vinagre. La hija trae los platos y los vasos.",
+        "Por fin todo está listo y la familia se sienta a la mesa. Huele muy bien. Todos comen con apetito y cuentan cómo les fue la semana. Después de comer los chicos lavan la vajilla. El padre dice: ¡El próximo domingo cocinamos pescado!",
+      ],
+      questions: [
+        c("¿Cuándo cocina junta la familia Roth?", ["El domingo", "El lunes", "El viernes", "Todos los días"], "«Am Sonntag»."),
+        c("¿Qué hace la madre?", ["Corta la verdura", "Hace la salsa", "Pone la mesa", "Lava los platos"], "«schneidet das Gemüse»."),
+        fi("¿Cuántos minutos hierven los espaguetis?", ["10", "zehn"], "«zehn Minuten»."),
+        c("¿Con qué mezcla el hijo la ensalada?", ["Aceite y vinagre", "Leche", "Azúcar", "Mayonesa"], "«Öl und Essig»."),
+        c("¿Qué hacen los chicos después de comer?", ["Lavan la vajilla", "Duermen", "Juegan", "Salen"], "«waschen das Geschirr ab»."),
+        c("¿Qué cocinarán el próximo domingo?", ["Pescado", "Pizza", "Sopa", "Carne"], "«Fisch»."),
+      ],
+    },
+  },
+  {
+    id: "a2-kino", level: "A2", emoji: "🎬", topic: "Ir al cine",
+    reading: {
+      title: "Ein Abend im Kino",
+      text: [
+        "Am Freitagabend gehen Nina und ihre Schwester Eva ins Kino. Sie haben die Karten schon im Internet gekauft. Sie kosten zwölf Euro pro Person. Der Film heißt Das Meer und ist eine Liebesgeschichte. Er dauert zwei Stunden.",
+        "Vor dem Kino treffen sie sich um sieben Uhr. Der Film beginnt um Viertel nach sieben. Sie kaufen noch Popcorn und etwas zu trinken. Der Saal ist fast voll, aber sie finden zwei Plätze in der Mitte. Während des Films sind alle still.",
+        "Nach dem Film gehen sie in ein Restaurant. Nina findet den Film sehr schön, aber ein bisschen traurig. Eva sagt, das Ende war zu lang. Sie diskutieren lange. Um elf Uhr nehmen sie die Straßenbahn nach Hause. Es war ein schöner Abend.",
+      ],
+      translation: [
+        "El viernes a la noche Nina y su hermana Eva van al cine. Ya compraron las entradas por internet. Cuestan doce euros por persona. La película se llama «El mar» y es una historia de amor. Dura dos horas.",
+        "Frente al cine se encuentran a las siete. La película empieza a las siete y cuarto. Todavía compran pochoclo y algo para tomar. La sala está casi llena, pero encuentran dos lugares en el medio. Durante la película todos están callados.",
+        "Después de la película van a un restaurante. A Nina le parece muy linda la película, pero un poco triste. Eva dice que el final fue demasiado largo. Conversan mucho rato. A las once toman el tranvía a casa. Fue una linda noche.",
+      ],
+      questions: [
+        c("¿Cuándo van al cine?", ["El viernes a la noche", "El lunes", "El domingo a la tarde", "El sábado a la mañana"], "«Freitagabend»."),
+        fi("¿Cuántos euros cuesta cada entrada?", ["12", "zwölf"], "«zwölf Euro pro Person»."),
+        c("¿Cómo es la película?", ["Una historia de amor", "De terror", "De humor", "Un documental"], "«Liebesgeschichte»."),
+        c("¿Dónde encuentran lugar?", ["En el medio", "Adelante", "Al fondo", "Afuera"], "«in der Mitte»."),
+        c("¿Qué opina Eva?", ["Que el final fue demasiado largo", "Que fue perfecta", "Que no le gustó nada", "Que fue corta"], "«das Ende war zu lang»."),
+        c("¿Cómo vuelven a casa?", ["En tranvía", "En taxi", "A pie", "En auto"], "«Straßenbahn»."),
+      ],
+    },
+  },
+  {
+    id: "a2-sprachkurs", level: "A2", emoji: "📖", topic: "El curso de alemán",
+    reading: {
+      title: "Mein Deutschkurs",
+      text: [
+        "Carlos kommt aus Argentinien und wohnt seit sechs Monaten in Köln. Er besucht einen Deutschkurs, dreimal pro Woche am Abend. Die Gruppe hat zwölf Teilnehmer aus acht Ländern. Das macht den Unterricht interessant, denn alle sprechen langsam und helfen einander.",
+        "Am Anfang war der Artikel sehr schwer für ihn. Der, die oder das? Er wusste es nie. Jetzt lernt er jedes neue Wort mit dem Artikel und schreibt Karteikarten. Außerdem sieht er jeden Abend eine Serie auf Deutsch, mit deutschen Untertiteln.",
+        "Am Wochenende übt Carlos mit seinem Nachbarn. Sie sprechen eine Stunde, und der Nachbar korrigiert die Fehler freundlich. Carlos sagt, dass er viel gelernt hat. Im Herbst möchte er die Prüfung auf Niveau B1 machen. Dann sucht er eine bessere Arbeit.",
+      ],
+      translation: [
+        "Carlos viene de Argentina y vive desde hace seis meses en Colonia. Va a un curso de alemán, tres veces por semana a la noche. El grupo tiene doce participantes de ocho países. Eso hace interesante la clase, porque todos hablan despacio y se ayudan.",
+        "Al principio el artículo era muy difícil para él. ¿Der, die o das? Nunca lo sabía. Ahora aprende cada palabra nueva con el artículo y escribe fichas. Además mira cada noche una serie en alemán, con subtítulos en alemán.",
+        "El fin de semana Carlos practica con su vecino. Hablan una hora y el vecino corrige los errores con amabilidad. Carlos dice que aprendió mucho. En otoño quiere dar el examen de nivel B1. Después busca un trabajo mejor.",
+      ],
+      questions: [
+        fi("¿Hace cuántos meses vive Carlos en Colonia?", ["6", "sechs"], "«seit sechs Monaten»."),
+        c("¿Cuántas veces por semana va al curso?", ["Tres", "Una", "Cinco", "Siete"], "«dreimal pro Woche»."),
+        fi("¿De cuántos países son los participantes?", ["8", "acht"], "«aus acht Ländern»."),
+        c("¿Qué fue difícil para él al principio?", ["El artículo", "Los números", "La pronunciación de la «r»", "La escritura"], "«der Artikel sehr schwer»."),
+        c("¿Cómo aprende ahora las palabras?", ["Con el artículo y en fichas", "Sin artículo", "Solo escuchando", "Con diccionarios"], "«mit dem Artikel ... Karteikarten»."),
+        c("¿Qué quiere hacer en otoño?", ["Dar el examen de B1", "Viajar", "Mudarse", "Dejar el curso"], "«Prüfung auf Niveau B1»."),
+      ],
+    },
+  },
+  {
+    id: "a2-geschenk", level: "A2", emoji: "🎁", topic: "Buscar un regalo",
+    reading: {
+      title: "Ein Geschenk für Oma",
+      text: [
+        "Nächste Woche hat Oma Hilde Geburtstag. Sie wird fünfundsiebzig, und die Familie möchte ihr ein besonderes Geschenk machen. Lea und ihr Bruder Max gehen in die Stadt, aber sie wissen nicht, was sie kaufen sollen. Oma hat schon fast alles.",
+        "Zuerst schauen sie in einem Buchladen. Oma liest gern, aber sie hat zu Hause schon viele Bücher. Dann gehen sie in ein Geschäft für Kleidung. Ein Schal gefällt ihnen, aber er ist zu teuer. Schließlich sieht Max einen Fotorahmen. Das ist eine gute Idee.",
+        "Sie drucken ein altes Familienfoto aus und legen es in den Rahmen. Auf die Rückseite schreiben alle ein paar Worte. Oma freut sich sehr, als sie das Geschenk bekommt. Sie weint ein bisschen und sagt: Das ist das schönste Geschenk, das ich je bekommen habe.",
+      ],
+      translation: [
+        "La semana próxima es el cumpleaños de la abuela Hilde. Cumple setenta y cinco y la familia quiere hacerle un regalo especial. Lea y su hermano Max van a la ciudad, pero no saben qué comprar. La abuela ya tiene casi todo.",
+        "Primero miran en una librería. A la abuela le gusta leer, pero ya tiene muchos libros en casa. Después van a un negocio de ropa. Una bufanda les gusta, pero es demasiado cara. Finalmente Max ve un portarretratos. Es una buena idea.",
+        "Imprimen una foto familiar vieja y la ponen en el marco. En el dorso todos escriben unas palabras. La abuela se alegra mucho cuando recibe el regalo. Llora un poquito y dice: Este es el regalo más lindo que recibí en mi vida.",
+      ],
+      questions: [
+        fi("¿Cuántos años cumple la abuela?", ["75", "fünfundsiebzig"], "«fünfundsiebzig»."),
+        c("¿Por qué no saben qué comprar?", ["La abuela ya tiene casi todo", "No tienen dinero", "No les gusta la abuela", "Es tarde"], "«hat schon fast alles»."),
+        c("¿Qué pasa con la bufanda?", ["Les gusta pero es muy cara", "Es fea", "No hay", "Es muy chica"], "«gefällt ihnen, aber er ist zu teuer»."),
+        c("¿Qué regalan al final?", ["Un portarretratos con una foto", "Un libro", "Una bufanda", "Una torta"], "«Fotorahmen»."),
+        c("¿Qué escriben en el dorso?", ["Unas palabras", "Su dirección", "El precio", "Nada"], "«ein paar Worte»."),
+        tf("A la abuela no le gusta el regalo.", false, "«schönste Geschenk»."),
+      ],
+    },
+  },
+  {
+    id: "a2-herbst", level: "A2", emoji: "🍂", topic: "El otoño",
+    reading: {
+      title: "Der Herbst in Deutschland",
+      text: [
+        "Im Herbst wird das Wetter in Deutschland kälter und feuchter. Die Tage werden kürzer, und es wird früher dunkel. Die Blätter an den Bäumen werden gelb, rot und braun und fallen auf den Boden. Viele Menschen finden diese Jahreszeit sehr schön.",
+        "Im Herbst ernten die Bauern Äpfel, Kartoffeln und Kürbisse. Auf dem Markt kann man viele frische Pilze kaufen. Man trinkt gern heißen Tee oder eine Tasse Kakao. Im Oktober gibt es in vielen Städten Feste, zum Beispiel das Oktoberfest in München, wo man Bier trinkt und Musik hört.",
+        "Die Kinder spielen mit den bunten Blättern und machen im Wald lange Spaziergänge. Am elften November gehen sie mit selbst gebastelten Laternen durch die Straßen und singen Lieder. Am Abend bleibt man öfter zu Hause, liest ein Buch oder sieht einen Film.",
+      ],
+      translation: [
+        "En el otoño el tiempo en Alemania se vuelve más frío y húmedo. Los días se acortan y oscurece más temprano. Las hojas de los árboles se ponen amarillas, rojas y marrones y caen al suelo. Mucha gente encuentra muy linda esta estación.",
+        "En el otoño los campesinos cosechan manzanas, papas y zapallos. En el mercado se pueden comprar muchos hongos frescos. Se toma con gusto té caliente o una taza de chocolate. En octubre hay fiestas en muchas ciudades, por ejemplo el Oktoberfest en Múnich, donde se toma cerveza y se escucha música.",
+        "Los chicos juegan con las hojas de colores y hacen largos paseos en el bosque. El once de noviembre caminan por las calles con faroles hechos por ellos y cantan canciones. A la noche uno se queda más seguido en casa, lee un libro o mira una película.",
+      ],
+      questions: [
+        c("¿Cómo se vuelve el tiempo en otoño?", ["Más frío y húmedo", "Más caluroso", "Más seco", "Igual"], "«kälter und feuchter»."),
+        c("¿De qué colores se ponen las hojas?", ["Amarillas, rojas y marrones", "Azules", "Negras", "Blancas"], "«gelb, rot und braun»."),
+        c("¿Qué cosechan los campesinos?", ["Manzanas, papas y zapallos", "Naranjas", "Arroz", "Café"], "«Äpfel, Kartoffeln und Kürbisse»."),
+        c("¿Dónde es el Oktoberfest?", ["En Múnich", "En Berlín", "En Hamburgo", "En Colonia"], "«in München»."),
+        c("¿Qué hacen los chicos el once de noviembre?", ["Caminan con faroles y cantan", "Van a la escuela", "Duermen", "Viajan"], "«Laternen ... Lieder»."),
+        tf("En otoño oscurece más tarde.", false, "«früher dunkel»."),
+      ],
+    },
+  },
+  {
+    id: "a2-bibliothek", level: "A2", emoji: "📚", topic: "En la biblioteca",
+    reading: {
+      title: "In der Bibliothek",
+      text: [
+        "Jeden Dienstag geht Karin nach der Arbeit in die Stadtbibliothek. Sie hat dort einen Ausweis und kann bis zu zehn Bücher gleichzeitig leihen. Das kostet im Jahr nur fünfzehn Euro. Die Bücher darf sie vier Wochen behalten, und sie kann die Zeit im Internet verlängern.",
+        "In der Bibliothek gibt es auch Zeitungen, Filme und Musik. Im Erdgeschoss stehen Computer, und im ersten Stock sind ruhige Tische zum Lernen. Karin sucht diese Woche einen Roman und ein Buch über Pflanzen. Die Bibliothekarin hilft ihr beim Suchen und empfiehlt ihr ein neues Buch.",
+        "Manchmal gibt es abends Lesungen oder Kurse für Kinder. Karin geht gern dorthin, weil sie dort nette Leute trifft. Sie sagt, dass die Bibliothek ein guter Ort ist, um Ruhe zu finden. Wenn sie ein Buch zu spät zurückgibt, muss sie eine kleine Gebühr bezahlen.",
+      ],
+      translation: [
+        "Todos los martes Karin va después del trabajo a la biblioteca municipal. Tiene allí un carné y puede llevarse hasta diez libros a la vez. Eso cuesta por año solo quince euros. Puede quedarse con los libros cuatro semanas y puede extender el plazo por internet.",
+        "En la biblioteca también hay diarios, películas y música. En la planta baja hay computadoras y en el primer piso hay mesas tranquilas para estudiar. Karin busca esta semana una novela y un libro sobre plantas. La bibliotecaria la ayuda a buscar y le recomienda un libro nuevo.",
+        "A veces a la noche hay lecturas o cursos para chicos. A Karin le gusta ir allí porque encuentra gente simpática. Dice que la biblioteca es un buen lugar para encontrar tranquilidad. Si devuelve un libro demasiado tarde, tiene que pagar una pequeña tasa.",
+      ],
+      questions: [
+        c("¿Cuándo va Karin a la biblioteca?", ["Los martes", "Los lunes", "Los domingos", "Todos los días"], "«Jeden Dienstag»."),
+        fi("¿Cuántos libros puede llevarse a la vez?", ["10", "zehn"], "«bis zu zehn Bücher»."),
+        fi("¿Cuántos euros cuesta el carné por año?", ["15", "fünfzehn"], "«fünfzehn Euro»."),
+        c("¿Cuánto tiempo puede quedarse con los libros?", ["Cuatro semanas", "Un día", "Un año", "Una hora"], "«vier Wochen»."),
+        c("¿Dónde están las mesas para estudiar?", ["En el primer piso", "En la planta baja", "Afuera", "En el sótano"], "«im ersten Stock»."),
+        tf("Si devuelve el libro tarde, no pasa nada.", false, "«eine kleine Gebühr»."),
+      ],
+    },
+  },
+  {
+    id: "a2-taxi-flughafen", level: "A2", emoji: "✈️", topic: "En el aeropuerto",
+    reading: {
+      title: "Am Flughafen",
+      text: [
+        "Familie Hoffmann fliegt im Urlaub nach Spanien. Sie kommen zwei Stunden vor dem Abflug am Flughafen an. Zuerst geben sie ihre großen Koffer am Schalter ab. Eine Frau kontrolliert die Pässe und gibt ihnen die Bordkarten. Der Flug hat Nummer LH 1142.",
+        "Danach gehen sie zur Sicherheitskontrolle. Alle müssen die Jacken ausziehen und die Taschen auf ein Band legen. Der Sohn hat eine Flasche Wasser in seiner Tasche, aber die ist nicht erlaubt. Er muss sie wegwerfen. Dann warten sie am Gate Nummer zwölf.",
+        "Eine Stunde später beginnt das Boarding. Das Flugzeug ist groß und fast voll. Die Kinder sitzen am Fenster und schauen gespannt hinaus. Nach drei Stunden landen sie in Málaga. Es ist warm, und die Sonne scheint. Der Urlaub kann beginnen!",
+      ],
+      translation: [
+        "La familia Hoffmann vuela de vacaciones a España. Llegan al aeropuerto dos horas antes de la salida. Primero entregan sus valijas grandes en el mostrador. Una mujer controla los pasaportes y les da las tarjetas de embarque. El vuelo tiene el número LH 1142.",
+        "Después van al control de seguridad. Todos tienen que sacarse las camperas y poner los bolsos en una cinta. El hijo tiene una botella de agua en su bolso, pero no está permitida. Tiene que tirarla. Después esperan en la puerta de embarque número doce.",
+        "Una hora más tarde empieza el embarque. El avión es grande y está casi lleno. Los chicos se sientan junto a la ventana y miran afuera con curiosidad. Después de tres horas aterrizan en Málaga. Hace calor y brilla el sol. ¡Las vacaciones pueden empezar!",
+      ],
+      questions: [
+        c("¿Cuándo llegan al aeropuerto?", ["Dos horas antes del vuelo", "Diez minutos antes", "Un día antes", "Después del vuelo"], "«zwei Stunden vor dem Abflug»."),
+        c("¿Qué entregan en el mostrador?", ["Las valijas grandes", "El celular", "Los pasaportes para siempre", "El dinero"], "«große Koffer»."),
+        c("¿Por qué el hijo tiene que tirar la botella?", ["No está permitida", "Está rota", "Es muy vieja", "Está vacía"], "«nicht erlaubt»."),
+        fi("¿En qué puerta de embarque esperan?", ["12", "zwölf"], "«Gate Nummer zwölf»."),
+        fi("¿Cuántas horas dura el vuelo?", ["3", "drei"], "«nach drei Stunden»."),
+        c("¿Dónde aterrizan?", ["En Málaga", "En Madrid", "En Barcelona", "En Sevilla"], "«in Málaga»."),
+      ],
+    },
+  },
 ];
