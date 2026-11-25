@@ -2453,4 +2453,230 @@ export const LIBRARY: LibraryText[] = [
       ],
     },
   },
+  {
+    id: "b1-wg", level: "B1", emoji: "🛋️", topic: "Vivir en una WG",
+    reading: {
+      title: "Leben in der WG",
+      text: [
+        "Eine Wohngemeinschaft, kurz WG, ist in Deutschland besonders bei Studenten und jungen Berufstätigen beliebt. Mehrere Personen mieten zusammen eine Wohnung, jeder hat sein eigenes Zimmer, und Küche, Bad und Wohnzimmer teilt man sich. Der größte Vorteil ist, dass die Miete pro Person deutlich niedriger ist als bei einer eigenen Wohnung.",
+        "Um ein Zimmer zu bekommen, muss man oft zu einem Casting gehen. Die Mitbewohner stellen Fragen und wollen herausfinden, ob man zu ihnen passt. Sympathie ist dabei meistens wichtiger als der Beruf oder das Einkommen. Wer ordentlich und freundlich wirkt, hat gute Chancen.",
+        "Im Alltag helfen klare Regeln gegen Streit. Viele WGs haben einen Putzplan, einen gemeinsamen Einkauf für Reinigungsmittel und feste Zeiten, zu denen es abends ruhig sein soll. Trotzdem kommt es manchmal zu Konflikten, zum Beispiel wegen schmutzigem Geschirr oder lauter Musik, und dann hilft vor allem ein offenes Gespräch.",
+        "Viele Menschen erinnern sich gern an ihre WG-Zeit, weil man dort schnell Freunde findet und selten allein ist. Es gibt gemeinsame Abendessen, Filmabende und Ausflüge. Wer allerdings viel Ruhe und Privatsphäre braucht, fühlt sich in einer WG vielleicht weniger wohl und entscheidet sich eher für eine kleine eigene Wohnung.",
+      ],
+      translation: [
+        "Una comunidad de vivienda, abreviada WG, es muy popular en Alemania sobre todo entre estudiantes y jóvenes trabajadores. Varias personas alquilan juntas un departamento, cada uno tiene su propia habitación y la cocina, el baño y el living se comparten. La mayor ventaja es que el alquiler por persona es claramente más bajo que con un departamento propio.",
+        "Para conseguir una habitación muchas veces hay que ir a un «casting». Los compañeros hacen preguntas y quieren averiguar si uno encaja con ellos. La simpatía suele ser más importante que la profesión o el ingreso. Quien parece ordenado y amable tiene buenas chances.",
+        "En el día a día, las reglas claras ayudan contra las peleas. Muchas WG tienen un plan de limpieza, una compra común de productos de limpieza y horarios fijos en los que a la noche debe haber silencio. Aun así, a veces hay conflictos, por ejemplo por platos sucios o música alta, y entonces sobre todo ayuda una charla abierta.",
+        "Mucha gente recuerda con cariño su época en una WG, porque ahí se hacen amigos rápido y rara vez se está solo. Hay cenas en común, noches de películas y excursiones. Quien, sin embargo, necesita mucha tranquilidad y privacidad quizás se sienta menos cómodo en una WG y elija más bien un departamento chico propio.",
+      ],
+      questions: [
+        c("¿Qué es una WG?", ["Varias personas que alquilan juntas un departamento", "Un tipo de hotel", "Una universidad", "Una oficina"], "«Mehrere Personen mieten zusammen eine Wohnung»."),
+        c("¿Cuál es la mayor ventaja?", ["El alquiler por persona es más bajo", "Más espacio", "Más silencio", "Más muebles"], "«Miete pro Person deutlich niedriger»."),
+        c("¿Qué es el «Casting»?", ["Una reunión para ver si uno encaja", "Un examen escrito", "Un contrato", "Una mudanza"], "«herausfinden, ob man zu ihnen passt»."),
+        c("¿Qué suele ser más importante en el casting?", ["La simpatía", "El sueldo", "El título", "La edad"], "«Sympathie ... wichtiger»."),
+        c("¿Qué ayuda ante los conflictos?", ["Una charla abierta", "Mudarse", "Gritar", "Esperar"], "«offenes Gespräch»."),
+        tf("En una WG nunca hay actividades en común.", false, "«gemeinsame Abendessen, Filmabende»."),
+      ],
+    },
+  },
+  {
+    id: "b1-bankkonto", level: "B1", emoji: "🏦", topic: "Abrir una cuenta bancaria",
+    reading: {
+      title: "Ein Konto eröffnen",
+      text: [
+        "Fast alle Menschen in Deutschland haben ein Girokonto, denn Gehalt, Miete und viele Rechnungen werden über das Konto bezahlt. Wer neu im Land ist, sollte deshalb früh eines eröffnen. Man kann das in einer Filiale tun oder online, und viele Banken bieten ein Konto ohne monatliche Gebühr an.",
+        "Für die Eröffnung braucht man in der Regel einen gültigen Ausweis und die Meldebescheinigung. Bei einer Online-Bank bestätigt man seine Identität per Video oder in einer Postfiliale. Ein paar Tage später kommen die Bankkarte und die Geheimzahl getrennt per Post, damit niemand beide gemeinsam abfangen kann.",
+        "Im Alltag bezahlt man mit der Karte oder per Überweisung. Für regelmäßige Zahlungen wie die Miete richtet man einen Dauerauftrag ein. Bei Strom oder Handy erlaubt man dem Anbieter eine Lastschrift, das heißt, er bucht den Betrag automatisch ab. Dann sollte man immer genug Geld auf dem Konto haben.",
+        "Manche Banken erlauben einen Dispokredit, mit dem man das Konto bis zu einer Grenze überziehen darf. Das klingt praktisch, ist aber teuer, weil die Zinsen hoch sind. Besser ist es, jeden Monat einen kleinen Betrag zu sparen und für unerwartete Ausgaben eine Reserve zu haben.",
+      ],
+      translation: [
+        "Casi todas las personas en Alemania tienen una cuenta corriente, porque el sueldo, el alquiler y muchas facturas se pagan a través de la cuenta. Quien es nuevo en el país debería por eso abrir una pronto. Se puede hacer en una sucursal o en línea, y muchos bancos ofrecen una cuenta sin gastos mensuales.",
+        "Para abrirla se necesita por lo general un documento válido y el certificado de residencia. En un banco en línea se confirma la identidad por video o en una sucursal del correo. Unos días después llegan por correo la tarjeta y el PIN por separado, para que nadie pueda interceptar ambos juntos.",
+        "En la vida diaria se paga con la tarjeta o por transferencia. Para pagos regulares como el alquiler se configura un débito fijo. Con la electricidad o el celular se autoriza al proveedor un débito directo, es decir, él descuenta el monto automáticamente. Entonces siempre conviene tener suficiente dinero en la cuenta.",
+        "Algunos bancos permiten un crédito en descubierto, con el que se puede pasar de cero hasta un límite. Suena práctico pero es caro, porque los intereses son altos. Es mejor ahorrar cada mes un monto chico y tener una reserva para gastos inesperados.",
+      ],
+      questions: [
+        c("¿Para qué sirve la cuenta corriente?", ["Para el sueldo, el alquiler y las facturas", "Solo para viajes", "Solo para comprar autos", "Para nada"], "«Gehalt, Miete und viele Rechnungen»."),
+        c("¿Qué se necesita para abrirla?", ["Documento y certificado de residencia", "Un auto", "Un diploma", "Una carta del jefe"], "«gültigen Ausweis und die Meldebescheinigung»."),
+        c("¿Por qué la tarjeta y el PIN llegan por separado?", ["Para que nadie los intercepte juntos", "Porque son caros", "Por error", "Para ahorrar papel"], "«damit niemand beide gemeinsam abfangen kann»."),
+        c("¿Qué es un Dauerauftrag?", ["Un pago fijo y regular, como el alquiler", "Un préstamo", "Un seguro", "Una multa"], "«regelmäßige Zahlungen wie die Miete»."),
+        c("¿Qué desventaja tiene el Dispokredit?", ["Los intereses son altos", "Es gratis", "No existe", "Es obligatorio"], "«Zinsen hoch»."),
+        tf("Se recomienda ahorrar un monto pequeño cada mes.", true, "«jeden Monat einen kleinen Betrag zu sparen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-fussball", level: "B1", emoji: "⚽", topic: "El fútbol en Alemania",
+    reading: {
+      title: "Fußball in Deutschland",
+      text: [
+        "Fußball ist in Deutschland der beliebteste Sport. Fast jede Stadt hat einen Verein, und am Wochenende sieht man viele Menschen in Trikots auf der Straße oder in der Bahn. Der Deutsche Fußball-Bund hat mehr als sieben Millionen Mitglieder, mehr als jeder andere Sportverband im Land.",
+        "Die höchste Liga heißt Bundesliga. Die Stadien sind oft voll, und die Atmosphäre ist laut und bunt. Die Eintrittskarten sind im Vergleich zu anderen Ländern relativ günstig, und viele Fans stehen im Block, wo es auch Stehplätze gibt. Gemeinsames Singen und Fahnen gehören dazu.",
+        "Im Fußball gilt eine besondere Regel für Vereine: die 50+1-Regel. Sie bedeutet, dass die Mitglieder eines Vereins die Mehrheit der Stimmen behalten sollen und große Investoren den Klub nicht allein kontrollieren dürfen. Viele Fans sind stolz darauf, aber die Regel wird auch immer wieder diskutiert.",
+        "Nicht nur Profis spielen Fußball. Auf dem Land und in der Stadt gibt es tausende kleine Amateurvereine, in denen Kinder und Erwachsene trainieren. Dort lernt man Teamgeist und findet Freunde. Auch wer selbst nicht spielt, schaut oft die Spiele der Nationalmannschaft zusammen mit Freunden oder in der Kneipe.",
+      ],
+      translation: [
+        "El fútbol es el deporte más popular en Alemania. Casi cada ciudad tiene un club y en el fin de semana se ve a mucha gente con camisetas en la calle o en el tren. La Federación Alemana de Fútbol tiene más de siete millones de miembros, más que cualquier otra federación deportiva del país.",
+        "La liga más alta se llama Bundesliga. Los estadios suelen estar llenos y el ambiente es ruidoso y colorido. Las entradas son relativamente baratas en comparación con otros países y muchos hinchas están en el sector donde hay también lugares de pie. Cantar juntos y las banderas forman parte.",
+        "En el fútbol rige una regla especial para los clubes: la regla 50+1. Significa que los socios de un club deben mantener la mayoría de los votos y que grandes inversores no pueden controlar el club por sí solos. Muchos hinchas están orgullosos de eso, pero la regla también se discute una y otra vez.",
+        "No solo los profesionales juegan al fútbol. En el campo y en la ciudad hay miles de pequeños clubes amateur donde entrenan chicos y adultos. Ahí se aprende espíritu de equipo y se hacen amigos. Incluso quien no juega suele ver los partidos de la selección con amigos o en el bar.",
+      ],
+      questions: [
+        c("¿Cuál es el deporte más popular?", ["El fútbol", "El tenis", "El esquí", "El golf"], "«der beliebteste Sport»."),
+        c("¿Cuántos miembros tiene la federación?", ["Más de siete millones", "Cien", "Mil", "Medio millón"], "«mehr als sieben Millionen»."),
+        c("¿Cómo son las entradas, comparadas con otros países?", ["Relativamente baratas", "Carísimas", "Gratis", "No existen"], "«relativ günstig»."),
+        c("¿Qué significa la regla 50+1?", ["Los socios mantienen la mayoría de los votos", "Un partido dura 51 minutos", "Hay 50 jugadores", "Juegan 11 más uno"], "«Mitglieder ... Mehrheit der Stimmen»."),
+        c("¿Qué se aprende en los clubes amateur?", ["Espíritu de equipo", "Idiomas", "Cocina", "Música"], "«Teamgeist»."),
+        tf("Solo los profesionales juegan al fútbol.", false, "«tausende kleine Amateurvereine»."),
+      ],
+    },
+  },
+  {
+    id: "b1-deutschlandticket", level: "B1", emoji: "🎫", topic: "El Deutschlandticket",
+    reading: {
+      title: "Ein Ticket für alles",
+      text: [
+        "Seit dem Jahr 2023 gibt es in Deutschland das Deutschlandticket. Es ist ein Abonnement, das man jeden Monat bezahlt, und damit darf man in ganz Deutschland alle Busse, Straßenbahnen, U-Bahnen und Regionalzüge benutzen. Nur für schnelle Fernzüge wie den ICE gilt es nicht.",
+        "Vorher war der öffentliche Nahverkehr kompliziert, denn jede Region hatte eigene Tarife und eigene Tickets. Wer eine Reise in eine andere Stadt machte, musste oft mehrere Fahrkarten kaufen. Das neue Ticket vereinfacht das, weil man nur noch ein einziges Abonnement braucht, das fast überall gilt.",
+        "Viele Pendler sparen mit dem Ticket Geld, vor allem wenn sie weit fahren. Auch Familien und Studenten nutzen es gern, besonders mit Rabatt. Das Ticket kann man in der App kaufen und auf dem Handy zeigen, aber man kann es monatlich wieder kündigen. Das macht es flexibel.",
+        "Trotzdem gibt es Kritik. Auf dem Land fahren Busse und Bahnen oft nur selten, deshalb nützt das Ticket dort wenig. Außerdem sind die Züge in der Hauptverkehrszeit manchmal sehr voll, und Verspätungen sind nicht selten. Viele Experten sagen, dass das Angebot noch besser werden muss.",
+      ],
+      translation: [
+        "Desde el año 2023 existe en Alemania el Deutschlandticket. Es una suscripción que se paga cada mes y con ella se pueden usar en toda Alemania todos los colectivos, tranvías, subtes y trenes regionales. Solo no vale para los trenes rápidos de larga distancia como el ICE.",
+        "Antes el transporte público era complicado, porque cada región tenía sus propias tarifas y sus propios boletos. Quien hacía un viaje a otra ciudad muchas veces tenía que comprar varios pasajes. El nuevo boleto lo simplifica, porque solo se necesita una única suscripción que vale casi en todas partes.",
+        "Muchos viajeros ahorran dinero con el boleto, sobre todo si viajan lejos. También lo usan con gusto familias y estudiantes, especialmente con descuento. El boleto se puede comprar en la aplicación y mostrar en el celular, pero se puede cancelar cada mes. Eso lo hace flexible.",
+        "Aun así hay críticas. En el campo los colectivos y trenes pasan muchas veces solo de vez en cuando, por eso el boleto sirve poco ahí. Además los trenes en hora pico a veces van muy llenos y los retrasos no son raros. Muchos expertos dicen que la oferta todavía tiene que mejorar.",
+      ],
+      questions: [
+        c("¿Qué es el Deutschlandticket?", ["Una suscripción mensual para el transporte regional", "Un boleto de avión", "Un seguro de viaje", "Un carné de conducir"], "«Abonnement ... Busse ... Regionalzüge»."),
+        c("¿Qué no incluye?", ["Los trenes rápidos como el ICE", "Los colectivos", "Los tranvías", "Los subtes"], "«Nur für schnelle Fernzüge ... gilt es nicht»."),
+        c("¿Qué problema había antes?", ["Cada región tenía sus tarifas y boletos", "No había trenes", "Todo era gratis", "No existían los colectivos"], "«jede Region hatte eigene Tarife»."),
+        c("¿Cómo se puede comprar y mostrar?", ["En la aplicación, en el celular", "Solo por carta", "Solo en efectivo", "Solo en el tren"], "«in der App ... auf dem Handy»."),
+        c("¿Qué crítica se menciona?", ["En el campo pasan pocos colectivos y trenes", "Es muy barato", "No se puede cancelar", "Solo vale de noche"], "«auf dem Land ... selten»."),
+        tf("El boleto no se puede cancelar.", false, "«monatlich wieder kündigen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-kaffee-kuchen", level: "B1", emoji: "☕", topic: "Café y torta",
+    reading: {
+      title: "Kaffee und Kuchen",
+      text: [
+        "Am Sonntagnachmittag trifft man sich in Deutschland oft zu Kaffee und Kuchen. Diese Tradition ist so bekannt, dass es dafür ein eigenes Wort gibt. Gegen drei oder vier Uhr kommen Familie, Freunde oder Nachbarn zusammen, setzen sich an den Tisch und essen ein Stück Kuchen, meistens selbst gebacken.",
+        "Typische Kuchen sind Apfelkuchen, Käsekuchen und Streuselkuchen, im Sommer auch Obstkuchen mit Erdbeeren oder Pflaumen. Dazu trinkt man Kaffee, manchmal auch Tee. Wer zum Besuch kommt, bringt oft etwas mit, zum Beispiel einen Kuchen vom Bäcker oder Blumen für die Gastgeber.",
+        "Wichtig ist nicht nur das Essen, sondern die Zeit zum Reden. Man erzählt von der Woche, plant Ausflüge und lacht zusammen. Viele ältere Menschen pflegen diese Tradition seit Jahrzehnten, aber auch junge Leute treffen sich gern in einem Café, um bei Kaffee und Kuchen in Ruhe zu plaudern.",
+        "Für Touristen ist es ein schönes Erlebnis, so einen Nachmittag mitzumachen. In kleinen Städten gibt es oft traditionsreiche Cafés, in denen die Kuchen noch nach alten Rezepten gebacken werden. Wer einmal in Deutschland ist, sollte unbedingt eines davon besuchen und mehrere Sorten probieren.",
+      ],
+      translation: [
+        "El domingo a la tarde en Alemania muchas veces uno se encuentra para tomar café y torta. Esta tradición es tan conocida que tiene una palabra propia. Hacia las tres o las cuatro llegan la familia, los amigos o los vecinos, se sientan a la mesa y comen un pedazo de torta, casi siempre hecha en casa.",
+        "Las tortas típicas son de manzana, de queso y de migas, y en verano también de frutas con frutillas o ciruelas. Con ellas se toma café, a veces también té. Quien va de visita muchas veces lleva algo, por ejemplo una torta de la panadería o flores para los anfitriones.",
+        "Lo importante no es solo la comida sino el tiempo para charlar. Se cuenta cómo estuvo la semana, se planean excursiones y se ríe juntos. Muchas personas mayores mantienen esta tradición desde hace décadas, pero también los jóvenes se reúnen con gusto en un café para charlar tranquilos con café y torta.",
+        "Para los turistas es una linda experiencia participar de una tarde así. En las ciudades chicas muchas veces hay cafés con mucha tradición en los que las tortas se hornean todavía con recetas antiguas. Quien alguna vez esté en Alemania debería visitar sin falta uno de ellos y probar varias clases.",
+      ],
+      questions: [
+        c("¿Cuándo se hace «Kaffee und Kuchen»?", ["El domingo a la tarde", "El lunes a la mañana", "A medianoche", "En el desayuno"], "«Sonntagnachmittag»."),
+        c("¿Quiénes se reúnen?", ["Familia, amigos o vecinos", "Solo turistas", "Solo estudiantes", "Solo empleados"], "«Familie, Freunde oder Nachbarn»."),
+        c("¿Qué tortas son típicas?", ["Manzana, queso y migas", "Chocolate y vainilla", "Solo helado", "Pan dulce"], "«Apfelkuchen, Käsekuchen und Streuselkuchen»."),
+        c("¿Qué lleva quien va de visita?", ["Una torta o flores", "Una silla", "Un auto", "Nada nunca"], "«einen Kuchen ... oder Blumen»."),
+        c("¿Qué es lo importante además de la comida?", ["El tiempo para charlar", "El precio", "La velocidad", "El silencio"], "«Zeit zum Reden»."),
+        tf("Solo las personas mayores mantienen esta tradición.", false, "«auch junge Leute»."),
+      ],
+    },
+  },
+  {
+    id: "b1-elternzeit", level: "B1", emoji: "👶", topic: "La licencia parental",
+    reading: {
+      title: "Elternzeit",
+      text: [
+        "In Deutschland haben Eltern das Recht auf Elternzeit. Das bedeutet, dass sie nach der Geburt eines Kindes bis zu drei Jahre lang nicht arbeiten müssen, ohne ihre Stelle zu verlieren. Der Arbeitgeber darf sie in dieser Zeit nicht kündigen, und nach der Rückkehr haben sie Anspruch auf einen gleichwertigen Arbeitsplatz.",
+        "In den ersten Monaten bekommen Eltern außerdem Elterngeld, eine staatliche Zahlung, die einen Teil des früheren Gehalts ersetzt. Beide Eltern können es beantragen. Wenn auch der zweite Elternteil mindestens zwei Monate zu Hause bleibt, gibt es zusätzliche Monate, damit sich Mütter und Väter die Betreuung besser teilen.",
+        "In der Praxis nehmen Mütter meistens länger Elternzeit als Väter, aber der Anteil der Väter steigt. Viele Paare entscheiden gemeinsam, wer wie lange zu Hause bleibt, und manche arbeiten beide in Teilzeit. Kritiker sagen, dass das Geld oft knapp wird und dass es für Kleinkinder noch zu wenige Betreuungsplätze gibt.",
+      ],
+      translation: [
+        "En Alemania los padres tienen derecho a una licencia parental. Eso significa que después del nacimiento de un hijo no tienen que trabajar hasta tres años sin perder su puesto. El empleador no puede despedirlos en ese tiempo y, al volver, tienen derecho a un puesto equivalente.",
+        "En los primeros meses los padres reciben además el Elterngeld, un pago estatal que reemplaza una parte del sueldo anterior. Ambos padres pueden pedirlo. Si también el otro progenitor se queda en casa al menos dos meses, hay meses adicionales, para que madres y padres compartan mejor el cuidado.",
+        "En la práctica, las madres suelen tomar la licencia más tiempo que los padres, pero la proporción de padres aumenta. Muchas parejas deciden juntas quién se queda en casa y por cuánto tiempo, y algunas trabajan las dos a tiempo parcial. Los críticos dicen que muchas veces el dinero queda justo y que todavía hay pocos lugares de cuidado para los más chiquitos.",
+      ],
+      questions: [
+        c("¿Cuánto puede durar la Elternzeit?", ["Hasta tres años", "Una semana", "Diez años", "Un día"], "«bis zu drei Jahre»."),
+        c("¿Qué no puede hacer el empleador durante ese tiempo?", ["Despedir a los padres", "Pagarles", "Saludarlos", "Llamarlos"], "«darf sie ... nicht kündigen»."),
+        c("¿Qué es el Elterngeld?", ["Un pago estatal que reemplaza parte del sueldo", "Un impuesto", "Un seguro de auto", "Un préstamo"], "«staatliche Zahlung»."),
+        c("¿Por qué hay meses adicionales?", ["Si el otro progenitor también se queda en casa", "Si se tienen mascotas", "Si se muda", "Si se viaja"], "«zweite Elternteil ... zwei Monate»."),
+        c("¿Qué críticas hay?", ["El dinero queda justo y faltan lugares de cuidado", "Es demasiado largo", "Es obligatorio", "Es ilegal"], "«Geld oft knapp ... zu wenige Betreuungsplätze»."),
+        tf("Los padres nunca toman la licencia parental.", false, "«der Anteil der Väter steigt»."),
+      ],
+    },
+  },
+  {
+    id: "b1-wochenmarkt", level: "B1", emoji: "🥕", topic: "El mercado semanal",
+    reading: {
+      title: "Auf dem Wochenmarkt",
+      text: [
+        "In vielen deutschen Städten gibt es einen Wochenmarkt, meistens am Samstagvormittag oder an einem Tag unter der Woche. Dort verkaufen Bauern aus der Region Obst, Gemüse, Eier, Käse und Brot. Manche Stände bieten auch Fleisch, Blumen oder selbst gemachte Marmelade an.",
+        "Viele Kunden gehen gern auf den Markt, weil die Waren frisch sind und oft aus der Nähe kommen. Man kann mit den Verkäufern sprechen, nach einem Rezept fragen und manchmal etwas probieren. Die Preise sind nicht immer niedriger als im Supermarkt, aber die Qualität ist für viele ein wichtiger Grund.",
+        "Für einen Besuch bringt man am besten eine eigene Tasche oder einen Korb mit, denn Plastiktüten sind unbeliebt. Außerdem sollte man früh kommen, weil die besten Sachen schnell weg sind. Wer Bargeld dabeihat, ist im Vorteil, denn nicht jeder Stand akzeptiert eine Kartenzahlung.",
+      ],
+      translation: [
+        "En muchas ciudades alemanas hay un mercado semanal, casi siempre el sábado por la mañana o un día entre semana. Ahí los campesinos de la región venden frutas, verduras, huevos, queso y pan. Algunos puestos ofrecen también carne, flores o mermelada casera.",
+        "A muchos clientes les gusta ir al mercado porque los productos son frescos y muchas veces vienen de cerca. Se puede hablar con los vendedores, preguntar por una receta y a veces probar algo. Los precios no siempre son más bajos que en el supermercado, pero la calidad es para muchos una razón importante.",
+        "Para una visita conviene llevar una bolsa propia o una canasta, porque las bolsas de plástico no gustan. Además hay que llegar temprano, porque lo mejor se acaba rápido. Quien lleva efectivo tiene ventaja, porque no todos los puestos aceptan pago con tarjeta.",
+      ],
+      questions: [
+        c("¿Cuándo hay muchos mercados?", ["El sábado por la mañana", "Siempre de noche", "Solo en invierno", "Nunca"], "«Samstagvormittag»."),
+        c("¿Quién vende en el mercado?", ["Campesinos de la región", "Solo grandes empresas", "Solo turistas", "Nadie"], "«Bauern aus der Region»."),
+        c("¿Qué ventaja tienen los productos?", ["Son frescos y vienen de cerca", "Son congelados", "Son importados", "Son viejos"], "«frisch ... aus der Nähe»."),
+        c("¿Qué conviene llevar?", ["Una bolsa propia o una canasta", "Un paraguas grande", "Un perro", "Una silla"], "«eigene Tasche oder einen Korb»."),
+        c("¿Por qué conviene llegar temprano?", ["Lo mejor se acaba rápido", "Cierran a las ocho", "Es más barato", "Hay mucha gente"], "«die besten Sachen schnell weg»."),
+        tf("Todos los puestos aceptan tarjeta.", false, "«nicht jeder Stand akzeptiert»."),
+      ],
+    },
+  },
+  {
+    id: "b1-energie-sparen", level: "B1", emoji: "💡", topic: "Ahorrar energía",
+    reading: {
+      title: "Energie sparen im Alltag",
+      text: [
+        "Strom und Heizung sind in Deutschland teuer geworden, deshalb versuchen viele Haushalte, Energie zu sparen. Das ist nicht nur gut für den Geldbeutel, sondern auch für die Umwelt. Schon mit kleinen Änderungen im Alltag kann man viel erreichen, ohne auf Komfort verzichten zu müssen.",
+        "Eine einfache Maßnahme ist, die Heizung nur so hoch einzustellen, wie es nötig ist. Ein Grad weniger spart etwa sechs Prozent der Heizkosten. Außerdem sollte man mehrmals am Tag kurz, aber kräftig lüften, statt das Fenster stundenlang offen zu lassen, denn sonst kühlt der Raum stark aus.",
+        "Auch bei den Geräten lässt sich sparen. Moderne Lampen und Kühlschränke brauchen viel weniger Strom als alte. Geräte, die auf Standby stehen, verbrauchen weiter Energie, deshalb ist eine Steckdosenleiste mit Schalter praktisch. Wer die Waschmaschine nur voll laufen lässt und bei niedrigen Temperaturen wäscht, spart ebenfalls.",
+      ],
+      translation: [
+        "La electricidad y la calefacción se han vuelto caras en Alemania, por eso muchos hogares intentan ahorrar energía. Eso no solo es bueno para el bolsillo sino también para el ambiente. Ya con pequeños cambios en el día a día se puede lograr mucho, sin tener que renunciar a la comodidad.",
+        "Una medida simple es regular la calefacción solo tan alta como haga falta. Un grado menos ahorra aproximadamente un seis por ciento de los costos de calefacción. Además conviene ventilar varias veces por día brevemente pero con fuerza, en lugar de dejar la ventana abierta horas, porque si no el ambiente se enfría mucho.",
+        "También con los aparatos se puede ahorrar. Las lámparas y heladeras modernas necesitan mucha menos electricidad que las viejas. Los aparatos en modo de espera siguen consumiendo energía, por eso es práctico un alargue con interruptor. Quien usa el lavarropas solo lleno y lava a temperaturas bajas también ahorra.",
+      ],
+      questions: [
+        c("¿Por qué ahorran energía muchos hogares?", ["La electricidad y la calefacción son caras", "Son gratis", "Hay mucha", "Es obligatorio"], "«teuer geworden»."),
+        c("¿Cuánto ahorra un grado menos de calefacción?", ["Aproximadamente un seis por ciento", "Un cien por ciento", "Nada", "Un uno por ciento"], "«etwa sechs Prozent»."),
+        c("¿Cómo conviene ventilar?", ["Brevemente pero con fuerza", "Toda la noche", "Nunca", "Con la puerta abierta"], "«kurz, aber kräftig»."),
+        c("¿Qué consumen los aparatos en espera?", ["Siguen consumiendo energía", "Nada", "Más que encendidos", "Gas"], "«verbrauchen weiter Energie»."),
+        c("¿Cómo conviene usar el lavarropas?", ["Lleno y a temperaturas bajas", "Vacío", "Siempre caliente", "Solo de noche"], "«voll ... niedrigen Temperaturen»."),
+        tf("Ahorrar energía obliga a renunciar a toda comodidad.", false, "«ohne auf Komfort verzichten zu müssen»."),
+      ],
+    },
+  },
+  {
+    id: "b1-sprachcafe", level: "B1", emoji: "💬", topic: "El café de idiomas",
+    reading: {
+      title: "Das Sprachcafé",
+      text: [
+        "In vielen Städten gibt es ein Sprachcafé, ein Treffen, bei dem man ohne Unterricht eine Fremdsprache übt. Meistens trifft man sich einmal pro Woche in einem Café oder einem Gemeindezentrum. Der Eintritt ist frei, und man bezahlt nur, was man trinkt. Es kommen Leute aus vielen Ländern.",
+        "An den Tischen sitzen Muttersprachler und Lernende zusammen. Man unterhält sich über Hobbys, Reisen oder das Wetter und hilft einander, wenn ein Wort fehlt. Fehler sind dabei kein Problem, denn niemand korrigiert streng. Das Ziel ist, mutig zu sprechen und das Hörverstehen zu verbessern.",
+        "Viele Teilnehmer sagen, dass sie dort mehr lernen als im Kurs, weil das Gespräch echt ist. Außerdem findet man neue Freunde, die man sonst nie getroffen hätte. Wer nervös ist, kann einfach zuhören und beim zweiten oder dritten Besuch langsam anfangen, selbst zu sprechen.",
+      ],
+      translation: [
+        "En muchas ciudades hay un café de idiomas, un encuentro donde se practica un idioma extranjero sin clases. Casi siempre se juntan una vez por semana en un café o en un centro comunitario. La entrada es libre y uno paga solo lo que toma. Llega gente de muchos países.",
+        "En las mesas se sientan hablantes nativos y estudiantes. Se conversa sobre pasatiempos, viajes o el clima y se ayudan cuando falta una palabra. Los errores no son un problema, porque nadie corrige con severidad. El objetivo es hablar con valentía y mejorar la comprensión auditiva.",
+        "Muchos participantes dicen que ahí aprenden más que en un curso, porque la conversación es real. Además se encuentran nuevos amigos que de otro modo nunca habrían conocido. Quien está nervioso puede simplemente escuchar y, en la segunda o tercera visita, empezar de a poco a hablar.",
+      ],
+      questions: [
+        c("¿Qué es un Sprachcafé?", ["Un encuentro para practicar idiomas sin clases", "Un curso caro", "Una escuela", "Un examen"], "«ohne Unterricht eine Fremdsprache übt»."),
+        c("¿Cuánto cuesta entrar?", ["Nada, solo se paga lo que se toma", "Cincuenta euros", "Cien euros", "Una suscripción anual"], "«Eintritt ist frei»."),
+        c("¿Quiénes se sientan juntos?", ["Hablantes nativos y estudiantes", "Solo profesores", "Solo niños", "Solo turistas"], "«Muttersprachler und Lernende»."),
+        c("¿Cuál es el objetivo?", ["Hablar con valentía y mejorar la comprensión", "Aprobar un examen", "Ganar dinero", "Escribir cartas"], "«mutig zu sprechen»."),
+        c("¿Qué puede hacer quien está nervioso?", ["Escuchar primero", "Irse", "Gritar", "No volver"], "«einfach zuhören»."),
+        tf("En el Sprachcafé corrigen cada error con severidad.", false, "«niemand korrigiert streng»."),
+      ],
+    },
+  },
 ];
