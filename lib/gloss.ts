@@ -3,6 +3,9 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  wartenden: "que esperan (participio I)", reisenden: "viajeros", halle: "salón / hall", dicht: "impermeable / cerrado", gekostet: "costó", wartesaal: "sala de espera", kaffeeautomaten: "máquina de café", bewohnern: "habitantes (dativo plural)", gespendeten: "donados", eingang: "entrada", dahinter: "detrás", beantworten: "responder", regenschirm: "paraguas",
+  eingerichtet: "amoblado / instalado", möbel: "muebles", geliefert: "entregado", budget: "presupuesto", angefangen: "empezado", umzug: "mudanza", kisten: "cajas", umgestellt: "reubicado / cambiado", geregelt: "arreglado", geholt: "buscado / conseguido",
+  bereitest: "preparás", vortrag: "exposición", geübt: "practicado", angehört: "escuchado", schrecklich: "horrible", denselben: "el mismo", satz: "frase / oración", schema: "esquema", wichtigsten: "más importantes", wortschatz: "vocabulario", umschreibst: "parafraseás", leserbrief: "carta del lector", verliere: "pierdo", punkte: "puntos", begründest: "fundamentás", empfehlung: "recomendación", probiere: "pruebo", probeprüfung: "simulacro de examen",
   komm: "vení / pasá", museum: "museo", nummer: "número", dorthin: "hacia allá", spaß: "diversión", nachtisch: "postre", mitkommen: "venir con (vos)", lieber: "preferir / mejor", anruf: "llamada", welchen: "qué / cuál", da: "ahí / ese día", sich: "se", anmelden: "inscribirse", hauptstraße: "calle principal",
   klein: "chico/a (también apellido Klein)", meine: "mi (femenino / plural)", schwester: "hermana", zusammen: "juntos / en total", gern: "con gusto / me gusta", macht: "hace / son (en cuentas)",
   studium: "estudios / carrera", bald: "pronto", kurz: "corto / poco", nüsse: "nueces", verletzt: "lastimó / lastimado", winter: "invierno", finger: "dedo", hängt: "cuelga", bewahren: "guardar / conservar", mantel: "abrigo", dabei: "con(migo/vos), presente", hunden: "perros", vorbei: "pasado / terminado", ärgert: "enoja", lärm: "ruido", überraschung: "sorpresa", gespannt: "con curiosidad", strahlst: "brillás", wettbewerb: "concurso", begrüßt: "saluda", torte: "torta", brennen: "arden", luftballons: "globos", paar: "pareja", tannenbaum: "árbol de Navidad", gastgeberin: "anfitriona", taschen: "bolsas", online: "en línea", darfst: "podés (permiso)", laptop: "notebook", bewerbe: "me postulo", kantine: "comedor", füllen: "llenar (füllen aus)",
@@ -158,6 +161,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
+  "leipzig",
   "köln", "spanien",  "kern", "lindner",  "becker", "berger",  "lisa",
   "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse", "rudolf",
 ]);
