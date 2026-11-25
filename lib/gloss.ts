@@ -3,6 +3,14 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  entwurf: "borrador", stammt: "proviene", statistischen: "estadístico (dativo)", amts: "de la oficina", lebensmitteln: "alimentos", haushalte: "hogares", mitglieder: "miembros", verhalten: "comportamiento", hinweis: "indicación / aviso", ergänze: "agrego", absatz: "párrafo", konkrete: "concretos", erwähnen: "mencionar", vorsichtig: "con cuidado", formuliert: "formulado", fassung: "versión",
+  tue: "hago", hinunterging: "bajaba", schreck: "susto", angemacht: "prendido", redest: "hablás", katastrophe: "catástrofe", naja: "bueno / en fin",
+  geärgert: "enojó", gerettet: "salvó", zufall: "casualidad", trafen: "encontramos",
+  nomen: "sustantivo", feminin: "femenino", endungen: "terminaciones", adjektive: "adjetivos", verben: "verbos", präfixen: "prefijos", zusammengesetztes: "compuesto",
+  bau: "construcción", radstraße: "ciclovía", zögern: "dudar / vacilar", plänen: "planes (dativo)", parkplätze: "estacionamientos", zustimmt: "aprueba", abstimmung: "votación", hebt: "levanta",
+  ausgesehen: "visto / parecido", zeichen: "señal", vergesslich: "olvidadizo", geirrt: "equivocado", lügt: "miente", missverständnis: "malentendido", gemeint: "querido decir", gebraucht: "necesitado",
+  organisiert: "organizado", säle: "salones", gemeindehaus: "casa comunal", klappt: "funciona / sale bien",
+  kontrolliert: "controla", bewerten: "valorar", erwähnt: "menciona", saubere: "limpia / prolija", analyse: "análisis",
   spar: "ahorrá", wegzulegen: "apartar / guardar", verdienst: "ganás", lachen: "reír", stift: "lápiz / lapicera",
   genauso: "igual / lo mismo", untertitel: "subtítulos", aufzugeben: "rendirse", hausaufgaben: "tarea", nachgeholt: "recuperado", schreibe: "escribo", denken: "pensar", stört: "molesta",
   darin: "ahí dentro", ärgerlich: "fastidioso", busses: "del colectivo", fahrer: "conductor", fahrers: "del conductor", schirm: "paraguas",
@@ -166,6 +174,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
+  "brandt", "tobias",
   "leipzig",
   "köln", "spanien",  "kern", "lindner",  "becker", "berger",  "lisa",
   "madrid", "wien", "hamburg", "berlin", "münchen", "buenos", "aires", "argentinien", "japan", "italien", "kanada", "thomas", "peter", "schulz", "lena", "müller", "rex", "roth", "lang", "julia", "weber", "jonas", "tom", "anna", "max", "mia", "paul", "huber", "schulz", "berliner", "nova", "berg", "europa", "clara", "sabine", "maria", "leo", "rolf", "ilse", "rudolf",
