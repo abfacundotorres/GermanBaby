@@ -11,6 +11,7 @@ import { FREE_PROMPTS_A2Y } from "./a2y-extras.ts";
 import { FREE_PROMPTS_A2Z } from "./a2z-extras.ts";
 import { FREE_PROMPTS_B1X } from "./b1x-extras.ts";
 import { FREE_PROMPTS_B1Y } from "./b1y-extras.ts";
+import { FREE_PROMPTS_B1Z } from "./b1z-extras.ts";
 import { FREE_PROMPTS_B2X } from "./b2-extras.ts";
 
 export const FREE_PROMPTS: Record<string, FreePrompt> = {
@@ -21,6 +22,7 @@ export const FREE_PROMPTS: Record<string, FreePrompt> = {
   ...FREE_PROMPTS_A2Z,
   ...FREE_PROMPTS_B1X,
   ...FREE_PROMPTS_B1Y,
+  ...FREE_PROMPTS_B1Z,
   ...FREE_PROMPTS_B2X,
   // ---------- A2
   vergangenheit: { prompt: "Contá cómo era tu vida hace unos años: dónde vivías, qué hacías y qué no podías hacer.", focus: ["war / hatte / konnte / musste", "früher o vor … Jahren", "seit"], minSentences: 3 },
