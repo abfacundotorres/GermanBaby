@@ -65,7 +65,7 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | Entrega | Horas estimadas | Estado |
 |---|---|---|
 | Lectura en las 8 unidades iniciales (hallo a alltag) | +1 | hecho |
-| Escucha larga en esas 8 unidades | +2 | pendiente |
+| Escucha larga en esas 8 unidades | +2 | hecho |
 | «Práctica 2» (repaso mezclado) en las 15 unidades base | +3 | pendiente |
 | 40 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | pendiente |
 | Lecciones temáticas con palabras del entrenador (hobbys, trabajo, clima, cuerpo, mensajes) | +5 | pendiente |
