@@ -11,7 +11,10 @@
     "bot": "node --experimental-strip-types --no-warnings scripts/solve-lessons.mjs",
     "test": "node --experimental-strip-types --no-warnings --test tests/*.test.ts",
     "smoke": "node scripts/smoke.mjs",
-    "report": "node --experimental-strip-types --no-warnings scripts/report.mjs"
+    "report": "node --experimental-strip-types --no-warnings scripts/report.mjs",
+    "preflight": "node --experimental-strip-types --no-warnings scripts/preflight.mjs",
+    "lexicon": "node --experimental-strip-types --no-warnings scripts/lexicon.mjs",
+    "report:time": "node --experimental-strip-types --no-warnings scripts/time-report.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.6.0",
@@ -24,8 +27,11 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "@types/nspell": "^2.1.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "dictionary-de": "^3.0.0",
+    "nspell": "^2.1.5",
     "typescript": "^5.9.3"
   }
 }

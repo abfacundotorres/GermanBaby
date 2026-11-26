@@ -71,3 +71,12 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | Lecciones temáticas con palabras del entrenador (hobbys, trabajo, clima, cuerpo, mensajes) | +5 | pendiente |
 | 20 consignas de escritura y 20 de oral con rúbrica | +3 | pendiente |
 | 2 simulacros más y repasos con SRS obligatorio | +2,5 | pendiente |
+
+## Herramientas para escribir contenido
+
+- `npm run lexicon -- unit <id>`: palabras ya enseñadas hasta esa unidad (más glosario), para escribir dentro de las reglas desde el principio.
+- `npm run lexicon -- check <id> "texto"`: palabras de un texto que faltan enseñar o glosar.
+- `npm run lexicon -- free "der Hund" ...`: si una palabra de vocabulario nuevo está libre (no repite lecciones ni el entrenador).
+- `npm run preflight`: todas las reglas de vocabulario y ortografía en una pasada, con un esqueleto listo para `lib/gloss.ts`. Es lo que conviene correr antes de `npm test`.
+- `npm run report:time`: horas estimadas de primera pasada por nivel.
+- `tests/spell.test.ts` (en el CI): un corrector hunspell alemán (`nspell` + `dictionary-de`, solo en desarrollo) marca palabras no reconocidas. Las revisadas a mano y correctas (nombres, anglicismos, compuestos raros) viven en `tests/spell-ok.txt`.
