@@ -78,8 +78,8 @@ export const UNITS_A2_PART8: Unit[] = [
           lines: [
             { who: "m", name: "Paul", de: "Pass auf, die Straße ist ganz glatt!", es: "¡Cuidado, la calle está toda resbaladiza!" },
             { who: "f", name: "Lisa", de: "Ich bin fast hingefallen. Mein Fuß ist gerutscht.", es: "Casi me caigo. Se me resbaló el pie." },
-            { who: "m", name: "Paul", de: "Hoffentlich brichst du dir nichts. Ich hebe deine Tasche auf.", es: "Ojalá no te rompas nada. Te levanto la bolsa." },
-            { who: "f", name: "Lisa", de: "Danke. Ich trete lieber vorsichtig.", es: "Gracias. Prefiero pisar con cuidado." },
+            { who: "m", name: "Paul", de: "Hoffentlich hast du dir nichts gebrochen. Ich hebe deine Tasche auf.", es: "Ojalá no te hayas roto nada. Te levanto la bolsa." },
+            { who: "f", name: "Lisa", de: "Danke. Ich trete lieber vorsichtig auf.", es: "Gracias. Prefiero pisar con cuidado." },
           ],
           questions: [
             { type: "choice", q: "¿Cómo está la calle?", options: ["Resbaladiza", "Seca", "Llena", "Oscura"], answer: "Resbaladiza", why: "«ganz glatt»" },
@@ -116,13 +116,13 @@ export const UNITS_A2_PART8: Unit[] = [
           lines: [
             { who: "f", name: "Nina", de: "Der Automat funktioniert nicht. Ich habe das Geld eingeworfen.", es: "La máquina no funciona. Eché el dinero." },
             { who: "m", name: "Tom", de: "Das Geld ist verschwunden! Darf ich das Telefon benutzen?", es: "¡El dinero desapareció! ¿Puedo usar el teléfono?" },
-            { who: "f", name: "Nina", de: "Klar. Ich starte das Programm neu.", es: "Claro. Reinicio el programa." },
-            { who: "m", name: "Tom", de: "Wir verteilen die Zettel später und packen alles ein.", es: "Repartimos los papelitos después y empacamos todo." },
+            { who: "f", name: "Nina", de: "Klar. Ruf den Service an.", es: "Claro. Llamá al servicio." },
+            { who: "m", name: "Tom", de: "Gut. Danach verteilen wir die Zettel und packen alles ein.", es: "Bien. Después repartimos los papelitos y empacamos todo." },
           ],
           questions: [
             { type: "choice", q: "¿Qué pasó con la máquina?", options: ["No funciona", "Está rota", "Está llena", "Está cerrada"], answer: "No funciona", why: "«funktioniert nicht»" },
             { type: "choice", q: "¿Qué pasó con el dinero?", options: ["Desapareció", "Volvió", "Se perdió el ticket", "Se rompió"], answer: "Desapareció", why: "«Das Geld ist verschwunden»" },
-            { type: "tf", q: "Nina reinicia el programa.", answer: true, why: "«starte das Programm neu»" },
+            { type: "tf", q: "Nina le sugiere llamar al servicio.", answer: true, why: "«Ruf den Service an»" },
           ],
         },
       },
@@ -207,7 +207,7 @@ export const UNITS_A2_PART8: Unit[] = [
             { who: "m", name: "Herr Klein", de: "Ich bin Ingenieur und berufstätig, aber mein Bruder ist Busfahrer.", es: "Soy ingeniero y trabajo, pero mi hermano es chofer de colectivo." },
             { who: "f", name: "Frau Roth", de: "Mein Mann ist Polizist. Unser Wohnort ist in dieser Gegend.", es: "Mi marido es policía. Nuestro lugar de residencia es esta zona." },
             { who: "m", name: "Herr Klein", de: "Das Zeichen vor dem Haus sagt: Bitte nicht betreten!", es: "La señal frente a la casa dice: ¡Por favor, no entrar!" },
-            { who: "f", name: "Frau Roth", de: "Ja, die Baustelle. Es war ein Erlebnis, als sie anfing.", es: "Sí, la obra. Fue una vivencia cuando empezó." },
+            { who: "f", name: "Frau Roth", de: "Ja, die Baustelle. Das war ein großes Erlebnis.", es: "Sí, la obra. Fue una gran vivencia." },
           ],
           questions: [
             { type: "choice", q: "¿Qué es Herr Klein?", options: ["Ingeniero", "Policía", "Chofer", "Panadero"], answer: "Ingeniero", why: "«Ich bin Ingenieur»" },
@@ -233,7 +233,7 @@ export const UNITS_A2_PART8: Unit[] = [
         ],
         exercises: [
           cz("Kommst du ___? Wir gehen ins Kino.", "¿Venís con nosotros? Vamos al cine.", ["mit", "weg", "herein", "vorbei"], "mit", "«mitkommen» → «Kommst du mit?»."),
-          cz("Bitte ___ Sie! Die Tür ist offen.", "¡Pase, por favor! La puerta está abierta.", ["kommen Sie herein", "gehen Sie weg", "lesen Sie vor", "kommen Sie zurück"], "kommen Sie herein", "«hereinkommen» → «Kommen Sie herein»."),
+          cz("Bitte ___! Die Tür ist offen.", "¡Pase, por favor! La puerta está abierta.", ["kommen Sie herein", "gehen Sie weg", "lesen Sie vor", "kommen Sie zurück"], "kommen Sie herein", "«hereinkommen» → «Kommen Sie herein»."),
           cz("Ich möchte dir eine Geschichte ___.", "Quiero leerte un cuento en voz alta.", ["vorlesen", "mitnehmen", "weggehen", "flüstern"], "vorlesen", "«vorlesen» = leer en voz alta; con «möchte» va en infinitivo."),
           { kind: "write", es: "Paso por tu casa mañana.", references: ["Ich komme morgen bei dir vorbei", "Morgen komme ich bei dir vorbei"] },
           { kind: "speak", de: "Wir unterhalten uns oft", es: "Conversamos seguido" },

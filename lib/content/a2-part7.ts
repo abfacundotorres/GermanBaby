@@ -68,8 +68,8 @@ export const UNITS_A2_PART7: Unit[] = [
         ],
         exercises: [
           cz("Die ___ ist sehr schwer. Ich verstehe sie nicht.", "El ejercicio es muy difícil. No lo entiendo.", ["Übung", "Teilnehmer", "Vortrag", "Dokument"], "Übung", "«die Übung» = el ejercicio."),
-          cz("Zum ___ kommen zwanzig Teilnehmer.", "A la conferencia vienen veinte participantes.", ["Vortrag", "Heft", "Stift", "Projekt"], "Vortrag", "«der Vortrag» = la conferencia."),
-          cz("Wir müssen bis hundert ___.", "Tenemos que contar hasta cien.", ["zählen", "rechnen", "aufschreiben", "testen"], "zählen", "«zählen» = contar números; con modal va en infinitivo."),
+          cz("Zum ___ kommen zwanzig Teilnehmer.", "A la conferencia vienen veinte participantes.", ["Vortrag", "Heft", "Stift", "Dokument"], "Vortrag", "«der Vortrag» = la conferencia."),
+          cz("Wir müssen bis hundert ___.", "Tenemos que contar hasta cien.", ["zählen", "aufschreiben", "testen", "probieren"], "zählen", "«zählen» = contar números; con modal va en infinitivo."),
           { kind: "write", es: "Anoto la dirección.", references: ["Ich schreibe die Adresse auf"] },
           { kind: "speak", de: "Das Projekt dauert ein Jahr", es: "El proyecto dura un año" },
         ],
@@ -195,7 +195,7 @@ export const UNITS_A2_PART7: Unit[] = [
           { de: "sportlich", es: "deportista", example: { de: "Er ist sehr sportlich.", es: "Es muy deportista." } },
         ],
         exercises: [
-          cz("Am Wochenende gehe ich am Fluss ___.", "El fin de semana voy a pescar al río.", ["angeln", "nähen", "zeichnen", "basteln"], "angeln", "«angeln» = pescar."),
+          cz("Ich möchte Fische fangen. Am Wochenende gehe ich ___.", "Quiero atrapar peces. El fin de semana voy a pescar.", ["angeln", "nähen", "zeichnen", "basteln"], "angeln", "«angeln» = pescar."),
           cz("Ich ___ jeden Morgen im Park.", "Hago jogging todos los días en el parque.", ["jogge", "nähe", "reite", "zeichne"], "jogge", "«joggen» con «ich»: jogge."),
           cz("Sie ist sehr ___ und trainiert viel.", "Ella es muy deportista y entrena mucho.", ["sportlich", "faul", "langsam", "dumm"], "sportlich", "«sportlich» = deportista."),
           { kind: "write", es: "Me gusta dibujar.", references: ["Ich zeichne gern"] },
@@ -359,7 +359,7 @@ export const UNITS_A2_PART7: Unit[] = [
         ],
         exercises: [
           cz("Ich ___ dir für deine Hilfe.", "Te agradezco por tu ayuda.", ["danke", "bitte", "grüße", "klopfe"], "danke", "«danken» con «ich»: danke; se usa con dativo («dir»)."),
-          cz("Bitte ___ Sie von mir Ihre Familie.", "Salude de mi parte a su familia.", ["grüßen", "klingeln", "hoffen", "klopfen"], "grüßen", "«grüßen» = saludar."),
+          cz("Bitte ___ Sie Ihre Familie von mir.", "Salude de mi parte a su familia.", ["grüßen", "klingeln", "hoffen", "klopfen"], "grüßen", "«grüßen» = saludar."),
           cz("Es hat geklingelt. Jemand ___ an der Tür.", "Sonó el timbre. Alguien llama a la puerta.", ["klopft", "wünscht", "dankt", "hofft"], "klopft", "«klopfen» = golpear."),
           { kind: "write", es: "Espero que mañana haga sol.", references: ["Ich hoffe, dass morgen die Sonne scheint", "Hoffentlich scheint morgen die Sonne"] },
           { kind: "speak", de: "Ich wünsche dir einen schönen Tag", es: "Te deseo un lindo día" },
@@ -411,7 +411,7 @@ export const UNITS_A2_PART7: Unit[] = [
           { de: "erzählen", es: "contar (una historia)", example: { de: "Wir erzählen eine Geschichte.", es: "Contamos una historia." } },
         ],
         exercises: [
-          cz("Das ___ mit dem Chef war kurz.", "La conversación con el jefe fue corta.", ["Gespräch", "Stimme", "Rede", "Interview"], "Gespräch", "«das Gespräch» = la conversación."),
+          cz("Das ___ mit dem Chef war kurz.", "La conversación con el jefe fue corta.", ["Gespräch", "Stimme", "Rede", "Diskussion"], "Gespräch", "«das Gespräch» = la conversación."),
           cz("Die Politikerin hält eine lange ___.", "La política da un discurso largo.", ["Rede", "Stimme", "Gespräch", "Diskussion"], "Rede", "«die Rede» = el discurso."),
           cz("Wir müssen morgen über das Problem ___.", "Mañana tenemos que discutir el problema.", ["diskutieren", "erzählen", "mitteilen", "berichten"], "diskutieren", "«diskutieren» = discutir un tema."),
           { kind: "write", es: "Ella tiene una voz linda.", references: ["Sie hat eine schöne Stimme"] },
@@ -449,7 +449,7 @@ export const UNITS_A2_PART7: Unit[] = [
           { de: "die Internetseite", es: "el sitio web", example: { de: "Die Internetseite ist übersichtlich.", es: "El sitio web es claro." } },
         ],
         exercises: [
-          cz("Die ___ von Deutschland ist null vier neun.", "El prefijo de Alemania es cero cuatro nueve.", ["Vorwahl", "Anschrift", "Internetseite", "Umschlag"], "Vorwahl", "«die Vorwahl» = el prefijo telefónico."),
+          cz("Die ___ von Deutschland ist vier neun.", "El prefijo de Alemania es cuarenta y nueve.", ["Vorwahl", "Anschrift", "Internetseite", "Umschlag"], "Vorwahl", "«die Vorwahl» = el prefijo telefónico."),
           cz("Auf dem ___ steht meine Anschrift.", "En el sobre está mi dirección.", ["Umschlag", "Vorwahl", "Internetseite", "Dokument"], "Umschlag", "«der Umschlag» = el sobre."),
           cz("Du musst auf der Internetseite deinen Namen ___.", "Tenés que ingresar tu nombre en el sitio web.", ["eingeben", "abschicken", "telefonieren", "erzählen"], "eingeben", "«eingeben» = ingresar datos; con «musst» va en infinitivo."),
           { kind: "write", es: "Envío la carta hoy.", references: ["Ich schicke den Brief heute ab"] },
@@ -540,7 +540,7 @@ export const UNITS_A2_PART7: Unit[] = [
           { de: "meistens", es: "casi siempre", example: { de: "Ich esse meistens zu Hause.", es: "Casi siempre como en casa." } },
         ],
         exercises: [
-          cz("___ war ich im Kino. Der Film war toll.", "Anoche estuve en el cine. La película fue genial.", ["Gestern Abend", "Übermorgen", "Neulich", "Nie mehr"], "Gestern Abend", "«gestern Abend» = anoche."),
+          cz("___ war ich im Kino. Der Film war toll.", "Anoche estuve en el cine. La película fue genial.", ["Gestern Abend", "Übermorgen", "Meistens", "Nie mehr"], "Gestern Abend", "«gestern Abend» = anoche."),
           cz("Ich fahre ___ nach Berlin, also in zwei Tagen.", "Viajo pasado mañana a Berlín, o sea en dos días.", ["übermorgen", "vorgestern", "täglich", "meistens"], "übermorgen", "«übermorgen» = pasado mañana."),
           cz("Ich lerne ___ Deutsch, also jeden Tag.", "Estudio alemán a diario, o sea todos los días.", ["täglich", "neulich", "vorgestern", "zweimal"], "täglich", "«täglich» = todos los días."),
           { kind: "write", es: "Voy al gimnasio dos veces por semana.", references: ["Ich gehe zweimal pro Woche ins Fitnessstudio", "Ich gehe zweimal in der Woche ins Fitnessstudio"] },
@@ -596,7 +596,7 @@ export const UNITS_A2_PART7: Unit[] = [
           questions: [
             { type: "choice", q: "¿Cómo fue el viaje?", options: ["Largo", "Corto", "Fácil", "Tranquilo"], answer: "Largo", why: "«Die Fahrt war lang»" },
             { type: "choice", q: "¿Qué pasó de golpe?", options: ["Llovió", "Hizo frío", "Salió el sol", "Se rompió el auto"], answer: "Llovió", why: "«Plötzlich hat es geregnet»" },
-            { type: "tf", q: "Paul desempaca mientras Eva come.", answer: false, why: "Dice «Inzwischen packe ich die Koffer aus», sin saber lo que hace Eva." },
+            { type: "tf", q: "Eva y Paul van a comer antes de dormir.", answer: true, why: "«Vorher essen wir etwas, nachher gehen wir schlafen»" },
           ],
         },
       },
@@ -656,7 +656,7 @@ export const UNITS_A2_PART7: Unit[] = [
         ],
         exercises: [
           cz("Ich habe das Buch nicht gekauft, ___ geliehen.", "No compré el libro, sino que lo pedí prestado.", ["sondern", "doch", "also", "niemand"], "sondern", "«nicht … sondern …» = no … sino …."),
-          cz("Ich habe ___ gesucht, aber nirgends gefunden.", "Busqué por todos lados, pero no lo encontré en ningún lado.", ["überall", "niemand", "irgendwo", "sondern"], "überall", "«überall» = en todos lados."),
+          cz("Ich habe ___ gesucht, aber nirgends gefunden.", "Busqué por todos lados, pero no lo encontré en ningún lado.", ["überall", "niemand", "also", "sondern"], "überall", "«überall» = en todos lados."),
           cz("Ich kenne hier ___. Ich bin ganz neu.", "No conozco a nadie acá. Soy muy nuevo.", ["niemand", "überall", "irgendwo", "also"], "niemand", "«niemand» = nadie."),
           { kind: "write", es: "Vengo sí o sí.", references: ["Ich komme auf jeden Fall"] },
           { kind: "speak", de: "Ich brauche nur ein paar Minuten", es: "Necesito solo unos pocos minutos" },

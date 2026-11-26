@@ -327,7 +327,7 @@ export const UNITS_A2_PART6: Unit[] = [
         exercises: [
           cz("Im Salat sind Tomaten und eine ___.", "En la ensalada hay tomates y un pepino.", ["Gurke", "Erdbeere", "Zitrone", "Birne"], "Gurke", "«die Gurke» = el pepino."),
           cz("Zum Kochen nehme ich eine ___ und Knoblauch.", "Para cocinar uso una cebolla y ajo.", ["Zwiebel", "Erdbeere", "Traube", "Birne"], "Zwiebel", "«die Zwiebel» = la cebolla."),
-          cz("Im Sommer esse ich gern ___.", "En verano me gustan las frutillas.", ["Erdbeeren", "Zwiebeln", "Pilze", "Gurken"], "Erdbeeren", "Plural de «die Erdbeere»: «Erdbeeren»."),
+          cz("Zum Nachtisch esse ich süße ___ mit Sahne.", "De postre como frutillas dulces con crema.", ["Erdbeeren", "Zwiebeln", "Pilze", "Gurken"], "Erdbeeren", "Plural de «die Erdbeere»: «Erdbeeren»."),
           { kind: "write", es: "Una pera y una uva.", references: ["Eine Birne und eine Traube"] },
           { kind: "speak", de: "Ich möchte Wasser mit Zitrone", es: "Quiero agua con limón" },
         ],
@@ -365,7 +365,7 @@ export const UNITS_A2_PART6: Unit[] = [
           { de: "bitter", es: "amargo", example: { de: "Der Kaffee ist bitter.", es: "El café es amargo." } },
         ],
         exercises: [
-          cz("Zum Frühstück trinke ich Orangen___.", "En el desayuno tomo jugo de naranja.", ["saft", "wein", "honig", "salz"], "saft", "«der Saft» = el jugo: «Orangensaft»."),
+          cz("Zum Frühstück trinke ich Orangen___.", "En el desayuno tomo jugo de naranja.", ["saft", "wein", "mehl", "salz"], "saft", "«der Saft» = el jugo: «Orangensaft»."),
           cz("Die Zitrone ist sehr ___.", "El limón es muy ácido.", ["sauer", "bitter", "süß", "weich"], "sauer", "«sauer» = ácido."),
           cz("Der Kaffee ohne Zucker schmeckt ___.", "El café sin azúcar sabe amargo.", ["bitter", "sauer", "frisch", "nass"], "bitter", "«bitter» = amargo."),
           { kind: "write", es: "Me gusta la mermelada con miel.", references: ["Ich mag Marmelade mit Honig"] },
@@ -418,9 +418,9 @@ export const UNITS_A2_PART6: Unit[] = [
           { de: "der Stiefel", es: "la bota", example: { de: "Die Stiefel sind nass.", es: "Las botas están mojadas." } },
         ],
         exercises: [
-          cz("Im Büro trägt er einen ___ und eine Krawatte.", "En la oficina lleva traje y corbata.", ["Anzug", "Gürtel", "Stiefel", "Socke"], "Anzug", "«der Anzug» = el traje."),
-          cz("Im Winter brauche ich warme ___.", "En invierno necesito guantes abrigados.", ["Handschuhe", "Sandalen", "Blusen", "Hemden"], "Handschuhe", "Plural de «der Handschuh»: «Handschuhe»."),
-          cz("Im Sommer trage ich gern ___.", "En verano uso sandalias con gusto.", ["Sandalen", "Stiefel", "Handschuhe", "Socken"], "Sandalen", "Plural de «die Sandale»: «Sandalen»."),
+          cz("Im Büro trägt er einen ___ mit Jacke und Hose.", "En la oficina lleva un traje con saco y pantalón.", ["Anzug", "Gürtel", "Stiefel", "Socke"], "Anzug", "«der Anzug» = el traje."),
+          cz("Im Winter brauche ich warme ___.", "En invierno necesito guantes abrigados.", ["Handschuhe", "Sandalen", "Blusen", "Krawatten"], "Handschuhe", "Plural de «der Handschuh»: «Handschuhe»."),
+          cz("Bei Hitze trage ich offene ___.", "Cuando hace calor uso sandalias abiertas.", ["Sandalen", "Stiefel", "Handschuhe", "Socken"], "Sandalen", "Plural de «die Sandale»: «Sandalen»."),
           { kind: "write", es: "La blusa es nueva.", references: ["Die Bluse ist neu"] },
           { kind: "speak", de: "Das Hemd ist zu eng", es: "La camisa es demasiado ajustada" },
         ],
@@ -545,7 +545,7 @@ export const UNITS_A2_PART6: Unit[] = [
           { de: "das Eis", es: "el hielo / el helado", example: { de: "Ich möchte ein Eis.", es: "Quiero un helado." } },
         ],
         exercises: [
-          cz("Im ___ blühen die Blumen.", "En primavera florecen las flores.", ["Frühling", "Herbst", "Sommer", "Eis"], "Frühling", "«der Frühling» = la primavera."),
+          cz("Nach dem Winter kommt der ___.", "Después del invierno viene la primavera.", ["Frühling", "Herbst", "Sommer", "Eis"], "Frühling", "«der Frühling» = la primavera."),
           cz("Im ___ ist es heiß. Die Hitze ist stark.", "En verano hace calor. El calor es fuerte.", ["Sommer", "Herbst", "Frühling", "Grad"], "Sommer", "«der Sommer» = el verano."),
           cz("Heute sind es nur zehn ___.", "Hoy hay solo diez grados.", ["Grad", "Eis", "Kälte", "Jahreszeit"], "Grad", "«der Grad» = el grado; con números queda «Grad»."),
           { kind: "write", es: "Me gusta el helado en verano.", references: ["Ich mag Eis im Sommer", "Im Sommer mag ich Eis"] },
@@ -620,7 +620,7 @@ export const UNITS_A2_PART6: Unit[] = [
           { de: "das Schaf", es: "la oveja", example: { de: "Die Schafe sind weiß.", es: "Las ovejas son blancas." } },
         ],
         exercises: [
-          cz("Nachts sehe ich den ___ und viele Sterne.", "De noche veo la luna y muchas estrellas.", ["Mond", "Himmel", "Gras", "Huhn"], "Mond", "«der Mond» = la luna."),
+          cz("Nachts sehe ich den ___ und viele Sterne am Himmel.", "De noche veo la luna y muchas estrellas en el cielo.", ["Mond", "Himmel", "Gras", "Huhn"], "Mond", "«der Mond» = la luna."),
           cz("Auf der ___ stehen eine Kuh und ein Schaf.", "En el prado hay una vaca y una oveja.", ["Wiese", "Himmel", "Mond", "Stern"], "Wiese", "«die Wiese» = el prado."),
           cz("Die ___ gibt uns Milch.", "La vaca nos da leche.", ["Kuh", "Huhn", "Schwein", "Schaf"], "Kuh", "«die Kuh» = la vaca."),
           { kind: "write", es: "El cielo es azul.", references: ["Der Himmel ist blau"] },

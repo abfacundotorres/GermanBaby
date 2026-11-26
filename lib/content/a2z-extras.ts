@@ -36,8 +36,8 @@ export const READINGS_A2Z: Record<string, Lesson> = {
     "Leer un día de invierno con ropa, caídas y objetos que no funcionan.",
     [], [],
     "Un día de invierno",
-    ["Heute Morgen war ich noch müde und habe geträumt. Dann bin ich wach geworden und habe warme Kleidung angezogen. Draußen war die Straße glatt, und ich bin fast hingefallen. Zum Glück habe ich mir nichts gebrochen. Der Automat am Bahnhof hat nicht funktioniert, und mein Geld ist verschwunden. Ich habe es noch einmal versucht und die Karte eingeworfen. Dann hat endlich alles funktioniert."],
-    ["Esta mañana todavía estaba cansado y soñé. Después me desperté y me puse ropa abrigada. Afuera la calle estaba resbaladiza y casi me caigo. Por suerte no me rompí nada. La máquina de la estación no funcionó y mi dinero desapareció. Lo intenté otra vez y eché la tarjeta. Por fin todo funcionó."],
+    ["Heute Morgen war ich noch müde und habe geträumt. Dann bin ich wach geworden und habe warme Kleidung angezogen. Draußen war die Straße glatt, und ich bin fast hingefallen. Zum Glück habe ich mir nichts gebrochen. Der Automat am Bahnhof hat nicht funktioniert, und mein Geld ist verschwunden. Ich habe es noch einmal versucht und eine Münze eingeworfen. Dann hat endlich alles funktioniert."],
+    ["Esta mañana todavía estaba cansado y soñé. Después me desperté y me puse ropa abrigada. Afuera la calle estaba resbaladiza y casi me caigo. Por suerte no me rompí nada. La máquina de la estación no funcionó y mi dinero desapareció. Lo intenté otra vez y eché una moneda. Por fin todo funcionó."],
     [
       { type: "choice", q: "¿Qué hizo después de despertarse?", options: ["Se puso ropa abrigada", "Cocinó", "Salió descalzo", "Se bañó"], answer: "Se puso ropa abrigada", why: "«warme Kleidung angezogen»" },
       { type: "choice", q: "¿Cómo estaba la calle?", options: ["Resbaladiza", "Seca", "Oscura", "Vacía"], answer: "Resbaladiza", why: "«glatt»" },
@@ -272,7 +272,7 @@ export const THEMATIC_A2Z: Record<string, Lesson> = {
       ["f", "Eva", "Der Film ist furchtbar, aber der Sänger ist berühmt.", "La película es terrible, pero el cantante es famoso."],
       ["m", "Tom", "Komisch! Das Bett im Film sieht so hart aus.", "¡Qué raro! La cama de la película se ve tan dura."],
       ["f", "Eva", "Die Szene am Fluss ist gefährlich.", "La escena del río es peligrosa."],
-      ["m", "Tom", "Die Zeit ist knapp. Sehen wir ihn morgen weich und ruhig?", "El tiempo es escaso. ¿Lo vemos mañana tranquilo y relajado?"],
+      ["m", "Tom", "Die Zeit ist knapp. Sehen wir ihn morgen weiter?", "El tiempo es escaso. ¿Lo seguimos viendo mañana?"],
     ],
     [
       { type: "choice", q: "¿Cómo es la película?", options: ["Terrible", "Genial", "Aburrida", "Larga"], answer: "Terrible", why: "«furchtbar»" },

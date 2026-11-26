@@ -119,7 +119,7 @@ export const PRACTICE_A2X: Record<string, Lesson> = {
     "Repasar la rutina, los aparatos y los verbos separables de la unidad con frases nuevas.",
     [
       cz("Ich ___ jeden Tag um sieben Uhr auf.", "Me despierto todos los días a las siete.", ["wache", "wachst", "wachen", "wacht"], "wache", "«aufwachen» con «ich»: «ich wache … auf»."),
-      cz("Bitte ___ das Licht aus, ich will schlafen.", "Apagá la luz, por favor; quiero dormir.", ["schalt", "schalte", "schaltet", "schalten"], "schalt", "Imperativo de «du»: «Schalt … aus»."),
+      cz("Bitte ___ das Licht aus, ich will schlafen.", "Apagá la luz, por favor; quiero dormir.", ["schalt", "schaltst", "schaltete", "geschaltet"], "schalt", "Imperativo de «du»: «Schalt … aus»."),
       cz("Die Wäsche ist in der ___.", "La ropa está en el lavarropas.", ["Waschmaschine", "Mülltonne", "Garage", "Zahnbürste"], "Waschmaschine", "«die Waschmaschine» = el lavarropas."),
       qz("¿Qué palabra significa «el despertador»?", ["der Wecker", "der Schlaf", "der Herd", "der Ofen"], "der Wecker", "«der Wecker» = el despertador."),
       { kind: "build", es: "Ich habe heute verschlafen", answer: "Ich habe heute verschlafen", extra: ["verschlafe", "schläft"] },
@@ -298,7 +298,7 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
     ],
     "Antes del viaje", "Eva y Max preparan el viaje",
     [
-      ["f", "Eva", "Hast du die Einkaufsliste? Sie liegt auf dem Zettel am Kühlschrank.", "¿Tenés la lista de compras? Está en el papelito de la heladera."],
+      ["f", "Eva", "Hast du die Einkaufsliste? Sie steht auf dem Zettel am Kühlschrank.", "¿Tenés la lista de compras? Está escrita en el papelito de la heladera."],
       ["m", "Max", "Ja. Aber zuerst muss ich die Koffer packen.", "Sí. Pero primero tengo que armar las valijas."],
       ["f", "Eva", "Im Kalender steht: Wir fahren am Freitag.", "En el calendario dice: salimos el viernes."],
       ["m", "Max", "Gut, dann ruhe ich mich heute zu Hause aus.", "Bien, entonces hoy descanso en casa."],
@@ -325,7 +325,7 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
         ],
     [
       cz("Die ___ ist morgen früh um sieben Uhr.", "La partida es mañana temprano, a las siete.", ["Abreise", "Rückfahrt", "Strecke", "Taxi"], "Abreise", "«die Abreise» = la partida."),
-      cz("Wir müssen früh ___, der Zug wartet nicht.", "Tenemos que salir temprano, el tren no espera.", ["abfahren", "ankommen", "landen", "Strecke"], "abfahren", "«abfahren» = salir (un vehículo)."),
+      cz("Der Bus muss um acht von hier ___.", "El colectivo tiene que salir de acá a las ocho.", ["abfahren", "ankommen", "landen", "Strecke"], "abfahren", "«abfahren» = salir (un vehículo)."),
       cz("Der Treffpunkt ist am Bahnhof. Wir nehmen ein ___.", "El punto de encuentro es en la estación. Tomamos un taxi.", ["Taxi", "Strecke", "Abreise", "Rückfahrt"], "Taxi", "«das Taxi» = el taxi."),
       { kind: "write", es: "El avión aterriza a las ocho.", references: ["Das Flugzeug landet um acht Uhr"] },
       { kind: "write", es: "La conexión de tren es buena.", references: ["Die Bahnverbindung ist gut"] },
@@ -369,12 +369,12 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
       ["f", "Nina", "Ich möchte Pommes und ein Mineralwasser.", "Quiero papas fritas y un agua mineral."],
       ["m", "Kellner", "Gern. Und als Getränk für Sie?", "Con gusto. ¿Y para usted, qué bebida?"],
       ["m", "Ben", "Einen Saft und einen Schinken-Salat, bitte.", "Un jugo y una ensalada con jamón, por favor."],
-      ["m", "Kellner", "Möchten Sie danach einen Keks zum Kaffee? Der Koch macht sie selbst.", "¿Quiere después una galletita con el café? El cocinero las hace él mismo."],
+      ["m", "Kellner", "Möchten Sie danach einen Keks zum Kaffee? Der Koch macht ihn selbst.", "¿Quiere después una galletita con el café? El cocinero la hace él mismo."],
     ],
     [
       { type: "choice", q: "¿Qué pide Nina?", options: ["Papas fritas y agua mineral", "Una ensalada", "Una sopa", "Un jugo"], answer: "Papas fritas y agua mineral", why: "«Pommes und ein Mineralwasser»" },
       { type: "choice", q: "¿Qué pide Ben?", options: ["Jugo y ensalada con jamón", "Vino", "Sopa", "Pan"], answer: "Jugo y ensalada con jamón", why: "«Saft … Schinken-Salat»" },
-      { type: "tf", q: "Las galletitas las hace el cocinero.", answer: true, why: "«Der Koch macht sie selbst»" },
+      { type: "tf", q: "Las galletitas las hace el cocinero.", answer: true, why: "«Der Koch macht ihn selbst»" },
     ],
   ),
   koerper3: thema("enfermedad y médico", "🩺", "Hablar de síntomas, consultas y cómo te sentís.",
@@ -403,7 +403,7 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
       ["f", "Frau Roth", "Guten Tag. Ich habe starke Schmerzen und fühle mich krank.", "Buenas tardes. Tengo mucho dolor y me siento enferma."],
       ["m", "Arzt", "Seit wann? Haben Sie Fieber oder frieren Sie?", "¿Desde cuándo? ¿Tiene fiebre o tiene frío?"],
       ["f", "Frau Roth", "Ich friere und schwitze abwechselnd.", "Tengo frío y transpiro a la vez."],
-      ["m", "Arzt", "Ich verschreibe Ihnen eine Medizin. Kommen Sie in der Sprechstunde wieder.", "Le receto una medicina. Vuelva en el horario de consulta."],
+      ["m", "Arzt", "Ich verschreibe Ihnen eine Medizin. Kommen Sie zur Sprechstunde wieder.", "Le receto una medicina. Vuelva al horario de consulta."],
     ],
     [
       { type: "choice", q: "¿Cómo se siente Frau Roth?", options: ["Enferma", "Muy bien", "Cansada", "Aburrida"], answer: "Enferma", why: "«fühle mich krank»" },
@@ -427,7 +427,7 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
         ],
     [
       cz("Im Frühling ___ die Blumen im Garten.", "En primavera florecen las flores en el jardín.", ["blühen", "gießen", "pflanzen", "klettern"], "blühen", "«blühen» = florecer."),
-      cz("Ich muss die Blumen jeden Tag ___.", "Tengo que regar las flores todos los días.", ["gießen", "blühen", "klettern", "pflanzen"], "gießen", "«gießen» = regar."),
+      cz("Ich muss die Blumen jeden Tag ___.", "Tengo que regar las flores todos los días.", ["gießen", "blühen", "klettern", "bewölkt"], "gießen", "«gießen» = regar."),
       cz("Heute ist es ___. Man sieht die Sonne nicht.", "Hoy está nublado. No se ve el sol.", ["bewölkt", "bunt", "breit", "fremd"], "bewölkt", "«bewölkt» = nublado."),
       { kind: "write", es: "Plantamos un árbol.", references: ["Wir pflanzen einen Baum"] },
       { kind: "write", es: "La caminata es larga.", references: ["Die Wanderung ist lang"] },
