@@ -436,7 +436,7 @@ export const THEMATIC_A2X: Record<string, Lesson> = {
     [
       ["m", "Tom", "Heute ist es bewölkt, aber wir machen die Wanderung.", "Hoy está nublado, pero hacemos la caminata."],
       ["f", "Mia", "Gut. Am Ufer vom Fluss gibt es einen Campingplatz.", "Bien. A la orilla del río hay un camping."],
-      ["m", "Tom", "Dort können wir die Zelte aufbauen und ein Blatt für das Feuer sammeln.", "Ahí podemos armar las carpas y juntar una hoja para el fuego."],
+      ["m", "Tom", "Dort können wir schlafen und ein Feuer machen.", "Ahí podemos dormir y hacer fuego."],
       ["f", "Mia", "Morgen wollen wir noch auf den Berg klettern.", "Mañana todavía queremos trepar la montaña."],
     ],
     [

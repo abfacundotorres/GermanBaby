@@ -336,7 +336,7 @@ export const UNITS_A2_PART6: Unit[] = [
           setting: "Una clienta compra verduras",
           lines: [
             { who: "f", name: "Frau Roth", de: "Ich nehme Karotten, Zwiebeln und Knoblauch.", es: "Llevo zanahorias, cebollas y ajo." },
-            { who: "m", name: "Verkäufer", de: "Gern. Haben Sie auch Hunger auf Obst?", es: "Con gusto. ¿Tiene ganas de fruta también?" },
+            { who: "m", name: "Verkäufer", de: "Gern. Möchten Sie auch Obst?", es: "Con gusto. ¿Quiere también fruta?" },
             { who: "f", name: "Frau Roth", de: "Ja, zwei Birnen und eine Zitrone, bitte.", es: "Sí, dos peras y un limón, por favor." },
             { who: "m", name: "Verkäufer", de: "Die Erdbeeren sind heute besonders gut.", es: "Las frutillas están especialmente buenas hoy." },
           ],
