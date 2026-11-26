@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  bin: "soy / estoy", mein: "mi", bruder: "hermano", er: "él", was: "qué", deine: "tu (femenino)", telefonnummer: "número de teléfono", café: "café (el lugar)", sagt: "dice", gehe: "voy", markt: "mercado", mir: "me / a mí", zurück: "de vuelta / atrás",
   wahrscheinlich: "probablemente", startet: "arranca", unsinn: "tonterías", beantwortet: "respondido",
   entwurf: "borrador", stammt: "proviene", statistischen: "estadístico (dativo)", amts: "de la oficina", lebensmitteln: "alimentos", haushalte: "hogares", mitglieder: "miembros", verhalten: "comportamiento", hinweis: "indicación / aviso", ergänze: "agrego", absatz: "párrafo", konkrete: "concretos", erwähnen: "mencionar", vorsichtig: "con cuidado", formuliert: "formulado", fassung: "versión",
   tue: "hago", hinunterging: "bajaba", schreck: "susto", angemacht: "prendido", redest: "hablás", katastrophe: "catástrofe", naja: "bueno / en fin",
@@ -175,6 +176,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
+  "costa", "nora",
   "brandt", "tobias",
   "leipzig",
   "köln", "spanien",  "kern", "lindner",  "becker", "berger",  "lisa",

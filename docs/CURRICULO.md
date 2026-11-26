@@ -57,3 +57,17 @@ Un nivel se da por completo cuando cumple todo:
 - `npm test` y `npm run bot -- --all` en verde.
 
 **Lecciones bonus de B2 de estructura.** Las unidades `satzbau-b2` e `infinitiv-futur` tienen ahora lectura, práctica (con producción libre), escucha larga y vocabulario temático (tránsito y multas; propósitos y proyectos), en `lib/content/b2-extras.ts`. Las palabras de esas lecciones no pueden repetir las del entrenador (`core-vocab.ts`) ni las de otras lecciones.
+
+## Ampliación de A1 (piloto)
+
+Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a saber A1. Restricción descubierta: casi todo el vocabulario temático (ropa, cuerpo, trabajo, hobbys) ya está asignado al entrenador o a lecciones de A2 en adelante, y no puede repetirse; por eso la ampliación suma práctica e input sobre lo ya enseñado y usa `lib/gloss.ts`.
+
+| Entrega | Horas estimadas | Estado |
+|---|---|---|
+| Lectura en las 8 unidades iniciales (hallo a alltag) | +1 | hecho |
+| Escucha larga en esas 8 unidades | +2 | pendiente |
+| «Práctica 2» (repaso mezclado) en las 15 unidades base | +3 | pendiente |
+| 40 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | pendiente |
+| Lecciones temáticas con palabras del entrenador (hobbys, trabajo, clima, cuerpo, mensajes) | +5 | pendiente |
+| 20 consignas de escritura y 20 de oral con rúbrica | +3 | pendiente |
+| 2 simulacros más y repasos con SRS obligatorio | +2,5 | pendiente |
