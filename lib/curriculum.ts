@@ -43,6 +43,7 @@ import { UNITS_C1_PART6 } from "./content/c1-part6.ts";
 import { READINGS_C1 } from "./content/readings-c1.ts";
 import { PRACTICE_C1 } from "./content/practice-c1.ts";
 import { PRACTICE_A1 } from "./content/practice-a1.ts";
+import { PRACTICE2_A1 } from "./content/practice2-a1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
 import { LONG_LISTENINGS_A2 } from "./content/long-listening-a2.ts";
 import { LONG_LISTENINGS_A1 } from "./content/long-listening-a1.ts";
@@ -379,6 +380,9 @@ for (const u of UNITS) {
   // Al final de cada práctica, un ejercicio de producción libre corregido por Claude.
   const fp = FREE_PROMPTS[u.id];
   if (pr && fp && !pr.exercises.some((e) => e.kind === "free")) pr.exercises.push({ kind: "free", ...fp });
+  // Segunda práctica de A1: más frases nuevas con lo ya enseñado.
+  const pr2 = PRACTICE2_A1[u.id];
+  if (pr2 && !u.lessons.some((l) => l.id === pr2.id)) u.lessons.push(pr2);
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
   const long = LONG_LISTENINGS[u.id] ?? LONG_B2X[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
