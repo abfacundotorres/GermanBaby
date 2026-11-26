@@ -69,6 +69,7 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | Lectura en las 8 unidades iniciales (hallo a alltag) | +1 | hecho |
 | Escucha larga en esas 8 unidades | +2 | hecho |
 | «Práctica 2» (repaso mezclado) en las 14 unidades base | +3 | hecho (14 de 14) |
+| Lectura, práctica y escucha larga (bonus) en las 8 unidades ampliadas (verben2 a woerter; lib/content/a1x-*.ts) | +24 lecciones, ~2,5 h | hecho (8 de 8) |
 | 38 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | hecho |
 | 5 lecciones temáticas con palabras nuevas (pasatiempos, profesiones, clima, cuerpo, mensajes) | +1,5 | hecho |
 | 20 consignas de escritura y 20 de oral con rúbrica (A1) | +3 | hecho |

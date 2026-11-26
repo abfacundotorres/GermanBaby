@@ -50,6 +50,9 @@ import { PRACTICE2_A1 } from "./content/practice2-a1.ts";
 import { LONG_LISTENINGS } from "./content/long-listening.ts";
 import { LONG_LISTENINGS_A2 } from "./content/long-listening-a2.ts";
 import { LONG_LISTENINGS_A1 } from "./content/long-listening-a1.ts";
+import { LONG_LISTENINGS_A1X } from "./content/a1x-listening.ts";
+import { READINGS_A1X } from "./content/a1x-readings.ts";
+import { PRACTICE_A1X } from "./content/a1x-practice.ts";
 import { THEMATIC, THEMATIC_B1 } from "./content/thematic.ts";
 import { READINGS_B2X, PRACTICE_B2X, LONG_B2X, THEMATIC_B2X } from "./content/b2-extras.ts";
 import { THEMATIC_A2 } from "./content/thematic-a2.ts";
@@ -373,11 +376,11 @@ for (const u of UNITS) for (const l of u.lessons) {
 }
 // Lecturas opcionales al final de cada unidad desde la 9.
 for (const u of UNITS) {
-  const r = READINGS[u.id] ?? READINGS_C1[u.id] ?? READINGS_B2X[u.id];
+  const r = READINGS[u.id] ?? READINGS_A1X[u.id] ?? READINGS_C1[u.id] ?? READINGS_B2X[u.id];
   if (r && !u.lessons.some((l) => l.id === r.id)) u.lessons.push(r);
 }
 // Práctica extra opcional (A2 y B1), después de la lectura.
-const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A1, ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_B2X, ...PRACTICE_C1 };
+const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A1, ...PRACTICE_A1X, ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_B2X, ...PRACTICE_C1 };
 for (const u of UNITS) {
   const pr = PRACTICE[u.id];
   if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
@@ -388,7 +391,7 @@ for (const u of UNITS) {
   const pr2 = PRACTICE2_A1[u.id];
   if (pr2 && !u.lessons.some((l) => l.id === pr2.id)) u.lessons.push(pr2);
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
-  const long = LONG_LISTENINGS[u.id] ?? LONG_B2X[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id];
+  const long = LONG_LISTENINGS[u.id] ?? LONG_B2X[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id] ?? LONG_LISTENINGS_A1X[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
   // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
   const them = THEMATIC[u.id] ?? THEMATIC_B2X[u.id] ?? THEMATIC_B1[u.id] ?? THEMATIC_A2[u.id] ?? THEMATIC_A1[u.id];
