@@ -60,7 +60,7 @@ Un nivel se da por completo cuando cumple todo:
 
 ## Ampliación de A1 (piloto)
 
-Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a saber A1. Restricción descubierta: casi todo el vocabulario temático (ropa, cuerpo, trabajo, hobbys) ya está asignado al entrenador o a lecciones de A2 en adelante, y no puede repetirse; por eso la ampliación suma práctica e input sobre lo ya enseñado y usa `lib/gloss.ts`.
+Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a saber A1. Restricción descubierta: casi todo el vocabulario temático ya está asignado al entrenador o a lecciones de A2 en adelante, y no puede repetirse. Por eso la ampliación suma práctica e input sobre lo ya enseñado, usa `lib/gloss.ts`, y las lecciones temáticas nuevas se arman solo con palabras libres (`npm run lexicon -- free`).
 
 | Entrega | Horas estimadas | Estado |
 |---|---|---|
@@ -68,7 +68,7 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | Escucha larga en esas 8 unidades | +2 | hecho |
 | «Práctica 2» (repaso mezclado) en las 14 unidades base | +3 | hecho (14 de 14) |
 | 38 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | hecho |
-| Lecciones temáticas con palabras del entrenador (hobbys, trabajo, clima, cuerpo, mensajes) | +5 | pendiente |
+| 5 lecciones temáticas con palabras nuevas (pasatiempos, profesiones, clima, cuerpo, mensajes) | +1,5 | hecho |
 | 20 consignas de escritura y 20 de oral con rúbrica | +3 | pendiente |
 | 2 simulacros más y repasos con SRS obligatorio | +2,5 | pendiente |
 

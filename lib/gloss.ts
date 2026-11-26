@@ -3,6 +3,8 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  sieht: "ve", man: "uno / se (impersonal)",
+  spielt: "juega / toca", geige: "violín", nach: "a / después de", malt: "pinta", bild: "cuadro / imagen", berühmt: "famoso", park: "parque", beruf: "profesión", am: "el / en el (am Samstag)", samstag: "sábado", orchester: "orquesta", liebt: "ama / le encanta", hundert: "cien", teile: "piezas / partes", freitag: "viernes", schal: "bufanda", see: "lago", wochenende: "fin de semana", blühen: "florecer", blumen: "flores", mit: "con", nacht: "noche", wetter: "tiempo / clima", nehme: "llevo / tomo", warte: "espero", schickt: "manda", spreche: "hablo / dejo (mensaje)", sprich: "hablá", tut: "hace", weh: "dolor (weh tun = doler)", trocken: "seco", heiß: "caliente", langen: "largo (acusativo)", zeigen: "mostrar", fieber: "fiebre",
   ab: "(parte separable de abfahren: salir)",
   kauft: "compra",
   schön: "lindo / bonito", hast: "tenés", eine: "una", richtig: "correcto", vielen: "muchos (vielen Dank = muchas gracias)", schönen: "lindo (schönen Tag = que tengas un lindo día)", foto: "foto", von: "de", unser: "nuestro", schöne: "linda", personen: "personas", froh: "contento", termin: "turno / cita", machen: "hacer", gehen: "ir", essen: "comer", zuerst: "primero", bisschen: "poco (ein bisschen = un poco)", gehst: "vas",
