@@ -6,57 +6,6 @@ import type { Vocab } from "../curriculum.ts";
 
 const RAW = `
 ## A1
-der Tag|el día|Der Tag war lang.|El día fue largo.
-die Woche|la semana|Die Woche ist schon vorbei.|La semana ya pasó.
-der Monat|el mes|Der Monat hat dreißig Tage.|El mes tiene treinta días.
-der Abend|la noche (tarde-noche)|Am Abend sind wir zu Hause.|A la noche estamos en casa.
-der Mensch|la persona|Jeder Mensch braucht Freunde.|Cada persona necesita amigos.
-der Freund|el amigo|Mein Freund wohnt in Wien.|Mi amigo vive en Viena.
-die Freundin|la amiga / la novia|Meine Freundin kommt aus Italien.|Mi amiga es de Italia.
-die Familie|la familia|Die Familie isst zusammen.|La familia come junta.
-der Junge|el chico|Der Junge spielt im Garten.|El chico juega en el jardín.
-der Name|el nombre|Wie ist dein Name?|¿Cómo es tu nombre?
-die Sprache|el idioma|Ich lerne eine neue Sprache.|Aprendo un idioma nuevo.
-das Dorf|el pueblo|Wir wohnen in einem Dorf.|Vivimos en un pueblo.
-das Flugzeug|el avión|Das Flugzeug ist schon da.|El avión ya está acá.
-das Schiff|el barco|Das Schiff fährt um acht.|El barco sale a las ocho.
-die Zahl|el número (cantidad)|Die Zahl ist zu hoch.|El número es demasiado alto.
-die Nummer|el número (de teléfono)|Wie ist deine Nummer?|¿Cuál es tu número?
-das Problem|el problema|Das Problem ist einfach.|El problema es fácil.
-die Lösung|la solución|Die Lösung ist ganz einfach.|La solución es muy simple.
-die Hilfe|la ayuda|Danke für deine Hilfe!|¡Gracias por tu ayuda!
-das Beispiel|el ejemplo|Ein Beispiel, bitte.|Un ejemplo, por favor.
-die Information|la información|Ich brauche mehr Informationen.|Necesito más información.
-der Satz|la oración|Der Satz ist zu lang.|La oración es demasiado larga.
-die Musik|la música|Die Musik ist zu laut.|La música es demasiado fuerte.
-der Film|la película|Der Film beginnt um acht.|La película empieza a las ocho.
-das Spiel|el juego / el partido|Das Spiel dauert neunzig Minuten.|El partido dura noventa minutos.
-die Zeitung|el diario|Die Zeitung liegt auf dem Tisch.|El diario está sobre la mesa.
-das Handy|el celular|Mein Handy ist kaputt.|Mi celular está roto.
-das Internet|internet|Das Internet ist heute langsam.|Internet está lento hoy.
-die Nachricht|el mensaje / la noticia|Ich habe eine Nachricht bekommen.|Recibí un mensaje.
-das Tier|el animal|Das Tier schläft im Garten.|El animal duerme en el jardín.
-der Hund|el perro|Der Hund heißt Max.|El perro se llama Max.
-das Pferd|el caballo|Das Pferd läuft schnell.|El caballo corre rápido.
-der Baum|el árbol|Der Baum ist sehr alt.|El árbol es muy viejo.
-der Schnee|la nieve|Im Winter gibt es viel Schnee.|En invierno hay mucha nieve.
-der Wind|el viento|Heute gibt es starken Wind.|Hoy hay mucho viento.
-die Luft|el aire|Die Luft ist hier sauber.|El aire acá es limpio.
-die Fahrt|el viaje (trayecto)|Die Fahrt dauert eine Stunde.|El viaje dura una hora.
-das Ziel|la meta / el destino|Das Ziel ist nicht mehr weit.|El destino ya no está lejos.
-die Liebe|el amor|Die Liebe ist wichtig.|El amor es importante.
-der Spaß|la diversión|Das macht Spaß.|Eso es divertido.
-der Streit|la pelea|Der Streit war laut.|La pelea fue fuerte.
-die Gruppe|el grupo|Die Gruppe trifft sich am Montag.|El grupo se reúne el lunes.
-der Kurs|el curso|Der Kurs beginnt im März.|El curso empieza en marzo.
-der Lehrer|el docente|Der Lehrer erklärt alles langsam.|El docente explica todo despacio.
-der Student|el estudiante|Der Student lernt viel.|El estudiante estudia mucho.
-das Ding|la cosa (objeto)|Was ist das für ein Ding?|¿Qué cosa es esa?
-die Sache|el asunto / la cosa|Das ist eine wichtige Sache.|Es un asunto importante.
-das Mal|la vez|Das erste Mal war schwer.|La primera vez fue difícil.
-der Teil|la parte|Ein Teil ist kaputt.|Una parte está rota.
-die Seite|la página / el lado|Auf Seite zehn steht alles.|En la página diez está todo.
-der Grund|el motivo|Was ist der Grund?|¿Cuál es el motivo?
 gut|bueno|Das Essen ist gut.|La comida es buena.
 schlecht|malo|Das Wetter ist schlecht.|El clima es malo.
 hässlich|feo|Die Farbe ist hässlich.|El color es feo.
@@ -136,11 +85,6 @@ warum|por qué|Warum bist du traurig?|¿Por qué estás triste?
 wie|cómo|Wie geht es dir?|¿Cómo estás?
 was|qué|Was ist das?|¿Qué es esto?
 wohin|adónde|Wohin gehst du?|¿Adónde vas?
-die Blume|la flor|Die Blume ist rot.|La flor es roja.
-die Chefin|la jefa|Meine Chefin ist nett.|Mi jefa es simpática.
-die Farbe|el color|Welche Farbe magst du?|¿Qué color te gusta?
-die Gitarre|la guitarra|Er spielt Gitarre.|Él toca la guitarra.
-die Sonne|el sol|Die Sonne scheint.|Sale el sol.
 das Restaurant|el restaurante|Das Restaurant ist sehr gut.|El restaurante es muy bueno.
 vorne|adelante|Er sitzt vorne im Bus.|Está sentado adelante en el colectivo.
 ## A2

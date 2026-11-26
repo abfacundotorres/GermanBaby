@@ -1,0 +1,326 @@
+// A1 ampliado (2): gente y naturaleza, cosas, ideas y tiempo.
+// Las palabras vienen del entrenador de A1: pasaron a lecciones para practicarlas con ejercicios y diálogos.
+
+import type { Unit, HandExercise } from "../curriculum.ts";
+
+type Cloze = Extract<HandExercise, { kind: "cloze" }>;
+const cz = (sentence: string, es: string, options: string[], answer: string, explanation: string): Cloze => ({ kind: "cloze", sentence, es, options, answer, explanation, category: "vocabulario" });
+
+export const UNITS_A1_PART8: Unit[] = [
+  {
+    id: "leute",
+    title: "Gente y naturaleza",
+    emoji: "🌳",
+    description: "Personas, grupos, animales, plantas, clima y medios.",
+    lessons: [
+      {
+        id: "menschen",
+        title: "Personas",
+        goal: "Nombrar Mensch, Freund, Freundin, Familie, Junge, Name, Chefin, Lehrer y Student.",
+        vocab: [
+          { de: "der Mensch", es: "la persona", example: { de: "Jeder Mensch braucht Freunde.", es: "Cada persona necesita amigos." } },
+          { de: "der Freund", es: "el amigo", example: { de: "Mein Freund wohnt in Wien.", es: "Mi amigo vive en Viena." } },
+          { de: "die Freundin", es: "la amiga / la novia", example: { de: "Meine Freundin kommt aus Italien.", es: "Mi amiga es de Italia." } },
+          { de: "die Familie", es: "la familia", example: { de: "Die Familie isst zusammen.", es: "La familia come junta." } },
+          { de: "der Junge", es: "el chico", example: { de: "Der Junge spielt im Garten.", es: "El chico juega en el jardín." } },
+          { de: "der Name", es: "el nombre", example: { de: "Wie ist dein Name?", es: "¿Cómo es tu nombre?" } },
+          { de: "die Chefin", es: "la jefa", example: { de: "Meine Chefin ist nett.", es: "Mi jefa es simpática." } },
+          { de: "der Lehrer", es: "el docente", example: { de: "Der Lehrer erklärt alles langsam.", es: "El docente explica todo despacio." } },
+          { de: "der Student", es: "el estudiante", example: { de: "Der Student lernt viel.", es: "El estudiante estudia mucho." } },
+        ],
+        exercises: [
+          cz("Mein ___ heißt Tom.", "Mi amigo se llama Tom.", ["Freund", "Familie", "Name", "Chefin"], "Freund", "«der Freund» = el amigo."),
+          cz("Die ___ ist sehr nett.", "La jefa es muy amable.", ["Chefin", "Junge", "Lehrer", "Student"], "Chefin", "«die Chefin» = la jefa."),
+          cz("Wie ist dein ___?", "¿Cuál es tu nombre?", ["Name", "Mensch", "Junge", "Freund"], "Name", "«der Name» = el nombre."),
+          { kind: "write", es: "Mi familia es grande.", references: ["Meine Familie ist groß"] },
+          { kind: "speak", de: "Der Lehrer ist freundlich", es: "El docente es amable" },
+        ],
+        dialogue: {
+          title: "Presentaciones",
+          setting: "Nina presenta a sus amigos",
+          lines: [
+            { who: "f", name: "Nina", de: "Das ist mein Freund Tom. Er ist Student.", es: "Este es mi amigo Tom. Es estudiante." },
+            { who: "m", name: "Tom", de: "Hallo! Das ist meine Familie.", es: "¡Hola! Esta es mi familia." },
+            { who: "f", name: "Nina", de: "Und das ist unsere Chefin. Sie ist sehr nett.", es: "Y esta es nuestra jefa. Es muy amable." },
+            { who: "m", name: "Tom", de: "Wie ist ihr Name?", es: "¿Cuál es su nombre?" },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué es Tom?", options: ["Estudiante", "Docente", "Jefe", "Médico"], answer: "Estudiante", why: "«Er ist Student»" },
+            { type: "choice", q: "¿Quién es amable?", options: ["La jefa", "El docente", "El chico", "El médico"], answer: "La jefa", why: "«Sie ist sehr nett»" },
+            { type: "tf", q: "Tom presenta a su familia.", answer: true, why: "«Das ist meine Familie»" },
+          ],
+        },
+      },
+      {
+        id: "gruppe",
+        title: "Grupos, idioma y animales",
+        goal: "Nombrar Gruppe, Kurs, Sprache, Dorf, Tier, Hund y Pferd.",
+        vocab: [
+          { de: "die Gruppe", es: "el grupo", example: { de: "Die Gruppe trifft sich am Montag.", es: "El grupo se reúne el lunes." } },
+          { de: "der Kurs", es: "el curso", example: { de: "Der Kurs beginnt im März.", es: "El curso empieza en marzo." } },
+          { de: "die Sprache", es: "el idioma", example: { de: "Ich lerne eine neue Sprache.", es: "Aprendo un idioma nuevo." } },
+          { de: "das Dorf", es: "el pueblo", example: { de: "Wir wohnen in einem Dorf.", es: "Vivimos en un pueblo." } },
+          { de: "das Tier", es: "el animal", example: { de: "Das Tier schläft im Garten.", es: "El animal duerme en el jardín." } },
+          { de: "der Hund", es: "el perro", example: { de: "Der Hund heißt Max.", es: "El perro se llama Max." } },
+          { de: "das Pferd", es: "el caballo", example: { de: "Das Pferd läuft schnell.", es: "El caballo corre rápido." } },
+        ],
+        exercises: [
+          cz("Wir sind eine kleine ___.", "Somos un grupo chico.", ["Gruppe", "Sprache", "Dorf", "Pferd"], "Gruppe", "«die Gruppe» = el grupo."),
+          cz("Der ___ ist ein Tier.", "El perro es un animal.", ["Hund", "Kurs", "Dorf", "Sprache"], "Hund", "«der Hund» = el perro."),
+          cz("Ich lerne eine neue ___.", "Aprendo un idioma nuevo.", ["Sprache", "Gruppe", "Tier", "Dorf"], "Sprache", "«die Sprache» = el idioma."),
+          { kind: "write", es: "Vivo en un pueblo.", references: ["Ich wohne in einem Dorf"] },
+          { kind: "speak", de: "Das Pferd ist groß", es: "El caballo es grande" },
+        ],
+        dialogue: {
+          title: "En el pueblo",
+          setting: "Ben y Eva hablan de animales",
+          lines: [
+            { who: "m", name: "Ben", de: "Ich wohne in einem Dorf. Dort gibt es viele Tiere.", es: "Vivo en un pueblo. Ahí hay muchos animales." },
+            { who: "f", name: "Eva", de: "Hast du einen Hund?", es: "¿Tenés un perro?" },
+            { who: "m", name: "Ben", de: "Nein, aber ein Pferd. Und du?", es: "No, pero tengo un caballo. ¿Y vos?" },
+            { who: "f", name: "Eva", de: "Ich lerne in einer Gruppe Deutsch. Der Kurs ist schön.", es: "Aprendo alemán en un grupo. El curso es lindo." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Dónde vive Ben?", options: ["En un pueblo", "En una ciudad", "En Berlín", "En una isla"], answer: "En un pueblo", why: "«in einem Dorf»" },
+            { type: "choice", q: "¿Qué animal tiene Ben?", options: ["Un caballo", "Un perro", "Un gato", "Un pájaro"], answer: "Un caballo", why: "«ein Pferd»" },
+            { type: "tf", q: "Eva estudia alemán sola.", answer: false, why: "«in einer Gruppe»" },
+          ],
+        },
+      },
+      {
+        id: "natur",
+        title: "Naturaleza y clima",
+        goal: "Nombrar Baum, Blume, Schnee, Wind, Luft y Sonne.",
+        vocab: [
+          { de: "der Baum", es: "el árbol", example: { de: "Der Baum ist sehr alt.", es: "El árbol es muy viejo." } },
+          { de: "die Blume", es: "la flor", example: { de: "Die Blume ist rot.", es: "La flor es roja." } },
+          { de: "der Schnee", es: "la nieve", example: { de: "Im Winter gibt es viel Schnee.", es: "En invierno hay mucha nieve." } },
+          { de: "der Wind", es: "el viento", example: { de: "Heute gibt es starken Wind.", es: "Hoy hay mucho viento." } },
+          { de: "die Luft", es: "el aire", example: { de: "Die Luft ist hier sauber.", es: "El aire acá es limpio." } },
+          { de: "die Sonne", es: "el sol", example: { de: "Die Sonne scheint.", es: "Sale el sol." } },
+        ],
+        exercises: [
+          cz("Im Winter gibt es ___.", "En invierno hay nieve.", ["Schnee", "Sonne", "Blume", "Baum"], "Schnee", "«der Schnee» = la nieve."),
+          cz("Die ___ scheint heute.", "Hoy brilla el sol.", ["Sonne", "Wind", "Luft", "Schnee"], "Sonne", "«die Sonne» = el sol."),
+          cz("Im Garten steht ein ___.", "En el jardín hay un árbol.", ["Baum", "Wind", "Luft", "Schnee"], "Baum", "«der Baum» = el árbol."),
+          { kind: "write", es: "La flor es roja.", references: ["Die Blume ist rot"] },
+          { kind: "speak", de: "Die Luft ist frisch", es: "El aire es fresco" },
+        ],
+        dialogue: {
+          title: "Un paseo",
+          setting: "Lea y Max pasean por el parque",
+          lines: [
+            { who: "f", name: "Lea", de: "Die Sonne scheint, aber der Wind ist kalt.", es: "Brilla el sol, pero el viento es frío." },
+            { who: "m", name: "Max", de: "Die Luft ist frisch. Schau, die Blumen!", es: "El aire es fresco. ¡Mirá las flores!" },
+            { who: "f", name: "Lea", de: "Und dort ist ein großer Baum.", es: "Y allá hay un árbol grande." },
+            { who: "m", name: "Max", de: "Im Winter gibt es hier viel Schnee.", es: "En invierno acá hay mucha nieve." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cómo es el viento?", options: ["Frío", "Cálido", "Fuerte", "Suave"], answer: "Frío", why: "«der Wind ist kalt»" },
+            { type: "choice", q: "¿Qué hay en el parque?", options: ["Flores y un árbol", "Nieve", "Un lago", "Un edificio"], answer: "Flores y un árbol", why: "«Blumen … Baum»" },
+            { type: "tf", q: "En invierno hay poca nieve.", answer: false, why: "«viel Schnee»" },
+          ],
+        },
+      },
+      {
+        id: "medien",
+        title: "Música, películas y celular",
+        goal: "Nombrar Musik, Film, Spiel, Zeitung, Handy, Internet, Nachricht y Gitarre.",
+        vocab: [
+          { de: "die Musik", es: "la música", example: { de: "Die Musik ist zu laut.", es: "La música es demasiado fuerte." } },
+          { de: "der Film", es: "la película", example: { de: "Der Film beginnt um acht.", es: "La película empieza a las ocho." } },
+          { de: "das Spiel", es: "el juego / el partido", example: { de: "Das Spiel dauert neunzig Minuten.", es: "El partido dura noventa minutos." } },
+          { de: "die Zeitung", es: "el diario", example: { de: "Die Zeitung liegt auf dem Tisch.", es: "El diario está sobre la mesa." } },
+          { de: "das Handy", es: "el celular", example: { de: "Mein Handy ist kaputt.", es: "Mi celular está roto." } },
+          { de: "das Internet", es: "internet", example: { de: "Das Internet ist heute langsam.", es: "Internet está lento hoy." } },
+          { de: "die Nachricht", es: "el mensaje / la noticia", example: { de: "Ich habe eine Nachricht bekommen.", es: "Recibí un mensaje." } },
+          { de: "die Gitarre", es: "la guitarra", example: { de: "Er spielt Gitarre.", es: "Él toca la guitarra." } },
+        ],
+        exercises: [
+          cz("Ich höre gern ___.", "Me gusta escuchar música.", ["Musik", "Zeitung", "Film", "Handy"], "Musik", "«die Musik» = la música."),
+          cz("Ich lese die ___.", "Leo el diario.", ["Zeitung", "Gitarre", "Spiel", "Film"], "Zeitung", "«die Zeitung» = el diario."),
+          cz("Ich schreibe dir eine ___.", "Te escribo un mensaje.", ["Nachricht", "Gitarre", "Spiel", "Zeitung"], "Nachricht", "«die Nachricht» = el mensaje."),
+          { kind: "write", es: "Mi celular es nuevo.", references: ["Mein Handy ist neu"] },
+          { kind: "speak", de: "Ich spiele Gitarre", es: "Toco la guitarra" },
+        ],
+        dialogue: {
+          title: "Una tarde",
+          setting: "Tom y Mia hablan de lo que hacen en casa",
+          lines: [
+            { who: "m", name: "Tom", de: "Ich spiele Gitarre. Und du?", es: "Yo toco la guitarra. ¿Y vos?" },
+            { who: "f", name: "Mia", de: "Ich sehe einen Film im Internet.", es: "Yo miro una película en internet." },
+            { who: "m", name: "Tom", de: "Hast du dein Handy? Ich schicke dir eine Nachricht.", es: "¿Tenés tu celular? Te mando un mensaje." },
+            { who: "f", name: "Mia", de: "Ja, hier. Und danach lese ich die Zeitung.", es: "Sí, acá. Y después leo el diario." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué hace Tom?", options: ["Toca la guitarra", "Mira una película", "Lee el diario", "Cocina"], answer: "Toca la guitarra", why: "«spiele Gitarre»" },
+            { type: "choice", q: "¿Dónde mira Mia la película?", options: ["En internet", "En el cine", "En la tele", "En el celular"], answer: "En internet", why: "«im Internet»" },
+            { type: "tf", q: "Mia lee el diario después.", answer: true, why: "«danach lese ich die Zeitung»" },
+          ],
+        },
+      },
+    ],
+    chat: {
+      title: "Una charla",
+      scenario: "Sos Nora, una compañera de curso. Tratás al usuario de vos (du). Le preguntás por su familia, sus amigos, sus animales y lo que le gusta hacer, con frases cortas de nivel A1.",
+      opener: "Hallo! Hast du Freunde hier?",
+      openerEs: "¡Hola! ¿Tenés amigos acá?",
+    },
+  },
+  {
+    id: "sachen",
+    title: "Cosas, ideas y tiempo",
+    emoji: "💡",
+    description: "Problemas, soluciones, números, viajes y el tiempo.",
+    lessons: [
+      {
+        id: "probleme",
+        title: "Problemas y soluciones",
+        goal: "Usar Problem, Lösung, Hilfe, Beispiel, Information, Satz, Ding y Sache.",
+        vocab: [
+          { de: "das Problem", es: "el problema", example: { de: "Das Problem ist einfach.", es: "El problema es fácil." } },
+          { de: "die Lösung", es: "la solución", example: { de: "Die Lösung ist ganz einfach.", es: "La solución es muy simple." } },
+          { de: "die Hilfe", es: "la ayuda", example: { de: "Danke für deine Hilfe!", es: "¡Gracias por tu ayuda!" } },
+          { de: "das Beispiel", es: "el ejemplo", example: { de: "Ein Beispiel, bitte.", es: "Un ejemplo, por favor." } },
+          { de: "die Information", es: "la información", example: { de: "Ich brauche mehr Informationen.", es: "Necesito más información." } },
+          { de: "der Satz", es: "la oración", example: { de: "Der Satz ist zu lang.", es: "La oración es demasiado larga." } },
+          { de: "das Ding", es: "la cosa (objeto)", example: { de: "Was ist das für ein Ding?", es: "¿Qué cosa es esa?" } },
+          { de: "die Sache", es: "el asunto / la cosa", example: { de: "Das ist eine wichtige Sache.", es: "Es un asunto importante." } },
+        ],
+        exercises: [
+          cz("Ich habe ein ___.", "Tengo un problema.", ["Problem", "Lösung", "Beispiel", "Satz"], "Problem", "«das Problem» = el problema."),
+          cz("Ich brauche ___.", "Necesito ayuda.", ["Hilfe", "Lösung", "Ding", "Sache"], "Hilfe", "«die Hilfe» = la ayuda."),
+          cz("Das ist ein gutes ___.", "Eso es un buen ejemplo.", ["Beispiel", "Problem", "Ding", "Satz"], "Beispiel", "«das Beispiel» = el ejemplo."),
+          { kind: "write", es: "Tengo una solución.", references: ["Ich habe eine Lösung"] },
+          { kind: "speak", de: "Das ist eine wichtige Sache", es: "Esa es una cosa importante" },
+        ],
+        dialogue: {
+          title: "Una solución",
+          setting: "Paul le cuenta un problema a Lena",
+          lines: [
+            { who: "m", name: "Paul", de: "Ich habe ein Problem mit meinem Handy.", es: "Tengo un problema con mi celular." },
+            { who: "f", name: "Lena", de: "Ich habe eine Information für dich.", es: "Tengo una información para vos." },
+            { who: "m", name: "Paul", de: "Gibt es eine Lösung?", es: "¿Hay una solución?" },
+            { who: "f", name: "Lena", de: "Ja. Ich gebe dir Hilfe. Das ist kein Problem.", es: "Sí. Te ayudo. No es ningún problema." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Qué problema tiene Paul?", options: ["Con su celular", "Con su auto", "Con el trabajo", "Con la llave"], answer: "Con su celular", why: "«mit meinem Handy»" },
+            { type: "choice", q: "¿Qué ofrece Lena?", options: ["Ayuda", "Dinero", "Un celular", "Un libro"], answer: "Ayuda", why: "«Ich gebe dir Hilfe»" },
+            { type: "tf", q: "Lena dice que es un gran problema.", answer: false, why: "«kein Problem»" },
+          ],
+        },
+      },
+      {
+        id: "zahl-seite",
+        title: "Números, veces y razones",
+        goal: "Usar Mal, Teil, Grund, Seite, Zahl, Nummer y Farbe.",
+        vocab: [
+          { de: "das Mal", es: "la vez", example: { de: "Das erste Mal war schwer.", es: "La primera vez fue difícil." } },
+          { de: "der Teil", es: "la parte", example: { de: "Ein Teil ist kaputt.", es: "Una parte está rota." } },
+          { de: "der Grund", es: "el motivo", example: { de: "Was ist der Grund?", es: "¿Cuál es el motivo?" } },
+          { de: "die Seite", es: "la página / el lado", example: { de: "Auf Seite zehn steht alles.", es: "En la página diez está todo." } },
+          { de: "die Zahl", es: "el número (cantidad)", example: { de: "Die Zahl ist zu hoch.", es: "El número es demasiado alto." } },
+          { de: "die Nummer", es: "el número (de teléfono)", example: { de: "Wie ist deine Nummer?", es: "¿Cuál es tu número?" } },
+          { de: "die Farbe", es: "el color", example: { de: "Welche Farbe magst du?", es: "¿Qué color te gusta?" } },
+        ],
+        exercises: [
+          cz("Das ist das erste ___.", "Esta es la primera vez.", ["Mal", "Teil", "Zahl", "Farbe"], "Mal", "«das Mal» = la vez."),
+          cz("Die ___ ist sieben.", "El número es siete.", ["Zahl", "Farbe", "Seite", "Grund"], "Zahl", "«die Zahl» = el número / la cifra."),
+          cz("Welche ___ hat das Auto?", "¿De qué color es el auto?", ["Farbe", "Seite", "Grund", "Teil"], "Farbe", "«die Farbe» = el color."),
+          { kind: "write", es: "Abrí la página tres.", references: ["Öffne Seite drei", "Öffnen Sie Seite drei"] },
+          { kind: "speak", de: "Was ist der Grund", es: "¿Cuál es la razón?" },
+        ],
+        dialogue: {
+          title: "Un número",
+          setting: "Tom busca una página del libro",
+          lines: [
+            { who: "m", name: "Tom", de: "Auf welcher Seite ist die Zahl?", es: "¿En qué página está el número?" },
+            { who: "f", name: "Mia", de: "Auf Seite vier. Es ist eine große Zahl.", es: "En la página cuatro. Es un número grande." },
+            { who: "m", name: "Tom", de: "Welche Farbe hat das Buch?", es: "¿De qué color es el libro?" },
+            { who: "f", name: "Mia", de: "Grün. Ich lese es zum ersten Mal.", es: "Verde. Lo leo por primera vez." },
+          ],
+          questions: [
+            { type: "choice", q: "¿En qué página está?", options: ["En la cuatro", "En la tres", "En la siete", "En la diez"], answer: "En la cuatro", why: "«Seite vier»" },
+            { type: "choice", q: "¿De qué color es el libro?", options: ["Verde", "Rojo", "Azul", "Negro"], answer: "Verde", why: "«Grün»" },
+            { type: "tf", q: "Mia lo lee por segunda vez.", answer: false, why: "«zum ersten Mal»" },
+          ],
+        },
+      },
+      {
+        id: "reise2",
+        title: "Viajes y diversión",
+        goal: "Usar Fahrt, Ziel, Flugzeug, Schiff, Streit, Spaß y Liebe.",
+        vocab: [
+          { de: "die Fahrt", es: "el viaje (trayecto)", example: { de: "Die Fahrt dauert eine Stunde.", es: "El viaje dura una hora." } },
+          { de: "das Ziel", es: "la meta / el destino", example: { de: "Das Ziel ist nicht mehr weit.", es: "El destino ya no está lejos." } },
+          { de: "das Flugzeug", es: "el avión", example: { de: "Das Flugzeug ist schon da.", es: "El avión ya está acá." } },
+          { de: "das Schiff", es: "el barco", example: { de: "Das Schiff fährt um acht.", es: "El barco sale a las ocho." } },
+          { de: "der Streit", es: "la pelea", example: { de: "Der Streit war laut.", es: "La pelea fue fuerte." } },
+          { de: "der Spaß", es: "la diversión", example: { de: "Das macht Spaß.", es: "Eso es divertido." } },
+          { de: "die Liebe", es: "el amor", example: { de: "Die Liebe ist wichtig.", es: "El amor es importante." } },
+        ],
+        exercises: [
+          cz("Die ___ dauert zwei Stunden.", "El viaje dura dos horas.", ["Fahrt", "Ziel", "Spaß", "Liebe"], "Fahrt", "«die Fahrt» = el viaje."),
+          cz("Das ___ fliegt nach Madrid.", "El avión vuela a Madrid.", ["Flugzeug", "Schiff", "Ziel", "Streit"], "Flugzeug", "«das Flugzeug» = el avión."),
+          cz("Wir haben viel ___ im Urlaub.", "Nos divertimos mucho en las vacaciones.", ["Spaß", "Streit", "Ziel", "Fahrt"], "Spaß", "«der Spaß» = la diversión."),
+          { kind: "write", es: "Mi destino es Berlín.", references: ["Mein Ziel ist Berlin"] },
+          { kind: "speak", de: "Das Schiff ist groß", es: "El barco es grande" },
+        ],
+        dialogue: {
+          title: "Un viaje",
+          setting: "Dos amigos hablan de su viaje",
+          lines: [
+            { who: "f", name: "Eva", de: "Unser Ziel ist Madrid. Die Fahrt dauert drei Stunden.", es: "Nuestro destino es Madrid. El viaje dura tres horas." },
+            { who: "m", name: "Paul", de: "Ich fliege gern. Das Flugzeug ist schnell.", es: "Me gusta volar. El avión es rápido." },
+            { who: "f", name: "Eva", de: "Das Schiff ist langsam, aber schön.", es: "El barco es lento, pero lindo." },
+            { who: "m", name: "Paul", de: "Ohne Streit und mit viel Spaß!", es: "¡Sin peleas y con mucha diversión!" },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cuál es el destino?", options: ["Madrid", "Berlín", "Viena", "Roma"], answer: "Madrid", why: "«Ziel ist Madrid»" },
+            { type: "fill", q: "¿Cuántas horas dura el viaje?", answers: ["3", "drei"], hint: "un número", why: "«drei Stunden»" },
+            { type: "choice", q: "¿Cómo es el barco?", options: ["Lento pero lindo", "Rápido", "Caro", "Feo"], answer: "Lento pero lindo", why: "«langsam, aber schön»" },
+          ],
+        },
+      },
+      {
+        id: "zeit2",
+        title: "Días, semanas y meses",
+        goal: "Usar Tag, Woche, Monat y Abend.",
+        vocab: [
+          { de: "der Tag", es: "el día", example: { de: "Der Tag war lang.", es: "El día fue largo." } },
+          { de: "die Woche", es: "la semana", example: { de: "Die Woche ist schon vorbei.", es: "La semana ya pasó." } },
+          { de: "der Monat", es: "el mes", example: { de: "Der Monat hat dreißig Tage.", es: "El mes tiene treinta días." } },
+          { de: "der Abend", es: "la noche (tarde-noche)", example: { de: "Am Abend sind wir zu Hause.", es: "A la noche estamos en casa." } },
+        ],
+        exercises: [
+          cz("Eine ___ hat sieben Tage.", "Una semana tiene siete días.", ["Woche", "Monat", "Abend", "Tag"], "Woche", "«die Woche» = la semana."),
+          cz("Ein ___ hat dreißig Tage.", "Un mes tiene treinta días.", ["Monat", "Woche", "Abend", "Tag"], "Monat", "«der Monat» = el mes."),
+          cz("Am ___ sehe ich fern.", "A la noche miro tele.", ["Abend", "Woche", "Monat", "Tag"], "Abend", "«der Abend» = la tarde-noche."),
+          { kind: "write", es: "Hoy es un buen día.", references: ["Heute ist ein guter Tag"] },
+          { kind: "speak", de: "Ich habe eine Woche Urlaub", es: "Tengo una semana de vacaciones" },
+        ],
+        dialogue: {
+          title: "Un plan",
+          setting: "Anna y Tom hablan de la semana",
+          lines: [
+            { who: "f", name: "Anna", de: "Wie lange dauert dein Urlaub?", es: "¿Cuánto dura tu vacación?" },
+            { who: "m", name: "Tom", de: "Eine Woche. Das sind sieben Tage.", es: "Una semana. Son siete días." },
+            { who: "f", name: "Anna", de: "Und dein Kurs? Er dauert einen Monat.", es: "¿Y tu curso? Dura un mes." },
+            { who: "m", name: "Tom", de: "Ja, und am Abend lerne ich.", es: "Sí, y a la noche estudio." },
+          ],
+          questions: [
+            { type: "choice", q: "¿Cuánto dura la vacación?", options: ["Una semana", "Un mes", "Un día", "Dos semanas"], answer: "Una semana", why: "«Eine Woche»" },
+            { type: "choice", q: "¿Cuánto dura el curso?", options: ["Un mes", "Una semana", "Un año", "Tres días"], answer: "Un mes", why: "«einen Monat»" },
+            { type: "tf", q: "Tom estudia a la noche.", answer: true, why: "«am Abend lerne ich»" },
+          ],
+        },
+      },
+    ],
+    chat: {
+      title: "Planear un viaje",
+      scenario: "Sos Herr Maier, un amigo que ayuda a planear un viaje. Tratás al usuario de vos (du). Le preguntás cuándo viaja, cuánto dura la fahrt y qué necesita, con frases cortas de nivel A1.",
+      opener: "Hallo! Wann fährst du?",
+      openerEs: "¡Hola! ¿Cuándo viajás?",
+    },
+  },
+];
