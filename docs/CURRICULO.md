@@ -71,6 +71,7 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | «Práctica 2» (repaso mezclado) en las 14 unidades base | +3 | hecho (14 de 14) |
 | Lectura, práctica y escucha larga (bonus) en las 8 unidades ampliadas (verben2 a woerter; lib/content/a1x-*.ts) | +24 lecciones, ~2,5 h | hecho (8 de 8) |
 | A2 ampliado: 5 unidades nuevas (haushalt, verkehr, kueche3, koerper3, natur2; lib/content/a2-part6.ts y a2x-extras.ts) con 133 palabras del entrenador pasadas a lecciones y 45 más en vocabulario temático; más lectura, práctica y escucha larga | A2 pasa de 17,6 a 24,5 h | hecho |
+| A2 ampliado (2): 5 unidades más (schule2, freizeit2, charakter, kommunikation, adverbien; lib/content/a2-part7.ts y a2y-extras.ts), 139 palabras del entrenador a lecciones y 45 a vocabulario temático, con lectura, práctica y escucha larga | A2 pasa de 24,5 a 31,7 h | hecho |
 | 38 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | hecho |
 | 5 lecciones temáticas con palabras nuevas (pasatiempos, profesiones, clima, cuerpo, mensajes) | +1,5 | hecho |
 | 20 consignas de escritura y 20 de oral con rúbrica (A1) | +3 | hecho |
