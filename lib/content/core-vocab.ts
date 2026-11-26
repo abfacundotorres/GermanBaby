@@ -9,74 +9,46 @@ const RAW = `
 das Restaurant|el restaurante|Das Restaurant ist sehr gut.|El restaurante es muy bueno.
 ## A2
 ## B1
-vorbereiten|preparar|Wir müssen die Reise gut vorbereiten.|Tenemos que preparar bien el viaje.
-teilnehmen|participar|Wir wollen am Kurs teilnehmen.|Queremos participar del curso.
 sich entschuldigen|disculparse|Ich muss mich bei ihr entschuldigen.|Tengo que disculparme con ella.
 sich beschweren|quejarse|Wir wollen uns beim Hotel beschweren.|Queremos quejarnos con el hotel.
 sich kümmern|ocuparse|Wir kümmern uns um die Kinder.|Nos ocupamos de los chicos.
 sich erinnern|acordarse|Ich kann mich nicht erinnern.|No me puedo acordar.
 verbinden|conectar / unir|Die Brücke verbindet zwei Städte.|El puente une dos ciudades.
-vergleichen|comparar|Wir vergleichen die Preise.|Comparamos los precios.
 verändern|cambiar (transformar)|Die Reise hat mich verändert.|El viaje me cambió.
 verbessern|mejorar|Wir wollen unser Deutsch verbessern.|Queremos mejorar nuestro alemán.
 verkaufen|vender|Wir verkaufen das alte Auto.|Vendemos el auto viejo.
 vermieten|alquilar (dar en alquiler)|Sie wollen die Wohnung vermieten.|Quieren alquilar el departamento.
 mieten|alquilar (tomar en alquiler)|Wir mieten ein Zimmer.|Alquilamos una habitación.
 abgeben|entregar|Man muss die Schlüssel abgeben.|Hay que entregar las llaves.
-annehmen|aceptar / suponer|Ich möchte den Vorschlag annehmen.|Quiero aceptar la propuesta.
-ablehnen|rechazar|Wir müssen das Angebot ablehnen.|Tenemos que rechazar la oferta.
-behaupten|afirmar|Er behauptet, nichts zu wissen.|Afirma no saber nada.
-bedeuten|significar|Was bedeutet dieses Wort?|¿Qué significa esta palabra?
-beschreiben|describir|Können Sie den Weg beschreiben?|¿Puede describir el camino?
-beweisen|demostrar|Wir müssen das beweisen.|Tenemos que demostrar eso.
 bemerken|notar|Ich habe den Fehler nicht bemerkt.|No noté el error.
 entwickeln|desarrollar|Die Firma will ein neues Gerät entwickeln.|La empresa quiere desarrollar un aparato nuevo.
 erfahren|enterarse|Wir erfahren es erst morgen.|Nos enteramos recién mañana.
 erfinden|inventar|Wer wollte das Telefon erfinden?|¿Quién quería inventar el teléfono?
 ermöglichen|hacer posible|Das Stipendium ermöglicht ihm das Studium.|La beca le hace posible estudiar.
 erwarten|esperar (algo)|Wir erwarten viele Gäste.|Esperamos muchos invitados.
-erwähnen|mencionar|Er hat das nicht erwähnt.|No mencionó eso.
 folgen|seguir|Bitte folgen Sie mir.|Por favor, sígame.
 fordern|exigir|Die Leute fordern bessere Preise.|La gente exige mejores precios.
 führen|llevar / conducir|Dieser Weg führt zum See.|Este camino lleva al lago.
 gehören|pertenecer|Das Haus gehört meinem Onkel.|La casa es de mi tío.
 gelingen|salir bien / lograrse|Hoffentlich wird der Kuchen gelingen.|Ojalá la torta salga bien.
-genießen|disfrutar|Wir genießen die Ruhe.|Disfrutamos de la tranquilidad.
 handeln|actuar / tratar de|Der Film handelt von einer Familie.|La película trata de una familia.
 informieren|informar|Wir informieren Sie sofort.|Le informamos enseguida.
-kämpfen|luchar|Wir kämpfen für bessere Löhne.|Luchamos por mejores sueldos.
 klären|aclarar|Wir müssen das klären.|Tenemos que aclarar eso.
 lösen|resolver / soltar|Wir lösen das Problem zusammen.|Resolvemos el problema juntos.
-melden|avisar / reportar|Bitte melden Sie sich morgen.|Por favor, avise mañana.
 nutzen|aprovechar / usar|Wir nutzen die Zeit gut.|Aprovechamos bien el tiempo.
-organisieren|organizar|Wir organisieren ein Fest.|Organizamos una fiesta.
-planen|planear|Wir planen eine Reise nach Italien.|Planeamos un viaje a Italia.
-protestieren|protestar|Viele Leute protestieren gegen den Plan.|Mucha gente protesta contra el plan.
 reichen|alcanzar / ser suficiente|Zehn Euro reichen nicht.|Diez euros no alcanzan.
-schaffen|lograr|Wir schaffen das schon.|Eso seguro que lo logramos.
-schützen|proteger|Wir schützen die Umwelt.|Protegemos el medio ambiente.
 senden|enviar|Wir senden Ihnen die Unterlagen.|Le enviamos la documentación.
 sorgen|ocuparse / preocupar|Wir sorgen für das Essen.|Nos ocupamos de la comida.
 stören|molestar|Ich möchte Sie nicht stören.|No quiero molestarlo.
 streiten|pelear|Wir streiten oft über Geld.|Peleamos seguido por plata.
 teilen|compartir / dividir|Wir teilen das Zimmer.|Compartimos el cuarto.
-übernehmen|asumir / hacerse cargo|Wir übernehmen die Kosten.|Nos hacemos cargo de los costos.
-überprüfen|revisar / verificar|Wir überprüfen die Zahlen.|Verificamos los números.
 übersetzen|traducir|Kannst du das bitte übersetzen?|¿Podés traducir esto, por favor?
-unterstützen|apoyar|Wir unterstützen dein Projekt.|Apoyamos tu proyecto.
-untersuchen|examinar / investigar|Der Arzt will mich untersuchen.|El médico me quiere examinar.
-verbreiten|difundir|Die Nachricht verbreitet sich schnell.|La noticia se difunde rápido.
-vereinbaren|acordar|Wir vereinbaren einen Termin.|Acordamos una cita.
 verhindern|impedir|Wir wollen den Unfall verhindern.|Queremos evitar el accidente.
 verraten|revelar / delatar|Ich verrate dir nichts.|No te revelo nada.
 versprechen|prometer|Wir versprechen dir das.|Te prometemos eso.
 verstecken|esconder|Wir verstecken das Geschenk.|Escondemos el regalo.
 vertrauen|confiar|Wir vertrauen ihm.|Confiamos en él.
 verwenden|utilizar|Wir verwenden nur frische Zutaten.|Usamos solo ingredientes frescos.
-widersprechen|contradecir|Ich muss dir leider widersprechen.|Lamentablemente te tengo que contradecir.
-zugeben|admitir|Ich muss zugeben, dass du recht hast.|Tengo que admitir que tenés razón.
-zustimmen|estar de acuerdo|Wir wollen dem Plan zustimmen.|Queremos estar de acuerdo con el plan.
-zweifeln|dudar|Ich muss daran zweifeln.|Tengo que dudar de eso.
 die Absicht|la intención|Das war nicht meine Absicht.|No fue mi intención.
 der Alltag|la vida diaria|Im Alltag habe ich wenig Zeit.|En la vida diaria tengo poco tiempo.
 die Angabe|el dato / la indicación|Die Angaben sind nicht richtig.|Los datos no son correctos.
@@ -90,29 +62,22 @@ die Beziehung|la relación|Unsere Beziehung ist sehr gut.|Nuestra relación es m
 der Beitrag|el aporte / el artículo|Jeder leistet seinen Beitrag.|Cada uno hace su aporte.
 die Bewegung|el movimiento|Bewegung ist gesund.|El movimiento es sano.
 der Bericht|el informe|Der Bericht ist fertig.|El informe está listo.
-die Bildung|la educación|Bildung ist wichtig für alle.|La educación es importante para todos.
 der Charakter|el carácter|Er hat einen guten Charakter.|Tiene un buen carácter.
-die Ehe|el matrimonio|Ihre Ehe ist sehr glücklich.|Su matrimonio es muy feliz.
 die Eigenschaft|la cualidad|Geduld ist eine wichtige Eigenschaft.|La paciencia es una cualidad importante.
 das Einkommen|el ingreso|Das Einkommen reicht nicht.|El ingreso no alcanza.
 der Eindruck|la impresión|Ich habe einen guten Eindruck.|Tengo una buena impresión.
-die Ernährung|la alimentación|Gesunde Ernährung ist wichtig.|La alimentación sana es importante.
 die Erwartung|la expectativa|Meine Erwartungen sind hoch.|Mis expectativas son altas.
 der Ersatz|el reemplazo|Wir brauchen Ersatz für den Kollegen.|Necesitamos un reemplazo para el colega.
 die Fähigkeit|la capacidad|Sie hat viele Fähigkeiten.|Tiene muchas capacidades.
 die Folge|la consecuencia|Die Folge war ein großes Problem.|La consecuencia fue un gran problema.
-die Freiheit|la libertad|Freiheit ist mir sehr wichtig.|La libertad es muy importante para mí.
 die Freizeit|el tiempo libre|In meiner Freizeit lese ich gern.|En mi tiempo libre leo con gusto.
-die Gemeinschaft|la comunidad|Die Gemeinschaft hilft sich.|La comunidad se ayuda.
 das Gleichgewicht|el equilibrio|Man braucht Gleichgewicht im Leben.|En la vida se necesita equilibrio.
 die Grundlage|la base|Das ist die Grundlage für alles.|Esa es la base de todo.
 die Haltung|la postura / la actitud|Seine Haltung gefällt mir nicht.|Su actitud no me gusta.
 der Hintergrund|el trasfondo / el fondo|Im Hintergrund läuft Musik.|De fondo suena música.
-die Hoffnung|la esperanza|Ich habe noch Hoffnung.|Todavía tengo esperanza.
 der Inhalt|el contenido|Der Inhalt des Buches ist interessant.|El contenido del libro es interesante.
 das Interesse|el interés|Ich habe großes Interesse an Musik.|Tengo mucho interés por la música.
 der Kontakt|el contacto|Wir haben guten Kontakt.|Tenemos buen contacto.
-die Kultur|la cultura|Ich möchte die Kultur kennenlernen.|Quiero conocer la cultura.
 die Lage|la situación / la ubicación|Die Lage der Wohnung ist perfekt.|La ubicación del departamento es perfecta.
 die Leistung|el rendimiento / el logro|Das war eine große Leistung.|Fue un gran logro.
 die Menge|la cantidad|Eine große Menge Leute war da.|Había una gran cantidad de gente.
@@ -125,7 +90,6 @@ die Ordnung|el orden|In meinem Zimmer ist Ordnung.|En mi cuarto hay orden.
 der Raum|el espacio / la sala|Der Raum ist zu klein.|La sala es demasiado chica.
 die Reaktion|la reacción|Seine Reaktion war schnell.|Su reacción fue rápida.
 die Rolle|el papel|Das spielt keine große Rolle.|Eso no tiene gran importancia.
-der Stress|el estrés|Ich habe viel Stress.|Tengo mucho estrés.
 der Umgang|el trato|Der Umgang mit Kindern macht Spaß.|El trato con los chicos es divertido.
 die Ursache|la causa|Die Ursache ist noch unklar.|La causa todavía no está clara.
 der Verlauf|el desarrollo / el transcurso|Im Verlauf des Tages wird es kälter.|Durante el día se pone más frío.
@@ -134,17 +98,11 @@ der Wert|el valor|Der Wert des Hauses steigt.|El valor de la casa sube.
 der Widerspruch|la contradicción|Das ist ein Widerspruch.|Eso es una contradicción.
 der Zusammenhang|la relación (lógica) / el contexto|Das hat keinen Zusammenhang.|Eso no tiene relación.
 der Zweck|el propósito / la finalidad|Was ist der Zweck davon?|¿Cuál es el propósito de eso?
-der Zweifel|la duda|Ich habe keinen Zweifel.|No tengo ninguna duda.
 der Zufall|la casualidad|Das war reiner Zufall.|Fue pura casualidad.
 die Zukunft|el futuro|Die Zukunft ist offen.|El futuro está abierto.
 die Gegenwart|el presente|Wir leben in der Gegenwart.|Vivimos en el presente.
 die Wahrheit|la verdad|Sag mir die Wahrheit.|Decime la verdad.
 die Lüge|la mentira|Das ist eine Lüge.|Eso es una mentira.
-die Geduld|la paciencia|Ich habe keine Geduld mehr.|Ya no tengo paciencia.
-der Mut|el coraje|Dafür braucht man Mut.|Para eso hace falta coraje.
-der Stolz|el orgullo|Er spricht mit Stolz von seiner Familie.|Habla con orgullo de su familia.
-die Wut|la rabia|Ich habe eine große Wut.|Tengo mucha rabia.
-die Trauer|la tristeza / el duelo|Die Trauer ist groß.|La tristeza es grande.
 abhängig|dependiente|Er ist von seinen Eltern abhängig.|Depende de sus padres.
 aktuell|actual|Das sind die aktuellen Zahlen.|Esos son los números actuales.
 allgemein|general|Das ist allgemein bekannt.|Eso es de conocimiento general.
@@ -160,7 +118,6 @@ gemeinsam|en común / juntos|Wir haben viel gemeinsam.|Tenemos mucho en común.
 gerecht|justo|Das ist nicht gerecht.|Eso no es justo.
 gewöhnlich|habitual|Gewöhnlich stehe ich um sieben auf.|Habitualmente me levanto a las siete.
 grundsätzlich|en principio|Grundsätzlich bin ich einverstanden.|En principio estoy de acuerdo.
-hilfreich|útil|Der Tipp war hilfreich.|El consejo fue útil.
 insgesamt|en total|Insgesamt waren es zwanzig Leute.|En total eran veinte personas.
 kritisch|crítico|Er ist sehr kritisch.|Es muy crítico.
 kurzfristig|a corto plazo|Das geht nur kurzfristig.|Eso solo funciona a corto plazo.
@@ -173,7 +130,6 @@ offiziell|oficial|Die Nachricht ist offiziell.|La noticia es oficial.
 persönlich|personal / en persona|Ich möchte persönlich kommen.|Quiero ir en persona.
 praktisch|práctico|Die Tasche ist sehr praktisch.|La cartera es muy práctica.
 privat|privado|Das ist privat.|Eso es privado.
-schädlich|dañino|Rauchen ist schädlich.|Fumar es dañino.
 schrecklich|terrible|Das Wetter ist schrecklich.|El clima es terrible.
 selbstständig|independiente / autónomo|Sie arbeitet selbstständig.|Trabaja de forma independiente.
 sinnvoll|con sentido / útil|Das ist eine sinnvolle Idee.|Es una idea con sentido.
@@ -184,7 +140,6 @@ unabhängig|independiente|Sie will unabhängig sein.|Quiere ser independiente.
 verschieden|distinto / diverso|Wir haben verschiedene Meinungen.|Tenemos opiniones distintas.
 verständlich|comprensible|Das ist gut verständlich.|Eso es fácil de entender.
 vollständig|completo|Die Liste ist vollständig.|La lista está completa.
-vorsichtig|cuidadoso / prudente|Sei bitte vorsichtig.|Tené cuidado, por favor.
 wertvoll|valioso|Das Bild ist sehr wertvoll.|El cuadro es muy valioso.
 wesentlich|esencial|Das ist ein wesentlicher Punkt.|Es un punto esencial.
 wirtschaftlich|económico|Die wirtschaftliche Lage ist schwierig.|La situación económica es difícil.
@@ -192,16 +147,9 @@ zufrieden|conforme|Wir sind sehr zufrieden.|Estamos muy conformes.
 zuverlässig|confiable|Er ist ein zuverlässiger Freund.|Es un amigo confiable.
 zunächst|primero / por ahora|Zunächst möchte ich danke sagen.|Primero quiero dar las gracias.
 zumindest|al menos|Zumindest hat er es versucht.|Al menos lo intentó.
-zwar|si bien|Es ist zwar teuer, aber gut.|Es caro, sí, pero bueno.
-jedoch|sin embargo|Ich möchte, jedoch fehlt die Zeit.|Quiero, sin embargo falta tiempo.
-dagegen|en contra / en cambio|Ich bin dagegen.|Estoy en contra.
-dadurch|por eso / de ese modo|Dadurch spart man viel Geld.|De ese modo se ahorra mucha plata.
-deswegen|por eso|Deswegen bin ich hier.|Por eso estoy acá.
-darum|por eso|Darum geht es nicht.|No se trata de eso.
 gegenüber|frente a / enfrente|Gegenüber vom Bahnhof ist ein Café.|Frente a la estación hay un café.
 innerhalb|dentro de|Innerhalb einer Woche ist alles fertig.|Dentro de una semana está todo listo.
 außerhalb|fuera de|Außerhalb der Stadt ist es ruhiger.|Fuera de la ciudad hay más tranquilidad.
-anstatt|en vez de|Anstatt zu schlafen, lese ich.|En vez de dormir, leo.
 bereits|ya (formal)|Ich habe es bereits gelesen.|Ya lo leí.
 mindestens|al menos / como mínimo|Es dauert mindestens eine Stunde.|Dura como mínimo una hora.
 höchstens|como máximo|Das kostet höchstens zehn Euro.|Eso cuesta como máximo diez euros.
@@ -213,10 +161,7 @@ schließlich|al fin / después de todo|Schließlich hat alles geklappt.|Al final
 ziemlich|bastante|Es ist ziemlich kalt.|Hace bastante frío.
 gerade|justo ahora|Ich esse gerade.|Estoy comiendo ahora mismo.
 immerhin|al menos / algo es algo|Immerhin hat es nicht geregnet.|Al menos no llovió.
-allerdings|eso sí|Es ist schön, allerdings teuer.|Es lindo, eso sí, caro.
-jedenfalls|en todo caso|Jedenfalls bin ich bereit.|En todo caso, estoy listo.
 übrigens|por cierto|Übrigens habe ich gestern angerufen.|Por cierto, ayer llamé.
-abnehmen|bajar de peso / sacar|Ich möchte fünf Kilo abnehmen.|Quiero bajar cinco kilos.
 anbieten|ofrecer|Wir können Ihnen einen Kaffee anbieten.|Le podemos ofrecer un café.
 ansehen|mirar / ver|Wir wollen uns die Stadt ansehen.|Queremos ver la ciudad.
 ausprobieren|probar|Ich möchte das neue Programm ausprobieren.|Quiero probar el programa nuevo.
@@ -226,7 +171,6 @@ aufpassen|prestar atención / cuidar|Bitte auf die Kinder aufpassen.|Por favor, 
 auffallen|llamar la atención|Der Fehler soll niemandem auffallen.|El error no tiene que llamarle la atención a nadie.
 ausdrücken|expresar|Wir können das schwer ausdrücken.|Es difícil expresar eso.
 ausgehen|salir (de noche)|Wir wollen am Samstag ausgehen.|Queremos salir el sábado.
-beeinflussen|influir|Das Wetter kann unsere Laune beeinflussen.|El clima puede influir en nuestro humor.
 befürchten|temer|Wir befürchten das Schlimmste.|Tememos lo peor.
 begegnen|encontrarse con|Wir sind uns zufällig begegnet.|Nos encontramos por casualidad.
 begrüßen|saludar / dar la bienvenida|Wir begrüßen alle Gäste.|Damos la bienvenida a todos los invitados.
@@ -249,7 +193,6 @@ bewegen|mover|Wir müssen uns mehr bewegen.|Tenemos que movernos más.
 bieten|ofrecer / brindar|Die Stadt bietet viel Kultur.|La ciudad ofrece mucha cultura.
 bilden|formar|Wir bilden eine Gruppe.|Formamos un grupo.
 darstellen|representar / presentar|Wir wollen das Problem darstellen.|Queremos presentar el problema.
-durchführen|llevar a cabo|Wir wollen die Umfrage durchführen.|Queremos llevar a cabo la encuesta.
 sich einigen|ponerse de acuerdo|Wir müssen uns bald einigen.|Tenemos que ponernos de acuerdo pronto.
 einrichten|amoblar / instalar|Wir möchten die Wohnung einrichten.|Queremos amoblar el departamento.
 einschätzen|estimar / evaluar|Das lässt sich schwer einschätzen.|Eso es difícil de estimar.
@@ -259,8 +202,6 @@ entsprechen|corresponder|Das kann meiner Erwartung nicht entsprechen.|Eso no pue
 erhalten|recibir / conservar|Wir erhalten die Unterlagen morgen.|Recibimos la documentación mañana.
 erkennen|reconocer|Wir erkennen ihn sofort.|Lo reconocemos enseguida.
 erleben|vivir (una experiencia)|Wir wollen etwas Neues erleben.|Queremos vivir algo nuevo.
-erledigen|resolver / hacer (un trámite)|Wir müssen noch einiges erledigen.|Todavía tenemos que hacer varias cosas.
-ersetzen|reemplazar|Wir ersetzen das alte Gerät.|Reemplazamos el aparato viejo.
 erstellen|elaborar|Wir erstellen eine Liste.|Elaboramos una lista.
 erwerben|adquirir|Wir erwerben neue Kenntnisse.|Adquirimos conocimientos nuevos.
 erzeugen|generar|Die Anlage erzeugt Strom.|La planta genera electricidad.
@@ -270,11 +211,9 @@ feststellen|constatar|Wir müssen einen Fehler feststellen.|Tenemos que constata
 fördern|fomentar / apoyar|Wir wollen Kinder fördern.|Queremos apoyar a los chicos.
 gebrauchen|usar / necesitar|Das können wir gut gebrauchen.|Eso nos viene muy bien.
 geraten|caer en / salir (bien o mal)|Wir geraten in große Schwierigkeiten.|Caemos en grandes dificultades.
-sich gewöhnen|acostumbrarse|Wir müssen uns an das Wetter gewöhnen.|Tenemos que acostumbrarnos al clima.
 gründen|fundar|Wir wollen eine Firma gründen.|Queremos fundar una empresa.
 herstellen|fabricar|Die Firma will Möbel herstellen.|La empresa quiere fabricar muebles.
 hinweisen|señalar|Wir möchten darauf hinweisen.|Queremos señalar eso.
-kritisieren|criticar|Wir wollen niemanden kritisieren.|No queremos criticar a nadie.
 kürzen|recortar|Wir müssen den Text kürzen.|Tenemos que acortar el texto.
 leiten|dirigir|Sie soll das Projekt leiten.|Ella va a dirigir el proyecto.
 liefern|entregar / suministrar|Wir liefern am Montag.|Entregamos el lunes.
@@ -291,11 +230,9 @@ riskieren|arriesgar|Wir riskieren nichts.|No arriesgamos nada.
 schätzen|apreciar / estimar|Wir schätzen deine Hilfe.|Apreciamos tu ayuda.
 scheitern|fracasar|Wir wollen nicht scheitern.|No queremos fracasar.
 schildern|describir (un hecho)|Können Sie den Unfall schildern?|¿Puede describir el accidente?
-schonen|cuidar / no forzar|Wir müssen die Umwelt schonen.|Tenemos que cuidar el medio ambiente.
 schweigen|callarse|Wir wollen nicht schweigen.|No queremos callarnos.
 senken|bajar (precios)|Wir wollen die Preise senken.|Queremos bajar los precios.
 sichern|asegurar|Wir sichern die Daten.|Resguardamos los datos.
-spenden|donar|Wir spenden Geld.|Donamos plata.
 stattfinden|tener lugar|Das Fest soll am Samstag stattfinden.|La fiesta va a tener lugar el sábado.
 steigern|aumentar|Wir wollen den Umsatz steigern.|Queremos aumentar las ventas.
 stimmen|ser correcto / votar|Die Zahlen stimmen nicht.|Los números no son correctos.
@@ -330,44 +267,13 @@ weiterleiten|reenviar|Wir wollen die E-Mail weiterleiten.|Queremos reenviar el m
 widmen|dedicar|Wir widmen das Buch unseren Eltern.|Le dedicamos el libro a nuestros padres.
 wiederholen|repetir|Wir müssen den Test wiederholen.|Tenemos que repetir la prueba.
 wirken|parecer / hacer efecto|Die Tabletten wirken schnell.|Las pastillas hacen efecto rápido.
-zusammenarbeiten|colaborar|Wir wollen besser zusammenarbeiten.|Queremos colaborar mejor.
 zusammenfassen|resumir|Wir wollen den Text kurz zusammenfassen.|Queremos resumir el texto brevemente.
 zusammenhängen|estar relacionado|Das könnte damit zusammenhängen.|Eso podría estar relacionado.
-das Vorstellungsgespräch|la entrevista de trabajo|Morgen habe ich ein Vorstellungsgespräch.|Mañana tengo una entrevista de trabajo.
-der Arbeitsvertrag|el contrato de trabajo|Der Arbeitsvertrag läuft ein Jahr.|El contrato de trabajo dura un año.
-die Weiterbildung|la capacitación|Die Firma bezahlt die Weiterbildung.|La empresa paga la capacitación.
-der Arbeitsplatz|el lugar de trabajo|Mein Arbeitsplatz ist sehr ruhig.|Mi lugar de trabajo es muy tranquilo.
-die Arbeitszeit|el horario de trabajo|Die Arbeitszeit beginnt um acht.|El horario de trabajo empieza a las ocho.
-die Krankmeldung|el aviso de enfermedad|Ich brauche eine Krankmeldung.|Necesito un certificado de enfermedad.
-der Bürger|el ciudadano|Jeder Bürger hat Rechte.|Cada ciudadano tiene derechos.
-die Demokratie|la democracia|Die Demokratie braucht Mitbestimmung.|La democracia necesita participación.
-die Armut|la pobreza|Die Armut nimmt zu.|La pobreza aumenta.
-der Reichtum|la riqueza|Reichtum macht nicht glücklich.|La riqueza no hace feliz.
-die Arbeitslosigkeit|el desempleo|Die Arbeitslosigkeit sinkt.|El desempleo baja.
-das Ehrenamt|el trabajo voluntario|Das Ehrenamt macht viel Freude.|El trabajo voluntario da mucha alegría.
-die Spende|la donación|Wir brauchen jede Spende.|Necesitamos cada donación.
-die Veranstaltung|el evento|Die Veranstaltung beginnt um acht.|El evento empieza a las ocho.
-die Versammlung|la asamblea|Die Versammlung ist am Dienstag.|La asamblea es el martes.
-die Bevölkerung|la población|Die Bevölkerung wächst.|La población crece.
-der Einwohner|el habitante|Die Stadt hat zehntausend Einwohner.|La ciudad tiene diez mil habitantes.
-die Gemeinde|el municipio / la comunidad|Unsere Gemeinde ist klein.|Nuestro municipio es chico.
-die Region|la región|Die Region ist sehr schön.|La región es muy linda.
-das Ausland|el exterior|Er arbeitet im Ausland.|Trabaja en el exterior.
-der Tourist|el turista|Die Touristen fotografieren alles.|Los turistas fotografían todo.
 die Nachrichten|las noticias|Ich schaue jeden Abend die Nachrichten.|Miro las noticias todas las noches.
 das Fernsehen|la televisión|Im Fernsehen läuft ein Film.|En la televisión pasan una película.
 das Netzwerk|la red|Das Netzwerk ist langsam.|La red está lenta.
 die Erfindung|el invento|Das Telefon war eine große Erfindung.|El teléfono fue un gran invento.
 der Link|el enlace|Ich schicke dir den Link.|Te mando el enlace.
-die Behandlung|el tratamiento|Die Behandlung dauert zwei Wochen.|El tratamiento dura dos semanas.
-der Patient|el paciente|Der Patient wartet.|El paciente espera.
-die Diät|la dieta|Ich mache eine Diät.|Estoy a dieta.
-das Gewicht|el peso|Mein Gewicht ist gut.|Mi peso está bien.
-die Erholung|el descanso / la recuperación|Im Urlaub brauche ich Erholung.|En las vacaciones necesito descansar.
-die Entspannung|la relajación|Musik hilft mir bei der Entspannung.|La música me ayuda a relajarme.
-der Notarzt|el médico de urgencias|Der Notarzt kommt sofort.|El médico de urgencias llega enseguida.
-die Operation|la operación|Die Operation dauert eine Stunde.|La operación dura una hora.
-die Pflege|el cuidado|Die Pflege der Kranken ist wichtig.|El cuidado de los enfermos es importante.
 das Recycling|el reciclaje|Recycling schützt die Umwelt.|El reciclaje protege el medio ambiente.
 die Ressource|el recurso|Wasser ist eine wichtige Ressource.|El agua es un recurso importante.
 der Lärm|el ruido|Der Lärm stört mich.|El ruido me molesta.
@@ -379,14 +285,6 @@ das Klima|el clima (general)|Das Klima ändert sich.|El clima está cambiando.
 die Katastrophe|la catástrofe|Die Katastrophe war schrecklich.|La catástrofe fue terrible.
 der Unterricht|la clase / la enseñanza|Der Unterricht beginnt um acht.|La clase empieza a las ocho.
 die Kenntnisse|los conocimientos|Seine Kenntnisse sind sehr gut.|Sus conocimientos son muy buenos.
-das Visum|la visa|Ich brauche ein Visum.|Necesito una visa.
-die Reservierung|la reserva|Die Reservierung gilt bis acht Uhr.|La reserva vale hasta las ocho.
-der Aufenthalt|la estadía|Der Aufenthalt dauert eine Woche.|La estadía dura una semana.
-der Fahrplan|el horario (de transporte)|Der Fahrplan hängt am Bahnhof.|El horario está colgado en la estación.
-die Hinfahrt|el viaje de ida|Die Hinfahrt dauert drei Stunden.|El viaje de ida dura tres horas.
-die Sehenswürdigkeit|la atracción turística|Die Sehenswürdigkeiten sind alle in der Altstadt.|Las atracciones están todas en el casco antiguo.
-das Souvenir|el souvenir|Ich kaufe ein Souvenir.|Compro un souvenir.
-die Währung|la moneda|Die Währung ist der Euro.|La moneda es el euro.
 der Haushalt|el hogar / las tareas del hogar|Im Haushalt gibt es viel zu tun.|En el hogar hay mucho que hacer.
 die Hausordnung|el reglamento del edificio|Die Hausordnung hängt im Flur.|El reglamento está en el pasillo.
 der Hausmeister|el encargado del edificio|Der Hausmeister repariert die Tür.|El encargado arregla la puerta.
@@ -398,43 +296,16 @@ die Verpackung|el envase / el embalaje|Die Verpackung ist aus Papier.|El envase 
 der Kassenzettel|el ticket de compra|Den Kassenzettel bitte aufheben.|Por favor, guarde el ticket.
 die Reklamation|el reclamo (por un producto)|Die Reklamation wurde angenommen.|El reclamo fue aceptado.
 der Umtausch|el cambio (de un producto)|Der Umtausch ist kostenlos.|El cambio es gratis.
-die Ansicht|la opinión / la vista|Ich bin anderer Ansicht.|Soy de otra opinión.
-die Behauptung|la afirmación|Die Behauptung ist falsch.|La afirmación es falsa.
-der Beweis|la prueba|Der Beweis fehlt.|Falta la prueba.
-die Tatsache|el hecho|Das ist eine Tatsache.|Es un hecho.
-die Annahme|la suposición|Die Annahme war falsch.|La suposición era falsa.
-der Standpunkt|el punto de vista|Das ist mein Standpunkt.|Ese es mi punto de vista.
-der Gegensatz|el contraste|Das ist ein großer Gegensatz.|Es un gran contraste.
-die Gemeinsamkeit|el rasgo en común|Wir haben viele Gemeinsamkeiten.|Tenemos muchos rasgos en común.
-der Vergleich|la comparación|Im Vergleich ist das billig.|En comparación es barato.
-die Voraussetzung|el requisito|Das ist die Voraussetzung.|Ese es el requisito.
-das Argument|el argumento|Das ist ein gutes Argument.|Es un buen argumento.
 die Strategie|la estrategia|Die Strategie hat funktioniert.|La estrategia funcionó.
 die Methode|el método|Diese Methode ist einfach.|Este método es simple.
 die Technik|la técnica|Die Technik ist sehr modern.|La técnica es muy moderna.
 die Qualität|la calidad|Die Qualität ist sehr gut.|La calidad es muy buena.
-die Umfrage|la encuesta|Die Umfrage dauert zehn Minuten.|La encuesta dura diez minutos.
-die Statistik|la estadística|Die Statistik zeigt es deutlich.|La estadística lo muestra claramente.
-der Durchschnitt|el promedio|Im Durchschnitt kostet das zehn Euro.|En promedio cuesta diez euros.
-die Minderheit|la minoría|Die Minderheit ist dagegen.|La minoría está en contra.
-der Anteil|la proporción|Der Anteil der Frauen steigt.|La proporción de mujeres sube.
-das Verhältnis|la relación / la proporción|Das Verhältnis ist eins zu zwei.|La proporción es uno a dos.
-die Entfernung|la distancia|Die Entfernung beträgt zehn Kilometer.|La distancia es de diez kilómetros.
-die Geschwindigkeit|la velocidad|Die Geschwindigkeit ist zu hoch.|La velocidad es demasiado alta.
-die Richtung|la dirección|In welcher Richtung liegt der Bahnhof?|¿En qué dirección queda la estación?
-der Eingang|la entrada|Der Eingang ist links.|La entrada está a la izquierda.
-der Ausgang|la salida|Der Ausgang ist rechts.|La salida está a la derecha.
-der Notausgang|la salida de emergencia|Der Notausgang muss frei bleiben.|La salida de emergencia tiene que quedar libre.
-das Schild|el cartel|Das Schild ist kaputt.|El cartel está roto.
-das Verbot|la prohibición|Das Verbot gilt für alle.|La prohibición vale para todos.
-die Erlaubnis|el permiso|Ich brauche eine Erlaubnis.|Necesito un permiso.
 ausgezeichnet|excelente|Das Essen war ausgezeichnet.|La comida estuvo excelente.
 beliebt|popular / querido|Das Café ist sehr beliebt.|El café es muy popular.
 eigen|propio|Ich habe ein eigenes Zimmer.|Tengo una habitación propia.
 ehemalig|anterior / ex|Mein ehemaliger Chef wohnt hier.|Mi ex jefe vive acá.
 einzig|único|Das ist die einzige Lösung.|Esa es la única solución.
 entsprechend|correspondiente|Wir brauchen die entsprechenden Unterlagen.|Necesitamos la documentación correspondiente.
-erschöpft|agotado|Ich bin völlig erschöpft.|Estoy completamente agotado.
 erstaunlich|asombroso|Das ist erstaunlich.|Eso es asombroso.
 freiwillig|voluntario|Die Teilnahme ist freiwillig.|La participación es voluntaria.
 gemütlich|acogedor|Das Zimmer ist sehr gemütlich.|La habitación es muy acogedora.
@@ -484,46 +355,33 @@ das Ergebnis|el resultado|Das Ergebnis ist gut.|El resultado es bueno.
 das Angebot|la oferta|Das Angebot ist sehr günstig.|La oferta es muy conveniente.
 abhängen|depender|Das kann vom Wetter abhängen.|Eso puede depender del clima.
 beabsichtigen|tener la intención de|Wir beabsichtigen, im Sommer umzuziehen.|Tenemos la intención de mudarnos en verano.
-anstrengend|agotador|Die Arbeit ist sehr anstrengend.|El trabajo es muy agotador.
 ernst|serio|Das Problem ist ernst.|El problema es serio.
 unglaublich|increíble|Das ist unglaublich.|Es increíble.
 verantwortlich|responsable|Wer ist dafür verantwortlich?|¿Quién es responsable de eso?
 womöglich|quizás|Er hat es womöglich vergessen.|Quizás se olvidó.
 die Aussprache|la pronunciación|Seine Aussprache ist sehr klar.|Su pronunciación es muy clara.
 die Befürchtung|el temor|Meine Befürchtung war falsch.|Mi temor era infundado.
-die Begeisterung|el entusiasmo|Die Begeisterung der Kinder war groß.|El entusiasmo de los chicos era grande.
 die Einrichtung|el mobiliario / la institución|Die Einrichtung der Wohnung ist modern.|El mobiliario del departamento es moderno.
 die Freiwilligkeit|el carácter voluntario|Die Teilnahme beruht auf Freiwilligkeit.|La participación es de carácter voluntario.
-die Heimat|la tierra natal|Ich vermisse meine Heimat.|Extraño mi tierra.
 die Hilfsbereitschaft|la disposición a ayudar|Ihre Hilfsbereitschaft hat mich beeindruckt.|Su disposición a ayudar me impresionó.
 die Mitarbeit|la colaboración|Wir danken für Ihre Mitarbeit.|Agradecemos su colaboración.
-die Stimmung|el ambiente / el ánimo|Die Stimmung auf der Party war toll.|El ambiente en la fiesta era genial.
 die Trennung|la separación|Die Trennung war für beide schwer.|La separación fue difícil para los dos.
 die Unterstützung|el apoyo|Ich brauche deine Unterstützung.|Necesito tu apoyo.
 die Vergangenheit|el pasado|Wir sprechen nicht über die Vergangenheit.|No hablamos del pasado.
 die Verständigung|el entendimiento|Die Verständigung mit den Nachbarn klappt gut.|El entendimiento con los vecinos anda bien.
 die Wohngemeinschaft|el departamento compartido|Ich lebe in einer Wohngemeinschaft.|Vivo en un departamento compartido.
 die Zustimmung|la aprobación|Dafür brauchen wir deine Zustimmung.|Para eso necesitamos tu aprobación.
-der Abschied|la despedida|Der Abschied fiel uns schwer.|La despedida nos costó.
-der Ausländer|el extranjero|Als Ausländer braucht man ein Visum.|Como extranjero se necesita una visa.
 der Bewohner|el habitante|Die Bewohner des Hauses sind freundlich.|Los habitantes de la casa son amables.
 der Ort|el lugar|Das ist ein schöner Ort zum Wohnen.|Es un lindo lugar para vivir.
 der Rentner|el jubilado|Mein Onkel ist seit zwei Jahren Rentner.|Mi tío es jubilado desde hace dos años.
-der Rückweg|el camino de vuelta|Auf dem Rückweg kaufen wir Brot.|En el camino de vuelta compramos pan.
 der Schritt|el paso|Das ist ein wichtiger Schritt.|Es un paso importante.
 der Tipp|el consejo|Hast du einen Tipp für mich?|¿Tenés un consejo para mí?
-der Verkehr|el tránsito|Heute ist viel Verkehr.|Hoy hay mucho tránsito.
 der Vorgang|el proceso|Der Vorgang dauert nur wenige Minuten.|El proceso dura solo unos minutos.
-der Zeitraum|el período|In diesem Zeitraum ist das Büro geschlossen.|En ese período la oficina está cerrada.
-der Zugang|el acceso|Der Zugang zum Gebäude ist barrierefrei.|El acceso al edificio no tiene barreras.
-das Abenteuer|la aventura|Die Reise war ein echtes Abenteuer.|El viaje fue una verdadera aventura.
 das Bewerbungsgespräch|la entrevista de trabajo|Morgen habe ich ein Bewerbungsgespräch.|Mañana tengo una entrevista de trabajo.
 das Ende|el final|Am Ende war alles gut.|Al final todo salió bien.
 das Handwerk|el oficio|Er hat ein Handwerk gelernt.|Aprendió un oficio.
 das Lebensmittel|el alimento|Lebensmittel sind teurer geworden.|Los alimentos se encarecieron.
-das Mitglied|el miembro|Sie ist Mitglied im Sportverein.|Es miembro del club deportivo.
 das Niveau|el nivel|Das Niveau des Kurses ist hoch.|El nivel del curso es alto.
-das Recht|el derecho|Jeder hat das Recht auf Bildung.|Todos tienen derecho a la educación.
 das Schicksal|el destino|Das war einfach Schicksal.|Eso fue simplemente el destino.
 das Thema|el tema|Das Thema interessiert mich sehr.|El tema me interesa mucho.
 das Umfeld|el entorno|Ein gutes Umfeld hilft beim Lernen.|Un buen entorno ayuda a aprender.
@@ -536,7 +394,6 @@ garantieren|garantizar|Wir garantieren pünktliche Lieferung.|Garantizamos la en
 gestalten|diseñar / organizar|Sie gestaltet den Garten selbst.|Ella diseña el jardín ella misma.
 lohnen|valer la pena|Der Ausflug lohnt sich.|La excursión vale la pena.
 raten|aconsejar|Ich rate dir, früh zu kommen.|Te aconsejo venir temprano.
-verreisen|irse de viaje|Wir wollen im Sommer verreisen.|Queremos irnos de viaje en verano.
 verwandeln|transformar|Der Regen verwandelt die Straße in einen Fluss.|La lluvia transforma la calle en un río.
 verzeihen|perdonar|Kannst du mir verzeihen?|¿Podés perdonarme?
 vorstellen|presentar / imaginar|Darf ich Ihnen meinen Kollegen vorstellen?|¿Puedo presentarle a mi colega?
@@ -599,54 +456,32 @@ die Ausrüstung|el equipo|Die Ausrüstung für die Wanderung ist teuer.|El equip
 die Berufsschule|la escuela de formación profesional|Er geht zweimal pro Woche in die Berufsschule.|Va dos veces por semana a la escuela profesional.
 die Bürgerinitiative|la iniciativa ciudadana|Eine Bürgerinitiative kämpft gegen den Lärm.|Una iniciativa ciudadana lucha contra el ruido.
 die Digitalisierung|la digitalización|Die Digitalisierung verändert die Arbeitswelt.|La digitalización cambia el mundo del trabajo.
-die Einreise|el ingreso al país|Für die Einreise brauchst du einen Pass.|Para ingresar al país necesitás un pasaporte.
 die Entsorgung|la eliminación de residuos|Die Entsorgung von Batterien ist geregelt.|La eliminación de pilas está regulada.
 die Ersatzteile|los repuestos|Ersatzteile sind schwer zu bekommen.|Los repuestos son difíciles de conseguir.
-die Frist|el plazo|Die Frist endet am Freitag.|El plazo termina el viernes.
 die Gebrauchsanweisung|el manual de uso|Lies bitte die Gebrauchsanweisung.|Leé por favor el manual de uso.
 die Gesundheitsvorsorge|la prevención de la salud|Gesundheitsvorsorge spart langfristig Kosten.|Prevenir la salud ahorra costos a largo plazo.
 die Informatik|la informática|Er studiert Informatik in Graz.|Estudia informática en Graz.
 die Kinderbetreuung|el cuidado de niños|Die Kinderbetreuung ist gut organisiert.|El cuidado de niños está bien organizado.
-die Laune|el humor|Er hat heute schlechte Laune.|Hoy está de mal humor.
 die Lücke|el hueco / la laguna|In meinem Wissen gibt es noch Lücken.|En mi conocimiento todavía hay lagunas.
-die Messe|la feria|Die Messe findet jedes Jahr statt.|La feria se hace todos los años.
 die Mischung|la mezcla|Das ist eine gute Mischung aus Sport und Kultur.|Es una buena mezcla de deporte y cultura.
-die Planung|la planificación|Die Planung der Reise dauert lange.|Planificar el viaje lleva mucho tiempo.
-die Reihe|la fila / la serie|Wir sitzen in der dritten Reihe.|Estamos sentados en la tercera fila.
 die Reinigung|la limpieza / la tintorería|Die Reinigung des Anzugs kostet zehn Euro.|La limpieza del traje cuesta diez euros.
 die Sammlung|la colección|Er hat eine große Sammlung alter Münzen.|Tiene una gran colección de monedas antiguas.
-die Sitzung|la reunión|Die Sitzung dauert zwei Stunden.|La reunión dura dos horas.
 die Störung|la falla / la perturbación|Es gibt eine Störung im Netz.|Hay una falla en la red.
-die Tagesordnung|el orden del día|Die Tagesordnung hat fünf Punkte.|El orden del día tiene cinco puntos.
-die Tätigkeit|la actividad|Seine Tätigkeit ist abwechslungsreich.|Su actividad es variada.
-die Umleitung|el desvío|Wegen der Baustelle gibt es eine Umleitung.|Por la obra hay un desvío.
 die Unterhaltung|la conversación / el entretenimiento|Die Unterhaltung war sehr interessant.|La conversación fue muy interesante.
 die Urkunde|el certificado|Er bekam eine Urkunde für den Sieg.|Recibió un certificado por la victoria.
 die Waage|la balanza|Die Waage zeigt zwei Kilo an.|La balanza marca dos kilos.
 die Wohnungssuche|la búsqueda de vivienda|Die Wohnungssuche ist in Berlin schwierig.|Buscar vivienda en Berlín es difícil.
 die Zulassung|la admisión / la habilitación|Er wartet auf die Zulassung zur Universität.|Espera la admisión a la universidad.
 der Absender|el remitente|Der Absender des Briefes ist unbekannt.|El remitente de la carta es desconocido.
-der Abstand|la distancia|Bitte halten Sie Abstand.|Por favor, mantenga la distancia.
-der Dienst|el servicio / el turno|Heute Nacht habe ich Dienst.|Esta noche tengo turno.
 der Entschluss|la determinación|Sein Entschluss steht fest.|Su determinación es firme.
 der Gegner|el oponente|Unser Gegner spielt sehr stark.|Nuestro oponente juega muy fuerte.
-der Lehrling|el aprendiz|Der Lehrling lernt in der Werkstatt.|El aprendiz aprende en el taller.
 der Nutzer|el usuario|Jeder Nutzer braucht ein Passwort.|Cada usuario necesita una contraseña.
-der Ruhestand|la jubilación|Mein Vater geht bald in den Ruhestand.|Mi padre se jubila pronto.
 der Stoff|la tela / la materia|Der Stoff ist sehr weich.|La tela es muy suave.
 der Veranstalter|el organizador|Der Veranstalter sagt das Konzert ab.|El organizador cancela el concierto.
-der Verband|la asociación|Der Verband vertritt viele Firmen.|La asociación representa a muchas empresas.
-der Vertreter|el representante|Der Vertreter der Firma kommt morgen.|El representante de la empresa viene mañana.
 das Ehepaar|el matrimonio|Das Ehepaar wohnt im zweiten Stock.|El matrimonio vive en el segundo piso.
-das Gebiet|la zona / el área|Dieses Gebiet ist sehr ruhig.|Esta zona es muy tranquila.
-das Gelände|el terreno|Das Gelände gehört der Stadt.|El terreno es de la ciudad.
 das Kapitel|el capítulo|Das letzte Kapitel ist spannend.|El último capítulo es emocionante.
 das Lager|el depósito|Die Ware liegt im Lager.|La mercadería está en el depósito.
-das Material|el material|Das Material ist sehr stabil.|El material es muy resistente.
 das Netz|la red|Das Netz ist heute langsam.|La red está lenta hoy.
-das Personal|el personal|Das Personal ist freundlich.|El personal es amable.
-das Quartal|el trimestre|Im ersten Quartal sind die Zahlen gut.|En el primer trimestre las cifras son buenas.
-das System|el sistema|Das System ist sehr einfach.|El sistema es muy simple.
 das Tempo|el ritmo / la velocidad|Das Tempo ist mir zu schnell.|El ritmo es muy rápido para mí.
 anbauen|cultivar / ampliar|Die Bauern wollen mehr Gemüse anbauen.|Los campesinos quieren cultivar más verduras.
 antreten|iniciar / presentarse|Er will die Stelle im Mai antreten.|Quiere comenzar en el puesto en mayo.
@@ -660,7 +495,6 @@ entfallen|quedar sin efecto|Der Termin kann leider entfallen.|La cita lamentable
 entnehmen|extraer / deducir|Dem Text lässt sich viel entnehmen.|Del texto se puede deducir mucho.
 gleichen|parecerse|Die Brüder gleichen sich sehr.|Los hermanos se parecen mucho.
 klagen|quejarse|Er klagt ständig über die Arbeit.|Se queja constantemente del trabajo.
-leiden|sufrir|Sie leidet an Rückenschmerzen.|Sufre de dolores de espalda.
 loswerden|deshacerse de|Ich will die alten Möbel loswerden.|Quiero deshacerme de los muebles viejos.
 mahnen|reclamar / advertir|Die Firma wird mich mahnen.|La empresa me va a reclamar el pago.
 nützen|servir / ser útil|Das kann uns nützen.|Eso nos puede servir.
@@ -669,7 +503,6 @@ retten|salvar|Der Arzt konnte ihn retten.|El médico pudo salvarlo.
 schalten|cambiar (marcha, canal)|Du musst in den zweiten Gang schalten.|Tenés que cambiar a segunda.
 schimpfen|retar / protestar|Er wird mit mir schimpfen.|Me va a retar.
 siegen|vencer|Unsere Mannschaft will siegen.|Nuestro equipo quiere ganar.
-spüren|sentir / notar|Ich kann den Unterschied spüren.|Puedo notar la diferencia.
 stempeln|sellar|Sie müssen die Fahrkarte stempeln.|Tiene que sellar el pasaje.
 stoßen|empujar / chocar|Ich will nicht an den Tisch stoßen.|No quiero chocar con la mesa.
 täuschen|engañar|Der Eindruck kann täuschen.|La impresión puede engañar.
