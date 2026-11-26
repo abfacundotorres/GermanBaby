@@ -58,7 +58,6 @@ jonas
 kaya
 keit
 kryptowährungen
-laga
 lena
 leon
 lindner
@@ -95,7 +94,6 @@ secondhand
 sharing
 shirt
 social
-sprachcaf
 standby
 streetworker
 tablet
@@ -114,3 +112,7 @@ working
 yilmaz
 lina
 mimi
+leons
+museumscafé
+málaga
+café

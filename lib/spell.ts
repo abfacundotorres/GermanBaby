@@ -35,7 +35,7 @@ export function suspectWords(): Suspect[] {
   const sp = makeSpeller();
   const map = new Map<string, Suspect>();
   for (const { src, text } of allGermanText()) {
-    for (const w of text.match(/[A-Za-zÄÖÜäöüß]{4,}/g) ?? []) {
+    for (const w of text.match(/[A-Za-zÄÖÜäöüßéèêáàç]{4,}/g) ?? []) {
       if (sp.correct(w)) continue;
       const k = w.toLowerCase();
       const cur = map.get(k);
