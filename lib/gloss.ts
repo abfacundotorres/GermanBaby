@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  ab: "(parte separable de abfahren: salir)",
   kauft: "compra",
   schön: "lindo / bonito", hast: "tenés", eine: "una", richtig: "correcto", vielen: "muchos (vielen Dank = muchas gracias)", schönen: "lindo (schönen Tag = que tengas un lindo día)", foto: "foto", von: "de", unser: "nuestro", schöne: "linda", personen: "personas", froh: "contento", termin: "turno / cita", machen: "hacer", gehen: "ir", essen: "comer", zuerst: "primero", bisschen: "poco (ein bisschen = un poco)", gehst: "vas",
   bin: "soy / estoy", mein: "mi", bruder: "hermano", er: "él", was: "qué", deine: "tu (femenino)", telefonnummer: "número de teléfono", café: "café (el lugar)", sagt: "dice", gehe: "voy", markt: "mercado", mir: "me / a mí", zurück: "de vuelta / atrás",
