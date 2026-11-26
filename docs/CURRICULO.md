@@ -18,7 +18,7 @@ Lo que el nivel **no** garantiza por sí solo: el B2 se mide con un examen, y en
 
 ## Gramática: qué unidad enseña qué
 
-- **A1** (unidades 1–15): presente regular e irregular (`sein`, `haben`), artículos y género, acusativo (`einen / eine`), posesivos, verbos separables, verbo en segunda posición, plural, dativo con preposiciones (`mit`, `zu`, `in`), verbos con cambio de vocal, modales, Perfekt, fonética (Aussprache).
+- **A1** (unidades 1–15, más 8 de ampliación: verbos, cuerpo y salud, casa y cocina, comida y compras, gente y naturaleza, cosas e ideas, adjetivos y palabras pequeñas, con las 235 palabras de A1 que antes eran solo tarjetas del entrenador): presente regular e irregular (`sein`, `haben`), artículos y género, acusativo (`einen / eine`), posesivos, verbos separables, verbo en segunda posición, plural, dativo con preposiciones (`mit`, `zu`, `in`), verbos con cambio de vocal, modales, Perfekt, fonética (Aussprache).
 - **A2** (16–24): pasado de los modales, `sein` y `haben`; reflexivos e imperativo; terminaciones del adjetivo; `weil`, `denn`, `deshalb`, `dass`, `wenn`; pronombres en dativo; preposiciones de lugar (dativo y acusativo); comparativo y superlativo; futuro con `werden`, `dürfen`, `sollen`, `würde gern`.
 - **B1** (25–35): Präteritum, `als / während / bevor / nachdem`, Plusquamperfekt, Konjunktiv II, oraciones de relativo, Passiv, `obwohl / trotzdem`, `um… zu` y `damit`, infinitivo con `zu`, genitivo, argumentar, verbos con preposición, Konjunktiv II del pasado, conectores.
 - **B2** (36–43): Konjunktiv I y discurso indirecto, participios como adjetivos, estilo nominal y registro formal, pasiva avanzada, conectores avanzados, texto de opinión, partículas y expresiones, preparación del examen.
@@ -82,3 +82,6 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 - `npm run preflight`: todas las reglas de vocabulario y ortografía en una pasada, con un esqueleto listo para `lib/gloss.ts`. Es lo que conviene correr antes de `npm test`.
 - `npm run report:time`: horas estimadas de primera pasada por nivel.
 - `tests/spell.test.ts` (en el CI): un corrector hunspell alemán (`nspell` + `dictionary-de`, solo en desarrollo) marca palabras no reconocidas. Las revisadas a mano y correctas (nombres, anglicismos, compuestos raros) viven en `tests/spell-ok.txt`.
+
+**Resultado de la ampliación de A1.** 23 unidades y 85 lecciones base (antes 15 y 55). Primera pasada estimada: ~33 h por `npm run report:time`, más ~4 h de consignas, simulacros y escuchas libres que esa cuenta no incluye. Las 235 palabras de A1 que eran solo tarjetas del entrenador pasaron a lecciones con ejercicios y diálogo; en el entrenador quedó una sola (`das Restaurant`).
+

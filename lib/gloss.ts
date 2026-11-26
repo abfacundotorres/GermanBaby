@@ -3,6 +3,7 @@
 // diálogo. tests/content.test.ts exige que toda palabra de un diálogo esté enseñada o acá.
 
 export const GLOSS: Record<string, string> = {
+  dass: "que (conjunción)", lache: "me río", autor: "autor", turm: "torre", tausend: "mil", sei: "sé (imperativo de sein)", nebenan: "al lado", putze: "limpio", helfe: "ayudo", seit: "desde", sitzt: "está sentado", hotel: "hotel", gehört: "pertenece", wenig: "poco", traurig: "triste", rauchen: "fumar", heim: "hogar / a casa",
   trifft: "encuentra", märz: "marzo", starken: "fuerte (acusativo)", scheint: "brilla", wichtige: "importante (con terminación)", welche: "qué / cuál", magst: "te gusta", auto: "auto", ersten: "primero (con terminación)", urlaub: "vacaciones", fliege: "vuelo (yo, del verbo volar)",
   kommt: "viene", bleibe: "me quedo", wohin: "adónde", versteht: "entiende", schnell: "rápido", antworte: "respondo", schlüssel: "llave", gebe: "doy", frisches: "fresco", öffnet: "abre", schließt: "cierra", kasse: "caja", antwort: "respuesta", ihm: "a él / le", zeitung: "diario", glaube: "creo", schwer: "difícil / pesado", sprache: "idioma", uns: "nos", nudeln: "fideos", wäsche: "ropa para lavar", wasche: "lavo", geschirr: "vajilla", dritten: "tercero", lacht: "se ríe", schlägt: "late / golpea", lange: "largo / mucho tiempo", klopft: "late / golpea", wichtig: "importante", nah: "cerca", besser: "mejor", steil: "empinado", bequem: "cómodo", rotes: "rojo (neutro)", scharf: "filoso / picante", hole: "traigo / busco", gesund: "sano", grün: "verde", süß: "dulce", wartet: "espera",
   sieht: "ve", man: "uno / se (impersonal)",
@@ -183,6 +184,7 @@ export const GLOSS: Record<string, string> = {
 
 /** Nombres propios y lugares que se aceptan sin enseñar. */
 export const PROPER = new Set([
+  "peru",
   "eva",
   "österreich",
   "costa", "nora",

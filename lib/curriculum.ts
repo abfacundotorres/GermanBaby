@@ -21,6 +21,7 @@ import { UNITS_A1_PART5 } from "./content/a1-part5.ts";
 import { UNITS_A1_PART6 } from "./content/a1-part6.ts";
 import { UNITS_A1_PART7 } from "./content/a1-part7.ts";
 import { UNITS_A1_PART8 } from "./content/a1-part8.ts";
+import { UNITS_A1_PART9 } from "./content/a1-part9.ts";
 import { UNITS_A2_PART1 } from "./content/a2-part1.ts";
 import { UNITS_A2_PART2 } from "./content/a2-part2.ts";
 import { UNITS_A2_PART3 } from "./content/a2-part3.ts";
@@ -359,7 +360,7 @@ const UNITS_A1_PART1: Unit[] = [
 const C1_ORDER = ["bruecke-c1", "akademisch", "konzessiv", "irrealis", "relativ-plus", "wortbildung", "funktionsverben", "vermutung", "redewendungen-c1", "diskussion-c1", "textanalyse", "medien-c1", "technik-c1", "pruefung-c1"];
 const orderC1 = (units: Unit[]) => [...units].sort((a, b) => C1_ORDER.indexOf(a.id) - C1_ORDER.indexOf(b.id));
 
-const UNITS_ALL: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART7, ...UNITS_A1_PART8, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_AUSSPRACHE_2, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_AUSSPRACHE_3, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART5, ...UNITS_B2_PART4, ...orderC1([...UNITS_C1_PART1, ...UNITS_C1_PART2, ...UNITS_C1_PART3, ...UNITS_C1_PART4, ...UNITS_C1_PART5, ...UNITS_C1_PART6])];
+const UNITS_ALL: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART7, ...UNITS_A1_PART8, ...UNITS_A1_PART9, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5, ...UNITS_AUSSPRACHE_2, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_AUSSPRACHE_3, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART5, ...UNITS_B2_PART4, ...orderC1([...UNITS_C1_PART1, ...UNITS_C1_PART2, ...UNITS_C1_PART3, ...UNITS_C1_PART4, ...UNITS_C1_PART5, ...UNITS_C1_PART6])];
 
 // La unidad de pronunciación va después de «Mi día» (unidad 8), cuando ya hay base de vocabulario.
 const AFTER_UNIT_8 = UNITS_ALL.findIndex((u) => u.id === "alltag") + 1;
