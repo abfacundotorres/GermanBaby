@@ -2,6 +2,7 @@
 // del nivel pero con textos propios (no son materiales oficiales). Para sumar un simulacro, agregá una entrada.
 
 import type { ListenQuestion } from "../curriculum.ts";
+import { EXAMS_A2X } from "./exams-a2x.ts";
 
 export type ExamText = { title: string; text: string[]; questions: ListenQuestion[] };
 export type ExamAudio = { title: string; setting: string; lines: { who: "f" | "m"; name: string; de: string }[]; questions: ListenQuestion[] };
@@ -1062,4 +1063,5 @@ export const EXAMS: Exam[] = [
       hint: "Ordená tu argumentación: tesis, razones, objeción con respuesta y propuesta final; buscá variedad de estructuras.",
     },
   },
+  ...EXAMS_A2X,
 ];
