@@ -25,7 +25,7 @@ export const UNITS_A1_PART9: Unit[] = [
           { de: "lustig", es: "gracioso", example: { de: "Der Film ist sehr lustig.", es: "La película es muy graciosa." } },
           { de: "interessant", es: "interesante", example: { de: "Das Buch ist interessant.", es: "El libro es interesante." } },
           { de: "langweilig", es: "aburrido", example: { de: "Die Stunde war langweilig.", es: "La clase fue aburrida." } },
-          { de: "froh", es: "contento", example: { de: "Ich bin froh, dass du da bist.", es: "Me alegra que estés." } },
+          { de: "froh", es: "contento", example: { de: "Sie ist heute sehr froh.", es: "Hoy está muy contenta." } },
         ],
         exercises: [
           cz("Der Film ist ___. Ich lache viel.", "La película es divertida. Me río mucho.", ["lustig", "langweilig", "schlecht", "hässlich"], "lustig", "«lustig» = divertido."),
@@ -40,8 +40,8 @@ export const UNITS_A1_PART9: Unit[] = [
           lines: [
             { who: "f", name: "Lena", de: "Wie war der Film?", es: "¿Cómo estuvo la película?" },
             { who: "m", name: "Max", de: "Nicht schlecht, aber ein bisschen langweilig.", es: "No estuvo mal, pero un poco aburrida." },
-            { who: "f", name: "Lena", de: "Das Buch ist interessanter und der Autor ist nett.", es: "El libro es más interesante y el autor es amable." },
-            { who: "m", name: "Max", de: "Ich bin froh, ich habe nur zehn Euro bezahlt.", es: "Me alegro, solo pagué diez euros." },
+            { who: "f", name: "Lena", de: "Schade! Wie viel hast du bezahlt?", es: "¡Qué lástima! ¿Cuánto pagaste?" },
+            { who: "m", name: "Max", de: "Nur zehn Euro. Ich bin froh.", es: "Solo diez euros. Estoy contento." },
           ],
           questions: [
             { type: "choice", q: "¿Cómo estuvo la película?", options: ["Un poco aburrida", "Muy divertida", "Horrible", "Excelente"], answer: "Un poco aburrida", why: "«ein bisschen langweilig»" },
@@ -77,13 +77,13 @@ export const UNITS_A1_PART9: Unit[] = [
           lines: [
             { who: "m", name: "Tom", de: "Der Berg ist sehr hoch. Der Weg ist lang.", es: "La montaña es muy alta. El camino es largo." },
             { who: "f", name: "Eva", de: "Du bist stark, ich bin schwach.", es: "Vos sos fuerte, yo soy débil." },
-            { who: "m", name: "Tom", de: "Nein! Das Wetter ist gut, die Pause ist kurz.", es: "¡No! El tiempo es bueno y la pausa es corta." },
+            { who: "m", name: "Tom", de: "Nein! Das Wetter ist gut. Wir machen eine kurze Pause.", es: "¡No! El clima es bueno. Hacemos una pausa corta." },
             { who: "f", name: "Eva", de: "Gut, gehen wir.", es: "Bien, vamos." },
           ],
           questions: [
             { type: "choice", q: "¿Cómo es la montaña?", options: ["Muy alta", "Baja", "Chica", "Corta"], answer: "Muy alta", why: "«sehr hoch»" },
             { type: "choice", q: "¿Cómo es el camino?", options: ["Largo", "Corto", "Fácil", "Ancho"], answer: "Largo", why: "«lang»" },
-            { type: "tf", q: "La pausa es larga.", answer: false, why: "«kurz»" },
+            { type: "tf", q: "La pausa es larga.", answer: false, why: "«kurze Pause»" },
           ],
         },
       },
@@ -114,8 +114,8 @@ export const UNITS_A1_PART9: Unit[] = [
           lines: [
             { who: "m", name: "Ben", de: "Meine Jacke ist nass! Und der Tee ist heiß.", es: "¡Mi campera está mojada! Y el té está caliente." },
             { who: "f", name: "Lisa", de: "Die Tür ist offen. Der Raum ist leer.", es: "La puerta está abierta. La habitación está vacía." },
-            { who: "m", name: "Ben", de: "Sei leise, das Kind schläft.", es: "Hacé silencio, el chico duerme." },
-            { who: "f", name: "Lisa", de: "Ja, aber die Musik von nebenan ist laut.", es: "Sí, pero la música del vecino está fuerte." },
+            { who: "m", name: "Ben", de: "Sei leise, das Kind schläft im Bett.", es: "Hacé silencio, el chico duerme en la cama." },
+            { who: "f", name: "Lisa", de: "Ja, aber die Musik von nebenan ist laut.", es: "Sí, pero la música de al lado está fuerte." },
           ],
           questions: [
             { type: "choice", q: "¿Cómo está la campera?", options: ["Mojada", "Seca", "Nueva", "Sucia"], answer: "Mojada", why: "«nass»" },
@@ -141,7 +141,7 @@ export const UNITS_A1_PART9: Unit[] = [
         exercises: [
           cz("Die Küche ist ___. Ich putze heute.", "La cocina está sucia. Hoy limpio.", ["schmutzig", "sauber", "trocken", "leise"], "schmutzig", "«schmutzig» = sucio."),
           cz("Das ist ganz ___. Ich helfe dir.", "Eso es muy fácil. Te ayudo.", ["einfach", "selten", "böse", "langsam"], "einfach", "«einfach» = simple / fácil."),
-          cz("Der Zug ist ___. Wir sind spät.", "El tren es lento. Llegamos tarde.", ["langsam", "sauber", "trocken", "möglich"], "langsam", "«langsam» = lento."),
+          cz("Der Zug ist ___. Wir kommen zu spät.", "El tren es lento. Llegamos tarde.", ["langsam", "sauber", "trocken", "möglich"], "langsam", "«langsam» = lento."),
           { kind: "write", es: "Es posible.", references: ["Das ist möglich", "Es ist möglich"] },
           { kind: "speak", de: "Ich sehe ihn selten", es: "Lo veo pocas veces" },
         ],
@@ -150,7 +150,7 @@ export const UNITS_A1_PART9: Unit[] = [
           setting: "Mia y Tom limpian el departamento",
           lines: [
             { who: "f", name: "Mia", de: "Die Wohnung ist schmutzig. Wir putzen heute.", es: "El departamento está sucio. Hoy limpiamos." },
-            { who: "m", name: "Tom", de: "Ist das möglich? Es ist viel Arbeit.", es: "¿Es posible? Es mucho trabajo." },
+            { who: "m", name: "Tom", de: "Ist das heute möglich? Es ist viel Arbeit.", es: "¿Se puede hoy? Es mucho trabajo." },
             { who: "f", name: "Mia", de: "Ja, es ist einfach, aber wir sind langsam.", es: "Sí, es fácil, pero somos lentos." },
             { who: "m", name: "Tom", de: "Danach ist alles sauber und trocken.", es: "Después todo está limpio y seco." },
           ],
@@ -186,7 +186,7 @@ export const UNITS_A1_PART9: Unit[] = [
           { de: "oben", es: "arriba", example: { de: "Oben wohnt eine Familie.", es: "Arriba vive una familia." } },
           { de: "unten", es: "abajo", example: { de: "Unten ist die Küche.", es: "Abajo está la cocina." } },
           { de: "draußen", es: "afuera", example: { de: "Draußen regnet es.", es: "Afuera llueve." } },
-          { de: "drinnen", es: "adentro", example: { de: "Drinnen ist es warm.", es: "Adentro hace calor." } },
+          { de: "drinnen", es: "adentro", example: { de: "Drinnen ist es warm.", es: "Adentro está calentito." } },
           { de: "vorne", es: "adelante", example: { de: "Er sitzt vorne im Bus.", es: "Está sentado adelante en el colectivo." } },
           { de: "mitten", es: "en el medio", example: { de: "Das Hotel liegt mitten in der Stadt.", es: "El hotel queda en pleno centro." } },
           { de: "wohin", es: "adónde", example: { de: "Wohin gehst du?", es: "¿Adónde vas?" } },
@@ -225,14 +225,14 @@ export const UNITS_A1_PART9: Unit[] = [
           { de: "wieder", es: "de nuevo", example: { de: "Ich rufe dich wieder an.", es: "Te vuelvo a llamar." } },
           { de: "schon", es: "ya", example: { de: "Bist du schon fertig?", es: "¿Ya terminaste?" } },
           { de: "noch", es: "todavía", example: { de: "Ich bin noch müde.", es: "Todavía estoy cansado." } },
-          { de: "fertig", es: "listo / terminado", example: { de: "Wir sind gleich fertig.", es: "Ya terminamos." } },
+          { de: "fertig", es: "listo / terminado", example: { de: "Wir sind gleich fertig.", es: "Estamos listos enseguida." } },
           { de: "zurück", es: "de vuelta", example: { de: "Ich komme bald zurück.", es: "Vuelvo pronto." } },
         ],
         exercises: [
-          cz("Ich komme ___. Warte bitte.", "Vengo enseguida. Esperá, por favor.", ["gleich", "schon", "noch", "zurück"], "gleich", "«gleich» = enseguida."),
-          cz("Ich bin ___ fertig.", "Ya terminé.", ["schon", "noch", "sofort", "wieder"], "schon", "«schon» = ya."),
-          cz("Bist du ___ nicht fertig?", "¿Todavía no terminaste?", ["noch", "schon", "jetzt", "zurück"], "noch", "«noch nicht» = todavía no."),
-          { kind: "write", es: "Vuelvo enseguida.", references: ["Ich komme gleich zurück"] },
+          cz("Warte bitte, ich bin ___ fertig.", "Esperá, por favor, termino enseguida.", ["gleich", "noch", "zurück", "wohin"], "gleich", "«gleich» = enseguida."),
+          cz("Ich bin ___ fertig.", "Ya terminé.", ["schon", "noch", "zurück", "wohin"], "schon", "«schon» = ya."),
+          cz("Bist du ___ nicht fertig?", "¿Todavía no terminaste?", ["noch", "schon", "zurück", "dort"], "noch", "«noch nicht» = todavía no."),
+          { kind: "write", es: "Vuelvo enseguida.", references: ["Ich komme gleich zurück", "Ich bin gleich zurück"] },
           { kind: "speak", de: "Komm sofort", es: "Vení enseguida" },
         ],
         dialogue: {
@@ -241,12 +241,12 @@ export const UNITS_A1_PART9: Unit[] = [
           lines: [
             { who: "f", name: "Anna", de: "Bist du schon fertig?", es: "¿Ya terminaste?" },
             { who: "m", name: "Tom", de: "Noch nicht. Ich bin gleich fertig.", es: "Todavía no. Termino enseguida." },
-            { who: "f", name: "Anna", de: "Komm jetzt, das Essen ist sofort kalt.", es: "Vení ahora, la comida se enfría enseguida." },
-            { who: "m", name: "Tom", de: "Gut. Ich komme wieder zurück.", es: "Bien. Vuelvo después." },
+            { who: "f", name: "Anna", de: "Komm jetzt, das Essen ist schon kalt.", es: "Vení ahora, la comida ya está fría." },
+            { who: "m", name: "Tom", de: "Gut. Ich komme sofort.", es: "Bien. Voy enseguida." },
           ],
           questions: [
             { type: "choice", q: "¿Está listo Tom?", options: ["Todavía no", "Sí, ya", "No quiere", "No se sabe"], answer: "Todavía no", why: "«Noch nicht»" },
-            { type: "choice", q: "¿Qué dice Anna de la comida?", options: ["Se enfría enseguida", "Está lista", "Está caliente", "Está fría"], answer: "Se enfría enseguida", why: "«sofort kalt»" },
+            { type: "choice", q: "¿Qué dice Anna de la comida?", options: ["Ya está fría", "Está lista", "Está caliente", "Falta sal"], answer: "Ya está fría", why: "«schon kalt»" },
             { type: "tf", q: "Tom dice que termina enseguida.", answer: true, why: "«gleich fertig»" },
           ],
         },
@@ -269,10 +269,10 @@ export const UNITS_A1_PART9: Unit[] = [
           { de: "nichts", es: "nada", example: { de: "Ich habe nichts gehört.", es: "No escuché nada." } },
         ],
         exercises: [
-          cz("Ich habe ___ zehn Euro.", "Tengo solo diez euros.", ["nur", "auch", "ganz", "alle"], "nur", "«nur» = solo."),
-          cz("Ich möchte ___ Wasser.", "Quiero un poco de agua.", ["etwas", "nichts", "kein", "alle"], "etwas", "«etwas» = algo / un poco."),
+          cz("Ich habe ___ zehn Euro.", "Tengo solo diez euros.", ["nur", "ganz", "alle", "etwas"], "nur", "«nur» = solo."),
+          cz("Ich möchte ___ Wasser.", "Quiero un poco de agua.", ["etwas", "nichts", "alle", "viele"], "etwas", "«etwas» = algo / un poco."),
           cz("Ich habe ___ Hunger.", "No tengo hambre.", ["keinen", "kein", "nicht", "keine"], "keinen", "«der Hunger» es masculino: «keinen»."),
-          { kind: "write", es: "Hay mucha gente.", references: ["Es gibt viele Leute", "Da sind viele Leute"] },
+          { kind: "write", es: "Hay mucha gente.", references: ["Es gibt viele Leute", "Da sind viele Leute", "Viele Leute sind da"] },
           { kind: "speak", de: "Alle sind hier", es: "Todos están acá" },
         ],
         dialogue: {
@@ -282,7 +282,7 @@ export const UNITS_A1_PART9: Unit[] = [
             { who: "f", name: "Lisa", de: "Sind alle hier? Es gibt viele Gäste.", es: "¿Están todos acá? Hay muchos invitados." },
             { who: "m", name: "Ben", de: "Ja, jeder ist da. Aber es gibt nichts zu essen.", es: "Sí, todos están. Pero no hay nada para comer." },
             { who: "f", name: "Lisa", de: "Ich habe etwas Brot. Und du?", es: "Tengo algo de pan. ¿Y vos?" },
-            { who: "m", name: "Ben", de: "Ich habe auch nur wenig. Wir brauchen mehr.", es: "Yo tengo también poco. Necesitamos más." },
+            { who: "m", name: "Ben", de: "Ich habe auch nur wenig. Wir brauchen mehr.", es: "Yo también tengo poco. Necesitamos más." },
           ],
           questions: [
             { type: "choice", q: "¿Cuántos invitados hay?", options: ["Muchos", "Pocos", "Ninguno", "Uno"], answer: "Muchos", why: "«viele Gäste»" },
@@ -339,7 +339,7 @@ export const UNITS_A1_PART9: Unit[] = [
           { de: "bei", es: "en / en lo de", example: { de: "Ich bin bei meiner Tante.", es: "Estoy en lo de mi tía." } },
           { de: "von", es: "de", example: { de: "Das Geschenk ist von meiner Mutter.", es: "El regalo es de mi mamá." } },
           { de: "aus", es: "de / desde", example: { de: "Er kommt aus Peru.", es: "Él es de Perú." } },
-          { de: "nach", es: "a / después de", example: { de: "Nach der Arbeit gehe ich heim.", es: "Después del trabajo me voy a casa." } },
+          { de: "nach", es: "a / después de", example: { de: "Nach der Arbeit gehe ich nach Hause.", es: "Después del trabajo me voy a casa." } },
           { de: "durch", es: "por / a través de", example: { de: "Wir gehen durch den Park.", es: "Caminamos por el parque." } },
           { de: "gegen", es: "contra", example: { de: "Ich habe nichts gegen Hunde.", es: "No tengo nada contra los perros." } },
           { de: "zusammen", es: "juntos", example: { de: "Wir lernen zusammen.", es: "Estudiamos juntos." } },

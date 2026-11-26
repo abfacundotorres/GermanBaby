@@ -23,7 +23,7 @@ export const UNITS_A1_PART8: Unit[] = [
           { de: "die Freundin", es: "la amiga / la novia", example: { de: "Meine Freundin kommt aus Italien.", es: "Mi amiga es de Italia." } },
           { de: "die Familie", es: "la familia", example: { de: "Die Familie isst zusammen.", es: "La familia come junta." } },
           { de: "der Junge", es: "el chico", example: { de: "Der Junge spielt im Garten.", es: "El chico juega en el jardín." } },
-          { de: "der Name", es: "el nombre", example: { de: "Wie ist dein Name?", es: "¿Cómo es tu nombre?" } },
+          { de: "der Name", es: "el nombre", example: { de: "Wie ist dein Name?", es: "¿Cuál es tu nombre?" } },
           { de: "die Chefin", es: "la jefa", example: { de: "Meine Chefin ist nett.", es: "Mi jefa es simpática." } },
           { de: "der Lehrer", es: "el docente", example: { de: "Der Lehrer erklärt alles langsam.", es: "El docente explica todo despacio." } },
           { de: "der Student", es: "el estudiante", example: { de: "Der Student lernt viel.", es: "El estudiante estudia mucho." } },
@@ -41,7 +41,7 @@ export const UNITS_A1_PART8: Unit[] = [
           lines: [
             { who: "f", name: "Nina", de: "Das ist mein Freund Tom. Er ist Student.", es: "Este es mi amigo Tom. Es estudiante." },
             { who: "m", name: "Tom", de: "Hallo! Das ist meine Familie.", es: "¡Hola! Esta es mi familia." },
-            { who: "f", name: "Nina", de: "Und das ist unsere Chefin. Sie ist sehr nett.", es: "Y esta es nuestra jefa. Es muy amable." },
+            { who: "f", name: "Nina", de: "Und das ist meine Chefin. Sie ist sehr nett.", es: "Y esta es mi jefa. Es muy amable." },
             { who: "m", name: "Tom", de: "Wie ist ihr Name?", es: "¿Cuál es su nombre?" },
           ],
           questions: [
@@ -100,7 +100,7 @@ export const UNITS_A1_PART8: Unit[] = [
           { de: "die Sonne", es: "el sol", example: { de: "Die Sonne scheint.", es: "Sale el sol." } },
         ],
         exercises: [
-          cz("Im Winter gibt es ___.", "En invierno hay nieve.", ["Schnee", "Sonne", "Blume", "Baum"], "Schnee", "«der Schnee» = la nieve."),
+          cz("Im Winter gibt es ___.", "En invierno hay nieve.", ["Schnee", "Dach", "Blume", "Teller"], "Schnee", "«der Schnee» = la nieve."),
           cz("Die ___ scheint heute.", "Hoy brilla el sol.", ["Sonne", "Wind", "Luft", "Schnee"], "Sonne", "«die Sonne» = el sol."),
           cz("Im Garten steht ein ___.", "En el jardín hay un árbol.", ["Baum", "Wind", "Luft", "Schnee"], "Baum", "«der Baum» = el árbol."),
           { kind: "write", es: "La flor es roja.", references: ["Die Blume ist rot"] },
@@ -188,9 +188,9 @@ export const UNITS_A1_PART8: Unit[] = [
           { de: "die Sache", es: "el asunto / la cosa", example: { de: "Das ist eine wichtige Sache.", es: "Es un asunto importante." } },
         ],
         exercises: [
-          cz("Ich habe ein ___.", "Tengo un problema.", ["Problem", "Lösung", "Beispiel", "Satz"], "Problem", "«das Problem» = el problema."),
+          cz("Ich habe ein ___.", "Tengo un problema.", ["Problem", "Lösung", "Hilfe", "Satz"], "Problem", "«das Problem» = el problema."),
           cz("Ich brauche ___.", "Necesito ayuda.", ["Hilfe", "Lösung", "Ding", "Sache"], "Hilfe", "«die Hilfe» = la ayuda."),
-          cz("Das ist ein gutes ___.", "Eso es un buen ejemplo.", ["Beispiel", "Problem", "Ding", "Satz"], "Beispiel", "«das Beispiel» = el ejemplo."),
+          cz("Das ist ein gutes ___.", "Eso es un buen ejemplo.", ["Beispiel", "Satz", "Lösung", "Hilfe"], "Beispiel", "«das Beispiel» = el ejemplo."),
           { kind: "write", es: "Tengo una solución.", references: ["Ich habe eine Lösung"] },
           { kind: "speak", de: "Das ist eine wichtige Sache", es: "Esa es una cosa importante" },
         ],
@@ -201,11 +201,11 @@ export const UNITS_A1_PART8: Unit[] = [
             { who: "m", name: "Paul", de: "Ich habe ein Problem mit meinem Handy.", es: "Tengo un problema con mi celular." },
             { who: "f", name: "Lena", de: "Ich habe eine Information für dich.", es: "Tengo una información para vos." },
             { who: "m", name: "Paul", de: "Gibt es eine Lösung?", es: "¿Hay una solución?" },
-            { who: "f", name: "Lena", de: "Ja. Ich gebe dir Hilfe. Das ist kein Problem.", es: "Sí. Te ayudo. No es ningún problema." },
+            { who: "f", name: "Lena", de: "Ja. Ich helfe dir gern. Das ist kein Problem.", es: "Sí. Te ayudo con gusto. No es ningún problema." },
           ],
           questions: [
             { type: "choice", q: "¿Qué problema tiene Paul?", options: ["Con su celular", "Con su auto", "Con el trabajo", "Con la llave"], answer: "Con su celular", why: "«mit meinem Handy»" },
-            { type: "choice", q: "¿Qué ofrece Lena?", options: ["Ayuda", "Dinero", "Un celular", "Un libro"], answer: "Ayuda", why: "«Ich gebe dir Hilfe»" },
+            { type: "choice", q: "¿Qué ofrece Lena?", options: ["Ayuda", "Dinero", "Un celular", "Un libro"], answer: "Ayuda", why: "«Ich helfe dir»" },
             { type: "tf", q: "Lena dice que es un gran problema.", answer: false, why: "«kein Problem»" },
           ],
         },
@@ -224,9 +224,9 @@ export const UNITS_A1_PART8: Unit[] = [
           { de: "die Farbe", es: "el color", example: { de: "Welche Farbe magst du?", es: "¿Qué color te gusta?" } },
         ],
         exercises: [
-          cz("Das ist das erste ___.", "Esta es la primera vez.", ["Mal", "Teil", "Zahl", "Farbe"], "Mal", "«das Mal» = la vez."),
-          cz("Die ___ ist sieben.", "El número es siete.", ["Zahl", "Farbe", "Seite", "Grund"], "Zahl", "«die Zahl» = el número / la cifra."),
-          cz("Welche ___ hat das Auto?", "¿De qué color es el auto?", ["Farbe", "Seite", "Grund", "Teil"], "Farbe", "«die Farbe» = el color."),
+          cz("Das ist das erste ___.", "Esta es la primera vez.", ["Mal", "Zahl", "Farbe", "Seite"], "Mal", "«das Mal» = la vez."),
+          cz("Die ___ ist sieben.", "El número es siete.", ["Zahl", "Farbe", "Grund", "Teil"], "Zahl", "«die Zahl» = el número / la cifra."),
+          cz("Welche ___ hat das Auto?", "¿De qué color es el auto?", ["Farbe", "Grund", "Teil", "Mal"], "Farbe", "«die Farbe» = el color."),
           { kind: "write", es: "Abrí la página tres.", references: ["Öffne Seite drei", "Öffnen Sie Seite drei"] },
           { kind: "speak", de: "Was ist der Grund", es: "¿Cuál es la razón?" },
         ],
@@ -260,9 +260,9 @@ export const UNITS_A1_PART8: Unit[] = [
           { de: "die Liebe", es: "el amor", example: { de: "Die Liebe ist wichtig.", es: "El amor es importante." } },
         ],
         exercises: [
-          cz("Die ___ dauert zwei Stunden.", "El viaje dura dos horas.", ["Fahrt", "Ziel", "Spaß", "Liebe"], "Fahrt", "«die Fahrt» = el viaje."),
+          cz("Die ___ dauert zwei Stunden.", "El viaje dura dos horas.", ["Fahrt", "Ziel", "Spaß", "Nummer"], "Fahrt", "«die Fahrt» = el viaje."),
           cz("Das ___ fliegt nach Madrid.", "El avión vuela a Madrid.", ["Flugzeug", "Schiff", "Ziel", "Streit"], "Flugzeug", "«das Flugzeug» = el avión."),
-          cz("Wir haben viel ___ im Urlaub.", "Nos divertimos mucho en las vacaciones.", ["Spaß", "Streit", "Ziel", "Fahrt"], "Spaß", "«der Spaß» = la diversión."),
+          cz("Wir haben viel ___ im Urlaub.", "Nos divertimos mucho en las vacaciones.", ["Spaß", "Ziel", "Schiff", "Dach"], "Spaß", "«der Spaß» = la diversión."),
           { kind: "write", es: "Mi destino es Berlín.", references: ["Mein Ziel ist Berlin"] },
           { kind: "speak", de: "Das Schiff ist groß", es: "El barco es grande" },
         ],
@@ -294,8 +294,8 @@ export const UNITS_A1_PART8: Unit[] = [
         ],
         exercises: [
           cz("Eine ___ hat sieben Tage.", "Una semana tiene siete días.", ["Woche", "Monat", "Abend", "Tag"], "Woche", "«die Woche» = la semana."),
-          cz("Ein ___ hat dreißig Tage.", "Un mes tiene treinta días.", ["Monat", "Woche", "Abend", "Tag"], "Monat", "«der Monat» = el mes."),
-          cz("Am ___ sehe ich fern.", "A la noche miro tele.", ["Abend", "Woche", "Monat", "Tag"], "Abend", "«der Abend» = la tarde-noche."),
+          cz("Ein ___ hat vier Wochen.", "Un mes tiene cuatro semanas.", ["Monat", "Woche", "Abend", "Tag"], "Monat", "«der Monat» = el mes."),
+          cz("Am ___ sehe ich fern.", "A la noche miro tele.", ["Abend", "Woche", "Monat", "Teller"], "Abend", "«der Abend» = la tarde-noche."),
           { kind: "write", es: "Hoy es un buen día.", references: ["Heute ist ein guter Tag"] },
           { kind: "speak", de: "Ich habe eine Woche Urlaub", es: "Tengo una semana de vacaciones" },
         ],
@@ -305,7 +305,7 @@ export const UNITS_A1_PART8: Unit[] = [
           lines: [
             { who: "f", name: "Anna", de: "Wie lange dauert dein Urlaub?", es: "¿Cuánto dura tu vacación?" },
             { who: "m", name: "Tom", de: "Eine Woche. Das sind sieben Tage.", es: "Una semana. Son siete días." },
-            { who: "f", name: "Anna", de: "Und dein Kurs? Er dauert einen Monat.", es: "¿Y tu curso? Dura un mes." },
+            { who: "f", name: "Anna", de: "Und dein Kurs? Dauert er einen Monat?", es: "¿Y tu curso? ¿Dura un mes?" },
             { who: "m", name: "Tom", de: "Ja, und am Abend lerne ich.", es: "Sí, y a la noche estudio." },
           ],
           questions: [
@@ -318,7 +318,7 @@ export const UNITS_A1_PART8: Unit[] = [
     ],
     chat: {
       title: "Planear un viaje",
-      scenario: "Sos Herr Maier, un amigo que ayuda a planear un viaje. Tratás al usuario de vos (du). Le preguntás cuándo viaja, cuánto dura la fahrt y qué necesita, con frases cortas de nivel A1.",
+      scenario: "Sos Herr Maier, un amigo que ayuda a planear un viaje. Tratás al usuario de vos (du). Le preguntás cuándo viaja, cuánto dura el viaje y qué necesita, con frases cortas de nivel A1.",
       opener: "Hallo! Wann fährst du?",
       openerEs: "¡Hola! ¿Cuándo viajás?",
     },

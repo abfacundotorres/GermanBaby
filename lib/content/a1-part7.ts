@@ -173,8 +173,8 @@ export const UNITS_A1_PART7: Unit[] = [
         ],
         exercises: [
           cz("Ich ___ es nicht.", "No lo sé.", ["weiß", "weißt", "wissen", "wisst"], "weiß", "«wissen» con «ich»: weiß."),
-          cz("Er ___ ein Buch.", "Él lee un libro.", ["liest", "lese", "liest?", "lesen"], "liest", "«lesen» con «er»: liest."),
-          cz("Ich ___ gern Pizza.", "Me gusta la pizza.", ["mag", "magst", "mögen", "möchte"], "mag", "«mögen» con «ich»: mag."),
+          cz("Er ___ ein Buch.", "Él lee un libro.", ["liest", "lese", "lest", "lesen"], "liest", "«lesen» con «er»: liest."),
+          cz("Ich ___ gern Pizza.", "Me gusta la pizza.", ["mag", "magst", "mögen", "mögt"], "mag", "«mögen» con «ich»: mag."),
           { kind: "write", es: "Escribo una carta.", references: ["Ich schreibe einen Brief"] },
           { kind: "speak", de: "Ich lerne jeden Tag Deutsch", es: "Aprendo alemán todos los días" },
         ],
@@ -200,7 +200,7 @@ export const UNITS_A1_PART7: Unit[] = [
         goal: "Usar essen, trinken, sehen, kochen, putzen y waschen.",
         vocab: [
           { de: "essen", es: "comer", example: { de: "Wir essen zusammen.", es: "Comemos juntos." } },
-          { de: "trinken", es: "tomar / beber", example: { de: "Sie trinken gern Tee.", es: "Ellos toman té con gusto." } },
+          { de: "trinken", es: "tomar / beber", example: { de: "Sie trinken gern Tee.", es: "Les gusta tomar té." } },
           { de: "sehen", es: "ver", example: { de: "Wir sehen uns morgen.", es: "Nos vemos mañana." } },
           { de: "kochen", es: "cocinar", example: { de: "Wir kochen heute Nudeln.", es: "Hoy cocinamos fideos." } },
           { de: "putzen", es: "limpiar", example: { de: "Wir putzen die Wohnung.", es: "Limpiamos el departamento." } },
@@ -236,7 +236,7 @@ export const UNITS_A1_PART7: Unit[] = [
         vocab: [
           { de: "arbeiten", es: "trabajar", example: { de: "Wir arbeiten von zu Hause.", es: "Trabajamos desde casa." } },
           { de: "wohnen", es: "vivir (residir)", example: { de: "Wir wohnen im dritten Stock.", es: "Vivimos en el tercer piso." } },
-          { de: "leben", es: "vivir (estar vivo)", example: { de: "Wir leben gern hier.", es: "Vivimos con gusto acá." } },
+          { de: "leben", es: "vivir (estar vivo)", example: { de: "Wir leben gern hier.", es: "Nos gusta vivir acá." } },
           { de: "warten", es: "esperar", example: { de: "Wir warten auf den Zug.", es: "Esperamos el tren." } },
           { de: "liegen", es: "estar (acostado)", example: { de: "Das Buch liegt auf dem Tisch.", es: "El libro está sobre la mesa." } },
           { de: "sitzen", es: "estar sentado", example: { de: "Wir sitzen im Park.", es: "Estamos sentados en el parque." } },
@@ -257,7 +257,7 @@ export const UNITS_A1_PART7: Unit[] = [
             { who: "f", name: "Nina", de: "Wo wohnst du jetzt?", es: "¿Dónde vivís ahora?" },
             { who: "m", name: "Ben", de: "Ich wohne in Köln und arbeite in einem Büro.", es: "Vivo en Colonia y trabajo en una oficina." },
             { who: "f", name: "Nina", de: "Wir sitzen hier und warten auf Tom.", es: "Estamos sentados acá esperando a Tom." },
-            { who: "m", name: "Ben", de: "Er lacht immer. Das ist schön!", es: "Él siempre se ríe. ¡Qué lindo!" },
+            { who: "m", name: "Ben", de: "Tom lacht immer. Das ist schön!", es: "Tom siempre se ríe. ¡Qué lindo!" },
           ],
           questions: [
             { type: "choice", q: "¿Dónde vive Ben?", options: ["En Colonia", "En Berlín", "En Viena", "En Hamburgo"], answer: "En Colonia", why: "«in Köln»" },
@@ -303,12 +303,12 @@ export const UNITS_A1_PART7: Unit[] = [
         ],
         dialogue: {
           title: "Un dolor",
-          setting: "Una paciente habla con la doctora",
+          setting: "Una paciente habla con el médico",
           lines: [
             { who: "f", name: "Frau Roth", de: "Mein Fuß tut weh.", es: "Me duele el pie." },
-            { who: "m", name: "Ärztin", de: "Und das Ohr?", es: "¿Y la oreja?" },
+            { who: "m", name: "Arzt", de: "Und das Ohr?", es: "¿Y la oreja?" },
             { who: "f", name: "Frau Roth", de: "Das Ohr ist gut, aber mein Herz klopft schnell.", es: "La oreja está bien, pero el corazón me late rápido." },
-            { who: "m", name: "Ärztin", de: "Wir machen einen Test.", es: "Hacemos un estudio." },
+            { who: "m", name: "Arzt", de: "Wir machen einen Test.", es: "Hacemos un estudio." },
           ],
           questions: [
             { type: "choice", q: "¿Qué le duele?", options: ["El pie", "La oreja", "El ojo", "La nariz"], answer: "El pie", why: "«Mein Fuß tut weh»" },
@@ -340,7 +340,7 @@ export const UNITS_A1_PART7: Unit[] = [
         ],
         dialogue: {
           title: "En el hospital",
-          setting: "Tom visita a un amigo en el hospital",
+          setting: "Tom visita a una amiga en el hospital",
           lines: [
             { who: "m", name: "Tom", de: "Wie geht es dir? Du bist im Krankenhaus.", es: "¿Cómo estás? Estás en el hospital." },
             { who: "f", name: "Lisa", de: "Besser. Der Arzt ist nett.", es: "Mejor. El médico es amable." },
@@ -383,7 +383,7 @@ export const UNITS_A1_PART7: Unit[] = [
           { de: "das Sofa", es: "el sofá", example: { de: "Das Sofa ist bequem.", es: "El sofá es cómodo." } },
         ],
         exercises: [
-          cz("Das Haus hat ein rotes ___.", "La casa tiene un techo rojo.", ["Dach", "Wand", "Boden", "Sofa"], "Dach", "«das Dach» = el techo."),
+          cz("Das Haus hat ein rotes ___.", "La casa tiene un techo rojo.", ["Dach", "Wand", "Boden", "Dusche"], "Dach", "«das Dach» = el techo."),
           cz("Ich gehe die ___ hoch.", "Subo la escalera.", ["Treppe", "Wand", "Dusche", "Toilette"], "Treppe", "«die Treppe» = la escalera."),
           cz("Nach der Dusche nehme ich das ___.", "Después de la ducha agarro la toalla.", ["Handtuch", "Sofa", "Dach", "Boden"], "Handtuch", "«das Handtuch» = la toalla."),
           { kind: "write", es: "El sofá es nuevo.", references: ["Das Sofa ist neu"] },
@@ -422,7 +422,7 @@ export const UNITS_A1_PART7: Unit[] = [
         ],
         exercises: [
           cz("Die Milch ist im ___.", "La leche está en la heladera.", ["Kühlschrank", "Teller", "Messer", "Licht"], "Kühlschrank", "«der Kühlschrank» = la heladera."),
-          cz("Ich esse die Suppe mit dem ___.", "Como la sopa con la cuchara... y el plato.", ["Teller", "Messer", "Gabel", "Glas"], "Teller", "«der Teller» = el plato."),
+          cz("Das Essen liegt auf dem ___.", "La comida está en el plato.", ["Teller", "Messer", "Gabel", "Glas"], "Teller", "«der Teller» = el plato."),
           cz("Das ___ ist an.", "La luz está prendida.", ["Licht", "Glas", "Flasche", "Tasse"], "Licht", "«das Licht» = la luz."),
           { kind: "write", es: "Quiero una taza de té.", references: ["Ich möchte eine Tasse Tee"] },
           { kind: "speak", de: "Das Glas ist leer", es: "El vaso está vacío" },
@@ -437,7 +437,7 @@ export const UNITS_A1_PART7: Unit[] = [
             { who: "m", name: "Jan", de: "Gut. Mach bitte das Licht an.", es: "Bien. Prendé la luz, por favor." },
           ],
           questions: [
-            { type: "choice", q: "¿Qué trae Jan además del cuchillo?", options: ["Un vaso", "Una taza", "Una botella", "Un plato"], answer: "Un vaso", why: "«ein Glas»" },
+            { type: "choice", q: "¿Qué trae Jan?", options: ["Un vaso", "Una taza", "Una botella", "Un plato"], answer: "Un vaso", why: "«ein Glas»" },
             { type: "choice", q: "¿Dónde está la botella?", options: ["En la heladera", "En la mesa", "En el piso", "En el estante"], answer: "En la heladera", why: "«im Kühlschrank»" },
             { type: "choice", q: "¿Qué pide Jan al final?", options: ["Que prenda la luz", "Que abra la ventana", "Que cierre la puerta", "Que apague el horno"], answer: "Que prenda la luz", why: "«Mach das Licht an»" },
           ],
@@ -469,13 +469,13 @@ export const UNITS_A1_PART7: Unit[] = [
           { de: "die Wurst", es: "el embutido / la salchicha", example: { de: "Die Wurst schmeckt gut.", es: "La salchicha es rica." } },
           { de: "die Butter", es: "la manteca", example: { de: "Die Butter ist im Kühlschrank.", es: "La manteca está en la heladera." } },
           { de: "das Hähnchen", es: "el pollo", example: { de: "Wir essen heute Hähnchen.", es: "Hoy comemos pollo." } },
-          { de: "die Cola", es: "la cola", example: { de: "Ich trinke eine Cola.", es: "Tomo una cola." } },
+          { de: "die Cola", es: "la cola (gaseosa)", example: { de: "Ich trinke eine Cola.", es: "Tomo una cola." } },
           { de: "die Dose", es: "la lata", example: { de: "Ich kaufe eine Dose Tomaten.", es: "Compro una lata de tomates." } },
         ],
         exercises: [
-          cz("Ich esse gern ___.", "Como fruta con gusto.", ["Obst", "Cola", "Dose", "Butter"], "Obst", "«das Obst» = la fruta."),
-          cz("Ein Apfel und eine ___.", "Una manzana y una banana.", ["Banane", "Wurst", "Dose", "Butter"], "Banane", "«die Banane» = la banana."),
-          cz("Die ___ ist kalt und süß.", "La gaseosa está fría y dulce.", ["Cola", "Butter", "Wurst", "Orange"], "Cola", "«die Cola» = la gaseosa."),
+          cz("Ich esse gern ___.", "Me gusta comer fruta.", ["Obst", "Cola", "Dose", "Teller"], "Obst", "«das Obst» = la fruta."),
+          cz("Ein Apfel und eine ___ sind Obst.", "Una manzana y una banana son fruta.", ["Banane", "Wurst", "Dose", "Butter"], "Banane", "«die Banane» = la banana."),
+          cz("Die ___ ist kalt und süß.", "La gaseosa está fría y dulce.", ["Cola", "Butter", "Wurst", "Dose"], "Cola", "«die Cola» = la gaseosa."),
           { kind: "write", es: "Quiero una naranja.", references: ["Ich möchte eine Orange"] },
           { kind: "speak", de: "Ich nehme eine Dose Cola", es: "Llevo una lata de gaseosa" },
         ],
@@ -505,11 +505,11 @@ export const UNITS_A1_PART7: Unit[] = [
           { de: "der Preis", es: "el precio", example: { de: "Der Preis ist sehr gut.", es: "El precio es muy bueno." } },
           { de: "die Kreditkarte", es: "la tarjeta de crédito", example: { de: "Ich zahle mit Kreditkarte.", es: "Pago con tarjeta de crédito." } },
           { de: "die Karte", es: "la tarjeta / el mapa", example: { de: "Hast du eine Karte?", es: "¿Tenés una tarjeta?" } },
-          { de: "der Mantel", es: "el abrigo", example: { de: "Der Mantel ist zu warm.", es: "El abrigo es demasiado abrigado." } },
+          { de: "der Mantel", es: "el abrigo", example: { de: "Der Mantel ist zu groß.", es: "El abrigo es demasiado grande." } },
           { de: "der Schuh", es: "el zapato", example: { de: "Der Schuh ist zu klein.", es: "El zapato es muy chico." } },
         ],
         exercises: [
-          cz("Der ___ ist zu hoch.", "El precio es demasiado alto.", ["Preis", "Kunde", "Markt", "Schuh"], "Preis", "«der Preis» = el precio."),
+          cz("Der ___ ist zu hoch.", "El precio es demasiado alto.", ["Preis", "Kunde", "Markt", "Mantel"], "Preis", "«der Preis» = el precio."),
           cz("Kann ich mit ___ zahlen?", "¿Puedo pagar con tarjeta de crédito?", ["Kreditkarte", "Mantel", "Schuh", "Markt"], "Kreditkarte", "«die Kreditkarte» = la tarjeta de crédito."),
           cz("Im Winter trage ich einen ___.", "En invierno uso un abrigo.", ["Mantel", "Preis", "Kunde", "Markt"], "Mantel", "«der Mantel» = el abrigo."),
           { kind: "write", es: "Los zapatos son nuevos.", references: ["Die Schuhe sind neu"] },
