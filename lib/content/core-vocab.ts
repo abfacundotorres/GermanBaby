@@ -6,55 +6,6 @@ import type { Vocab } from "../curriculum.ts";
 
 const RAW = `
 ## A1
-gehen|ir / andar|Wir gehen heute ins Kino.|Hoy vamos al cine.
-kommen|venir|Sie kommen aus Spanien.|Ellos vienen de España.
-machen|hacer|Was machen wir am Sonntag?|¿Qué hacemos el domingo?
-sehen|ver|Wir sehen uns morgen.|Nos vemos mañana.
-essen|comer|Wir essen zusammen.|Comemos juntos.
-trinken|tomar / beber|Sie trinken gern Tee.|Ellos toman té con gusto.
-kaufen|comprar|Wir kaufen frisches Brot.|Compramos pan fresco.
-lernen|aprender / estudiar|Wir lernen jeden Tag.|Estudiamos todos los días.
-lesen|leer|Sie lesen die Zeitung.|Ellos leen el diario.
-schreiben|escribir|Wir schreiben eine Karte.|Escribimos una tarjeta.
-nehmen|tomar / llevar|Wir nehmen den Bus.|Tomamos el colectivo.
-geben|dar|Wir geben dir das Buch.|Te damos el libro.
-finden|encontrar|Wir finden den Weg nicht.|No encontramos el camino.
-brauchen|necesitar|Wir brauchen mehr Zeit.|Necesitamos más tiempo.
-wissen|saber|Wir wissen die Antwort.|Sabemos la respuesta.
-denken|pensar|Wir denken an dich.|Pensamos en vos.
-glauben|creer|Wir glauben ihm nicht.|No le creemos.
-fragen|preguntar|Wir fragen den Lehrer.|Le preguntamos al docente.
-antworten|responder|Sie antworten sofort.|Ellos responden enseguida.
-warten|esperar|Wir warten auf den Zug.|Esperamos el tren.
-helfen|ayudar|Wir helfen unseren Nachbarn.|Ayudamos a nuestros vecinos.
-bleiben|quedarse|Wir bleiben zu Hause.|Nos quedamos en casa.
-fahren|ir (en vehículo) / manejar|Wir fahren nach Berlin.|Vamos a Berlín.
-liegen|estar (acostado)|Das Buch liegt auf dem Tisch.|El libro está sobre la mesa.
-sitzen|estar sentado|Wir sitzen im Park.|Estamos sentados en el parque.
-öffnen|abrir|Wir öffnen das Fenster.|Abrimos la ventana.
-schließen|cerrar|Wir schließen die Tür.|Cerramos la puerta.
-anrufen|llamar por teléfono|Ich möchte dich morgen anrufen.|Quiero llamarte mañana.
-lieben|amar|Wir lieben diese Stadt.|Amamos esta ciudad.
-leben|vivir (estar vivo)|Wir leben gern hier.|Vivimos con gusto acá.
-bringen|traer / llevar|Wir bringen den Kuchen mit.|Llevamos la torta.
-zeigen|mostrar|Wir zeigen dir die Stadt.|Te mostramos la ciudad.
-suchen|buscar|Wir suchen eine Wohnung.|Buscamos un departamento.
-treffen|encontrarse con|Wir treffen unsere Freunde.|Nos encontramos con nuestros amigos.
-verstehen|entender|Wir verstehen das nicht.|No entendemos eso.
-erklären|explicar|Können Sie das bitte erklären?|¿Puede explicar eso, por favor?
-bezahlen|pagar|Wir bezahlen mit Karte.|Pagamos con tarjeta.
-kosten|costar|Das Buch kostet zehn Euro.|El libro cuesta diez euros.
-dauern|durar|Der Film dauert zwei Stunden.|La película dura dos horas.
-beginnen|empezar|Wir beginnen um neun.|Empezamos a las nueve.
-lachen|reír|Wir lachen viel zusammen.|Nos reímos mucho juntos.
-weinen|llorar|Das Kind weint laut.|El chico llora fuerte.
-arbeiten|trabajar|Wir arbeiten von zu Hause.|Trabajamos desde casa.
-wohnen|vivir (residir)|Wir wohnen im dritten Stock.|Vivimos en el tercer piso.
-kochen|cocinar|Wir kochen heute Nudeln.|Hoy cocinamos fideos.
-putzen|limpiar|Wir putzen die Wohnung.|Limpiamos el departamento.
-waschen|lavar|Wir waschen die Wäsche.|Lavamos la ropa.
-fliegen|volar|Wir fliegen morgen nach Wien.|Mañana volamos a Viena.
-mögen|gustar / querer|Wir mögen Musik.|Nos gusta la música.
 der Tag|el día|Der Tag war lang.|El día fue largo.
 die Woche|la semana|Die Woche ist schon vorbei.|La semana ya pasó.
 der Monat|el mes|Der Monat hat dreißig Tage.|El mes tiene treinta días.
@@ -69,7 +20,6 @@ die Sprache|el idioma|Ich lerne eine neue Sprache.|Aprendo un idioma nuevo.
 das Dorf|el pueblo|Wir wohnen in einem Dorf.|Vivimos en un pueblo.
 das Flugzeug|el avión|Das Flugzeug ist schon da.|El avión ya está acá.
 das Schiff|el barco|Das Schiff fährt um acht.|El barco sale a las ocho.
-der Preis|el precio|Der Preis ist sehr gut.|El precio es muy bueno.
 die Zahl|el número (cantidad)|Die Zahl ist zu hoch.|El número es demasiado alto.
 die Nummer|el número (de teléfono)|Wie ist deine Nummer?|¿Cuál es tu número?
 das Problem|el problema|Das Problem ist einfach.|El problema es fácil.
@@ -92,53 +42,15 @@ der Baum|el árbol|Der Baum ist sehr alt.|El árbol es muy viejo.
 der Schnee|la nieve|Im Winter gibt es viel Schnee.|En invierno hay mucha nieve.
 der Wind|el viento|Heute gibt es starken Wind.|Hoy hay mucho viento.
 die Luft|el aire|Die Luft ist hier sauber.|El aire acá es limpio.
-das Licht|la luz|Mach bitte das Licht an.|Prendé la luz, por favor.
-der Hunger|el hambre|Ich habe großen Hunger.|Tengo mucha hambre.
-der Durst|la sed|Ich habe Durst.|Tengo sed.
-das Obst|la fruta|Frisches Obst ist gesund.|La fruta fresca es sana.
-die Banane|la banana|Die Banane ist noch grün.|La banana todavía está verde.
-die Orange|la naranja|Ich möchte eine Orange.|Quiero una naranja.
-die Wurst|el embutido / la salchicha|Die Wurst schmeckt gut.|La salchicha es rica.
-die Butter|la manteca|Die Butter ist im Kühlschrank.|La manteca está en la heladera.
-der Kühlschrank|la heladera|Der Kühlschrank ist leer.|La heladera está vacía.
-das Glas|el vaso|Ein Glas Wasser, bitte.|Un vaso de agua, por favor.
-die Flasche|la botella|Die Flasche ist leer.|La botella está vacía.
-die Tasse|la taza|Eine Tasse Tee, bitte.|Una taza de té, por favor.
-der Teller|el plato|Der Teller ist sauber.|El plato está limpio.
-das Messer|el cuchillo|Das Messer ist scharf.|El cuchillo está afilado.
-die Gabel|el tenedor|Die Gabel liegt links.|El tenedor está a la izquierda.
-das Dach|el techo|Das Dach ist neu.|El techo es nuevo.
-die Wand|la pared|Das Bild hängt an der Wand.|El cuadro cuelga de la pared.
-der Boden|el piso (suelo)|Der Boden ist nass.|El piso está mojado.
-die Treppe|la escalera|Die Treppe ist steil.|La escalera es empinada.
-die Toilette|el baño (inodoro)|Wo ist die Toilette?|¿Dónde está el baño?
-die Dusche|la ducha|Die Dusche ist im Bad.|La ducha está en el baño.
-das Handtuch|la toalla|Das Handtuch ist nass.|La toalla está mojada.
-die Karte|la tarjeta / el mapa|Hast du eine Karte?|¿Tenés una tarjeta?
 die Fahrt|el viaje (trayecto)|Die Fahrt dauert eine Stunde.|El viaje dura una hora.
 das Ziel|la meta / el destino|Das Ziel ist nicht mehr weit.|El destino ya no está lejos.
-die Gesundheit|la salud|Gesundheit ist wichtig.|La salud es importante.
-der Arzt|el médico|Der Arzt ist freundlich.|El médico es amable.
-das Krankenhaus|el hospital|Das Krankenhaus ist nah.|El hospital está cerca.
-der Fuß|el pie|Mein Fuß tut weh.|Me duele el pie.
-das Auge|el ojo|Meine Augen sind müde.|Mis ojos están cansados.
-das Ohr|la oreja|Das Ohr tut weh.|Me duele la oreja.
-der Mund|la boca|Mach den Mund auf.|Abrí la boca.
-die Nase|la nariz|Meine Nase ist rot.|Mi nariz está roja.
-das Herz|el corazón|Das Herz schlägt schnell.|El corazón late rápido.
-der Körper|el cuerpo|Der Körper braucht Wasser.|El cuerpo necesita agua.
 die Liebe|el amor|Die Liebe ist wichtig.|El amor es importante.
 der Spaß|la diversión|Das macht Spaß.|Eso es divertido.
 der Streit|la pelea|Der Streit war laut.|La pelea fue fuerte.
-die Wäsche|la ropa (para lavar)|Die Wäsche ist noch nass.|La ropa todavía está mojada.
 die Gruppe|el grupo|Die Gruppe trifft sich am Montag.|El grupo se reúne el lunes.
 der Kurs|el curso|Der Kurs beginnt im März.|El curso empieza en marzo.
 der Lehrer|el docente|Der Lehrer erklärt alles langsam.|El docente explica todo despacio.
 der Student|el estudiante|Der Student lernt viel.|El estudiante estudia mucho.
-der Mantel|el abrigo|Der Mantel ist zu warm.|El abrigo es demasiado abrigado.
-die Brille|los anteojos|Meine Brille ist kaputt.|Mis anteojos están rotos.
-der Markt|el mercado|Der Markt ist am Samstag.|El mercado es el sábado.
-der Kunde|el cliente|Der Kunde wartet.|El cliente espera.
 das Ding|la cosa (objeto)|Was ist das für ein Ding?|¿Qué cosa es esa?
 die Sache|el asunto / la cosa|Das ist eine wichtige Sache.|Es un asunto importante.
 das Mal|la vez|Das erste Mal war schwer.|La primera vez fue difícil.
@@ -167,8 +79,6 @@ nass|mojado|Meine Schuhe sind nass.|Mis zapatos están mojados.
 trocken|seco|Die Wäsche ist trocken.|La ropa está seca.
 sauber|limpio|Das Zimmer ist sauber.|El cuarto está limpio.
 schmutzig|sucio|Die Hose ist schmutzig.|El pantalón está sucio.
-hungrig|con hambre|Ich bin sehr hungrig.|Tengo mucha hambre.
-durstig|con sed|Bist du auch durstig?|¿Vos también tenés sed?
 froh|contento|Ich bin froh, dass du da bist.|Me alegra que estés.
 böse|enojado / malo|Der Hund ist nicht böse.|El perro no es malo.
 nett|amable|Die Nachbarin ist sehr nett.|La vecina es muy amable.
@@ -228,19 +138,10 @@ was|qué|Was ist das?|¿Qué es esto?
 wohin|adónde|Wohin gehst du?|¿Adónde vas?
 die Blume|la flor|Die Blume ist rot.|La flor es roja.
 die Chefin|la jefa|Meine Chefin ist nett.|Mi jefa es simpática.
-die Cola|la cola|Ich trinke eine Cola.|Tomo una cola.
-die Dose|la lata|Ich kaufe eine Dose Tomaten.|Compro una lata de tomates.
 die Farbe|el color|Welche Farbe magst du?|¿Qué color te gusta?
 die Gitarre|la guitarra|Er spielt Gitarre.|Él toca la guitarra.
-die Kreditkarte|la tarjeta de crédito|Ich zahle mit Kreditkarte.|Pago con tarjeta de crédito.
 die Sonne|el sol|Die Sonne scheint.|Sale el sol.
-der Apfel|la manzana|Ich esse einen Apfel.|Como una manzana.
-der Schuh|el zapato|Der Schuh ist zu klein.|El zapato es muy chico.
-das Haar|el pelo|Sie hat lange Haare.|Tiene el pelo largo.
-das Hähnchen|el pollo|Wir essen heute Hähnchen.|Hoy comemos pollo.
 das Restaurant|el restaurante|Das Restaurant ist sehr gut.|El restaurante es muy bueno.
-das Sofa|el sofá|Das Sofa ist bequem.|El sofá es cómodo.
-rufen|llamar (a gritos)|Wir wollen ein Taxi rufen.|Queremos llamar un taxi.
 vorne|adelante|Er sitzt vorne im Bus.|Está sentado adelante en el colectivo.
 ## A2
 bekommen|recibir|Wir bekommen morgen Besuch.|Mañana recibimos visitas.
