@@ -6,11 +6,13 @@ export type FreePrompt = { prompt: string; focus: string[]; minSentences: number
 
 import { FREE_PROMPTS_A1 } from "./practice-a1.ts";
 import { FREE_PROMPTS_A1X } from "./a1x-practice.ts";
+import { FREE_PROMPTS_A2X } from "./a2x-extras.ts";
 import { FREE_PROMPTS_B2X } from "./b2-extras.ts";
 
 export const FREE_PROMPTS: Record<string, FreePrompt> = {
   ...FREE_PROMPTS_A1,
   ...FREE_PROMPTS_A1X,
+  ...FREE_PROMPTS_A2X,
   ...FREE_PROMPTS_B2X,
   // ---------- A2
   vergangenheit: { prompt: "Contá cómo era tu vida hace unos años: dónde vivías, qué hacías y qué no podías hacer.", focus: ["war / hatte / konnte / musste", "früher o vor … Jahren", "seit"], minSentences: 3 },
