@@ -75,6 +75,7 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | A2 ampliado (3): 3 unidades más (bewegung2, alltag2, eigenschaften2; lib/content/a2-part8.ts y a2z-extras.ts), 76 palabras del entrenador a lecciones y 24 a vocabulario temático, con lectura, práctica y escucha larga. Con esto el entrenador de A2 quedó vacío | A2 pasa de 31,7 a 35,8 h | hecho |
 | Producción A2: +8 consignas de escritura (15), +6 orales (12) y +2 simulacros (5; lib/content/exams-a2x.ts) | sin horas contadas en report:time | hecho |
 | B1 ampliado (1): 5 unidades (beruf2, argumente, wohlbefinden, gesellschaft2, reisen2; lib/content/b1-part6.ts y b1x-extras.ts), 122 palabras del entrenador a lecciones y 45 a vocabulario temático, con lectura, práctica y escucha larga (quedan 529 en el entrenador de B1) | B1 pasa de 22,8 a 29,7 h | hecho |
+| B1 ampliado (2): 5 unidades más (einkauf3, umwelt2, medienwelt, beziehung2, bildung2; lib/content/b1-part7.ts y b1y-extras.ts), 124 palabras del entrenador a lecciones y 45 a vocabulario temático, con lectura, práctica y escucha larga (quedan 360 en el entrenador de B1) | B1 pasa de 29,7 a 36,6 h | hecho |
 | 38 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | hecho |
 | 5 lecciones temáticas con palabras nuevas (pasatiempos, profesiones, clima, cuerpo, mensajes) | +1,5 | hecho |
 | 20 consignas de escritura y 20 de oral con rúbrica (A1) | +3 | hecho |
