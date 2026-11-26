@@ -69,8 +69,8 @@ Meta: pasar de ~19 h a ~40 h de primera pasada, para que terminar A1 equivalga a
 | «Práctica 2» (repaso mezclado) en las 14 unidades base | +3 | hecho (14 de 14) |
 | 38 lecturas de biblioteca A1 y 15 escuchas libres | +3,5 | hecho |
 | 5 lecciones temáticas con palabras nuevas (pasatiempos, profesiones, clima, cuerpo, mensajes) | +1,5 | hecho |
-| 20 consignas de escritura y 20 de oral con rúbrica | +3 | pendiente |
-| 2 simulacros más y repasos con SRS obligatorio | +2,5 | pendiente |
+| 20 consignas de escritura y 20 de oral con rúbrica (A1) | +3 | hecho |
+| 2 simulacros más (4 de A1) | +1,5 | hecho; falta el repaso obligatorio con SRS |
 
 ## Herramientas para escribir contenido
 

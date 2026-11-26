@@ -136,6 +136,127 @@ export const EXAMS: Exam[] = [
     },
   },
   {
+    id: "a1-3",
+    level: "A1",
+    title: "Simulacro A1 · 3",
+    lesen: [
+      {
+        title: "Eine Wohnung zu vermieten",
+        text: [
+          "Zu vermieten: Wohnung in der Lindenstraße 12. Sie hat zwei Zimmer, eine Küche und ein Bad. Die Wohnung ist hell und ruhig und liegt im dritten Stock. Es gibt einen Balkon. Die Miete beträgt fünfhundertfünfzig Euro im Monat. Ein Bus fährt zum Bahnhof, die Haltestelle ist nur zwei Minuten entfernt. Bitte rufen Sie nach achtzehn Uhr an.",
+        ],
+        questions: [
+          c("¿Cuántos cuartos tiene el departamento?", ["Dos", "Tres", "Uno", "Cuatro"], "«zwei Zimmer»."),
+          c("¿En qué piso está?", ["En el tercero", "En el segundo", "En el primero", "En el cuarto"], "«im dritten Stock»."),
+          tf("El departamento tiene balcón.", true, "«Es gibt einen Balkon»."),
+          fi("¿Cuántos minutos hay hasta la parada?", ["2", "zwei"], "«zwei Minuten»."),
+          c("¿Cuándo hay que llamar?", ["Después de las 18", "Antes de las 8", "A la mañana", "A las 12"], "«nach achtzehn Uhr»."),
+        ],
+      },
+      {
+        title: "Eine Nachricht von Mia",
+        text: [
+          "Hallo Tom! Am Samstag habe ich Geburtstag und mache eine kleine Party. Sie beginnt um fünf Uhr. Ich koche Nudeln und backe einen Kuchen. Kannst du Getränke mitbringen? Mein Haus ist neben dem Park. Ruf mich an, wenn du nicht kommen kannst. Bis Samstag, Mia",
+        ],
+        questions: [
+          c("¿Qué festeja Mia?", ["Su cumpleaños", "Una mudanza", "Un casamiento", "Un viaje"], "«Geburtstag»."),
+          fi("¿A qué hora empieza la fiesta?", ["5", "fünf", "17"], "«um fünf Uhr»."),
+          c("¿Qué le pide a Tom?", ["Que traiga bebidas", "Que traiga una torta", "Que cocine", "Que llame"], "«Getränke mitbringen»."),
+          tf("La casa de Mia está lejos del parque.", false, "«neben dem Park»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Ein Termin beim Arzt",
+        setting: "Un paciente pide un turno por teléfono",
+        lines: [
+          { who: "f", name: "Frau Keller", de: "Praxis Doktor Braun, guten Tag!" },
+          { who: "m", name: "Herr Roth", de: "Guten Tag! Ich möchte einen Termin, bitte. Ich habe Kopfschmerzen." },
+          { who: "f", name: "Frau Keller", de: "Seit wann haben Sie Kopfschmerzen?" },
+          { who: "m", name: "Herr Roth", de: "Seit drei Tagen." },
+          { who: "f", name: "Frau Keller", de: "Können Sie am Dienstag um halb zehn kommen?" },
+          { who: "m", name: "Herr Roth", de: "Ja, das geht. Dienstag um halb zehn." },
+          { who: "f", name: "Frau Keller", de: "Bitte bringen Sie Ihre Versichertenkarte mit." },
+          { who: "m", name: "Herr Roth", de: "Mache ich. Vielen Dank, auf Wiedersehen!" },
+        ],
+        questions: [
+          c("¿Qué le pasa al paciente?", ["Le duele la cabeza", "Le duele la panza", "Tiene fiebre", "Está cansado"], "«Kopfschmerzen»."),
+          fi("¿Desde hace cuántos días?", ["3", "drei"], "«seit drei Tagen»."),
+          c("¿Qué día es el turno?", ["El martes", "El lunes", "El miércoles", "El viernes"], "«am Dienstag»."),
+          c("¿A qué hora?", ["9:30", "9:00", "10:30", "8:30"], "«halb zehn»."),
+          c("¿Qué tiene que llevar?", ["La tarjeta del seguro", "Un análisis", "Dinero", "Un informe"], "«Versichertenkarte»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí una invitación a un amigo: invitalo a tu casa el sábado, decí a qué hora y qué van a comer, y pedile que te responda.",
+      focus: ["Einladung (Ich lade dich ein …)", "Zeit und Essen (Um … Uhr … Wir essen …)", "eine Bitte (Ruf mich bitte an)"],
+      minSentences: 4,
+      hint: "Saludo, día y hora, qué comen, pedido de respuesta y despedida.",
+    },
+  },
+  {
+    id: "a1-4",
+    level: "A1",
+    title: "Simulacro A1 · 4",
+    lesen: [
+      {
+        title: "Stundenplan",
+        text: [
+          "Montag: Deutsch von neun bis elf Uhr. Dienstag: Mathematik von acht bis zehn Uhr, Sport von elf bis zwölf Uhr. Mittwoch: Deutsch von neun bis elf Uhr, Englisch von zwölf bis dreizehn Uhr. Donnerstag: Kunst von zehn bis zwölf Uhr. Freitag: frei. Am Wochenende ist die Schule geschlossen.",
+        ],
+        questions: [
+          c("¿Qué días hay alemán?", ["Lunes y miércoles", "Martes y jueves", "Viernes", "Jueves"], "«Montag … Mittwoch»."),
+          fi("¿A qué hora termina alemán? (24 h)", ["11", "elf"], "«bis elf Uhr»."),
+          c("¿Qué materia hay el jueves?", ["Arte", "Deporte", "Inglés", "Matemática"], "«Donnerstag: Kunst»."),
+          tf("Los viernes hay clases.", false, "«Freitag: frei»."),
+        ],
+      },
+      {
+        title: "Auf dem Markt",
+        text: [
+          "Heute kaufe ich auf dem Markt ein. Ich nehme zwei Kilo Kartoffeln, ein Kilo Tomaten und eine Gurke. Die Kartoffeln kosten drei Euro, die Tomaten vier Euro und die Gurke einen Euro. Das macht acht Euro. Ich gebe der Verkäuferin zehn Euro und bekomme zwei Euro zurück.",
+        ],
+        questions: [
+          fi("¿Cuántos kilos de papas compra?", ["2", "zwei"], "«zwei Kilo Kartoffeln»."),
+          fi("¿Cuánto cuestan los tomates (euros)?", ["4", "vier"], "«vier Euro»."),
+          fi("¿Cuánto paga en total (euros)?", ["8", "acht"], "«acht Euro»."),
+          fi("¿Cuánto vuelto recibe (euros)?", ["2", "zwei"], "«zwei Euro zurück»."),
+        ],
+      },
+    ],
+    hoeren: [
+      {
+        title: "Im Supermarkt",
+        setting: "Dos amigos hacen las compras",
+        lines: [
+          { who: "f", name: "Eva", de: "Wir brauchen Brot, Milch und Käse." },
+          { who: "m", name: "Paul", de: "Das Brot kaufe ich. Wo ist die Milch?" },
+          { who: "f", name: "Eva", de: "Dort hinten, links neben dem Käse." },
+          { who: "m", name: "Paul", de: "Gut. Brauchen wir auch Äpfel?" },
+          { who: "f", name: "Eva", de: "Ja, zwei Kilo, bitte. Sie sind heute billig." },
+          { who: "m", name: "Paul", de: "Wie viel kosten sie?" },
+          { who: "f", name: "Eva", de: "Ein Euro das Kilo. Das ist günstig." },
+          { who: "m", name: "Paul", de: "Prima! Ich zahle an der Kasse." },
+        ],
+        questions: [
+          c("¿Qué necesitan?", ["Pan, leche y queso", "Carne y pescado", "Café", "Pizza"], "«Brot, Milch und Käse»."),
+          c("¿Dónde está la leche?", ["Al fondo a la izquierda", "A la entrada", "Junto a la caja", "Afuera"], "«hinten, links»."),
+          fi("¿Cuántos kilos de manzanas compran?", ["2", "zwei"], "«zwei Kilo»."),
+          fi("¿Cuánto cuesta el kilo de manzanas (euros)?", ["1", "eins", "ein"], "«ein Euro das Kilo»."),
+          tf("Paul paga en la caja.", true, "«Ich zahle an der Kasse»."),
+        ],
+      },
+    ],
+    schreiben: {
+      prompt: "Escribí sobre tu cuarto: cómo es, qué muebles hay y qué te gusta hacer ahí.",
+      focus: ["Beschreibung (Mein Zimmer ist …)", "Möbel (Im Zimmer gibt es …)", "Aktivität (Ich … gern in meinem Zimmer)"],
+      minSentences: 4,
+      hint: "Frases cortas con «es gibt», «ich habe» y «ich … gern».",
+    },
+  },
+  {
     id: "a2-1",
     level: "A2",
     title: "Simulacro A2 · 1",
