@@ -41,9 +41,11 @@ import { UNITS_B1_PART5 } from "./content/b1-part5.ts";
 import { UNITS_B1_PART6 } from "./content/b1-part6.ts";
 import { UNITS_B1_PART7 } from "./content/b1-part7.ts";
 import { UNITS_B1_PART8 } from "./content/b1-part8.ts";
+import { UNITS_B1_PART9 } from "./content/b1-part9.ts";
 import { READINGS_B1X, PRACTICE_B1X, THEMATIC_B1X, LONG_LISTENINGS_B1X } from "./content/b1x-extras.ts";
 import { READINGS_B1Y, PRACTICE_B1Y, THEMATIC_B1Y, LONG_LISTENINGS_B1Y } from "./content/b1y-extras.ts";
 import { READINGS_B1Z, PRACTICE_B1Z, THEMATIC_B1Z, LONG_LISTENINGS_B1Z } from "./content/b1z-extras.ts";
+import { READINGS_B1W, PRACTICE_B1W, THEMATIC_B1W, LONG_LISTENINGS_B1W } from "./content/b1w-extras.ts";
 import { UNITS_B2_PART1 } from "./content/b2-part1.ts";
 import { UNITS_B2_PART2 } from "./content/b2-part2.ts";
 import { UNITS_B2_PART3 } from "./content/b2-part3.ts";
@@ -375,7 +377,7 @@ const UNITS_A1_PART1: Unit[] = [
 const C1_ORDER = ["bruecke-c1", "akademisch", "konzessiv", "irrealis", "relativ-plus", "wortbildung", "funktionsverben", "vermutung", "redewendungen-c1", "diskussion-c1", "textanalyse", "medien-c1", "technik-c1", "pruefung-c1"];
 const orderC1 = (units: Unit[]) => [...units].sort((a, b) => C1_ORDER.indexOf(a.id) - C1_ORDER.indexOf(b.id));
 
-const UNITS_ALL: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART7, ...UNITS_A1_PART8, ...UNITS_A1_PART9, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5.filter((u) => u.id !== "pruefung-a2"), ...UNITS_A2_PART6, ...UNITS_A2_PART7, ...UNITS_A2_PART8, ...UNITS_A2_PART5.filter((u) => u.id === "pruefung-a2"), ...UNITS_AUSSPRACHE_2, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_B1_PART6, ...UNITS_B1_PART7, ...UNITS_B1_PART8, ...UNITS_AUSSPRACHE_3, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART5, ...UNITS_B2_PART4, ...orderC1([...UNITS_C1_PART1, ...UNITS_C1_PART2, ...UNITS_C1_PART3, ...UNITS_C1_PART4, ...UNITS_C1_PART5, ...UNITS_C1_PART6])];
+const UNITS_ALL: Unit[] = [...UNITS_A1_PART1, ...UNITS_A1_PART2, ...UNITS_A1_PART3, ...UNITS_A1_PART4, ...UNITS_A1_PART5, ...UNITS_A1_PART7, ...UNITS_A1_PART8, ...UNITS_A1_PART9, ...UNITS_A1_PART6, ...UNITS_A2_PART1, ...UNITS_A2_PART2, ...UNITS_A2_PART3, ...UNITS_A2_PART4, ...UNITS_A2_PART5.filter((u) => u.id !== "pruefung-a2"), ...UNITS_A2_PART6, ...UNITS_A2_PART7, ...UNITS_A2_PART8, ...UNITS_A2_PART5.filter((u) => u.id === "pruefung-a2"), ...UNITS_AUSSPRACHE_2, ...UNITS_B1_PART1, ...UNITS_B1_PART2, ...UNITS_B1_PART3, ...UNITS_B1_PART4.filter((u) => u.id !== "pruefung-b1"), ...UNITS_B1_PART5, ...UNITS_B1_PART6, ...UNITS_B1_PART7, ...UNITS_B1_PART8, ...UNITS_B1_PART9, ...UNITS_AUSSPRACHE_3, ...UNITS_B1_PART4.filter((u) => u.id === "pruefung-b1"), ...UNITS_B2_PART1, ...UNITS_B2_PART2, ...UNITS_B2_PART3, ...UNITS_B2_PART5, ...UNITS_B2_PART4, ...orderC1([...UNITS_C1_PART1, ...UNITS_C1_PART2, ...UNITS_C1_PART3, ...UNITS_C1_PART4, ...UNITS_C1_PART5, ...UNITS_C1_PART6])];
 
 // La unidad de pronunciación va después de «Mi día» (unidad 8), cuando ya hay base de vocabulario.
 const AFTER_UNIT_8 = UNITS_ALL.findIndex((u) => u.id === "alltag") + 1;
@@ -388,11 +390,11 @@ for (const u of UNITS) for (const l of u.lessons) {
 }
 // Lecturas opcionales al final de cada unidad desde la 9.
 for (const u of UNITS) {
-  const r = READINGS[u.id] ?? READINGS_A1X[u.id] ?? READINGS_A2X[u.id] ?? READINGS_A2Y[u.id] ?? READINGS_A2Z[u.id] ?? READINGS_B1X[u.id] ?? READINGS_B1Y[u.id] ?? READINGS_B1Z[u.id] ?? READINGS_C1[u.id] ?? READINGS_B2X[u.id];
+  const r = READINGS[u.id] ?? READINGS_A1X[u.id] ?? READINGS_A2X[u.id] ?? READINGS_A2Y[u.id] ?? READINGS_A2Z[u.id] ?? READINGS_B1X[u.id] ?? READINGS_B1Y[u.id] ?? READINGS_B1Z[u.id] ?? READINGS_B1W[u.id] ?? READINGS_C1[u.id] ?? READINGS_B2X[u.id];
   if (r && !u.lessons.some((l) => l.id === r.id)) u.lessons.push(r);
 }
 // Práctica extra opcional (A2 y B1), después de la lectura.
-const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A1, ...PRACTICE_A1X, ...PRACTICE_A2X, ...PRACTICE_A2Y, ...PRACTICE_A2Z, ...PRACTICE_B1X, ...PRACTICE_B1Y, ...PRACTICE_B1Z, ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_B2X, ...PRACTICE_C1 };
+const PRACTICE: Record<string, Lesson> = { ...PRACTICE_A1, ...PRACTICE_A1X, ...PRACTICE_A2X, ...PRACTICE_A2Y, ...PRACTICE_A2Z, ...PRACTICE_B1X, ...PRACTICE_B1Y, ...PRACTICE_B1Z, ...PRACTICE_B1W, ...PRACTICE_A2, ...PRACTICE_B1, ...PRACTICE_B2, ...PRACTICE_B2X, ...PRACTICE_C1 };
 for (const u of UNITS) {
   const pr = PRACTICE[u.id];
   if (pr && !u.lessons.some((l) => l.id === pr.id)) u.lessons.push(pr);
@@ -403,10 +405,10 @@ for (const u of UNITS) {
   const pr2 = PRACTICE2_A1[u.id];
   if (pr2 && !u.lessons.some((l) => l.id === pr2.id)) u.lessons.push(pr2);
   // Escucha larga (B1 a C1): un diálogo de 14 a 16 líneas, después de la práctica.
-  const long = LONG_LISTENINGS[u.id] ?? LONG_B2X[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id] ?? LONG_LISTENINGS_A1X[u.id] ?? LONG_LISTENINGS_A2X[u.id] ?? LONG_LISTENINGS_A2Y[u.id] ?? LONG_LISTENINGS_A2Z[u.id] ?? LONG_LISTENINGS_B1X[u.id] ?? LONG_LISTENINGS_B1Y[u.id] ?? LONG_LISTENINGS_B1Z[u.id];
+  const long = LONG_LISTENINGS[u.id] ?? LONG_B2X[u.id] ?? LONG_LISTENINGS_A2[u.id] ?? LONG_LISTENINGS_A1[u.id] ?? LONG_LISTENINGS_A1X[u.id] ?? LONG_LISTENINGS_A2X[u.id] ?? LONG_LISTENINGS_A2Y[u.id] ?? LONG_LISTENINGS_A2Z[u.id] ?? LONG_LISTENINGS_B1X[u.id] ?? LONG_LISTENINGS_B1Y[u.id] ?? LONG_LISTENINGS_B1Z[u.id] ?? LONG_LISTENINGS_B1W[u.id];
   if (long && !u.lessons.some((l) => l.id === long.id)) u.lessons.push(long);
   // Vocabulario temático (B2 y C1): campo léxico con un diálogo corto, al final de la unidad.
-  const them = THEMATIC[u.id] ?? THEMATIC_B2X[u.id] ?? THEMATIC_B1[u.id] ?? THEMATIC_A2[u.id] ?? THEMATIC_A2X[u.id] ?? THEMATIC_A2Y[u.id] ?? THEMATIC_A2Z[u.id] ?? THEMATIC_B1X[u.id] ?? THEMATIC_B1Y[u.id] ?? THEMATIC_B1Z[u.id] ?? THEMATIC_A1[u.id];
+  const them = THEMATIC[u.id] ?? THEMATIC_B2X[u.id] ?? THEMATIC_B1[u.id] ?? THEMATIC_A2[u.id] ?? THEMATIC_A2X[u.id] ?? THEMATIC_A2Y[u.id] ?? THEMATIC_A2Z[u.id] ?? THEMATIC_B1X[u.id] ?? THEMATIC_B1Y[u.id] ?? THEMATIC_B1Z[u.id] ?? THEMATIC_B1W[u.id] ?? THEMATIC_A1[u.id];
   if (them && !u.lessons.some((l) => l.id === them.id)) u.lessons.push(them);
 }
 
