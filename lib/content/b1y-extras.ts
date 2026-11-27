@@ -119,7 +119,7 @@ export const PRACTICE_B1Y: Record<string, Lesson> = {
     "Repasar pedidos, alquiler y comunicación escrita con frases nuevas y una escucha más.",
     [
       cz("Ich habe ein Paket bestellt, aber der ___ fehlt auf dem Karton.", "Pedí un paquete, pero falta el remitente en la caja.", ["Absender", "Hausmeister", "Einkaufswagen", "Kassenzettel"], "Absender", "«der Absender» = el remitente."),
-      cz("Wir haben die Wohnung für zwei Jahre ___.", "Alquilamos el departamento por dos años.", ["gemietet", "vermietet", "verkauft", "geliefert"], "gemietet", "«mieten» → participio «gemietet» (tomar en alquiler)."),
+      cz("Wir haben die Wohnung für zwei Jahre ___.", "Alquilamos el departamento por dos años.", ["gemietet", "verkauft", "geliefert", "gelöscht"], "gemietet", "«mieten» → participio «gemietet» (tomar en alquiler)."),
       cz("Die ___ von neuen Möbeln dauert oft mehrere Wochen.", "La entrega de muebles nuevos suele tardar varias semanas.", ["Lieferung", "Reparatur", "Reklamation", "Wohnungssuche"], "Lieferung", "«die Lieferung» = la entrega (de «liefern»)."),
       qz("¿Qué palabra significa «el departamento compartido»?", ["die Wohngemeinschaft", "die Hausordnung", "der Haushalt", "der Einkauf"], "die Wohngemeinschaft", "«die Wohngemeinschaft» = el departamento compartido."),
       { kind: "build", es: "Ich möchte einen Umtausch", answer: "Ich möchte einen Umtausch", extra: ["Umtausche", "Einkauf"] },

@@ -247,7 +247,7 @@ export const UNITS_B1_PART9: Unit[] = [
           lines: [
             { who: "m", name: "Kunde", de: "Ich möchte ein Zimmer einrichten. Können Sie mich beraten?", es: "Quiero amoblar un cuarto. ¿Puede asesorarme?" },
             { who: "f", name: "Beraterin", de: "Gern. Wir bieten viele Modelle an. Besitzen Sie schon Möbel?", es: "Con gusto. Ofrecemos muchos modelos. ¿Ya posee muebles?" },
-            { who: "m", name: "Kunde", de: "Ja, aber der alte Schrank muss entfernt werden. Er bewegt sich kaum noch.", es: "Sí, pero el armario viejo hay que sacarlo. Ya casi no se mueve." },
+            { who: "m", name: "Kunde", de: "Ja, aber der alte Schrank muss entfernt werden. Er ist zu groß für den Raum.", es: "Sí, pero el armario viejo hay que sacarlo. Es demasiado grande para el cuarto." },
             { who: "f", name: "Beraterin", de: "Wir bilden ein Team, das alles erledigt. Sie werden es angenehm erleben.", es: "Formamos un equipo que lo resuelve todo. Lo va a vivir de forma agradable." },
           ],
           questions: [
@@ -337,7 +337,7 @@ export const UNITS_B1_PART9: Unit[] = [
           setting: "Dos empleados organizan un envío",
           lines: [
             { who: "m", name: "Paul", de: "Wir transportieren die Ware nächste Woche. Stimmt der Termin?", es: "Transportamos la mercadería la semana próxima. ¿Es correcta la fecha?" },
-            { who: "f", name: "Nina", de: "Nein, der Termin muss verlängert werden. Das ist kein Übertreiben: Die Straße ist gesperrt.", es: "No, la fecha hay que extenderla. No es exagerar: la calle está cortada." },
+            { who: "f", name: "Nina", de: "Nein, der Termin muss verlängert werden. Ich übertreibe nicht: Die Straße ist gesperrt.", es: "No, la fecha hay que extenderla. No exagero: la calle está cortada." },
             { who: "m", name: "Paul", de: "Ich will Sie nicht unterbrechen, aber wir können die Strecken tauschen.", es: "No quiero interrumpirla, pero podemos intercambiar los trayectos." },
             { who: "f", name: "Nina", de: "Gut. Beide Wege unterscheiden sich kaum. Ich verfolge die Lage und trenne die Lieferungen.", es: "Bien. Ambos caminos casi no se diferencian. Sigo la situación y separo las entregas." },
           ],
@@ -548,7 +548,7 @@ export const UNITS_B1_PART9: Unit[] = [
         exercises: [
           cz("Dieses Hotel ist für Familien mit Kindern sehr ___.", "Este hotel es muy adecuado para familias con chicos.", ["geeignet", "streng", "übrig", "nachdenklich"], "geeignet", "«geeignet» = adecuado."),
           cz("Der Lehrer ist ___, aber gerecht.", "El docente es estricto, pero justo.", ["streng", "mäßig", "riesig", "modern"], "streng", "«streng» = estricto."),
-          cz("Wir haben noch einen ___ Platz im Auto.", "Todavía tenemos un lugar sobrante en el auto.", ["übrigen", "gesamten", "riesigen", "mäßigen"], "übrigen", "«übrig» = restante; con «einen … Platz» (acusativo): übrigen."),
+          cz("Wir haben noch einen ___ Platz im Auto.", "Todavía tenemos un lugar sobrante en el auto.", ["übrigen", "gesamten", "modernen", "mäßigen"], "übrigen", "«übrig» = restante; con «einen … Platz» (acusativo): übrigen."),
           { kind: "write", es: "La casa es enorme.", references: ["Das Haus ist riesig"] },
           { kind: "speak", de: "Die Gesamtkosten sind mäßig", es: "Los costos totales son moderados" },
         ],
@@ -622,7 +622,7 @@ export const UNITS_B1_PART9: Unit[] = [
           { de: "ungewöhnlich", es: "inusual", example: { de: "Das ist ein ungewöhnlicher Name.", es: "Es un nombre inusual." } },
         ],
         exercises: [
-          cz("In Deutschland ist es ___, pünktlich zu sein.", "En Alemania es habitual ser puntual.", ["üblich", "heimlich", "reif", "erlaubt"], "üblich", "«üblich» = habitual."),
+          cz("In Deutschland ist es ___, pünktlich zu sein.", "En Alemania es habitual ser puntual.", ["üblich", "heimlich", "reif", "riesig"], "üblich", "«üblich» = habitual."),
           cz("Du musst ___ kommen, die Prüfung ist um acht.", "Tenés que venir sin falta, el examen es a las ocho.", ["unbedingt", "heimlich", "durchschnittlich", "gleichberechtigt"], "unbedingt", "«unbedingt» = sin falta."),
           cz("Die Äpfel sind schon ___ und schmecken süß.", "Las manzanas ya están maduras y saben dulces.", ["reif", "üblich", "ungewöhnlich", "erlaubt"], "reif", "«reif» = maduro."),
           { kind: "write", es: "Llego a tiempo.", references: ["Ich komme rechtzeitig"] },

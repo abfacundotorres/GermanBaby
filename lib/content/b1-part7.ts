@@ -29,7 +29,7 @@ export const UNITS_B1_PART7: Unit[] = [
           { de: "liefern", es: "entregar / suministrar", example: { de: "Wir liefern am Montag.", es: "Entregamos el lunes." } },
         ],
         exercises: [
-          cz("Meine ___ ist noch nicht angekommen. Ich warte seit einer Woche.", "Mi pedido todavía no llegó. Espero desde hace una semana.", ["Bestellung", "Verpackung", "Reklamation", "Umtausch"], "Bestellung", "«die Bestellung» = el pedido."),
+          cz("Meine ___ ist noch nicht angekommen. Ich warte seit einer Woche.", "Mi pedido todavía no llegó. Espero desde hace una semana.", ["Bestellung", "Umtausch", "Einkaufswagen", "Kassenzettel"], "Bestellung", "«die Bestellung» = el pedido."),
           cz("Für den ___ brauchen Sie den Kassenzettel.", "Para el cambio necesita el ticket de compra.", ["Umtausch", "Einkaufswagen", "Einkauf", "Bestellung"], "Umtausch", "«der Umtausch» = el cambio de un producto."),
           cz("Die Firma ___ die Möbel innerhalb von zwei Wochen.", "La empresa entrega los muebles dentro de dos semanas.", ["liefert", "bestellt", "reklamiert", "tauscht"], "liefert", "«liefern» con «die Firma»: liefert."),
           { kind: "write", es: "Quiero hacer un reclamo.", references: ["Ich möchte eine Reklamation machen", "Ich möchte reklamieren"] },

@@ -364,7 +364,7 @@ export const UNITS_B1_PART8: Unit[] = [
         ],
         exercises: [
           cz("Er lernt ein ___ und wird Tischler.", "Aprende un oficio y se va a hacer carpintero.", ["Handwerk", "Mitarbeit", "Absicherung", "Unterstützung"], "Handwerk", "«das Handwerk» = el oficio."),
-          cz("Als ___ Unternehmerin kann sie ihre Zeit selbst einteilen.", "Como empresaria independiente puede organizar su tiempo sola.", ["selbstständige", "zuverlässige", "unabhängige", "finanzielle"], "selbstständige", "«selbstständig» = independiente / autónomo."),
+          cz("Als ___ Unternehmerin kann sie ihre Zeit selbst einteilen.", "Como empresaria independiente puede organizar su tiempo sola.", ["selbstständige", "zuverlässige", "ehemalige", "finanzielle"], "selbstständige", "«selbstständig» = independiente / autónomo."),
           cz("Wir brauchen eine gute ___ für die Kinder, wenn wir arbeiten.", "Necesitamos un buen cuidado para los chicos mientras trabajamos.", ["Kinderbetreuung", "Absicherung", "Mitarbeit", "Unterstützung"], "Kinderbetreuung", "«die Kinderbetreuung» = el cuidado de niños."),
           { kind: "write", es: "Agradezco su apoyo.", references: ["Ich danke Ihnen für Ihre Unterstützung", "Ich bedanke mich für Ihre Unterstützung"] },
           { kind: "speak", de: "Der neue Kollege ist zuverlässig", es: "El colega nuevo es confiable" },
@@ -545,7 +545,7 @@ export const UNITS_B1_PART8: Unit[] = [
           { de: "verstauchen", es: "torcerse", example: { de: "Er hat sich den Fuß verstaucht.", es: "Se torció el pie." } },
         ],
         exercises: [
-          cz("Die Erzieherin ___ zwanzig Kinder in der Kita.", "La docente cuida a veinte chicos en el jardín.", ["betreut", "behandelt", "tröstet", "versorgt"], "betreut", "«betreuen» con «die Erzieherin»: betreut."),
+          cz("Die Erzieherin ___ zwanzig Kinder in der Kita.", "La docente cuida a veinte chicos en el jardín.", ["betreut", "behandelt", "tröstet", "verstaucht"], "betreut", "«betreuen» con «die Erzieherin»: betreut."),
           cz("Der Arzt ___ den Patienten mit einer neuen Methode.", "El médico trata al paciente con un método nuevo.", ["behandelt", "betreut", "verstaucht", "tröstet"], "behandelt", "«behandeln» con «der Arzt»: behandelt."),
           cz("Beim Sport habe ich mir den Fuß ___.", "Haciendo deporte me torcí el pie.", ["verstaucht", "behandelt", "betreut", "versorgt"], "verstaucht", "«verstauchen» → participio «verstaucht»."),
           { kind: "write", es: "Ella consuela a su amiga.", references: ["Sie tröstet ihre Freundin"] },

@@ -180,7 +180,7 @@ export const PRACTICE_B1Z: Record<string, Lesson> = {
     [
       cz("Die Firma ___ im Jahr zehntausend Stühle.", "La empresa fabrica diez mil sillas por año.", ["stellt her", "gründet", "bietet an", "erwirbt"], "stellt her", "«herstellen» → «stellt … her»."),
       cz("Wir müssen die Preise ___, sonst kauft niemand.", "Tenemos que bajar los precios; si no, nadie compra.", ["senken", "steigern", "vergrößern", "erzeugen"], "senken", "«senken» = bajar."),
-      cz("Als ___ Handwerker kann er seine Zeit frei einteilen.", "Como artesano independiente puede organizar su tiempo libremente.", ["selbstständiger", "ehemaliger", "zuverlässiger", "heutiger"], "selbstständiger", "«selbstständig» + «Handwerker» (masculino): selbstständiger."),
+      cz("Als ___ Handwerker kann er seine Zeit frei einteilen.", "Como artesano independiente puede organizar su tiempo libremente.", ["selbstständiger", "ehemaliger", "arbeitsloser", "heutiger"], "selbstständiger", "«selbstständig» + «Handwerker» (masculino): selbstständiger."),
       qz("¿Qué palabra significa «el depósito»?", ["das Lager", "der Stoff", "die Ausrüstung", "das Mittel"], "das Lager", "«das Lager» = el depósito."),
       { kind: "build", es: "Wir erzeugen Strom mit Wind", answer: "Wir erzeugen Strom mit Wind", extra: ["erzeugt", "Sonne"] },
       { kind: "write", es: "Ella gana poco pero es muy confiable.", references: ["Sie verdient wenig, aber sie ist sehr zuverlässig"] },
@@ -209,7 +209,7 @@ export const PRACTICE_B1Z: Record<string, Lesson> = {
     "Repasar adjetivos de valor, tiempo y modo con frases nuevas y una escucha más.",
     [
       cz("Der Film war ___: Ich habe so etwas noch nie gesehen.", "La película fue increíble: nunca vi algo así.", ["unglaublich", "harmlos", "ernst", "praktisch"], "unglaublich", "«unglaublich» = increíble."),
-      cz("Das ist eine ___ Lösung für den Alltag.", "Es una solución práctica para la vida diaria.", ["praktische", "ehemalige", "künftige", "bisherige"], "praktische", "«praktisch» + «Lösung» (femenino): praktische."),
+      cz("Das ist eine ___ Lösung für den Alltag.", "Es una solución práctica para la vida diaria.", ["praktische", "lebendige", "blasse", "spitze"], "praktische", "«praktisch» + «Lösung» (femenino): praktische."),
       cz("___ hat er sich nicht entschuldigt, sondern noch geschimpft.", "En realidad no se disculpó, sino que además retó.", ["Tatsächlich", "Insgesamt", "Zumindest", "Grundsätzlich"], "Tatsächlich", "«tatsächlich» = en realidad."),
       qz("¿Qué palabra significa «anualmente»?", ["jährlich", "wöchentlich", "momentan", "kürzlich"], "jährlich", "«jährlich» = anual."),
       { kind: "build", es: "Das ist keineswegs einfach", answer: "Das ist keineswegs einfach", extra: ["einfacher", "womöglich"] },
@@ -290,8 +290,8 @@ export const THEMATIC_B1Z: Record<string, Lesson> = {
           { de: "weder", es: "ni", example: { de: "Er hat weder Zeit noch Geld.", es: "No tiene ni tiempo ni plata." } },
         ],
     [
-      cz("Ich bin ___ in Berlin, später reise ich weiter.", "Por el momento estoy en Berlín, más tarde sigo viaje.", ["zurzeit", "ewig", "stets", "weder"], "zurzeit", "«zurzeit» = por el momento."),
-      cz("___ habe ich keine Probleme mehr mit dem Rücken.", "Desde entonces ya no tengo problemas con la espalda.", ["Seitdem", "Heutzutage", "Eben", "Sowohl"], "Seitdem", "«seitdem» = desde entonces."),
+      cz("Ich bin ___ in Berlin, später reise ich weiter.", "Por el momento estoy en Berlín, más tarde sigo viaje.", ["zurzeit", "ewig", "weder", "sowohl"], "zurzeit", "«zurzeit» = por el momento."),
+      cz("___ habe ich keine Probleme mehr mit dem Rücken.", "Desde entonces ya no tengo problemas con la espalda.", ["Seitdem", "Weder", "Eben", "Sowohl"], "Seitdem", "«seitdem» = desde entonces."),
       cz("Ich mag weder Kaffee ___ Tee.", "No me gusta ni el café ni el té.", ["noch", "oder", "und", "aber"], "noch", "«weder … noch» = ni … ni."),
       { kind: "write", es: "Hoy en día todos usan el celular.", references: ["Heutzutage benutzen alle das Handy", "Heutzutage benutzt jeder ein Handy", "Heutzutage nutzen alle das Handy"] },
       { kind: "write", es: "Ella siempre es amable.", references: ["Sie ist stets freundlich"] },
@@ -392,7 +392,7 @@ export const THEMATIC_B1Z: Record<string, Lesson> = {
           { de: "geduldig", es: "paciente", example: { de: "Die Lehrerin ist sehr geduldig.", es: "La docente es muy paciente." } },
         ],
     [
-      cz("Das Zimmer ist klein, aber sehr ___.", "El cuarto es chico, pero muy agradable.", ["angenehm", "extrem", "altmodisch", "entfernt"], "angenehm", "«angenehm» = agradable."),
+      cz("Das Zimmer ist klein, aber sehr ___.", "El cuarto es chico, pero muy agradable.", ["angenehm", "extrem", "einheimisch", "entfernt"], "angenehm", "«angenehm» = agradable."),
       cz("Der Lehrer ist sehr ___ und erklärt alles zweimal.", "El docente es muy paciente y explica todo dos veces.", ["geduldig", "erwachsen", "altmodisch", "einheimisch"], "geduldig", "«geduldig» = paciente."),
       cz("Das Dorf liegt weit ___ von der Stadt.", "El pueblo queda lejos de la ciudad.", ["entfernt", "geduldig", "extrem", "angenehm"], "entfernt", "«entfernt» = lejano."),
       { kind: "write", es: "Los productos locales son baratos.", references: ["Die einheimischen Produkte sind billig", "Einheimische Produkte sind billig", "Die einheimischen Produkte sind günstig"] },

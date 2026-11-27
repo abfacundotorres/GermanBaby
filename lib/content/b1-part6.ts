@@ -156,7 +156,7 @@ export const UNITS_B1_PART6: Unit[] = [
           { de: "annehmen", es: "aceptar / suponer", example: { de: "Ich möchte den Vorschlag annehmen.", es: "Quiero aceptar la propuesta." } },
         ],
         exercises: [
-          cz("Er ___, dass er den ganzen Tag gearbeitet hat.", "Él afirma que trabajó todo el día.", ["behauptet", "beweist", "gibt zu", "lehnt ab"], "behauptet", "«behaupten» con «er»: behauptet."),
+          cz("Er ___, dass er den ganzen Tag gearbeitet hat.", "Él afirma que trabajó todo el día.", ["behauptet", "lehnt ab", "ersetzt", "überprüft"], "behauptet", "«behaupten» con «er»: behauptet."),
           cz("Ich muss ___: Ich habe einen Fehler gemacht.", "Tengo que admitirlo: cometí un error.", ["zugeben", "widersprechen", "beweisen", "zweifeln"], "zugeben", "«zugeben» = admitir; con «muss» va en infinitivo."),
           cz("Ich ___ dir: Das ist falsch.", "Te contradigo: eso es falso.", ["widerspreche", "gebe zu", "nehme an", "lehne ab"], "widerspreche", "«widersprechen» + dativo («dir»): widerspreche."),
           { kind: "write", es: "Ellos rechazan la oferta.", references: ["Sie lehnen das Angebot ab"] },
@@ -193,8 +193,8 @@ export const UNITS_B1_PART6: Unit[] = [
           { de: "der Zweifel", es: "la duda", example: { de: "Ich habe keinen Zweifel.", es: "No tengo ninguna duda." } },
         ],
         exercises: [
-          cz("Meiner ___ nach ist das keine gute Lösung.", "En mi opinión, esa no es una buena solución.", ["Ansicht", "Tatsache", "Annahme", "Behauptung"], "Ansicht", "«meiner Ansicht nach» = en mi opinión."),
-          cz("Das ist eine ___: Die Erde ist rund.", "Eso es un hecho: la Tierra es redonda.", ["Tatsache", "Annahme", "Behauptung", "Ansicht"], "Tatsache", "«die Tatsache» = el hecho."),
+          cz("Meiner ___ nach ist das keine gute Lösung.", "En mi opinión, esa no es una buena solución.", ["Ansicht", "Tatsache", "Zweifel", "Beweis"], "Ansicht", "«meiner Ansicht nach» = en mi opinión."),
+          cz("Das ist eine ___: Die Erde ist rund.", "Eso es un hecho: la Tierra es redonda.", ["Tatsache", "Argument", "Beweis", "Standpunkt"], "Tatsache", "«die Tatsache» = el hecho."),
           cz("Ohne einen ___ glaube ich dir das nicht.", "Sin una prueba, no te creo eso.", ["Beweis", "Zweifel", "Standpunkt", "Argument"], "Beweis", "«der Beweis» = la prueba."),
           { kind: "write", es: "Tengo otro punto de vista.", references: ["Ich habe einen anderen Standpunkt"] },
           { kind: "speak", de: "Das ist ein starkes Argument", es: "Es un argumento fuerte" },
